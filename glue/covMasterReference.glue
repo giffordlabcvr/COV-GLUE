@@ -1,0 +1,62 @@
+delete reference REF_MASTER_WUHAN_HU_1
+create reference REF_MASTER_WUHAN_HU_1 cov-gisaid EPI_ISL_402125
+
+reference REF_MASTER_WUHAN_HU_1
+  add feature-location whole_genome
+  feature-location whole_genome
+    add segment 1 29903
+    exit
+    
+  add feature-location ORF_1ab
+  feature-location ORF_1ab
+    add segment 266 13465 --spliceIndex 1
+    add segment 13466 13470 --spliceIndex 2 --translationModifier covOrf1abTranslationModifier
+    add segment 13471 21555 --spliceIndex 3
+    exit
+
+  add feature-location S
+  feature-location S
+    add segment 21563 25384
+    exit
+
+  add feature-location ORF_3a
+  feature-location ORF_3a
+    add segment 25393 26220
+    exit
+
+  add feature-location E
+  feature-location E
+    add segment 26245 26472
+    exit
+
+  add feature-location M
+  feature-location M
+    add segment 26523 27191
+    exit
+
+  add feature-location ORF_6
+  feature-location ORF_6
+    add segment 27202 27387
+    exit
+
+  add feature-location ORF_7a
+  feature-location ORF_7a
+    add segment 27394 27759
+    exit
+
+  add feature-location ORF_8
+  feature-location ORF_8
+    add segment 27894 28259
+    exit
+
+  add feature-location N
+  feature-location N
+    add segment 28274 29533
+    exit
+
+  add feature-location ORF_10
+  feature-location ORF_10
+    add segment 29558 29674
+    exit
+    
+  exit 

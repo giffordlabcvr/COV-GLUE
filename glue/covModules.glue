@@ -13,5 +13,8 @@ create module --fileName modules/covSimpleFastaAlignmentImporter.xml
 create module --fileName modules/covPhyloUtility.xml
 create module --fileName modules/covPhyloImporter.xml
 
+create module --fileName modules/covKuiken2006CodonLabeler.xml
+create module --fileName modules/covOrf1abTranslationModifier.xml
+
 create module --fileName modules/tabularUtilityCsv.xml 
 create module --fileName modules/tabularUtilityTab.xml 

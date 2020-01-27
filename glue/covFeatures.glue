@@ -1,0 +1,86 @@
+multi-delete feature -a
+
+create feature whole_genome "Whole genome"
+feature whole_genome set metatag INFORMATIONAL true
+
+create feature ORF_1ab -p whole_genome "ORF 1ab"
+feature ORF_1ab
+  set field displayName "ORF 1ab"
+  set metatag OWN_CODON_NUMBERING true
+  set metatag CODES_AMINO_ACIDS true
+  set metatag CODON_LABELER_MODULE covKuiken2006CodonLabeler
+  exit
+
+create feature S -p whole_genome "Surface glycoprotein"
+feature S
+  set field displayName "S"
+  set metatag OWN_CODON_NUMBERING true
+  set metatag CODES_AMINO_ACIDS true
+  set metatag CODON_LABELER_MODULE covKuiken2006CodonLabeler
+  exit
+
+create feature ORF_3a -p whole_genome "ORF 3a"
+feature ORF_3a
+  set field displayName "ORF_3a"
+  set metatag OWN_CODON_NUMBERING true
+  set metatag CODES_AMINO_ACIDS true
+  set metatag CODON_LABELER_MODULE covKuiken2006CodonLabeler
+  exit
+
+create feature E -p whole_genome "Envelope protein"
+feature E
+  set field displayName "E"
+  set metatag OWN_CODON_NUMBERING true
+  set metatag CODES_AMINO_ACIDS true
+  set metatag CODON_LABELER_MODULE covKuiken2006CodonLabeler
+  exit
+
+create feature M -p whole_genome "Membrane glycoprotein"
+feature M
+  set field displayName "M"
+  set metatag OWN_CODON_NUMBERING true
+  set metatag CODES_AMINO_ACIDS true
+  set metatag CODON_LABELER_MODULE covKuiken2006CodonLabeler
+  exit
+  
+create feature ORF_6 -p whole_genome "ORF 6"
+feature ORF_6
+  set field displayName "ORF 6"
+  set metatag OWN_CODON_NUMBERING true
+  set metatag CODES_AMINO_ACIDS true
+  set metatag CODON_LABELER_MODULE covKuiken2006CodonLabeler
+  exit
+
+create feature ORF_7a -p whole_genome "ORF 7a"
+feature ORF_7a
+  set field displayName "ORF 7a"
+  set metatag OWN_CODON_NUMBERING true
+  set metatag CODES_AMINO_ACIDS true
+  set metatag CODON_LABELER_MODULE covKuiken2006CodonLabeler
+  exit
+
+create feature ORF_8 -p whole_genome "ORF 8"
+feature ORF_8
+  set field displayName "ORF 8"
+  set metatag OWN_CODON_NUMBERING true
+  set metatag CODES_AMINO_ACIDS true
+  set metatag CODON_LABELER_MODULE covKuiken2006CodonLabeler
+  exit
+
+create feature N -p whole_genome "Nucleocapsid phosphoprotein"
+feature N
+  set field displayName "N"
+  set metatag OWN_CODON_NUMBERING true
+  set metatag CODES_AMINO_ACIDS true
+  set metatag CODON_LABELER_MODULE covKuiken2006CodonLabeler
+  exit
+  
+create feature ORF_10 -p whole_genome "ORF 10"
+feature ORF_10
+  set field displayName "ORF 10"
+  set metatag OWN_CODON_NUMBERING true
+  set metatag CODES_AMINO_ACIDS true
+  set metatag CODON_LABELER_MODULE covKuiken2006CodonLabeler
+  exit
+  
+  

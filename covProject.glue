@@ -24,6 +24,10 @@ project cov
   # Unconstrained alignment
   module covSimpleFastaAlignmentImporter import AL_GISAID_UNCONSTRAINED -f alignments/AL_GISAID_UNCONSTRAINED.fna 
 
+  run file glue/covFeatures.glue
+
+  run file glue/covMasterReference.glue
+
   # Validate
   validate
 

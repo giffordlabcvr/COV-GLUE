@@ -1,0 +1,9 @@
+<translationModifier>
+	<segmentNtLength>5</segmentNtLength>
+	<!-- duplicate nucleotide at 13468 in WUHAN_HU_1 -->
+	<preTranslationNtModifications>
+		<duplicateNucleotide>
+			<segmentNtIndex>3</segmentNtIndex>
+		</duplicateNucleotide>
+	</preTranslationNtModifications>
+</translationModifier>
