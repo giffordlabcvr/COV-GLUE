@@ -27,6 +27,12 @@ project cov
   run file glue/covFeatures.glue
 
   run file glue/covMasterReference.glue
+  run script glue/covCheckFeatureLocations.js
+
+  # import phylogeny  
+  module covPhyloImporter
+    import phylogeny AL_GISAID_UNCONSTRAINED -a -i trees/gisaidUnconstrainedOutgroupRooted.tree NEWICK_BOOTSTRAPS -f phylogeny
+    exit
 
   # Validate
   validate
