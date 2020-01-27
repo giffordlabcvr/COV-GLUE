@@ -16,7 +16,7 @@ project cov
   module covGisaidFastaImporter import -f sequences/gisaid_cov2020_all_sequences.fasta
  
   # Metadata
-  module covGisaidMetadataTextFilePopulator populate --preview --fileName tabular/gisaid_metadata.txt 
+  module covGisaidMetadataTextFilePopulator populate --fileName tabular/gisaid_metadata.txt 
 
   # Sequence lengths
   run script glue/covSetSequenceLengths.js 
