@@ -1,0 +1,3 @@
+<fastaAlignmentExporter>
+    <idTemplate>${sequence.sequenceID}</idTemplate>
+</fastaAlignmentExporter>

@@ -1,0 +1,3 @@
+<mafftAligner>
+	<alignmentReimporterModuleName>covBlastFastaAlignmentImporter</alignmentReimporterModuleName>
+</mafftAligner>

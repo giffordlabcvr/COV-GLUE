@@ -1,0 +1,85 @@
+<textFilePopulator>
+	<columnDelimiterRegex>\t</columnDelimiterRegex>
+	<textFileColumn>
+		<identifier>true</identifier>
+		<header>Accession ID</header>
+		<property>sequenceID</property>
+	</textFileColumn>
+	<textFileColumn>
+		<header>Virus name</header>
+		<property>isolate</property>
+	</textFileColumn>
+	<isoCountryTextFileColumn codeStyle="ALPHA_3">
+		<header>Location</header>
+		<property>m49_country</property>
+	</isoCountryTextFileColumn>
+	<textFileColumn>
+		<header>Location</header>
+		<property>place_sampled</property>
+	</textFileColumn>
+	<textFileColumn>
+		<header>Collection date</header>
+		<property>collection_year</property>
+		<matchPattern>(\d\d\d\d)</matchPattern>
+	</textFileColumn>
+	<textFileColumn>
+		<header>Collection date</header>
+		<property>collection_month</property>
+		<matchPattern>\d\d\d\d-(\d\d)</matchPattern>
+		<outputTemplate>${g1}</outputTemplate>
+		<valueConverter>
+			<matchPattern>01</matchPattern>
+			<outputTemplate>JAN</outputTemplate>
+		</valueConverter>
+		<valueConverter>
+			<matchPattern>02</matchPattern>
+			<outputTemplate>FEB</outputTemplate>
+		</valueConverter>
+		<valueConverter>
+			<matchPattern>03</matchPattern>
+			<outputTemplate>MAR</outputTemplate>
+		</valueConverter>
+		<valueConverter>
+			<matchPattern>04</matchPattern>
+			<outputTemplate>APR</outputTemplate>
+		</valueConverter>
+		<valueConverter>
+			<matchPattern>05</matchPattern>
+			<outputTemplate>MAY</outputTemplate>
+		</valueConverter>
+		<valueConverter>
+			<matchPattern>06</matchPattern>
+			<outputTemplate>JUN</outputTemplate>
+		</valueConverter>
+		<valueConverter>
+			<matchPattern>07</matchPattern>
+			<outputTemplate>JUL</outputTemplate>
+		</valueConverter>
+		<valueConverter>
+			<matchPattern>08</matchPattern>
+			<outputTemplate>AUG</outputTemplate>
+		</valueConverter>
+		<valueConverter>
+			<matchPattern>09</matchPattern>
+			<outputTemplate>SEP</outputTemplate>
+		</valueConverter>
+		<valueConverter>
+			<matchPattern>10</matchPattern>
+			<outputTemplate>OCT</outputTemplate>
+		</valueConverter>
+		<valueConverter>
+			<matchPattern>11</matchPattern>
+			<outputTemplate>NOV</outputTemplate>
+		</valueConverter>
+		<valueConverter>
+			<matchPattern>12</matchPattern>
+			<outputTemplate>DEC</outputTemplate>
+		</valueConverter>
+	</textFileColumn>
+	<textFileColumn>
+		<header>Collection date</header>
+		<property>collection_month_day</property>
+		<matchPattern>\d\d\d\d-\d\d-(\d\d)</matchPattern>
+		<outputTemplate>${g1}</outputTemplate>
+	</textFileColumn>
+</textFilePopulator>

@@ -1,0 +1,7 @@
+<blastFastaAlignmentImporter>
+  <idClauseExtractorFormatter>
+    <matchPattern>(.*)</matchPattern>
+    <outputTemplate>source.name in ('cov-gisaid') and sequenceID = '${g1}'</outputTemplate>
+  </idClauseExtractorFormatter>
+    <minRowCoveragePercent>90.0</minRowCoveragePercent>
+</blastFastaAlignmentImporter>

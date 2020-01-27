@@ -1,0 +1,23 @@
+schema-project cov
+
+  table sequence
+    create field length INTEGER
+    create field isolate VARCHAR
+    create field collection_year INTEGER 
+    create field collection_month VARCHAR
+    create field collection_month_day INTEGER
+    create field host_species VARCHAR 100
+    create field place_sampled VARCHAR 100
+    exit
+
+  table alignment
+    create field phylogeny CLOB
+    exit
+
+  run file glue/m49_countries/m49SchemaExtension.glue
+ 
+  create link sequence m49_country -m MANY_TO_ONE
+  
+  
+  
+  exit

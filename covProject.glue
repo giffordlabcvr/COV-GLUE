@@ -1,0 +1,30 @@
+delete project cov
+
+create project cov "A GLUE project for Coronavirus (cov)" --minVersion 1.1.71
+
+run file glue/covSchemaExtensions.glue
+ 
+project cov
+
+  run file glue/covProjectSettings.glue
+  run file glue/covModules.glue
+
+  # M49 country extension
+  run file glue/m49_countries/populateM49All.glue
+  
+  # Import sequences
+  module covGisaidFastaImporter import -f sequences/gisaid_cov2020_all_sequences.fasta
+ 
+  # Metadata
+  module covGisaidMetadataTextFilePopulator populate --preview --fileName tabular/gisaid_metadata.txt 
+
+  # Sequence lengths
+  run script glue/covSetSequenceLengths.js 
+
+  # Unconstrained alignment
+  module covSimpleFastaAlignmentImporter import AL_GISAID_UNCONSTRAINED -f alignments/AL_GISAID_UNCONSTRAINED.fna 
+
+  # Validate
+  validate
+
+exit

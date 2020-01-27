@@ -1,0 +1,13 @@
+# Basic modules
+
+create module --fileName modules/covGisaidFastaImporter.xml
+create module --fileName modules/covGisaidMetadataTextFilePopulator.xml
+
+create module --fileName modules/covMafftAligner.xml
+create module --fileName modules/covBlastFastaAlignmentImporter.xml
+
+create module --fileName modules/covSimpleFastaAlignmentExporter.xml
+create module --fileName modules/covSimpleFastaAlignmentImporter.xml
+
+create module --fileName modules/tabularUtilityCsv.xml 
+create module --fileName modules/tabularUtilityTab.xml 

@@ -1,0 +1,183 @@
+apply plugin: 'war'
+apply plugin: 'pl.allegro.tech.build.axion-release'
+apply plugin: 'org.hidetake.ssh'
+apply plugin: 'com.bmuschko.cargo'
+
+project.ext.set("glueVersion", "1.1.68")
+
+ssh.settings { knownHosts = allowAnyHosts }
+
+project.version = scmVersion.version
+
+remotes {
+  covglue_cvr {
+    host = 'cov-glue.cvr.gla.ac.uk'
+    user = 'sing01j'
+    identity = file('/Users/joshsinger/.ssh/cov-glue_id_rsa')
+  }
+  
+}
+
+repositories {
+	mavenLocal()
+	// cargo
+	mavenCentral()
+}
+
+configurations {
+	gluetoolsWebWar
+	gluetoolsWsWar
+	gluetoolsCore
+}
+
+dependencies {
+    gluetoolsWebWar group: 'cvr.ac.uk', name: 'gluetools-web', version: project.glueVersion, transitive: false
+    gluetoolsWsWar group: 'cvr.ac.uk', name: 'gluetools-ws', version: project.glueVersion, transitive: false
+    gluetoolsCore group: 'cvr.ac.uk', name: 'gluetools-core', version: project.glueVersion, transitive: false
+    cargo group: 'org.codehaus.cargo', name: 'cargo-core-uberjar', version: '1.7.4'
+	cargo group: 'org.codehaus.cargo', name: 'cargo-ant', version: '1.7.4'
+}
+
+
+buildscript {
+  repositories {
+    // for ssh-deploy stuff, cargo
+    jcenter()
+    // for axion-release
+    mavenCentral()
+  }
+  dependencies {
+    classpath group: 'org.hidetake', name: 'gradle-ssh-plugin', version: '1.1.3'
+    classpath group: 'commons-io', name: 'commons-io', version: '1.3.2'
+    classpath group: 'pl.allegro.tech.build', name: 'axion-release-plugin', version: '1.9.3'
+    classpath group: 'com.bmuschko', name: 'gradle-cargo-plugin', version:'2.6'
+  }
+}
+
+task deployDeps(dependsOn: ['copyGluetoolsWebWar', 
+	'gluetoolsWsWithContextWar', 'deployGluetoolsConfigCovGlueCVR'])
+
+cargoRedeployRemote.dependsOn deployDeps
+
+cargo {
+    containerId = 'tomcat7x'
+    port = 80
+    
+    deployable {
+    	file = new File(buildDir, 'runtimeWars/gluetools-ws.war')
+        context = '/gluetools-ws'
+    }
+    deployable {
+    	file = new File(buildDir, 'runtimeWars/gluetools-web.war')
+        context = '/gluetools-web'
+    }
+
+	// covGlue war has context path /
+    deployable {
+        context = '/'
+    }
+
+    remote {
+        hostname = 'cov-glue.cvr.gla.ac.uk'
+        // credentials in ~/.gradle/gradle.properties
+        username = System.getProperty("cov_glue.tomcat.mgmt.username")
+        password = System.getProperty("cov_glue.tomcat.mgmt.password")
+    }
+}
+
+war {
+	webAppDirName = 'WebContent'
+	archiveName 'covGlue.war'
+}
+
+task copyGluetoolsJar(type: Copy) {
+    from configurations.gluetoolsCore
+    into "$buildDir/runtimeJars"
+    rename('gluetools-core-'+project.glueVersion+'.jar', 'gluetools-core.jar')
+}
+
+task copyGluetoolsWebWar(type: Copy) {
+    from configurations.gluetoolsWebWar
+    into "$buildDir/runtimeWars"
+    rename('gluetools-web-'+project.glueVersion+'.war', 'gluetools-web.war')
+}
+
+task copyGluetoolsWsWar(type: Copy) {
+    from configurations.gluetoolsWsWar
+    into "$buildDir/runtimeWars"
+    rename('gluetools-ws-'+project.glueVersion+'.war', 'gluetools-ws-without-context.war')
+}
+
+task gluetoolsWsWithContextWar(type: Jar, dependsOn: copyGluetoolsWsWar) {
+    destinationDir = new File(buildDir, 'runtimeWars')
+    archiveName = 'gluetools-ws.war' 
+    from zipTree(new File(buildDir, 'runtimeWars/gluetools-ws-without-context.war'))
+    from(file("covglue_cvr/gluetools-ws-context.xml")) {
+        into ('META-INF')
+        rename("gluetools-ws-context.xml", "context.xml")
+    }
+}
+
+task deployAll(dependsOn: ['cargoRedeployRemote'])
+
+
+// gluetools xml config for CVR vm 
+task deployGluetoolsConfigCovGlueCVR() {
+  ext.file = new File(projectDir, '/covglue_cvr/cov-glue-gluetools-config.xml')
+  ext.touchfile = new File(buildDir, '/deployGluetoolsConfigCovGlueCVR.touchfile')
+  inputs.file file
+  outputs.file touchfile
+  doLast {
+	  println "Uploading "+file.name
+	  ssh.run {
+	    session(remotes.covglue_cvr) {
+	      put from: file.absolutePath, into: '/tmp/cov-glue-gluetools-config.xml'
+	      execute 'mv /tmp/cov-glue-gluetools-config.xml /opt/gluetools/conf'
+	    }
+	  }
+	  touchfile.delete()
+	  buildDir.mkdirs()
+	  touchfile.createNewFile()
+  }
+}
+def glueConfigFile = System.getProperty("user.name").equals('joshsinger') ? 'local-gluetools-config.xml' : 'remote-gluetools-config.xml'
+
+task wipeCovGlueDB(type: Exec) {
+	commandLine "bash", "-c", "echo 'drop database COV_GLUE; create database COV_GLUE character set UTF8;' | mysql -u covglue --password=covglue"
+}
+
+task buildCovGlueDB(type: JavaExec, dependsOn: 'copyGluetoolsJar') {
+	classpath "build/runtimeJars/gluetools-core.jar"
+	main 'uk.ac.gla.cvr.gluetools.core.console.Console'
+	args '-c', glueConfigFile, '-i', 'run', 'file', 'covProject.glue'
+}
+
+task dumpCovGlueDB(type: Exec, dependsOn: 'buildCovGlueDB') {
+	standardOutput = new FileOutputStream(new File('/tmp/cov_glue.sql'))
+	commandLine '/usr/local/mysql/bin/mysqldump', '-u', 'covglue', '--password=covglue', 'COV_GLUE'
+}
+
+task zipCovGlueDB(type: Exec, dependsOn: 'dumpCovGlueDB') {
+	commandLine '/usr/bin/gzip', '-f', '/tmp/cov_glue.sql'
+}
+
+def scmCustomKey = '/Users/joshsinger/.ssh/github_id_rsa'
+
+scmVersion {
+	hooks {
+        pre 'fileUpdate', [file: 'glue/covProjectSettings.glue', pattern: {v, c -> /set setting project-version $v/}, replacement: {v, c -> "set setting project-version $v"}]
+  
+		pre 'commit', {v, p -> "Release version $v"}
+    }
+
+    scmVersion {
+        versionCreator 'versionWithBranch'
+	    repository {
+	        customKey = file(scmCustomKey)
+	    }
+	    tag {
+	        prefix = 'COV-GLUE'
+	    }
+    }
+
+}
