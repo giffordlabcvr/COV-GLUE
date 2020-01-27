@@ -10,5 +10,8 @@ create module --fileName modules/covRaxmlPhylogenyGenerator.xml
 create module --fileName modules/covSimpleFastaAlignmentExporter.xml
 create module --fileName modules/covSimpleFastaAlignmentImporter.xml
 
+create module --fileName modules/covPhyloUtility.xml
+create module --fileName modules/covPhyloImporter.xml
+
 create module --fileName modules/tabularUtilityCsv.xml 
 create module --fileName modules/tabularUtilityTab.xml 
