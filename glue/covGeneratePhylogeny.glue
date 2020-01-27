@@ -1,0 +1,3 @@
+module covRaxmlPhylogenyGenerator 
+  generate nucleotide phylogeny AL_GISAID_UNCONSTRAINED -a -o trees/gisaidUnconstrainedUnrooted.tree NEWICK
+  exit
