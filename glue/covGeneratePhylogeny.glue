@@ -1,3 +1,17 @@
+# generate tree using RAxML
 module covRaxmlPhylogenyGenerator 
-  generate nucleotide phylogeny AL_GISAID_UNCONSTRAINED -a -o trees/gisaidUnconstrainedUnrooted.tree NEWICK
+  generate nucleotide phylogeny AL_GISAID_UNCONSTRAINED -a -o trees/gisaidUnconstrainedUnrooted.tree NEWICK_BOOTSTARPS
   exit
+
+# import it so it can be rerooted  
+module covPhyloImporter
+  import phylogeny AL_GISAID_UNCONSTRAINED -a -i trees/gisaidUnconstrainedUnrooted.tree NEWICK_BOOTSTRAPS -f phylogeny
+  exit
+  
+# reroot using 2013 bat virus as outgroup   
+module covPhyloUtility
+  reroot-alignment-phylogeny AL_GISAID_UNCONSTRAINED phylogeny\
+    -w "sequence.sequenceID = 'EPI_ISL_402131'" \
+    -o trees/gisaidUnconstrainedOutgroupRooted.tree NEWICK_BOOTSTRAPS
+  exit
+  
