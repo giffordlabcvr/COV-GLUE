@@ -1,0 +1,6 @@
+<treeVisualiser>
+	<freemarkerAnnotationGenerator>
+		<annotationName>isolate</annotationName>
+		<template><![CDATA[${renderNestedProperty('sequence.isolate')}]]></template>
+	</freemarkerAnnotationGenerator>
+</treeVisualiser>

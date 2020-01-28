@@ -1,0 +1,380 @@
+
+var featuresList = [
+    { name: "E",
+      displayName: "E" },
+    { name: "M",
+      displayName: "M" },
+    { name: "N",
+      displayName: "N" },
+    { name: "ORF_10",
+      displayName: "ORF 10" },
+    { name: "ORF_1ab",
+      displayName: "ORF 1ab" },
+    { name: "ORF_3a",
+      displayName: "ORF_3a" },
+    { name: "ORF_6",
+      displayName: "ORF 6" },
+    { name: "ORF_7a",
+      displayName: "ORF 7a" },
+    { name: "ORF_8",
+      displayName: "ORF 8" },
+    { name: "S",
+      displayName: "S" }];
+
+function reportFastaWeb(base64, filePath) {
+	glue.log("FINE", "covReportingController.reportFastaWeb invoked");
+	var fastaDocument;
+	glue.inMode("module/covFastaUtility", function() {
+		fastaDocument = glue.command(["base64-to-nucleotide-fasta", base64]);
+	});
+	var numSequencesInFile = fastaDocument.nucleotideFasta.sequences.length;
+	if(numSequencesInFile == 0) {
+		throw new Error("No sequences found in FASTA file");
+	}
+	var maxSequencesWithoutAuth = 50;
+	if(numSequencesInFile > maxSequencesWithoutAuth && !glue.hasAuthorisation("covFastaAnalysisLargeSubmissions")) {
+		throw new Error("Not authorised to analyse FASTA files with more than "+maxSequencesWithoutAuth+" sequences");
+	}
+	result = reportDocument({
+		reportFastaDocument: {
+			"fastaDocument": fastaDocument, 
+			"filePath": filePath
+		}
+	});
+	glue.setRunningDescription("Collating report");
+	return result;
+}
+
+function reportDocument(document) {
+	var filePath = document.reportFastaDocument.filePath;
+	var fastaDocument = document.reportFastaDocument.fastaDocument;
+	var fastaMap = {};
+	var resultMap = {};
+	var placerResultContainer = {};
+	// apply blast recogniser / genotyping together on set, as this is more efficient.
+	initResultMap(fastaDocument, fastaMap, resultMap, placerResultContainer);
+	// apply report generation to each sequence in the set.
+	var covReports = _.map(fastaDocument.nucleotideFasta.sequences, function(sequence) {
+		return generateSingleFastaReport(_.pick(fastaMap, sequence.id), _.pick(resultMap, sequence.id), filePath);
+	});
+	var result = {
+		covWebReport:  { 
+			results: covReports, 
+			placerResult: placerResultContainer.placerResult
+		}
+	};
+
+	glue.log("FINE", "covReportingController.reportFastaWeb result", result);
+	
+	return result;
+}
+
+/**
+ * Entry point for generating a report for a fasta file containing a single sequence.
+ */
+function reportFasta(fastaFilePath) {
+	glue.log("FINE", "covReportingController.reportFasta invoked, input file:"+fastaFilePath);
+	// Load fasta and put in a fastaMap
+	var fastaDocument;
+	glue.inMode("module/covFastaUtility", function() {
+		fastaDocument = glue.command(["load-nucleotide-fasta", fastaFilePath]);
+	});
+	var numSequencesInFile = fastaDocument.nucleotideFasta.sequences.length;
+	if(numSequencesInFile == 0) {
+		throw new Error("No sequences found in FASTA file");
+	}
+	if(numSequencesInFile > 1) {
+		throw new Error("Please use only one sequence per FASTA file");
+	}
+	var fastaMap = {};
+	var resultMap = {};
+	var placerResultContainer = {};
+	initResultMap(fastaDocument, fastaMap, resultMap, placerResultContainer);
+	var singleFastaReport = generateSingleFastaReport(fastaMap, resultMap, fastaFilePath);
+	singleFastaReport.covReport["placerResult"] = placerResultContainer.placerResult;
+	return singleFastaReport;
+}
+
+function initResultMap(fastaDocument, fastaMap, resultMap, placerResultContainer) {
+	glue.log("FINE", "covReportingController.initResultMap fastaDocument:", fastaDocument);
+	_.each(fastaDocument.nucleotideFasta.sequences, function(sequenceObj) {
+		fastaMap[sequenceObj.id] = sequenceObj;
+	});
+	// initialise result map.
+	var sequenceObjs = _.values(fastaMap);
+	_.each(sequenceObjs, function(sequenceObj) {
+		resultMap[sequenceObj.id] = { id: sequenceObj.id };
+	});
+	
+	// apply recogniser to fastaMap
+	recogniseFasta(fastaMap, resultMap);
+
+	glue.log("FINE", "covReportingController.initResultMap, result map after recogniser", resultMap);
+
+	// apply phylogenetic placement
+	placeFasta(fastaMap, resultMap, placerResultContainer);
+
+	glue.log("FINE", "covReportingController.initResultMap, result map after genotyping", resultMap);
+}
+
+function generateQueryToTargetRefSegs(targetRefName, nucleotides) {
+	var alignerModule;
+	glue.inMode("module/covFastaSequenceReporter", function() {
+		alignerModule = glue.command(["show", "property", "alignerModuleName"]).moduleShowPropertyResult.propertyValue;
+	});
+	var alignResult;
+	glue.inMode("module/"+alignerModule, function() {
+		alignResult = glue.command({align: {
+				referenceName: targetRefName,
+				sequence: [
+				    { 
+				    	queryId: "query", 
+				    	nucleotides: nucleotides
+				    }
+				]
+			}
+		});
+		glue.log("FINE", "covReportingController.generateQueryToTargetRefSegs, alignResult", alignResult);
+	});
+	return alignResult.compoundAlignerResult.sequence[0].alignedSegment;
+	
+}
+
+function generateFeaturesWithCoverage(targetRefName, queryToTargetRefSegs) {
+	var featuresWithCoverage = []; 
+	
+	_.each(featuresList, function(feature) {
+		glue.inMode("module/covFastaSequenceReporter", function() {
+			var coveragePercentage = glue.command({
+				"alignment-feature-coverage" :{
+							"queryToTargetSegs": {
+								queryToTargetSegs: {
+									alignedSegment: queryToTargetRefSegs
+								}
+							},
+							"targetRefName":targetRefName,
+							"relRefName":"REF_MASTER_WUHAN_HU_1",
+							"linkingAlmtName":"AL_GISAID_UNCONSTRAINED",
+							"featureName":feature.name
+						}
+			}).fastaSequenceAlignmentFeatureCoverageResult.coveragePercentage;
+			
+			var featureCopy = _.clone(feature);
+			featureCopy.coveragePct = coveragePercentage;
+			featuresWithCoverage.push(featureCopy);
+		});
+	});
+	return featuresWithCoverage;
+}
+
+function generateSingleFastaReport(fastaMap, resultMap, fastaFilePath) {
+	
+	_.each(_.values(resultMap), function(sequenceResult) {
+		var targetRefName = "REF_MASTER_WUHAN_HU_1";
+		var nucleotides = fastaMap[sequenceResult.id].sequence;
+		var queryToTargetRefSegs = generateQueryToTargetRefSegs(targetRefName, nucleotides);
+		var queryNucleotides = fastaMap[sequenceResult.id].sequence;
+		sequenceResult.featuresWithCoverage = generateFeaturesWithCoverage(targetRefName, queryToTargetRefSegs);
+
+		sequenceResult.targetRefName = targetRefName;
+
+		sequenceResult.visualisationHints = visualisationHints(queryNucleotides, targetRefName, queryToTargetRefSegs);
+	});
+	
+	var results = _.values(resultMap);
+	
+	var covReport = { 
+		covReport: {
+			sequenceDataFormat: "FASTA",
+			filePath: fastaFilePath,
+			sequenceResult: results[0]
+		}
+	};
+	addOverview(covReport);
+
+	glue.log("FINE", "covReportingController.generateSingleFastaReport covReport:", covReport);
+	return covReport;
+}
+function visualisationHints(queryNucleotides, targetRefName, queryToTargetRefSegs) {
+	// consider the target ref as comparison ref.
+	var comparisonReferenceNames = [];
+	comparisonReferenceNames.push(targetRefName);
+	var seqs = [];
+	var comparisonRefs = [];
+	
+	// eliminate duplicates and enhance with display names.
+	_.each(comparisonReferenceNames, function(refName) {
+		glue.inMode("reference/"+refName, function() {
+			var seqID = glue.command(["show", "sequence"]).showSequenceResult["sequence.sequenceID"];
+			if(seqs.indexOf(seqID) < 0) {
+				seqs.push(seqID);
+				var refDisplayName = glue.command(["show", "property", "displayName"]).propertyValueResult.value;
+				if(refDisplayName == null) {
+					refDisplayName = "Closest Reference ("+seqID+")";
+				}
+				comparisonRefs.push({
+					"refName": refName,
+					"refDisplayName": refDisplayName
+				});
+			}
+		});
+	});
+	
+	var queryDetails = [];
+	
+	
+	return {
+		"features": featuresList,
+		"comparisonRefs": comparisonRefs,
+		"targetReferenceName":targetRefName,
+		"queryNucleotides":queryNucleotides,
+		"queryToTargetRefSegments": queryToTargetRefSegs,
+		"queryDetails": queryDetails
+	};
+}
+
+
+/*
+ * This function takes a fastaMap of id -> { id, nucleotideFasta }, and a result map of id -> ? 
+ * and runs max likelihood placement on the subset of sequences that have been identified as forward nCoV.
+ */
+function placeFasta(fastaMap, resultMap, placerResultContainer) {
+	var placementFastaMap = {};
+	_.each(_.values(resultMap), function(resultObj) {
+		if(resultObj.isForwardCov && !resultObj.isReverseCov) {
+			placementFastaMap[resultObj.id] = fastaMap[resultObj.id];
+		} 
+	});
+	if(!_.isEmpty(placementFastaMap)) {
+
+		var numSeqs = _.values(placementFastaMap).length;
+		glue.setRunningDescription("Phylogenetic placement for "+numSeqs+" sequence"+((numSeqs > 1) ? "s" : ""));
+
+		// run the placer and generate a placer result document
+		var placerResultDocument;
+		glue.inMode("module/covMaxLikelihoodPlacer", function() {
+			placerResultDocument = glue.command({
+				"place": {
+					"fasta-document": {
+						"fastaCommandDocument": {
+							"nucleotideFasta" : {
+								"sequences": _.values(placementFastaMap)
+							}
+						}
+					}
+				}
+			});
+		});
+		placerResultContainer.placerResult = placerResultDocument;
+		
+
+		
+		// list the query summaries within the placer result document
+		var placementSummaries;
+		glue.inMode("module/covMaxLikelihoodPlacer", function() {
+			placementSummaries = glue.tableToObjects(glue.command({
+				"list": {
+					"query-from-document": {
+						"placerResultDocument": placerResultDocument
+					}
+				}
+			}));
+		});
+
+		// for each query in the placer results.
+		_.each(placementSummaries, function(placementSummaryObj) {
+			var queryName = placementSummaryObj.queryName;
+			
+			var placements;
+			
+			// list the placements for that query.
+			glue.inMode("module/covMaxLikelihoodPlacer", function() {
+				placements = glue.tableToObjects(glue.command({
+					"list": {
+						"placement-from-document": {
+							"queryName": queryName,
+							"placerResultDocument": placerResultDocument
+						}
+					}
+				}));
+			});
+
+			resultMap[queryName].placements = placements;
+		});
+		
+	}
+}
+
+/*
+ * Use the fastaUtility module to reverse complement a FASTA string
+ */
+function reverseComplement(fastaString) {
+	var reverseComplement;
+	glue.inMode("module/covFastaUtility", function() {
+		var reverseComplementResult = 
+			glue.command(["reverse-complement", "string", 
+			              "--fastaString", fastaString]);
+		reverseComplement = reverseComplementResult.reverseComplementFastaResult.reverseComplement;
+	});
+	return reverseComplement;
+}
+
+/*
+ * This function takes a fastaMap of id -> { id, nucleotideFasta }, and a result map of id -> ? 
+ * and runs BLAST recogniser, to determine whether the sequence is nCoV, and if so, whether 
+ * it is in the forward direction or reverse complement.
+ * The result map will have isForwardCov set to true if a forward hit was found, false otherwise
+ * It will have isReverseCov set to true if a reverse hit was found, false otherwise
+ */
+function recogniseFasta(fastaMap, resultMap) {
+	var sequenceObjs = _.values(fastaMap);
+	_.each(_.values(resultMap), function(resultObj) {
+		resultObj.isForwardCov = false;
+		resultObj.isReverseCov = false;
+	});
+	var fastaDocument = {
+		"nucleotideFasta" : {
+			"sequences" : sequenceObjs
+		}
+	};
+	var numSeqs = sequenceObjs.length;
+	glue.setRunningDescription("Sequence recognition for "+numSeqs+" sequence"+((numSeqs > 1) ? "s" : ""));
+	var recogniserResults;
+	glue.inMode("module/covSequenceRecogniser", function() {
+		recogniserResults = glue.tableToObjects(glue.command({
+				"recognise": {
+					"fasta-document": {
+						"fastaCommandDocument": fastaDocument
+					}
+				}
+		}));
+	});
+	glue.log("FINE", "covReportingController.reportFasta recogniserResults:", recogniserResults);
+	_.each(recogniserResults, function(recogniserResult) {
+		if(recogniserResult.direction == 'FORWARD') {
+			resultMap[recogniserResult.querySequenceId].isForwardCov = true;
+		} else if(recogniserResult.direction == 'REVERSE') {
+			resultMap[recogniserResult.querySequenceId].isReverseCov = true;
+		} 
+	});
+}
+
+function addOverview(covReport) {
+	var today = new Date();
+	var dd = today.getDate();
+	var mm = today.getMonth()+1; // January is 0!
+	var yyyy = today.getFullYear();
+	if(dd < 10) {
+	    dd = '0'+dd
+	} 
+	if(mm < 10) {
+	    mm = '0'+mm
+	} 
+	covReport.covReport.reportGenerationDate = dd + '/' + mm + '/' + yyyy;
+	covReport.covReport.engineVersion = 
+		glue.command(["glue-engine","show-version"]).glueEngineShowVersionResult.glueEngineVersion;
+	covReport.covReport.projectVersion = 
+		glue.command(["show","setting","project-version"]).projectShowSettingResult.settingValue;
+	
+}
+

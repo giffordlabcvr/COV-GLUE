@@ -2,6 +2,7 @@ delete reference REF_MASTER_WUHAN_HU_1
 create reference REF_MASTER_WUHAN_HU_1 cov-gisaid EPI_ISL_402125
 
 reference REF_MASTER_WUHAN_HU_1
+  set field displayName "Wuhan-Hu-1 Reference Sequence"
   add feature-location whole_genome
   feature-location whole_genome
     add segment 1 29903

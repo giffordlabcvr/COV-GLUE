@@ -1,0 +1,105 @@
+svg {
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+.codonLabel {
+    text-anchor: middle;
+	fill: #222222;
+}
+
+.referenceAaBackground {
+	fill: #ddeeff;
+}
+
+.referenceAa {
+    text-anchor: middle;
+	font-weight: bold;
+	fill: #3a5c7e;
+}
+
+.referenceNt {
+    text-anchor: middle;
+	font-weight: bold;
+	fill: #88aacc;
+	font-size: 90%;
+}
+
+.referenceNtIndexSegmentEnd {
+	text-anchor: left;
+	fill: #88aacc;
+	font-size: 90%;
+	font-weight: bold;
+}
+
+.referenceNtIndexRegular {
+	text-anchor: left;
+	fill: #88aacc;
+	font-size: 90%;
+}
+
+.queryAaBackground {
+	fill: #ddeecc;
+}
+
+.queryAa {
+    text-anchor: middle;
+	font-weight: bold;
+	fill: #557733;
+}
+
+.queryAaDiff {
+	text-anchor: middle;
+	font-weight: bold;
+	fill: #ffffff;
+}
+
+.multipleAas {
+	text-decoration: underline;
+}
+
+.multipleAas:hover {
+	fill: #ffffff;
+}
+
+.multipleAasBackground {
+	fill: #aaaaaa;
+}
+
+.multipleAasBackground:hover {
+	fill: #777777;
+}
+
+.queryAaDiffBackground {
+	fill: #aaaaaa;
+}
+
+.queryNt {
+    text-anchor: middle;
+	font-weight: bold;
+	fill: #99bb77;
+	font-size: 90%;
+}
+
+.queryNtDiff {
+	text-anchor: middle;
+	font-weight: bold;
+	fill: #ffffff;
+	font-size: 90%;
+}
+
+.queryNtDiffBackground {
+	fill: #aaaaaa;
+}
+
+.queryNtIndexSegmentEnd {
+	text-anchor: left;
+	fill: #99bb77;
+	font-size: 90%;
+	font-weight: bold;
+}
+
+.queryNtIndexRegular {
+	text-anchor: left;
+	fill: #99bb77;
+	font-size: 90%;
+}

@@ -1,0 +1,4 @@
+<freemarkerDocTransformer>
+	<templateFileName>covTreeVisualisationTransformer.ftlh</templateFileName>
+	<resourceFileName>covTreeVisualisationTransformer.css</resourceFileName>
+</freemarkerDocTransformer>

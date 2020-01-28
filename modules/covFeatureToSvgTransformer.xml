@@ -1,0 +1,4 @@
+<freemarkerDocTransformer>
+	<templateFileName>covFeatureToSvgTransformer.ftlx</templateFileName>
+	<resourceFileName>covFeatureToSvgTransformer.css</resourceFileName>
+</freemarkerDocTransformer>

@@ -1,0 +1,218 @@
+<#assign alignmentNtColumns = transformerInput.featureVisualisation.displayNtWidth>
+
+<#assign ntWidthPx = transformerInput.ntWidth>
+<#assign ntHeightPx = ntWidthPx>
+<#assign ntSpacingPx = ntWidthPx / 4>
+<#assign aaHeightPx = ntWidthPx * 1.5>
+<#assign linkingHeightPx = aaHeightPx / 4>
+<#assign ntIndexHeightPx = ntWidthPx * 2.5>
+<#assign rowSpacingPx = ntSpacingPx * 1.5>
+
+<#assign svgWidthPx = ( alignmentNtColumns * ntWidthPx ) + ( (alignmentNtColumns-1) * ntSpacingPx) >
+
+<#assign detailAnnotationsList = []>
+
+
+<#list transformerInput.featureVisualisation.annotationRows as annotationRow>
+	<#switch annotationRow.annotationType>
+	  <#case "codonLabel">
+		<#assign codonLabelAnnotations = (annotationRow.annotations)![]>
+	    <#break>
+	  <#case "refAa">
+		<#assign refAaAnnotations = (annotationRow.annotations)![]>
+	    <#break>
+	  <#case "refNtContent">
+		<#assign refNtContentAnnotations = (annotationRow.annotations)![]>
+	    <#break>
+	  <#case "refNtIndex">
+		<#assign refNtIndexAnnotations = (annotationRow.annotations)![]>
+	    <#break>
+	  <#case "queryAa">
+		<#assign queryAaAnnotations = (annotationRow.annotations)![]>
+	    <#break>
+	  <#case "queryNtContent">
+		<#assign queryNtContentAnnotations = (annotationRow.annotations)![]>
+	    <#break>
+	  <#case "queryNtIndex">
+		<#assign queryNtIndexAnnotations = (annotationRow.annotations)![]>
+	    <#break>
+	  <#case "detail">
+	    <#if annotationRow.annotations ??>
+		<#assign detailAnnotationsList = detailAnnotationsList + [ annotationRow.annotations ]>
+		</#if>
+	    <#break>
+	  <#default>
+	</#switch>
+</#list>
+
+<#assign svgHeightPx = 
+	aaHeightPx + <#-- codon label -->
+	aaHeightPx + <#-- ref AA -->
+	ntHeightPx + <#-- ref NT content -->
+	rowSpacingPx +
+	ntIndexHeightPx + <#-- ref NT index -->
+	rowSpacingPx +
+	aaHeightPx + <#-- query AA -->
+	ntHeightPx + <#-- query NT content -->
+	rowSpacingPx +
+	ntIndexHeightPx + <#-- query NT index -->
+	( detailAnnotationsList?size * (rowSpacingPx + aaHeightPx) )> <#-- detail rows -->
+
+
+<svg width="${svgWidthPx?c}" height="${svgHeightPx?c}"
+     xmlns="http://www.w3.org/2000/svg">
+  <style>${getResourceAsString('covFeatureToSvgTransformer.css')?no_esc}</style>
+  
+  <#assign y = 0>
+  
+  <#list codonLabelAnnotations as annotation>
+	  <#assign labelWidthPx = ( annotation.ntWidth * ntWidthPx ) + ( (annotation.ntWidth-1) * ntSpacingPx) >
+	  <#assign labelXPx = (labelWidthPx / 2) + ( (annotation.displayNtPos - 1) * (ntWidthPx + ntSpacingPx))>
+	  <#assign labelHeightPx = aaHeightPx>
+	  <#assign labelYPx = y + (labelHeightPx / 2)>
+	  <text class="codonLabel" 
+	  	x="${labelXPx?c}" y="${labelYPx?c}" width="${labelWidthPx?c}" height="${labelHeightPx?c}" dy=".35em">${annotation.label}</text>
+  </#list>
+
+  <#assign y = y + aaHeightPx>
+      
+  <#list refAaAnnotations as annotation>
+	  <#assign refAaRectWidthPx = ( annotation.ntWidth * ntWidthPx ) + ( (annotation.ntWidth-1) * ntSpacingPx) >
+	  <#assign refAaRectXPx = ( (annotation.displayNtPos - 1) * (ntWidthPx + ntSpacingPx))>
+	  <#assign refAaRectHeightPx = aaHeightPx>
+	  <#assign refAaRectYPx = y>
+	  
+	  <rect class="referenceAaBackground" 
+	  	x="${refAaRectXPx?c}" y="${refAaRectYPx?c}" width="${refAaRectWidthPx?c}" height="${refAaRectHeightPx?c}"></rect>
+	  
+	  <#assign refAaXPx = refAaRectXPx + (refAaRectWidthPx/2) >
+	  <#assign refAaYPx = refAaRectYPx + (aaHeightPx / 2)>
+	
+	  <text class="referenceAa" 
+	  	x="${refAaXPx?c}" y="${refAaYPx?c}" dy=".35em">${annotation.aa}</text> 
+  </#list>
+
+  <#assign y = y + aaHeightPx>
+
+  <#list refNtContentAnnotations as annotation>
+
+	  <#assign refNtContentYPx = y + (ntHeightPx/2)>
+	  
+	  <#list 0..(annotation.ntContent?length-1) as charIndex>
+		  <#assign refNtContentXPx = ( ((annotation.displayNtPos - 1) + charIndex) * (ntWidthPx + ntSpacingPx) ) + (ntWidthPx / 2) >
+		  <text class="referenceNt" 
+		  	x="${refNtContentXPx?c}" y="${refNtContentYPx?c}" dy=".35em">${annotation.ntContent[charIndex]}</text> 
+	  </#list>
+  </#list>
+
+  <#assign y = y + ntHeightPx + rowSpacingPx>
+
+  <#list refNtIndexAnnotations as annotation>
+
+	  <#assign refNtIndexYPx = y >
+	  <#assign refNtIndexXPx = ( ((annotation.displayNtPos - 1)) * (ntWidthPx + ntSpacingPx) ) + (ntWidthPx / 2) >
+	  
+	  <#assign indexClass = "referenceNtIndexRegular">
+	  <#if annotation.endOfSegment>
+		  <#assign indexClass = "referenceNtIndexSegmentEnd">
+	  </#if>
+
+	  <text class="${indexClass}" 
+		  	x="${refNtIndexXPx?c}" y="${refNtIndexYPx?c}" dy=".35em" transform='rotate(90 ${refNtIndexXPx?c} ${refNtIndexYPx?c})'>${annotation.ntIndex?c}</text> 
+  </#list>
+
+  <#assign y = y + ntIndexHeightPx + rowSpacingPx>
+
+  <#list queryAaAnnotations as annotation>
+
+	  <#if annotation.multipleAas??>
+	  <g class="multipleAasBackground">
+	  <title>Multiple residues: ${annotation.multipleAas?join(', ')}</title>
+	  </#if>
+
+	  <#assign queryAaRectWidthPx = ( annotation.ntWidth * ntWidthPx ) + ( (annotation.ntWidth-1) * ntSpacingPx) >
+	  <#assign queryAaRectXPx = ( (annotation.displayNtPos - 1) * (ntWidthPx + ntSpacingPx))>
+	  <#assign queryAaRectHeightPx = aaHeightPx>
+	  <#assign queryAaRectYPx = y>
+	  
+	  <#assign rectClass = "queryAaBackground">
+	  <#assign letterClass = "queryAa">
+	  
+	  <#if annotation.differentFromRef?? && annotation.differentFromRef>
+		  <#assign rectClass = "queryAaDiffBackground">
+		  <#assign letterClass = "queryAaDiff">
+	  </#if>
+
+	  <#assign displayedAa = annotation.aa>
+	
+	  <#if annotation.multipleAas??>
+		  <#assign displayedAa = '?'>
+		  <#assign letterClass = letterClass+" multipleAas">
+		  <#assign rectClass = "">
+	  </#if>
+	  
+	  <rect class="${rectClass}" 
+	  	x="${queryAaRectXPx?c}" y="${queryAaRectYPx?c}" width="${queryAaRectWidthPx?c}" height="${queryAaRectHeightPx?c}"></rect>
+	  
+	  <#assign queryAaXPx = queryAaRectXPx + (queryAaRectWidthPx/2) >
+	  <#assign queryAaYPx = queryAaRectYPx + (aaHeightPx / 2)>
+	
+	  <text class="${letterClass}" 
+	  	x="${queryAaXPx?c}" y="${queryAaYPx?c}" dy=".35em">${displayedAa}
+	  </text>
+	  
+	  <#if annotation.multipleAas??>
+	  </g>
+	  </#if>
+ 
+  </#list>
+
+  <#assign y = y + aaHeightPx>
+
+  <#list queryNtContentAnnotations as annotation>
+
+	  <#assign queryNtContentYPx = y + (ntHeightPx/2)>
+	  
+	  <#if annotation.ntDisplayPosDifferences??>
+		  <#assign differencePositions = annotation.ntDisplayPosDifferences>
+	  <#else>
+		  <#assign differencePositions = []>
+	  </#if>  
+	  
+	  <#list 0..(annotation.ntContent?length-1) as charIndex>
+	  	  <#assign ntPos = annotation.displayNtPos + charIndex>
+		  <#assign queryNtContentXPx = ( ( ntPos - 1 ) * (ntWidthPx + ntSpacingPx) ) + (ntWidthPx / 2) >
+
+		  <#assign class = "queryNt">
+		  <#if ((differencePositions?size) > 0) && (ntPos == differencePositions?first)>
+		      <#assign differencePositions = differencePositions[1..]>
+			  <#assign class = "queryNtDiff">	
+		      <#assign queryNtRectXPx = ( ( ntPos - 1 ) * (ntWidthPx + ntSpacingPx) )>
+		      <#assign queryNtRectYPx = y>
+		      <#assign queryNtRectWidthPx = ntWidthPx>
+		      <#assign queryNtRectHeightPx = ntHeightPx>
+			  <rect class="queryNtDiffBackground" 
+			  	x="${queryNtRectXPx?c}" y="${queryNtRectYPx?c}" width="${queryNtRectWidthPx?c}" height="${queryNtRectHeightPx?c}"></rect>
+		  </#if>
+		  
+		  <text class="${class}" 
+		  	x="${queryNtContentXPx?c}" y="${queryNtContentYPx?c}" dy=".35em">${annotation.ntContent[charIndex]}</text> 
+	  </#list>
+  </#list>
+
+  <#assign y = y + ntHeightPx + rowSpacingPx>
+
+  <#list queryNtIndexAnnotations as annotation>
+
+	  <#assign queryNtIndexYPx = y>
+	  <#assign queryNtIndexXPx = ( ((annotation.displayNtPos - 1)) * (ntWidthPx + ntSpacingPx) ) + (ntWidthPx / 2) >
+	  
+	  <#assign indexClass = "queryNtIndexRegular">
+	  <#if annotation.endOfSegment>
+		  <#assign indexClass = "queryNtIndexSegmentEnd">
+	  </#if>
+	  
+	  <text class="${indexClass}" 
+		  	x="${queryNtIndexXPx?c}" y="${queryNtIndexYPx?c}" dy=".35em" transform='rotate(90 ${queryNtIndexXPx?c} ${queryNtIndexYPx?c})'>${annotation.ntIndex?c}</text> 
+  </#list>
+</svg>

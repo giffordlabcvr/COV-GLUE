@@ -1,0 +1,67 @@
+svg {
+	font-family: Arial;
+}
+
+.branch {
+	stroke: DarkGrey;
+	stroke-width: 2px;
+	fill: none;
+}
+
+.branchLengthLegendLine {
+	stroke: DarkGrey;
+	stroke-width: 2px;
+}
+
+.highlightedBranch {
+	stroke: Red;
+	stroke-width: 2px;
+	fill: none;
+}
+
+.leafNode {
+	stroke: Black;
+	stroke-width: 1px;
+	fill: DarkGrey; 
+}
+
+.highlightedLeafNode {
+	stroke: Black;
+	stroke-width: 1px;
+	fill: Red; 
+}
+
+.leafText {
+	text-anchor: left;
+	fill: DarkGrey;
+}
+
+.leafLink:hover {
+	fill: Black;
+}
+
+
+.legendText {
+	text-anchor: left;
+	fill: DarkGrey;
+}
+
+.highlightedLeafText {
+	text-anchor: left;
+	fill: Red;
+}
+
+.collapsedSubtree {
+	stroke: url(#collapsedGrad);
+	stroke-width: 2px;
+	fill: url(#collapsedGrad); 
+}
+
+.collapsedSubtreeText {
+	text-anchor: left;
+	fill: DarkGrey;
+}
+
+.collapsedSubtreeLink:hover {
+	fill: Black;
+}

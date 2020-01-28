@@ -8,6 +8,8 @@
 	<textFileColumn>
 		<header>Virus name</header>
 		<property>isolate</property>
+		<matchPattern>BetaCoV/(.*)</matchPattern>
+		<outputTemplate>${g1}</outputTemplate>
 	</textFileColumn>
 	<isoCountryTextFileColumn codeStyle="ALPHA_3">
 		<header>Location</header>

@@ -1,0 +1,19 @@
+<!-- intention here is to quickly recognise (a) whether a sequence is nCoV or not and (b) whether it is reverse complement -->
+<blastSequenceRecogniser>
+  <blastRunner>
+    <generalSearch>
+      <word_size>8</word_size>
+    </generalSearch>
+    <restrictSearchOrResults>
+    </restrictSearchOrResults>
+  </blastRunner>
+	<referenceSequence>REF_MASTER_WUHAN_HU_1</referenceSequence>
+  <recognitionCategory>
+    <id>COV</id>
+    <minimumBitScore>100.0</minimumBitScore>
+    <minimumIdentityPct>90.0</minimumIdentityPct>
+    <minimumTotalAlignLength>50</minimumTotalAlignLength>
+	<referenceSequence>REF_MASTER_WUHAN_HU_1</referenceSequence>
+  </recognitionCategory>
+
+</blastSequenceRecogniser>

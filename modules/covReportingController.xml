@@ -1,0 +1,14 @@
+<ecmaFunctionInvoker>
+	<scriptFileName>covReportingController.js</scriptFileName>
+	<function>
+		<name>reportFastaWeb</name>
+		<consumesBinary>true</consumesBinary>
+		<parameter>
+			<name>base64</name>
+		</parameter>
+		<parameter>
+			<name>fastaFilePath</name>
+		</parameter>
+		<documentResultType/> 
+	</function>
+</ecmaFunctionInvoker>
