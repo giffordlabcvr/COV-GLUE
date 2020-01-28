@@ -11,7 +11,7 @@ module covPhyloImporter
 # reroot using 2013 bat virus as outgroup   
 module covPhyloUtility
   reroot-alignment-phylogeny AL_GISAID_UNCONSTRAINED phylogeny\
-    -w "sequence.sequenceID = 'EPI_ISL_402131'" \
+    -w "sequence.sequenceID = 'EPI_ISL_402131'" --removeOutgroup\
     -o trees/gisaidUnconstrainedOutgroupRooted.tree NEWICK_BOOTSTRAPS
   exit
   

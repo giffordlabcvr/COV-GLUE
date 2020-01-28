@@ -36,7 +36,7 @@
 	</#if>
     <text <#if leafNode.highlighted!false>class="highlightedLeafText"<#else>class="leafText"</#if>
 	  	x="${leafNode.x+leafTextGapPx}" y="${leafNode.y}" width="${leafNode.properties.leafTextWidthPx}" height="${verticalLeafSpacePx}"
-	  	dy=".35em">${leafNode.properties.leafText}</text>
+	  	dy=".35em">${leafNode.properties.leafText?replace('X$', '')}</text>
     <#if leafNode.properties.leafSourceName ?? && leafNode.properties.leafSequenceID ?? >
 	</a>
 	</#if>

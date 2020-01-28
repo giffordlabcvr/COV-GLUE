@@ -66,7 +66,7 @@ function visualisePhyloAsSvg(document) {
 					"pxHeight" : document.inputDocument.pxHeight,
 					"legendPxWidth" : document.inputDocument.legendPxWidth, 
 					"legendPxHeight" : document.inputDocument.legendPxHeight,
-					"leafTextAnnotationName": "isolate"
+					"leafTextAnnotationName": document.inputDocument.tipAnnotation
 				}
 			}
 		});

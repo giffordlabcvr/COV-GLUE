@@ -29,9 +29,9 @@ project cov
   run file glue/covMasterReference.glue
   run script glue/covCheckFeatureLocations.js
 
-  # import phylogeny  
+  # import phylogeny (outgroup removed)
   module covPhyloImporter
-    import phylogeny AL_GISAID_UNCONSTRAINED -a -i trees/gisaidUnconstrainedOutgroupRooted.tree NEWICK_BOOTSTRAPS -f phylogeny
+    import phylogeny AL_GISAID_UNCONSTRAINED -w "sequence.sequenceID != 'EPI_ISL_402131'" -i trees/gisaidUnconstrainedOutgroupRooted.tree NEWICK_BOOTSTRAPS -f phylogeny
     exit
 
   # Validate
