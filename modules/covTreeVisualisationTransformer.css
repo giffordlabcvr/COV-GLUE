@@ -203,6 +203,7 @@ svg {
 .leafNodeAaText_X {
 	text-anchor: middle;
 	fill: White;
+	stroke: White;
 }
 .leafNodeAaText_STOP {
 	text-anchor: middle;
