@@ -18,6 +18,9 @@ project cov
   # Metadata
   module covGisaidMetadataTextFilePopulator populate --fileName tabular/gisaid_metadata.txt 
 
+  # delete the 2013 bat sequence. Thought it might be useful for outgroup rooting but we're just going to use midpoint rooting for now
+  delete sequence -w "sequenceID = 'EPI_ISL_402131'"
+
   # Sequence lengths
   run script glue/covSetSequenceLengths.js 
 
@@ -29,9 +32,9 @@ project cov
   run file glue/covMasterReference.glue
   run script glue/covCheckFeatureLocations.js
 
-  # import phylogeny  
+  # import phylogeny (outgroup removed)
   module covPhyloImporter
-    import phylogeny AL_GISAID_UNCONSTRAINED -a -i trees/gisaidUnconstrainedOutgroupRooted.tree NEWICK_BOOTSTRAPS -f phylogeny
+    import phylogeny AL_GISAID_UNCONSTRAINED -a -i trees/gisaidMidpointRooted.tree NEWICK_BOOTSTRAPS -f phylogeny
     exit
 
   # Validate

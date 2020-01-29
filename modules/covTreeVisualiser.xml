@@ -3,4 +3,17 @@
 		<annotationName>isolate</annotationName>
 		<template><![CDATA[${renderNestedProperty('sequence.isolate')}]]></template>
 	</freemarkerAnnotationGenerator>
+	<freemarkerAnnotationGenerator>
+		<annotationName>country</annotationName>
+		<template><![CDATA[${renderNestedProperty('sequence.m49_country.display_name')}]]></template>
+	</freemarkerAnnotationGenerator>
+	<freemarkerAnnotationGenerator>
+		<annotationName>location</annotationName>
+		<template><![CDATA[${renderNestedProperty('sequence.place_sampled')}]]></template>
+	</freemarkerAnnotationGenerator>
+	<freemarkerAnnotationGenerator>
+		<annotationName>collectionDate</annotationName>
+		<!-- hack to prevent auto Date recognition -->
+		<template><![CDATA[X$<#if sequence.collection_month_day ??>${sequence.collection_month_day}-</#if><#if sequence.collection_month ??>${sequence.collection_month}-</#if>${renderNestedProperty('sequence.collection_year')}]]></template>
+	</freemarkerAnnotationGenerator>
 </treeVisualiser>

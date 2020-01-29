@@ -8,10 +8,11 @@ module covPhyloImporter
   import phylogeny AL_GISAID_UNCONSTRAINED -a -i trees/gisaidUnconstrainedUnrooted.tree NEWICK_BOOTSTRAPS -f phylogeny
   exit
   
-# reroot using 2013 bat virus as outgroup   
+# reroot using midpoint rooting
+# 2013 bat virus was previously used as outgroup but this did not look super accurate.   
 module covPhyloUtility
   reroot-alignment-phylogeny AL_GISAID_UNCONSTRAINED phylogeny\
-    -w "sequence.sequenceID = 'EPI_ISL_402131'" \
-    -o trees/gisaidUnconstrainedOutgroupRooted.tree NEWICK_BOOTSTRAPS
+    -a -m \
+    -o trees/gisaidMidpointRooted.tree NEWICK_BOOTSTRAPS
   exit
   
