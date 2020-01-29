@@ -11,8 +11,7 @@ module covPhyloImporter
 # reroot using midpoint rooting
 # 2013 bat virus was previously used as outgroup but this did not look super accurate.   
 module covPhyloUtility
-  reroot-alignment-phylogeny AL_GISAID_UNCONSTRAINED phylogeny\
-    -a -m \
+  reroot-alignment-phylogeny AL_GISAID_UNCONSTRAINED phylogeny -m \
     -o trees/gisaidMidpointRooted.tree NEWICK_BOOTSTRAPS
   exit
   
