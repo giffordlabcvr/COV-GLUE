@@ -1,4 +1,5 @@
 <treeVisualiser>
+	<leafTextGapPct>2.5</leafTextGapPct>
 	<freemarkerAnnotationGenerator>
 		<annotationName>isolate</annotationName>
 		<template><![CDATA[${renderNestedProperty('sequence.isolate')}]]></template>

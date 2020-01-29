@@ -25,6 +25,195 @@ svg {
 	fill: DarkGrey; 
 }
 
+
+.leafNodeAaCircle_A {
+	stroke: none;
+	fill: #276eb7;
+}
+.leafNodeAaCircle_C {
+    stroke: none;
+    fill: #e68080;
+}
+.leafNodeAaCircle_D {
+    stroke: none;
+	fill: #cc4dcc;
+}
+.leafNodeAaCircle_E {
+    stroke: none;
+	fill: #984097;
+}
+.leafNodeAaCircle_F {
+    stroke: none;
+	fill: #1980e6;
+}
+.leafNodeAaCircle_G {
+    stroke: none;
+	fill: #e6994d;
+}
+.leafNodeAaCircle_H {
+    stroke: none;
+	fill: #19b3b3;
+}
+.leafNodeAaCircle_I {
+     stroke: none;
+    fill: #4ea0f3;
+}
+.leafNodeAaCircle_K {
+    stroke: none;
+	fill: #e63319;
+}
+.leafNodeAaCircle_L {
+    stroke: none;
+	fill: #78a6d5;
+}
+.leafNodeAaCircle_M {
+    stroke: none;
+	fill: #0f549b;
+}
+.leafNodeAaCircle_N {
+    stroke: none;
+	fill: #19cc19;
+}
+.leafNodeAaCircle_P {
+    stroke: none;
+	fill: #cccc00;
+}
+.leafNodeAaCircle_Q {
+    stroke: none;
+	fill: #5ced5c;
+}
+.leafNodeAaCircle_R {
+    stroke: none;
+	fill: #f6442c;
+}
+.leafNodeAaCircle_S {
+    stroke: none;
+	fill: #029602;
+}
+.leafNodeAaCircle_T {
+    stroke: none;
+	fill: #45c945;
+}
+.leafNodeAaCircle_V {
+    stroke: none;
+	fill: #047df9;
+}
+.leafNodeAaCircle_W {
+    stroke: none;
+	fill: #0355a9;
+}
+.leafNodeAaCircle_Y {
+    stroke: none;
+	fill: #14c6c8;
+}
+.leafNodeAaCircle_X {
+    stroke: none;
+	fill: DarkGray;
+}
+.leafNodeAaCircle_STOP {
+    stroke: none;
+	fill: Black;
+}
+.leafNodeAaCircle_GAP {
+    stroke: Black;
+	fill: White;
+}
+
+.leafNodeAaText_A {
+	text-anchor: middle;
+	fill: Black;
+}
+.leafNodeAaText_C {
+	text-anchor: middle;
+	fill: Black;
+}
+.leafNodeAaText_D {
+	text-anchor: middle;
+	fill: Black;
+}
+.leafNodeAaText_E {
+	text-anchor: middle;
+	fill: Black;
+}
+.leafNodeAaText_F {
+	text-anchor: middle;
+	fill: Black;
+}
+.leafNodeAaText_G {
+	text-anchor: middle;
+	fill: Black;
+}
+.leafNodeAaText_H {
+	text-anchor: middle;
+	fill: Black;
+}
+.leafNodeAaText_I {
+	text-anchor: middle;
+	fill: Black;
+}
+.leafNodeAaText_K {
+	text-anchor: middle;
+	fill: Black;
+}
+.leafNodeAaText_L {
+	text-anchor: middle;
+	fill: Black;
+}
+.leafNodeAaText_M {
+	text-anchor: middle;
+	fill: Black;
+}
+.leafNodeAaText_N {
+	text-anchor: middle;
+	fill: Black;
+}
+.leafNodeAaText_P {
+	text-anchor: middle;
+	fill: Black;
+}
+.leafNodeAaText_Q {
+	text-anchor: middle;
+	fill: Black;
+}
+.leafNodeAaText_R {
+	text-anchor: middle;
+	fill: Black;
+}
+.leafNodeAaText_S {
+	text-anchor: middle;
+	fill: White;
+	stroke: White;
+}
+.leafNodeAaText_T {
+	text-anchor: middle;
+	fill: Black;
+}
+.leafNodeAaText_V {
+	text-anchor: middle;
+	fill: Black;
+}
+.leafNodeAaText_W {
+	text-anchor: middle;
+	fill: Black;
+}
+.leafNodeAaText_Y {
+	text-anchor: middle;
+	fill: Black;
+}
+.leafNodeAaText_X {
+	text-anchor: middle;
+	fill: White;
+}
+.leafNodeAaText_STOP {
+	text-anchor: middle;
+	fill: White;
+	stroke: White;
+}
+.leafNodeAaText_GAP {
+	text-anchor: middle;
+	fill: Black;
+}
+
 .highlightedLeafNode {
 	stroke: Black;
 	stroke-width: 1px;

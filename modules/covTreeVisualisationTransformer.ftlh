@@ -6,7 +6,7 @@
 <#assign leafTextGapPx = treeVisDoc.leafTextGapPx>
 <#assign leafTextFontSize = treeVisDoc.leafTextFontSize>
 	
-<#assign leafNodeRadiusPx = 2>
+<#assign leafNodeRadiusPx = verticalLeafSpacePx / 2>
 	
 <svg width="${svgWidthPx}" height="${svgHeightPx}"
      xmlns="http://www.w3.org/2000/svg">
@@ -25,21 +25,20 @@
   </g>
   <g class="leafNode">
   <#list treeVisDoc.leafNodes as leafNode>
-    <circle <#if leafNode.highlighted!false>class="highlightedLeafNode"</#if>
-    	cx="${leafNode.x}" cy="${leafNode.y}" r="${leafNodeRadiusPx}"/>
+    <#if leafNode.properties.aaValue ??>
+    <circle class="leafNodeAaCircle_${leafNode.properties.aaValue?replace('*', 'STOP')?replace('-', 'GAP')}"
+    	cx="${leafNode.x + leafNodeRadiusPx}" cy="${leafNode.y}" r="${leafNodeRadiusPx}"/>
+    <text class="leafNodeAaText_${leafNode.properties.aaValue?replace('*', 'STOP')?replace('-', 'GAP')}"
+	  	x="${leafNode.x + leafNodeRadiusPx}" y="${leafNode.y}" height="${verticalLeafSpacePx}"
+	  	dy=".35em">${leafNode.properties.aaValue}</text>
+	</#if>
   </#list>
   </g>
   <g font-size="${leafTextFontSize}">
   <#list treeVisDoc.leafNodes as leafNode>
-    <#if leafNode.properties.leafSourceName ?? && leafNode.properties.leafSequenceID ?? >
-	<a class="leafLink" href="#project/sequence/${leafNode.properties.leafSourceName}/${leafNode.properties.leafSequenceID}" target="_blank">
-	</#if>
     <text <#if leafNode.highlighted!false>class="highlightedLeafText"<#else>class="leafText"</#if>
 	  	x="${leafNode.x+leafTextGapPx}" y="${leafNode.y}" width="${leafNode.properties.leafTextWidthPx}" height="${verticalLeafSpacePx}"
 	  	dy=".35em">${leafNode.properties.leafText?replace('X$', '')}</text>
-    <#if leafNode.properties.leafSourceName ?? && leafNode.properties.leafSequenceID ?? >
-	</a>
-	</#if>
   </#list>
   </g>
   <#if treeVisDoc.collapsedSubtrees??>

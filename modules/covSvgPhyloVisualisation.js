@@ -1,3 +1,32 @@
+// recursive function to set the sequenceIDs throughout the tree.
+function setLeafSeqIDs(subtree) {
+	var userData;
+	var subtreeType;
+	if(subtree.internal != null) { // internal node
+		userData = subtree.internal.userData;
+		subtreeType = "internal";
+	} else { // leaf node
+		userData = subtree.leaf.userData;
+		subtreeType = "leaf";
+	}
+	if(subtreeType == "leaf") {
+		if(userData["name"].indexOf("cov-gisaid/") > 0) {
+			userData["treevisualiser-leafSourceName"] = "cov-gisaid";
+			userData["treevisualiser-leafSequenceID"] = userData["name"].substring(userData["name"].lastIndexOf("/")+1);
+		} else {
+			userData["treevisualiser-leafSourceName"] = "submitted";
+			userData["treevisualiser-leafSequenceID"] = userData["name"];
+		}
+	} else { // internal node
+		var branches = subtree.internal.branch;
+		_.each(branches, function(branch) {
+			setLeafSeqIDs(branch);
+		});
+	}
+}
+
+
+
 
 function visualisePhyloAsSvg(document) {
 	var glueTree;
@@ -5,7 +34,57 @@ function visualisePhyloAsSvg(document) {
 	var queryName = document.inputDocument.queryName;
 	var placementIndex = document.inputDocument.placementIndex;
 	var placerResult = document.inputDocument.placerResult;
+	var queryNucleotides = document.inputDocument.queryNucleotides;
+	var aaVisFeatureName = document.inputDocument.aaVisFeature;
+	var aaVisCodonLabel = document.inputDocument.aaVisCodonLabel;
+	var targetRefName = document.inputDocument.targetReferenceName;
+	var queryToTargetRefSegs = document.inputDocument.queryToTargetRefSegments;
+
+	// translate the aaVisFeature/CodonLabel for the submitted sequence
+	var queryAa;
+	glue.inMode("module/covFastaSequenceReporter", function() {
+		var aaRows = glue.tableToObjects(glue.command({
+			"string-plus-alignment": { 
+				"amino-acid": {
+					"fastaString": queryNucleotides,
+					"queryToTargetSegs": {
+						queryToTargetSegs: {
+							alignedSegment: queryToTargetRefSegs
+						}
+					},
+					"labelledCodon": true,
+					"lcStart": aaVisCodonLabel,
+					"lcEnd": aaVisCodonLabel,
+					"targetRefName":targetRefName,
+					"relRefName":"REF_MASTER_WUHAN_HU_1",
+					"linkingAlmtName":"AL_GISAID_UNCONSTRAINED",
+					"featureName":aaVisFeatureName
+				}
+			}
+		}));
+		if(aaRows.length == 0) {
+			queryAa = "-";
+		} else {
+			queryAa = aaRows[0].aminoAcid;
+		}
+	});
 	
+	var gisaidSeqIdToAA = {};
+	gisaidSeqIdToAA[queryName] = queryAa;
+	
+	// generate a map of sequenceID to AA value for the GISAID sequences.
+	glue.inMode("module/covFastaProteinAlignmentExporter", function() {
+		var gisaidAaFasta = glue.command(["web-export", "AL_GISAID_UNCONSTRAINED", 
+			"--relRefName", "REF_MASTER_WUHAN_HU_1", 
+			"-f", aaVisFeatureName, 
+			"--labelledCodon", aaVisCodonLabel, aaVisCodonLabel, 
+			"-a", "-p"]);
+		_.each(gisaidAaFasta.aminoAcidFasta.sequences, function(aaFastaSeq) {
+			var seqID = aaFastaSeq.id.split(".")[2];
+			gisaidSeqIdToAA[seqID] = aaFastaSeq.sequence;
+		});
+	});
+
 	// generate a tree for the placement, as a command document.
 	glue.inMode("module/covMaxLikelihoodPlacer", function() {
 		glueTree = glue.command({
@@ -52,6 +131,9 @@ function visualisePhyloAsSvg(document) {
 		});
 	});
 
+	// set treevisualiser-leafSourceName and treevisualiser-leafSequenceID throughout the tree.
+	// this will cause TreeVisualiser to set leafSourceName and leafSequenceID properties on the leaf objects within visualiseTreeResult
+	setLeafSeqIDs(glueTree.phyloTree.root);
 	
 	// generate a visualisation document for the tree, 
 	// with the visualisation maths etc. done
@@ -72,6 +154,12 @@ function visualisePhyloAsSvg(document) {
 		});
 	});
 
+	// use the leafSequenceID to look up the AA value in the map, then set this as an additional property.
+	_.each(visualiseTreeResult.visDocument.treeVisualisation.leafNodes, function(leafNode) {
+		var seqID = leafNode.properties.leafSequenceID;
+		leafNode.properties.aaValue = gisaidSeqIdToAA[seqID];
+	});
+	
 	// from the visualisation documents, generate SVGs as GLUE web files.
 	var treeTransformResult;
 	glue.inMode("module/covTreeVisualisationTransformer", function() {

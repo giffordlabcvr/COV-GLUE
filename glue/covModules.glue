@@ -34,3 +34,4 @@ create module --fileName modules/covSvgPhyloVisualisation.xml --loadResources
 create module --fileName modules/covTreeVisualisationLegendTransformer.xml --loadResources
 create module --fileName modules/covTreeVisualisationTransformer.xml --loadResources
 create module --fileName modules/covTreeVisualiser.xml
+create module --fileName modules/covFastaProteinAlignmentExporter.xml
