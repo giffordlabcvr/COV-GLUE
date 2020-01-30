@@ -21,6 +21,13 @@ project cov
   # delete the 2013 bat sequence. Thought it might be useful for outgroup rooting but we're just going to use midpoint rooting for now
   delete sequence -w "sequenceID = 'EPI_ISL_402131'"
 
+  # delete EPI_ISL_406592, Shenzhen/SZTH-001 Shenzhen/SZTH-004 following NextStrain. These are on long branches which mucks up midpoint rooting.
+  delete sequence -w "sequenceID = 'EPI_ISL_406592'"
+  delete sequence -w "sequenceID = 'EPI_ISL_406595'"
+
+  # delete EPI_ISL_402126, from Japan following NextStrain. Subgenomic.
+  delete sequence -w "sequenceID = 'EPI_ISL_402126'"
+
   # Sequence lengths
   run script glue/covSetSequenceLengths.js 
 
