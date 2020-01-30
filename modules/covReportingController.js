@@ -167,6 +167,57 @@ function generateFeaturesWithCoverage(targetRefName, queryToTargetRefSegs) {
 	return featuresWithCoverage;
 }
 
+function generateMutations(queryNucleotides, targetRefName, queryToTargetRefSegs) {
+	var comparisonRefName = "REF_MASTER_WUHAN_HU_1";
+	var mutationsList = [];
+	_.each(featuresList, function(featureObj) {
+		var refAaObjsMap = {};
+		glue.inMode("reference/"+comparisonRefName+"/feature-location/"+featureObj.name, function() {
+			var refAaObjs = glue.tableToObjects(glue.command(["amino-acid"]));
+			_.each(refAaObjs, function(refAaObj) {
+				refAaObjsMap[refAaObj.codonLabel] = refAaObj;
+			});
+		});
+		glue.inMode("module/covFastaSequenceReporter", function() {
+			var queryAaObjs = glue.tableToObjects(glue.command({
+				"string-plus-alignment": { 
+					"amino-acid": {
+						"fastaString": queryNucleotides,
+						"queryToTargetSegs": {
+							queryToTargetSegs: {
+								alignedSegment: queryToTargetRefSegs
+							}
+						},
+						"targetRefName":targetRefName,
+						"relRefName":comparisonRefName,
+						"linkingAlmtName":"AL_GISAID_UNCONSTRAINED",
+						"featureName":featureObj.name
+					}
+				}
+			}));
+			_.each(queryAaObjs, function(queryAaObj) {
+				if(queryAaObj.definiteAas != null && queryAaObj.definiteAas != "") {
+					refAaObj = refAaObjsMap[queryAaObj.codonLabel];
+					if(refAaObj != null && refAaObj.definiteAas != null && refAaObj.definiteAas != "" && 
+							refAaObj.definiteAas != queryAaObj.definiteAas) {
+						var mutationObj = {
+								feature: featureObj.name,
+								codonLabel: queryAaObj.codonLabel,
+								refAas: refAaObj.definiteAas,
+								queryAas: queryAaObj.definiteAas
+						};
+						glue.logInfo("mutationObj", mutationObj);
+						mutationsList.push({
+							mutation: mutationObj
+						});
+					}
+				}
+			});
+		});
+	});
+	return mutationsList;
+}
+
 function generateSingleFastaReport(fastaMap, resultMap, fastaFilePath) {
 	
 	_.each(_.values(resultMap), function(sequenceResult) {
@@ -179,6 +230,8 @@ function generateSingleFastaReport(fastaMap, resultMap, fastaFilePath) {
 		sequenceResult.targetRefName = targetRefName;
 
 		sequenceResult.visualisationHints = visualisationHints(queryNucleotides, targetRefName, queryToTargetRefSegs);
+		
+		sequenceResult.mutations = generateMutations(queryNucleotides, targetRefName, queryToTargetRefSegs);
 	});
 	
 	var results = _.values(resultMap);
