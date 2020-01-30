@@ -14,6 +14,14 @@
 	<isoCountryTextFileColumn codeStyle="ALPHA_3">
 		<header>Location</header>
 		<property>m49_country</property>
+		<valueConverter>
+			<matchPattern>Guangdong Province</matchPattern>
+			<outputTemplate>CHN</outputTemplate>
+		</valueConverter>
+		<valueConverter>
+			<matchPattern>Guangzhou City</matchPattern>
+			<outputTemplate>CHN</outputTemplate>
+		</valueConverter>
 	</isoCountryTextFileColumn>
 	<textFileColumn>
 		<header>Location</header>
