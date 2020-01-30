@@ -5,6 +5,10 @@
 		<template><![CDATA[${renderNestedProperty('sequence.isolate')}]]></template>
 	</freemarkerAnnotationGenerator>
 	<freemarkerAnnotationGenerator>
+		<annotationName>gisaidId</annotationName>
+		<template><![CDATA[${sequence.sequenceID}]]></template>
+	</freemarkerAnnotationGenerator>
+	<freemarkerAnnotationGenerator>
 		<annotationName>country</annotationName>
 		<template><![CDATA[${renderNestedProperty('sequence.m49_country.display_name')}]]></template>
 	</freemarkerAnnotationGenerator>
