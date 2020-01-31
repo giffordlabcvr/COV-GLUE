@@ -1,5 +1,8 @@
 schema-project cov
 
+  create custom-table cov_mutation
+  create custom-table cov_mutation_sequence
+
   table sequence
     create field length INTEGER
     create field isolate VARCHAR
@@ -14,10 +17,20 @@ schema-project cov
     create field phylogeny CLOB
     exit
 
+  table cov_mutation
+    create field display_name VARCHAR
+    create field codon_label VARCHAR
+    create field reference_aa VARCHAR
+    create field mutation_aa VARCHAR
+    exit
+
   run file glue/m49_countries/m49SchemaExtension.glue
  
   create link sequence m49_country -m MANY_TO_ONE
-  
-  
+
+  create link variation cov_mutation -m ONE_TO_ONE
+  create link cov_mutation cov_mutation_sequence -m ONE_TO_MANY
+  create link sequence cov_mutation_sequence -m ONE_TO_MANY
+   
   
   exit
