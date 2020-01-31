@@ -8,7 +8,7 @@
 	<textFileColumn>
 		<header>Virus name</header>
 		<property>isolate</property>
-		<matchPattern>BetaCoV/(.*)</matchPattern>
+		<matchPattern>BetaCo[vV]/(.*)</matchPattern>
 		<outputTemplate>${g1}</outputTemplate>
 	</textFileColumn>
 	<isoCountryTextFileColumn codeStyle="ALPHA_3">
