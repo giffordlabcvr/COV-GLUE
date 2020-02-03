@@ -167,9 +167,9 @@ function generateFeaturesWithCoverage(targetRefName, queryToTargetRefSegs) {
 	return featuresWithCoverage;
 }
 
-function generateMutations(queryNucleotides, targetRefName, queryToTargetRefSegs) {
+function generateReplacements(queryNucleotides, targetRefName, queryToTargetRefSegs) {
 	var comparisonRefName = "REF_MASTER_WUHAN_HU_1";
-	var mutationsList = [];
+	var replacementsList = [];
 	_.each(featuresList, function(featureObj) {
 		var refAaObjsMap = {};
 		glue.inMode("reference/"+comparisonRefName+"/feature-location/"+featureObj.name, function() {
@@ -200,22 +200,22 @@ function generateMutations(queryNucleotides, targetRefName, queryToTargetRefSegs
 					refAaObj = refAaObjsMap[queryAaObj.codonLabel];
 					if(refAaObj != null && refAaObj.definiteAas != null && refAaObj.definiteAas != "" && 
 							refAaObj.definiteAas != queryAaObj.definiteAas) {
-						var mutationObj = {
+						var replacementObj = {
 								feature: featureObj.name,
 								codonLabel: queryAaObj.codonLabel,
 								refAas: refAaObj.definiteAas,
 								queryAas: queryAaObj.definiteAas
 						};
-						glue.logInfo("mutationObj", mutationObj);
-						mutationsList.push({
-							mutation: mutationObj
+						glue.logInfo("replacementObj", replacementObj);
+						replacementsList.push({
+							replacement: replacementObj
 						});
 					}
 				}
 			});
 		});
 	});
-	return mutationsList;
+	return replacementsList;
 }
 
 function generateSingleFastaReport(fastaMap, resultMap, fastaFilePath) {
@@ -231,7 +231,7 @@ function generateSingleFastaReport(fastaMap, resultMap, fastaFilePath) {
 
 		sequenceResult.visualisationHints = visualisationHints(queryNucleotides, targetRefName, queryToTargetRefSegs);
 		
-		sequenceResult.mutations = generateMutations(queryNucleotides, targetRefName, queryToTargetRefSegs);
+		sequenceResult.replacements = generateReplacements(queryNucleotides, targetRefName, queryToTargetRefSegs);
 	});
 	
 	var results = _.values(resultMap);

@@ -1,6 +1,6 @@
 <#include "/utils/glueDocUtils.ftlx">
 
-<mutation>
+<replacement>
 	<id>${id}</id>
 	<feature>${variation.featureLoc.feature.name}</feature>
 	<featureDisplayName>${variation.featureLoc.feature.displayName}</featureDisplayName>
@@ -9,10 +9,10 @@
 	<referenceSequence>${variation.featureLoc.referenceSequence.name}</referenceSequence>
 	<referenceAa>${reference_aa}</referenceAa>
 	<codonLabel>${codon_label}</codonLabel>
-	<mutationAa>${mutation_aa}</mutationAa>
+	<replacementAa>${replacement_aa}</replacementAa>
 	<numSeqs>${num_seqs}</numSeqs>
 
-	<#list cov_mutation_sequence as cms>
+	<#list cov_replacement_sequence as cms>
     <containingSeq glueType="Object[]">
     	<sourceName>${cms.sequence.source.name}</sourceName>
     	<sequenceID>${cms.sequence.sequenceID}</sequenceID>
@@ -23,4 +23,4 @@
 	    <collectionDate><#if cms.sequence.collection_month_day??>${cms.sequence.collection_month_day}-</#if>${cms.sequence.collection_month}-${cms.sequence.collection_year?c}</collectionDate>
     </containingSeq>
     </#list>
-</mutation>
+</replacement>
