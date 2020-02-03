@@ -22,6 +22,10 @@
 			<matchPattern>Guangzhou City</matchPattern>
 			<outputTemplate>CHN</outputTemplate>
 		</valueConverter>
+		<valueConverter>
+			<matchPattern>England</matchPattern>
+			<outputTemplate>GBR</outputTemplate>
+		</valueConverter>
 	</isoCountryTextFileColumn>
 	<textFileColumn>
 		<header>Location</header>
