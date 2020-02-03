@@ -1,0 +1,26 @@
+<#include "/utils/glueDocUtils.ftlx">
+
+<mutation>
+	<id>${id}</id>
+	<feature>${variation.featureLoc.feature.name}</feature>
+	<featureDisplayName>${variation.featureLoc.feature.displayName}</featureDisplayName>
+	<featureDescription>${variation.featureLoc.feature.description}</featureDescription>
+	<displayName>${display_name}</displayName>
+	<referenceSequence>${variation.featureLoc.referenceSequence.name}</referenceSequence>
+	<referenceAa>${reference_aa}</referenceAa>
+	<codonLabel>${codon_label}</codonLabel>
+	<mutationAa>${mutation_aa}</mutationAa>
+	<numSeqs>${num_seqs}</numSeqs>
+
+	<#list cov_mutation_sequence as cms>
+    <containingSeq glueType="Object[]">
+    	<sourceName>${cms.sequence.source.name}</sourceName>
+    	<sequenceID>${cms.sequence.sequenceID}</sequenceID>
+    	<isolate>${cms.sequence.isolate}</isolate>
+    	<countryId>${cms.sequence.m49_country.id}</countryId>
+    	<placeSampled>${cms.sequence.place_sampled}</placeSampled>
+    	<countryDisplayName>${cms.sequence.m49_country.display_name}</countryDisplayName>
+	    <collectionDate><#if cms.sequence.collection_month_day??>${cms.sequence.collection_month_day}-</#if>${cms.sequence.collection_month}-${cms.sequence.collection_year?c}</collectionDate>
+    </containingSeq>
+    </#list>
+</mutation>

@@ -35,42 +35,21 @@ function visualisePhyloAsSvg(document) {
 	var placementIndex = document.inputDocument.placementIndex;
 	var placerResult = document.inputDocument.placerResult;
 	var queryNucleotides = document.inputDocument.queryNucleotides;
-	var aaVisFeatureName = document.inputDocument.aaVisFeature;
-	var aaVisCodonLabel = document.inputDocument.aaVisCodonLabel;
 	var targetRefName = document.inputDocument.targetReferenceName;
 	var queryToTargetRefSegs = document.inputDocument.queryToTargetRefSegments;
 
-	// translate the aaVisFeature/CodonLabel for the submitted sequence
-	var queryAa;
-	glue.inMode("module/covFastaSequenceReporter", function() {
-		var aaRows = glue.tableToObjects(glue.command({
-			"string-plus-alignment": { 
-				"amino-acid": {
-					"fastaString": queryNucleotides,
-					"queryToTargetSegs": {
-						queryToTargetSegs: {
-							alignedSegment: queryToTargetRefSegs
-						}
-					},
-					"labelledCodon": true,
-					"lcStart": aaVisCodonLabel,
-					"lcEnd": aaVisCodonLabel,
-					"targetRefName":targetRefName,
-					"relRefName":"REF_MASTER_WUHAN_HU_1",
-					"linkingAlmtName":"AL_GISAID_UNCONSTRAINED",
-					"featureName":aaVisFeatureName
-				}
-			}
-		}));
-		if(aaRows.length == 0) {
-			queryAa = "-";
-		} else {
-			queryAa = aaRows[0].aminoAcid;
-		}
-	});
+	var includeQuerySequence = false;
+	if(queryName != null && placementIndex != null && placerResult != null && 
+			queryNucleotides != null && targetRefName != null && queryToTargetRefSegs != null) {
+		includeQuerySequence = true;
+	}
 	
+	var aaVisFeatureName = document.inputDocument.aaVisFeature;
+	var aaVisCodonLabel = document.inputDocument.aaVisCodonLabel;
+
 	var gisaidSeqIdToAA = {};
-	gisaidSeqIdToAA[queryName] = queryAa;
+
+	glue.logInfo("document.inputDocument", document.inputDocument);
 	
 	// generate a map of sequenceID to AA value for the GISAID sequences.
 	glue.inMode("module/covFastaProteinAlignmentExporter", function() {
@@ -85,51 +64,89 @@ function visualisePhyloAsSvg(document) {
 		});
 	});
 
-	// generate a tree for the placement, as a command document.
-	glue.inMode("module/covMaxLikelihoodPlacer", function() {
-		glueTree = glue.command({
-				"export": {
-					"placement-from-document": {
-						"phylogeny": {
-							"placerResultDocument": placerResult,
-							"placementIndex": placementIndex,
-							"queryName": queryName, 
-							"leafName": queryName
-						}
+	if(includeQuerySequence) {
+		// translate the aaVisFeature/CodonLabel for the submitted sequence
+		var queryAa;
+		glue.inMode("module/covFastaSequenceReporter", function() {
+			var aaRows = glue.tableToObjects(glue.command({
+				"string-plus-alignment": { 
+					"amino-acid": {
+						"fastaString": queryNucleotides,
+						"queryToTargetSegs": {
+							queryToTargetSegs: {
+								alignedSegment: queryToTargetRefSegs
+							}
+						},
+						"labelledCodon": true,
+						"lcStart": aaVisCodonLabel,
+						"lcEnd": aaVisCodonLabel,
+						"targetRefName":targetRefName,
+						"relRefName":"REF_MASTER_WUHAN_HU_1",
+						"linkingAlmtName":"AL_GISAID_UNCONSTRAINED",
+						"featureName":aaVisFeatureName
 					}
 				}
+			}));
+			if(aaRows.length == 0) {
+				queryAa = "-";
+			} else {
+				queryAa = aaRows[0].aminoAcid;
+			}
 		});
-	});
 
-	glue.inMode("module/covPhyloUtility", function() {
-		// set leaf node to highlighted
-		glueTree = glue.command({
-			"update-leaves" : {
-				propertyName: "treevisualiser-highlighted",
-				propertyValue: "true",
-				leafNodeNames : [queryName], 
-				inputPhyloTree: glueTree
-			}
+		gisaidSeqIdToAA[queryName] = queryAa;
+	}	
+
+	if(includeQuerySequence) {
+		// generate a tree for the placement, as a command document.
+		glue.inMode("module/covMaxLikelihoodPlacer", function() {
+			glueTree = glue.command({
+					"export": {
+						"placement-from-document": {
+							"phylogeny": {
+								"placerResultDocument": placerResult,
+								"placementIndex": placementIndex,
+								"queryName": queryName, 
+								"leafName": queryName
+							}
+						}
+					}
+			});
 		});
-		// set leaf node to non-member
-		glueTree = glue.command({
-			"update-leaves" : {
-				propertyName: "treevisualiser-nonmember",
-				propertyValue: "true",
-				leafNodeNames : [queryName], 
-				inputPhyloTree: glueTree
-			}
+		glue.inMode("module/covPhyloUtility", function() {
+			// set query leaf node to highlighted
+			glueTree = glue.command({
+				"update-leaves" : {
+					propertyName: "treevisualiser-highlighted",
+					propertyValue: "true",
+					leafNodeNames : [queryName], 
+					inputPhyloTree: glueTree
+				}
+			});
+			// set query leaf node to non-member
+			glueTree = glue.command({
+				"update-leaves" : {
+					propertyName: "treevisualiser-nonmember",
+					propertyValue: "true",
+					leafNodeNames : [queryName], 
+					inputPhyloTree: glueTree
+				}
+			});
+			// set ancestor branches of query leaf node to highlighted
+			glueTree = glue.command({
+				"update-ancestor-branches" : {
+					propertyName: "treevisualiser-highlighted",
+					propertyValue: "true",
+					leafNodeNames : [queryName], 
+					inputPhyloTree: glueTree
+				}
+			});
 		});
-		// set ancestor branches of leaf node to highlighted
-		glueTree = glue.command({
-			"update-ancestor-branches" : {
-				propertyName: "treevisualiser-highlighted",
-				propertyValue: "true",
-				leafNodeNames : [queryName], 
-				inputPhyloTree: glueTree
-			}
+	} else {
+		glue.inMode("module/covPhyloUtility", function() {
+			glueTree = glue.command(["read-alignment-phylogeny", "AL_GISAID_UNCONSTRAINED", "phylogeny"]);
 		});
-	});
+	}
 
 	// set treevisualiser-leafSourceName and treevisualiser-leafSequenceID throughout the tree.
 	// this will cause TreeVisualiser to set leafSourceName and leafSequenceID properties on the leaf objects within visualiseTreeResult

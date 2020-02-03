@@ -98,8 +98,10 @@ _.each(_.values(mutationsSet), function(mutationObj) {
 		var displayName = mutationObj.refAa+mutationObj.codonLabel+mutationObj.mutationAa;
 		glue.command(["set", "field", "display_name", displayName]);
 		glue.command(["set", "field", "codon_label", mutationObj.codonLabel]);		
+		glue.command(["set", "field", "codon_label_int", parseInt(mutationObj.codonLabel)]);		
 		glue.command(["set", "field", "reference_aa", mutationObj.refAa]);
 		glue.command(["set", "field", "mutation_aa", mutationObj.mutationAa]);
+		glue.command(["set", "field", "num_seqs", mutationObj.memberSeqs.length]);
 		glue.command(["set", "link-target", "variation", 
 			"reference/REF_MASTER_WUHAN_HU_1/feature-location/"+mutationObj.feature+
 			"/variation/"+variationName]);

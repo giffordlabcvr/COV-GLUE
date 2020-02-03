@@ -44,6 +44,9 @@ project cov
     import phylogeny AL_GISAID_UNCONSTRAINED -a -i trees/gisaidMidpointRooted.tree NEWICK_BOOTSTRAPS -f phylogeny
     exit
 
+  # generate mutations
+  run script glue/covGenerateGisaidMutations.js
+
   # Validate
   validate
 

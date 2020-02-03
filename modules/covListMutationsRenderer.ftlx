@@ -1,0 +1,14 @@
+<#include "/utils/glueDocUtils.ftlx">
+
+<mutation>
+	<id>${id}</id>
+	<feature>${variation.featureLoc.feature.name}</feature>
+	<featureDisplayName>${variation.featureLoc.feature.displayName}</featureDisplayName>
+	<featureDescription>${variation.featureLoc.feature.description}</featureDescription>
+	<displayName>${display_name}</displayName>
+	<referenceSequence>${variation.featureLoc.referenceSequence.name}</referenceSequence>
+	<referenceAa>${reference_aa}</referenceAa>
+	<codonLabel>${codon_label}</codonLabel>
+	<mutationAa>${mutation_aa}</mutationAa>
+	<numSeqs>${num_seqs}</numSeqs>
+</mutation>

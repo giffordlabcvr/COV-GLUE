@@ -20,8 +20,10 @@ schema-project cov
   table cov_mutation
     create field display_name VARCHAR
     create field codon_label VARCHAR
+    create field codon_label_int INTEGER
     create field reference_aa VARCHAR
     create field mutation_aa VARCHAR
+    create field num_seqs INTEGER
     exit
 
   run file glue/m49_countries/m49SchemaExtension.glue
