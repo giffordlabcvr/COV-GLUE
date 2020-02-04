@@ -1,0 +1,16 @@
+delete reference REF_BAT_RATG13
+create reference REF_BAT_RATG13 bat-refseqs RaTG13
+
+reference REF_BAT_RATG13
+  set field displayName "Bat Reference Sequence (RaTG13)"
+  add feature-location whole_genome
+  feature-location whole_genome
+    add segment 1 29855
+    exit
+    
+  add feature-location S
+  feature-location S
+    add segment 21518 25354
+    exit
+    
+  exit 

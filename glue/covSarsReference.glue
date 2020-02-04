@@ -1,0 +1,16 @@
+delete reference REF_SARS_NC_004718
+create reference REF_SARS_NC_004718 sars-refseqs NC_004718
+
+reference REF_SARS_NC_004718
+  set field displayName "SARS Reference Sequence (NC_004718)"
+  add feature-location whole_genome
+  feature-location whole_genome
+    add segment 1 29751
+    exit
+    
+  add feature-location S
+  feature-location S
+    add segment 21492 25259
+    exit
+    
+  exit 

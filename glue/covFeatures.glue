@@ -16,7 +16,8 @@ feature S
   set field displayName "S"
   set metatag OWN_CODON_NUMBERING true
   set metatag CODES_AMINO_ACIDS true
-  set metatag CODON_LABELER_MODULE covKuiken2006CodonLabeler
+  # special codon numbering for the S region, based on homology with the BAT reference
+  set metatag CODON_LABELER_MODULE covKuiken2006CodonLabeler_S_region
   exit
 
 create feature ORF_3a -p whole_genome "ORF 3a"

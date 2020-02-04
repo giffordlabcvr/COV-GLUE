@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<kuiken2006CodonLabeler>
+    <rootReferenceName>REF_BAT_RATG13</rootReferenceName>
+    <linkingAlignmentName>AL_RATG13_S_NUMBERING</linkingAlignmentName>
+    <allowUpstreamLabelling>true</allowUpstreamLabelling>
+    <allowDownstreamLabelling>true</allowDownstreamLabelling>
+    <allowUnmappedLabelling>true</allowUnmappedLabelling>
+</kuiken2006CodonLabeler>

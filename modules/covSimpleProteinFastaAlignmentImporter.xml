@@ -1,0 +1,7 @@
+<blastProteinFastaAlignmentImporter>
+  <idClauseExtractorFormatter>
+    <matchPattern>(.*)</matchPattern>
+    <outputTemplate>sequenceID = '${g1}'</outputTemplate>
+  </idClauseExtractorFormatter>
+  <minRowCoveragePercent>90.0</minRowCoveragePercent>
+</blastProteinFastaAlignmentImporter>

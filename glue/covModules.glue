@@ -14,6 +14,7 @@ create module --fileName modules/covPhyloUtility.xml
 create module --fileName modules/covPhyloImporter.xml
 
 create module --fileName modules/covKuiken2006CodonLabeler.xml
+create module --fileName modules/covKuiken2006CodonLabeler_S_region.xml
 create module --fileName modules/covOrf1abTranslationModifier.xml
 
 create module --fileName modules/tabularUtilityCsv.xml 
@@ -38,3 +39,7 @@ create module --fileName modules/covFastaProteinAlignmentExporter.xml
 
 create module --fileName modules/covReplacementRenderer.xml --loadResources
 create module --fileName modules/covListReplacementsRenderer.xml --loadResources
+
+create module --fileName modules/covSarsRefseqImporter.xml
+create module --fileName modules/covFastaProteinExporter.xml
+create module --fileName modules/covSimpleProteinFastaAlignmentImporter.xml 

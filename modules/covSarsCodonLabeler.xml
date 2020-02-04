@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<kuiken2006CodonLabeler>
+    <rootReferenceName>REF_MASTER_WUHAN_HU_1</rootReferenceName>
+    <linkingAlignmentName>AL_GISAID_UNCONSTRAINED</linkingAlignmentName>
+    <allowUpstreamLabelling>true</allowUpstreamLabelling>
+    <allowDownstreamLabelling>true</allowDownstreamLabelling>
+    <allowUnmappedLabelling>true</allowUnmappedLabelling>
+</kuiken2006CodonLabeler>

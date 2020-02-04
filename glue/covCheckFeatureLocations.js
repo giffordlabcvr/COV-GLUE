@@ -7,6 +7,12 @@ var problematicRefs = {};
 _.each(refSeqObjs, function(refSeqObj) {
 	glue.inMode("reference/"+refSeqObj.name, function() {
 		_.each(codingFeaturesToCheck, function(featureName) {
+			if(refSeqObj.name == "REF_SARS_NC_004718" && featureName != "S") {
+				return;
+			}
+			if(refSeqObj.name == "REF_BAT_RATG13" && featureName != "S") {
+				return;
+			}
 			glue.inMode("feature-location/"+featureName, function() {
 				var aaRows = glue.tableToObjects(glue.command(["amino-acid"]));
 				glue.logInfo("Checking reference "+refSeqObj.name+", feature "+featureName+", "+aaRows.length+" amino acids.");

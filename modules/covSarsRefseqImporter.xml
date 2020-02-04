@@ -1,0 +1,8 @@
+<ncbiImporter>
+  <sequenceFormat>GENBANK_XML</sequenceFormat>
+  <specificPrimaryAccessions>
+    <primaryAccession>NC_004718</primaryAccession>
+  </specificPrimaryAccessions>
+  <sequenceIdField>PRIMARY_ACCESSION</sequenceIdField>
+  <sourceName>sars-refseqs</sourceName>
+</ncbiImporter>

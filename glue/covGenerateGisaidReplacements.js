@@ -98,7 +98,7 @@ _.each(_.values(replacementsSet), function(replacementObj) {
 		var displayName = replacementObj.refAa+replacementObj.codonLabel+replacementObj.replacementAa;
 		glue.command(["set", "field", "display_name", displayName]);
 		glue.command(["set", "field", "codon_label", replacementObj.codonLabel]);		
-		glue.command(["set", "field", "codon_label_int", parseInt(replacementObj.codonLabel)]);		
+		glue.command(["set", "field", "codon_label_int", parseInt(replacementObj.codonLabel.replace(/[a-z]/g, ""))]);		
 		glue.command(["set", "field", "reference_aa", replacementObj.refAa]);
 		glue.command(["set", "field", "replacement_aa", replacementObj.replacementAa]);
 		glue.command(["set", "field", "num_seqs", replacementObj.memberSeqs.length]);

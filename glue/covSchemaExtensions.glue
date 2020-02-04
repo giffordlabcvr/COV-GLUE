@@ -11,6 +11,7 @@ schema-project cov
     create field collection_month_day INTEGER
     create field host_species VARCHAR 100
     create field place_sampled VARCHAR 100
+    create field gb_gi_number VARCHAR 20
     exit
 
   table alignment

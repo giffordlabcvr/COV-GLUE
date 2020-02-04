@@ -14,6 +14,8 @@ project cov
   
   # Import sequences
   module covGisaidFastaImporter import -f sequences/gisaid_cov2020_all_sequences.fasta
+  import source sources/sars-refseqs
+  import source sources/bat-refseqs
  
   # Metadata
   module covGisaidMetadataTextFilePopulator populate --fileName tabular/gisaid_metadata.txt 
@@ -42,6 +44,35 @@ project cov
   run file glue/covFeatures.glue
 
   run file glue/covMasterReference.glue
+  # run file glue/covSarsReference.glue
+  run file glue/covBatReference.glue
+
+  # alignment to link COV master ref to BAT ref for numbering the S region
+  create alignment AL_RATG13_S_NUMBERING
+  alignment AL_RATG13_S_NUMBERING
+    add member cov-gisaid EPI_ISL_402125
+    add member bat-refseqs RaTG13
+    exit
+  compute alignment AL_RATG13_S_NUMBERING covMafftAligner
+  
+  
+  # alignment to link COV master ref to SARS ref for numbering the S region
+  # module covSimpleProteinFastaAlignmentImporter import AL_SARS_S_NUMBERING -f alignments/NCOV_SARS_S_AA_aligned.fasta 
+  # for some reason the TBLASTN importer mucks up the beginning of the sequence, so we need to extend the homology manually
+  # also the stop codons need added
+  # alignment AL_SARS_S_NUMBERING
+  #   member cov-gisaid EPI_ISL_402125 
+  #     remove segment 34 69 21596 21631
+  #     add segment 1 69 21563 21631
+  #     remove segment 100 3831 21650 25381
+  #     add segment 100 3834 21650 25384
+  #     exit
+  #   member sars-refseqs NC_004718
+  #     remove segment 2059 3831 23484 25256
+  #     add segment 2059 3834 23484 25259
+  #     exit
+  #   exit
+  
   run script glue/covCheckFeatureLocations.js
 
   # import phylogeny (outgroup removed)
