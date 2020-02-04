@@ -218,6 +218,87 @@ function generateReplacements(queryNucleotides, targetRefName, queryToTargetRefS
 	return replacementsList;
 }
 
+function generateInsertions(queryNucleotides, targetRefName, queryToTargetRefSegs) {
+	var comparisonRefName = "REF_MASTER_WUHAN_HU_1";
+	var insertionsList = [];
+	_.each(featuresList, function(featureObj) {
+		glue.inMode("module/covFastaSequenceReporter", function() {
+			var insertionsFound = glue.tableToObjects(glue.command({
+				"string-plus-alignment": { 
+					"variation": {
+						"scan": {
+							"fastaString": queryNucleotides,
+							"queryToTargetSegs": {
+								queryToTargetSegs: {
+									alignedSegment: queryToTargetRefSegs
+								}
+							},
+							"targetRefName":targetRefName,
+							"relRefName":comparisonRefName,
+							"linkingAlmtName":"AL_GISAID_UNCONSTRAINED",
+							"featureName":featureObj.name,
+							"whereClause":"name = 'cov_aa_ins_detect:"+featureObj.name+"'",
+							"descendentFeatures": false,
+							"excludeAbsent": true,
+							"excludeInsufficientCoverage": true,
+							"showMatchesAsTable": true,
+							"showMatchesAsDocument": false
+						}
+					}
+				}
+			}));
+			_.each(insertionsFound, function(insertionObj) {
+				glue.logInfo("insertionObj", insertionObj);
+				insertionsList.push({
+					insertion: insertionObj
+				});
+			});
+		});
+	});
+	return insertionsList;
+}
+
+function generateDeletions(queryNucleotides, targetRefName, queryToTargetRefSegs) {
+	var comparisonRefName = "REF_MASTER_WUHAN_HU_1";
+	var deletionsList = [];
+	_.each(featuresList, function(featureObj) {
+		glue.inMode("module/covFastaSequenceReporter", function() {
+			var deletionsFound = glue.tableToObjects(glue.command({
+				"string-plus-alignment": { 
+					"variation": {
+						"scan": {
+							"fastaString": queryNucleotides,
+							"queryToTargetSegs": {
+								queryToTargetSegs: {
+									alignedSegment: queryToTargetRefSegs
+								}
+							},
+							"targetRefName":targetRefName,
+							"relRefName":comparisonRefName,
+							"linkingAlmtName":"AL_GISAID_UNCONSTRAINED",
+							"featureName":featureObj.name,
+							"whereClause":"name = 'cov_aa_del_detect:"+featureObj.name+"'",
+							"descendentFeatures": false,
+							"excludeAbsent": true,
+							"excludeInsufficientCoverage": true,
+							"showMatchesAsTable": true,
+							"showMatchesAsDocument": false
+						}
+					}
+				}
+			}));
+			_.each(deletionsFound, function(deletionObj) {
+				glue.logInfo("deletionObj", deletionObj);
+				deletionsList.push({
+					deletion: deletionObj
+				});
+			});
+		});
+	});
+	return deletionsList;
+}
+
+
 function generateSingleFastaReport(fastaMap, resultMap, fastaFilePath) {
 	
 	_.each(_.values(resultMap), function(sequenceResult) {
@@ -232,6 +313,8 @@ function generateSingleFastaReport(fastaMap, resultMap, fastaFilePath) {
 		sequenceResult.visualisationHints = visualisationHints(queryNucleotides, targetRefName, queryToTargetRefSegs);
 		
 		sequenceResult.replacements = generateReplacements(queryNucleotides, targetRefName, queryToTargetRefSegs);
+		sequenceResult.insertions = generateInsertions(queryNucleotides, targetRefName, queryToTargetRefSegs);
+		sequenceResult.deletions = generateDeletions(queryNucleotides, targetRefName, queryToTargetRefSegs);
 	});
 	
 	var results = _.values(resultMap);
