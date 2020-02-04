@@ -3,7 +3,7 @@ glue.command(["multi-unset", "link-target", "cov_replacement_sequence", "cov_rep
 glue.command(["multi-unset", "link-target", "cov_replacement_sequence", "sequence", "-a"]);
 glue.command(["multi-delete", "cov_replacement", "-a"]);
 glue.command(["multi-delete", "cov_replacement_sequence", "-a"]);
-glue.command(["multi-delete", "variation", "-w", "name like 'covmut%'"]);
+glue.command(["multi-delete", "variation", "-w", "name like 'cov_aa_rpl%'"]);
 
 var featuresList = [
     { name: "E",
@@ -82,7 +82,7 @@ _.each(featuresList, function(featureObj) {
 
 _.each(_.values(replacementsSet), function(replacementObj) {
 	glue.log("FINEST", "Creating replacement object", replacementObj);
-	var variationName = "covmut:"+replacementObj.id;
+	var variationName = "cov_aa_rpl:"+replacementObj.id;
 	glue.inMode("reference/REF_MASTER_WUHAN_HU_1/feature-location/"+replacementObj.feature, function() {
 		glue.command(["create", "variation", variationName, 
 			"-t", "aminoAcidSimplePolymorphism", 
