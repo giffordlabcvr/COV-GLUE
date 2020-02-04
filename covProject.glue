@@ -52,6 +52,9 @@ project cov
   # generate replacements
   run script glue/covGenerateGisaidReplacements.js
 
+  # indel detection
+  run script glue/covDetectGisaidIndels.js
+
   # Validate
   validate
 
