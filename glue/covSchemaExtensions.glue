@@ -22,6 +22,7 @@ schema-project cov
     create field codon_label VARCHAR
     create field codon_label_int INTEGER
     create field reference_aa VARCHAR
+    create field reference_nt INTEGER
     create field replacement_aa VARCHAR
     create field num_seqs INTEGER
     exit

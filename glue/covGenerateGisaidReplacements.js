@@ -66,6 +66,7 @@ _.each(featuresList, function(featureObj) {
 												id: replacementID,
 												feature: featureObj.name,
 												codonLabel: memberAaObj.codonLabel,
+												refNt: memberAaObj.relRefNt,
 												refAa: refAa,
 												replacementAa: memberAa,
 												memberSeqs: []
@@ -105,6 +106,7 @@ _.each(_.values(replacementsSet), function(replacementObj) {
 		glue.command(["set", "field", "display_name", displayName]);
 		glue.command(["set", "field", "codon_label", replacementObj.codonLabel]);		
 		glue.command(["set", "field", "codon_label_int", parseInt(replacementObj.codonLabel)]);		
+		glue.command(["set", "field", "reference_nt", replacementObj.refNt]);
 		glue.command(["set", "field", "reference_aa", replacementObj.refAa]);
 		glue.command(["set", "field", "replacement_aa", replacementObj.replacementAa]);
 		glue.command(["set", "field", "num_seqs", replacementObj.memberSeqs.length]);
