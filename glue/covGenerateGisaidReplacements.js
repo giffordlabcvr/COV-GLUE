@@ -44,11 +44,12 @@ _.each(featuresList, function(featureObj) {
 			glue.inMode("member/"+almtMemberObj["sequence.source.name"]+"/"+almtMemberObj["sequence.sequenceID"], function() {
 				var memberAaObjs = glue.tableToObjects(glue.command(["amino-acid", "-r", comparisonRefName, "-f", featureObj.name]));
 				_.each(memberAaObjs, function(memberAaObj) {
-					// Require no Ns in the codonNts in order to generate a replacement.
+					// Require no Ns in the codonNts in order to generate a replacement,
+					// unless the replacement is unambiguously a single AA residue.
 					// This means we are interpreting N as 'unable to sequence' rather than
 					// 'equal proportion A, C, G, T' 
 					if(memberAaObj.definiteAas != null && memberAaObj.definiteAas != "" &&
-							memberAaObj.codonNts.indexOf('N') < 0) {
+							(memberAaObj.definiteAas.length == 1 || memberAaObj.codonNts.indexOf('N') < 0)) {
 						refAaObj = refAaObjsMap[memberAaObj.codonLabel];
 						if(refAaObj != null && refAaObj.definiteAas != null && refAaObj.definiteAas != "" && 
 								refAaObj.definiteAas != memberAaObj.definiteAas) {
