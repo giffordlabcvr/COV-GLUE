@@ -215,6 +215,24 @@ function generateReplacements(queryNucleotides, targetRefName, queryToTargetRefS
 			});
 		});
 	});
+	_.each(replacementsList, function(replacement) {
+		var refAas = replacement.replacement.refAas.split('');
+		var queryAas = replacement.replacement.queryAas.split('');
+		var knownCovReplacements = [];
+		_.each(refAas, function(refAa) {
+			_.each(queryAas, function(queryAa) {
+				var knownCovReplacementID = 
+					replacement.replacement.feature+":"+refAa+":"+replacement.replacement.codonLabel+":"+queryAa;
+				var foundCovReplacements = glue.tableToObjects(
+						glue.command(["list", "custom-table-row", "cov_replacement", 
+							"-w", "id = '"+knownCovReplacementID+"'", "id", "display_name", "num_seqs"]));
+				if(foundCovReplacements.length == 1) {
+					knownCovReplacements.push({ "known_replacement": foundCovReplacements[0]});
+				}
+			});
+		});
+		replacement.replacement.known_replacements = knownCovReplacements;
+	});
 	return replacementsList;
 }
 
