@@ -26,11 +26,22 @@
   <g class="leafNode">
   <#list treeVisDoc.leafNodes as leafNode>
     <#if leafNode.properties.aaValue ??>
-    <circle class="leafNodeAaCircle_${leafNode.properties.aaValue?replace('*', 'STOP')?replace('-', 'GAP')}"
+     <#if leafNode.properties.multipleResidues??>
+	  <g class="multipleAasBackground">
+	  <title>Multiple residues: ${leafNode.properties.multipleResidues?split('', 'r')?join(', ')}</title>
+	 </#if>
+      <circle class="leafNodeAaCircle_${leafNode.properties.aaValue?replace('*', 'STOP')?replace('-', 'GAP')}"
     	cx="${leafNode.x + leafNodeRadiusPx}" cy="${leafNode.y}" r="${leafNodeRadiusPx}"/>
-    <text class="leafNodeAaText_${leafNode.properties.aaValue?replace('*', 'STOP')?replace('-', 'GAP')}"
+     <#assign letterClass = "leafNodeAaText_"+leafNode.properties.aaValue?replace('*', 'STOP')?replace('-', 'GAP')?replace('?', 'X')>
+	 <#if leafNode.properties.multipleResidues??>
+		  <#assign letterClass = letterClass+" multipleAas">
+	 </#if>
+     <text class="${letterClass}"
 	  	x="${leafNode.x + leafNodeRadiusPx}" y="${leafNode.y}" height="${verticalLeafSpacePx}"
 	  	dy=".35em">${leafNode.properties.aaValue}</text>
+     <#if leafNode.properties.multipleResidues??>
+	  </g>
+	 </#if>
 	</#if>
   </#list>
   </g>

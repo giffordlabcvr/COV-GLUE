@@ -48,25 +48,48 @@ function visualisePhyloAsSvg(document) {
 	var aaVisCodonLabel = document.inputDocument.aaVisCodonLabel;
 
 	var gisaidSeqIdToAA = {};
+	var gisaidSeqIdToMultipleResidues = {};
 
 	glue.logInfo("document.inputDocument", document.inputDocument);
-	
-	// generate a map of sequenceID to AA value for the GISAID sequences.
-	glue.inMode("module/covFastaProteinAlignmentExporter", function() {
-		var gisaidAaFasta = glue.command(["web-export", "AL_GISAID_UNCONSTRAINED", 
-			"--relRefName", "REF_MASTER_WUHAN_HU_1", 
-			"-f", aaVisFeatureName, 
-			"--labelledCodon", aaVisCodonLabel, aaVisCodonLabel, 
-			"-a", "-p"]);
-		_.each(gisaidAaFasta.aminoAcidFasta.sequences, function(aaFastaSeq) {
-			var seqID = aaFastaSeq.id.split(".")[2];
-			gisaidSeqIdToAA[seqID] = aaFastaSeq.sequence;
+
+	var almtMemberObjs;
+	glue.inMode("alignment/AL_GISAID_UNCONSTRAINED", function() {
+		almtMemberObjs = glue.tableToObjects(glue.command(["list", "member"]));
+		// generate a map of sequenceID to AA value for the GISAID sequences.
+		_.each(almtMemberObjs, function(almtMemberObj) {
+			var sequenceID = almtMemberObj["sequence.sequenceID"];
+			glue.inMode("member/"+almtMemberObj["sequence.source.name"]+"/"+sequenceID, function() {
+				var memberAa;
+				var multipleResidues;
+				var aaRows = glue.tableToObjects(glue.command(["amino-acid",
+					"-r", "REF_MASTER_WUHAN_HU_1", "-f", aaVisFeatureName, 
+					"-c", aaVisCodonLabel, aaVisCodonLabel]));
+				if(aaRows.length == 0) {
+					memberAa = "-";
+					multipleResidues = "";
+				} else {
+					var aaObj = aaRows[0];
+					memberAa = aaObj.aminoAcid;
+					multipleResidues = "";
+
+					if(memberAa == "X" && aaObj.definiteAas != null && aaObj.definiteAas != "" &&
+							aaObj.definiteAas.length > 1 && aaObj.codonNts.indexOf('N') < 0) {
+						memberAa = "?";
+						multipleResidues = aaObj.definiteAas;
+					}
+
+				}
+				gisaidSeqIdToAA[sequenceID] = memberAa;
+				gisaidSeqIdToMultipleResidues[sequenceID] = multipleResidues;
+			});
 		});
 	});
-
+	
+	
 	if(includeQuerySequence) {
 		// translate the aaVisFeature/CodonLabel for the submitted sequence
 		var queryAa;
+		var multipleResidues;
 		glue.inMode("module/covFastaSequenceReporter", function() {
 			var aaRows = glue.tableToObjects(glue.command({
 				"string-plus-alignment": { 
@@ -89,12 +112,24 @@ function visualisePhyloAsSvg(document) {
 			}));
 			if(aaRows.length == 0) {
 				queryAa = "-";
+				multipleResidues = "";
 			} else {
-				queryAa = aaRows[0].aminoAcid;
+				var aaObj = aaRows[0];
+				queryAa = aaObj.aminoAcid;
+				multipleResidues = "";
+
+				if(queryAa == "X" && aaObj.definiteAas != null && aaObj.definiteAas != "" &&
+						aaObj.definiteAas.length > 1 && aaObj.codonNts.indexOf('N') < 0) {
+					queryAa = "?";
+					multipleResidues = aaObj.definiteAas;
+				}
+				
 			}
 		});
 
+
 		gisaidSeqIdToAA[queryName] = queryAa;
+		gisaidSeqIdToMultipleResidues[queryName] = multipleResidues;
 	}	
 
 	if(includeQuerySequence) {
@@ -175,6 +210,10 @@ function visualisePhyloAsSvg(document) {
 	_.each(visualiseTreeResult.visDocument.treeVisualisation.leafNodes, function(leafNode) {
 		var seqID = leafNode.properties.leafSequenceID;
 		leafNode.properties.aaValue = gisaidSeqIdToAA[seqID];
+		var multipleResidues = gisaidSeqIdToMultipleResidues[seqID];
+		if(multipleResidues.length > 0) {
+			leafNode.properties.multipleResidues = multipleResidues;
+		}
 	});
 	
 	// from the visualisation documents, generate SVGs as GLUE web files.

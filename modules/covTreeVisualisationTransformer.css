@@ -25,6 +25,23 @@ svg {
 	fill: DarkGrey; 
 }
 
+.multipleAas {
+	text-decoration: underline;
+}
+
+.multipleAas:hover {
+	fill: #ffffff;
+}
+
+.multipleAasBackground {
+    stroke: none;
+}
+
+.multipleAasBackground:hover {
+    stroke: none;
+	fill: #777777;
+}
+
 
 .leafNodeAaCircle_A {
 	stroke: none;
@@ -32,7 +49,7 @@ svg {
 }
 .leafNodeAaCircle_C {
     stroke: none;
-    fill: #e68080;
+	fill: #e68080;
 }
 .leafNodeAaCircle_D {
     stroke: none;
