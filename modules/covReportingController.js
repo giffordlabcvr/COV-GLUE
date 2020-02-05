@@ -196,7 +196,10 @@ function generateReplacements(queryNucleotides, targetRefName, queryToTargetRefS
 				}
 			}));
 			_.each(queryAaObjs, function(queryAaObj) {
-				if(queryAaObj.definiteAas != null && queryAaObj.definiteAas != "") {
+				// Require no Ns in the codonNts in order to generate a replacement.
+				// This means we are interpreting N as 'unable to sequence' rather than
+				// 'equal proportion A, C, G, T' 
+				if(queryAaObj.definiteAas != null && queryAaObj.definiteAas != "" && queryAaObj.codonNts.indexOf('N') < 0) {
 					refAaObj = refAaObjsMap[queryAaObj.codonLabel];
 					if(refAaObj != null && refAaObj.definiteAas != null && refAaObj.definiteAas != "" && 
 							refAaObj.definiteAas != queryAaObj.definiteAas) {
