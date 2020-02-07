@@ -7,7 +7,7 @@
 	<featureDescription>${variation.featureLoc.feature.description}</featureDescription>
 	<displayName>${display_name}</displayName>
 	<referenceSequence>${variation.featureLoc.referenceSequence.name}</referenceSequence>
-	<codonAligned glueType="Boolean">${codon_aligned}</codonAligned>
+	<@elem tag="codonAligned" expr="codon_aligned" type="Boolean"/>
 	<#if codon_aligned>
 	<startCodon>${start_codon}</startCodon>
 	<endCodon>${end_codon}</endCodon>
@@ -16,7 +16,7 @@
 	<referenceNtEnd>${reference_nt_end?c}</referenceNtEnd>
 	<numSeqs>${num_seqs}</numSeqs>
 
-	<#list cov_replacement_sequence as cms>
+	<#list cov_deletion_sequence as cms>
     <containingSeq glueType="Object[]">
     	<sourceName>${cms.sequence.source.name}</sourceName>
     	<sequenceID>${cms.sequence.sequenceID}</sequenceID>
