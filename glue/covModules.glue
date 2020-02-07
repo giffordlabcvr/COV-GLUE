@@ -38,3 +38,6 @@ create module --fileName modules/covFastaProteinAlignmentExporter.xml
 
 create module --fileName modules/covReplacementRenderer.xml --loadResources
 create module --fileName modules/covListReplacementsRenderer.xml --loadResources
+
+create module --fileName modules/covDeletionRenderer.xml --loadResources
+create module --fileName modules/covListDeletionsRenderer.xml --loadResources

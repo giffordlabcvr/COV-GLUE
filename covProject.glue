@@ -52,8 +52,13 @@ project cov
   # generate replacements
   run script glue/covGenerateGisaidReplacements.js
 
-  # indel detection
-  run script glue/covDetectGisaidIndels.js
+  # generate deletions
+  # if non-codon-aligned deletions are detected at this step, an error is thrown
+  run script glue/covGenerateGisaidDeletions.js
+
+  # insertion detection
+  # if any insertions in coding regions are detected at this step, an error is thrown
+  run script glue/covDetectGisaidInsertions.js
 
   # Validate
   validate

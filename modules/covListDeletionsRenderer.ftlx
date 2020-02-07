@@ -1,14 +1,18 @@
 <#include "/utils/glueDocUtils.ftlx">
 
-<deletio>
+<deletion>
 	<id>${id}</id>
 	<feature>${variation.featureLoc.feature.name}</feature>
 	<featureDisplayName>${variation.featureLoc.feature.displayName}</featureDisplayName>
 	<featureDescription>${variation.featureLoc.feature.description}</featureDescription>
 	<displayName>${display_name}</displayName>
 	<referenceSequence>${variation.featureLoc.referenceSequence.name}</referenceSequence>
-	<referenceAa>${reference_aa}</referenceAa>
-	<codonLabel>${codon_label}</codonLabel>
-	<replacementAa>${replacement_aa}</replacementAa>
+	<codonAligned glueType="Boolean">${codon_aligned}</codonAligned>
+	<#if codon_aligned>
+	<startCodon>${start_codon}</startCodon>
+	<endCodon>${end_codon}</endCodon>
+	</#if>
+	<referenceNtStart>${reference_nt_start?c}</referenceNtStart>
+	<referenceNtEnd>${reference_nt_end?c}</referenceNtEnd>
 	<numSeqs>${num_seqs}</numSeqs>
-</replacement>
+</deletion>
