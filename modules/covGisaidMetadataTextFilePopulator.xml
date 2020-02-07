@@ -26,6 +26,10 @@
 			<matchPattern>England</matchPattern>
 			<outputTemplate>GBR</outputTemplate>
 		</valueConverter>
+		<valueConverter>
+			<matchPattern>Gyeonggi-do</matchPattern>
+			<outputTemplate>KOR</outputTemplate>
+		</valueConverter>
 	</isoCountryTextFileColumn>
 	<textFileColumn>
 		<header>Location</header>
