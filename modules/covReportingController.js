@@ -317,6 +317,19 @@ function generateDeletions(queryNucleotides, targetRefName, queryToTargetRefSegs
 			});
 		});
 	});
+	_.each(deletionsList, function(deletion) {
+		var knownCovDeletions = [];
+		var foundCovDeletions = glue.tableToObjects(
+			glue.command(["list", "custom-table-row", "cov_deletion", 
+				"-w", "variation.featureLoc.feature.name = '"+deletion.deletion.variationFeature+"'"+
+				" and start_codon_int <= "+deletion.deletion.refFirstCodonDeleted+
+				" and end_codon_int >= "+deletion.deletion.refLastCodonDeleted, 
+				"id", "display_name", "num_seqs"]));
+		_.each(foundCovDeletions, function(foundDel) {
+			knownCovDeletions.push({"known_deletion": foundDel});
+		});
+		deletion.deletion.known_deletions = knownCovDeletions;
+	});
 	return deletionsList;
 }
 

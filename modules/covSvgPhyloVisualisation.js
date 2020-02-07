@@ -112,39 +112,72 @@ function visualisePhyloAsSvg(document) {
 		var queryAa;
 		var multipleResidues;
 		glue.inMode("module/covFastaSequenceReporter", function() {
-			var aaRows = glue.tableToObjects(glue.command({
-				"string-plus-alignment": { 
-					"amino-acid": {
-						"fastaString": queryNucleotides,
-						"queryToTargetSegs": {
-							queryToTargetSegs: {
-								alignedSegment: queryToTargetRefSegs
-							}
-						},
-						"labelledCodon": true,
-						"lcStart": aaVisCodonLabel,
-						"lcEnd": aaVisCodonLabel,
-						"targetRefName":targetRefName,
-						"relRefName":"REF_MASTER_WUHAN_HU_1",
-						"linkingAlmtName":"AL_GISAID_UNCONSTRAINED",
-						"featureName":aaVisFeatureName
+			if(aaVisCodonLabel != null) {
+				var aaRows = glue.tableToObjects(glue.command({
+					"string-plus-alignment": { 
+						"amino-acid": {
+							"fastaString": queryNucleotides,
+							"queryToTargetSegs": {
+								queryToTargetSegs: {
+									alignedSegment: queryToTargetRefSegs
+								}
+							},
+							"labelledCodon": true,
+							"lcStart": aaVisCodonLabel,
+							"lcEnd": aaVisCodonLabel,
+							"targetRefName":targetRefName,
+							"relRefName":"REF_MASTER_WUHAN_HU_1",
+							"linkingAlmtName":"AL_GISAID_UNCONSTRAINED",
+							"featureName":aaVisFeatureName
+						}
+					}
+				}));
+				if(aaRows.length == 0) {
+					queryAa = "-";
+					multipleResidues = "";
+				} else {
+					var aaObj = aaRows[0];
+					queryAa = aaObj.aminoAcid;
+					multipleResidues = "";
+	
+					if(queryAa == "X" && aaObj.definiteAas != null && aaObj.definiteAas != "" &&
+							aaObj.definiteAas.length > 1 && aaObj.codonNts.indexOf('N') < 0) {
+						queryAa = "?";
+						multipleResidues = aaObj.definiteAas;
 					}
 				}
-			}));
-			if(aaRows.length == 0) {
-				queryAa = "-";
-				multipleResidues = "";
-			} else {
-				var aaObj = aaRows[0];
-				queryAa = aaObj.aminoAcid;
-				multipleResidues = "";
+			}
+			if(aaVisDeletionStart && aaVisDeletionEnd != null) {
+				var queryDelObjs = glue.tableToObjects(glue.command({
+					"string-plus-alignment": { 
+						"variation": {
+							"scan" :{
+								"fastaString": queryNucleotides,
+								"queryToTargetSegs": {
+									queryToTargetSegs: {
+										alignedSegment: queryToTargetRefSegs
+									}
+								},
+								"whereClause": "name = 'cov_aa_del_detect:"+aaVisFeatureName+"'",
+								"excludeAbsent": true,
+								"showMatchesAsTable": true,
+								"showMatchesAsDocument": false,
+								"targetRefName":targetRefName,
+								"relRefName":"REF_MASTER_WUHAN_HU_1",
+								"linkingAlmtName":"AL_GISAID_UNCONSTRAINED",
+								"featureName":aaVisFeatureName
+							}
+						}
+					}
+				}));
+				gisaidSeqIdToDeletion[queryName] = false;
+				_.each(queryDelObjs, function(queryDelObj) {
+					if(parseInt(queryDelObj.refFirstCodonDeleted) <= parseInt(aaVisDeletionStart) &&
+							parseInt(queryDelObj.refLastCodonDeleted) >= parseInt(aaVisDeletionEnd)) {
+						gisaidSeqIdToDeletion[queryName] = true;
+					}
+				});
 
-				if(queryAa == "X" && aaObj.definiteAas != null && aaObj.definiteAas != "" &&
-						aaObj.definiteAas.length > 1 && aaObj.codonNts.indexOf('N') < 0) {
-					queryAa = "?";
-					multipleResidues = aaObj.definiteAas;
-				}
-				
 			}
 		});
 
