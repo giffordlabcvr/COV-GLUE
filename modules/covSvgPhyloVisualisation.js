@@ -25,9 +25,6 @@ function setLeafSeqIDs(subtree) {
 	}
 }
 
-
-
-
 function visualisePhyloAsSvg(document) {
 	var glueTree;
 	
@@ -46,9 +43,16 @@ function visualisePhyloAsSvg(document) {
 	
 	var aaVisFeatureName = document.inputDocument.aaVisFeature;
 	var aaVisCodonLabel = document.inputDocument.aaVisCodonLabel;
+	var aaVisDeletionStart = document.inputDocument.aaVisDeletionStart;
+	var aaVisDeletionEnd = document.inputDocument.aaVisDeletionEnd;
 
+	// map seqID to the AA residue at the requested loc
 	var gisaidSeqIdToAA = {};
+	// map seqID to string of multiple AA residue at the requested loc, used when the nucleotides are ambiguous
 	var gisaidSeqIdToMultipleResidues = {};
+
+	// map seqID to boolean, whether the sequence contains the requested deletion (or a deletion which contains the requested deletion)
+	var gisaidSeqIdToDeletion = {};
 
 	glue.logInfo("document.inputDocument", document.inputDocument);
 
@@ -59,28 +63,45 @@ function visualisePhyloAsSvg(document) {
 		_.each(almtMemberObjs, function(almtMemberObj) {
 			var sequenceID = almtMemberObj["sequence.sequenceID"];
 			glue.inMode("member/"+almtMemberObj["sequence.source.name"]+"/"+sequenceID, function() {
-				var memberAa;
-				var multipleResidues;
-				var aaRows = glue.tableToObjects(glue.command(["amino-acid",
-					"-r", "REF_MASTER_WUHAN_HU_1", "-f", aaVisFeatureName, 
-					"-c", aaVisCodonLabel, aaVisCodonLabel]));
-				if(aaRows.length == 0) {
-					memberAa = "-";
-					multipleResidues = "";
-				} else {
-					var aaObj = aaRows[0];
-					memberAa = aaObj.aminoAcid;
-					multipleResidues = "";
+				
+				if(aaVisCodonLabel != null) {
+					var memberAa;
+					var multipleResidues;
+					var aaRows = glue.tableToObjects(glue.command(["amino-acid",
+						"-r", "REF_MASTER_WUHAN_HU_1", "-f", aaVisFeatureName, 
+						"-c", aaVisCodonLabel, aaVisCodonLabel]));
+					if(aaRows.length == 0) {
+						memberAa = "-";
+						multipleResidues = "";
+					} else {
+						var aaObj = aaRows[0];
+						memberAa = aaObj.aminoAcid;
+						multipleResidues = "";
 
-					if(memberAa == "X" && aaObj.definiteAas != null && aaObj.definiteAas != "" &&
-							aaObj.definiteAas.length > 1 && aaObj.codonNts.indexOf('N') < 0) {
-						memberAa = "?";
-						multipleResidues = aaObj.definiteAas;
+						if(memberAa == "X" && aaObj.definiteAas != null && aaObj.definiteAas != "" &&
+								aaObj.definiteAas.length > 1 && aaObj.codonNts.indexOf('N') < 0) {
+							memberAa = "?";
+							multipleResidues = aaObj.definiteAas;
+						}
+
 					}
-
+					gisaidSeqIdToAA[sequenceID] = memberAa;
+					gisaidSeqIdToMultipleResidues[sequenceID] = multipleResidues;
 				}
-				gisaidSeqIdToAA[sequenceID] = memberAa;
-				gisaidSeqIdToMultipleResidues[sequenceID] = multipleResidues;
+				if(aaVisDeletionStart && aaVisDeletionEnd != null) {
+					var memberDelObjs = glue.tableToObjects(glue.command(["variation", "scan", 
+						"-r", "REF_MASTER_WUHAN_HU_1", "-f", aaVisFeatureName,
+						"--whereClause", "name = 'cov_aa_del_detect:"+aaVisFeatureName+"'", 
+						"--excludeAbsent", "--showMatchesAsTable"]));
+					gisaidSeqIdToDeletion[sequenceID] = false;
+					_.each(memberDelObjs, function(memberDelObj) {
+						if(parseInt(memberDelObj.refFirstCodonDeleted) <= parseInt(aaVisDeletionStart) &&
+								parseInt(memberDelObj.refLastCodonDeleted) >= parseInt(aaVisDeletionEnd)) {
+							gisaidSeqIdToDeletion[sequenceID] = true;
+						}
+					});
+					
+				}
 			});
 		});
 	});
@@ -209,10 +230,15 @@ function visualisePhyloAsSvg(document) {
 	// use the leafSequenceID to look up the AA value in the map, then set this as an additional property.
 	_.each(visualiseTreeResult.visDocument.treeVisualisation.leafNodes, function(leafNode) {
 		var seqID = leafNode.properties.leafSequenceID;
-		leafNode.properties.aaValue = gisaidSeqIdToAA[seqID];
-		var multipleResidues = gisaidSeqIdToMultipleResidues[seqID];
-		if(multipleResidues.length > 0) {
-			leafNode.properties.multipleResidues = multipleResidues;
+		if(aaVisCodonLabel != null) {
+			leafNode.properties.aaValue = gisaidSeqIdToAA[seqID];
+			var multipleResidues = gisaidSeqIdToMultipleResidues[seqID];
+			if(multipleResidues.length > 0) {
+				leafNode.properties.multipleResidues = multipleResidues;
+			}
+		}
+		if(aaVisDeletionStart && aaVisDeletionEnd != null) {
+			leafNode.properties.deletionPresent = gisaidSeqIdToDeletion[seqID];
 		}
 	});
 	

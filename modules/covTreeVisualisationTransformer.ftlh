@@ -43,6 +43,23 @@
 	  </g>
 	 </#if>
 	</#if>
+    <#if leafNode.properties.deletionPresent ??>
+ 	<#if leafNode.properties.deletionPresent>
+      <circle class="leafNodeDeletionCircle_deletion"
+    	cx="${leafNode.x + leafNodeRadiusPx}" cy="${leafNode.y}" r="${leafNodeRadiusPx}"/>
+     <text class="deletionLetter"
+	  	x="${leafNode.x + leafNodeRadiusPx}" y="${leafNode.y}" height="${verticalLeafSpacePx}"
+	  	dy=".35em">-</text>
+	<#else>
+      <circle class="leafNodeDeletionCircle_no_deletion"
+    	cx="${leafNode.x + leafNodeRadiusPx}" cy="${leafNode.y}" r="${leafNodeRadiusPx}"/>
+     <text class="deletionLetter"
+	  	x="${leafNode.x + leafNodeRadiusPx}" y="${leafNode.y}" height="${verticalLeafSpacePx}"
+	  	dy=".35em">+</text>
+	</#if>
+	</#if>
+
+	
   </#list>
   </g>
   <g font-size="${leafTextFontSize}">

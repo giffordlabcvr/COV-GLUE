@@ -136,6 +136,22 @@ svg {
 	fill: White;
 }
 
+.leafNodeDeletionCircle_deletion {
+    stroke: none;
+	fill: #ff3300;
+}
+
+.leafNodeDeletionCircle_no_deletion {
+    stroke: none;
+	fill: #009933;
+}
+
+.deletionLetter {
+	text-anchor: middle;
+    stroke: White;
+	fill: White;
+}
+
 .leafNodeAaText_A {
 	text-anchor: middle;
 	fill: Black;
