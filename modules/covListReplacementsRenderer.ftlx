@@ -1,6 +1,6 @@
 <#include "/utils/glueDocUtils.ftlx">
 
-<deletio>
+<replacement>
 	<id>${id}</id>
 	<feature>${variation.featureLoc.feature.name}</feature>
 	<featureDisplayName>${variation.featureLoc.feature.displayName}</featureDisplayName>
