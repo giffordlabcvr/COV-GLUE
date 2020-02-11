@@ -11,6 +11,8 @@
 	<referenceAa>${reference_aa}</referenceAa>
 	<codonLabel>${codon_label}</codonLabel>
 	<replacementAa>${replacement_aa}</replacementAa>
+	<@elem tag="granthamDistanceInt" expr="grantham_distance_int" type="Integer"/>
+	<@elem tag="miyataDistance" expr="miyata_distance" type="Double"/>
 	<numSeqs>${num_seqs}</numSeqs>
 
 	<#list cov_replacement_sequence as cms>
