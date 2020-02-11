@@ -40,7 +40,8 @@ project cov
   run script glue/covSetSequenceLengths.js 
 
   # Unconstrained alignment
-  module covSimpleFastaAlignmentImporter import AL_GISAID_UNCONSTRAINED -f alignments/AL_GISAID_UNCONSTRAINED.fna 
+  # the hand edit here corrects the single AA deletion in EPI_ISL_408670. The MAFFT result did not properly codon-align it.
+  module covSimpleFastaAlignmentImporter import AL_GISAID_UNCONSTRAINED -f alignments/AL_GISAID_UNCONSTRAINED_hand_edited.fna 
 
   run file glue/covFeatures.glue
 
