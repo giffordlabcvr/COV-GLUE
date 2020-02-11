@@ -10,5 +10,11 @@
 	<referenceAa>${reference_aa}</referenceAa>
 	<codonLabel>${codon_label}</codonLabel>
 	<replacementAa>${replacement_aa}</replacementAa>
+	<@elem tag="radicalHanadaI" expr="radical_hanada_category_i" type="Boolean"/>
+	<@elem tag="radicalHanadaII" expr="radical_hanada_category_ii" type="Boolean"/>
+	<@elem tag="radicalHanadaIII" expr="radical_hanada_category_iii" type="Boolean"/>
+	<@elem tag="granthamDistanceDouble" expr="grantham_distance_double" type="Double"/>
+	<@elem tag="granthamDistanceInt" expr="grantham_distance_int" type="Integer"/>
+	<@elem tag="miyataDistance" expr="miyata_distance" type="Double"/>
 	<numSeqs>${num_seqs}</numSeqs>
 </replacement>
