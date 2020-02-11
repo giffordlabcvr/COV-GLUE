@@ -28,6 +28,12 @@ schema-project cov
     create field reference_nt INTEGER
     create field replacement_aa VARCHAR
     create field num_seqs INTEGER
+    create field radical_hanada_category_i BOOLEAN
+    create field radical_hanada_category_ii BOOLEAN
+    create field radical_hanada_category_iii BOOLEAN
+    create field grantham_distance_double DOUBLE
+    create field grantham_distance_int INTEGER
+    create field miyata_distance DOUBLE
     exit
 
   table cov_deletion

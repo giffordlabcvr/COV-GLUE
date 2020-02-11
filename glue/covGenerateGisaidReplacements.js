@@ -99,6 +99,33 @@ _.each(_.values(replacementsSet), function(replacementObj) {
 			glue.command(["set", "metatag", "MIN_COMBINED_TRIPLET_FRACTION", 0.25]);
 		});
 	});
+
+	var hanada_radical_I;
+	var hanada_radical_II;
+	var hanada_radical_III;
+	var grantham_distance_double;
+	var grantham_distance_int;
+	var miyata_distance;
+	var classifyReplacement = false;
+	
+	if(replacementObj.refAa != '*' && replacementObj.refAa != 'X'
+		 && replacementObj.replacementAa != '*' && replacementObj.replacementAa != 'X') {
+		classifyReplacement = true;
+		glue.inMode("module/covHanada2006ReplacementClassifier", function() {
+			var classifierResults = glue.tableToObjects(glue.command(["classify", "replacement", replacementObj.refAa, replacementObj.replacementAa]));
+			hanada_radical_I = classifierResults[0].radical;
+			hanada_radical_II = classifierResults[1].radical;
+			hanada_radical_III = classifierResults[2].radical;
+		});
+		glue.inMode("module/covGrantham1974DistanceCalculator", function() {
+			var granthamResult = glue.command(["distance", replacementObj.refAa, replacementObj.replacementAa]).grantham1974DistanceResult;
+			grantham_distance_double = granthamResult.distanceDouble;
+			grantham_distance_int = granthamResult.distanceInt;
+		});
+		glue.inMode("module/covMiyata1979DistanceCalculator", function() {
+			miyataDistance = glue.command(["distance", replacementObj.refAa, replacementObj.replacementAa]).miyata1979DistanceResult.distance;
+		});
+	}
 	
 	glue.command(["create", "custom-table-row", "cov_replacement", replacementObj.id]);
 	glue.inMode("custom-table-row/cov_replacement/"+replacementObj.id, function() {
@@ -113,6 +140,14 @@ _.each(_.values(replacementsSet), function(replacementObj) {
 		glue.command(["set", "link-target", "variation", 
 			"reference/REF_MASTER_WUHAN_HU_1/feature-location/"+replacementObj.feature+
 			"/variation/"+variationName]);
+		if(classifyReplacement) {
+			glue.command(["set", "field", "radical_hanada_category_i", hanada_radical_I]);
+			glue.command(["set", "field", "radical_hanada_category_ii", hanada_radical_II]);
+			glue.command(["set", "field", "radical_hanada_category_iii", hanada_radical_III]);
+			glue.command(["set", "field", "grantham_distance_double", grantham_distance_double]);
+			glue.command(["set", "field", "grantham_distance_int", grantham_distance_int]);
+			glue.command(["set", "field", "miyata_distance", miyataDistance]);
+		}
 	});
 	
 	_.each(replacementObj.memberSeqs, function(memberObj) {

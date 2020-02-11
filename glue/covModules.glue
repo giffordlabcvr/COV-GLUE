@@ -41,3 +41,7 @@ create module --fileName modules/covListReplacementsRenderer.xml --loadResources
 
 create module --fileName modules/covDeletionRenderer.xml --loadResources
 create module --fileName modules/covListDeletionsRenderer.xml --loadResources
+
+create module --fileName modules/covHanada2006ReplacementClassifier.xml
+create module --fileName modules/covGrantham1974DistanceCalculator.xml
+create module --fileName modules/covMiyata1979DistanceCalculator.xml
