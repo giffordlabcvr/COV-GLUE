@@ -58,6 +58,8 @@ _.each(featuresList, function(featureObj) {
 					if(codonAligned) {
 						deletionID = featureObj.name+":ca:"+memberDelObj.refFirstCodonDeleted+":"+memberDelObj.refLastCodonDeleted;
 					} else {
+						glue.log("INFO", "alignment member", almtMemberObj);
+						glue.log("INFO", "non-codon-aligned deletion", memberDelObj);
 						throw new Error("Non-codon-aligned deletion! We could add this but what are the implications for protein translation elsewhere in the feature");
 					}
 					var deletionObj = deletionsSet[deletionID];
@@ -92,7 +94,12 @@ _.each(_.values(deletionsSet), function(deletionObj) {
 	
 	glue.command(["create", "custom-table-row", "cov_deletion", deletionObj.id]);
 	glue.inMode("custom-table-row/cov_deletion/"+deletionObj.id, function() {
-		var displayName = deletionObj.startCodon+"-"+deletionObj.endCodon+"del";
+		var displayName;
+		if(deletionObj.startCodon == deletionObj.endCodon) {
+			displayName = deletionObj.startCodon+"del";	
+		} else {
+			displayName = deletionObj.startCodon+"-"+deletionObj.endCodon+"del";	
+		}
 		glue.command(["set", "field", "display_name", displayName]);
 		glue.command(["set", "field", "start_codon", deletionObj.startCodon]);		
 		glue.command(["set", "field", "start_codon_int", parseInt(deletionObj.startCodon)]);		
