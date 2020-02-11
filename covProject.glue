@@ -28,10 +28,13 @@ project cov
   # delete EPI_ISL_402126, from Japan following NextStrain. Subgenomic.
   delete sequence -w "sequenceID = 'EPI_ISL_402126'"
 
-  # delete EPI_ISL_406959, EPI_ISL_406960 from Italy. Subgenomic.
+  # delete EPI_ISL_406959, EPI_ISL_406960, EPI_ISL_408068 from Italy. Subgenomic.
   delete sequence -w "sequenceID = 'EPI_ISL_406959'"
   delete sequence -w "sequenceID = 'EPI_ISL_406960'"
+  delete sequence -w "sequenceID = 'EPI_ISL_408068'"
 
+  # delete EPI_ISL_408975 from Hong Kong. Subgenomic.
+  delete sequence -w "sequenceID = 'EPI_ISL_408975'"
 
   # Sequence lengths
   run script glue/covSetSequenceLengths.js 
