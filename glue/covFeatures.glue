@@ -3,9 +3,145 @@ multi-delete feature -a
 create feature whole_genome "Whole genome"
 feature whole_genome set metatag INFORMATIONAL true
 
+create feature ORF_1a -p whole_genome "ORF 1a"
+feature ORF_1a
+  set field displayName "ORF 1a"
+  set metatag OWN_CODON_NUMBERING true
+  set metatag CODES_AMINO_ACIDS true
+  set metatag CODON_LABELER_MODULE covKuiken2006CodonLabeler
+  exit
+
 create feature ORF_1ab -p whole_genome "ORF 1ab"
 feature ORF_1ab
   set field displayName "ORF 1ab"
+  set metatag OWN_CODON_NUMBERING true
+  set metatag CODES_AMINO_ACIDS true
+  set metatag CODON_LABELER_MODULE covKuiken2006CodonLabeler
+  exit
+
+create feature NSP1 -p ORF_1a "nsp1"
+feature NSP1
+  set field displayName "nsp1"
+  set metatag OWN_CODON_NUMBERING true
+  set metatag CODES_AMINO_ACIDS true
+  set metatag CODON_LABELER_MODULE covKuiken2006CodonLabeler
+  exit
+
+create feature NSP2 -p ORF_1a "nsp2"
+feature NSP2
+  set field displayName "nsp2"
+  set metatag OWN_CODON_NUMBERING true
+  set metatag CODES_AMINO_ACIDS true
+  set metatag CODON_LABELER_MODULE covKuiken2006CodonLabeler
+  exit
+
+create feature NSP3 -p ORF_1a "nsp3"
+feature NSP3
+  set field displayName "nsp3"
+  set metatag OWN_CODON_NUMBERING true
+  set metatag CODES_AMINO_ACIDS true
+  set metatag CODON_LABELER_MODULE covKuiken2006CodonLabeler
+  exit
+
+create feature NSP4 -p ORF_1a "nsp4"
+feature NSP4
+  set field displayName "nsp4"
+  set metatag OWN_CODON_NUMBERING true
+  set metatag CODES_AMINO_ACIDS true
+  set metatag CODON_LABELER_MODULE covKuiken2006CodonLabeler
+  exit
+
+create feature NSP5 -p ORF_1a "nsp5"
+feature NSP5
+  set field displayName "nsp5"
+  set metatag OWN_CODON_NUMBERING true
+  set metatag CODES_AMINO_ACIDS true
+  set metatag CODON_LABELER_MODULE covKuiken2006CodonLabeler
+  exit
+
+create feature NSP6 -p ORF_1a "nsp6"
+feature NSP6
+  set field displayName "nsp6"
+  set metatag OWN_CODON_NUMBERING true
+  set metatag CODES_AMINO_ACIDS true
+  set metatag CODON_LABELER_MODULE covKuiken2006CodonLabeler
+  exit
+
+create feature NSP7 -p ORF_1a "nsp7"
+feature NSP7
+  set field displayName "nsp7"
+  set metatag OWN_CODON_NUMBERING true
+  set metatag CODES_AMINO_ACIDS true
+  set metatag CODON_LABELER_MODULE covKuiken2006CodonLabeler
+  exit
+
+create feature NSP8 -p ORF_1a "nsp8"
+feature NSP8
+  set field displayName "nsp8"
+  set metatag OWN_CODON_NUMBERING true
+  set metatag CODES_AMINO_ACIDS true
+  set metatag CODON_LABELER_MODULE covKuiken2006CodonLabeler
+  exit
+
+create feature NSP9 -p ORF_1a "nsp9"
+feature NSP9
+  set field displayName "nsp9"
+  set metatag OWN_CODON_NUMBERING true
+  set metatag CODES_AMINO_ACIDS true
+  set metatag CODON_LABELER_MODULE covKuiken2006CodonLabeler
+  exit
+
+create feature NSP10 -p ORF_1a "nsp10"
+feature NSP10
+  set field displayName "nsp10"
+  set metatag OWN_CODON_NUMBERING true
+  set metatag CODES_AMINO_ACIDS true
+  set metatag CODON_LABELER_MODULE covKuiken2006CodonLabeler
+  exit
+
+create feature NSP11 -p ORF_1a "nsp11"
+feature NSP11
+  set field displayName "nsp11"
+  set metatag OWN_CODON_NUMBERING true
+  set metatag CODES_AMINO_ACIDS true
+  set metatag CODON_LABELER_MODULE covKuiken2006CodonLabeler
+  exit
+
+create feature NSP12 -p ORF_1ab "nsp12"
+feature NSP12
+  set field displayName "nsp12"
+  set metatag OWN_CODON_NUMBERING true
+  set metatag CODES_AMINO_ACIDS true
+  set metatag CODON_LABELER_MODULE covKuiken2006CodonLabeler
+  exit
+
+create feature NSP13 -p ORF_1ab "nsp13"
+feature NSP13
+  set field displayName "nsp13"
+  set metatag OWN_CODON_NUMBERING true
+  set metatag CODES_AMINO_ACIDS true
+  set metatag CODON_LABELER_MODULE covKuiken2006CodonLabeler
+  exit
+
+create feature NSP14 -p ORF_1ab "nsp14"
+feature NSP14
+  set field displayName "nsp14"
+  set metatag OWN_CODON_NUMBERING true
+  set metatag CODES_AMINO_ACIDS true
+  set metatag CODON_LABELER_MODULE covKuiken2006CodonLabeler
+  exit
+
+create feature NSP15 -p ORF_1ab "nsp15"
+feature NSP15
+  set field displayName "nsp15"
+  set metatag OWN_CODON_NUMBERING true
+  set metatag CODES_AMINO_ACIDS true
+  set metatag CODON_LABELER_MODULE covKuiken2006CodonLabeler
+  exit
+
+create feature NSP16 -p ORF_1ab "nsp16"
+feature NSP16
+  set field displayName "nsp16"
   set metatag OWN_CODON_NUMBERING true
   set metatag CODES_AMINO_ACIDS true
   set metatag CODON_LABELER_MODULE covKuiken2006CodonLabeler
@@ -54,6 +190,14 @@ feature ORF_6
 create feature ORF_7a -p whole_genome "ORF 7a"
 feature ORF_7a
   set field displayName "ORF 7a"
+  set metatag OWN_CODON_NUMBERING true
+  set metatag CODES_AMINO_ACIDS true
+  set metatag CODON_LABELER_MODULE covKuiken2006CodonLabeler
+  exit
+
+create feature ORF_7b -p whole_genome "ORF 7b"
+feature ORF_7b
+  set field displayName "ORF 7b"
   set metatag OWN_CODON_NUMBERING true
   set metatag CODES_AMINO_ACIDS true
   set metatag CODON_LABELER_MODULE covKuiken2006CodonLabeler

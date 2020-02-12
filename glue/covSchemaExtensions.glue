@@ -16,6 +16,10 @@ schema-project cov
     create field place_sampled VARCHAR 100
     exit
 
+  table feature
+    create field max_codon_number INTEGER
+    exit
+
   table alignment
     create field phylogeny CLOB
     exit
