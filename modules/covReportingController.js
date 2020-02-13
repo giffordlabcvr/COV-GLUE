@@ -1,25 +1,6 @@
+var featuresList = glue.tableToObjects(
+		glue.command(["list", "feature", "-w", "featureMetatags.name = 'CODES_AMINO_ACIDS' and featureMetatags.value = true", "name", "displayName", "parent.name"]));
 
-var featuresList = [
-    { name: "E",
-      displayName: "E" },
-    { name: "M",
-      displayName: "M" },
-    { name: "N",
-      displayName: "N" },
-    { name: "ORF_10",
-      displayName: "ORF 10" },
-    { name: "ORF_1ab",
-      displayName: "ORF 1ab" },
-    { name: "ORF_3a",
-      displayName: "ORF_3a" },
-    { name: "ORF_6",
-      displayName: "ORF 6" },
-    { name: "ORF_7a",
-      displayName: "ORF 7a" },
-    { name: "ORF_8",
-      displayName: "ORF 8" },
-    { name: "S",
-      displayName: "S" }];
 
 function reportFastaWeb(base64, filePath) {
 	glue.log("FINE", "covReportingController.reportFastaWeb invoked");

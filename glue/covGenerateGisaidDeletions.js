@@ -7,7 +7,7 @@ glue.command(["multi-delete", "variation", "-w", "name like 'cov_aa_del%'"]);
 glue.command(["multi-delete", "variation", "-w", "name like 'cov_aa_del_detect%'"]);
 
 var featuresList = glue.tableToObjects(
-		glue.command(["list", "feature", "-w", "featureMetatags.name = 'CODES_AMINO_ACIDS' and featureMetatags.value = true", "name", "displayName"]));
+		glue.command(["list", "feature", "-w", "featureMetatags.name = 'CODES_AMINO_ACIDS' and featureMetatags.value = true", "name", "displayName", "parent.name"]));
 
 // create "detection" variation objects to detect deletions in each of the features respectively.
 var comparisonRefName = "REF_MASTER_WUHAN_HU_1";
@@ -22,6 +22,10 @@ _.each(featuresList, function(featureObj) {
 });
 
 var deletionsSet = {};
+var orf1aDeletions = {}; 
+var orf1abDeletions = {}; 
+
+
 _.each(featuresList, function(featureObj) {
 	glue.inMode("alignment/AL_GISAID_UNCONSTRAINED", function() {
 		var almtMemberObjs = glue.tableToObjects(glue.command(["list", "member"]));
@@ -48,6 +52,7 @@ _.each(featuresList, function(featureObj) {
 						deletionObj = {
 							id: deletionID,
 							feature: featureObj.name,
+							parentFeature: featureObj["parent.name"],
 							codonAligned: memberDelObj.deletionIsCodonAligned,
 							startCodon: memberDelObj.refFirstCodonDeleted,
 							endCodon: memberDelObj.refLastCodonDeleted,
@@ -56,6 +61,13 @@ _.each(featuresList, function(featureObj) {
 							memberSeqs: []
 						};
 						deletionsSet[deletionID] = deletionObj;
+						if(featureObj.name == "ORF_1a") {
+							orf1aDeletions[memberDelObj.refFirstNtDeleted+":"+memberDelObj.refLastNtDeleted] = deletionObj; 
+						}
+						if(featureObj.name == "ORF_1ab") {
+							orf1abDeletions[memberDelObj.refFirstNtDeleted+":"+memberDelObj.refLastNtDeleted] = deletionObj; 
+						}
+
 					}
 					deletionObj.memberSeqs.push(almtMemberObj);
 				});
@@ -65,6 +77,30 @@ _.each(featuresList, function(featureObj) {
 });
 
 _.each(_.values(deletionsSet), function(deletionObj) {
+	if(deletionObj.feature == "ORF_1a" || deletionObj.feature == "ORF_1ab") {
+		return;
+	}
+	createDeletion(deletionObj);
+});
+
+// create any ORF1a/ORF1ab deletions which are not already represented by NSP deletions
+// eg if they span cleavage locations.
+_.each(_.values(orf1aDeletions), function(deletionObj) {
+	if(deletionObj.skipCreation) {
+		return;
+	}
+	createDeletion(deletionObj);
+});
+
+
+_.each(_.values(orf1abDeletions), function(deletionObj) {
+	if(deletionObj.skipCreation) {
+		return;
+	}
+	createDeletion(deletionObj);
+});
+
+function createDeletion(deletionObj) {
 	glue.log("FINEST", "Creating deletion object", deletionObj);
 	var variationName = "cov_aa_del:"+deletionObj.id;
 	glue.inMode("reference/REF_MASTER_WUHAN_HU_1/feature-location/"+deletionObj.feature, function() {
@@ -77,9 +113,9 @@ _.each(_.values(deletionsSet), function(deletionObj) {
 	glue.inMode("custom-table-row/cov_deletion/"+deletionObj.id, function() {
 		var displayName;
 		if(deletionObj.startCodon == deletionObj.endCodon) {
-			displayName = deletionObj.startCodon+"del";	
+			displayName = deletionObj.startCodon+":del";	
 		} else {
-			displayName = deletionObj.startCodon+"-"+deletionObj.endCodon+"del";	
+			displayName = deletionObj.startCodon+"-"+deletionObj.endCodon+":del";	
 		}
 		glue.command(["set", "field", "display_name", displayName]);
 		glue.command(["set", "field", "start_codon", deletionObj.startCodon]);		
@@ -90,6 +126,22 @@ _.each(_.values(deletionsSet), function(deletionObj) {
 		glue.command(["set", "field", "reference_nt_start", deletionObj.refNtStart]);		
 		glue.command(["set", "field", "reference_nt_end", deletionObj.refNtEnd]);		
 		glue.command(["set", "field", "num_seqs", deletionObj.memberSeqs.length]);
+		if(deletionObj.parentFeature == "ORF_1a") {
+			glue.command(["set", "field", "parent_feature", "ORF_1a"]);
+			var parent1aDelObj = orf1aDeletions[deletionObj.refNtStart+":"+deletionObj.refNtEnd];
+			parent1aDelObj.skipCreation = true;
+			var parent1abDelObj = orf1abDeletions[deletionObj.refNtStart+":"+deletionObj.refNtEnd];
+			parent1abDelObj.skipCreation = true;
+			glue.command(["set", "field", "parent_start_codon", parent1aDelObj.startCodon]);
+			glue.command(["set", "field", "parent_end_codon", parent1aDelObj.endCodon]);
+		}
+		if(deletionObj.parentFeature == "ORF_1ab") {
+			glue.command(["set", "field", "parent_feature", "ORF_1ab"]);
+			var parentDelObj = orf1abDeletions[deletionObj.refNtStart+":"+deletionObj.refNtEnd];
+			parentDelObj.skipCreation = true;
+			glue.command(["set", "field", "parent_start_codon", parentDelObj.startCodon]);
+			glue.command(["set", "field", "parent_end_codon", parentDelObj.endCodon]);
+		}
 		glue.command(["set", "link-target", "variation", 
 			"reference/REF_MASTER_WUHAN_HU_1/feature-location/"+deletionObj.feature+
 			"/variation/"+variationName]);
@@ -105,4 +157,4 @@ _.each(_.values(deletionsSet), function(deletionObj) {
 			glue.command(["set", "link-target", "sequence", "sequence/"+sourceName+"/"+sequenceID]);
 		});
 	});
-});
+}

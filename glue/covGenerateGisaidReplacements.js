@@ -6,11 +6,14 @@ glue.command(["multi-delete", "cov_replacement_sequence", "-a"]);
 glue.command(["multi-delete", "variation", "-w", "name like 'cov_aa_rpl%'"]);
 
 var featuresList = glue.tableToObjects(
-		glue.command(["list", "feature", "-w", "featureMetatags.name = 'CODES_AMINO_ACIDS' and featureMetatags.value = true", "name", "displayName"]));
+		glue.command(["list", "feature", "-w", "featureMetatags.name = 'CODES_AMINO_ACIDS' and featureMetatags.value = true", "name", "displayName", "parent.name"]));
 
 
 var comparisonRefName = "REF_MASTER_WUHAN_HU_1";
 var replacementsSet = {};
+var orf1aReplacements = {}; 
+var orf1abReplacements = {}; 
+
 _.each(featuresList, function(featureObj) {
 	var refAaObjsMap = {};
 	glue.inMode("reference/"+comparisonRefName+"/feature-location/"+featureObj.name, function() {
@@ -46,6 +49,7 @@ _.each(featuresList, function(featureObj) {
 											replacementObj = {
 												id: replacementID,
 												feature: featureObj.name,
+												parentFeature: featureObj["parent.name"],
 												codonLabel: memberAaObj.codonLabel,
 												refNt: memberAaObj.relRefNt,
 												refAa: refAa,
@@ -53,6 +57,12 @@ _.each(featuresList, function(featureObj) {
 												memberSeqs: []
 											};
 											replacementsSet[replacementID] = replacementObj;
+											if(featureObj.name == "ORF_1a") {
+												orf1aReplacements[memberAaObj.relRefNt+":"+memberAa] = replacementObj; 
+											}
+											if(featureObj.name == "ORF_1ab") {
+												orf1abReplacements[memberAaObj.relRefNt+":"+memberAa] = replacementObj; 
+											}
 										}
 										replacementObj.memberSeqs.push(almtMemberObj);
 									}
@@ -69,6 +79,9 @@ _.each(featuresList, function(featureObj) {
 });
 
 _.each(_.values(replacementsSet), function(replacementObj) {
+	if(replacementObj.feature == "ORF_1a" || replacementObj.feature == "ORF_1ab") {
+		return;
+	}
 	glue.log("FINEST", "Creating replacement object", replacementObj);
 	var variationName = "cov_aa_rpl:"+replacementObj.id;
 	glue.inMode("reference/REF_MASTER_WUHAN_HU_1/feature-location/"+replacementObj.feature, function() {
@@ -118,6 +131,15 @@ _.each(_.values(replacementsSet), function(replacementObj) {
 		glue.command(["set", "field", "reference_aa", replacementObj.refAa]);
 		glue.command(["set", "field", "replacement_aa", replacementObj.replacementAa]);
 		glue.command(["set", "field", "num_seqs", replacementObj.memberSeqs.length]);
+		if(replacementObj.parentFeature == "ORF_1a") {
+			glue.command(["set", "field", "parent_feature", "ORF_1a"]);
+			glue.command(["set", "field", "parent_codon_label", orf1aReplacements[replacementObj.refNt+":"+replacementObj.replacementAa].codonLabel]);
+		}
+		if(replacementObj.parentFeature == "ORF_1ab") {
+			glue.command(["set", "field", "parent_feature", "ORF_1ab"]);
+			glue.command(["set", "field", "parent_codon_label", orf1abReplacements[replacementObj.refNt+":"+replacementObj.replacementAa].codonLabel]);
+		}
+		
 		glue.command(["set", "link-target", "variation", 
 			"reference/REF_MASTER_WUHAN_HU_1/feature-location/"+replacementObj.feature+
 			"/variation/"+variationName]);

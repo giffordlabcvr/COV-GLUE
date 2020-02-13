@@ -4,8 +4,13 @@
 	<id>${id}</id>
 	<feature>${variation.featureLoc.feature.name}</feature>
 	<featureDisplayName>${variation.featureLoc.feature.displayName}</featureDisplayName>
-	<featureDescription>${variation.featureLoc.feature.description}</featureDescription>
+	<@elem tag="featureDescription" expr="variation.featureLoc.feature.description" type="String"/>
 	<displayName>${display_name}</displayName>
+	<#if parent_feature??>
+	<parentFeature>${variation.featureLoc.feature.parent.name}</parentFeature>
+	<parentFeatureDisplayName>${variation.featureLoc.feature.parent.displayName}</parentFeatureDisplayName>
+	<parentCodonLabel>${parent_codon_label}</parentCodonLabel>
+	</#if>
 	<referenceSequence>${variation.featureLoc.referenceSequence.name}</referenceSequence>
 	<referenceNtCoord>${reference_nt?c}</referenceNtCoord>
 	<referenceAa>${reference_aa}</referenceAa>

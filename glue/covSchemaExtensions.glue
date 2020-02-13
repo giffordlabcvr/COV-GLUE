@@ -38,6 +38,8 @@ schema-project cov
     create field grantham_distance_double DOUBLE
     create field grantham_distance_int INTEGER
     create field miyata_distance DOUBLE
+    create field parent_feature VARCHAR
+    create field parent_codon_label VARCHAR
     exit
 
   table cov_deletion
@@ -50,6 +52,9 @@ schema-project cov
     create field reference_nt_start INTEGER
     create field reference_nt_end INTEGER
     create field num_seqs INTEGER
+    create field parent_feature VARCHAR
+    create field parent_start_codon VARCHAR
+    create field parent_end_codon VARCHAR
     exit
 
   run file glue/m49_countries/m49SchemaExtension.glue

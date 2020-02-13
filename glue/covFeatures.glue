@@ -3,7 +3,7 @@ multi-delete feature -a
 create feature whole_genome "Whole genome"
 feature whole_genome set metatag INFORMATIONAL true
 
-create feature ORF_1a -p whole_genome "ORF 1a"
+create feature ORF_1a -p whole_genome
 feature ORF_1a
   set field displayName "ORF 1a"
   set metatag OWN_CODON_NUMBERING true
@@ -11,7 +11,7 @@ feature ORF_1a
   set metatag CODON_LABELER_MODULE covKuiken2006CodonLabeler
   exit
 
-create feature ORF_1ab -p whole_genome "ORF 1ab"
+create feature ORF_1ab -p whole_genome
 feature ORF_1ab
   set field displayName "ORF 1ab"
   set metatag OWN_CODON_NUMBERING true
@@ -19,7 +19,7 @@ feature ORF_1ab
   set metatag CODON_LABELER_MODULE covKuiken2006CodonLabeler
   exit
 
-create feature NSP1 -p ORF_1a "nsp1"
+create feature NSP1 -p ORF_1a "Leader protein"
 feature NSP1
   set field displayName "nsp1"
   set metatag OWN_CODON_NUMBERING true
@@ -27,7 +27,7 @@ feature NSP1
   set metatag CODON_LABELER_MODULE covKuiken2006CodonLabeler
   exit
 
-create feature NSP2 -p ORF_1a "nsp2"
+create feature NSP2 -p ORF_1a 
 feature NSP2
   set field displayName "nsp2"
   set metatag OWN_CODON_NUMBERING true
@@ -35,7 +35,7 @@ feature NSP2
   set metatag CODON_LABELER_MODULE covKuiken2006CodonLabeler
   exit
 
-create feature NSP3 -p ORF_1a "nsp3"
+create feature NSP3 -p ORF_1a "ADRP, Papain-like proteinase, transmembrane domain 1"
 feature NSP3
   set field displayName "nsp3"
   set metatag OWN_CODON_NUMBERING true
@@ -43,7 +43,7 @@ feature NSP3
   set metatag CODON_LABELER_MODULE covKuiken2006CodonLabeler
   exit
 
-create feature NSP4 -p ORF_1a "nsp4"
+create feature NSP4 -p ORF_1a "Transmembrane domain 2"
 feature NSP4
   set field displayName "nsp4"
   set metatag OWN_CODON_NUMBERING true
@@ -51,7 +51,7 @@ feature NSP4
   set metatag CODON_LABELER_MODULE covKuiken2006CodonLabeler
   exit
 
-create feature NSP5 -p ORF_1a "nsp5"
+create feature NSP5 -p ORF_1a "3C-like proteinase"
 feature NSP5
   set field displayName "nsp5"
   set metatag OWN_CODON_NUMBERING true
@@ -59,7 +59,7 @@ feature NSP5
   set metatag CODON_LABELER_MODULE covKuiken2006CodonLabeler
   exit
 
-create feature NSP6 -p ORF_1a "nsp6"
+create feature NSP6 -p ORF_1a "Putative transmembrane domain"
 feature NSP6
   set field displayName "nsp6"
   set metatag OWN_CODON_NUMBERING true
@@ -67,7 +67,7 @@ feature NSP6
   set metatag CODON_LABELER_MODULE covKuiken2006CodonLabeler
   exit
 
-create feature NSP7 -p ORF_1a "nsp7"
+create feature NSP7 -p ORF_1a 
 feature NSP7
   set field displayName "nsp7"
   set metatag OWN_CODON_NUMBERING true
@@ -75,7 +75,7 @@ feature NSP7
   set metatag CODON_LABELER_MODULE covKuiken2006CodonLabeler
   exit
 
-create feature NSP8 -p ORF_1a "nsp8"
+create feature NSP8 -p ORF_1a "Putative primase"
 feature NSP8
   set field displayName "nsp8"
   set metatag OWN_CODON_NUMBERING true
@@ -83,7 +83,7 @@ feature NSP8
   set metatag CODON_LABELER_MODULE covKuiken2006CodonLabeler
   exit
 
-create feature NSP9 -p ORF_1a "nsp9"
+create feature NSP9 -p ORF_1a "ssRNA-binding protein"
 feature NSP9
   set field displayName "nsp9"
   set metatag OWN_CODON_NUMBERING true
@@ -91,7 +91,7 @@ feature NSP9
   set metatag CODON_LABELER_MODULE covKuiken2006CodonLabeler
   exit
 
-create feature NSP10 -p ORF_1a "nsp10"
+create feature NSP10 -p ORF_1a 
 feature NSP10
   set field displayName "nsp10"
   set metatag OWN_CODON_NUMBERING true
@@ -99,7 +99,7 @@ feature NSP10
   set metatag CODON_LABELER_MODULE covKuiken2006CodonLabeler
   exit
 
-create feature NSP11 -p ORF_1a "nsp11"
+create feature NSP11 -p ORF_1a 
 feature NSP11
   set field displayName "nsp11"
   set metatag OWN_CODON_NUMBERING true
@@ -107,7 +107,7 @@ feature NSP11
   set metatag CODON_LABELER_MODULE covKuiken2006CodonLabeler
   exit
 
-create feature NSP12 -p ORF_1ab "nsp12"
+create feature NSP12 -p ORF_1ab "RNA-dependent RNA polymerase"
 feature NSP12
   set field displayName "nsp12"
   set metatag OWN_CODON_NUMBERING true
@@ -115,7 +115,7 @@ feature NSP12
   set metatag CODON_LABELER_MODULE covKuiken2006CodonLabeler
   exit
 
-create feature NSP13 -p ORF_1ab "nsp13"
+create feature NSP13 -p ORF_1ab "Zinc-binding domain, NTPase/helicase domain"
 feature NSP13
   set field displayName "nsp13"
   set metatag OWN_CODON_NUMBERING true
@@ -123,7 +123,7 @@ feature NSP13
   set metatag CODON_LABELER_MODULE covKuiken2006CodonLabeler
   exit
 
-create feature NSP14 -p ORF_1ab "nsp14"
+create feature NSP14 -p ORF_1ab "Exonuclease"
 feature NSP14
   set field displayName "nsp14"
   set metatag OWN_CODON_NUMBERING true
@@ -131,7 +131,7 @@ feature NSP14
   set metatag CODON_LABELER_MODULE covKuiken2006CodonLabeler
   exit
 
-create feature NSP15 -p ORF_1ab "nsp15"
+create feature NSP15 -p ORF_1ab "EndoRNAse"
 feature NSP15
   set field displayName "nsp15"
   set metatag OWN_CODON_NUMBERING true
@@ -139,7 +139,7 @@ feature NSP15
   set metatag CODON_LABELER_MODULE covKuiken2006CodonLabeler
   exit
 
-create feature NSP16 -p ORF_1ab "nsp16"
+create feature NSP16 -p ORF_1ab "2'-O-ribose methyltransferase"
 feature NSP16
   set field displayName "nsp16"
   set metatag OWN_CODON_NUMBERING true
@@ -155,7 +155,7 @@ feature S
   set metatag CODON_LABELER_MODULE covKuiken2006CodonLabeler
   exit
 
-create feature ORF_3a -p whole_genome "ORF 3a"
+create feature ORF_3a -p whole_genome
 feature ORF_3a
   set field displayName "ORF 3a"
   set metatag OWN_CODON_NUMBERING true
@@ -179,7 +179,7 @@ feature M
   set metatag CODON_LABELER_MODULE covKuiken2006CodonLabeler
   exit
   
-create feature ORF_6 -p whole_genome "ORF 6"
+create feature ORF_6 -p whole_genome
 feature ORF_6
   set field displayName "ORF 6"
   set metatag OWN_CODON_NUMBERING true
@@ -187,7 +187,7 @@ feature ORF_6
   set metatag CODON_LABELER_MODULE covKuiken2006CodonLabeler
   exit
 
-create feature ORF_7a -p whole_genome "ORF 7a"
+create feature ORF_7a -p whole_genome
 feature ORF_7a
   set field displayName "ORF 7a"
   set metatag OWN_CODON_NUMBERING true
@@ -195,7 +195,7 @@ feature ORF_7a
   set metatag CODON_LABELER_MODULE covKuiken2006CodonLabeler
   exit
 
-create feature ORF_7b -p whole_genome "ORF 7b"
+create feature ORF_7b -p whole_genome
 feature ORF_7b
   set field displayName "ORF 7b"
   set metatag OWN_CODON_NUMBERING true
@@ -203,7 +203,7 @@ feature ORF_7b
   set metatag CODON_LABELER_MODULE covKuiken2006CodonLabeler
   exit
 
-create feature ORF_8 -p whole_genome "ORF 8"
+create feature ORF_8 -p whole_genome 
 feature ORF_8
   set field displayName "ORF 8"
   set metatag OWN_CODON_NUMBERING true
@@ -219,7 +219,7 @@ feature N
   set metatag CODON_LABELER_MODULE covKuiken2006CodonLabeler
   exit
   
-create feature ORF_10 -p whole_genome "ORF 10"
+create feature ORF_10 -p whole_genome
 feature ORF_10
   set field displayName "ORF 10"
   set metatag OWN_CODON_NUMBERING true
