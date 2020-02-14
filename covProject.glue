@@ -21,6 +21,12 @@ project cov
   # delete the 2013 bat sequence. Thought it might be useful for outgroup rooting but we're just going to use midpoint rooting for now
   delete sequence -w "sequenceID = 'EPI_ISL_402131'"
 
+  # delete Shenzhen/SZTH-001 Shenzhen/SZTH-004 following NextStrain and various virological.org posts which. 
+  # think they have sequencing errors (e.g. http://virological.org/t/phylodynamic-analysis-90-genomes-12-feb-2020/356/6)
+  # These are on long branches which mucks up midpoint rooting.
+  delete sequence -w "sequenceID = 'EPI_ISL_406592'"
+  delete sequence -w "sequenceID = 'EPI_ISL_406595'"
+
   # delete the following sequences, that have known quality issues mentioned on GISAID
   delete sequence -w "sequenceID = 'EPI_ISL_409027'"
   delete sequence -w "sequenceID = 'EPI_ISL_408978'"
