@@ -21,9 +21,17 @@ project cov
   # delete the 2013 bat sequence. Thought it might be useful for outgroup rooting but we're just going to use midpoint rooting for now
   delete sequence -w "sequenceID = 'EPI_ISL_402131'"
 
-  # delete Shenzhen/SZTH-001 Shenzhen/SZTH-004 following NextStrain. These are on long branches which mucks up midpoint rooting.
-  delete sequence -w "sequenceID = 'EPI_ISL_406592'"
-  delete sequence -w "sequenceID = 'EPI_ISL_406595'"
+  # delete the following sequences, that have known quality issues mentioned on GISAID
+  delete sequence -w "sequenceID = 'EPI_ISL_409027'"
+  delete sequence -w "sequenceID = 'EPI_ISL_408978'"
+  delete sequence -w "sequenceID = 'EPI_ISL_408511'"
+  delete sequence -w "sequenceID = 'EPI_ISL_408512'"
+  delete sequence -w "sequenceID = 'EPI_ISL_408513'"
+  delete sequence -w "sequenceID = 'EPI_ISL_408487'"
+  delete sequence -w "sequenceID = 'EPI_ISL_408485'"
+  delete sequence -w "sequenceID = 'EPI_ISL_408483'"
+  delete sequence -w "sequenceID = 'EPI_ISL_406799'"
+
 
   # Sequence lengths
   run script glue/covSetSequenceLengths.js 
@@ -32,18 +40,16 @@ project cov
   delete sequence -w "length < 24000"
 
   # Unconstrained alignment
-  # the hand edit here corrects the single AA deletion in EPI_ISL_408670. The MAFFT result did not properly codon-align it.
+  # the hand edit here corrects the following deletions which MAFFT did not properly codon-align 
+  # nsp15:227:del in EPI_ISL_408670. 
+  # nsp1:82-86:del in EPI_ISL_410044
+  # 
   module covSimpleFastaAlignmentImporter import AL_GISAID_UNCONSTRAINED -f alignments/AL_GISAID_UNCONSTRAINED_hand_edited.fna 
 
   run file glue/covFeatures.glue
 
   run file glue/covMasterReference.glue
   run script glue/covCheckFeatureLocations.js
-
-  # import phylogeny (outgroup removed)
-  module covPhyloImporter
-    import phylogeny AL_GISAID_UNCONSTRAINED -a -i trees/gisaidMidpointRooted.tree NEWICK_BOOTSTRAPS -f phylogeny
-    exit
 
   # generate replacements
   run script glue/covGenerateGisaidReplacements.js
@@ -55,6 +61,11 @@ project cov
   # insertion detection
   # if any insertions in coding regions are detected at this step, an error is thrown
   run script glue/covDetectGisaidInsertions.js
+
+  # import phylogeny (outgroup removed)
+  module covPhyloImporter
+    import phylogeny AL_GISAID_UNCONSTRAINED -a -i trees/gisaidMidpointRooted.tree NEWICK_BOOTSTRAPS -f phylogeny
+    exit
 
   # Validate
   validate
