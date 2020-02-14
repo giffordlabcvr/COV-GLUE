@@ -21,23 +21,15 @@ project cov
   # delete the 2013 bat sequence. Thought it might be useful for outgroup rooting but we're just going to use midpoint rooting for now
   delete sequence -w "sequenceID = 'EPI_ISL_402131'"
 
-  # delete EPI_ISL_406592, Shenzhen/SZTH-001 Shenzhen/SZTH-004 following NextStrain. These are on long branches which mucks up midpoint rooting.
+  # delete Shenzhen/SZTH-001 Shenzhen/SZTH-004 following NextStrain. These are on long branches which mucks up midpoint rooting.
   delete sequence -w "sequenceID = 'EPI_ISL_406592'"
   delete sequence -w "sequenceID = 'EPI_ISL_406595'"
 
-  # delete EPI_ISL_402126, from Japan following NextStrain. Subgenomic.
-  delete sequence -w "sequenceID = 'EPI_ISL_402126'"
-
-  # delete EPI_ISL_406959, EPI_ISL_406960, EPI_ISL_408068 from Italy. Subgenomic.
-  delete sequence -w "sequenceID = 'EPI_ISL_406959'"
-  delete sequence -w "sequenceID = 'EPI_ISL_406960'"
-  delete sequence -w "sequenceID = 'EPI_ISL_408068'"
-
-  # delete EPI_ISL_408975 from Hong Kong. Subgenomic.
-  delete sequence -w "sequenceID = 'EPI_ISL_408975'"
-
   # Sequence lengths
   run script glue/covSetSequenceLengths.js 
+
+  # delete subgenomic.
+  delete sequence -w "length < 24000"
 
   # Unconstrained alignment
   # the hand edit here corrects the single AA deletion in EPI_ISL_408670. The MAFFT result did not properly codon-align it.
