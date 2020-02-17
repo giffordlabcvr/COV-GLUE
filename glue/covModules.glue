@@ -35,6 +35,8 @@ create module --fileName modules/covTreeVisualisationLegendTransformer.xml --loa
 create module --fileName modules/covTreeVisualisationTransformer.xml --loadResources
 create module --fileName modules/covTreeVisualiser.xml
 create module --fileName modules/covFastaProteinAlignmentExporter.xml
+create module --fileName modules/covFastaProteinAlignmentExporterSeqIdOnly.xml
+create module --fileName modules/covFastaAlignmentExporterSeqIdOnly.xml
 
 create module --fileName modules/covReplacementRenderer.xml --loadResources
 create module --fileName modules/covListReplacementsRenderer.xml --loadResources
