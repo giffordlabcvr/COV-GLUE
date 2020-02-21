@@ -7,6 +7,11 @@ reference REF_MASTER_WUHAN_HU_1
   feature-location whole_genome
     add segment 1 29903
     exit
+
+  add feature-location 5UTR
+  feature-location 5UTR
+	add segment 1 265
+	exit
     
   add feature-location ORF_1ab
   feature-location ORF_1ab

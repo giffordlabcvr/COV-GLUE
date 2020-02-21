@@ -3,6 +3,9 @@ multi-delete feature -a
 create feature whole_genome "Whole genome"
 feature whole_genome set metatag INFORMATIONAL true
 
+create feature 5UTR -p whole_genome "5' untranslated region"
+feature 5UTR set field displayName "5' UTR"
+
 create feature ORF_1a -p whole_genome
 feature ORF_1a
   set field displayName "ORF 1a"
