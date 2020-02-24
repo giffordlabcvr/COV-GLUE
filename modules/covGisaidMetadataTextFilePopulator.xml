@@ -100,4 +100,16 @@
 		<matchPattern>\d\d\d\d-\d\d-(\d\d)</matchPattern>
 		<outputTemplate>${g1}</outputTemplate>
 	</textFileColumn>
+	<textFileColumn>
+		<header>Originating lab</header>
+		<property>originating_lab</property>
+	</textFileColumn>
+	<textFileColumn>
+		<header>Submitting lab</header>
+		<property>submitting_lab</property>
+	</textFileColumn>
+	<textFileColumn>
+		<header>Authors</header>
+		<property>authors</property>
+	</textFileColumn>
 </textFilePopulator>

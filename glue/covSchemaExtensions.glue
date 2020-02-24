@@ -14,6 +14,10 @@ schema-project cov
     create field collection_month_day INTEGER
     create field host_species VARCHAR 100
     create field place_sampled VARCHAR 100
+    create field isolation_source VARCHAR 100
+    create field originating_lab VARCHAR 300
+    create field submitting_lab VARCHAR 300
+    create field authors VARCHAR 500
     exit
 
   table feature
