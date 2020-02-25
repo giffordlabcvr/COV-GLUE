@@ -16,7 +16,10 @@ project cov
   module covGisaidFastaImporter import -f sequences/gisaid_cov2020_sequences.fasta
  
   # Metadata
+  # have to temporarily change result format to avoid bug in table rendering library.
+  console set cmd-result-format tab
   module covGisaidMetadataTextFilePopulator populate --fileName tabular/gisaid_metadata.txt 
+  console unset cmd-result-format
 
   # delete the 2013 bat sequence. Thought it might be useful for outgroup rooting but we're just going to use midpoint rooting for now
   delete sequence -w "sequenceID = 'EPI_ISL_402131'"
