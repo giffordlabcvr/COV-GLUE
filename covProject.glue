@@ -28,7 +28,7 @@ project cov
   delete sequence -w "isolate like '%pangolin%'"
 
   # delete Shenzhen/SZTH-001 Shenzhen/SZTH-004 following NextStrain and various virological.org posts which. 
-  # think they have sequencing errors (e.g. http://virological.org/t/phylodynamic-analysis-90-genomes-12-feb-2020/356/6)
+  # think they have sequencing errors (e.g. http://virological.org/t/phylodynamic-analysis-129-genomes-24-feb-2020/356/4)
   # These are on long branches which mucks up midpoint rooting.
   delete sequence -w "sequenceID = 'EPI_ISL_406592'"
   delete sequence -w "sequenceID = 'EPI_ISL_406595'"
