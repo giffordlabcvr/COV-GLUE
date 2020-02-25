@@ -1,4 +1,3 @@
-run file covProject.glue
 project cov 
   run file glue/covRegenerateGisaidAlignment.glue
   run file glue/covGeneratePhylogeny.glue
