@@ -149,7 +149,7 @@ task wipeCovGlueDB(type: Exec) {
 task buildCovGlueDB(type: JavaExec, dependsOn: 'copyGluetoolsJar') {
 	classpath "build/runtimeJars/gluetools-core.jar"
 	main 'uk.ac.gla.cvr.gluetools.core.console.Console'
-	args '-c', glueConfigFile, '-i', 'run', 'file', 'covProject.glue'
+	args '-c', glueConfigFile, '-E', '-i', 'run', 'file', 'covProject.glue'
 }
 
 task dumpCovGlueDB(type: Exec, dependsOn: 'buildCovGlueDB') {
