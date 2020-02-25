@@ -25,7 +25,7 @@ project cov
   delete sequence -w "isolate like '%HB-env%'"
 
   # delete the pangolin sequences
-  delete sequence -w "isolate like '%HBpangolin%'"
+  delete sequence -w "isolate like '%pangolin%'"
 
   # delete Shenzhen/SZTH-001 Shenzhen/SZTH-004 following NextStrain and various virological.org posts which. 
   # think they have sequencing errors (e.g. http://virological.org/t/phylodynamic-analysis-90-genomes-12-feb-2020/356/6)
@@ -51,7 +51,7 @@ project cov
   # nsp15:227:del in EPI_ISL_408670. 
   # nsp1:82-86:del in EPI_ISL_410044
   # 
-  module covSimpleFastaAlignmentImporter import AL_GISAID_UNCONSTRAINED -f alignments/AL_GISAID_UNCONSTRAINED_hand_edited.fna 
+  module covSimpleFastaAlignmentImporter import AL_GISAID_UNCONSTRAINED -f alignments/AL_GISAID_UNCONSTRAINED.fna 
 
   run file glue/covFeatures.glue
 
