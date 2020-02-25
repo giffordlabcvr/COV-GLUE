@@ -46,17 +46,35 @@ project cov
   # delete subgenomic.
   delete sequence -w "length < 24000"
 
-  # Unconstrained alignment
-  # the hand edit here corrects the following deletions which MAFFT did not properly codon-align 
-  # nsp15:227:del in EPI_ISL_408670. 
-  # nsp1:82-86:del in EPI_ISL_410044
-  # 
-  module covSimpleFastaAlignmentImporter import AL_GISAID_UNCONSTRAINED -f alignments/AL_GISAID_UNCONSTRAINED.fna 
-
   run file glue/covFeatures.glue
 
   run file glue/covMasterReference.glue
   run script glue/covCheckFeatureLocations.js
+
+  # Unconstrained alignment
+  module covSimpleFastaAlignmentImporter import AL_GISAID_UNCONSTRAINED -f alignments/AL_GISAID_UNCONSTRAINED.fna 
+
+  # there are deletions which MAFFT did not properly codon-align 
+  # nsp15:227:del in EPI_ISL_408670. 
+  # nsp1:82-86:del in EPI_ISL_410044
+  # for these sequences we will do a codon-aware constrained alignment then derive segments back to the unconstrained alignment.
+  alignment AL_GISAID_UNCONSTRAINED
+    member cov-gisaid EPI_ISL_408670 remove segment -a
+    member cov-gisaid EPI_ISL_410044 remove segment -a
+    exit
+
+  create alignment AL_GISAID_CONSTRAINED -r REF_MASTER_WUHAN_HU_1 
+  alignment AL_GISAID_CONSTRAINED 
+    add member cov-gisaid EPI_ISL_408670
+    add member cov-gisaid EPI_ISL_410044
+    exit
+
+  compute alignment AL_GISAID_CONSTRAINED covCompoundAligner
+
+  alignment AL_GISAID_UNCONSTRAINED
+    derive segments AL_GISAID_CONSTRAINED -w "sequence.sequenceID = 'EPI_ISL_408670'"
+    derive segments AL_GISAID_CONSTRAINED -w "sequence.sequenceID = 'EPI_ISL_410044'"
+    exit
 
   # generate replacements
   run script glue/covGenerateGisaidReplacements.js
