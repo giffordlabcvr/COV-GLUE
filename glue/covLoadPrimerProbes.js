@@ -1,0 +1,108 @@
+glue.command(["multi-unset", "link-target", "cov_primer_probe", "-a", "cov_primer_probe_assay"]);
+glue.command(["multi-unset", "link-target", "cov_primer_probe", "-a", "seq_match"]);
+glue.command(["multi-delete", "cov_primer_probe", "-a"]);
+glue.command(["multi-delete", "cov_primer_probe_assay", "-a"]);
+glue.command(["multi-delete", "variation", "-w", "name like '%cov_pp_seq_match_anywhere%'"]);
+
+var ppObjs;
+
+var ntCharToSubChars = {
+    "A": ["A"],
+	"C": ["C"],
+	"G": ["G"],
+	"T": ["T"],
+	"R": ["A", "G"],
+	"Y": ["C", "T"],
+	"K": ["G", "T"],
+	"M": ["A", "C"],
+	"S": ["C", "G"],
+	"W": ["A", "T"],
+	"B": ["C", "G", "T"],
+	"D": ["A", "G", "T"],
+	"H": ["A", "C", "T"],
+	"V": ["A", "C", "G"],
+	"N": ["A", "C", "G", "T"]
+}
+
+var ntCharToRegex = {};
+
+_.each(_.pairs(ntCharToSubChars), function(pair) {
+	var ntChar = pair[0];
+	var subChars = pair[1];
+	var regex;
+	if(subChars.length == 1) {
+		regex = ntChar;
+	} else {
+		var fullSubChars = subChars.slice(); // copy array
+		_.each(_.pairs(ntCharToSubChars), function(pair2) {
+			if(_.difference(pair2[1], subChars).length == 0 && fullSubChars.indexOf(pair2[0]) < 0) {
+				fullSubChars.push(pair2[0]);
+			}
+		});
+		regex = "["+fullSubChars.join("")+"]";
+	}
+	ntCharToRegex[ntChar] = regex;
+});
+
+glue.inMode("module/tabularUtilityTab", function() {
+	ppObjs = glue.tableToObjects(glue.command(["load-tabular", "tabular/faria_probes_primers/Primers_probes.txt"]));
+});
+
+
+_.each(ppObjs, function(ppObj) {
+	var assayID = ppObj["Assay"].trim().replace(" ", "_");
+	if(assayID == "See_note") {return;}
+ 	var createResult = glue.command(["create", "custom-table-row", 
+ 		"--allowExisting", "cov_primer_probe_assay", assayID]);
+ 	if(createResult.okResult.number != 0) {
+ 		glue.inMode("custom-table-row/cov_primer_probe_assay/"+assayID, function() {
+ 			glue.command(["set", "field", "display_name", ppObj["Assay"].trim()]);
+ 			var organisation = ppObj["Organisation"];
+ 			if(assayID.indexOf("HKU") == 0) {
+ 				organisation = organisation + " (HKU)";
+ 			}
+ 			glue.command(["set", "field", "organisation", organisation.trim()]);
+ 			glue.command(["set", "field", "url", ppObj["Reference"].trim()]);
+ 		}); 	 	
+ 	}
+ 	var ppID = ppObj["Name_primer_or_probe"].trim().replace(" ", "_");
+ 	glue.logInfo("Loading primer/probe "+ppID);
+ 	glue.command(["create", "custom-table-row", "cov_primer_probe", ppID]);
+	var rawSequence = ppObj["Sequence"].trim();
+	var processedSequence = processRawSequence(rawSequence);
+ 	glue.inMode("custom-table-row/cov_primer_probe/"+ppID, function() {
+ 		glue.command(["set", "field", "display_name", ppObj["Name_primer_or_probe"].trim()]);
+ 		glue.command(["set", "field", "sequence", processedSequence]);
+ 		glue.command(["set", "link-target", "cov_primer_probe_assay", "custom-table-row/cov_primer_probe_assay/"+assayID]);
+ 	});
+ 	var variationName = "cov_pp_seq_match_anywhere:"+ppID;
+	glue.inMode("reference/REF_MASTER_WUHAN_HU_1/feature-location/whole_genome", function() {
+		glue.command(["create", "variation", variationName, 
+			"-t", "nucleotideRegexPolymorphism", 
+			"--nucleotide", 1, 29903]);
+		var seqRegex = "";
+		for(var i = 0; i < processedSequence.length; i++) {
+			seqRegex += ntCharToRegex[processedSequence[i]];
+		}
+		glue.inMode("variation/"+variationName, function() {
+			glue.command(["set", "metatag", "REGEX_NT_PATTERN", seqRegex]);
+		});
+	});
+});
+
+function processRawSequence(rawSequence) {
+	var processedSequence = rawSequence.replaceAll(" ", "");
+	processedSequence = processedSequence.replaceAll("6FAM-", "");
+	processedSequence = processedSequence.replaceAll("FAM-", "");
+	processedSequence = processedSequence.replaceAll("-BBQ", "");
+	processedSequence = processedSequence.replaceAll("-BHQ1", "");
+	processedSequence = processedSequence.replaceAll("-BQH1", "");
+	processedSequence = processedSequence.replaceAll("-BHQ", "");
+	processedSequence = processedSequence.replaceAll("-TAMRA", "");
+	for(i = 0; i < processedSequence.length; i++) {
+		if("ACGTRYKMSWBDHVN".indexOf(processedSequence[i]) < 0) {
+			throw new Error("Unrecognised sequence char '"+processedSequence[i]+"'");
+		}
+	}
+	return processedSequence;
+}

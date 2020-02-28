@@ -6,6 +6,9 @@ schema-project cov
   create custom-table cov_deletion
   create custom-table cov_deletion_sequence
 
+  create custom-table cov_primer_probe_assay
+  create custom-table cov_primer_probe
+
   table sequence
     create field length INTEGER
     create field isolate VARCHAR
@@ -61,6 +64,19 @@ schema-project cov
     create field parent_end_codon VARCHAR
     exit
 
+
+
+  table cov_primer_probe_assay
+    create field display_name VARCHAR 100
+    create field organisation VARCHAR 200
+    create field url VARCHAR 300
+    exit
+
+  table cov_primer_probe
+    create field display_name VARCHAR 100
+    create field sequence VARCHAR 100
+    exit
+
   run file glue/m49_countries/m49SchemaExtension.glue
  
   create link sequence m49_country -m MANY_TO_ONE
@@ -72,6 +88,9 @@ schema-project cov
   create link variation cov_deletion -m ONE_TO_ONE
   create link cov_deletion cov_deletion_sequence -m ONE_TO_MANY
   create link sequence cov_deletion_sequence -m ONE_TO_MANY
-   
+  
+  create link cov_primer_probe cov_primer_probe_assay -m MANY_TO_ONE
+  
+  create link cov_primer_probe -s seq_match variation -d cov_pp_seq_match -m ONE_TO_ONE
   
   exit
