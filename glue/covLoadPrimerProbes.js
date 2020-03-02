@@ -69,26 +69,39 @@ _.each(ppObjs, function(ppObj) {
  	glue.logInfo("Loading primer/probe "+ppID);
  	glue.command(["create", "custom-table-row", "cov_primer_probe", ppID]);
 	var rawSequence = ppObj["Sequence"].trim();
-	var processedSequence = processRawSequence(rawSequence);
+	var processedSequenceFwd = processRawSequence(rawSequence);
+	var processedSequenceRev;
+	glue.inMode("module/covFastaUtility", function() {
+		processedSequenceRev = glue.command(["reverse-complement", "string", "--fastaString", processedSequenceFwd]).reverseComplementFastaResult.reverseComplement;
+	});
+	
  	glue.inMode("custom-table-row/cov_primer_probe/"+ppID, function() {
  		glue.command(["set", "field", "display_name", ppObj["Name_primer_or_probe"].trim()]);
- 		glue.command(["set", "field", "sequence", processedSequence]);
+ 		glue.command(["set", "field", "sequence_fwd", processedSequenceFwd]);
+ 		glue.command(["set", "field", "sequence_rev", processedSequenceRev]);
  		glue.command(["set", "link-target", "cov_primer_probe_assay", "custom-table-row/cov_primer_probe_assay/"+assayID]);
  	});
- 	var variationName = "cov_pp_seq_match_anywhere:"+ppID;
+ 	var fwdVariationName = "cov_pp_seq_match_anywhere_fwd:"+ppID;
+ 	var revVariationName = "cov_pp_seq_match_anywhere_rev:"+ppID;
 	glue.inMode("reference/REF_MASTER_WUHAN_HU_1/feature-location/whole_genome", function() {
-		glue.command(["create", "variation", variationName, 
-			"-t", "nucleotideRegexPolymorphism", 
-			"--nucleotide", 1, 29903]);
-		var seqRegex = "";
-		for(var i = 0; i < processedSequence.length; i++) {
-			seqRegex += ntCharToRegex[processedSequence[i]];
-		}
-		glue.inMode("variation/"+variationName, function() {
-			glue.command(["set", "metatag", "REGEX_NT_PATTERN", seqRegex]);
+		glue.command(["create", "variation", fwdVariationName, "-t", "nucleotideRegexPolymorphism", "--nucleotide", 1, 29903]);
+		glue.inMode("variation/"+fwdVariationName, function() {
+			glue.command(["set", "metatag", "REGEX_NT_PATTERN", sequenceToRegex(processedSequenceFwd)]);
+		});
+		glue.command(["create", "variation", revVariationName, "-t", "nucleotideRegexPolymorphism", "--nucleotide", 1, 29903]);
+		glue.inMode("variation/"+revVariationName, function() {
+			glue.command(["set", "metatag", "REGEX_NT_PATTERN", sequenceToRegex(processedSequenceRev)]);
 		});
 	});
 });
+
+function sequenceToRegex(sequence) {
+	var seqRegex = "";
+	for(var i = 0; i < sequence.length; i++) {
+		seqRegex += ntCharToRegex[sequence[i]];
+	}
+	return seqRegex;
+}
 
 function processRawSequence(rawSequence) {
 	var processedSequence = rawSequence.replaceAll(" ", "");

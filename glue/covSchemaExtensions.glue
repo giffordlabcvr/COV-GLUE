@@ -74,7 +74,8 @@ schema-project cov
 
   table cov_primer_probe
     create field display_name VARCHAR 100
-    create field sequence VARCHAR 100
+    create field sequence_fwd VARCHAR 100
+    create field sequence_rev VARCHAR 100
     exit
 
   run file glue/m49_countries/m49SchemaExtension.glue
