@@ -36,12 +36,16 @@ project cov
   delete sequence -w "sequenceID = 'EPI_ISL_406592'"
   delete sequence -w "sequenceID = 'EPI_ISL_406595'"
 
-  # delete the following sequences, that have known quality issues mentioned on GISAID
+  # delete the following full length human sequences, 
+  # that have known quality issues mentioned on GISAID
   delete sequence -w "sequenceID = 'EPI_ISL_408487'"
   delete sequence -w "sequenceID = 'EPI_ISL_408485'"
   delete sequence -w "sequenceID = 'EPI_ISL_408483'"
   delete sequence -w "sequenceID = 'EPI_ISL_408978'"
+  delete sequence -w "sequenceID = 'EPI_ISL_412971'"
   delete sequence -w "sequenceID = 'EPI_ISL_406799'"
+  delete sequence -w "sequenceID = 'EPI_ISL_412964'"
+  delete sequence -w "sequenceID = 'EPI_ISL_412900'"
 
   # Sequence lengths
   run script glue/covSetSequenceLengths.js 
