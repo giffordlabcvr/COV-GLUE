@@ -1,0 +1,19 @@
+# import it so it can be rerooted  
+module covPhyloImporter
+  import phylogeny AL_GISAID_UNCONSTRAINED -a -i trees/gisaidUnconstrainedUnrooted.tree NEWICK_BOOTSTRAPS -f phylogeny
+  exit
+
+# Note, 2013 bat virus was previously used as outgroup but this did not look super accurate.   
+  
+# reroot using midpoint rooting, this was used as the reference phylogeny up until 3rd March 2020
+module covPhyloUtility
+  reroot-alignment-phylogeny AL_GISAID_UNCONSTRAINED phylogeny -m \
+    -o trees/gisaidMidpointRooted.tree NEWICK_BOOTSTRAPS
+  exit
+  
+# reroot using Wuhan-Hu-1 as outgroup: started using this alternative rooting 3rd March 2020 due to a number of sequences on long branches.
+module covPhyloUtility
+  reroot-alignment-phylogeny AL_GISAID_UNCONSTRAINED phylogeny -w "sequence.source.name = 'cov-gisaid' and sequence.sequenceID = 'EPI_ISL_402125'" \
+    -o trees/gisaidOutgroupRooted.tree NEWICK_BOOTSTRAPS
+  exit
+  

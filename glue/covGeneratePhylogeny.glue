@@ -3,15 +3,3 @@ module covRaxmlPhylogenyGenerator
   generate nucleotide phylogeny AL_GISAID_UNCONSTRAINED -a -o trees/gisaidUnconstrainedUnrooted.tree NEWICK_BOOTSTRAPS
   exit
 
-# import it so it can be rerooted  
-module covPhyloImporter
-  import phylogeny AL_GISAID_UNCONSTRAINED -a -i trees/gisaidUnconstrainedUnrooted.tree NEWICK_BOOTSTRAPS -f phylogeny
-  exit
-  
-# reroot using midpoint rooting
-# 2013 bat virus was previously used as outgroup but this did not look super accurate.   
-module covPhyloUtility
-  reroot-alignment-phylogeny AL_GISAID_UNCONSTRAINED phylogeny -m \
-    -o trees/gisaidMidpointRooted.tree NEWICK_BOOTSTRAPS
-  exit
-  

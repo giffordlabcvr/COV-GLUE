@@ -94,9 +94,9 @@ project cov
   # if any insertions in coding regions are detected at this step, an error is thrown
   run script glue/covDetectGisaidInsertions.js
 
-  # import phylogeny (outgroup removed)
+  # import phylogeny
   module covPhyloImporter
-    import phylogeny AL_GISAID_UNCONSTRAINED -a -i trees/gisaidMidpointRooted.tree NEWICK_BOOTSTRAPS -f phylogeny
+    import phylogeny AL_GISAID_UNCONSTRAINED -a -i trees/gisaidOutgroupRooted.tree NEWICK_BOOTSTRAPS -f phylogeny
     exit
 
   # Validate
