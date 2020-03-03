@@ -4,4 +4,5 @@
 	<idParser>
 		<matchPattern>(EPI_ISL_\d+)</matchPattern>
 	</idParser>
+	<convertHyphensToNs>true</convertHyphensToNs>
 </fastaImporter>
