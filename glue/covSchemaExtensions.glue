@@ -74,8 +74,27 @@ schema-project cov
 
   table cov_primer_probe
     create field display_name VARCHAR 100
+    # sequence listed in table
     create field sequence_fwd VARCHAR 100
+    # regex allowing for ambig codes
+    create field sequence_fwd_regex VARCHAR 100
+    # reverse complement of sequence_fwd
     create field sequence_rev VARCHAR 100
+    # regex allowing for ambig codes
+    create field sequence_rev_regex VARCHAR 100
+    # number of hits of fwd / reverse regex on reference sequence Wuhan-Hu-1. 
+    # Should be 1 ideally, otherwise there is something wrong with the primer/probe definition
+    create field ref_hits INTEGER
+    # sequence as it would appear in a forward oriented genome, null unless ref_hits == 1
+    create field sequence_to_scan VARCHAR 100
+    # true if sequence_fwd == sequence_to_scan, null unless ref_hits == 1
+    create field fwd_orientation BOOLEAN
+    # coordinates on reference sequence Wuhan-Hu-1, null unless ref_hits == 1
+    create field ref_start INTEGER
+    create field ref_end INTEGER
+    # length of sequence_to_scan, null unless ref_hits == 1
+    create field length INTEGER
+    
     exit
 
   run file glue/m49_countries/m49SchemaExtension.glue

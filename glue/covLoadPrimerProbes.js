@@ -75,10 +75,15 @@ _.each(ppObjs, function(ppObj) {
 		processedSequenceRev = glue.command(["reverse-complement", "string", "--fastaString", processedSequenceFwd]).reverseComplementFastaResult.reverseComplement;
 	});
 	
+	var sequenceFwdRegex = sequenceToRegex(processedSequenceFwd);
+	var sequenceRevRegex = sequenceToRegex(processedSequenceRev);
+	
  	glue.inMode("custom-table-row/cov_primer_probe/"+ppID, function() {
  		glue.command(["set", "field", "display_name", ppObj["Name_primer_or_probe"].trim()]);
  		glue.command(["set", "field", "sequence_fwd", processedSequenceFwd]);
+ 		glue.command(["set", "field", "sequence_fwd_regex", sequenceFwdRegex]);
  		glue.command(["set", "field", "sequence_rev", processedSequenceRev]);
+ 		glue.command(["set", "field", "sequence_rev_regex", sequenceRevRegex]);
  		glue.command(["set", "link-target", "cov_primer_probe_assay", "custom-table-row/cov_primer_probe_assay/"+assayID]);
  	});
  	var fwdVariationName = "cov_pp_seq_match_anywhere_fwd:"+ppID;
@@ -86,14 +91,53 @@ _.each(ppObjs, function(ppObj) {
 	glue.inMode("reference/REF_MASTER_WUHAN_HU_1/feature-location/whole_genome", function() {
 		glue.command(["create", "variation", fwdVariationName, "-t", "nucleotideRegexPolymorphism", "--nucleotide", 1, 29903]);
 		glue.inMode("variation/"+fwdVariationName, function() {
-			glue.command(["set", "metatag", "REGEX_NT_PATTERN", sequenceToRegex(processedSequenceFwd)]);
+			glue.command(["set", "metatag", "REGEX_NT_PATTERN", sequenceFwdRegex]);
 		});
 		glue.command(["create", "variation", revVariationName, "-t", "nucleotideRegexPolymorphism", "--nucleotide", 1, 29903]);
 		glue.inMode("variation/"+revVariationName, function() {
 			glue.command(["set", "metatag", "REGEX_NT_PATTERN", sequenceToRegex(processedSequenceRev)]);
 		});
 	});
+	var fwdHitObjs;
+	var revHitObjs;
+	glue.inMode("alignment/AL_GISAID_UNCONSTRAINED/member/cov-gisaid/EPI_ISL_402125", function() {
+		fwdHitObjs = glue.tableToObjects(glue.command(["variation", "scan", 
+			"-r", "REF_MASTER_WUHAN_HU_1", "-f", "whole_genome", 
+			"--whereClause", "name = '"+fwdVariationName+"'", "--showMatchesAsTable"]));
+		revHitObjs = glue.tableToObjects(glue.command(["variation", "scan", 
+			"-r", "REF_MASTER_WUHAN_HU_1", "-f", "whole_genome", 
+			"--whereClause", "name = '"+revVariationName+"'", "--showMatchesAsTable"]));
+	});
+ 	glue.inMode("custom-table-row/cov_primer_probe/"+ppID, function() {
+ 		var refHits = fwdHitObjs.length + revHitObjs.length;
+ 		glue.command(["set", "field", "ref_hits", refHits]);
+ 		if(refHits == 1) {
+ 			if(fwdHitObjs.length == 1) {
+ 	 	 		glue.command(["set", "field", "sequence_to_scan", processedSequenceFwd]);
+ 	 	 		glue.command(["set", "field", "fwd_orientation", true]);
+ 	 	 		glue.command(["set", "field", "ref_start", fwdHitObjs[0].queryNtStart]);
+ 	 	 		glue.command(["set", "field", "ref_end", fwdHitObjs[0].queryNtEnd]);
+ 	 	 		glue.command(["set", "field", "length", processedSequenceFwd.length]);
+ 			} else {
+ 	 	 		glue.command(["set", "field", "sequence_to_scan", processedSequenceRev]);
+ 	 	 		glue.command(["set", "field", "fwd_orientation", false]);
+ 	 	 		glue.command(["set", "field", "ref_start", revHitObjs[0].queryNtStart]);
+ 	 	 		glue.command(["set", "field", "ref_end", revHitObjs[0].queryNtEnd]);
+ 	 	 		glue.command(["set", "field", "length", processedSequenceRev.length]);
+ 			}
+ 			
+ 		}
+ 	});
+
 });
+
+/*
+ 
+ wuhan-hu-1 for testing
+ 
+TCAGCTGATGCACAATCGTTTTTAAACGGGTTTGCGGTGTAAGTGCAGCCCGTCTTACACCGTGCGGCACAGGCACTAGTACTGATGTCGTATACAGGGCTTTTGACATCTACAATGATAAAGTAGCTGGTTTTGCTAAATTCCTAAAAACTAATTGTTGTCGCTTCCAAGAAAAGGACGAAGATGACAATTTAATTGATTCTTACTTTGTAGTTAAGAGACACACTTTCTCTAACTACCAACATGAAGAAACAATTTATAATTTACTTAAGGATTGTCCAGCTGTTGCTAAACATGACTTCTTTAAGTTTAGAATAGACGGTGACATGGTACCACATATATCACGTCAACGTCTTACTAAATACACAATGGCAGACCTCGTCTATGCTTTAAGGCATTTTGATGAAGGTAATTGTGACACATTAAAAGAAATACTTGTCACATACAATTGTTGTGATGATGATTATTTCAATAAAAAGGACTGGTATGATTTTGTAGAAAACCCAGATATATTACGCGTATACGCCAACTTAGGTGAACGTGTACGCCAAGCTTTGTTAAAAACAGTACAATTCTGTGATGCCATGCGAAATGCTGGTATTGTTGGTGTACTGACATTAGATAATCAAGATCTCAATGGTAACTGGTATGATTTCGGTGATTTCATACAAACCACGCCAGGTAGTGGAGTTCCTGTTGTAGATTCTTATTATTCATTGTTAATGCCTATATTAACCTTGACCAGGGCTTTAACTGCAGAGTCACATGTTGACACTGACTTAACAAAGCCTTACATTAAGTGGGATTTGTTAAAATATGACTTCACGGAAGAGAGGTTAAAACTCTTTGACCGTTATTTTAAATATTGGGATCAGACATACCACCCAAATTGTGTTAACTGTTTGGATGACAGATGCATTCTGCATTGTGCAAACTTTAATGTTTTATTCTCTACAGTGTTCCCACCTACAAGTTTTGGACCACTAGTGAGAAAAATATTTGTTGATGGTGTTCCATTTGTAGTTTCAACTGGATACCACTTCAGAGAGCTAGGTGTTGTACATAATCAGGATGTAAACTTACATAGCTCTAGACTTAGTTTTAAGGAATTACTTGTGTATGCTGCTGACCCTGCTATGCACGCTGCTTCTGGTAATCTATTACTAGATAAACGCACTACGTGCTTTTCAGTAGCTGCACTTACTAACAATGTTGCTTTTCAAACTGTCAAACCCGGTAATTTTAACAAAGACTTCTATGACTTTGCTGTGTCTAAGGGTTTCTTTAAGGAAGGAAGTTCTGTTGAATTAAAACACTTCTTCTTTGCTCAGGATGGTAATGCTGCTATCAGCGATTATGACTACTATCGTTATAATCTACCAACAATGTGTGATATCAGACAACTACTATTTGTAGTTGAAGTTGTTGATAAGTACTTTGATTGTTACGATGGTGGCTGTATTAATGCTAACCAAGTCATCGTCAACAACCTAGACAAATCAGCTGGTTTTCCATTTAATAAATGGGGTAAGGCTAGACTTTATTATGATTCAATGAGTTATGAGGATCAAGATGCACTTTTCGCATATACAAAACGTAATGTCATCCCTACTATAACTCAAATGAATCTTAAGTATGCCATTAGTGCAAAGAATAGAGCTCGCACCGTAGCTGGTGTCTCTATCTGTAGTACTATGACCAATAGACAGTTTCATCAAAAATTATTGAAATCAATAGCCGCCACTAGAGGAGCTACTGTAGTAATTGGAACAAGCAAATTCTATGGTGGTTGGCACAACATGTTAAAAACTGTTTATAGTGATGTAGAAAACCCTCACCTTATGGGTTGGGATTATCCTAAATGTGATAGAGCCATGCCTAACATGCTTAGAATTATGGCCTCACTTGTTCTTGCTCGCAAACATACAACGTGTTGTAGCTTGTCACACCGTTTCTATAGATTAGCTAATGAGTGTGCTCAAGTATTGAGTGAAATGGTCATGTGTGGCGGTTCACTATATGTTAAACCAGGTGGAACCTCATCAGGAGATGCCACAACTGCTTATGCTAATAGTGTTTTTAACATTTGTCAAGCTGTCACGGCCAATGTTAATGCACTTTTATCTACTGATGGTAACAAAATTGCCGATAAGTATGTCCGCAATTTACAACACAGACTTTATGAGTGTCTCTATAGAAATAGAGATGTTGACACAGACTTTGTGAATGAGTTTTACGCATATTTGCGTAAACATTTCTCAATGATGATACTCTCTGACGATGCTGTTGTGTGTTTCAATAGCACTTATGCATCTCAAGGTCTAGTGGCTAGCATAAAGAACTTTAAGTCAGTTCTTTATTATCAAAACAATGTTTTTATGTCTGAAGCAAAATGTTGGACTGAGACTGACCTTACTAAAGGACCTCATGAATTTTGCTCTCAACATACAATGCTAGTTAAACAGGGTGATGATTATGTGTACCTTCCTTACCCAGATCCATCAAGAATCCTAGGGGCCGGCTGTTTTGTAGATGATATCGTAAAAACAGATGGTACACTTATGATTGAACGGTTCGTGTCTTTAGCTATAGATGCTTACCCACTTACTAAACATCCTAATCAGGAGTATGCTGATGTCTTTCATTTGTACTTACAATACATAAGAAAGCTACATGATGAGTTAACAGGACACATGTTAGACATGTATTCTGTTATGCTTACTAATGATAACACTTCAAGGTATTGGGAACCTGAGTTTTATGAGGCTATGTACACACCGCATACAGTCTTACAG
+
+*/
 
 function sequenceToRegex(sequence) {
 	var seqRegex = "";
