@@ -4,6 +4,7 @@ run file glue/covInitProject.glue
 
 project cov
   run file glue/covRegenerateGisaidAlignment.glue
+  run script glue/covSetIsLLinneage.js
   run file glue/covGeneratePhylogeny.glue
   run file glue/covRerootPhylogeny.glue
   exit

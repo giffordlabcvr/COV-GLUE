@@ -9,18 +9,16 @@ module covPhyloUtility
     -o trees/gisaidMidpointRooted.tree NEWICK_BOOTSTRAPS
   exit
   
-# reroot using RaTG13 as outgroup
+# reroot using L lineage (ORF8 L84S) as outgroup
 module covPhyloUtility
   reroot-alignment-phylogeny AL_GISAID_UNCONSTRAINED phylogeny \
-    -w "sequence.source.name = 'cov-gisaid' and sequence.sequenceID = 'EPI_ISL_402131'" \
-    --removeOutgroup \
+    -w "sequence.include_in_ref_tree = true and sequence.is_l_lineage = true" \
     -o trees/gisaidOutgroupRooted.tree NEWICK_BOOTSTRAPS
   exit
 
 # import it so it can be exported to display tree  
 module covPhyloImporter
-  import phylogeny AL_GISAID_UNCONSTRAINED -w "sequence.sequenceID != 'EPI_ISL_402131'" -i trees/gisaidOutgroupRooted.tree NEWICK_BOOTSTRAPS -f phylogeny
-  # import phylogeny AL_GISAID_UNCONSTRAINED -a -i trees/gisaidOutgroupRooted.tree NEWICK_BOOTSTRAPS -f phylogeny
+  import phylogeny AL_GISAID_UNCONSTRAINED -a -i trees/gisaidOutgroupRooted.tree NEWICK_BOOTSTRAPS -f phylogeny
   exit
 
 module covFigtreeNexusExporter

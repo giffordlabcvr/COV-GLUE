@@ -30,6 +30,7 @@ schema-project cov
     create field submitting_lab VARCHAR 300
     create field authors VARCHAR 500
     create field include_in_ref_tree BOOLEAN
+    create field is_l_lineage BOOLEAN
     create field analyse_aa_replacements BOOLEAN
     create field analyse_aa_deletions BOOLEAN
     create field analyse_aa_insertions BOOLEAN

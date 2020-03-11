@@ -19,11 +19,8 @@
   # non complete genomes (length < 29000) excluded from the reference tree
   multi-set field sequence -w "length < 29000" include_in_ref_tree false
 
-  # GISAID sequences where host_species != "Human" excluded from the reference tree except for:
-  # EPI_ISL_402131 (RaTG13) 
-  # we will use this as an outgroup 
-
-  multi-set field sequence -w "(host_species = null or !(host_species = 'Human')) and sequenceID != 'EPI_ISL_402131'" include_in_ref_tree false
+  # GISAID sequences where host_species != "Human" excluded from the reference tree except
+  multi-set field sequence -w "(host_species = null or !(host_species = 'Human'))" include_in_ref_tree false
 
   # exclude Shenzhen/SZTH-001 Shenzhen/SZTH-004 following NextStrain and various virological.org posts which. 
   # think they have sequencing errors (e.g. http://virological.org/t/phylodynamic-analysis-129-genomes-24-feb-2020/356/4)
@@ -41,13 +38,13 @@
   # exclude EPI_ISL_410984 (Vero E6 cell line of French isolate IDF0515) in favour of directly sequenced clinical sample EPI_ISL_408430
   sequence cov-gisaid EPI_ISL_410984 set field include_in_ref_tree false
 
-  # analyse aa changes only in ref tree sequences, and exclude RaTG13 outgroup EPI_ISL_402131
+  # analyse aa changes only in ref tree sequences
   multi-set field sequence -a analyse_aa_replacements false
   multi-set field sequence -a analyse_aa_deletions false
   multi-set field sequence -a analyse_aa_insertions false
-  multi-set field sequence -w "include_in_ref_tree = true and sequenceID != 'EPI_ISL_402131'" analyse_aa_replacements true
-  multi-set field sequence -w "include_in_ref_tree = true and sequenceID != 'EPI_ISL_402131'" analyse_aa_deletions true
-  multi-set field sequence -w "include_in_ref_tree = true and sequenceID != 'EPI_ISL_402131'" analyse_aa_insertions true
+  multi-set field sequence -w "include_in_ref_tree = true" analyse_aa_replacements true
+  multi-set field sequence -w "include_in_ref_tree = true" analyse_aa_deletions true
+  multi-set field sequence -w "include_in_ref_tree = true" analyse_aa_insertions true
 
   # sequence has non-codon aligned deletion of a T in a long string of Ts around codon 35 of NSP6, ref nt 11073 
   sequence cov-gisaid EPI_ISL_413485 set field analyse_aa_deletions false
