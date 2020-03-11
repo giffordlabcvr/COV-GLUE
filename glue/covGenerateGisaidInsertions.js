@@ -24,7 +24,7 @@ _.each(featuresList, function(featureObj) {
 var insertionsSet = {};
 var orf1aInsertions = {}; 
 var orf1abInsertions = {}; 
-
+var numInsertions = 0;
 
 _.each(featuresList, function(featureObj) {
 	glue.inMode("alignment/AL_GISAID_UNCONSTRAINED", function() {
@@ -102,6 +102,7 @@ _.each(_.values(orf1abInsertions), function(insertionObj) {
 });
 
 function createInsertion(insertionObj) {
+	numInsertions++;
 	glue.log("FINEST", "Creating insertion object", insertionObj);
 	var variationName = "cov_aa_ins:"+insertionObj.id;
 	glue.inMode("reference/REF_MASTER_WUHAN_HU_1/feature-location/"+insertionObj.feature, function() {
@@ -158,4 +159,9 @@ function createInsertion(insertionObj) {
 			glue.command(["set", "link-target", "sequence", "sequence/"+sourceName+"/"+sequenceID]);
 		});
 	});
+}
+
+
+if(numInsertions > 1) {
+	throw new Error("Expected single NSP6 insertion in a Swiss sequence, please check.");
 }
