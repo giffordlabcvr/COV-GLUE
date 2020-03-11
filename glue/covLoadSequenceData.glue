@@ -2,6 +2,9 @@
 
   # Import sequences
   module covGisaidFastaImporter import -f sequences/gisaid_cov2020_sequences.fasta
+
+  # Sequence lengths
+  run script glue/covSetSequenceLengths.js 
  
   # Metadata
   # have to temporarily change result format to avoid bug in table rendering library.
@@ -10,37 +13,44 @@
   module covGisaidMetadataTextFilePopulator populate --fileName tabular/gisaid_metadata.txt
   console unset cmd-result-format
 
-  # delete the 2013 bat sequence. Thought it might be useful for outgroup rooting but we're just going to use midpoint rooting for now
-  delete sequence -w "sequenceID = 'EPI_ISL_402131'"
+  # all sequences included in the reference tree by default
+  multi-set field sequence -a include_in_ref_tree true
 
-  # delete the environmental sequences
-  delete sequence -w "isolate like '%HB-env%'"
+  # non complete genomes (length < 29000) excluded from the reference tree
+  multi-set field sequence -w "length < 29000" include_in_ref_tree false
 
-  # delete the pangolin sequences
-  delete sequence -w "isolate like '%pangolin%'"
+  # GISAID sequences where host_species != "Human" excluded from the reference tree except for:
+  # EPI_ISL_402131 (RaTG13) 
+  # we will use this as an outgroup 
 
-  # delete Shenzhen/SZTH-001 Shenzhen/SZTH-004 following NextStrain and various virological.org posts which. 
+  multi-set field sequence -w "(host_species = null or !(host_species = 'Human')) and sequenceID != 'EPI_ISL_402131'" include_in_ref_tree false
+
+  # exclude Shenzhen/SZTH-001 Shenzhen/SZTH-004 following NextStrain and various virological.org posts which. 
   # think they have sequencing errors (e.g. http://virological.org/t/phylodynamic-analysis-129-genomes-24-feb-2020/356/4)
-  # These are on long branches which mucks up midpoint rooting.
-  delete sequence -w "sequenceID = 'EPI_ISL_406592'"
-  delete sequence -w "sequenceID = 'EPI_ISL_406595'"
+  multi-set field sequence -w "sequenceID in ('EPI_ISL_406592', 'EPI_ISL_406595')" include_in_ref_tree false
 
-  # delete the following full length human sequences, 
-  # that have known quality issues mentioned on GISAID
-  delete sequence -w "sequenceID = 'EPI_ISL_408487'"
-  delete sequence -w "sequenceID = 'EPI_ISL_408485'"
-  delete sequence -w "sequenceID = 'EPI_ISL_408483'"
-  delete sequence -w "sequenceID = 'EPI_ISL_408978'"
-  delete sequence -w "sequenceID = 'EPI_ISL_412971'"
-  delete sequence -w "sequenceID = 'EPI_ISL_406799'"
-  delete sequence -w "sequenceID = 'EPI_ISL_412964'"
-  delete sequence -w "sequenceID = 'EPI_ISL_412900'"
+  # exclude sequences with "warn" status on GISAID, this implies quality issues, usually multiple or long runs of NNNs
+  multi-set field sequence -w "status_code = 'warn'" include_in_ref_tree false
 
-  # Sequence lengths
-  run script glue/covSetSequenceLengths.js 
+  # exclude EPI_ISL_410545 (Vero E6 cell line of Italian isolate INMI1) in favour of directly sequenced clinical sample EPI_ISL_410546
+  sequence cov-gisaid EPI_ISL_410545 set field include_in_ref_tree false
 
-  # delete subgenomic.
-  delete sequence -w "length < 24000"
+  # exclude EPI_ISL_410720 (Vero E6 cell line of French isolate IDF0372) in favour of directly sequenced clinical sample EPI_ISL_406596
+  sequence cov-gisaid EPI_ISL_410720 set field include_in_ref_tree false
+
+  # exclude EPI_ISL_410984 (Vero E6 cell line of French isolate IDF0515) in favour of directly sequenced clinical sample EPI_ISL_408430
+  sequence cov-gisaid EPI_ISL_410984 set field include_in_ref_tree false
+
+  # analyse aa changes only in ref tree sequences, and exclude RaTG13 outgroup EPI_ISL_402131
+  multi-set field sequence -a analyse_aa_replacements false
+  multi-set field sequence -a analyse_aa_deletions false
+  multi-set field sequence -a analyse_aa_insertions false
+  multi-set field sequence -w "include_in_ref_tree = true and sequenceID != 'EPI_ISL_402131'" analyse_aa_replacements true
+  multi-set field sequence -w "include_in_ref_tree = true and sequenceID != 'EPI_ISL_402131'" analyse_aa_deletions true
+  multi-set field sequence -w "include_in_ref_tree = true and sequenceID != 'EPI_ISL_402131'" analyse_aa_insertions true
+
+  # sequence has non-codon aligned deletion of a T in a long string of Ts around codon 35 of NSP6, ref nt 11073 
+  sequence cov-gisaid EPI_ISL_413485 set field analyse_aa_deletions false
 
   run file glue/covFeatures.glue
 

@@ -28,7 +28,7 @@ var orf1abDeletions = {};
 
 _.each(featuresList, function(featureObj) {
 	glue.inMode("alignment/AL_GISAID_UNCONSTRAINED", function() {
-		var almtMemberObjs = glue.tableToObjects(glue.command(["list", "member"]));
+		var almtMemberObjs = glue.tableToObjects(glue.command(["list", "member", "-w", "sequence.analyse_aa_deletions = true"]));
 		_.each(almtMemberObjs, function(almtMemberObj) {
 			glue.inMode("member/"+almtMemberObj["sequence.source.name"]+"/"+almtMemberObj["sequence.sequenceID"], function() {
 				

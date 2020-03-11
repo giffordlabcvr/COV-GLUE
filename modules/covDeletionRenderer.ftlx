@@ -32,7 +32,7 @@
     	<countryId>${cms.sequence.m49_country.id}</countryId>
     	<placeSampled>${cms.sequence.place_sampled}</placeSampled>
     	<countryDisplayName>${cms.sequence.m49_country.display_name}</countryDisplayName>
-	    <collectionDate><#if cms.sequence.collection_month_day??>${cms.sequence.collection_month_day}-</#if>${cms.sequence.collection_month}-${cms.sequence.collection_year?c}</collectionDate>
+	    <collectionDate><#if cms.sequence.collection_month_day??>${cms.sequence.collection_month_day}-</#if><#if cms.sequence.collection_month??>${cms.sequence.collection_month}-</#if>${cms.sequence.collection_year?c}</collectionDate>
     </containingSeq>
     </#list>
 </deletion>

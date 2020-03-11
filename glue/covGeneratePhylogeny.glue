@@ -1,5 +1,7 @@
 # generate tree using RAxML
 module covRaxmlPhylogenyGenerator 
-  generate nucleotide phylogeny AL_GISAID_UNCONSTRAINED -a -o trees/gisaidUnconstrainedUnrooted.tree NEWICK_BOOTSTRAPS
+  generate nucleotide phylogeny AL_GISAID_UNCONSTRAINED --selectorName covReferencePhylogenyColumnsSelector \
+  	-w "sequence.include_in_ref_tree = true" \
+  	-o trees/gisaidUnconstrainedUnrooted.tree NEWICK_BOOTSTRAPS
   exit
 

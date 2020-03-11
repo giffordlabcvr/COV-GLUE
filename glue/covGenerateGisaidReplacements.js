@@ -23,7 +23,7 @@ _.each(featuresList, function(featureObj) {
 		});
 	});
 	glue.inMode("alignment/AL_GISAID_UNCONSTRAINED", function() {
-		var almtMemberObjs = glue.tableToObjects(glue.command(["list", "member"]));
+		var almtMemberObjs = glue.tableToObjects(glue.command(["list", "member", "-w", "sequence.analyse_aa_replacements = true"]));
 		_.each(almtMemberObjs, function(almtMemberObj) {
 			glue.inMode("member/"+almtMemberObj["sequence.source.name"]+"/"+almtMemberObj["sequence.sequenceID"], function() {
 				var memberAaObjs = glue.tableToObjects(glue.command(["amino-acid", "-r", comparisonRefName, "-f", featureObj.name]));

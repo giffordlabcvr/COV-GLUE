@@ -1,0 +1,27 @@
+<nexusExporter>
+	<freemarkerAnnotationGenerator>
+		<annotationName>gisaid_id</annotationName>
+		<template>${renderNestedProperty('sequence.sequenceID')}</template>
+	</freemarkerAnnotationGenerator>
+	<freemarkerAnnotationGenerator>
+		<annotationName>country</annotationName>
+		<template>${renderNestedProperty('sequence.m49_country.display_name')}</template>
+	</freemarkerAnnotationGenerator>
+	<freemarkerAnnotationGenerator>
+		<annotationName>isolate</annotationName>
+		<template>${renderNestedProperty('sequence.isolate')}</template>
+	</freemarkerAnnotationGenerator>
+	<freemarkerAnnotationGenerator>
+		<annotationName>sub_region</annotationName>
+		<template>${renderNestedProperty('sequence.m49_country.m49_sub_region.id')}</template>
+	</freemarkerAnnotationGenerator>
+	<freemarkerAnnotationGenerator>
+		<annotationName>region</annotationName>
+		<template>${renderNestedProperty('sequence.m49_country.m49_region.id')}</template>
+	</freemarkerAnnotationGenerator>
+	<figtreeProperty type="integer" name="tipLabels.fontSize">13</figtreeProperty>
+	<figtreeProperty name="tipLabels.colorAttribute">region</figtreeProperty>
+	<figtreeProperty name="tipLabels.displayAttribute">isolate</figtreeProperty>
+	<figtreeProperty type="integer" name="nodeLabels.fontSize">13</figtreeProperty>
+	<figtreeProperty type="boolean" name="nodeLabels.isShown">false</figtreeProperty>
+</nexusExporter>

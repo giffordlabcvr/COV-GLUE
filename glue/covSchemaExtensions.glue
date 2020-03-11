@@ -6,6 +6,9 @@ schema-project cov
   create custom-table cov_deletion
   create custom-table cov_deletion_sequence
 
+  create custom-table cov_insertion
+  create custom-table cov_insertion_sequence
+
   create custom-table cov_primer_probe_assay
   create custom-table cov_primer_probe
 
@@ -26,6 +29,10 @@ schema-project cov
     create field originating_lab VARCHAR 300
     create field submitting_lab VARCHAR 300
     create field authors VARCHAR 500
+    create field include_in_ref_tree BOOLEAN
+    create field analyse_aa_replacements BOOLEAN
+    create field analyse_aa_deletions BOOLEAN
+    create field analyse_aa_insertions BOOLEAN
     exit
 
   table feature
@@ -67,6 +74,22 @@ schema-project cov
     create field parent_feature VARCHAR
     create field parent_start_codon VARCHAR
     create field parent_end_codon VARCHAR
+    exit
+
+  table cov_insertion
+    create field display_name VARCHAR
+    create field last_codon_before VARCHAR
+    create field last_codon_before_int INTEGER
+    create field first_codon_after VARCHAR
+    create field first_codon_after_int INTEGER
+    create field codon_aligned BOOLEAN
+    create field last_ref_nt_before INTEGER
+    create field first_ref_nt_after INTEGER
+    create field num_seqs INTEGER
+    create field parent_feature VARCHAR
+    create field parent_last_codon_before VARCHAR
+    create field parent_first_codon_after VARCHAR
+    create field inserted_aas_length INTEGER
     exit
 
 
@@ -113,6 +136,10 @@ schema-project cov
   create link variation cov_deletion -m ONE_TO_ONE
   create link cov_deletion cov_deletion_sequence -m ONE_TO_MANY
   create link sequence cov_deletion_sequence -m ONE_TO_MANY
+
+  create link variation cov_insertion -m ONE_TO_ONE
+  create link cov_insertion cov_insertion_sequence -m ONE_TO_MANY
+  create link sequence cov_insertion_sequence -m ONE_TO_MANY
   
   create link cov_primer_probe cov_primer_probe_assay -m MANY_TO_ONE
   

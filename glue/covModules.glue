@@ -13,6 +13,8 @@ create module --fileName modules/covSimpleFastaAlignmentImporter.xml
 
 create module --fileName modules/covPhyloUtility.xml
 create module --fileName modules/covPhyloImporter.xml
+create module --fileName modules/covReferencePhylogenyColumnsSelector.xml
+create module --fileName modules/covFigtreeNexusExporter.xml
 
 create module --fileName modules/covKuiken2006CodonLabeler.xml
 create module --fileName modules/covOrf1abTranslationModifier.xml
@@ -37,6 +39,7 @@ create module --fileName modules/covTreeVisualisationTransformer.xml --loadResou
 create module --fileName modules/covTreeVisualiser.xml
 create module --fileName modules/covFastaProteinAlignmentExporter.xml
 create module --fileName modules/covFastaProteinAlignmentExporterSeqIdOnly.xml
+create module --fileName modules/covFastaExporter.xml
 create module --fileName modules/covFastaAlignmentExporterSeqIdOnly.xml
 
 create module --fileName modules/covReplacementRenderer.xml --loadResources

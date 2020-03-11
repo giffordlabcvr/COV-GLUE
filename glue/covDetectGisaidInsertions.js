@@ -20,6 +20,7 @@ glue.inMode("alignment/AL_GISAID_UNCONSTRAINED", function() {
 	_.each(featuresList, function(featureObj) {
 		var insertionsFound = glue.tableToObjects(
 				glue.command(["variation", "member", "scan", 
+					"-w", "sequence.analyse_aa_insertions = true",
 					"-r", refName, "-f", featureObj.name, "-v", "cov_aa_ins_detect:"+featureObj.name, 
 					"--excludeAbsent"]));
 		featureObj.insertionsFound = insertionsFound;
