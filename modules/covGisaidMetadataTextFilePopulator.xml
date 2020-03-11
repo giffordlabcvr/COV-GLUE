@@ -6,43 +6,17 @@
 		<property>sequenceID</property>
 	</textFileColumn>
 	<textFileColumn>
-		<header>Virus name</header>
-		<property>isolate</property>
-		<matchPattern>BetaCo[vV]/(.*)</matchPattern>
-		<outputTemplate>${g1}</outputTemplate>
-	</textFileColumn>
-	<isoCountryTextFileColumn codeStyle="ALPHA_3">
-		<header>Location</header>
-		<property>m49_country</property>
-		<valueConverter>
-			<matchPattern>Guangdong Province</matchPattern>
-			<outputTemplate>CHN</outputTemplate>
-		</valueConverter>
-		<valueConverter>
-			<matchPattern>Guangzhou City</matchPattern>
-			<outputTemplate>CHN</outputTemplate>
-		</valueConverter>
-		<valueConverter>
-			<matchPattern>England</matchPattern>
-			<outputTemplate>GBR</outputTemplate>
-		</valueConverter>
-		<valueConverter>
-			<matchPattern>Gyeonggi-do</matchPattern>
-			<outputTemplate>KOR</outputTemplate>
-		</valueConverter>
-	</isoCountryTextFileColumn>
-	<textFileColumn>
-		<header>Location</header>
-		<property>place_sampled</property>
+		<header>Passage details/history</header>
+		<property>passage_details</property>
 	</textFileColumn>
 	<textFileColumn>
-		<header>Collection date</header>
-		<property>collection_year</property>
+		<header>Submission Date</header>
+		<property>submission_year</property>
 		<matchPattern>(\d\d\d\d)</matchPattern>
 	</textFileColumn>
 	<textFileColumn>
-		<header>Collection date</header>
-		<property>collection_month</property>
+		<header>Submission Date</header>
+		<property>submission_month</property>
 		<matchPattern>\d\d\d\d-(\d\d)</matchPattern>
 		<outputTemplate>${g1}</outputTemplate>
 		<valueConverter>
@@ -95,21 +69,21 @@
 		</valueConverter>
 	</textFileColumn>
 	<textFileColumn>
-		<header>Collection date</header>
-		<property>collection_month_day</property>
+		<header>Submission Date</header>
+		<property>submission_month_day</property>
 		<matchPattern>\d\d\d\d-\d\d-(\d\d)</matchPattern>
 		<outputTemplate>${g1}</outputTemplate>
 	</textFileColumn>
 	<textFileColumn>
-		<header>Originating lab</header>
-		<property>originating_lab</property>
+		<header>Status code</header>
+		<property>status_code</property>
 	</textFileColumn>
 	<textFileColumn>
-		<header>Submitting lab</header>
-		<property>submitting_lab</property>
+		<header>Status comment</header>
+		<property>status_comment</property>
 	</textFileColumn>
 	<textFileColumn>
-		<header>Authors</header>
-		<property>authors</property>
+		<header>Host</header>
+		<property>host_species</property>
 	</textFileColumn>
 </textFilePopulator>

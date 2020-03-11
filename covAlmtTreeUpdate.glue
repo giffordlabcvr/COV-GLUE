@@ -1,4 +1,8 @@
-project cov 
+# this project build loads the sequence data and updates the alignment and tree files
+
+run file glue/covInitProject.glue
+
+project cov
   run file glue/covRegenerateGisaidAlignment.glue
   run file glue/covGeneratePhylogeny.glue
   run file glue/covRerootPhylogeny.glue

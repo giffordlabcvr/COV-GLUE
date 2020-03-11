@@ -1,63 +1,8 @@
-delete project cov
+# this project build targets the web resource and expects updated alignment and tree files to be in place.
 
-create project cov "A GLUE project for Coronavirus (cov)" --minVersion 1.1.80
+run file glue/covInitProject.glue
 
-run file glue/covSchemaExtensions.glue
- 
 project cov
-
-  run file glue/covProjectSettings.glue
-  run file glue/covModules.glue
-
-  # M49 country extension
-  run file glue/m49_countries/populateM49All.glue
-  
-  # Import sequences
-  module covGisaidFastaImporter import -f sequences/gisaid_cov2020_sequences.fasta
- 
-  # Metadata
-  # have to temporarily change result format to avoid bug in table rendering library.
-  console set cmd-result-format tab
-  module covGisaidMetadataTextFilePopulator populate --fileName tabular/gisaid_metadata.txt 
-  console unset cmd-result-format
-
-  # delete the 2013 bat sequence. Thought it might be useful for outgroup rooting but we're just going to use midpoint rooting for now
-  delete sequence -w "sequenceID = 'EPI_ISL_402131'"
-
-  # delete the environmental sequences
-  delete sequence -w "isolate like '%HB-env%'"
-
-  # delete the pangolin sequences
-  delete sequence -w "isolate like '%pangolin%'"
-
-  # delete Shenzhen/SZTH-001 Shenzhen/SZTH-004 following NextStrain and various virological.org posts which. 
-  # think they have sequencing errors (e.g. http://virological.org/t/phylodynamic-analysis-129-genomes-24-feb-2020/356/4)
-  # These are on long branches which mucks up midpoint rooting.
-  delete sequence -w "sequenceID = 'EPI_ISL_406592'"
-  delete sequence -w "sequenceID = 'EPI_ISL_406595'"
-
-  # delete the following full length human sequences, 
-  # that have known quality issues mentioned on GISAID
-  delete sequence -w "sequenceID = 'EPI_ISL_408487'"
-  delete sequence -w "sequenceID = 'EPI_ISL_408485'"
-  delete sequence -w "sequenceID = 'EPI_ISL_408483'"
-  delete sequence -w "sequenceID = 'EPI_ISL_408978'"
-  delete sequence -w "sequenceID = 'EPI_ISL_412971'"
-  delete sequence -w "sequenceID = 'EPI_ISL_406799'"
-  delete sequence -w "sequenceID = 'EPI_ISL_412964'"
-  delete sequence -w "sequenceID = 'EPI_ISL_412900'"
-
-  # Sequence lengths
-  run script glue/covSetSequenceLengths.js 
-
-  # delete subgenomic.
-  delete sequence -w "length < 24000"
-
-  run file glue/covFeatures.glue
-
-  run file glue/covMasterReference.glue
-  run script glue/covCheckFeatureLocations.js
-
   # Unconstrained alignment
   module covSimpleFastaAlignmentImporter import AL_GISAID_UNCONSTRAINED -f alignments/AL_GISAID_UNCONSTRAINED.fna 
 

@@ -1,0 +1,17 @@
+delete project cov
+
+create project cov "A GLUE project for Coronavirus (cov)" --minVersion 1.1.80
+
+run file glue/covSchemaExtensions.glue
+ 
+project cov
+
+  run file glue/covProjectSettings.glue
+  run file glue/covModules.glue
+
+  # M49 country extension
+  run file glue/m49_countries/populateM49All.glue
+  
+  run file glue/covLoadSequenceData.glue
+
+  exit
