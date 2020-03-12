@@ -12,6 +12,13 @@ schema-project cov
   create custom-table cov_primer_probe_assay
   create custom-table cov_primer_probe
 
+  create custom-table cov_project_properties
+
+  table cov_project_properties
+    create field display_name VARCHAR
+    create field value VARCHAR
+    exit
+
   table sequence
     create field length INTEGER
     create field isolate VARCHAR
