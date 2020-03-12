@@ -1,6 +1,6 @@
 # import it so it can be rerooted  
 module covPhyloImporter
-  import phylogeny AL_GISAID_UNCONSTRAINED -a -i trees/gisaidUnconstrainedUnrooted.tree NEWICK_BOOTSTRAPS -f phylogeny
+  import phylogeny AL_GISAID_UNCONSTRAINED -w "sequence.include_in_ref_tree = true" -i trees/gisaidUnconstrainedUnrooted.tree NEWICK_BOOTSTRAPS -f phylogeny
   exit
 
 # reroot using midpoint rooting,
@@ -18,7 +18,7 @@ module covPhyloUtility
 
 # import it so it can be exported to display tree  
 module covPhyloImporter
-  import phylogeny AL_GISAID_UNCONSTRAINED -a -i trees/gisaidOutgroupRooted.tree NEWICK_BOOTSTRAPS -f phylogeny
+  import phylogeny AL_GISAID_UNCONSTRAINED -w "sequence.include_in_ref_tree = true" -i trees/gisaidOutgroupRooted.tree NEWICK_BOOTSTRAPS -f phylogeny
   exit
 
 module covFigtreeNexusExporter
