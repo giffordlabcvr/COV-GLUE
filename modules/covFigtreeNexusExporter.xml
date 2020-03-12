@@ -19,6 +19,10 @@
 		<annotationName>region</annotationName>
 		<template>${renderNestedProperty('sequence.m49_country.m49_region.id')}</template>
 	</freemarkerAnnotationGenerator>
+	<freemarkerAnnotationGenerator>
+		<annotationName>is_l_lineage</annotationName>
+		<template>${renderNestedProperty('sequence.is_l_lineage')}</template>
+	</freemarkerAnnotationGenerator>
 	<figtreeProperty type="integer" name="tipLabels.fontSize">13</figtreeProperty>
 	<figtreeProperty name="tipLabels.colorAttribute">region</figtreeProperty>
 	<figtreeProperty name="tipLabels.displayAttribute">isolate</figtreeProperty>
