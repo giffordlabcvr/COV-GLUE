@@ -36,6 +36,27 @@
   # exclude sequences with "warn" status on GISAID, this implies quality issues, usually multiple or long runs of NNNs
   multi-set field sequence -w "status_code = 'warn'" include_in_ref_tree false
 
+  # sequence has massive gap in nsp3 and an implausible frameshifting insertion in nsp4
+  sequence cov-gisaid EPI_ISL_412900 set field include_in_ref_tree false
+
+  # sequence has non-codon aligned deletion of a T in a long string of Ts around codon 35 of NSP6, ref nt 11073 
+  sequence cov-gisaid EPI_ISL_413485 set field include_in_ref_tree false
+  
+  # sequence has various implausible non-codon-aligned deletions
+  sequence cov-gisaid EPI_ISL_413752 set field include_in_ref_tree false
+  
+  # sequence has implausible non-codon-aligned deletion in nsp3
+  sequence cov-gisaid EPI_ISL_414014 set field include_in_ref_tree false
+
+  # sequence has implausible non-codon-aligned deletion in nsp3
+  sequence cov-gisaid EPI_ISL_414017 set field include_in_ref_tree false
+
+  # sequence has implausible frameshifting insertion in ORF1a
+  sequence cov-gisaid EPI_ISL_408483 set field include_in_ref_tree false
+
+  # sequence has implausible frameshifting insertion in ORF1a
+  sequence cov-gisaid EPI_ISL_408487 set field include_in_ref_tree false
+
   # exclude EPI_ISL_410545 (Vero E6 cell line of Italian isolate INMI1) in favour of directly sequenced clinical sample EPI_ISL_410546
   sequence cov-gisaid EPI_ISL_410545 set field include_in_ref_tree false
 
@@ -44,6 +65,15 @@
 
   # exclude EPI_ISL_410984 (Vero E6 cell line of French isolate IDF0515) in favour of directly sequenced clinical sample EPI_ISL_408430
   sequence cov-gisaid EPI_ISL_410984 set field include_in_ref_tree false
+ 
+  # sequence has large problematic run of Ns in ORF 1ab which is being interpreted as an insertion (possibly a GLUE bug) 
+  sequence cov-gisaid EPI_ISL_413578 set field include_in_ref_tree false
+
+  # sequence has large problematic run of Ns in ORF 1ab which is being interpreted as an insertion (possibly a GLUE bug) 
+  sequence cov-gisaid EPI_ISL_413581 set field include_in_ref_tree false
+
+  # sequence has large problematic run of Ns in ORF 1ab which is being interpreted as an insertion (possibly a GLUE bug) 
+  sequence cov-gisaid EPI_ISL_413586 set field include_in_ref_tree false
 
   # analyse aa changes only in ref tree sequences
   multi-set field sequence -a analyse_aa_replacements false
@@ -53,8 +83,6 @@
   multi-set field sequence -w "include_in_ref_tree = true" analyse_aa_deletions true
   multi-set field sequence -w "include_in_ref_tree = true" analyse_aa_insertions true
 
-  # sequence has non-codon aligned deletion of a T in a long string of Ts around codon 35 of NSP6, ref nt 11073 
-  sequence cov-gisaid EPI_ISL_413485 set field analyse_aa_deletions false
 
   run file glue/covFeatures.glue
 

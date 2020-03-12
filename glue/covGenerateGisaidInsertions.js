@@ -139,7 +139,7 @@ function createInsertion(insertionObj) {
 		}
 		if(insertionObj.parentFeature == "ORF_1ab") {
 			glue.command(["set", "field", "parent_feature", "ORF_1ab"]);
-			var parentInsObj = orf1abInsertions[insertionObj.refNtStart+":"+insertionObj.refNtEnd];
+			var parentInsObj = orf1abInsertions[insertionObj.lastRefNtBefore+":"+insertionObj.insertedAas.length+":"+insertionObj.firstRefNtAfter];
 			parentInsObj.skipCreation = true;
 			glue.command(["set", "field", "parent_last_codon_before", parentInsObj.lastCodonBefore]);
 			glue.command(["set", "field", "parent_first_codon_after", parentInsObj.firstCodonAfter]);

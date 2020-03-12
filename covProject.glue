@@ -6,74 +6,17 @@ project cov
   # Unconstrained alignment
   module covSimpleFastaAlignmentImporter import AL_GISAID_UNCONSTRAINED -f alignments/AL_GISAID_UNCONSTRAINED.fna 
 
-  # there are deletions which MAFFT did not properly codon-align 
-  # nsp15:227:del in EPI_ISL_408670. 
-  # nsp1:82-86:del in EPI_ISL_410044, EPI_ISL_413623
-  # nsp2:268del in EPI_ISL_413564, EPI_ISL_413568, EPI_ISL_413573, EPI_ISL_413577, 
-  #                EPI_ISL_413580, EPI_ISL_413581, EPI_ISL_413582, EPI_ISL_413583
-  # S:145del in EPI_ISL_413522
-  
-  # for these sequences we will do a codon-aware constrained alignment then derive segments back to the unconstrained alignment.
-  alignment AL_GISAID_UNCONSTRAINED
-    member cov-gisaid EPI_ISL_408670 remove segment -a
-    member cov-gisaid EPI_ISL_410044 remove segment -a
-    member cov-gisaid EPI_ISL_413623 remove segment -a
-    member cov-gisaid EPI_ISL_413564 remove segment -a
-    member cov-gisaid EPI_ISL_413568 remove segment -a
-    member cov-gisaid EPI_ISL_413573 remove segment -a
-    member cov-gisaid EPI_ISL_413577 remove segment -a
-    member cov-gisaid EPI_ISL_413580 remove segment -a
-    member cov-gisaid EPI_ISL_413581 remove segment -a
-    member cov-gisaid EPI_ISL_413582 remove segment -a
-    member cov-gisaid EPI_ISL_413583 remove segment -a
-    member cov-gisaid EPI_ISL_413590 remove segment -a
-    member cov-gisaid EPI_ISL_413522 remove segment -a
-    exit
-
+  # empty at the moment, will get populated opportunistically during the deletions phase.
   create alignment AL_GISAID_CONSTRAINED -r REF_MASTER_WUHAN_HU_1 
-  alignment AL_GISAID_CONSTRAINED 
-    add member cov-gisaid EPI_ISL_408670
-    add member cov-gisaid EPI_ISL_410044
-    add member cov-gisaid EPI_ISL_413623
-    add member cov-gisaid EPI_ISL_413564
-    add member cov-gisaid EPI_ISL_413568
-    add member cov-gisaid EPI_ISL_413573
-    add member cov-gisaid EPI_ISL_413577
-    add member cov-gisaid EPI_ISL_413580
-    add member cov-gisaid EPI_ISL_413581
-    add member cov-gisaid EPI_ISL_413582
-    add member cov-gisaid EPI_ISL_413583
-    add member cov-gisaid EPI_ISL_413590
-    add member cov-gisaid EPI_ISL_413522
-    exit
-
-  compute alignment AL_GISAID_CONSTRAINED covCompoundAligner
-
-  alignment AL_GISAID_UNCONSTRAINED
-    derive segments AL_GISAID_CONSTRAINED -w "sequence.sequenceID = 'EPI_ISL_408670'"
-    derive segments AL_GISAID_CONSTRAINED -w "sequence.sequenceID = 'EPI_ISL_410044'"
-    derive segments AL_GISAID_CONSTRAINED -w "sequence.sequenceID = 'EPI_ISL_413623'"
-    derive segments AL_GISAID_CONSTRAINED -w "sequence.sequenceID = 'EPI_ISL_413564'"
-    derive segments AL_GISAID_CONSTRAINED -w "sequence.sequenceID = 'EPI_ISL_413568'"
-    derive segments AL_GISAID_CONSTRAINED -w "sequence.sequenceID = 'EPI_ISL_413573'"
-    derive segments AL_GISAID_CONSTRAINED -w "sequence.sequenceID = 'EPI_ISL_413577'"
-    derive segments AL_GISAID_CONSTRAINED -w "sequence.sequenceID = 'EPI_ISL_413580'"
-    derive segments AL_GISAID_CONSTRAINED -w "sequence.sequenceID = 'EPI_ISL_413581'"
-    derive segments AL_GISAID_CONSTRAINED -w "sequence.sequenceID = 'EPI_ISL_413582'"
-    derive segments AL_GISAID_CONSTRAINED -w "sequence.sequenceID = 'EPI_ISL_413583'"
-    derive segments AL_GISAID_CONSTRAINED -w "sequence.sequenceID = 'EPI_ISL_413590'"
-    derive segments AL_GISAID_CONSTRAINED -w "sequence.sequenceID = 'EPI_ISL_413522'"
-    exit
 
   # Not strictly necessary here, but want to keep in line with other build.
   run script glue/covSetIsLLinneage.js
 
+  # generate deletions
+  run script glue/covGenerateGisaidDeletions.js
+
   # generate replacements
   run script glue/covGenerateGisaidReplacements.js
-
-  # generate deletions
-  # if non-codon-aligned deletions are detected at this step, an error is thrown
-  run script glue/covGenerateGisaidDeletions.js
 
   # generate insertions
   # if non-codon-aligned insertions are detected at this step, an error is thrown
