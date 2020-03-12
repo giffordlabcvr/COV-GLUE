@@ -66,14 +66,18 @@
   # exclude EPI_ISL_410984 (Vero E6 cell line of French isolate IDF0515) in favour of directly sequenced clinical sample EPI_ISL_408430
   sequence cov-gisaid EPI_ISL_410984 set field include_in_ref_tree false
  
-  # sequence has large problematic run of Ns in ORF 1ab which is being interpreted as an insertion (possibly a GLUE bug) 
+  # sequences have large problematic run of Ns in ORF 1ab which is being interpreted as an insertion (possibly a GLUE bug) 
   sequence cov-gisaid EPI_ISL_413578 set field include_in_ref_tree false
-
-  # sequence has large problematic run of Ns in ORF 1ab which is being interpreted as an insertion (possibly a GLUE bug) 
   sequence cov-gisaid EPI_ISL_413581 set field include_in_ref_tree false
-
-  # sequence has large problematic run of Ns in ORF 1ab which is being interpreted as an insertion (possibly a GLUE bug) 
   sequence cov-gisaid EPI_ISL_413586 set field include_in_ref_tree false
+  sequence cov-gisaid EPI_ISL_413564 set field include_in_ref_tree false
+  sequence cov-gisaid EPI_ISL_413568 set field include_in_ref_tree false
+  sequence cov-gisaid EPI_ISL_414432 set field include_in_ref_tree false
+  sequence cov-gisaid EPI_ISL_414458 set field include_in_ref_tree false
+  sequence cov-gisaid EPI_ISL_414459 set field include_in_ref_tree false
+  sequence cov-gisaid EPI_ISL_414462 set field include_in_ref_tree false
+  
+  
 
   # analyse aa changes only in ref tree sequences
   multi-set field sequence -a analyse_aa_replacements false
