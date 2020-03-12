@@ -1,89 +1,91 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <textFilePopulator>
-	<columnDelimiterRegex>\t</columnDelimiterRegex>
-	<textFileColumn>
-		<identifier>true</identifier>
-		<header>Accession ID</header>
-		<property>sequenceID</property>
-	</textFileColumn>
-	<textFileColumn>
-		<header>Passage details/history</header>
-		<property>passage_details</property>
-	</textFileColumn>
-	<textFileColumn>
-		<header>Submission Date</header>
-		<property>submission_year</property>
-		<matchPattern>(\d\d\d\d)</matchPattern>
-	</textFileColumn>
-	<textFileColumn>
-		<header>Submission Date</header>
-		<property>submission_month</property>
-		<matchPattern>\d\d\d\d-(\d\d)</matchPattern>
-		<outputTemplate>${g1}</outputTemplate>
-		<valueConverter>
-			<matchPattern>01</matchPattern>
-			<outputTemplate>JAN</outputTemplate>
-		</valueConverter>
-		<valueConverter>
-			<matchPattern>02</matchPattern>
-			<outputTemplate>FEB</outputTemplate>
-		</valueConverter>
-		<valueConverter>
-			<matchPattern>03</matchPattern>
-			<outputTemplate>MAR</outputTemplate>
-		</valueConverter>
-		<valueConverter>
-			<matchPattern>04</matchPattern>
-			<outputTemplate>APR</outputTemplate>
-		</valueConverter>
-		<valueConverter>
-			<matchPattern>05</matchPattern>
-			<outputTemplate>MAY</outputTemplate>
-		</valueConverter>
-		<valueConverter>
-			<matchPattern>06</matchPattern>
-			<outputTemplate>JUN</outputTemplate>
-		</valueConverter>
-		<valueConverter>
-			<matchPattern>07</matchPattern>
-			<outputTemplate>JUL</outputTemplate>
-		</valueConverter>
-		<valueConverter>
-			<matchPattern>08</matchPattern>
-			<outputTemplate>AUG</outputTemplate>
-		</valueConverter>
-		<valueConverter>
-			<matchPattern>09</matchPattern>
-			<outputTemplate>SEP</outputTemplate>
-		</valueConverter>
-		<valueConverter>
-			<matchPattern>10</matchPattern>
-			<outputTemplate>OCT</outputTemplate>
-		</valueConverter>
-		<valueConverter>
-			<matchPattern>11</matchPattern>
-			<outputTemplate>NOV</outputTemplate>
-		</valueConverter>
-		<valueConverter>
-			<matchPattern>12</matchPattern>
-			<outputTemplate>DEC</outputTemplate>
-		</valueConverter>
-	</textFileColumn>
-	<textFileColumn>
-		<header>Submission Date</header>
-		<property>submission_month_day</property>
-		<matchPattern>\d\d\d\d-\d\d-(\d\d)</matchPattern>
-		<outputTemplate>${g1}</outputTemplate>
-	</textFileColumn>
-	<textFileColumn>
-		<header>Status code</header>
-		<property>status_code</property>
-	</textFileColumn>
-	<textFileColumn>
-		<header>Status comment</header>
-		<property>status_comment</property>
-	</textFileColumn>
-	<textFileColumn>
-		<header>Host</header>
-		<property>host_species</property>
-	</textFileColumn>
+    <columnDelimiterRegex>\t</columnDelimiterRegex>
+    <textFileColumn>
+        <identifier>true</identifier>
+        <header>Accession ID</header>
+        <property>sequenceID</property>
+    </textFileColumn>
+    <textFileColumn>
+        <header>Passage details/history</header>
+        <property>passage_details</property>
+    </textFileColumn>
+    <textFileColumn>
+        <header>Submission Date</header>
+        <property>submission_year</property>
+        <matchPattern>(\d\d\d\d)</matchPattern>
+    </textFileColumn>
+    <textFileColumn>
+        <header>Submission Date</header>
+        <property>submission_month</property>
+        <matchPattern>\d\d\d\d-(\d\d)</matchPattern>
+        <outputTemplate>${g1}</outputTemplate>
+        <valueConverter>
+            <matchPattern>01</matchPattern>
+            <outputTemplate>JAN</outputTemplate>
+        </valueConverter>
+        <valueConverter>
+            <matchPattern>02</matchPattern>
+            <outputTemplate>FEB</outputTemplate>
+        </valueConverter>
+        <valueConverter>
+            <matchPattern>03</matchPattern>
+            <outputTemplate>MAR</outputTemplate>
+        </valueConverter>
+        <valueConverter>
+            <matchPattern>04</matchPattern>
+            <outputTemplate>APR</outputTemplate>
+        </valueConverter>
+        <valueConverter>
+            <matchPattern>05</matchPattern>
+            <outputTemplate>MAY</outputTemplate>
+        </valueConverter>
+        <valueConverter>
+            <matchPattern>06</matchPattern>
+            <outputTemplate>JUN</outputTemplate>
+        </valueConverter>
+        <valueConverter>
+            <matchPattern>07</matchPattern>
+            <outputTemplate>JUL</outputTemplate>
+        </valueConverter>
+        <valueConverter>
+            <matchPattern>08</matchPattern>
+            <outputTemplate>AUG</outputTemplate>
+        </valueConverter>
+        <valueConverter>
+            <matchPattern>09</matchPattern>
+            <outputTemplate>SEP</outputTemplate>
+        </valueConverter>
+        <valueConverter>
+            <matchPattern>10</matchPattern>
+            <outputTemplate>OCT</outputTemplate>
+        </valueConverter>
+        <valueConverter>
+            <matchPattern>11</matchPattern>
+            <outputTemplate>NOV</outputTemplate>
+        </valueConverter>
+        <valueConverter>
+            <matchPattern>12</matchPattern>
+            <outputTemplate>DEC</outputTemplate>
+        </valueConverter>
+    </textFileColumn>
+    <textFileColumn>
+        <header>Submission Date</header>
+        <property>submission_month_day</property>
+        <matchPattern>\d\d\d\d-\d\d-(\d\d)</matchPattern>
+        <outputTemplate>${g1}</outputTemplate>
+    </textFileColumn>
+    <textFileColumn>
+        <header>Status code</header>
+        <property>status_code</property>
+    </textFileColumn>
+    <textFileColumn>
+        <header>Status comment</header>
+        <property>status_comment</property>
+    </textFileColumn>
+    <textFileColumn>
+        <header>Host</header>
+        <property>host_species</property>
+    </textFileColumn>
+    <skipMissing>true</skipMissing>
 </textFilePopulator>
