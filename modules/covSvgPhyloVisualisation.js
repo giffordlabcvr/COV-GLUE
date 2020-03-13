@@ -245,13 +245,21 @@ function visualisePhyloAsSvg(document) {
 	// with the visualisation maths etc. done
 	var visualiseTreeResult;
 
+	/* hacky way to dynamically change the pxHeight based on the number of taxa, so the text does not go too small. */
+	var pxHeight = document.inputDocument.pxHeight;
+	if(pxHeight == "auto") {
+		var numTaxa = glue.command(["count", "sequence", "-w", "include_in_ref_tree = true"]).countResult.count;
+		var leafHeightPx = 15;
+		pxHeight = (numTaxa * leafHeightPx) / 0.96; // the division here is to account for the 2% top/bottom margin which the tree visualiser will apply.
+	}
+	
 	glue.inMode("module/covTreeVisualiser", function() {
 		visualiseTreeResult = glue.command({
 			"visualise" : {
 				"tree-document": {
 					"treeDocument" : glueTree, 
 					"pxWidth" : document.inputDocument.pxWidth, 
-					"pxHeight" : document.inputDocument.pxHeight,
+					"pxHeight" : pxHeight,
 					"legendPxWidth" : document.inputDocument.legendPxWidth, 
 					"legendPxHeight" : document.inputDocument.legendPxHeight,
 					"leafTextAnnotationName": document.inputDocument.tipAnnotation

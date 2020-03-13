@@ -77,20 +77,22 @@ glue.inMode("alignment/AL_GISAID_UNCONSTRAINED", function() {
 });
 
 _.each(implausibleDeletionAlmtMembers, function(almtMemberObj) {
-	glue.log("WARNING", "implausible deletion detected for sequence "+almtMemberObj["sequence.sequenceID"]+", it will be excluded from replacement, deletion and insertion analysis");
+	glue.log("WARNING", "implausible deletion detected for sequence "+almtMemberObj["sequence.sequenceID"]+", it will be excluded from the reference tree and from replacement, deletion and insertion analysis");
 	glue.inMode("sequence/"+almtMemberObj["sequence.source.name"]+"/"+almtMemberObj["sequence.sequenceID"], function() {
 		glue.command(["set", "field", "analyse_aa_replacements", "false"]);
 		glue.command(["set", "field", "analyse_aa_deletions", "false"]);
 		glue.command(["set", "field", "analyse_aa_insertions", "false"]);
+		glue.command(["set", "field", "include_in_ref_tree", "false"]);
 	});
 });
 
 _.each(implausibleInsertionAlmtMembers, function(almtMemberObj) {
-	glue.log("WARNING", "implausible insertion detected for sequence "+almtMemberObj["sequence.sequenceID"]+", it will be excluded from replacement, deletion and insertion analysis");
+	glue.log("WARNING", "implausible insertion detected for sequence "+almtMemberObj["sequence.sequenceID"]+", it will be excluded from the reference tree and from replacement, deletion and insertion analysis");
 	glue.inMode("sequence/"+almtMemberObj["sequence.source.name"]+"/"+almtMemberObj["sequence.sequenceID"], function() {
 		glue.command(["set", "field", "analyse_aa_replacements", "false"]);
 		glue.command(["set", "field", "analyse_aa_deletions", "false"]);
 		glue.command(["set", "field", "analyse_aa_insertions", "false"]);
+		glue.command(["set", "field", "include_in_ref_tree", "false"]);
 	});
 });
 
