@@ -9,6 +9,9 @@ project cov
   # fix incorrect deletions from MAFFT
   run script glue/covFixAlignmentDeletions.js
   run script glue/covSetIsLLinneage.js
+  # detect implausible insertions / deletions and set flags accordingly
+  run script glue/covDetectImplausibleIndels.js
+  
   run file glue/covGeneratePhylogeny.glue
   run file glue/covRerootPhylogeny.glue
   exit
