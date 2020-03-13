@@ -250,7 +250,7 @@ function visualisePhyloAsSvg(document) {
 	if(pxHeight == "auto") {
 		var numTaxa = glue.command(["count", "sequence", "-w", "include_in_ref_tree = true"]).countResult.count;
 		var leafHeightPx = 15;
-		pxHeight = (numTaxa * leafHeightPx) / 0.96; // the division here is to account for the 2% top/bottom margin which the tree visualiser will apply.
+		pxHeight = Math.ceil((numTaxa * leafHeightPx) / 0.96); // the division here is to account for the 2% top/bottom margin which the tree visualiser will apply.
 	}
 	
 	glue.inMode("module/covTreeVisualiser", function() {
