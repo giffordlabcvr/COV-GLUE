@@ -6,11 +6,17 @@ project cov
   # Unconstrained alignment
   module covSimpleFastaAlignmentImporter import AL_GISAID_UNCONSTRAINED -f alignments/AL_GISAID_UNCONSTRAINED.fna 
 
-  # empty at the moment, will get populated opportunistically during the deletions phase.
+  # empty at the moment, will get populated opportunistically during covFixAlignmentDeletions.js
   create alignment AL_GISAID_CONSTRAINED -r REF_MASTER_WUHAN_HU_1 
 
+  # fix incorrect deletions from MAFFT
+  run script glue/covFixAlignmentDeletions.js
+  
   # Not strictly necessary here, but want to keep in line with other build.
   run script glue/covSetIsLLinneage.js
+
+  # detect implausible insertions / deletions and set flags accordingly
+  run script glue/covDetectImplausibleIndels.js
 
   # generate deletions
   run script glue/covGenerateGisaidDeletions.js
@@ -19,7 +25,6 @@ project cov
   run script glue/covGenerateGisaidReplacements.js
 
   # generate insertions
-  # if non-codon-aligned insertions are detected at this step, an error is thrown
   run script glue/covGenerateGisaidInsertions.js
 
   # import phylogeny

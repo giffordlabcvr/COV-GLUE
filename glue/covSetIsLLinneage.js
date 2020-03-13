@@ -16,8 +16,8 @@ _.each(proteinAlmt.aminoAcidFasta.sequences, function(membObj) {
 	} else if(membObj.sequence == "S") {
 		seqIdToIsLLineage[membObj.id] = false;
 	} else if(membObj.id == "EPI_ISL_404253") {
-		// actually a mix of S and L.
-		seqIdToIsLLineage[membObj.id] = true;
+		// actually a mix of S and L, but groups in the S lineage.
+		seqIdToIsLLineage[membObj.id] = false;
 	} else if(membObj.id == "EPI_ISL_414380" || membObj.id == "EPI_ISL_414379" || membObj.id == "EPI_ISL_414378") {
 		// don't cover the region, but actually in the S linage.
 		seqIdToIsLLineage[membObj.id] = false;
