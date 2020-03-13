@@ -4,7 +4,9 @@ run file glue/covInitProject.glue
 
 project cov
   run file glue/covRegenerateGisaidAlignment.glue
-    # fix incorrect deletions from MAFFT
+  # empty at the moment, will get populated opportunistically during covFixAlignmentDeletions.js
+  create alignment AL_GISAID_CONSTRAINED -r REF_MASTER_WUHAN_HU_1 
+  # fix incorrect deletions from MAFFT
   run script glue/covFixAlignmentDeletions.js
   run script glue/covSetIsLLinneage.js
   run file glue/covGeneratePhylogeny.glue
