@@ -18,13 +18,13 @@ feature SL3 set field displayName "5' stem loop 3"
 create feature SL4 -p 5UTR "5' stem loop 4"
 feature SL4 set field displayName "5' stem loop 4"
 
-create feature SL5A -p 5UTR "5' stem loop 5A"
+create feature SL5A -p whole_genome "5' stem loop 5A"
 feature SL5A set field displayName "5' stem loop 5A"
 
-create feature SL6 -p 5UTR "5' stem loop 6"
+create feature SL6 -p whole_genome "5' stem loop 6"
 feature SL6 set field displayName "5' stem loop 6"
 
-create feature SL7 -p 5UTR "5' stem loop 7"
+create feature SL7 -p whole_genome "5' stem loop 7"
 feature SL7 set field displayName "5' stem loop 7"
 
 
