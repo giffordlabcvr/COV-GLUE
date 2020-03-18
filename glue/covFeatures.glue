@@ -6,6 +6,28 @@ feature whole_genome set metatag INFORMATIONAL true
 create feature 5UTR -p whole_genome "5' untranslated region"
 feature 5UTR set field displayName "5' UTR"
 
+create feature SL1 -p 5UTR "5' stem loop 1"
+feature SL1 set field displayName "5' stem loop 1"
+
+create feature SL2 -p 5UTR "5' stem loop 2"
+feature SL2 set field displayName "5' stem loop 2"
+
+create feature SL3 -p 5UTR "5' stem loop 3"
+feature SL3 set field displayName "5' stem loop 3"
+
+create feature SL4 -p 5UTR "5' stem loop 4"
+feature SL4 set field displayName "5' stem loop 4"
+
+create feature SL5A -p 5UTR "5' stem loop 5A"
+feature SL5A set field displayName "5' stem loop 5A"
+
+create feature SL6 -p 5UTR "5' stem loop 6"
+feature SL6 set field displayName "5' stem loop 6"
+
+create feature SL7 -p 5UTR "5' stem loop 7"
+feature SL7 set field displayName "5' stem loop 7"
+
+
 create feature ORF_1a -p whole_genome
 feature ORF_1a
   set field displayName "ORF 1a"

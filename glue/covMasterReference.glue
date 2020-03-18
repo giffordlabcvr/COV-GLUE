@@ -12,7 +12,42 @@ reference REF_MASTER_WUHAN_HU_1
   feature-location 5UTR
 	add segment 1 265
 	exit
-    
+
+  add feature-location SL1
+  feature-location SL1
+	add segment 7 33
+	exit
+
+  add feature-location SL2
+  feature-location SL2
+	add segment 44 60
+	exit
+  
+  add feature-location SL3
+  feature-location SL3
+	add segment 61 75
+	exit
+
+  add feature-location SL4
+  feature-location SL4
+	add segment 83 127
+	exit
+  
+  add feature-location SL5A
+  feature-location SL5A
+	add segment 150 297
+	exit
+
+  add feature-location SL6
+  feature-location SL6
+	add segment 302 344
+	exit
+
+  add feature-location SL7
+  feature-location SL7
+	add segment 349 395
+	exit
+  
   add feature-location ORF_1ab
   feature-location ORF_1ab
     add segment 266 13465 --spliceIndex 1
