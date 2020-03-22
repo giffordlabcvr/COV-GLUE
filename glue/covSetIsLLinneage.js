@@ -1,35 +1,53 @@
 glue.command(["multi-unset", "field", "sequence", "-a", "is_l_lineage"]);
 
-var seqIdToIsLLineage = {};
 var proteinAlmt;
 
 glue.inMode("module/covFastaProteinAlignmentExporterSeqIdOnly", function() {
-	proteinAlmt = glue.command(["export", "AL_GISAID_UNCONSTRAINED", "-r", "REF_MASTER_WUHAN_HU_1", "-f", "ORF_8", "-l", "84", "84", "-a", "-p"]);
+	proteinAlmt = glue.command(["export", "AL_GISAID_UNCONSTRAINED", 
+			"-r", "REF_MASTER_WUHAN_HU_1", "-f", "ORF_8", "-l", "84", "84", 
+			"-w", "sequence.include_in_ref_tree = true", 
+			"-p"]);
 });
+
+var seqIdToOrf8Codon84Aa = {};
 
 _.each(proteinAlmt.aminoAcidFasta.sequences, function(membObj) {
-	if(membObj.id == "EPI_ISL_413017") {
-		// in the L lineage but has flipped to S
-		// as of 12/03/2020 (might group elsewhere next time)
-		seqIdToIsLLineage[membObj.id] = true;
-	} else if(membObj.sequence == "L") {
-		seqIdToIsLLineage[membObj.id] = true;
-	} else if(membObj.sequence == "S") {
-		seqIdToIsLLineage[membObj.id] = false;
-	} else if(membObj.id == "EPI_ISL_404253") {
-		// actually a mix of S and L, but groups in the L lineage as of 12/03/2020 (might group elsewhere next time)
-		seqIdToIsLLineage[membObj.id] = true;
-	} else if(membObj.id == "EPI_ISL_414380" || membObj.id == "EPI_ISL_414379" || membObj.id == "EPI_ISL_414378") {
-		// don't cover the region, but actually in the S linage.
-		seqIdToIsLLineage[membObj.id] = false;
-	} else {
-		glue.log("SEVERE", "Unexpected residue at ORF 8 position 84", membObj);
-		throw new Error("Unexpected residue at ORF 8 position 84: sequenceID "+membObj.id+", residue: "+membObj.sequence);
-	}
+	seqIdToOrf8Codon84Aa[membObj.id] = membObj.sequence;
 });
 
-_.each(_.pairs(seqIdToIsLLineage), function(pair) {
-	glue.inMode("sequence/cov-gisaid/"+pair[0], function() {
-		glue.command(["set", "field", "is_l_lineage", pair[1]]);
+// look at the sequence plus its 10 nearest neighbours in the tree, what is happening in ORF 8 
+// take a majority vote. If equivocal then throw an error.
+var seqIdToNeighbours;
+
+glue.inMode("module/covPhyloUtility", function() {
+	var resultRows = glue.tableToObjects(glue.command(["alignment-phylogeny", "list", "neighbours", "AL_GISAID_UNCONSTRAINED", "phylogeny", 
+		"-n", "10"]));
+	seqIdToNeighbours = _.groupBy(resultRows, function(resultRow) { return resultRow["startSequenceID"];});
+});
+
+_.each(_.pairs(seqIdToNeighbours), function(pair) {
+	var isLLineage;
+	var numL = 0;
+	var numS = 0;
+	var seqID = pair[0];
+	if(seqIdToOrf8Codon84Aa[seqID] == "L") {
+		numL++;
+	} else if(seqIdToOrf8Codon84Aa[seqID] == "S") {
+		numS++;
+	}
+	_.each(pair[1], function(resultRow) {
+		if(seqIdToOrf8Codon84Aa[resultRow.neighbourSequenceID] == "L") {
+			numL++;
+		} else if(seqIdToOrf8Codon84Aa[resultRow.neighbourSequenceID] == "S") {
+			numS++;
+		}
+	});
+	if(numL == numS) {
+		throw new Error("Equal number of L ("+numL+") and S ("+numS+") in phylogenetic neighbourhood.");
+	}
+	isLLineage = numL > numS;
+	
+	glue.inMode("sequence/cov-gisaid/"+seqID, function() {
+		glue.command(["set", "field", "is_l_lineage", isLLineage]);
 	});
 });
