@@ -29,7 +29,7 @@ _.each(featuresList, function(featureObj) {
 var implausibleDeletionAlmtMembers = [];
 var implausibleInsertionAlmtMembers = [];
 
-glue.inMode("alignment/AL_GISAID_UNCONSTRAINED", function() {
+glue.inMode("alignment/AL_GISAID_CONSTRAINED", function() {
 	var almtMemberObjs = glue.tableToObjects(glue.command(["list", "member"]));
 	_.each(almtMemberObjs, function(almtMemberObj) {
 		glue.inMode("member/"+almtMemberObj["sequence.source.name"]+"/"+almtMemberObj["sequence.sequenceID"], function() {

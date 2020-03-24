@@ -1,20 +1,16 @@
-# this project build targets the web resource and expects updated alignment and tree files to be in place.
+# this project build targets the web resource and expects updated 
+# alignment, tree files and sequence flags, to be in place.
 
 run file glue/covInitProject.glue
 
 project cov
-  # Unconstrained alignment
-  module covSimpleFastaAlignmentImporter import AL_GISAID_UNCONSTRAINED -f alignments/AL_GISAID_UNCONSTRAINED.fna 
 
-  # empty at the moment, will get populated opportunistically during covFixAlignmentDeletions.js
-  create alignment AL_GISAID_CONSTRAINED -r REF_MASTER_WUHAN_HU_1 
-
-  # fix incorrect deletions from MAFFT
-  run script glue/covFixAlignmentDeletions.js
-
-  # detect implausible insertions / deletions and set flags accordingly
-  run script glue/covDetectImplausibleIndels.js
-
+  # import pre-built constrained alignment
+  import alignment -f alignments/AL_GISAID_CONSTRAINED.json
+  
+  # saved sequence flags from almtTree build
+  module covFlagsTextFilePopulator populate -f tabular/sequenceFlags.txt
+  
   # generate deletions
   run script glue/covGenerateGisaidDeletions.js
 
@@ -26,11 +22,8 @@ project cov
 
   # import phylogeny
   module covPhyloImporter
-    import phylogeny AL_GISAID_UNCONSTRAINED -w "sequence.include_in_ref_tree = true" -i trees/gisaidOutgroupRooted.tree NEWICK_BOOTSTRAPS -f phylogeny
+    import phylogeny AL_GISAID_CONSTRAINED -w "sequence.include_in_ref_tree = true" -i trees/gisaidOutgroupRooted.tree NEWICK_BOOTSTRAPS -f phylogeny
     exit
-
-  # Not strictly necessary here, but want to keep in line with other build.
-  run script glue/covSetIsLLinneage.js
 
   # Validate
   validate

@@ -3,7 +3,7 @@
 create module --fileName modules/covGisaidFastaImporter.xml
 create module --fileName modules/covGisaidAcknowledgementsTextFilePopulator.xml
 create module --fileName modules/covGisaidMetadataTextFilePopulator.xml
-
+create module --fileName modules/covFlagsTextFilePopulator.xml
 create module --fileName modules/covMafftAligner.xml
 create module --fileName modules/covBlastFastaAlignmentImporter.xml
 create module --fileName modules/covRaxmlPhylogenyGenerator.xml
@@ -52,3 +52,5 @@ create module --fileName modules/covListDeletionsRenderer.xml --loadResources
 create module --fileName modules/covHanada2006ReplacementClassifier.xml
 create module --fileName modules/covGrantham1974DistanceCalculator.xml
 create module --fileName modules/covMiyata1979DistanceCalculator.xml
+
+

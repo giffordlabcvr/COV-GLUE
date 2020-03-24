@@ -41,6 +41,7 @@ schema-project cov
     create field analyse_aa_replacements BOOLEAN
     create field analyse_aa_deletions BOOLEAN
     create field analyse_aa_insertions BOOLEAN
+    create field cdhit_cluster INTEGER
     exit
 
   table feature

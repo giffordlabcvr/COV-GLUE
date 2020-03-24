@@ -56,7 +56,7 @@ _.each(dtu3clPredictions, function(dtu3clPrediction) {
 var dtu3clMatches;
 var papainMatches;
 
-glue.inMode("alignment/AL_GISAID_UNCONSTRAINED/member/cov-gisaid/EPI_ISL_402125", function() {
+glue.inMode("alignment/AL_GISAID_CONSTRAINED/member/cov-gisaid/EPI_ISL_402125", function() {
 	dtu3clMatches = glue.tableToObjects(
 			glue.command(["variation", "scan", "-r", "REF_MASTER_WUHAN_HU_1", "-f", "ORF_1ab", 
 				"--whereClause", "name like 'cov:clvg_dtu3cl%'", "--showMatchesAsTable"]));

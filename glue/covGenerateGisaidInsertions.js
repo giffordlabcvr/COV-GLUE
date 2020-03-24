@@ -27,7 +27,7 @@ var orf1abInsertions = {};
 var numInsertions = 0;
 
 _.each(featuresList, function(featureObj) {
-	glue.inMode("alignment/AL_GISAID_UNCONSTRAINED", function() {
+	glue.inMode("alignment/AL_GISAID_CONSTRAINED", function() {
 		var almtMemberObjs = glue.tableToObjects(glue.command(["list", "member", "-w", "sequence.analyse_aa_insertions = true"]));
 		_.each(almtMemberObjs, function(almtMemberObj) {
 			glue.inMode("member/"+almtMemberObj["sequence.source.name"]+"/"+almtMemberObj["sequence.sequenceID"], function() {

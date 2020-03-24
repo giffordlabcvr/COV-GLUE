@@ -3,7 +3,7 @@ glue.command(["multi-unset", "field", "sequence", "-a", "is_l_lineage"]);
 var proteinAlmt;
 
 glue.inMode("module/covFastaProteinAlignmentExporterSeqIdOnly", function() {
-	proteinAlmt = glue.command(["export", "AL_GISAID_UNCONSTRAINED", 
+	proteinAlmt = glue.command(["export", "AL_GISAID_CONSTRAINED", 
 			"-r", "REF_MASTER_WUHAN_HU_1", "-f", "ORF_8", "-l", "84", "84", 
 			"-w", "sequence.include_in_ref_tree = true", 
 			"-p"]);
@@ -20,7 +20,7 @@ _.each(proteinAlmt.aminoAcidFasta.sequences, function(membObj) {
 var seqIdToNeighbours;
 
 glue.inMode("module/covPhyloUtility", function() {
-	var resultRows = glue.tableToObjects(glue.command(["alignment-phylogeny", "list", "neighbours", "AL_GISAID_UNCONSTRAINED", "phylogeny", 
+	var resultRows = glue.tableToObjects(glue.command(["alignment-phylogeny", "list", "neighbours", "AL_GISAID_CONSTRAINED", "phylogeny", 
 		"-n", "10"]));
 	seqIdToNeighbours = _.groupBy(resultRows, function(resultRow) { return resultRow["startSequenceID"];});
 });
