@@ -11,9 +11,6 @@ project cov
 
   # fix incorrect deletions from MAFFT
   run script glue/covFixAlignmentDeletions.js
-  
-  # Not strictly necessary here, but want to keep in line with other build.
-  run script glue/covSetIsLLinneage.js
 
   # detect implausible insertions / deletions and set flags accordingly
   run script glue/covDetectImplausibleIndels.js
@@ -31,6 +28,9 @@ project cov
   module covPhyloImporter
     import phylogeny AL_GISAID_UNCONSTRAINED -w "sequence.include_in_ref_tree = true" -i trees/gisaidOutgroupRooted.tree NEWICK_BOOTSTRAPS -f phylogeny
     exit
+
+  # Not strictly necessary here, but want to keep in line with other build.
+  run script glue/covSetIsLLinneage.js
 
   # Validate
   validate
