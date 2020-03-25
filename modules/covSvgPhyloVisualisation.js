@@ -58,7 +58,7 @@ function visualisePhyloAsSvg(document) {
 
 	var almtMemberObjs;
 	glue.inMode("alignment/AL_GISAID_CONSTRAINED", function() {
-		almtMemberObjs = glue.tableToObjects(glue.command(["list", "member"]));
+		almtMemberObjs = glue.tableToObjects(glue.command(["list", "member", "-w", "sequence.include_in_ref_tree = true"]));
 		// generate a map of sequenceID to AA value for the GISAID sequences.
 		_.each(almtMemberObjs, function(almtMemberObj) {
 			var sequenceID = almtMemberObj["sequence.sequenceID"];
