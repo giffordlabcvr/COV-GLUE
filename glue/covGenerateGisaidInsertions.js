@@ -24,7 +24,8 @@ _.each(featuresList, function(featureObj) {
 var insertionsSet = {};
 var orf1aInsertions = {}; 
 var orf1abInsertions = {}; 
-var numInsertions = 0;
+var expectedSeqsWithInsertions = ["EPI_ISL_413019", "EPI_ISL_414588"];
+var actualSeqsWithInsertions = [];
 
 _.each(featuresList, function(featureObj) {
 	glue.inMode("alignment/AL_GISAID_CONSTRAINED", function() {
@@ -102,7 +103,6 @@ _.each(_.values(orf1abInsertions), function(insertionObj) {
 });
 
 function createInsertion(insertionObj) {
-	numInsertions++;
 	glue.log("FINEST", "Creating insertion object", insertionObj);
 	var variationName = "cov_aa_ins:"+insertionObj.id;
 	glue.inMode("reference/REF_MASTER_WUHAN_HU_1/feature-location/"+insertionObj.feature, function() {
@@ -157,11 +157,16 @@ function createInsertion(insertionObj) {
 		glue.inMode("custom-table-row/cov_insertion_sequence/"+linkObjId, function() {
 			glue.command(["set", "link-target", "cov_insertion", "custom-table-row/cov_insertion/"+insertionObj.id]);
 			glue.command(["set", "link-target", "sequence", "sequence/"+sourceName+"/"+sequenceID]);
+			actualSeqsWithInsertions.push(sequenceID);
 		});
 	});
 }
 
+actualSeqsWithInsertions = _.uniq(actualSeqsWithInsertions);
+actualSeqsWithInsertions.sort();
 
-if(numInsertions > 1) {
-	throw new Error("Expected single NSP6 insertion in a Swiss sequence, please check.");
+if(!_.isEqual(expectedSeqsWithInsertions, actualSeqsWithInsertions)) {
+	glue.log("SEVERE", "actualSeqsWithInsertions", actualSeqsWithInsertions);
+	glue.log("SEVERE", "expectedSeqsWithInsertions", expectedSeqsWithInsertions);
+	throw new Error("Actual set of sequences with insertions did not match expected.");
 }
