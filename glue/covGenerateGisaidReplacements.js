@@ -22,7 +22,7 @@ _.each(featuresList, function(featureObj) {
 			refAaObjsMap[refAaObj.codonLabel] = refAaObj;
 		});
 	});
-	glue.inMode("alignment/AL_GISAID_UNCONSTRAINED", function() {
+	glue.inMode("alignment/AL_GISAID_CONSTRAINED", function() {
 		var almtMemberObjs = glue.tableToObjects(glue.command(["list", "member", "-w", "sequence.analyse_aa_replacements = true"]));
 		_.each(almtMemberObjs, function(almtMemberObj) {
 			glue.inMode("member/"+almtMemberObj["sequence.source.name"]+"/"+almtMemberObj["sequence.sequenceID"], function() {

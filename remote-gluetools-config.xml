@@ -57,6 +57,21 @@
 			<value>/opt/gluetools/mafft/tmp</value>
 		</property>
 
+		<!-- CD-HIT -->
+		<property>
+			<name>gluetools.core.programs.cdhit.cdhitest.executable</name>
+			<value>/opt/gluetools/cdhit/cd-hit-est</value>
+		</property>
+		<property>
+			<name>gluetools.core.programs.cdhit.cdhitest.cpus</name>
+			<value>4</value>
+		</property>
+		<property>
+			<name>gluetools.core.programs.cdhit.cdhitest.temp.dir</name>
+			<value>/opt/gluetools/cdhit/tmp</value>
+		</property>
+
+
 		<!-- Cayenne -->
 		<property>
 			<name>cayenne.querycache.size</name>

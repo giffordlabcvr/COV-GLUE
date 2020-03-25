@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <maxLikelihoodPlacer>
-    <alignmentAlignmentName>AL_GISAID_UNCONSTRAINED</alignmentAlignmentName>
-    <phyloAlignmentName>AL_GISAID_UNCONSTRAINED</phyloAlignmentName>
+    <alignmentAlignmentName>AL_GISAID_CONSTRAINED</alignmentAlignmentName>
+    <phyloAlignmentName>AL_GISAID_CONSTRAINED</phyloAlignmentName>
     <phyloFieldName>phylogeny</phyloFieldName>
 </maxLikelihoodPlacer>

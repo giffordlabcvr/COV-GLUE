@@ -29,7 +29,7 @@ _.each(featuresList, function(featureObj) {
 var implausibleDeletionAlmtMembers = [];
 var implausibleInsertionAlmtMembers = [];
 
-glue.inMode("alignment/AL_GISAID_UNCONSTRAINED", function() {
+glue.inMode("alignment/AL_GISAID_CONSTRAINED", function() {
 	var almtMemberObjs = glue.tableToObjects(glue.command(["list", "member"]));
 	_.each(almtMemberObjs, function(almtMemberObj) {
 		glue.inMode("member/"+almtMemberObj["sequence.source.name"]+"/"+almtMemberObj["sequence.sequenceID"], function() {
@@ -82,7 +82,7 @@ _.each(implausibleDeletionAlmtMembers, function(almtMemberObj) {
 		glue.command(["set", "field", "analyse_aa_replacements", "false"]);
 		glue.command(["set", "field", "analyse_aa_deletions", "false"]);
 		glue.command(["set", "field", "analyse_aa_insertions", "false"]);
-		glue.command(["set", "field", "include_in_ref_tree", "false"]);
+		glue.command(["set", "field", "ref_tree_candidate", "false"]);
 	});
 });
 
@@ -92,7 +92,7 @@ _.each(implausibleInsertionAlmtMembers, function(almtMemberObj) {
 		glue.command(["set", "field", "analyse_aa_replacements", "false"]);
 		glue.command(["set", "field", "analyse_aa_deletions", "false"]);
 		glue.command(["set", "field", "analyse_aa_insertions", "false"]);
-		glue.command(["set", "field", "include_in_ref_tree", "false"]);
+		glue.command(["set", "field", "ref_tree_candidate", "false"]);
 	});
 });
 

@@ -1,23 +1,22 @@
-# this project build targets the web resource and expects updated alignment and tree files to be in place.
+# this project build targets the web resource and expects updated 
+# alignment, tree files and sequence flags, to be in place.
 
 run file glue/covInitProject.glue
 
 project cov
-  # Unconstrained alignment
-  module covSimpleFastaAlignmentImporter import AL_GISAID_UNCONSTRAINED -f alignments/AL_GISAID_UNCONSTRAINED.fna 
+ 
+  # import cov-gisaid individual fastas.
+  import source sources/cov-gisaid
 
-  # empty at the moment, will get populated opportunistically during covFixAlignmentDeletions.js
-  create alignment AL_GISAID_CONSTRAINED -r REF_MASTER_WUHAN_HU_1 
+  # other sequence related data.
+  run file glue/covLoadSequenceData.glue
 
-  # fix incorrect deletions from MAFFT
-  run script glue/covFixAlignmentDeletions.js
+  # import pre-built constrained alignment
+  import alignment -f alignments/AL_GISAID_CONSTRAINED.json
   
-  # Not strictly necessary here, but want to keep in line with other build.
-  run script glue/covSetIsLLinneage.js
-
-  # detect implausible insertions / deletions and set flags accordingly
-  run script glue/covDetectImplausibleIndels.js
-
+  # saved sequence flags from almtTree build
+  module covFlagsTextFilePopulator populate -f tabular/sequenceFlags.txt
+  
   # generate deletions
   run script glue/covGenerateGisaidDeletions.js
 
@@ -29,7 +28,7 @@ project cov
 
   # import phylogeny
   module covPhyloImporter
-    import phylogeny AL_GISAID_UNCONSTRAINED -w "sequence.include_in_ref_tree = true" -i trees/gisaidOutgroupRooted.tree NEWICK_BOOTSTRAPS -f phylogeny
+    import phylogeny AL_GISAID_CONSTRAINED -w "sequence.include_in_ref_tree = true" -i trees/gisaidOutgroupRooted.tree NEWICK_BOOTSTRAPS -f phylogeny
     exit
 
   # Validate

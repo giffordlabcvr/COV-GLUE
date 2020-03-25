@@ -35,12 +35,14 @@ schema-project cov
     create field place_sampled VARCHAR 100
     create field originating_lab VARCHAR 300
     create field submitting_lab VARCHAR 300
-    create field authors VARCHAR 500
+    create field authors CLOB
+    create field ref_tree_candidate BOOLEAN
     create field include_in_ref_tree BOOLEAN
     create field is_l_lineage BOOLEAN
     create field analyse_aa_replacements BOOLEAN
     create field analyse_aa_deletions BOOLEAN
     create field analyse_aa_insertions BOOLEAN
+    create field cdhit_cluster INTEGER
     exit
 
   table feature

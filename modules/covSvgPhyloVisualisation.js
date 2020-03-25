@@ -57,7 +57,7 @@ function visualisePhyloAsSvg(document) {
 	glue.logInfo("document.inputDocument", document.inputDocument);
 
 	var almtMemberObjs;
-	glue.inMode("alignment/AL_GISAID_UNCONSTRAINED", function() {
+	glue.inMode("alignment/AL_GISAID_CONSTRAINED", function() {
 		almtMemberObjs = glue.tableToObjects(glue.command(["list", "member"]));
 		// generate a map of sequenceID to AA value for the GISAID sequences.
 		_.each(almtMemberObjs, function(almtMemberObj) {
@@ -233,7 +233,7 @@ function visualisePhyloAsSvg(document) {
 		});
 	} else {
 		glue.inMode("module/covPhyloUtility", function() {
-			glueTree = glue.command(["read-alignment-phylogeny", "AL_GISAID_UNCONSTRAINED", "phylogeny"]);
+			glueTree = glue.command(["read-alignment-phylogeny", "AL_GISAID_CONSTRAINED", "phylogeny"]);
 		});
 	}
 

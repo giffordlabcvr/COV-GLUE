@@ -23,6 +23,10 @@
 		<annotationName>is_l_lineage</annotationName>
 		<template>${renderNestedProperty('sequence.is_l_lineage')}</template>
 	</freemarkerAnnotationGenerator>
+	<freemarkerAnnotationGenerator>
+		<annotationName>cdhit_cluster</annotationName>
+		<template>${renderNestedProperty('sequence.cdhit_cluster')}</template>
+	</freemarkerAnnotationGenerator>
 	<figtreeProperty type="integer" name="tipLabels.fontSize">13</figtreeProperty>
 	<figtreeProperty name="tipLabels.colorAttribute">region</figtreeProperty>
 	<figtreeProperty name="tipLabels.displayAttribute">isolate</figtreeProperty>
