@@ -17,6 +17,11 @@
         <nullRegex>-</nullRegex>
     </textFileColumn>
     <textFileColumn>
+        <header>ref_tree_candidate</header>
+        <property>ref_tree_candidate</property>
+        <nullRegex>-</nullRegex>
+    </textFileColumn>
+    <textFileColumn>
         <header>analyse_aa_replacements</header>
         <property>analyse_aa_replacements</property>
         <nullRegex>-</nullRegex>

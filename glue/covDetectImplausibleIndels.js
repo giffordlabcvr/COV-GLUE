@@ -82,7 +82,7 @@ _.each(implausibleDeletionAlmtMembers, function(almtMemberObj) {
 		glue.command(["set", "field", "analyse_aa_replacements", "false"]);
 		glue.command(["set", "field", "analyse_aa_deletions", "false"]);
 		glue.command(["set", "field", "analyse_aa_insertions", "false"]);
-		glue.command(["set", "field", "include_in_ref_tree", "false"]);
+		glue.command(["set", "field", "ref_tree_candidate", "false"]);
 	});
 });
 
@@ -92,7 +92,7 @@ _.each(implausibleInsertionAlmtMembers, function(almtMemberObj) {
 		glue.command(["set", "field", "analyse_aa_replacements", "false"]);
 		glue.command(["set", "field", "analyse_aa_deletions", "false"]);
 		glue.command(["set", "field", "analyse_aa_insertions", "false"]);
-		glue.command(["set", "field", "include_in_ref_tree", "false"]);
+		glue.command(["set", "field", "ref_tree_candidate", "false"]);
 	});
 });
 
