@@ -4,5 +4,8 @@
 	<idParser>
 		<matchPattern>(EPI_ISL_\d+)</matchPattern>
 	</idParser>
+	<!-- to handle sequence from Mexico -->
 	<convertHyphensToNs>true</convertHyphensToNs>
+	<!-- to handle sequence from PHE -->
+	<deleteSpaces>true</deleteSpaces>
 </fastaImporter>
