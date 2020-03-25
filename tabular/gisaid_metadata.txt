@@ -1,5 +1,24 @@
 Accession ID	Passage details/history	Submission Date	Status code	Status comment	Host
-EPI_ISL_417186	original	2020-03-24	normal		Human
+EPI_ISL_417191	Original	2020-03-24	info	Insertion of 1 and 2 nucleotides at two different locations when compared to the reference sequence.	Human
+EPI_ISL_417200	Original	2020-03-24	normal	6 single nucleotides gaps at different location when compared to the reference sequence. %UniqueMutations 0.08%.	Human
+EPI_ISL_417192	Original	2020-03-24	normal		Human
+EPI_ISL_417194	Original	2020-03-24	normal		Human
+EPI_ISL_417201	Original	2020-03-24	normal	5 single nucleotides gaps at different location when compared to the reference sequence. %UniqueMutations 0.09%.	Human
+EPI_ISL_417196	Original	2020-03-24	normal		Human
+EPI_ISL_417198	Original	2020-03-24	normal		Human
+EPI_ISL_417195	Original	2020-03-24	normal	Stretches of NNNs (3.16% of overall sequence).	Human
+EPI_ISL_417211	Original	2020-03-25	info	Gap of 3 nucleotides when compared to the reference sequence.	Human
+EPI_ISL_417202	Original	2020-03-24	normal	3 single nucleotides gaps at different location when compared to the reference sequence. %UniqueMutations 0.08%.	Human
+EPI_ISL_417212	Original	2020-03-25	normal	0.09%UniqueMutations relative to reference sequence. Gap of 1 nucleotide when compared to reference sequence.	Human
+EPI_ISL_417190	Original	2020-03-24	normal	Stretches of NNNs (3.84% of overall sequence).	Human
+EPI_ISL_417203	Original	2020-03-24	normal	5 single nucleotides gaps at different location when compared to the reference sequence. %UniqueMutations 0.08%.	Human
+EPI_ISL_417189	Original	2020-03-24	normal	0.06%UniqueMutations relative to reference sequence.	Human
+EPI_ISL_417184	Original	2020-03-24	normal	Stretches of NNNs (3.81% of overall sequence).	Human
+EPI_ISL_417183	Original	2020-03-24	normal	Stretches of NNNs (3.09% of overall sequence).	Human
+EPI_ISL_417177	Original	2020-03-24	normal	Stretches of NNNs (3.34% of overall sequence).	Human
+EPI_ISL_417204	Original	2020-03-24	normal	6 single nucleotides gaps at different location when compared to the reference sequence. % Unique Mutations 0.08%.	Human
+EPI_ISL_417179	Original	2020-03-24	normal	Long stretches of NNNs (5.15% of overall sequence).	Human
+EPI_ISL_417186	Original	2020-03-24	normal		Human
 EPI_ISL_417176	Original	2020-03-24	normal		Human
 EPI_ISL_417178	Original	2020-03-24	normal		Human
 EPI_ISL_417180	Original	2020-03-24	normal	Stretches of NNNs (1.82% of overall sequence).	Human
@@ -475,7 +494,7 @@ EPI_ISL_416429	Vero	2020-03-21	normal		Human
 EPI_ISL_416428	Vero	2020-03-21	normal		Human
 EPI_ISL_416427	Vero	2020-03-21	info	2 one nucleotide gaps relative to reference sequence.	Human
 EPI_ISL_416027	Original	2020-03-19	warn	Long stretches of NNNs (5.89% of overall sequence).	Human
-EPI_ISL_415978	Original	2020-03-19	normal	Stretches of NNNs (4.91% of overall sequence).	Human
+EPI_ISL_415978	Original	2020-03-19	normal	Stretches of NNNs (4.91% of overall sequence). NSP11 is missing.	Human
 EPI_ISL_416416	Original	2020-03-20	warn	Long stretches of NNNs (7.58% of overall sequence).	Human
 EPI_ISL_416417	Original	2020-03-20	normal	Stretches of NNNs (4.96% of overall sequence).	Human
 EPI_ISL_416418	Original	2020-03-20	warn	Long stretches of NNNs (10.65% of overall sequence).	Human
@@ -669,19 +688,19 @@ EPI_ISL_415631	Original	2020-03-18	normal		Human
 EPI_ISL_415630	Original	2020-03-18	normal		Human
 EPI_ISL_415628	Original	2020-03-18	normal	Stretches of NNNs (2.27% of overall sequence). 	Human
 EPI_ISL_415617	Original	2020-03-18	normal		Human
-EPI_ISL_415618	Original	2020-03-18	normal	Stretches of NNNs (1.45% overall sequence). 0.14%UniqueMutations relative to reference sequence.	Human
+EPI_ISL_415618	Original	2020-03-18	normal	Stretches of NNNs (1.45% of overall sequence). NSP1 is missing. 0.09% Unique Mutations.	Human
 EPI_ISL_415619	Original	2020-03-18	normal		Human
 EPI_ISL_415620	Original	2020-03-18	normal		Human
 EPI_ISL_415621	Original	2020-03-18	normal		Human
 EPI_ISL_415622	Original	2020-03-18	normal		Human
-EPI_ISL_415623	Original	2020-03-18	normal	Stretches of NNNs (1.15% overall sequence).	Human
+EPI_ISL_415623	Original	2020-03-18	normal	Stretches of NNNs (1.15% of overall sequence).	Human
 EPI_ISL_415624	Original	2020-03-18	normal		Human
 EPI_ISL_415625	Original	2020-03-18	normal		Human
 EPI_ISL_415626	Original	2020-03-18	info	Gap of 3 nucleotides when compared to reference sequence.	Human
 EPI_ISL_415627	Original	2020-03-18	normal		Human
 EPI_ISL_415591	Original	2020-03-18	normal		Human
 EPI_ISL_415592	Original	2020-03-18	normal		Human
-EPI_ISL_415593	Original	2020-03-18	normal	Stretches of NNNs (1.74% overall sequence). 0.21%UniqueMutations relative to reference sequence.	Human
+EPI_ISL_415593	Original	2020-03-18	normal	Stretches of NNNs (1.74% of overall sequence). 0.16% Unique Mutations.	Human
 EPI_ISL_415594	Original	2020-03-18	normal		Human
 EPI_ISL_415595	Original	2020-03-18	normal		Human
 EPI_ISL_415596	Original	2020-03-18	normal		Human
@@ -689,7 +708,7 @@ EPI_ISL_415597	Original	2020-03-18	normal		Human
 EPI_ISL_415598	Original	2020-03-18	normal		Human
 EPI_ISL_415605	Original	2020-03-18	normal		Human
 EPI_ISL_415606	Original	2020-03-18	normal		Human
-EPI_ISL_415610	Original	2020-03-18	normal	0.06%UniqueMutations relative to reference sequence.	Human
+EPI_ISL_415610	Original	2020-03-18	normal		Human
 EPI_ISL_415611	Original	2020-03-18	normal		Human
 EPI_ISL_415613	Original	2020-03-18	normal		Human
 EPI_ISL_415614	Original	2020-03-18	normal		Human
@@ -701,20 +720,20 @@ EPI_ISL_415601	Original	2020-03-18	normal		Human
 EPI_ISL_415602	Original	2020-03-18	normal		Human
 EPI_ISL_415603	Original	2020-03-18	normal		Human
 EPI_ISL_415604	Original	2020-03-18	normal		Human
-EPI_ISL_415577	Original	2020-03-18	normal	Stretches of NNNs (2.27% overall sequence).	Human
-EPI_ISL_415578	Original	2020-03-18	normal	Stretches of NNNs (1.37% overall sequence).	Human
-EPI_ISL_415579	Original	2020-03-18	normal	Stretches of NNNs (2.14% overall sequence).	Human
-EPI_ISL_415580	Original	2020-03-18	normal	Stretches of NNNs (1.36% overall sequence).	Human
+EPI_ISL_415577	Original	2020-03-18	normal	Stretches of NNNs (2.27% of overall sequence).	Human
+EPI_ISL_415578	Original	2020-03-18	normal	Stretches of NNNs (1.37% of overall sequence).	Human
+EPI_ISL_415579	Original	2020-03-18	normal	Stretches of NNNs (2.14% of overall sequence).	Human
+EPI_ISL_415580	Original	2020-03-18	normal	Stretches of NNNs (1.36% of overall sequence). NSP11 is missing.	Human
 EPI_ISL_415581	Original	2020-03-18	normal		Human
-EPI_ISL_415582	Original	2020-03-18	normal	Stretches of NNNs (1.28% overall sequence).	Human
+EPI_ISL_415582	Original	2020-03-18	normal	Stretches of NNNs (1.28% of overall sequence).	Human
 EPI_ISL_415583	Original	2020-03-18	normal		Human
 EPI_ISL_415584	Original	2020-03-18	normal		Human
-EPI_ISL_415585	Original	2020-03-18	normal	Stretches of NNNs (1.13% overall sequence).	Human
-EPI_ISL_415586	Original	2020-03-18	normal	Stretches of NNNs (1.28% overall sequence).	Human
-EPI_ISL_415587	Original	2020-03-18	normal	Stretches of NNNs (1.42% overall sequence).	Human
+EPI_ISL_415585	Original	2020-03-18	normal	Stretches of NNNs (1.13% of overall sequence).	Human
+EPI_ISL_415586	Original	2020-03-18	normal	Stretches of NNNs (1.28% of overall sequence).	Human
+EPI_ISL_415587	Original	2020-03-18	normal	Stretches of NNNs (1.42% of overall sequence).	Human
 EPI_ISL_415588	Original	2020-03-18	normal		Human
-EPI_ISL_415589	Original	2020-03-18	normal	Stretches of NNNs (1.19% overall sequence).	Human
-EPI_ISL_415590	Original	2020-03-18	normal	Stretches of NNNs (1.51% overall sequence).	Human
+EPI_ISL_415589	Original	2020-03-18	normal	Stretches of NNNs (1.19% of overall sequence).	Human
+EPI_ISL_415590	Original	2020-03-18	normal	Stretches of NNNs (1.51% of overall sequence).	Human
 EPI_ISL_415538	Original	2020-03-17	normal	Stretches of NNNs (1.85% of overall sequence)	Human
 EPI_ISL_415537	Original	2020-03-17	warn	Long stretches of NNNs (8.24% of overall sequence). NSP11 is missing.	Human
 EPI_ISL_415435	Original	2020-03-17	normal	Gap of 254 nucleotides relative to reference sequence	Human
@@ -896,7 +915,6 @@ EPI_ISL_414618	Original	2020-03-15	normal		Human
 EPI_ISL_414617	Original	2020-03-15	normal		Human
 EPI_ISL_414616	Original	2020-03-15	normal		Human
 EPI_ISL_414045	Original	2020-03-11	normal		Human
-EPI_ISL_414601	Original	2020-03-14	normal		Human
 EPI_ISL_414600	Original	2020-03-14	normal		Human
 EPI_ISL_414599	unknown	2020-03-14	normal		Human
 EPI_ISL_414598	Original	2020-03-14	normal	Stretches of NNNs (2.89% of overall sequence). NSP11 is missing.	Human
@@ -1412,7 +1430,7 @@ EPI_ISL_411926	C1	2020-02-21	normal		Human
 EPI_ISL_411915	Original	2020-02-21	normal		Human
 EPI_ISL_411902	Original	2020-02-21	normal		Human
 EPI_ISL_407193	Vero P1	2020-02-04	normal		Human
-EPI_ISL_406799	original	2020-01-30	warn	Long stretches of NNNs (34.45% of overall sequence). NSP11 is missing. NSP7 is missing. NSP6 is missing. NSP13 is missing. NSP15 is missing. 0.37% Unique Mutations	Human
+EPI_ISL_406799	original	2020-01-30	warn	Long stretches of NNNs (34.45% of overall sequence). NSP7 is missing. NSP6 is missing. NSP13 is missing. NSP15 is missing. 0.40% Unique Mutations.	Human
 EPI_ISL_411218	VeroE6/P1	2020-02-19	normal		Human
 EPI_ISL_411220	VeroE6/P3	2020-02-19	normal		Human
 EPI_ISL_411219	VeroE6/P1	2020-02-19	normal		Human
@@ -1454,7 +1472,7 @@ EPI_ISL_408978	Original	2020-02-11	warn	Long stretches of NNNs (5.53% of overall
 EPI_ISL_408513	Original	2020-02-09	normal	Gap of 264 nucleotides when compared to the reference sequence. 26.40% Unique Mutations.	Environment
 EPI_ISL_408512	Original	2020-02-09	normal	Insertion of 42 nucleotides when compared to the reference sequence. Gap of 303 nucleotides when compared to the reference sequence. NSP13 is missing. NSP14 is missing. NS7b is missing. NSP10 is missing. NSP8 is missing. 4.21% Unique Mutations.	Environment
 EPI_ISL_408511	Original	2020-02-09	normal	Gap of 75 nucleotides when compared to the reference sequence. N is missing. NS3 is missing. NSP5 is missing. 0.39% Unique Mutations.	Environment
-EPI_ISL_408487	Original	2020-02-09	normal	Stretches of NNNs (2.32% of overall sequence). N is missing. E is missing. 0.17% Unique Mutations.	Human
+EPI_ISL_408487	Original	2020-02-09	normal	Stretches of NNNs (2.32% of overall sequence). N is missing. E is missing. 0.16% Unique Mutations.	Human
 EPI_ISL_408485	Original	2020-02-09	normal		Human
 EPI_ISL_408483	Original	2020-02-09	normal	Stretches of NNNs (1.08% of overall sequence). NSP4 is missing. 0.19% Unique Mutations.	Human
 EPI_ISL_410218	VeroE6	2020-02-13	normal		Human
@@ -1473,7 +1491,7 @@ EPI_ISL_408666	VeroE6/TMPRSS2	2020-02-10	normal		Human
 EPI_ISL_408665	VeroE6/TMPRSS2	2020-02-10	normal		Human
 EPI_ISL_408515	P1	2020-02-09	normal		Environment
 EPI_ISL_408514	P1	2020-02-09	normal		Environment
-EPI_ISL_407084	VeroE6/TMPRSS2	2020-02-04	normal	Gap of 24 nucleotides when compared to the reference sequence. 0.09% Unique Mutations.	Human
+EPI_ISL_407084	VeroE6/TMPRSS2	2020-02-04	normal	Gap of 24 nucleotides when compared to the reference sequence. 0.08% Unique Mutations.	Human
 EPI_ISL_403931	Original	2020-01-21	normal		Human
 EPI_ISL_403929	Original	2020-01-21	normal		Human
 EPI_ISL_403928	Original	2020-01-21	normal		Human
