@@ -1,9 +1,7 @@
   # project build step that focuses on loading the sequence data and applying any quality filters to it.
 
-  run script glue/covLoadTimeStamp.js
 
-  # Import sequences
-  module covGisaidFastaImporter import -f sequences/gisaid_cov2020_sequences.fasta
+  run script glue/covLoadTimeStamp.js
 
   # Sequence lengths
   run script glue/covSetSequenceLengths.js 

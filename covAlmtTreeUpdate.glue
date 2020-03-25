@@ -3,6 +3,15 @@
 run file glue/covInitProject.glue
 
 project cov
+
+  # Import sequences from non-version-controlled multi-fasta
+  module covGisaidFastaImporter import -f sequences/gisaid_cov2020_sequences.fasta
+  # save sequences back to disk in single fastas
+  export source -p sources cov-gisaid
+
+  # other sequence related data
+  run file glue/covLoadSequenceData.glue
+
   create alignment AL_GISAID_CONSTRAINED -r REF_MASTER_WUHAN_HU_1 
 
   alignment AL_GISAID_CONSTRAINED add member -a

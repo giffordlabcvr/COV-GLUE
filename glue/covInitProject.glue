@@ -12,6 +12,5 @@ project cov
   # M49 country extension
   run file glue/m49_countries/populateM49All.glue
   
-  run file glue/covLoadSequenceData.glue
 
   exit

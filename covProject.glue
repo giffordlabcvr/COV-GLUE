@@ -4,6 +4,12 @@
 run file glue/covInitProject.glue
 
 project cov
+ 
+  # import cov-gisaid individual fastas.
+  import source sources/cov-gisaid
+
+  # other sequence related data.
+  run file glue/covLoadSequenceData.glue
 
   # import pre-built constrained alignment
   import alignment -f alignments/AL_GISAID_CONSTRAINED.json
