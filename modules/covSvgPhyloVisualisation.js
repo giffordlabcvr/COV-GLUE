@@ -45,14 +45,29 @@ function visualisePhyloAsSvg(document) {
 	var aaVisCodonLabel = document.inputDocument.aaVisCodonLabel;
 	var aaVisDeletionStart = document.inputDocument.aaVisDeletionStart;
 	var aaVisDeletionEnd = document.inputDocument.aaVisDeletionEnd;
+	var aaVisInsertionLastBeforeStart = document.inputDocument.aaVisInsertionLastBeforeStart;
+	var aaVisInsertionFirstAfterEnd = document.inputDocument.aaVisInsertionFirstAfterEnd;
+	var aaVisInsertedAas = document.inputDocument.aaVisInsertedAas;
 
 	// map seqID to the AA residue at the requested loc
 	var gisaidSeqIdToAA = {};
 	// map seqID to string of multiple AA residue at the requested loc, used when the nucleotides are ambiguous
 	var gisaidSeqIdToMultipleResidues = {};
 
-	// map seqID to boolean, whether the sequence contains the requested deletion (or a deletion which contains the requested deletion)
+	// map seqID to string code
+	// "deletion" the sequence contains the requested deletion (or a deletion which contains the requested deletion)
+	// "no_deletion" the sequence does not contain the requested deletion
+	// "insufficient_coverage" insufficient coverage to detect whether or not.
 	var gisaidSeqIdToDeletion = {};
+
+	// map seqID to string code
+	// "insertion" the sequence contains the requested insertion
+	// "insertion_different_aas" the sequence contains the requested insertion, but different aas
+	// "no_insertion" the sequence does not contain the requested insertion
+	// "insufficient_coverage" insufficient coverage to detect whether or not.
+	var gisaidSeqIdToInsertion = {};
+	// map seqID to inserted AAs, populated when code is "insertion_different_aas"
+	var gisaidSeqIdToInsertedAAs = {};
 
 	glue.logInfo("document.inputDocument", document.inputDocument);
 
@@ -88,18 +103,43 @@ function visualisePhyloAsSvg(document) {
 					gisaidSeqIdToAA[sequenceID] = memberAa;
 					gisaidSeqIdToMultipleResidues[sequenceID] = multipleResidues;
 				}
-				if(aaVisDeletionStart && aaVisDeletionEnd != null) {
+				// "insufficient_coverage" not generated yet
+				if(aaVisDeletionStart != null && aaVisDeletionEnd != null) {
 					var memberDelObjs = glue.tableToObjects(glue.command(["variation", "scan", 
 						"-r", "REF_MASTER_WUHAN_HU_1", "-f", aaVisFeatureName,
 						"--whereClause", "name = 'cov_aa_del_detect:"+aaVisFeatureName+"'", 
 						"--excludeAbsent", "--showMatchesAsTable"]));
-					gisaidSeqIdToDeletion[sequenceID] = false;
-					_.each(memberDelObjs, function(memberDelObj) {
+					gisaidSeqIdToDeletion[sequenceID] = "no_deletion";
+					for(var i = 0; i < memberDelObjs.length; i++) {
+						var memberDelObj = memberDelObjs[i];
 						if(parseInt(memberDelObj.refFirstCodonDeleted) <= parseInt(aaVisDeletionStart) &&
 								parseInt(memberDelObj.refLastCodonDeleted) >= parseInt(aaVisDeletionEnd)) {
-							gisaidSeqIdToDeletion[sequenceID] = true;
+							gisaidSeqIdToDeletion[sequenceID] = "deletion";
+							break;
 						}
-					});
+					}
+					
+				}
+				// "insufficient_coverage" not generated yet
+				if(aaVisInsertionLastBeforeStart != null && aaVisInsertionFirstAfterEnd != null && aaVisInsertedAas != null) {
+					var memberInsObjs = glue.tableToObjects(glue.command(["variation", "scan", 
+						"-r", "REF_MASTER_WUHAN_HU_1", "-f", aaVisFeatureName,
+						"--whereClause", "name = 'cov_aa_ins_detect:"+aaVisFeatureName+"'", 
+						"--excludeAbsent", "--showMatchesAsTable"]));
+					gisaidSeqIdToInsertion[sequenceID] = "no_insertion";
+					for(var i = 0; i < memberInsObjs.length; i++) {
+						var memberInsObj = memberInsObjs[i];
+						if(parseInt(memberInsObj.refLastCodonBeforeIns) == parseInt(aaVisInsertionLastBeforeStart) &&
+								parseInt(memberInsObj.refFirstCodonAfterIns) == parseInt(aaVisInsertionFirstAfterEnd)) {
+							if(memberInsObj.insertedQryAas == aaVisInsertedAas) {
+								gisaidSeqIdToInsertion[sequenceID] = "insertion";
+							} else {
+								gisaidSeqIdToInsertion[sequenceID] = "insertion_different_aas";
+								gisaidSeqIdToInsertedAAs[sequenceID] = memberInsObj.insertedQryAas;
+							}
+							break;
+						}
+					}
 					
 				}
 			});
@@ -147,7 +187,7 @@ function visualisePhyloAsSvg(document) {
 					}
 				}
 			}
-			if(aaVisDeletionStart && aaVisDeletionEnd != null) {
+			if(aaVisDeletionStart != null && aaVisDeletionEnd != null) {
 				var queryDelObjs = glue.tableToObjects(glue.command({
 					"string-plus-alignment": { 
 						"variation": {
@@ -170,14 +210,51 @@ function visualisePhyloAsSvg(document) {
 						}
 					}
 				}));
-				gisaidSeqIdToDeletion[queryName] = false;
+				gisaidSeqIdToDeletion[queryName] = "no_deletion";
 				_.each(queryDelObjs, function(queryDelObj) {
 					if(parseInt(queryDelObj.refFirstCodonDeleted) <= parseInt(aaVisDeletionStart) &&
 							parseInt(queryDelObj.refLastCodonDeleted) >= parseInt(aaVisDeletionEnd)) {
-						gisaidSeqIdToDeletion[queryName] = true;
+						gisaidSeqIdToDeletion[queryName] = "deletion";
 					}
 				});
-
+			}
+			if(aaVisInsertionLastBeforeStart != null && aaVisInsertionFirstAfterEnd != null && aaVisInsertedAas != null) {
+				var queryInsObjs = glue.tableToObjects(glue.command({
+					"string-plus-alignment": { 
+						"variation": {
+							"scan" :{
+								"fastaString": queryNucleotides,
+								"queryToTargetSegs": {
+									queryToTargetSegs: {
+										alignedSegment: queryToTargetRefSegs
+									}
+								},
+								"whereClause": "name = 'cov_aa_ins_detect:"+aaVisFeatureName+"'",
+								"excludeAbsent": true,
+								"showMatchesAsTable": true,
+								"showMatchesAsDocument": false,
+								"targetRefName":targetRefName,
+								"relRefName":"REF_MASTER_WUHAN_HU_1",
+								"linkingAlmtName":"AL_GISAID_UNCONSTRAINED",
+								"featureName":aaVisFeatureName
+							}
+						}
+					}
+				}));
+				gisaidSeqIdToInsertion[queryName] = "no_insertion";
+				for(var i = 0; i < queryInsObjs.length; i++) {
+					var queryInsObj = queryInsObjs[i];
+					if(parseInt(queryInsObj.refLastCodonBeforeIns) == parseInt(aaVisInsertionLastBeforeStart) &&
+							parseInt(queryInsObj.refFirstCodonAfterIns) == parseInt(aaVisInsertionFirstAfterEnd)) {
+						if(queryInsObj.insertedQryAas == aaVisInsertedAas) {
+							gisaidSeqIdToInsertion[queryName] = "insertion";
+						} else {
+							gisaidSeqIdToInsertion[queryName] = "insertion_different_aas";
+							gisaidSeqIdToInsertedAAs[queryName] = queryInsObj.insertedQryAas;
+						}
+						break;
+					}
+				}
 			}
 		});
 
@@ -278,8 +355,15 @@ function visualisePhyloAsSvg(document) {
 				leafNode.properties.multipleResidues = multipleResidues;
 			}
 		}
-		if(aaVisDeletionStart && aaVisDeletionEnd != null) {
-			leafNode.properties.deletionPresent = gisaidSeqIdToDeletion[seqID];
+		if(aaVisDeletionStart != null && aaVisDeletionEnd != null) {
+			leafNode.properties.deletionCode = gisaidSeqIdToDeletion[seqID];
+		}
+		if(aaVisInsertionLastBeforeStart != null && aaVisInsertionFirstAfterEnd != null && aaVisInsertedAas != null) {
+			leafNode.properties.insertionCode = gisaidSeqIdToInsertion[seqID];
+			var insertedAAs = gisaidSeqIdToInsertedAAs[seqID];
+			if(insertedAAs != null) {
+				leafNode.properties.insertedAAs = insertedAAs;
+			}
 		}
 	});
 	

@@ -19,8 +19,17 @@
   multi-set field sequence -w "status_code = 'warn'" ref_tree_candidate false
 
   # exclude USA/WA-UW65/2020 following nextstrain. On a long branch on its own, with lots of unique mutations.
-  # probably need to revisit these!
+  # need to revisit these / automate error detection
   sequence cov-gisaid EPI_ISL_415593 set field ref_tree_candidate false
+
+  # exclude USA/CA-CDPH-UC28/2020. On a long branch on its own, with lots of unique mutations.
+  # need to revisit these / automate error detection
+  sequence cov-gisaid EPI_ISL_417332 set field ref_tree_candidate false
+
+  # exclude Turkey/6224-Ankara1034/2020. On a long branch on its own, with lots of unique mutations.
+  # need to revisit these / automate error detection
+  sequence cov-gisaid EPI_ISL_417413 set field ref_tree_candidate false
+
 
   # exclude EPI_ISL_410545 (Vero E6 cell line of Italian isolate INMI1) in favour of directly sequenced clinical sample EPI_ISL_410546
   sequence cov-gisaid EPI_ISL_410545 set field ref_tree_candidate false

@@ -156,7 +156,7 @@ _.each(_.values(replacementsSet), function(replacementObj) {
 	_.each(replacementObj.memberSeqs, function(memberObj) {
 		var sourceName = memberObj["sequence.source.name"];
 		var sequenceID = memberObj["sequence.sequenceID"];
-		var linkObjId = replacementObj.id+":"+sequenceID;
+		var linkObjId = replacementObj.id+":"+sourceName+":"+sequenceID;
 		glue.command(["create", "custom-table-row", "cov_replacement_sequence", linkObjId]);
 		glue.inMode("custom-table-row/cov_replacement_sequence/"+linkObjId, function() {
 			glue.command(["set", "link-target", "cov_replacement", "custom-table-row/cov_replacement/"+replacementObj.id]);

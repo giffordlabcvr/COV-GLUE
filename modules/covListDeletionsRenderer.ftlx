@@ -9,17 +9,12 @@
 	<#if parent_feature??>
 	<parentFeature>${variation.featureLoc.feature.parent.name}</parentFeature>
 	<parentFeatureDisplayName>${variation.featureLoc.feature.parent.displayName}</parentFeatureDisplayName>
-	<#if codon_aligned>
 	<parentStartCodon>${parent_start_codon}</parentStartCodon>
 	<parentEndCodon>${parent_end_codon}</parentEndCodon>
 	</#if>
-	</#if>
 	<referenceSequence>${variation.featureLoc.referenceSequence.name}</referenceSequence>
-	<@elem tag="codonAligned" expr="codon_aligned" type="Boolean"/>
-	<#if codon_aligned>
 	<startCodon>${start_codon}</startCodon>
 	<endCodon>${end_codon}</endCodon>
-	</#if>
 	<referenceNtStart>${reference_nt_start?c}</referenceNtStart>
 	<referenceNtEnd>${reference_nt_end?c}</referenceNtEnd>
 	<numSeqs>${num_seqs}</numSeqs>
