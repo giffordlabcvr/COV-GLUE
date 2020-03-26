@@ -24,8 +24,6 @@ _.each(featuresList, function(featureObj) {
 var insertionsSet = {};
 var orf1aInsertions = {}; 
 var orf1abInsertions = {}; 
-var expectedSeqsWithInsertions = ["EPI_ISL_413019", "EPI_ISL_414588"];
-var actualSeqsWithInsertions = [];
 
 _.each(featuresList, function(featureObj) {
 	glue.inMode("alignment/AL_GISAID_CONSTRAINED", function() {
@@ -39,22 +37,13 @@ _.each(featuresList, function(featureObj) {
 					"--excludeAbsent", "--showMatchesAsTable"]));
 				
 				_.each(memberInsObjs, function(memberInsObj) {
-					var codonAligned = memberInsObj.insertionIsCodonAligned;
-					var insertionID;
-					if(codonAligned) {
-						insertionID = featureObj.name+":ca:"+memberInsObj.refLastCodonBeforeIns+":"+memberInsObj.insertedQryAas.length+":"+memberInsObj.refFirstCodonAfterIns;
-					} else {
-						glue.log("INFO", "alignment member", almtMemberObj);
-						glue.log("INFO", "non-codon-aligned insertion", memberInsObj);
-						throw new Error("Non-codon-aligned insertion! We could add this but what are the implications for protein translation elsewhere in the feature");
-					}
+					var insertionID = featureObj.name+":ca:"+memberInsObj.refLastCodonBeforeIns+":"+memberInsObj.insertedQryAas+":"+memberInsObj.refFirstCodonAfterIns;
 					var insertionObj = insertionsSet[insertionID];
 					if(insertionObj == null) {
 						insertionObj = {
 							id: insertionID,
 							feature: featureObj.name,
 							parentFeature: featureObj["parent.name"],
-							codonAligned: memberInsObj.insertionIsCodonAligned,
 							lastCodonBefore: memberInsObj.refLastCodonBeforeIns,
 							firstCodonAfter: memberInsObj.refFirstCodonAfterIns,
 							lastRefNtBefore: memberInsObj.refLastNtBeforeIns,
@@ -64,10 +53,10 @@ _.each(featuresList, function(featureObj) {
 						};
 						insertionsSet[insertionID] = insertionObj;
 						if(featureObj.name == "ORF_1a") {
-							orf1aInsertions[memberInsObj.refLastNtBeforeIns+":"+memberInsObj.insertedQryAas.length+":"+memberInsObj.refFirstNtAfterIns] = insertionObj; 
+							orf1aInsertions[memberInsObj.refLastNtBeforeIns+":"+memberInsObj.insertedQryAas+":"+memberInsObj.refFirstNtAfterIns] = insertionObj; 
 						}
 						if(featureObj.name == "ORF_1ab") {
-							orf1abInsertions[memberInsObj.refLastNtBeforeIns+":"+memberInsObj.insertedQryAas.length+":"+memberInsObj.refFirstNtAfterIns] = insertionObj; 
+							orf1abInsertions[memberInsObj.refLastNtBeforeIns+":"+memberInsObj.insertedQryAas+":"+memberInsObj.refFirstNtAfterIns] = insertionObj; 
 						}
 
 					}
@@ -118,28 +107,30 @@ function createInsertion(insertionObj) {
 	glue.command(["create", "custom-table-row", "cov_insertion", insertionObj.id]);
 	glue.inMode("custom-table-row/cov_insertion/"+insertionObj.id, function() {
 		var displayName;
-		displayName = insertionObj.lastCodonBefore+"-"+insertionObj.insertedAas.length+"-"+insertionObj.firstCodonAfter+":ins";	
+		displayName = insertionObj.lastCodonBefore+"-"+insertionObj.insertedAas+"-"+insertionObj.firstCodonAfter;	
 		glue.command(["set", "field", "display_name", displayName]);
 		glue.command(["set", "field", "last_codon_before", insertionObj.lastCodonBefore]);		
 		glue.command(["set", "field", "last_codon_before_int", parseInt(insertionObj.lastCodonBefore)]);		
 		glue.command(["set", "field", "first_codon_after", insertionObj.firstCodonAfter]);		
 		glue.command(["set", "field", "first_codon_after_int", parseInt(insertionObj.firstCodonAfter)]);		
-		glue.command(["set", "field", "codon_aligned", insertionObj.codonAligned]);		
 		glue.command(["set", "field", "last_ref_nt_before", insertionObj.lastRefNtBefore]);		
 		glue.command(["set", "field", "first_ref_nt_after", insertionObj.firstRefNtAfter]);		
 		glue.command(["set", "field", "num_seqs", insertionObj.memberSeqs.length]);
+		glue.command(["set", "field", "inserted_aas_length", insertionObj.insertedAas.length]);
+		glue.command(["set", "field", "inserted_aas", insertionObj.insertedAas]);
+		
 		if(insertionObj.parentFeature == "ORF_1a") {
 			glue.command(["set", "field", "parent_feature", "ORF_1a"]);
-			var parent1aInsObj = orf1aInsertions[insertionObj.lastRefNtBefore+":"+insertionObj.insertedAas.length+":"+insertionObj.firstRefNtAfter];
+			var parent1aInsObj = orf1aInsertions[insertionObj.lastRefNtBefore+":"+insertionObj.insertedAas+":"+insertionObj.firstRefNtAfter];
 			parent1aInsObj.skipCreation = true;
-			var parent1abInsObj = orf1abInsertions[insertionObj.lastRefNtBefore+":"+insertionObj.insertedAas.length+":"+insertionObj.firstRefNtAfter];
+			var parent1abInsObj = orf1abInsertions[insertionObj.lastRefNtBefore+":"+insertionObj.insertedAas+":"+insertionObj.firstRefNtAfter];
 			parent1abInsObj.skipCreation = true;
 			glue.command(["set", "field", "parent_last_codon_before", parent1aInsObj.lastCodonBefore]);
 			glue.command(["set", "field", "parent_first_codon_after", parent1aInsObj.firstCodonAfter]);
 		}
 		if(insertionObj.parentFeature == "ORF_1ab") {
 			glue.command(["set", "field", "parent_feature", "ORF_1ab"]);
-			var parentInsObj = orf1abInsertions[insertionObj.lastRefNtBefore+":"+insertionObj.insertedAas.length+":"+insertionObj.firstRefNtAfter];
+			var parentInsObj = orf1abInsertions[insertionObj.lastRefNtBefore+":"+insertionObj.insertedAas+":"+insertionObj.firstRefNtAfter];
 			parentInsObj.skipCreation = true;
 			glue.command(["set", "field", "parent_last_codon_before", parentInsObj.lastCodonBefore]);
 			glue.command(["set", "field", "parent_first_codon_after", parentInsObj.firstCodonAfter]);
@@ -152,21 +143,12 @@ function createInsertion(insertionObj) {
 	_.each(insertionObj.memberSeqs, function(memberObj) {
 		var sourceName = memberObj["sequence.source.name"];
 		var sequenceID = memberObj["sequence.sequenceID"];
-		var linkObjId = insertionObj.id+":"+sequenceID;
+		var linkObjId = insertionObj.id+":"+sourceName+":"+sequenceID;
 		glue.command(["create", "custom-table-row", "cov_insertion_sequence", linkObjId]);
 		glue.inMode("custom-table-row/cov_insertion_sequence/"+linkObjId, function() {
 			glue.command(["set", "link-target", "cov_insertion", "custom-table-row/cov_insertion/"+insertionObj.id]);
 			glue.command(["set", "link-target", "sequence", "sequence/"+sourceName+"/"+sequenceID]);
-			actualSeqsWithInsertions.push(sequenceID);
 		});
 	});
 }
 
-actualSeqsWithInsertions = _.uniq(actualSeqsWithInsertions);
-actualSeqsWithInsertions.sort();
-
-if(!_.isEqual(expectedSeqsWithInsertions, actualSeqsWithInsertions)) {
-	glue.log("SEVERE", "actualSeqsWithInsertions", actualSeqsWithInsertions);
-	glue.log("SEVERE", "expectedSeqsWithInsertions", expectedSeqsWithInsertions);
-	throw new Error("Actual set of sequences with insertions did not match expected.");
-}

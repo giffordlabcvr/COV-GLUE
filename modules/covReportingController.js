@@ -258,6 +258,22 @@ function generateInsertions(queryNucleotides, targetRefName, queryToTargetRefSeg
 			});
 		});
 	});
+	_.each(insertionsList, function(insertion) {
+		var knownCovInsertions = [];
+		if(insertion.insertion.insertionIsCodonAligned) {
+			var foundCovInsertions = glue.tableToObjects(
+					glue.command(["list", "custom-table-row", "cov_insertion", 
+						"-w", "variation.featureLoc.feature.name = '"+insertion.insertion.variationFeature+"'"+
+						" and last_codon_before_int = "+insertion.insertion.refLastCodonBeforeIns+
+						" and first_codon_after_int = "+insertion.insertion.refFirstCodonAfterIns+
+						" and inserted_aas = '"+insertion.insertion.insertedQryAas+"'", 
+						"id", "display_name", "num_seqs"]));
+				_.each(foundCovInsertions, function(foundIns) {
+					knownCovInsertions.push({"known_insertion": foundIns});
+				});
+		}
+		insertion.insertion.known_insertions = knownCovInsertions;
+	});
 	return insertionsList;
 }
 
@@ -300,15 +316,17 @@ function generateDeletions(queryNucleotides, targetRefName, queryToTargetRefSegs
 	});
 	_.each(deletionsList, function(deletion) {
 		var knownCovDeletions = [];
-		var foundCovDeletions = glue.tableToObjects(
-			glue.command(["list", "custom-table-row", "cov_deletion", 
-				"-w", "variation.featureLoc.feature.name = '"+deletion.deletion.variationFeature+"'"+
-				" and start_codon_int <= "+deletion.deletion.refFirstCodonDeleted+
-				" and end_codon_int >= "+deletion.deletion.refLastCodonDeleted, 
-				"id", "display_name", "num_seqs"]));
-		_.each(foundCovDeletions, function(foundDel) {
-			knownCovDeletions.push({"known_deletion": foundDel});
-		});
+		if(deletion.deletion.deletionIsCodonAligned) {
+			var foundCovDeletions = glue.tableToObjects(
+				glue.command(["list", "custom-table-row", "cov_deletion", 
+					"-w", "variation.featureLoc.feature.name = '"+deletion.deletion.variationFeature+"'"+
+					" and start_codon_int <= "+deletion.deletion.refFirstCodonDeleted+
+					" and end_codon_int >= "+deletion.deletion.refLastCodonDeleted, 
+					"id", "display_name", "num_seqs"]));
+			_.each(foundCovDeletions, function(foundDel) {
+				knownCovDeletions.push({"known_deletion": foundDel});
+			});
+		}
 		deletion.deletion.known_deletions = knownCovDeletions;
 	});
 	return deletionsList;

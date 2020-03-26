@@ -48,7 +48,6 @@ glue.inMode("alignment/AL_GISAID_CONSTRAINED", function() {
 			});
 			
 			_.each(allFeatureDelObjs, function(memberDelObj) {
-				var codonAligned = memberDelObj.deletionIsCodonAligned;
 				var deletionID = memberDelObj.featureName+":ca:"+memberDelObj.refFirstCodonDeleted+":"+memberDelObj.refLastCodonDeleted;
 				var deletionObj = deletionsSet[deletionID];
 				if(deletionObj == null) {
@@ -56,7 +55,6 @@ glue.inMode("alignment/AL_GISAID_CONSTRAINED", function() {
 						id: deletionID,
 						feature: memberDelObj.featureName,
 						parentFeature: memberDelObj.parentFeatureName,
-						codonAligned: memberDelObj.deletionIsCodonAligned,
 						startCodon: memberDelObj.refFirstCodonDeleted,
 						endCodon: memberDelObj.refLastCodonDeleted,
 						refNtStart: memberDelObj.refFirstNtDeleted,
@@ -126,7 +124,6 @@ function createDeletion(deletionObj) {
 		glue.command(["set", "field", "start_codon_int", parseInt(deletionObj.startCodon)]);		
 		glue.command(["set", "field", "end_codon", deletionObj.endCodon]);		
 		glue.command(["set", "field", "end_codon_int", parseInt(deletionObj.endCodon)]);		
-		glue.command(["set", "field", "codon_aligned", deletionObj.codonAligned]);		
 		glue.command(["set", "field", "reference_nt_start", deletionObj.refNtStart]);		
 		glue.command(["set", "field", "reference_nt_end", deletionObj.refNtEnd]);		
 		glue.command(["set", "field", "num_seqs", deletionObj.memberSeqs.length]);
@@ -154,7 +151,7 @@ function createDeletion(deletionObj) {
 	_.each(deletionObj.memberSeqs, function(memberObj) {
 		var sourceName = memberObj["sequence.source.name"];
 		var sequenceID = memberObj["sequence.sequenceID"];
-		var linkObjId = deletionObj.id+":"+sequenceID;
+		var linkObjId = deletionObj.id+":"+sourceName+":"+sequenceID;
 		glue.command(["create", "custom-table-row", "cov_deletion_sequence", linkObjId]);
 		glue.inMode("custom-table-row/cov_deletion_sequence/"+linkObjId, function() {
 			glue.command(["set", "link-target", "cov_deletion", "custom-table-row/cov_deletion/"+deletionObj.id]);

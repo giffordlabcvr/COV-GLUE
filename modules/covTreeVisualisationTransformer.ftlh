@@ -43,19 +43,43 @@
 	  </g>
 	 </#if>
 	</#if>
-    <#if leafNode.properties.deletionPresent ??>
- 	<#if leafNode.properties.deletionPresent>
+    <#if leafNode.properties.deletionCode ??>
+ 	<#if leafNode.properties.deletionCode = "deletion">
       <circle class="leafNodeDeletionCircle_deletion"
     	cx="${leafNode.x + leafNodeRadiusPx}" cy="${leafNode.y}" r="${leafNodeRadiusPx}"/>
      <text class="deletionLetter"
 	  	x="${leafNode.x + leafNodeRadiusPx}" y="${leafNode.y}" height="${verticalLeafSpacePx}"
 	  	dy=".35em">-</text>
-	<#else>
+	<#elseif leafNode.properties.deletionCode = "no_deletion">
       <circle class="leafNodeDeletionCircle_no_deletion"
     	cx="${leafNode.x + leafNodeRadiusPx}" cy="${leafNode.y}" r="${leafNodeRadiusPx}"/>
      <text class="deletionLetter"
 	  	x="${leafNode.x + leafNodeRadiusPx}" y="${leafNode.y}" height="${verticalLeafSpacePx}"
 	  	dy=".35em">+</text>
+	</#if>
+	</#if>
+    <#if leafNode.properties.insertionCode ??>
+ 	<#if leafNode.properties.insertionCode = "insertion">
+      <circle class="leafNodeInsertionCircle_insertion"
+    	cx="${leafNode.x + leafNodeRadiusPx}" cy="${leafNode.y}" r="${leafNodeRadiusPx}"/>
+     <text class="insertionLetter"
+	  	x="${leafNode.x + leafNodeRadiusPx}" y="${leafNode.y}" height="${verticalLeafSpacePx}"
+	  	dy=".35em">+</text>
+	<#elseif leafNode.properties.insertionCode = "insertion_different_aas">
+	  <g class="multipleAasBackground">
+	  <title>Alternative insertion: ${leafNode.properties.insertedAAs}</title>
+      <circle class="leafNodeInsertionCircle_insertion_different_aas"
+    	cx="${leafNode.x + leafNodeRadiusPx}" cy="${leafNode.y}" r="${leafNodeRadiusPx}"/>
+     <text class="insertionLetter"
+	  	x="${leafNode.x + leafNodeRadiusPx}" y="${leafNode.y}" height="${verticalLeafSpacePx}"
+	  	dy=".35em">?</text>
+	  </g>
+	<#elseif leafNode.properties.insertionCode = "no_insertion">
+      <circle class="leafNodeInsertionCircle_no_insertion"
+    	cx="${leafNode.x + leafNodeRadiusPx}" cy="${leafNode.y}" r="${leafNodeRadiusPx}"/>
+     <text class="insertionLetter"
+	  	x="${leafNode.x + leafNodeRadiusPx}" y="${leafNode.y}" height="${verticalLeafSpacePx}"
+	  	dy=".35em">-</text>
 	</#if>
 	</#if>
 

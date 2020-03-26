@@ -146,7 +146,28 @@ svg {
 	fill: #009933;
 }
 
+.leafNodeInsertionCircle_insertion {
+    stroke: none;
+	fill: #009933;
+}
+
+.leafNodeInsertionCircle_insertion_different_aas {
+    stroke: none;
+	fill: #ffcc00;
+}
+
+.leafNodeInsertionCircle_no_insertion {
+    stroke: none;
+	fill: #ff3300;
+}
+
 .deletionLetter {
+	text-anchor: middle;
+    stroke: White;
+	fill: White;
+}
+
+.insertionLetter {
 	text-anchor: middle;
     stroke: White;
 	fill: White;

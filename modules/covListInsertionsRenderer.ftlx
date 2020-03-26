@@ -1,6 +1,6 @@
 <#include "/utils/glueDocUtils.ftlx">
 
-<deletion>
+<insertion>
 	<id>${id}</id>
 	<feature>${variation.featureLoc.feature.name}</feature>
 	<featureDisplayName>${variation.featureLoc.feature.displayName}</featureDisplayName>
@@ -9,13 +9,14 @@
 	<#if parent_feature??>
 	<parentFeature>${variation.featureLoc.feature.parent.name}</parentFeature>
 	<parentFeatureDisplayName>${variation.featureLoc.feature.parent.displayName}</parentFeatureDisplayName>
-	<parentStartCodon>${parent_start_codon}</parentStartCodon>
-	<parentEndCodon>${parent_end_codon}</parentEndCodon>
+	<parentLastCodonBefore>${parent_last_codon_before}</parentLastCodonBefore>
+	<parentFirstCodonAfter>${parent_first_codon_after}</parentFirstCodonAfter>
 	</#if>
 	<referenceSequence>${variation.featureLoc.referenceSequence.name}</referenceSequence>
-	<startCodon>${start_codon}</startCodon>
-	<endCodon>${end_codon}</endCodon>
-	<referenceNtStart>${reference_nt_start?c}</referenceNtStart>
-	<referenceNtEnd>${reference_nt_end?c}</referenceNtEnd>
+	<lastCodonBefore>${last_codon_before}</lastCodonBefore>
+	<firstCodonAfter>${first_codon_after}</firstCodonAfter>
+	<lastRefNtBefore>${last_ref_nt_before?c}</lastRefNtBefore>
+	<firstRefNtAfter>${first_ref_nt_after?c}</firstRefNtAfter>
+	<insertedAas>${inserted_aas}</insertedAas>
 	<numSeqs>${num_seqs}</numSeqs>
-</deletion>
+</insertion>
