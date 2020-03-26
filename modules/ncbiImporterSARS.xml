@@ -1,5 +1,4 @@
 <ncbiImporter>
-  <giNumberFieldName>gb_gi_number</giNumberFieldName>
   <sequenceFormat>GENBANK_XML</sequenceFormat>
   <sourceName>ncbi-curated-sars</sourceName>
 

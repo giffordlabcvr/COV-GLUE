@@ -1,21 +1,35 @@
-# Extend COV-GLUE with 
-
-run file glue/covInitProject.glue
+# Extend COV-GLUE with betacoronavirus data 
 
 project cov
- 
-  # import cov-gisaid individual fastas.
+
+  # delete sources 
+  delete source ncbi-refseq-betacorona
+  delete source ncbi-curated-mers
+  delete source ncbi-curated-sars
+
+  # delete sources 
+  delete alignment AL_UNC_Betacoronavirus
+
+  # delete modules 
+  delete module unconstrainedAlignmentImporter
+
+  # import cov-gisaid individual fasta
   import source sources/ncbi-curated-mers
   import source sources/ncbi-curated-sars
   import source sources/ncbi-refseq-betacorona
 
   # other sequence related data.
-  run file glue/extensionLoadSequenceData.glue
+  #run file glue/extensionLoadSequenceData.glue
 
-  # import pre-built constrained alignment
-  import alignment -f alignments/betacorona-genome.aln.fna
+  # import pre-built unconstrained betacoronavirus root alignment
+  create module -f modules/unconstrainedAlignmentImporter.xml
+  module unconstrainedAlignmentImporter import AL_UNC_Betacoronavirus -f alignments/betacorona-genome.aln.fna
+  module unconstrainedAlignmentImporter import AL_UNC_Sarbecovirus -f alignments/sarbeco-genome.aln.fna
+
+  # define constrained alignment tree
+  run file glue/extensionAlignmentTree.glue
   
   # Validate
   validate
 
-exit
+  exit

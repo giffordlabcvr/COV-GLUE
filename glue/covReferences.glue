@@ -7,3 +7,159 @@ create reference REF_HKU1 ncbi-refseq-betacorona NC_006577
 create reference REF_MERS ncbi-refseq-betacorona NC_019843
 create reference REF_SARS ncbi-refseq-betacorona NC_004718
 create reference REF_Hibeco ncbi-refseq-betacorona NC_025217
+
+
+
+reference REF_SARS
+
+  set field displayName "SARS Reference Sequence"
+  add feature-location whole_genome
+  feature-location whole_genome
+    add segment 1 29751
+    exit
+
+  add feature-location 5UTR
+  feature-location 5UTR
+	add segment 1 264
+	exit
+
+  add feature-location ORF_1ab
+  #feature-location ORF_1ab
+  #  add segment 265 13398 --spliceIndex 1
+  #  add segment 13395 13397 --spliceIndex 2 --translationModifier covOrf1abTranslationModifier
+  #  add segment 13398 21485 --spliceIndex 3
+  #  exit
+
+  add feature-location ORF_1a
+  feature-location ORF_1a
+	add segment 265 13398
+	exit
+
+  add feature-location NSP1
+  feature-location NSP1
+	add segment 265 804
+	exit
+
+  add feature-location NSP2
+  feature-location NSP2
+	add segment 805 2718
+	exit
+
+  add feature-location NSP3
+  feature-location NSP3
+	add segment 2719 8484
+	exit
+
+  add feature-location NSP4
+  feature-location NSP4
+	add segment 8485 9984
+	exit
+
+  add feature-location NSP5
+  feature-location NSP5
+	add segment 9985 10902
+	exit
+
+  add feature-location NSP6
+  feature-location NSP6
+	add segment 10903 11772
+	exit
+
+  add feature-location NSP7
+  feature-location NSP7
+	add segment 11773 12021
+	exit
+
+  add feature-location NSP8
+  feature-location NSP8
+	add segment 12022 12615
+	exit
+
+  add feature-location NSP9
+  feature-location NSP9
+	add segment 12616 12954
+	exit
+
+  add feature-location NSP10
+  feature-location NSP10
+	add segment 12955 13371
+	exit
+
+  add feature-location NSP11
+  feature-location NSP11
+	add segment 13372 13410
+	exit
+
+  add feature-location NSP12
+  #feature-location NSP12
+  #  add segment 13372 13465 --13398 1
+  #  add segment 13466 13470 --spliceIndex 2 --translationModifier covOrf1abTranslationModifier
+  #  add segment 13398 16166 --spliceIndex 3
+  #  exit
+
+  add feature-location NSP13
+  feature-location NSP13
+	add segment 16167 17969
+	exit
+
+  add feature-location NSP14
+  feature-location NSP14
+	add segment 17970 19550
+	exit
+
+  add feature-location NSP15
+  feature-location NSP15
+	add segment 19551 20588
+	exit
+
+  add feature-location NSP16
+  feature-location NSP16
+	add segment 20589 21482
+	exit
+
+  add feature-location S
+  feature-location S
+    add segment 21492 25259
+    exit
+
+  add feature-location ORF_3a
+  feature-location ORF_3a
+    add segment 25268 26092
+    exit
+
+  add feature-location E
+  feature-location E
+    add segment 26117 26347
+    exit
+
+  add feature-location M
+  feature-location M
+    add segment 26398 27063
+    exit
+
+  add feature-location ORF_6
+  feature-location ORF_6
+    add segment 26913 26918
+    exit
+
+  add feature-location ORF_7a
+  feature-location ORF_7a
+    add segment 27273 27641
+    exit
+
+  add feature-location ORF_7b
+  feature-location ORF_7b
+    add segment 27638 27772
+    exit
+
+  add feature-location ORF_8
+  feature-location ORF_8
+    add segment 27779 27898
+    exit
+
+  add feature-location N
+  feature-location N
+    add segment 28120 29388
+    exit
+    
+  exit 

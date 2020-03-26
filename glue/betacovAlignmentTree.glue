@@ -1,0 +1,25 @@
+  ### Constrained alignment tree for the Betacoronavirus genus
+
+  #~# Root level (Genus)
+  
+  create alignment AL_Betacoronavirus --r REF_MASTER_WUHAN_HU_1
+  alignment AL_Betacoronavirus add member --allSeAL_Betacoronavirusquences
+
+
+  #~# Internal nodes (Betacoronavirus sub-lineages) 
+
+  alignment AL_Betacoronavirus
+  
+    extract child AL_Sarbecovirus   --refName REF_MASTER_WUHAN_HU_1
+	demote member AL_Sarbecovirus   --whereClause "source.name = 'ncbi-curated-sarbeco'"
+
+    #extract child AL_Hibecovirus    --refName REF_MASTER_AAV2
+	#demote member AL_Hibecovirus    --whereClause "sequence.clade = 'ncbi-curated-hibeco'"
+    
+    exit
+
+  #~# Derive constrained alignment segments from unconstrained alignments
+  alignment AL_Betacoronavirus
+    derive segments AL_DEPENDO_UNCONSTRAINED -a --mergeStrategy OVERWRITE
+    exit
+

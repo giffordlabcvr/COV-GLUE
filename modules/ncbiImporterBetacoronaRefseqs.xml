@@ -2,7 +2,6 @@
 <ncbiImporter>
 
   <sourceName>ncbi-refseq-betacorona</sourceName>
-  <giNumberFieldName>gb_gi_number</giNumberFieldName>
   <specificPrimaryAccessions>
 	
      <!-- HKU1 -->
