@@ -1,0 +1,21 @@
+# Extend COV-GLUE with 
+
+run file glue/covInitProject.glue
+
+project cov
+ 
+  # import cov-gisaid individual fastas.
+  import source sources/ncbi-curated-mers
+  import source sources/ncbi-curated-sars
+  import source sources/ncbi-refseq-betacorona
+
+  # other sequence related data.
+  run file glue/extensionLoadSequenceData.glue
+
+  # import pre-built constrained alignment
+  import alignment -f alignments/betacorona-genome.aln.fna
+  
+  # Validate
+  validate
+
+exit
