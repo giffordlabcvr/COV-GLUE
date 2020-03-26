@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<GBSeq>
+
+    <GBSeq_locus>CQ918739</GBSeq_locus>
+    <GBSeq_length>442</GBSeq_length>
+    <GBSeq_strandedness>double</GBSeq_strandedness>
+    <GBSeq_moltype>DNA</GBSeq_moltype>
+    <GBSeq_topology>linear</GBSeq_topology>
+    <GBSeq_division>PAT</GBSeq_division>
+    <GBSeq_update-date>23-NOV-2004</GBSeq_update-date>
+    <GBSeq_create-date>23-NOV-2004</GBSeq_create-date>
+    <GBSeq_definition>Sequence 156 from Patent WO2004096842</GBSeq_definition>
+    <GBSeq_primary-accession>CQ918739</GBSeq_primary-accession>
+    <GBSeq_accession-version>CQ918739.1</GBSeq_accession-version>
+    <GBSeq_other-seqids>
+      <GBSeqid>emb|CQ918739.1|</GBSeqid>
+      <GBSeqid>pat|WO|2004096842|156</GBSeqid>
+      <GBSeqid>gi|56208702</GBSeqid>
+    </GBSeq_other-seqids>
+    <GBSeq_source>Severe acute respiratory syndrome-related coronavirus</GBSeq_source>
+    <GBSeq_organism>Severe acute respiratory syndrome-related coronavirus</GBSeq_organism>
+    <GBSeq_taxonomy>Viruses; Riboviria; Nidovirales; Cornidovirineae; Coronaviridae; Orthocoronavirinae; Betacoronavirus; Sarbecovirus</GBSeq_taxonomy>
+    <GBSeq_references>
+      <GBReference>
+        <GBReference_reference>1</GBReference_reference>
+        <GBReference_position>1..442</GBReference_position>
+        <GBReference_authors>
+          <GBAuthor>Plummer,F.</GBAuthor>
+          <GBAuthor>Feldmann,H.</GBAuthor>
+          <GBAuthor>Jones,S.</GBAuthor>
+          <GBAuthor>Li,Y.</GBAuthor>
+          <GBAuthor>Bastien,N.</GBAuthor>
+          <GBAuthor>Brunham,R.</GBAuthor>
+          <GBAuthor>Brooks-Wilson,A.</GBAuthor>
+          <GBAuthor>Holt,R.</GBAuthor>
+          <GBAuthor>Upton,C.</GBAuthor>
+          <GBAuthor>Roper,R.</GBAuthor>
+          <GBAuthor>Astell,C.</GBAuthor>
+          <GBAuthor>Jones,S.</GBAuthor>
+        </GBReference_authors>
+        <GBReference_title>Sars virus nucleotide and amino acid sequences and uses thereof</GBReference_title>
+        <GBReference_journal>WO2004096842-A2 156 11-NOV-2004 BC Cancer Agency (CA)</GBReference_journal>
+      </GBReference>
+    </GBSeq_references>
+    <GBSeq_feature-table>
+      <GBFeature>
+        <GBFeature_key>source</GBFeature_key>
+        <GBFeature_location>1..442</GBFeature_location>
+        <GBFeature_intervals>
+          <GBInterval>
+            <GBInterval_from>1</GBInterval_from>
+            <GBInterval_to>442</GBInterval_to>
+            <GBInterval_accession>CQ918739.1</GBInterval_accession>
+          </GBInterval>
+        </GBFeature_intervals>
+        <GBFeature_quals>
+          <GBQualifier>
+            <GBQualifier_name>organism</GBQualifier_name>
+            <GBQualifier_value>Severe acute respiratory syndrome-related coronavirus</GBQualifier_value>
+          </GBQualifier>
+          <GBQualifier>
+            <GBQualifier_name>mol_type</GBQualifier_name>
+            <GBQualifier_value>unassigned DNA</GBQualifier_value>
+          </GBQualifier>
+          <GBQualifier>
+            <GBQualifier_name>db_xref</GBQualifier_name>
+            <GBQualifier_value>taxon:694009</GBQualifier_value>
+          </GBQualifier>
+        </GBFeature_quals>
+      </GBFeature>
+    </GBSeq_feature-table>
+    <GBSeq_sequence>tgtgactcttcttcctgcggctgatatggatgtttctccagacaacttcaaaattccatgagtggagcttctgctgattcaactcaggcataaacactcatgatgaccacacaaggcagatgggctatgtaaacgttttcgcaattccgtttacgatacatagtctactcttgtgcagaatgaattctcgtaactaaacagcacaagtaggtttagttaactttaatctcacatagcaatctttaatcaatgtgtaacattagggaggacttgaaagagccaccacattttcatcgaggccacgcggagtacgatcgagggtacagtgaataatgctagggagagctgcctatatggaagagccctaatgtgtaaaattaattttagtagtgctatccccatgtgattttaatagcttcttaggagaatgacaaaaaaaaaa</GBSeq_sequence>
+  </GBSeq>

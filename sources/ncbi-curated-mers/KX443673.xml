@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<GBSeq>
+
+    <GBSeq_locus>KX443673</GBSeq_locus>
+    <GBSeq_length>615</GBSeq_length>
+    <GBSeq_strandedness>single</GBSeq_strandedness>
+    <GBSeq_moltype>RNA</GBSeq_moltype>
+    <GBSeq_topology>linear</GBSeq_topology>
+    <GBSeq_division>VRL</GBSeq_division>
+    <GBSeq_update-date>03-JAN-2017</GBSeq_update-date>
+    <GBSeq_create-date>03-JAN-2017</GBSeq_create-date>
+    <GBSeq_definition>Middle East respiratory syndrome coronavirus isolate Jordan/camel/32/2016 spike protein gene, partial cds</GBSeq_definition>
+    <GBSeq_primary-accession>KX443673</GBSeq_primary-accession>
+    <GBSeq_accession-version>KX443673.1</GBSeq_accession-version>
+    <GBSeq_other-seqids>
+      <GBSeqid>gb|KX443673.1|</GBSeqid>
+      <GBSeqid>gi|1126305206</GBSeqid>
+    </GBSeq_other-seqids>
+    <GBSeq_source>Middle East respiratory syndrome-related coronavirus (MERS-CoV)</GBSeq_source>
+    <GBSeq_organism>Middle East respiratory syndrome-related coronavirus</GBSeq_organism>
+    <GBSeq_taxonomy>Viruses; ssRNA viruses; ssRNA positive-strand viruses, no DNA stage; Nidovirales; Coronaviridae; Coronavirinae; Betacoronavirus</GBSeq_taxonomy>
+    <GBSeq_references>
+      <GBReference>
+        <GBReference_reference>1</GBReference_reference>
+        <GBReference_position>1..615</GBReference_position>
+        <GBReference_authors>
+          <GBAuthor>van Doremalen,N.</GBAuthor>
+          <GBAuthor>Hijazeen,Z.S.</GBAuthor>
+          <GBAuthor>Holloway,P.</GBAuthor>
+          <GBAuthor>Omari,B.A.</GBAuthor>
+          <GBAuthor>McDowell,C.</GBAuthor>
+          <GBAuthor>Adney,D.</GBAuthor>
+          <GBAuthor>Talafha,H.A.</GBAuthor>
+          <GBAuthor>Guitian,J.</GBAuthor>
+          <GBAuthor>Steel,J.</GBAuthor>
+          <GBAuthor>Amarin,N.</GBAuthor>
+          <GBAuthor>Tibbo,M.</GBAuthor>
+          <GBAuthor>Abu-Basha,E.</GBAuthor>
+          <GBAuthor>Al-Majali,A.M.</GBAuthor>
+          <GBAuthor>Munster,V.J.</GBAuthor>
+          <GBAuthor>Richt,J.A.</GBAuthor>
+        </GBReference_authors>
+        <GBReference_title>High Prevalence of Middle East Respiratory Coronavirus in Young Dromedary Camels in Jordan</GBReference_title>
+        <GBReference_journal>Vector Borne Zoonotic Dis. (2016) In press</GBReference_journal>
+        <GBReference_xref>
+          <GBXref>
+            <GBXref_dbname>doi</GBXref_dbname>
+            <GBXref_id>10.1089/vbz.2016.2062</GBXref_id>
+          </GBXref>
+        </GBReference_xref>
+        <GBReference_pubmed>28009529</GBReference_pubmed>
+        <GBReference_remark>Publication Status: Available-Online prior to print</GBReference_remark>
+      </GBReference>
+      <GBReference>
+        <GBReference_reference>2</GBReference_reference>
+        <GBReference_position>1..615</GBReference_position>
+        <GBReference_authors>
+          <GBAuthor>van Doremalen,N.</GBAuthor>
+          <GBAuthor>Hijazeen,Z.S.K.</GBAuthor>
+          <GBAuthor>Holloway,P.</GBAuthor>
+          <GBAuthor>Al Omari,B.</GBAuthor>
+          <GBAuthor>McDowell,C.</GBAuthor>
+          <GBAuthor>Adney,D.</GBAuthor>
+          <GBAuthor>Talafha,H.A.</GBAuthor>
+          <GBAuthor>Guitian,J.</GBAuthor>
+          <GBAuthor>Steel,J.</GBAuthor>
+          <GBAuthor>Amarin,N.</GBAuthor>
+          <GBAuthor>Abu-Basha,E.</GBAuthor>
+          <GBAuthor>Al-Majali,A.M.</GBAuthor>
+          <GBAuthor>Munster,V.J.</GBAuthor>
+          <GBAuthor>Richt,J.A.</GBAuthor>
+        </GBReference_authors>
+        <GBReference_title>Direct Submission</GBReference_title>
+        <GBReference_journal>Submitted (23-JUN-2016) Virus Ecology, Laboratory of Virology, NIAID, NIH, 903 South 4th Street, Hamilton, MT 59840, USA</GBReference_journal>
+      </GBReference>
+    </GBSeq_references>
+    <GBSeq_comment>##Assembly-Data-START## ; Sequencing Technology :: Sanger dideoxy sequencing ; ##Assembly-Data-END##</GBSeq_comment>
+    <GBSeq_feature-table>
+      <GBFeature>
+        <GBFeature_key>source</GBFeature_key>
+        <GBFeature_location>1..615</GBFeature_location>
+        <GBFeature_intervals>
+          <GBInterval>
+            <GBInterval_from>1</GBInterval_from>
+            <GBInterval_to>615</GBInterval_to>
+            <GBInterval_accession>KX443673.1</GBInterval_accession>
+          </GBInterval>
+        </GBFeature_intervals>
+        <GBFeature_quals>
+          <GBQualifier>
+            <GBQualifier_name>organism</GBQualifier_name>
+            <GBQualifier_value>Middle East respiratory syndrome-related coronavirus</GBQualifier_value>
+          </GBQualifier>
+          <GBQualifier>
+            <GBQualifier_name>mol_type</GBQualifier_name>
+            <GBQualifier_value>genomic RNA</GBQualifier_value>
+          </GBQualifier>
+          <GBQualifier>
+            <GBQualifier_name>isolate</GBQualifier_name>
+            <GBQualifier_value>Jordan/camel/32/2016</GBQualifier_value>
+          </GBQualifier>
+          <GBQualifier>
+            <GBQualifier_name>host</GBQualifier_name>
+            <GBQualifier_value>camel</GBQualifier_value>
+          </GBQualifier>
+          <GBQualifier>
+            <GBQualifier_name>db_xref</GBQualifier_name>
+            <GBQualifier_value>taxon:1335626</GBQualifier_value>
+          </GBQualifier>
+          <GBQualifier>
+            <GBQualifier_name>country</GBQualifier_name>
+            <GBQualifier_value>Jordan</GBQualifier_value>
+          </GBQualifier>
+          <GBQualifier>
+            <GBQualifier_name>collection_date</GBQualifier_name>
+            <GBQualifier_value>19-May-2016</GBQualifier_value>
+          </GBQualifier>
+        </GBFeature_quals>
+      </GBFeature>
+      <GBFeature>
+        <GBFeature_key>CDS</GBFeature_key>
+        <GBFeature_location>&lt;1..&gt;615</GBFeature_location>
+        <GBFeature_intervals>
+          <GBInterval>
+            <GBInterval_from>1</GBInterval_from>
+            <GBInterval_to>615</GBInterval_to>
+            <GBInterval_accession>KX443673.1</GBInterval_accession>
+          </GBInterval>
+        </GBFeature_intervals>
+        <GBFeature_partial5 value="true"/>
+        <GBFeature_partial3 value="true"/>
+        <GBFeature_quals>
+          <GBQualifier>
+            <GBQualifier_name>codon_start</GBQualifier_name>
+            <GBQualifier_value>1</GBQualifier_value>
+          </GBQualifier>
+          <GBQualifier>
+            <GBQualifier_name>transl_table</GBQualifier_name>
+            <GBQualifier_value>1</GBQualifier_value>
+          </GBQualifier>
+          <GBQualifier>
+            <GBQualifier_name>product</GBQualifier_name>
+            <GBQualifier_value>spike protein</GBQualifier_value>
+          </GBQualifier>
+          <GBQualifier>
+            <GBQualifier_name>protein_id</GBQualifier_name>
+            <GBQualifier_value>APR62704.1</GBQualifier_value>
+          </GBQualifier>
+          <GBQualifier>
+            <GBQualifier_name>translation</GBQualifier_name>
+            <GBQualifier_value>SYFKLSIPTNFSFGVTQEYIQTTIQKVTVDCKQYVCNGFQKCEQLLREYGQFCSKINQALHGANLRQDDSVRNLFASVKSSQSSPIIPGFGGDFNLTLLEPVSISTGSRSARSAIEDLLFDKVTIADPGYMQGYDDCMQQGPASARDLICAQYVAGYKVLPPLMDVNMEAAYTSSLLGSIAGVGWTAGLSSFAAIPFAQSIFYRL</GBQualifier_value>
+          </GBQualifier>
+        </GBFeature_quals>
+      </GBFeature>
+    </GBSeq_feature-table>
+    <GBSeq_sequence>agttattttaaattaagtatacctactaatttttcctttggtgtgactcaggagtatattcagacaaccattcagaaagttactgttgattgtaaacagtacgtttgcaatggtttccagaagtgtgagcaattactgcgcgagtatggccagttttgttccaaaataaaccaggctctccatggtgccaatttacgccaggatgattctgtacgtaatttgtttgcgagcgtgaaaagctctcaatcatctcctatcataccaggttttggaggtgactttaatttgacactgctagaacctgtttctatatctactggcagtcgtagtgcacgtagtgctattgaggatttgctatttgacaaagtcactatagctgatcctggttatatgcaaggttacgatgattgtatgcagcaaggtccagcatcagctcgtgatcttatttgtgctcaatatgtggctggttataaagtattacctcctcttatggatgttaatatggaagccgcgtacacttcatctttgcttggcagcatagcaggtgttggctggactgctggcttatcctcctttgctgctattccatttgcacagagtattttttataggtta</GBSeq_sequence>
+  </GBSeq>

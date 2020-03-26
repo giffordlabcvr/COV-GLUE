@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<GBSeq>
+
+    <GBSeq_locus>CS406442</GBSeq_locus>
+    <GBSeq_length>3768</GBSeq_length>
+    <GBSeq_strandedness>double</GBSeq_strandedness>
+    <GBSeq_moltype>DNA</GBSeq_moltype>
+    <GBSeq_topology>linear</GBSeq_topology>
+    <GBSeq_division>PAT</GBSeq_division>
+    <GBSeq_update-date>08-SEP-2006</GBSeq_update-date>
+    <GBSeq_create-date>08-SEP-2006</GBSeq_create-date>
+    <GBSeq_definition>Sequence 12 from Patent WO2006042156</GBSeq_definition>
+    <GBSeq_primary-accession>CS406442</GBSeq_primary-accession>
+    <GBSeq_accession-version>CS406442.1</GBSeq_accession-version>
+    <GBSeq_other-seqids>
+      <GBSeqid>emb|CS406442.1|</GBSeqid>
+      <GBSeqid>pat|WO|2006042156|12</GBSeqid>
+      <GBSeqid>gi|114211845</GBSeqid>
+    </GBSeq_other-seqids>
+    <GBSeq_source>SARS coronavirus Urbani</GBSeq_source>
+    <GBSeq_organism>SARS coronavirus Urbani</GBSeq_organism>
+    <GBSeq_taxonomy>Viruses; Riboviria; Nidovirales; Cornidovirineae; Coronaviridae; Orthocoronavirinae; Betacoronavirus; Sarbecovirus</GBSeq_taxonomy>
+    <GBSeq_references>
+      <GBReference>
+        <GBReference_reference>1</GBReference_reference>
+        <GBReference_position>1..3768</GBReference_position>
+        <GBReference_authors>
+          <GBAuthor>Kew,O.M.</GBAuthor>
+          <GBAuthor>Burns,C.C.</GBAuthor>
+          <GBAuthor>Shaw,J.</GBAuthor>
+          <GBAuthor>Campagnoli,R.</GBAuthor>
+          <GBAuthor>Quay,J.</GBAuthor>
+        </GBReference_authors>
+        <GBReference_title>Modulation of replicative fitness by using less frequently used synonymous codons</GBReference_title>
+        <GBReference_journal>WO2006042156-A2 12 20-APR-2006 Department of Health and Human Services (US)</GBReference_journal>
+      </GBReference>
+    </GBSeq_references>
+    <GBSeq_feature-table>
+      <GBFeature>
+        <GBFeature_key>source</GBFeature_key>
+        <GBFeature_location>1..3768</GBFeature_location>
+        <GBFeature_intervals>
+          <GBInterval>
+            <GBInterval_from>1</GBInterval_from>
+            <GBInterval_to>3768</GBInterval_to>
+            <GBInterval_accession>CS406442.1</GBInterval_accession>
+          </GBInterval>
+        </GBFeature_intervals>
+        <GBFeature_quals>
+          <GBQualifier>
+            <GBQualifier_name>organism</GBQualifier_name>
+            <GBQualifier_value>SARS coronavirus Urbani</GBQualifier_value>
+          </GBQualifier>
+          <GBQualifier>
+            <GBQualifier_name>mol_type</GBQualifier_name>
+            <GBQualifier_value>unassigned DNA</GBQualifier_value>
+          </GBQualifier>
+          <GBQualifier>
+            <GBQualifier_name>db_xref</GBQualifier_name>
+            <GBQualifier_value>taxon:228330</GBQualifier_value>
+          </GBQualifier>
+        </GBFeature_quals>
+      </GBFeature>
+      <GBFeature>
+        <GBFeature_key>CDS</GBFeature_key>
+        <GBFeature_location>1..3768</GBFeature_location>
+        <GBFeature_intervals>
+          <GBInterval>
+            <GBInterval_from>1</GBInterval_from>
+            <GBInterval_to>3768</GBInterval_to>
+            <GBInterval_accession>CS406442.1</GBInterval_accession>
+          </GBInterval>
+        </GBFeature_intervals>
+        <GBFeature_quals>
+          <GBQualifier>
+            <GBQualifier_name>note</GBQualifier_name>
+            <GBQualifier_value>unnamed protein product</GBQualifier_value>
+          </GBQualifier>
+          <GBQualifier>
+            <GBQualifier_name>codon_start</GBQualifier_name>
+            <GBQualifier_value>1</GBQualifier_value>
+          </GBQualifier>
+          <GBQualifier>
+            <GBQualifier_name>transl_table</GBQualifier_name>
+            <GBQualifier_value>1</GBQualifier_value>
+          </GBQualifier>
+          <GBQualifier>
+            <GBQualifier_name>protein_id</GBQualifier_name>
+            <GBQualifier_value>CAL40866.1</GBQualifier_value>
+          </GBQualifier>
+          <GBQualifier>
+            <GBQualifier_name>translation</GBQualifier_name>
+            <GBQualifier_value>MFIFLLFLTLTSGSDLDRCTTFDDVQAPNYTQHTSSMRGVYYPDEIFRSDTLYLTQDLFLPFYSNVTGFHTINHTFGNPVIPFKDGIYFAATEKSNVVRGWVFGSTMNNKSQSVIIINNSTNVVIRACNFELCDNPFFAVSKPMGTQTHTMIFDNAFNCTFEYISDAFSLDVSEKSGNFKHLREFVFKNKDGFLYVYKGYQPIDVVRDLPSGFNTLKPIFKLPLGINITNFRAILTAFSPAQDIWGTSAAAYFVGYLKPTTFMLKYDENGTITDAVDCSQNPLAELKCSVKSFEIDKGIYQTSNFRVVPSGDVVRFPNITNLCPFGEVFNATKFPSVYAWERKKISNCVADYSVLYNSTFFSTFKCYGVSATKLNDLCFSNVYADSFVVKGDDVRQIAPGQTGVIADYNYKLPDDFMGCVLAWNTRNIDATSTGNYNYKYRYLRHGKLRPFERDISNVPFSPDGKPCTPPALNCYWPLNDYGFYTTTGIGYQPYRVVVLSFELLNAPATVCGPKLSTDLIKNQCVNFNFNGLTGTGVLTPSSKRFQPFQQFGRDVSDFTDSVRDPKTSEILDISPCSFGGVSVITPGTNASSEVAVLYQDVNCTDVSTAIHADQLTPAWRIYSTGNNVFQTQAGCLIGAEHVDTSYECDIPIGAGICASYHTVSLLRSTSQKSIVAYTMSLGADSSIAYSNNTIAIPTNFSISITTEVMPVSMAKTSVDCNMYICGDSTECANLLLQYGSFCTQLNRALSGIAAEQDRNTREVFAQVKQMYKTPTLKYFGGFNFSQILPDPLKPTKRSFIEDLLFNKVTLADAGFMKQYGECLGDINARDLICAQKFNGLTVLPPLLTDDMIAAYTAALVSGTATAGWTFGAGAALQIPFAMQMAYRFNGIGVTQNVLYENQKQIANQFNKAISQIQESLTTTSTALGKLQDVVNQNAQALNTLVKQLSSNFGAISSVLNDILSRLDKVEAEVQIDRLITGRLQSLQTYVTQQLIRAAEIRASANLAATKMSECVLGQSKRVDFCGKGYHLMSFPQAAPHGVVFLHVTYVPSQERNFTTAPAICHEGKAYFPREGVFVFNGTSWFITQRNFFSPQIITTDNTFVSGNCDVVIGIINNTVYDPLQPELDSFKEELDKYFKNHTSPDVDLGDISGINASVVNIQKEIDRLNEVAKNLNESLIDLQELGKYEQYIKWPWYVWLGFIAGLIAIVMVTILLCCMTSCCSCLKGACSCGSCCKFDEDDSEPVLKGVKLHYT</GBQualifier_value>
+          </GBQualifier>
+        </GBFeature_quals>
+      </GBFeature>
+    </GBSeq_feature-table>
+    <GBSeq_sequence>atgtttattttcttattatttcttactctcactagtggtagtgaccttgaccggtgcaccacttttgatgatgttcaagctcctaattacactcaacatacttcatctatgaggggggtttactatcctgatgaaatttttagatcagacactctttatttaactcaggatttatttcttccattttattctaatgttacagggtttcatactattaatcatacgtttggcaaccctgtcataccttttaaggatggtatttattttgctgccacagagaaatcaaatgttgtccgtggttgggtttttggttctaccatgaacaacaagtcacagtcggtgattattattaacaattctactaatgttgttatacgagcatgtaactttgaattgtgtgacaaccctttctttgctgtttctaaacccatgggtacacagacacatactatgatattcgataatgcatttaattgcactttcgagtacatatctgatgccttttcgcttgatgtttcagaaaagtcaggtaattttaaacacttacgagagtttgtgtttaaaaataaagatgggtttctctatgtttataagggctatcaacctatagatgtagttcgtgatctaccttctggttttaacactttgaaacctatttttaagttgcctcttggtattaacattacaaattttagagccattcttacagccttttcacctgctcaagacatttggggcacgtcagctgcagcctattttgttggctatttaaagccaactacatttatgctcaagtatgatgaaaatggtacaatcacagatgctgttgattgttctcaaaatccacttgctgaactcaaatgctctgttaagagctttgagattgacaaaggaatttaccagacctctaatttcagggttgttccctcaggagatgttgtgagattccctaatattacaaacttgtgtccttttggagaggtttttaatgctactaaattcccttctgtctatgcatgggagagaaaaaaaatttctaattgtgttgctgattactctgtgctctacaactcaacatttttttcaacctttaagtgctatggcgtttctgccactaagttgaatgatctttgcttctccaatgtctatgcagattcttttgtagtcaagggagatgatgtaagacaaatagcgccaggacaaactggtgttattgctgattataattataaattgccagatgatttcatgggttgtgtccttgcttggaatactaggaacattgatgctacttcaactggtaattataattataaatataggtatcttagacatggcaagcttaggccctttgagagagacatatctaatgtgcctttctcccctgatggcaaaccttgcaccccacctgctcttaattgttattggccattaaatgattatggtttttacaccactactggcattggctaccaaccttacagagttgtagtactttcttttgaacttttaaatgcaccggccacggtttgtggaccaaaattatccactgaccttattaagaaccagtgtgtcaattttaattttaatggactcactggtactggtgtgttaactccttcttcaaagagatttcaaccatttcaacaatttggccgtgatgtttctgatttcactgattccgttcgagatcctaaaacatctgaaatattagacatttcaccttgctcttttgggggtgtaagtgtaattacacctggaacaaatgcttcatctgaagttgctgttctatatcaagatgttaactgcactgatgtttctacagcaattcatgcagatcaactcacaccagcttggcgcatatattctactggaaacaatgtattccagactcaagcaggctgtcttataggagctgagcatgtcgacacttcttatgagtgcgacattcctattggagctggcatttgtgctagttaccatacagtttctttattacgtagtactagccaaaaatctattgtggcttatactatgtctttaggtgctgatagttcaattgcttactctaataacaccattgctatacctactaacttttcaattagcattactacagaagtaatgcctgtttctatggctaaaacctccgtagattgtaatatgtacatctgcggagattctactgaatgtgctaatttgcttctccaatatggtagcttttgcacacaactaaatcgtgcactctcaggtattgctgctgaacaggatcgcaacacacgtgaagtgttcgctcaagtcaaacaaatgtacaaaaccccaactttgaaatattttggtggttttaatttttcacaaatattacctgaccctctaaagccaactaagaggtcttttattgaggacttgctctttaataaggtgacactcgctgatgctggcttcatgaagcaatatggcgaatgcctaggtgatattaatgctagagatctcatttgtgcgcagaagttcaatggacttacagtgttgccacctctgctcactgatgatatgattgctgcctacactgctgctctagttagtggtactgccactgctggatggacatttggtgctggcgctgctcttcaaataccttttgctatgcaaatggcatataggttcaatggcattggagttacccaaaatgttctctatgagaaccaaaaacaaatcgccaaccaatttaacaaggcgattagtcaaattcaagaatcacttacaacaacatcaactgcattgggcaagctgcaagacgttgttaaccagaatgctcaagcattaaacacacttgttaaacaacttagctctaattttggtgcaatttcaagtgtgctaaatgatatcctttcgcgacttgataaagtcgaggcggaggtacaaattgacaggttaattacaggcagacttcaaagccttcaaacctatgtaacacaacaactaatcagggctgctgaaatcagggcttctgctaatcttgctgctactaaaatgtctgagtgtgttcttggacaatcaaaaagagttgacttttgtggaaagggctaccaccttatgtccttcccacaagcagccccgcatggtgttgtcttcctacatgtcacgtatgtgccatcccaggagaggaacttcaccacagcgccagcaatttgtcatgaaggcaaagcatacttccctcgtgaaggtgtttttgtgtttaatggcacttcttggtttattacacagaggaacttcttttctccacaaataattactacagacaatacatttgtctcaggaaattgtgatgtcgttattggcatcattaacaacacagtttatgatcctctgcaacctgagctcgactcattcaaagaagagctggacaagtacttcaaaaatcatacatcaccagatgttgatcttggcgacatttcaggcattaacgcttctgtcgtcaacattcaaaaagaaattgaccgcctcaatgaggtcgctaaaaatttaaatgaatcactcattgaccttcaagaattgggaaaatatgagcaatatattaaatggccttggtatgtttggctcggcttcattgctggactaattgccatcgtcatggttacaatcttgctttgttgcatgactagttgttgcagttgcctcaagggtgcatgctcttgtggttcttgctgcaagtttgatgaggatgactctgagccagttctcaagggtgtcaaattacattacacataa</GBSeq_sequence>
+  </GBSeq>

@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<GBSeq>
+
+    <GBSeq_locus>AY429075</GBSeq_locus>
+    <GBSeq_length>3768</GBSeq_length>
+    <GBSeq_strandedness>single</GBSeq_strandedness>
+    <GBSeq_moltype>RNA</GBSeq_moltype>
+    <GBSeq_topology>linear</GBSeq_topology>
+    <GBSeq_division>VRL</GBSeq_division>
+    <GBSeq_update-date>03-NOV-2003</GBSeq_update-date>
+    <GBSeq_create-date>03-NOV-2003</GBSeq_create-date>
+    <GBSeq_definition>SARS coronavirus BJ302 clone 4 spike glycoprotein gene, complete cds</GBSeq_definition>
+    <GBSeq_primary-accession>AY429075</GBSeq_primary-accession>
+    <GBSeq_accession-version>AY429075.1</GBSeq_accession-version>
+    <GBSeq_other-seqids>
+      <GBSeqid>gb|AY429075.1|</GBSeqid>
+      <GBSeqid>gi|38016586</GBSeqid>
+    </GBSeq_other-seqids>
+    <GBSeq_source>SARS coronavirus BJ302</GBSeq_source>
+    <GBSeq_organism>SARS coronavirus BJ302</GBSeq_organism>
+    <GBSeq_taxonomy>Viruses; Riboviria; Nidovirales; Cornidovirineae; Coronaviridae; Orthocoronavirinae; Betacoronavirus; Sarbecovirus</GBSeq_taxonomy>
+    <GBSeq_references>
+      <GBReference>
+        <GBReference_reference>1</GBReference_reference>
+        <GBReference_position>1..3768</GBReference_position>
+        <GBReference_authors>
+          <GBAuthor>Xu,D.P.</GBAuthor>
+          <GBAuthor>Zhang,Z.</GBAuthor>
+          <GBAuthor>Li,Y.G.</GBAuthor>
+          <GBAuthor>Wang,B.</GBAuthor>
+          <GBAuthor>Chu,F.L.</GBAuthor>
+          <GBAuthor>Jin,L.</GBAuthor>
+          <GBAuthor>Wang,F.S.</GBAuthor>
+        </GBReference_authors>
+        <GBReference_title>SARS coronavirus spike gene</GBReference_title>
+        <GBReference_journal>Unpublished</GBReference_journal>
+      </GBReference>
+      <GBReference>
+        <GBReference_reference>2</GBReference_reference>
+        <GBReference_position>1..3768</GBReference_position>
+        <GBReference_authors>
+          <GBAuthor>Xu,D.P.</GBAuthor>
+          <GBAuthor>Zhang,Z.</GBAuthor>
+          <GBAuthor>Li,Y.G.</GBAuthor>
+          <GBAuthor>Wang,B.</GBAuthor>
+          <GBAuthor>Chu,F.L.</GBAuthor>
+          <GBAuthor>Jin,L.</GBAuthor>
+          <GBAuthor>Wang,F.S.</GBAuthor>
+        </GBReference_authors>
+        <GBReference_title>Direct Submission</GBReference_title>
+        <GBReference_journal>Submitted (18-SEP-2003) Bioengineering, Institute of Infectious Diseases, 100 Xi Si Huan Zhong Lu, Beijing 100039, P.R. China</GBReference_journal>
+      </GBReference>
+    </GBSeq_references>
+    <GBSeq_feature-table>
+      <GBFeature>
+        <GBFeature_key>source</GBFeature_key>
+        <GBFeature_location>1..3768</GBFeature_location>
+        <GBFeature_intervals>
+          <GBInterval>
+            <GBInterval_from>1</GBInterval_from>
+            <GBInterval_to>3768</GBInterval_to>
+            <GBInterval_accession>AY429075.1</GBInterval_accession>
+          </GBInterval>
+        </GBFeature_intervals>
+        <GBFeature_quals>
+          <GBQualifier>
+            <GBQualifier_name>organism</GBQualifier_name>
+            <GBQualifier_value>SARS coronavirus BJ302</GBQualifier_value>
+          </GBQualifier>
+          <GBQualifier>
+            <GBQualifier_name>mol_type</GBQualifier_name>
+            <GBQualifier_value>genomic RNA</GBQualifier_value>
+          </GBQualifier>
+          <GBQualifier>
+            <GBQualifier_name>db_xref</GBQualifier_name>
+            <GBQualifier_value>taxon:252654</GBQualifier_value>
+          </GBQualifier>
+          <GBQualifier>
+            <GBQualifier_name>clone</GBQualifier_name>
+            <GBQualifier_value>4</GBQualifier_value>
+          </GBQualifier>
+        </GBFeature_quals>
+      </GBFeature>
+      <GBFeature>
+        <GBFeature_key>CDS</GBFeature_key>
+        <GBFeature_location>1..3768</GBFeature_location>
+        <GBFeature_intervals>
+          <GBInterval>
+            <GBInterval_from>1</GBInterval_from>
+            <GBInterval_to>3768</GBInterval_to>
+            <GBInterval_accession>AY429075.1</GBInterval_accession>
+          </GBInterval>
+        </GBFeature_intervals>
+        <GBFeature_quals>
+          <GBQualifier>
+            <GBQualifier_name>codon_start</GBQualifier_name>
+            <GBQualifier_value>1</GBQualifier_value>
+          </GBQualifier>
+          <GBQualifier>
+            <GBQualifier_name>transl_table</GBQualifier_name>
+            <GBQualifier_value>1</GBQualifier_value>
+          </GBQualifier>
+          <GBQualifier>
+            <GBQualifier_name>product</GBQualifier_name>
+            <GBQualifier_value>spike glycoprotein</GBQualifier_value>
+          </GBQualifier>
+          <GBQualifier>
+            <GBQualifier_name>protein_id</GBQualifier_name>
+            <GBQualifier_value>AAR07627.1</GBQualifier_value>
+          </GBQualifier>
+          <GBQualifier>
+            <GBQualifier_name>translation</GBQualifier_name>
+            <GBQualifier_value>MFIFLLFLTLTSGSDLDRCTTFDDVQAPNYTQHTSSMRGVYYPDEIFRSDTLYLTQDLFLPFYSNVTGFHTINHTFGNPVIPFKDGIYFAATEKSNVVRGWVFGSTMNNKSQSVIIINNSTNVVIRACNFELCDNPFFAVSKPMGTQTHTMIFDNAFNCTFEYISDAFSLDVSEKSGNFKHLREFVFKNKDGFLYVYKGYQPIDVVRDLPSGFNTLKPIFKLPLGINITNFRAILTAFSPAQDTWGTSAAAYFVGYLKPTTFMLKYDENGTITDAVDCSQNPLAELKCSVKSFEIDKGIYQTSNFRVVPSGDVVRFPNITNLCPFGEVFNATKFPSVYAWERKKISNCVADYSVLYNSTFFSTFKCYGVSATKLNDLCFSNVYADSFVVKGDDVRQIAPGQTGVIADYNYKLPDDFMGCVLAWNTRNIDATSTGNYNYKYRYLRHGKLRPFERDISNVPFSPDGKPCTPPALNCYWPLSDYGFYTTTGIGYQPYRVVVLSFELLNAPATVCGPKLSTDLIKNQCVNFNFNGLTGTGVLTPSSKRFQPFQQFGRDVSDFTDSVRDPKTSEILDISPRSFGGVSVITPGTNASSEVAVLYQDVNCTDVSTAIHADQLTPAWRIYSTGNNVFQTQAGCLIGAEHVDTSYECDIPIGAGICASYHTVSLLRSTSQKSIVAYTMSLGADSSIAYSNNTIAIPTNFSISITTEVMPVSMAKTSVDCNMYICGDSTECANLLLQYGSFCTQLNRALSGIAAEQDRNTREVFAQVKQMYKTPTLKYFGGFNFSQILPDPLKPTKRSFIEDLLFNKVTLADAGFMKQYGECLGDINARDLICAQKFNGLTVLPPLLTVDMIAAYTAALVSGTATAGWTFGAGAALQIPFAMQMAYRFNGIGVTQNVLYENQKQIANQFNKAISQIQESLTTTSTALGKLQDVVNQNAQALNTLVKQLSSNFGAISSVLNDILSRLDKVEAEVQIDRLITGRLQSLQTYVTQQLIRAAEIRASANLAATKMSECVLGQSKRVGFCGKGYHLMSFPQAAPHGVVFLHVTYVPSQERNFTTAPAICHEGKAYFPREGVFVFNGTSWFITQRNFFSPQIITTDNTFVSGNCDVVIGIINNTVYDPLQPELDSFKEELDKYFKNHTSPDVDLGDISGINASVVNIQKEIDRLNEVAKNLNESLIDLQELGKYEQYIKWPWYVWLGFIAGLIAIVMVTILLCCMTSCCSCLKGACSCGSCCKFDEDDSEPVLKGVKLHYT</GBQualifier_value>
+          </GBQualifier>
+        </GBFeature_quals>
+      </GBFeature>
+    </GBSeq_feature-table>
+    <GBSeq_sequence>atgtttattttcttattatttcttactctcactagtggtagtgaccttgaccggtgcaccacttttgatgatgttcaagctcctaattacactcaacatacttcatctatgaggggggtttactatcctgatgaaatttttagatcagacactctttatttaactcaggatttatttcttccattttattctaatgttacagggtttcatactattaatcatacgtttggcaaccctgtcataccttttaaggatggtatttattttgctgccacagagaaatcaaatgttgtccgtggttgggtttttggttctaccatgaacaacaagtcacagtcggtgattattattaacaattctactaatgttgttatacgagcatgtaactttgaattgtgtgacaaccctttctttgctgtttctaaacccatgggtacacagacacatactatgatattcgataatgcatttaattgcactttcgagtacatatctgatgccttttcgcttgatgtttcagaaaagtcaggtaattttaaacacttacgagagtttgtgtttaaaaataaagatgggtttctctatgtttataagggctatcaacctatagatgtagttcgtgatctaccttctggttttaacactttgaaacctatttttaagttgcctcttggtattaacattacaaattttagagccattcttacagccttttcacctgctcaagacacttggggcacgtcagctgcagcctattttgttggctatttaaagccaactacatttatgctcaagtatgatgaaaatggtacaatcacagatgctgttgattgttctcaaaatccacttgctgaactcaaatgctctgttaagagctttgagattgacaaaggaatttaccagacctctaatttcagggttgttccctcaggagatgttgtgagattccctaatattacaaacttgtgtccttttggagaggtttttaatgctactaaattcccttctgtctatgcatgggagagaaaaaaaatttctaattgtgttgctgattactctgtgctctacaactcaacatttttttcaacctttaagtgctatggcgtttctgccactaagttgaatgatctttgcttctccaatgtctatgcagattcttttgtagtcaagggagatgatgtaagacaaatagcgccaggacaaactggtgttattgctgattataattataaattgccagatgatttcatgggttgtgtccttgcttggaatactaggaacattgatgctacttcaactggtaattataattataaatataggtatcttagacatggcaagcttaggccctttgagagagacatatctaatgtgcctttctcccctgatggcaaaccttgcaccccacctgctcttaattgttattggccattaagtgattatggtttttacaccactactggcattggctaccaaccttacagagttgtagtactttcttttgaacttttaaatgcaccggccacggtttgtggaccaaaattatccactgaccttattaagaaccagtgtgtcaattttaattttaatggactcactggtactggtgtgttaactccttcttcaaagagatttcaaccatttcaacaatttggccgtgatgtttctgatttcactgattccgttcgagatcctaaaacatctgaaatattagacatttcacctcgctcttttgggggtgtaagtgtaattacacctggaacaaatgcttcatctgaagttgctgttctatatcaagatgttaactgcactgatgtttctacagcaattcatgcagatcaactcacaccagcttggcgcatatattctactggaaacaatgtattccagactcaagcaggctgtcttataggagctgagcatgtcgacacttcttatgagtgcgacattcctattggagctggcatttgtgctagttaccatacagtttctttattacgtagtactagccaaaaatctattgtggcttatactatgtctttaggtgctgatagttcaattgcttactctaataacaccattgctatacctactaacttttcaattagcattactacagaagtaatgcctgtttctatggctaaaacctccgtagattgtaatatgtacatctgcggagattctactgaatgtgctaatttgcttctccaatatggtagcttttgcacacaactaaatcgtgcactctcaggtattgctgctgaacaggatcgcaacacacgtgaagtgttcgctcaagtcaaacaaatgtacaaaaccccaactttgaaatattttggtggttttaatttttcacaaatattacctgaccctctaaagccaactaagaggtcttttattgaggacttgctctttaataaggtgacactcgctgatgctggcttcatgaagcaatatggcgaatgcctaggtgatattaatgctagagatctcatttgtgcgcagaagttcaatggacttacagtgttgccacctctgctcactgttgatatgattgctgcctacactgctgctctagttagtggtactgccactgctggatggacatttggtgctggcgctgctcttcaaataccttttgctatgcaaatggcatataggttcaatggcattggagttacccaaaatgttctctatgagaaccaaaaacaaatcgccaaccaatttaacaaggcgattagtcaaattcaagaatcacttacaacaacatcaaccgcattgggcaagctgcaagacgttgttaaccagaatgctcaagcattaaacacacttgttaaacaacttagctctaattttggtgcaatttcaagtgtgctaaatgatatcctttcgcgacttgataaagtcgaggcggaggtacaaattgacaggttaattacaggcagacttcaaagccttcaaacctatgtaacacaacaactaatcagggctgctgagatcagggcttctgctaatcttgctgctactaaaatgtctgagtgtgttcttggacaatcaaaaagagttggcttttgtggaaagggctaccaccttatgtccttcccacaagcagccccgcatggtgttgtcttcctacatgtcacgtatgtgccatcccaggagaggaacttcaccacagcgccagcaatttgtcatgaaggcaaagcatacttccctcgtgaaggtgtttttgtgtttaatggcacttcttggtttattacacagaggaacttcttttctccacaaataattactacagacaatacatttgtctcaggaaattgtgatgtcgttattggcatcattaacaacacagtttatgatcctctgcaacctgagcttgactcattcaaagaagagctggacaagtacttcaaaaatcatacatcaccagatgttgatcttggcgacatttcaggcattaacgcttctgtcgtcaacattcaaaaagaaattgaccgcctcaatgaggtcgctaaaaatttaaatgaatcactcattgaccttcaagaattgggaaaatatgagcaatatattaaatggccttggtatgtttggctcggcttcattgctggactaattgccatcgtcatggttacaatcttgctttgttgcatgactagttgttgcagttgcctcaagggtgcatgctcttgtggttcttgctgcaagtttgatgaggatgactctgagccagttctcaagggtgtcaaattacattacacataa</GBSeq_sequence>
+  </GBSeq>

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<GBSeq>
+
+    <GBSeq_locus>DL008541</GBSeq_locus>
+    <GBSeq_length>1242</GBSeq_length>
+    <GBSeq_strandedness>double</GBSeq_strandedness>
+    <GBSeq_moltype>DNA</GBSeq_moltype>
+    <GBSeq_topology>linear</GBSeq_topology>
+    <GBSeq_division>PAT</GBSeq_division>
+    <GBSeq_update-date>25-NOV-2009</GBSeq_update-date>
+    <GBSeq_create-date>30-JUL-2008</GBSeq_create-date>
+    <GBSeq_definition>NOVEL STRAIN OF SARS-ASSOCIATED CORONAVIRUS AND APPLICATIONS THEREOF</GBSeq_definition>
+    <GBSeq_primary-accession>DL008541</GBSeq_primary-accession>
+    <GBSeq_accession-version>DL008541.1</GBSeq_accession-version>
+    <GBSeq_other-seqids>
+      <GBSeqid>dbj|DL008541.1|</GBSeqid>
+      <GBSeqid>pat|JP|2007536907|15</GBSeqid>
+      <GBSeqid>gi|194722769</GBSeqid>
+    </GBSeq_other-seqids>
+    <GBSeq_keywords>
+      <GBKeyword>JP 2007536907-A/15</GBKeyword>
+    </GBSeq_keywords>
+    <GBSeq_source>Severe acute respiratory syndrome-related coronavirus</GBSeq_source>
+    <GBSeq_organism>Severe acute respiratory syndrome-related coronavirus</GBSeq_organism>
+    <GBSeq_taxonomy>Viruses; Riboviria; Nidovirales; Cornidovirineae; Coronaviridae; Orthocoronavirinae; Betacoronavirus; Sarbecovirus</GBSeq_taxonomy>
+    <GBSeq_references>
+      <GBReference>
+        <GBReference_reference>1</GBReference_reference>
+        <GBReference_position>1..1242</GBReference_position>
+        <GBReference_authors>
+          <GBAuthor>Charneau,P.</GBAuthor>
+          <GBAuthor>Azebi,S.</GBAuthor>
+          <GBAuthor>Burguiere,A.M.</GBAuthor>
+          <GBAuthor>Gerbaud,S.</GBAuthor>
+          <GBAuthor>Manuguerra,J.</GBAuthor>
+          <GBAuthor>Callendret,B.</GBAuthor>
+          <GBAuthor>Betton,J.</GBAuthor>
+          <GBAuthor>Lorin,V.</GBAuthor>
+          <GBAuthor>Kunst,F.</GBAuthor>
+          <GBAuthor>CrescenzoMchaigne,B.</GBAuthor>
+          <GBAuthor>Combredet,C.</GBAuthor>
+          <GBAuthor>Martin,M.</GBAuthor>
+          <GBAuthor>Tangy,F.</GBAuthor>
+          <GBAuthor>Delagneau,J.</GBAuthor>
+          <GBAuthor>Escriou,N.</GBAuthor>
+          <GBAuthor>Werf,S.V.D.</GBAuthor>
+        </GBReference_authors>
+        <GBReference_title>NOVEL STRAIN OF SARS-ASSOCIATED CORONAVIRUS AND APPLICATIONS</GBReference_title>
+        <GBReference_journal>JP2007536907-A 15 20-DEC-2007 INSTITUT PASTEUR,CENTRE NATIONAL DE LA RECHERCHE SCIENTIFIQUE, UNIVERSITE PARIS 7,Sylvie VAN DER WERF,Nicolas ESCRIOU, Bernadette CRESCENZO-CHAIGNE,Jean-Claude MANUGUERRA,Franck KUNST, Benoit CALLENDRET,Jean-Michel BETTON,Valerie LORIN,Sylvie GERBAUD, Ana Maria BURGUIERE,Saliha AZEBI,Pierre CHARNEAU,Frederic TANGY, Chantal COMBREDET,Jean-Francois DELAGNEAU,Monique MARTIN</GBReference_journal>
+      </GBReference>
+    </GBSeq_references>
+    <GBSeq_comment>OS CORONAVIRUS~PN JP 2007536907-A/15~PD 20-DEC-2007~PF 02-DEC-2004 JP 2006541980~PR 02-DEC-2003 FR 0314151,02-DEC-2003 FR 0314152 PI pierre charneau,saliha azebi,ana maria burguiere,sylvie PI gerbaud,~PI jean-claude manuguerra,benoit callendret,jean-michel betton, PI valerie lorin,~PI frederick kunst,bernadette crescenzo-chaigne,chantal PI combredet,~PI monique martin,frederic tangy,jean-francois delagneau,nicolas PI escriou,~PI sylvie van der werf~CC~FH Key Location/Qualifiers.</GBSeq_comment>
+    <GBSeq_feature-table>
+      <GBFeature>
+        <GBFeature_key>source</GBFeature_key>
+        <GBFeature_location>1..1242</GBFeature_location>
+        <GBFeature_intervals>
+          <GBInterval>
+            <GBInterval_from>1</GBInterval_from>
+            <GBInterval_to>1242</GBInterval_to>
+            <GBInterval_accession>DL008541.1</GBInterval_accession>
+          </GBInterval>
+        </GBFeature_intervals>
+        <GBFeature_quals>
+          <GBQualifier>
+            <GBQualifier_name>organism</GBQualifier_name>
+            <GBQualifier_value>Severe acute respiratory syndrome-related coronavirus</GBQualifier_value>
+          </GBQualifier>
+          <GBQualifier>
+            <GBQualifier_name>mol_type</GBQualifier_name>
+            <GBQualifier_value>unassigned DNA</GBQualifier_value>
+          </GBQualifier>
+          <GBQualifier>
+            <GBQualifier_name>db_xref</GBQualifier_name>
+            <GBQualifier_value>taxon:694009</GBQualifier_value>
+          </GBQualifier>
+        </GBFeature_quals>
+      </GBFeature>
+    </GBSeq_feature-table>
+    <GBSeq_sequence>gcatacaaccgctaccgtattggaaactataaattaaatacagaccacgccggtagcaacgacaatattgctttgctagtacagtaagtgacaacagatgtttcatcttgttgacttccaggttacaatagcagagatattgattatcattatgaggactttcaggattgctatttggaatcttgacgttataataagttcaatagtgagacagttatttaagcctctaactaagaagaattattcggagttagatgatgaagaacctatggagttagattatccataaaacgaacatgaaaattattctcttcctgacattgattgtatttacatcttgcgagctatatcactatcaggagtgtgttagaggtacgactgtactactaaaagaaccttgcccatcaggaacatacgagggcaattcaccatttcaccctcttgctgacaataaatttgcactaacttgcactagcacacactttgcttttgcttgtgctgacggtactcgacatacctatcagctgcgtgcaagatcagtttcaccaaaacttttcatcagacaagaggaggttcaacaagagctctactcgccactttttctcattgttgctgctctagtatttttaatactttgcttcaccattaagagaaagacagaatgaatgagctcactttaattgacttctatttgtgctttttagcctttctgctattccttgttttaataatgcttattatattttggttttcactcgaaatccaggatctagaagaaccttgtaccaaagtctaaacgaacatgaaacttctcattgttttgacttgtatttctctatgcagttgcatatgcactgtagtacagcgctgtgcatctaataaacctcatgtgcttgaagatccttgtaaggtacaacactaggggtaatacttatagcactgcttggctttgtgctctaggaaaggttttaccttttcatagatggcacactatggttcaaacatgcacacctaatgttactatcaactgtcaagatccagctggtggtgcgcttatagctaggtgttggtaccttcatgaaggtcaccaaactgctgcatttagagacgtacttgttgttttaaataaacgaacgaattaaaatgtctgataatggaccccaatcaaaccaacgtagtgccccccgcattacatttggtggacccacagattcaactgacaataaccagaatggaggacgc</GBSeq_sequence>
+  </GBSeq>

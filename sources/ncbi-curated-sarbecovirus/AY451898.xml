@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<GBSeq>
+
+    <GBSeq_locus>AY451898</GBSeq_locus>
+    <GBSeq_length>1594</GBSeq_length>
+    <GBSeq_strandedness>single</GBSeq_strandedness>
+    <GBSeq_moltype>RNA</GBSeq_moltype>
+    <GBSeq_topology>linear</GBSeq_topology>
+    <GBSeq_division>VRL</GBSeq_division>
+    <GBSeq_update-date>26-JUL-2016</GBSeq_update-date>
+    <GBSeq_create-date>28-FEB-2004</GBSeq_create-date>
+    <GBSeq_definition>SARS coronavirus TW-KC3 isolate TW-KC3_SC22-23 replicase 1B and spike glycoprotein genes, partial cds</GBSeq_definition>
+    <GBSeq_primary-accession>AY451898</GBSeq_primary-accession>
+    <GBSeq_accession-version>AY451898.1</GBSeq_accession-version>
+    <GBSeq_other-seqids>
+      <GBSeqid>gb|AY451898.1|</GBSeqid>
+      <GBSeqid>gi|42741256</GBSeqid>
+    </GBSeq_other-seqids>
+    <GBSeq_source>SARS coronavirus TW-KC3</GBSeq_source>
+    <GBSeq_organism>SARS coronavirus TW-KC3</GBSeq_organism>
+    <GBSeq_taxonomy>Viruses; Riboviria; Nidovirales; Cornidovirineae; Coronaviridae; Orthocoronavirinae; Betacoronavirus; Sarbecovirus</GBSeq_taxonomy>
+    <GBSeq_references>
+      <GBReference>
+        <GBReference_reference>1</GBReference_reference>
+        <GBReference_position>1..1594</GBReference_position>
+        <GBReference_authors>
+          <GBAuthor>Lan,Y.C.</GBAuthor>
+          <GBAuthor>Liu,T.T.</GBAuthor>
+          <GBAuthor>Yang,J.Y.</GBAuthor>
+          <GBAuthor>Lee,C.M.</GBAuthor>
+          <GBAuthor>Chen,Y.J.</GBAuthor>
+          <GBAuthor>Chan,Y.J.</GBAuthor>
+          <GBAuthor>Lu,J.J.</GBAuthor>
+          <GBAuthor>Liu,H.F.</GBAuthor>
+          <GBAuthor>Hsiung,C.A.</GBAuthor>
+          <GBAuthor>Ho,M.S.</GBAuthor>
+          <GBAuthor>Hsiao,K.J.</GBAuthor>
+          <GBAuthor>Chen,H.Y.</GBAuthor>
+          <GBAuthor>Chen,Y.M.</GBAuthor>
+        </GBReference_authors>
+        <GBReference_title>Molecular epidemiology of severe acute respiratory syndrome-associated coronavirus infections in Taiwan</GBReference_title>
+        <GBReference_journal>J. Infect. Dis. 191 (9), 1478-1489 (2005)</GBReference_journal>
+        <GBReference_xref>
+          <GBXref>
+            <GBXref_dbname>doi</GBXref_dbname>
+            <GBXref_id>10.1086/428591</GBXref_id>
+          </GBXref>
+        </GBReference_xref>
+        <GBReference_pubmed>15809907</GBReference_pubmed>
+      </GBReference>
+      <GBReference>
+        <GBReference_reference>2</GBReference_reference>
+        <GBReference_position>1..1594</GBReference_position>
+        <GBReference_authors>
+          <GBAuthor>Lan,Y.-C.</GBAuthor>
+          <GBAuthor>Chen,Y.-J.</GBAuthor>
+          <GBAuthor>Lee,C.-M.</GBAuthor>
+          <GBAuthor>Liu,T.-T.</GBAuthor>
+          <GBAuthor>Lu,J.-J.</GBAuthor>
+          <GBAuthor>Chan,Y.-J.</GBAuthor>
+          <GBAuthor>Yang,J.-Y.</GBAuthor>
+          <GBAuthor>Chen,H.-Y.</GBAuthor>
+          <GBAuthor>Chen,Y.-M.Arthur.</GBAuthor>
+        </GBReference_authors>
+        <GBReference_title>Direct Submission</GBReference_title>
+        <GBReference_journal>Submitted (28-OCT-2003) National Yang-Ming University, AIDS Prevention and Research Center, 155, Li-Nong St., Sec.2, Peitou, Taipei, Taiwan 112, R.O.C.</GBReference_journal>
+      </GBReference>
+    </GBSeq_references>
+    <GBSeq_feature-table>
+      <GBFeature>
+        <GBFeature_key>source</GBFeature_key>
+        <GBFeature_location>1..1594</GBFeature_location>
+        <GBFeature_intervals>
+          <GBInterval>
+            <GBInterval_from>1</GBInterval_from>
+            <GBInterval_to>1594</GBInterval_to>
+            <GBInterval_accession>AY451898.1</GBInterval_accession>
+          </GBInterval>
+        </GBFeature_intervals>
+        <GBFeature_quals>
+          <GBQualifier>
+            <GBQualifier_name>organism</GBQualifier_name>
+            <GBQualifier_value>SARS coronavirus TW-KC3</GBQualifier_value>
+          </GBQualifier>
+          <GBQualifier>
+            <GBQualifier_name>mol_type</GBQualifier_name>
+            <GBQualifier_value>genomic RNA</GBQualifier_value>
+          </GBQualifier>
+          <GBQualifier>
+            <GBQualifier_name>isolate</GBQualifier_name>
+            <GBQualifier_value>TW-KC3_SC22-23</GBQualifier_value>
+          </GBQualifier>
+          <GBQualifier>
+            <GBQualifier_name>db_xref</GBQualifier_name>
+            <GBQualifier_value>taxon:264377</GBQualifier_value>
+          </GBQualifier>
+        </GBFeature_quals>
+      </GBFeature>
+      <GBFeature>
+        <GBFeature_key>CDS</GBFeature_key>
+        <GBFeature_location>&lt;1..249</GBFeature_location>
+        <GBFeature_intervals>
+          <GBInterval>
+            <GBInterval_from>1</GBInterval_from>
+            <GBInterval_to>249</GBInterval_to>
+            <GBInterval_accession>AY451898.1</GBInterval_accession>
+          </GBInterval>
+        </GBFeature_intervals>
+        <GBFeature_partial5 value="true"/>
+        <GBFeature_quals>
+          <GBQualifier>
+            <GBQualifier_name>codon_start</GBQualifier_name>
+            <GBQualifier_value>1</GBQualifier_value>
+          </GBQualifier>
+          <GBQualifier>
+            <GBQualifier_name>transl_table</GBQualifier_name>
+            <GBQualifier_value>1</GBQualifier_value>
+          </GBQualifier>
+          <GBQualifier>
+            <GBQualifier_name>product</GBQualifier_name>
+            <GBQualifier_value>replicase 1B</GBQualifier_value>
+          </GBQualifier>
+          <GBQualifier>
+            <GBQualifier_name>protein_id</GBQualifier_name>
+            <GBQualifier_value>AAS44772.1</GBQualifier_value>
+          </GBQualifier>
+          <GBQualifier>
+            <GBQualifier_name>translation</GBQualifier_name>
+            <GBQualifier_value>EQIDGYTMHANYIFWRNTNPIQLSSYSLFDMSKFPLKLRGTAVMSLKENQINDMIYSLLEKGRLIIRENNRVVVSSDILVNN</GBQualifier_value>
+          </GBQualifier>
+        </GBFeature_quals>
+      </GBFeature>
+      <GBFeature>
+        <GBFeature_key>CDS</GBFeature_key>
+        <GBFeature_location>256..&gt;1594</GBFeature_location>
+        <GBFeature_intervals>
+          <GBInterval>
+            <GBInterval_from>256</GBInterval_from>
+            <GBInterval_to>1594</GBInterval_to>
+            <GBInterval_accession>AY451898.1</GBInterval_accession>
+          </GBInterval>
+        </GBFeature_intervals>
+        <GBFeature_partial3 value="true"/>
+        <GBFeature_quals>
+          <GBQualifier>
+            <GBQualifier_name>codon_start</GBQualifier_name>
+            <GBQualifier_value>1</GBQualifier_value>
+          </GBQualifier>
+          <GBQualifier>
+            <GBQualifier_name>transl_table</GBQualifier_name>
+            <GBQualifier_value>1</GBQualifier_value>
+          </GBQualifier>
+          <GBQualifier>
+            <GBQualifier_name>product</GBQualifier_name>
+            <GBQualifier_value>spike glycoprotein</GBQualifier_value>
+          </GBQualifier>
+          <GBQualifier>
+            <GBQualifier_name>protein_id</GBQualifier_name>
+            <GBQualifier_value>AAS44773.1</GBQualifier_value>
+          </GBQualifier>
+          <GBQualifier>
+            <GBQualifier_name>translation</GBQualifier_name>
+            <GBQualifier_value>MFIFLLFLTLTSGSDLDRCTTFDDVQAPNYTQHTSSMRGVYYPDEIFRSDTLYLTQDLFLPFYSNVTGFHTINHTFGNPVIPFKDGIYFAATEKSNVVRGWVFGSTMNNKSQSVIIINNSTNVVIRACNFELCDNPFFAVSKPMGTQTHTMIFDNAFNCTFEYISDAFSLDVSEKSGNFKHLREFVFKNKDGFLYVYKGYQPIDVVRDLPSGFNTLKPIFKLPLGINITNFRAILTAFSPAQDIWGTSAAAYFVGYLKPTTFMLKYDENGTITDAVDCSQNPLAELKCSVKSFEIDKGIYQTSNFRVVPSGDVVRFPNITNLCPFGEVFNATKFPSVYAWERKKISNCVADYSVLYNSTFFSTFKCYGVSATKLNDLCFSNVYADSFVVKGDDVRQIAPGQTGVIADYNYKLPDDFMGCVLAWNTRNIDATSTGNYNYKYRYLRHG</GBQualifier_value>
+          </GBQualifier>
+        </GBFeature_quals>
+      </GBFeature>
+    </GBSeq_feature-table>
+    <GBSeq_sequence>gaacaaattgatggctataccatgcatgctaactacattttctggaggaacacaaatcctatccagttgtcttcctattcactctttgacatgagcaaatttcctcttaaattaagaggaactgctgtaatgtctcttaaggagaatcaaatcaatgatatgatttattctcttctggaaaaaggtaggcttatcattagagaaaacaacagagttgtggtttcaagtgatattcttgttaacaactaaacgaacatgtttattttcttattatttcttactctcactagtggtagtgaccttgaccggtgcaccacttttgatgatgttcaagctcctaattacactcaacatacttcatctatgaggggggtttactatcctgatgaaatttttagatcagacactctttatttaactcaggatttatttcttccattttattctaatgttacagggtttcatactattaatcatacgtttggcaaccctgtcataccttttaaggatggtatttattttgctgccacagagaaatcaaatgttgtccgtggttgggtttttggttctaccatgaacaacaagtcacagtcggtgattattattaacaattctactaatgttgttatacgagcatgtaactttgaattgtgtgacaaccctttctttgctgtttctaaacccatgggtacacagacacatactatgatattcgataatgcatttaattgcactttcgagtacatatctgatgccttttcgcttgatgtttcagaaaagtcaggtaattttaaacacttacgagagtttgtgtttaaaaataaagatgggtttctctatgtttataagggctatcaacctatagatgtagttcgtgatctaccttctggttttaacactttgaaacctatttttaagttgcctcttggtattaacattacaaattttagagccattcttacagccttttcacctgctcaagacatttggggcacgtcagctgcagcctattttgttggctatttaaagccaactacatttatgctcaagtatgatgaaaatggtacaatcacagatgctgttgattgttctcaaaatccacttgctgaactcaaatgctctgttaagagctttgagattgacaaaggaatttaccagacctctaatttcagggttgttccctcaggagatgttgtgagattccctaatattacaaacttgtgtccttttggagaggtttttaatgctactaaattcccttctgtctatgcatgggagagaaaaaaaatttctaattgtgttgctgattactctgtgctctacaactcaacatttttttcaacctttaagtgctatggcgtttctgccactaagttgaatgatctttgcttctccaatgtctatgcagattcttttgtagtcaagggagatgatgtaagacaaatagcgccaggacaaactggtgttattgctgattataattataaattgccagatgatttcatgggttgtgtccttgcttggaatactaggaacattgatgctacttcaactggtaattataattataaatataggtatcttagacatggca</GBSeq_sequence>
+  </GBSeq>

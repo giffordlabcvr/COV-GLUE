@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<GBSeq>
+
+    <GBSeq_locus>CS244437</GBSeq_locus>
+    <GBSeq_length>3795</GBSeq_length>
+    <GBSeq_strandedness>double</GBSeq_strandedness>
+    <GBSeq_moltype>DNA</GBSeq_moltype>
+    <GBSeq_topology>linear</GBSeq_topology>
+    <GBSeq_division>PAT</GBSeq_division>
+    <GBSeq_update-date>17-JUL-2006</GBSeq_update-date>
+    <GBSeq_create-date>09-JAN-2006</GBSeq_create-date>
+    <GBSeq_definition>Sequence 1 from Patent WO2005118813</GBSeq_definition>
+    <GBSeq_primary-accession>CS244437</GBSeq_primary-accession>
+    <GBSeq_accession-version>CS244437.1</GBSeq_accession-version>
+    <GBSeq_other-seqids>
+      <GBSeqid>emb|CS244437.1|</GBSeqid>
+      <GBSeqid>pat|WO|2005118813|1</GBSeqid>
+      <GBSeqid>gi|84659111</GBSeqid>
+    </GBSeq_other-seqids>
+    <GBSeq_source>Severe acute respiratory syndrome-related coronavirus</GBSeq_source>
+    <GBSeq_organism>Severe acute respiratory syndrome-related coronavirus</GBSeq_organism>
+    <GBSeq_taxonomy>Viruses; Riboviria; Nidovirales; Cornidovirineae; Coronaviridae; Orthocoronavirinae; Betacoronavirus; Sarbecovirus</GBSeq_taxonomy>
+    <GBSeq_references>
+      <GBReference>
+        <GBReference_reference>1</GBReference_reference>
+        <GBReference_position>1..3795</GBReference_position>
+        <GBReference_authors>
+          <GBAuthor>Altmeyer,R.</GBAuthor>
+          <GBAuthor>Nal-Rogier,B.</GBAuthor>
+          <GBAuthor>Chan,C.</GBAuthor>
+          <GBAuthor>Kien,F.</GBAuthor>
+          <GBAuthor>Kam,Y.W.</GBAuthor>
+          <GBAuthor>Siu,Y.L.</GBAuthor>
+          <GBAuthor>Tse,K.S.</GBAuthor>
+          <GBAuthor>Staropoli,I.</GBAuthor>
+          <GBAuthor>Manuguerra,J.C.</GBAuthor>
+        </GBReference_authors>
+        <GBReference_title>Nucleic acids, polypeptides, methods of expression, and immunogenic compositions associated with sars corona virus spike protein</GBReference_title>
+        <GBReference_journal>WO2005118813-A2 1 15-DEC-2005 INSTITUT PASTEUR (FR); Hong Kong Pasteur Research Centre Limited (CN)</GBReference_journal>
+      </GBReference>
+    </GBSeq_references>
+    <GBSeq_feature-table>
+      <GBFeature>
+        <GBFeature_key>source</GBFeature_key>
+        <GBFeature_location>1..3795</GBFeature_location>
+        <GBFeature_intervals>
+          <GBInterval>
+            <GBInterval_from>1</GBInterval_from>
+            <GBInterval_to>3795</GBInterval_to>
+            <GBInterval_accession>CS244437.1</GBInterval_accession>
+          </GBInterval>
+        </GBFeature_intervals>
+        <GBFeature_quals>
+          <GBQualifier>
+            <GBQualifier_name>organism</GBQualifier_name>
+            <GBQualifier_value>Severe acute respiratory syndrome-related coronavirus</GBQualifier_value>
+          </GBQualifier>
+          <GBQualifier>
+            <GBQualifier_name>mol_type</GBQualifier_name>
+            <GBQualifier_value>unassigned DNA</GBQualifier_value>
+          </GBQualifier>
+          <GBQualifier>
+            <GBQualifier_name>db_xref</GBQualifier_name>
+            <GBQualifier_value>taxon:694009</GBQualifier_value>
+          </GBQualifier>
+        </GBFeature_quals>
+      </GBFeature>
+    </GBSeq_feature-table>
+    <GBSeq_sequence>atgtttattttcttattatttcttactctcactagtggtagtgaccttgaccggtgcaccacttttgatgatgttcaagctcctaattacactcaacatacttcatctatgaggggggtttactatcctgatgaaatttttagatcagacactctttatttaactcaggatttatttcttccattttattctaatgttacagggtttcatactattaatcatacgtttggcaaccctgtcataccttttaaggatggtatttattttgctgccacagagaaatcaaatgttgtccgtggttgggtttttggttctaccatgaacaacaagtcacagtcggtgattattattaacaattctactaatgttgttatacgagcatgtaactttgaattgtgtgacaaccctttctttgctgtttctaaacccatgggtacacagacacatactatgatattcgataatgcatttaattgcactttcgagtacatatctgatgccttttcgcttgatgtttcagaaaagtcaggtaattttaaacacttacgagagtttgtgtttaaaaataaagatgggtttctctatgtttataagggctatcaacctatagatgtagttcgtgatctaccttctggttttaacactttgaaacctatttttaagttgcctcttggtattaacattacaaattttagagccattcttacagccttttcacctgctcaagacatttggggcacgtcagctgcagcctattttgttggctatttaaagccaactacatttatgctcaagtatgatgaaaatggtacaatcacagatgctgttgattgttctcaaaatccacttgctgaactcaaatgctctgttaagagctttgagattgacaaaggaatttaccagacctctaatttcagggttgttccctcaggagatgttgtgagattccctaatattacaaacttgtgtccttttggagaggtttttaatgctactaaattcccttctgtctatgcatgggagagaaaaaaaatttctaattgtgttgctgattactctgtgctctacaactcaacatttttttcaacctttaagtgctatggcgtttctgccactaagttgaatgatctttgcttctccaatgtctatgcagattcttttgtagtcaagggagatgatgtaagacaaatagcgccaggacaaactggtgttattgctgattataattataaattgccagatgatttcatgggttgtgtccttgcttggaatactaggaacattgatgctacttcaactggtaattataattataaatataggtatcttagacatggcaagcttaggccctttgagagagacatatctaatgtgcctttctcccctgatggcaaaccttgcaccccacctgctcttaattgttattggccattaaatgattatggtttttacaccactactggcattggctaccaaccttacagagttgtagtactttcttttgaacttttaaatgcaccggccacggtttgtggaccaaaattatccactgaccttattaagaaccagtgtgtcaattttaattttaatggactcactggtactggtgtgttaactccttcttcaaagagatttcaaccatttcaacaatttggccgtgatgtctctgatttcactgattccgttcgagatcctaaaacatctgaaatattagacatttcaccttgctcttttgggggtgtaagtgtaattacacctggaacaaatgcttcatctgaagttgctgttctatatcaagatgttaactgcactgatgtttctacagcaatccatgcagatcaactcacaccagcttggcgcatatattctactggaaacaatgtattccagactcaagcaggctgtcttataggagctgagcatgtcgacacttcttatgagtgcgacattcctattggagctggcatttgtgctagttaccatacagtttctttattacgtagtactagccaaaaatctattgtggcttatactatgtctttaggtgctgatagttcaattgcttactctaataacaccattgctatacctactaacttttcaattagcattactacagaagtaatgcctgtttctatggctaaaacctccgtagattgtaatatgtacatctgcggagattctactgaatgtgctaatttgcttctccaatatggtagcttttgcacacaactaaatcgtgcactctcaggtattgctgctgaacaggatcgcaacacacgtgaagtgttcgctcaagtcaaacaaatgtacaaaaccccaactttgaaatattttggtggttttaatttttcacaaatattacctgaccctctaaagccaactaagaggtcttttattgaggacttgctctttaataaggtgacactcgctgatgctggcttcatgaagcaatatggcgaatgcctaggtgatattaatgctagagatctcatttgtgcgcagaagttcaatgggcttacagtgttgccacctctgctcactgatgatatgattgctgcctacactgctgctctagttagtggtactgccactgctggatggacatttggtgctggcgctgctcttcaaataccttttgctatgcaaatggcatataggttcaatggcattggagttacccaaaatgttctctatgagaaccaaaaacaaatcgccaaccaatttaacaaggcgattagtcaaattcaagaatcacttacaacaacatcaactgcattgggcaagctgcaagacgttgttaaccagaatgctcaagcattaaacacacttgttaaacaacttagctctaattttggtgcaatttcaagtgtgctaaatgatatcctttcgcgacttgataaagtcgaggcggaggtacaaattgacaggctaattacaggcagacttcaaagccttcaaacctatgtaacacaacaactaatcagggctgctgaaatcagggcttctgctaatcttgctgctactaaaatgtctgagtgtgttcttggacaatcaaaaagagttgacttttgtggaaagggctaccaccttatgtccttcccacaagcagccccgcatggtgttgtcttcctacatgtcacgtatgtgccatcccaggagaggaacttcaccacagcgccagcaatttgtcatgaaggcaaagcatacttccctcgtgaaggtgtttttgtgtttaatggcacttcttggtttattacacagaggaacttcttttctccacaaataattactacagacaatacatttgtctcaggaaattgtgatgtcgttattggcatcattaacaacacagtttatgatcctctgcaacctgagcttgactcattcaaagaagagctggacaagtacttcaaaaatcatacatcaccagatgttgatcttggcgacatttcaggcattaacgcttctgtcgtcaacattcaaaaagaaattgaccgcctcaatgaggtcgctaaaaatttaaatgaatcactcattgaccttcaagaattgggaaaatatgagcaatatattaaatggccttggtatgtttggctcggcttcattgctggactaattgccatcgtcatggttacaatcttgctttgttgcatgactagttgttgcagttgcctcaagggtgcatgctcttgtggttcttgctgcaagtttgatgaggatgacgctgagccagttctcaagggtgtcaaattacattacacagactacaaggatgacgatgacaataagtaa</GBSeq_sequence>
+  </GBSeq>

@@ -1,0 +1,28 @@
+<!-- SRLV paper sequences -->
+<ncbiImporter>
+
+  <sourceName>ncbi-refseq-betacorona</sourceName>
+  <giNumberFieldName>gb_gi_number</giNumberFieldName>
+  <specificPrimaryAccessions>
+	
+     <!-- HKU1 -->
+	 <primaryAccession>NC_006577</primaryAccession>
+     <!-- Bat-Rousettus-GCCDC1 -->
+	 <primaryAccession>NC_030886</primaryAccession>
+     <!-- SARS -->
+	 <primaryAccession>NC_004718</primaryAccession>
+     <!-- Bat coronavirus RaTG13 -->
+	 <primaryAccession>MN996532</primaryAccession>
+     <!-- Bat -->
+	 <primaryAccession>NC_025217</primaryAccession>
+     <!-- MERS -->
+	 <primaryAccession>NC_019843</primaryAccession>
+     <!-- Hedgehog CoV -->
+	 <primaryAccession>MK679660</primaryAccession>
+
+  </specificPrimaryAccessions>
+  <sequenceFormat>GENBANK_XML</sequenceFormat>
+  <sequenceIdField>PRIMARY_ACCESSION</sequenceIdField>
+  
+</ncbiImporter>
+

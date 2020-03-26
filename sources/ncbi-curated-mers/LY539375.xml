@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<GBSeq>
+
+    <GBSeq_locus>LY539375</GBSeq_locus>
+    <GBSeq_length>2259</GBSeq_length>
+    <GBSeq_strandedness>double</GBSeq_strandedness>
+    <GBSeq_moltype>DNA</GBSeq_moltype>
+    <GBSeq_topology>linear</GBSeq_topology>
+    <GBSeq_division>PAT</GBSeq_division>
+    <GBSeq_update-date>26-SEP-2018</GBSeq_update-date>
+    <GBSeq_create-date>26-SEP-2018</GBSeq_create-date>
+    <GBSeq_definition>KR 1020170140180-A/15: MIDDLE EAST RESPIRATORY SYNDROME CORONAVIRUS IMMUNOGENS, ANTIBODIES, AND THEIR USE</GBSeq_definition>
+    <GBSeq_primary-accession>LY539375</GBSeq_primary-accession>
+    <GBSeq_accession-version>LY539375.1</GBSeq_accession-version>
+    <GBSeq_other-seqids>
+      <GBSeqid>dbj|LY539375.1|</GBSeqid>
+      <GBSeqid>pat|KR|1020170140180|15</GBSeqid>
+      <GBSeqid>gi|1483417296</GBSeqid>
+    </GBSeq_other-seqids>
+    <GBSeq_keywords>
+      <GBKeyword>KR 1020170140180-A/15</GBKeyword>
+    </GBSeq_keywords>
+    <GBSeq_source>Middle East respiratory syndrome-related coronavirus (MERS-CoV)</GBSeq_source>
+    <GBSeq_organism>Middle East respiratory syndrome-related coronavirus</GBSeq_organism>
+    <GBSeq_taxonomy>Viruses; ssRNA viruses; ssRNA positive-strand viruses, no DNA stage; Nidovirales; Coronaviridae; Coronavirinae; Betacoronavirus</GBSeq_taxonomy>
+    <GBSeq_references>
+      <GBReference>
+        <GBReference_reference>1</GBReference_reference>
+        <GBReference_position>1..2259</GBReference_position>
+        <GBReference_authors>
+          <GBAuthor>Graham,B.</GBAuthor>
+          <GBAuthor>Kong,W.</GBAuthor>
+          <GBAuthor>Modjarrad,K.</GBAuthor>
+          <GBAuthor>Wang,L.</GBAuthor>
+          <GBAuthor>Shi,W.</GBAuthor>
+          <GBAuthor>Joyce,M.G.</GBAuthor>
+          <GBAuthor>Kanekiyo,M.</GBAuthor>
+          <GBAuthor>Mascola,J.</GBAuthor>
+        </GBReference_authors>
+        <GBReference_title>MIDDLE EAST RESPIRATORY SYNDROME CORONAVIRUS IMMUNOGENS, ANTIBODIES, AND THEIR USE</GBReference_title>
+        <GBReference_journal>KR1020170140180-A 15 20-DEC-2017 The United States of America, as Represented by the Secretary, Department of Health and Human Services</GBReference_journal>
+      </GBReference>
+    </GBSeq_references>
+    <GBSeq_comment>KN KR 1020177027105-A/15~AN KR 1020177027105~AD 2017-09-25~PN KR 1020170140180~PD 2017-12-20~AT MIDDLE EAST RESPIRATORY SYNDROME CORONAVIRUS IMMUNOGENS,~AT ANTIBODIES, AND THEIR USE~AI Graham, Barney|Kong, Wing-Pui|Modjarrad, Kayvon|Wang,~AI Lingshu|Shi, Wei|Joyce, Michael Gordon|Kanekiyo,~AI Masaru|Mascola, John~AA The United States of America, as Represented by the Secretary,~AA Department of Health and Human Services~PR US 62/120,353=2015-02-28|PCT/US 2016/019395=2016-02-24~OS Middle East Respiratory Syndrome Coronavirus~TY DNA~FH Key Location/Qualifiers.</GBSeq_comment>
+    <GBSeq_feature-table>
+      <GBFeature>
+        <GBFeature_key>source</GBFeature_key>
+        <GBFeature_location>1..2259</GBFeature_location>
+        <GBFeature_intervals>
+          <GBInterval>
+            <GBInterval_from>1</GBInterval_from>
+            <GBInterval_to>2259</GBInterval_to>
+            <GBInterval_accession>LY539375.1</GBInterval_accession>
+          </GBInterval>
+        </GBFeature_intervals>
+        <GBFeature_quals>
+          <GBQualifier>
+            <GBQualifier_name>organism</GBQualifier_name>
+            <GBQualifier_value>Middle East respiratory syndrome-related coronavirus</GBQualifier_value>
+          </GBQualifier>
+          <GBQualifier>
+            <GBQualifier_name>mol_type</GBQualifier_name>
+            <GBQualifier_value>unassigned DNA</GBQualifier_value>
+          </GBQualifier>
+          <GBQualifier>
+            <GBQualifier_name>db_xref</GBQualifier_name>
+            <GBQualifier_value>taxon:1335626</GBQualifier_value>
+          </GBQualifier>
+        </GBFeature_quals>
+      </GBFeature>
+    </GBSeq_feature-table>
+    <GBSeq_sequence>atgattcactccgtgttcctgctgatgttcctgctgactcctacagagagctatgtggatgtgggacctgattccgtcaagagcgcctgcatcgaagtggacattcagcagaccttctttgataagacatggccaagacccatcgacgtgagcaaagccgatggcatcatctaccctcaggggaggacctattccaatatcacaattacttaccagggcctgttcccatatcagggagaccacggcgatatgtacgtgtattctgctggccatgcaacagggaccacacctcagaagctgtttgtggctaactacagccaggacgtcaaacagttcgcaaatggatttgtggtccgcatcggcgccgctgcaaactctaccggcacagtgatcatttcacctagcacttccgcaaccatccgaaaaatctacccagccttcatgctgggaagctccgtgggcaattttagcgacgggaaaatgggacggttctttaaccacaccctggtgctgctgcctgatggatgcggcacactgctgagggctttctactgtatcctggagccacgcagcggaaaccactgccccgcaggaaatagctacacctcctttgccacatatcatactccagctaccgactgttccgatggcaactacaatcgaaacgcctctctgaatagtttcaaggaatacttcaacctgcggaattgcacattcatgtacacttataacatcaccgaggacgaaattctggagtggttcggaatcactcagaccgcacagggcgtgcacctgttttctagtcgctacgtcgacctgtatggcgggaacatgttccagtttgccactctgcccgtgtacgataccatcaagtactattccatcattcctcattcaatccgcagcattcagtccgatcgaaaggcttgggccgctttctacgtgtataaactgcagccactgaccttcctgctggactttagcgtcgatggctacatccggagagccattgactgcgggtttaatgatctgtcccagctgcactgttcttacgaaagtttcgacgtggagtccggcgtgtattctgtctcaagctttgaggccaagccctctgggagtgtggtcgagcaggctgaaggagtggagtgcgatttcagtcctctgctgtcagggaccccccctcaggtgtacaacttcaagcggctggtctttactaactgtaactacaatctgaccaagctgctgtcactgttcagcgtgaatgactttacatgctcccagatcagccccgcagccattgctagtaactgttactcctctctgatcctggactacttctcatatccactgagtatgaagagcgacctgagcgtgagttcagccggccccatcagccagttcaactataaacagagcttcagcaatcctacatgcctgattctggctactgtgccacataatctgactaccatcactaagcccctgaaatactcctatattaacaagtgcagccggttcctgtccgacgatagaaccgaagtgccacagctggtcaacgccaatcagtactctccctgtgtgagtatcgtcccttcaaccgtgtgggaagacggggattactatagaaaacagctgagccccctggagggaggaggatggctggtggcatccggatctacagtcgccatgactgagcagctgcagatggggttcggaatcacagtgcagtacggcacagacactaactctgtctgtcccaagctggaattcgctaacgatactaagatcgcaagtcagctgggaaactgcgtggagtactctctgtatggcgtgagtggcagaggggtcttccagaattgtaccgcagtgggcgtccgacagcagcggtttgtgtacgacgcctatcagaatctggtcggctactatagcgacgatgggaactactattgcctgagggcctgtgtgagcgtccctgtgtccgtcatctacgataaggaaaccaaaacacacgccacactgttcgggtccgtggcttgcgagcatattagctccacaatgtctcagtacagtagatcaactaggtcaatgctgaagaggcgcgatagcacctatggacctctgcagacaccagtggggtgtgtcctgggactggtgaactctagtctgtttgtcgaggactgcaagctgcccctgggccagagcctgtgcgccctgcccgacacccccagcaccctgaccccccggagcgtgcggagctga</GBSeq_sequence>
+  </GBSeq>

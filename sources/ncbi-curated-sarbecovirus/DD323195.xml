@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<GBSeq>
+
+    <GBSeq_locus>DD323195</GBSeq_locus>
+    <GBSeq_length>3768</GBSeq_length>
+    <GBSeq_strandedness>double</GBSeq_strandedness>
+    <GBSeq_moltype>DNA</GBSeq_moltype>
+    <GBSeq_topology>linear</GBSeq_topology>
+    <GBSeq_division>PAT</GBSeq_division>
+    <GBSeq_update-date>19-SEP-2006</GBSeq_update-date>
+    <GBSeq_create-date>19-SEP-2006</GBSeq_create-date>
+    <GBSeq_definition>Recombinant DIs comprising a DNA that encodes SARS coronavirus protein, and use thereof</GBSeq_definition>
+    <GBSeq_primary-accession>DD323195</GBSeq_primary-accession>
+    <GBSeq_accession-version>DD323195.1</GBSeq_accession-version>
+    <GBSeq_other-seqids>
+      <GBSeqid>dbj|DD323195.1|</GBSeqid>
+      <GBSeqid>pat|WO|2006022215|3</GBSeqid>
+      <GBSeqid>gi|115266896</GBSeqid>
+    </GBSeq_other-seqids>
+    <GBSeq_keywords>
+      <GBKeyword>WO 2006022215-A/3</GBKeyword>
+    </GBSeq_keywords>
+    <GBSeq_source>Severe acute respiratory syndrome-related coronavirus</GBSeq_source>
+    <GBSeq_organism>Severe acute respiratory syndrome-related coronavirus</GBSeq_organism>
+    <GBSeq_taxonomy>Viruses; Riboviria; Nidovirales; Cornidovirineae; Coronaviridae; Orthocoronavirinae; Betacoronavirus; Sarbecovirus</GBSeq_taxonomy>
+    <GBSeq_references>
+      <GBReference>
+        <GBReference_reference>1</GBReference_reference>
+        <GBReference_position>1..3768</GBReference_position>
+        <GBReference_authors>
+          <GBAuthor>Hasegawa,H.</GBAuthor>
+          <GBAuthor>Odagiri,T.</GBAuthor>
+          <GBAuthor>Takemori,T.</GBAuthor>
+          <GBAuthor>Taguchi,F.</GBAuthor>
+          <GBAuthor>Tashiro,M.</GBAuthor>
+          <GBAuthor>Morikawa,S.</GBAuthor>
+          <GBAuthor>Mizutani,T.</GBAuthor>
+          <GBAuthor>Takasuga,N.</GBAuthor>
+          <GBAuthor>Onishi,K.</GBAuthor>
+          <GBAuthor>Yokota,K.</GBAuthor>
+          <GBAuthor>Suzuki,T.</GBAuthor>
+          <GBAuthor>Miyamura,T.</GBAuthor>
+          <GBAuthor>Ishii,K.</GBAuthor>
+        </GBReference_authors>
+        <GBReference_title>Recombinant DIs comprising a DNA that encodes SARS coronavirus protein, and use thereof</GBReference_title>
+        <GBReference_journal>WO2006022215-A 3 02-MAR-2006 THE JAPAN HEALTH SCIENCES FOUNDATION</GBReference_journal>
+      </GBReference>
+    </GBSeq_references>
+    <GBSeq_comment>OS SARS coronavirus~PN WO 2006022215-A/3~PD 02-MAR-2006~PF 22-AUG-2005 WO 2005JP015193~PR 23-AUG-2004 JP 200 4-242937~PI hideki hasegawa,takahito odagiri,toshitada takemori,fumihiro PI taguchi,~PI masato tashiro,shigeru morikawa,tetsuya mizutani,naomi PI takasuga,~PI kazuo onishi,kyoko yokota,tetsuro suzuki,tatsuo miyamura,koji PI ishii~CC~FH Key Location/Qualifiers.</GBSeq_comment>
+    <GBSeq_feature-table>
+      <GBFeature>
+        <GBFeature_key>source</GBFeature_key>
+        <GBFeature_location>1..3768</GBFeature_location>
+        <GBFeature_intervals>
+          <GBInterval>
+            <GBInterval_from>1</GBInterval_from>
+            <GBInterval_to>3768</GBInterval_to>
+            <GBInterval_accession>DD323195.1</GBInterval_accession>
+          </GBInterval>
+        </GBFeature_intervals>
+        <GBFeature_quals>
+          <GBQualifier>
+            <GBQualifier_name>organism</GBQualifier_name>
+            <GBQualifier_value>Severe acute respiratory syndrome-related coronavirus</GBQualifier_value>
+          </GBQualifier>
+          <GBQualifier>
+            <GBQualifier_name>mol_type</GBQualifier_name>
+            <GBQualifier_value>unassigned DNA</GBQualifier_value>
+          </GBQualifier>
+          <GBQualifier>
+            <GBQualifier_name>db_xref</GBQualifier_name>
+            <GBQualifier_value>taxon:694009</GBQualifier_value>
+          </GBQualifier>
+        </GBFeature_quals>
+      </GBFeature>
+    </GBSeq_feature-table>
+    <GBSeq_sequence>atgtttattttcttattatttcttactctcactagtggtagtgaccttgaccggtgcaccacttttgatgatgttcaagctcctaattacactcaacatacttcatctatgaggggggtttactatcctgatgaaatttttagatcagacactctttatttaactcaggatttatttcttccattttattctaatgttacagggtttcatactattaatcatacgtttggcaaccctgtcataccttttaaggatggtatttattttgctgccacagagaaatcaaatgttgtccgtggttgggtttttggttctaccatgaacaacaagtcacagtcggtgattattattaacaattctactaatgttgttatacgagcatgtaactttgaattgtgtgacaaccctttctttgctgtttctaaacccatgggtacacagacacatactatgatattcgataatgcatttaattgcactttcgagtacatatctgatgccttttcgcttgatgtttcagaaaagtcaggtaattttaaacacttacgagagtttgtgtttaaaaataaagatgggtttctctatgtttataagggctatcaacctatagatgtagttcgtgatctaccttctggttttaacactttgaaacctatttttaagttgcctcttggtattaacattacaaattttagagccattcttacagccttttcacctgctcaagacatttggggcacgtcagctgcagcctattttgttggctatttaaagccaactacatttatgctcaagtatgatgaaaatggtacaatcacagatgctgttgattgttctcaaaatccacttgctgaactcaaatgctctgttaagagctttgagattgacaaaggaatttaccagacctctaatttcagggttgttccctcaggagatgttgtgagattccctaatattacaaacttgtgtccttttggagaggtttttaatgctactaaattcccttctgtctatgcatgggagagaaaaaaaatttctaattgtgttgctgattactctgtgctctacaactcaacatttttttcaacctttaagtgctatggcgtttctgccactaagttgaatgatctttgcttctccaatgtctatgcagattcttttgtagtcaagggagatgatgtaagacaaatagcgccaggacaaactggtgttattgctgattataattataaattgccagatgatttcatgggttgtgtccttgcttggaatactaggaacattgatgctacttcaactggtaattataattataaatataggtatcttagacatggcaagcttaggccctttgagagagacatatctaatgtgcctttctcccctgatggcaaaccttgcaccccacctgctcttaattgttattggccattaaatgattatggtttttacaccactactggcattggctaccaaccttacagagttgtagtactttcttttgaacttttaaatgcaccggccacggtttgtggaccaaaattatccactgaccttattaagaaccagtgtgtcaattttaattttaatggactcactggtactggtgtgttaactccttcttcaaagagatttcaaccatttcaacaatttggccgtgatgtttctgatttcactgattccgttcgagatcctaaaacatctgaaatattagacatttcaccttgctcttttgggggtgtaagtgtaattacacctggaacaaatgcttcatctgaagttgctgttctatatcaagatgttaactgcactgatgtttctacagcaattcatgcagatcaactcacaccagcttggcgcatatattctactggaaacaatgtattccagactcaagcaggctgtcttataggagctgagcatgtcgacacttcttatgagtgcgacattcctattggagctggcatttgtgctagttaccatacagtttctttattacgtagtactagccaaaaatctattgtggcttatactatgtctttaggtgctgatagttcaattgcttactctaataacaccattgctatacctactaacttttcaattagcattactacagaagtaatgcctgtttctatggctaaaacctccgtagattgtaatatgtacatctgcggagattctactgaatgtgctaatttgcttctccaatatggtagcttttgcacacaactaaatcgtgcactctcaggtattgctgctgaacaggatcgcaacacacgtgaagtgttcgctcaagtcaaacaaatgtacaaaaccccaactttgaaatattttggtggttttaatttttcacaaatattacctgaccctctaaagccaactaagaggtcttttattgaggacttgctctttaataaggtgacactcgctgatgctggcttcatgaagcaatatggcgaatgcctaggtgatattaatgctagagatctcatttgtgcgcagaagttcaatggacttacagtgttgccacctctgctcactgatgatatgattgctgcctacactgctgctctagttagtggtactgccactgctggatggacatttggtgctggcgctgctcttcaaataccttttgctatgcaaatggcatataggttcaatggcattggagttacccaaaatgttctctatgagaaccaaaaacaaatcgccaaccaatttaacaaggcgattagtcaaattcaagaatcacttacaacaacatcaactgcattgggcaagctgcaagacgttgttaaccagaatgctcaagcattaaacacacttgttaaacaacttagctctaattttggtgcaatttcaagtgtgctaaatgatatcctttcgcgacttgataaagtcgaggcggaggtacaaattgacaggttaattacaggcagacttcaaagccttcaaacctatgtaacacaacaactaatcagggctgctgaaatcagggcttctgctaatcttgctgctactaaaatgtctgagtgtgttcttggacaatcaaaaagagttgacttttgtggaaagggctaccaccttatgtccttcccacaagcagccccgcatggtgttgtcttcctacatgtcacgtatgtgccatcccaggagaggaacttcaccacagcgccagcaatttgtcatgaaggcaaagcatacttccctcgtgaaggtgtttttgtgtttaatggcacttcttggtttattacacagaggaacttcttttctccacaaataattactacagacaatacatttgtctcaggaaattgtgatgtcgttattggcatcattaacaacacagtttatgatcctctgcaacctgagcttgactcattcaaagaagagctggacaagtacttcaaaaatcatacatcaccagatgttgatcttggcgacatttcaggcattaacgcttctgtcgtcaacattcaaaaagaaattgaccgcctcaatgaggtcgctaaaaatttaaatgaatcactcattgaccttcaagaattgggaaaatatgagcaatatattaaatggccttggtatgtttggctcggcttcattgctggactaattgccatcgtcatggttacaatcttgctttgttgcatgactagttgttgcagttgcctcaagggtgcatgctcttgtggttcttgctgcaagtttgatgaggatgactctgagccagttctcaagggtgtcaaattacattacacataa</GBSeq_sequence>
+  </GBSeq>

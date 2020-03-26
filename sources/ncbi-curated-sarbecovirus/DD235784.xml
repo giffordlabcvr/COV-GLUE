@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<GBSeq>
+
+    <GBSeq_locus>DD235784</GBSeq_locus>
+    <GBSeq_length>825</GBSeq_length>
+    <GBSeq_strandedness>double</GBSeq_strandedness>
+    <GBSeq_moltype>DNA</GBSeq_moltype>
+    <GBSeq_topology>linear</GBSeq_topology>
+    <GBSeq_division>PAT</GBSeq_division>
+    <GBSeq_update-date>26-APR-2006</GBSeq_update-date>
+    <GBSeq_create-date>26-APR-2006</GBSeq_create-date>
+    <GBSeq_definition>VIRAL PROTEIN</GBSeq_definition>
+    <GBSeq_primary-accession>DD235784</GBSeq_primary-accession>
+    <GBSeq_accession-version>DD235784.1</GBSeq_accession-version>
+    <GBSeq_other-seqids>
+      <GBSeqid>dbj|DD235784.1|</GBSeqid>
+      <GBSeqid>pat|JP|2005270102|1</GBSeqid>
+      <GBSeqid>gi|94045685</GBSeqid>
+    </GBSeq_other-seqids>
+    <GBSeq_keywords>
+      <GBKeyword>JP 2005270102-A/1</GBKeyword>
+    </GBSeq_keywords>
+    <GBSeq_source>Severe acute respiratory syndrome-related coronavirus</GBSeq_source>
+    <GBSeq_organism>Severe acute respiratory syndrome-related coronavirus</GBSeq_organism>
+    <GBSeq_taxonomy>Viruses; Riboviria; Nidovirales; Cornidovirineae; Coronaviridae; Orthocoronavirinae; Betacoronavirus; Sarbecovirus</GBSeq_taxonomy>
+    <GBSeq_references>
+      <GBReference>
+        <GBReference_reference>1</GBReference_reference>
+        <GBReference_position>1..825</GBReference_position>
+        <GBReference_authors>
+          <GBAuthor>Ho,H.</GBAuthor>
+          <GBAuthor>Yu,C.</GBAuthor>
+          <GBAuthor>Chang,M.</GBAuthor>
+          <GBAuthor>Lee,F.</GBAuthor>
+        </GBReference_authors>
+        <GBReference_title>VIRAL PROTEIN</GBReference_title>
+        <GBReference_journal>JP2005270102-A 1 06-OCT-2005 Yung Shin Pharmaceutical Ind Co Ltd,Fang-Jen Lee,Chia-Jung Yu, Ming-Fu Chang,Hong-Nerng Ho</GBReference_journal>
+      </GBReference>
+    </GBSeq_references>
+    <GBSeq_comment>OS SARS coronavirus~PN JP 2005270102-A/1~PD 06-OCT-2005~PF 02-MAR-2005 JP 2005057333~PR 02-MAR-2004 US 60/549277~PI hong-nerng ho,chia-jung yu,ming-fu chang,fang-jen lee CC~FH Key Location/Qualifiers.</GBSeq_comment>
+    <GBSeq_feature-table>
+      <GBFeature>
+        <GBFeature_key>source</GBFeature_key>
+        <GBFeature_location>1..825</GBFeature_location>
+        <GBFeature_intervals>
+          <GBInterval>
+            <GBInterval_from>1</GBInterval_from>
+            <GBInterval_to>825</GBInterval_to>
+            <GBInterval_accession>DD235784.1</GBInterval_accession>
+          </GBInterval>
+        </GBFeature_intervals>
+        <GBFeature_quals>
+          <GBQualifier>
+            <GBQualifier_name>organism</GBQualifier_name>
+            <GBQualifier_value>Severe acute respiratory syndrome-related coronavirus</GBQualifier_value>
+          </GBQualifier>
+          <GBQualifier>
+            <GBQualifier_name>mol_type</GBQualifier_name>
+            <GBQualifier_value>unassigned DNA</GBQualifier_value>
+          </GBQualifier>
+          <GBQualifier>
+            <GBQualifier_name>db_xref</GBQualifier_name>
+            <GBQualifier_value>taxon:694009</GBQualifier_value>
+          </GBQualifier>
+        </GBFeature_quals>
+      </GBFeature>
+    </GBSeq_feature-table>
+    <GBSeq_sequence>atggatttgtttatgagattttttactcttggatcaattactgcacagccagtaaaaattgacaatgcttctcctgcaagtactgttcatgctacagcaacgataccgctacaagcctcactccctttcggatggcttgttattggcgttgcatttcttgctgtttttcagagcgctaccaaaataattgcgctcaataaaagatggcagctagccctttataagggcttccagttcatttgcaatttactgctgctatttgttaccatctattcacatcttttgcttgtcgctgcaggtatggaggcgcaatttttgtacctctatgccttgatatattttctacaatgcatcaacgcatgtagaattattatgagatgttggctttgttggaagtgcaaatccaagaacccattactttatgatgccaactactttgtttgctggcacacacataactatgactactgtataccatataacagtgtcacagatacaattgtcgttactgaaggtgacggcatttcaacaccaaaactcaaagaagactaccaaattggtggttattctgaggataggcactcaggtgttaaagactatgtcgttgtacatggctatttcaccgaagtttactaccagcttgagtctacacaaattactacagacactggtattgaaaatgctacattcttcatctttaacaagcttgttaaagacccaccgaatgtgcaaatacacacaatcgacggctcttcaggagttgctaatccagcaatggatccaatttatgatgagccgacgacgactactagcgtgcctttgtaa</GBSeq_sequence>
+  </GBSeq>

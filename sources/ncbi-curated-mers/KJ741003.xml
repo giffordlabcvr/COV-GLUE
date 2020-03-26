@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<GBSeq>
+
+    <GBSeq_locus>KJ741003</GBSeq_locus>
+    <GBSeq_length>403</GBSeq_length>
+    <GBSeq_strandedness>single</GBSeq_strandedness>
+    <GBSeq_moltype>RNA</GBSeq_moltype>
+    <GBSeq_topology>linear</GBSeq_topology>
+    <GBSeq_division>VRL</GBSeq_division>
+    <GBSeq_update-date>24-JUL-2014</GBSeq_update-date>
+    <GBSeq_create-date>24-JUL-2014</GBSeq_create-date>
+    <GBSeq_definition>Middle East respiratory syndrome coronavirus isolate Jeddah-air-1-2014 N protein (N) gene, partial cds</GBSeq_definition>
+    <GBSeq_primary-accession>KJ741003</GBSeq_primary-accession>
+    <GBSeq_accession-version>KJ741003.1</GBSeq_accession-version>
+    <GBSeq_other-seqids>
+      <GBSeqid>gb|KJ741003.1|</GBSeqid>
+      <GBSeqid>gi|635228481</GBSeqid>
+    </GBSeq_other-seqids>
+    <GBSeq_source>Middle East respiratory syndrome-related coronavirus (MERS-CoV)</GBSeq_source>
+    <GBSeq_organism>Middle East respiratory syndrome-related coronavirus</GBSeq_organism>
+    <GBSeq_taxonomy>Viruses; Riboviria; Nidovirales; Cornidovirineae; Coronaviridae; Orthocoronavirinae; Betacoronavirus; Merbecovirus</GBSeq_taxonomy>
+    <GBSeq_references>
+      <GBReference>
+        <GBReference_reference>1</GBReference_reference>
+        <GBReference_position>1..403</GBReference_position>
+        <GBReference_authors>
+          <GBAuthor>Azhar,E.I.</GBAuthor>
+          <GBAuthor>Hashem,A.M.</GBAuthor>
+          <GBAuthor>El-Kafrawy,S.A.</GBAuthor>
+          <GBAuthor>Sohrab,S.S.</GBAuthor>
+          <GBAuthor>Aburizaiza,A.S.</GBAuthor>
+          <GBAuthor>Farraj,S.A.</GBAuthor>
+          <GBAuthor>Hassan,A.M.</GBAuthor>
+          <GBAuthor>Al-Saeed,M.S.</GBAuthor>
+          <GBAuthor>Jamjoom,G.A.</GBAuthor>
+          <GBAuthor>Madani,T.A.</GBAuthor>
+        </GBReference_authors>
+        <GBReference_title>Detection of the middle East respiratory syndrome coronavirus genome in an air sample originating from a camel barn owned by an infected patient</GBReference_title>
+        <GBReference_journal>MBio 5 (4) (2014)</GBReference_journal>
+        <GBReference_xref>
+          <GBXref>
+            <GBXref_dbname>doi</GBXref_dbname>
+            <GBXref_id>10.1128/mBio.01450-14</GBXref_id>
+          </GBXref>
+        </GBReference_xref>
+        <GBReference_pubmed>25053787</GBReference_pubmed>
+        <GBReference_remark>Publication Status: Online-Only</GBReference_remark>
+      </GBReference>
+      <GBReference>
+        <GBReference_reference>2</GBReference_reference>
+        <GBReference_position>1..403</GBReference_position>
+        <GBReference_authors>
+          <GBAuthor>Azhar,E.I.</GBAuthor>
+        </GBReference_authors>
+        <GBReference_title>Direct Submission</GBReference_title>
+        <GBReference_journal>Submitted (21-APR-2014) Special Infectious Agents Unit, King Fahd Medical Research Center, King Abdulaziz University, University Street, Jeddah, Westren 128442, Saudi Arabia</GBReference_journal>
+      </GBReference>
+    </GBSeq_references>
+    <GBSeq_comment>##Assembly-Data-START## ; Sequencing Technology :: Sanger dideoxy sequencing ; ##Assembly-Data-END##</GBSeq_comment>
+    <GBSeq_feature-table>
+      <GBFeature>
+        <GBFeature_key>source</GBFeature_key>
+        <GBFeature_location>1..403</GBFeature_location>
+        <GBFeature_intervals>
+          <GBInterval>
+            <GBInterval_from>1</GBInterval_from>
+            <GBInterval_to>403</GBInterval_to>
+            <GBInterval_accession>KJ741003.1</GBInterval_accession>
+          </GBInterval>
+        </GBFeature_intervals>
+        <GBFeature_quals>
+          <GBQualifier>
+            <GBQualifier_name>organism</GBQualifier_name>
+            <GBQualifier_value>Middle East respiratory syndrome-related coronavirus</GBQualifier_value>
+          </GBQualifier>
+          <GBQualifier>
+            <GBQualifier_name>mol_type</GBQualifier_name>
+            <GBQualifier_value>genomic RNA</GBQualifier_value>
+          </GBQualifier>
+          <GBQualifier>
+            <GBQualifier_name>isolate</GBQualifier_name>
+            <GBQualifier_value>Jeddah-air-1-2014</GBQualifier_value>
+          </GBQualifier>
+          <GBQualifier>
+            <GBQualifier_name>isolation_source</GBQualifier_name>
+            <GBQualifier_value>air</GBQualifier_value>
+          </GBQualifier>
+          <GBQualifier>
+            <GBQualifier_name>db_xref</GBQualifier_name>
+            <GBQualifier_value>taxon:1335626</GBQualifier_value>
+          </GBQualifier>
+          <GBQualifier>
+            <GBQualifier_name>country</GBQualifier_name>
+            <GBQualifier_value>Saudi Arabia</GBQualifier_value>
+          </GBQualifier>
+          <GBQualifier>
+            <GBQualifier_name>collection_date</GBQualifier_name>
+            <GBQualifier_value>08-Nov-2013</GBQualifier_value>
+          </GBQualifier>
+        </GBFeature_quals>
+      </GBFeature>
+      <GBFeature>
+        <GBFeature_key>gene</GBFeature_key>
+        <GBFeature_location>&lt;1..&gt;403</GBFeature_location>
+        <GBFeature_intervals>
+          <GBInterval>
+            <GBInterval_from>1</GBInterval_from>
+            <GBInterval_to>403</GBInterval_to>
+            <GBInterval_accession>KJ741003.1</GBInterval_accession>
+          </GBInterval>
+        </GBFeature_intervals>
+        <GBFeature_partial5 value="true"/>
+        <GBFeature_partial3 value="true"/>
+        <GBFeature_quals>
+          <GBQualifier>
+            <GBQualifier_name>gene</GBQualifier_name>
+            <GBQualifier_value>N</GBQualifier_value>
+          </GBQualifier>
+        </GBFeature_quals>
+      </GBFeature>
+      <GBFeature>
+        <GBFeature_key>CDS</GBFeature_key>
+        <GBFeature_location>&lt;1..353</GBFeature_location>
+        <GBFeature_intervals>
+          <GBInterval>
+            <GBInterval_from>1</GBInterval_from>
+            <GBInterval_to>353</GBInterval_to>
+            <GBInterval_accession>KJ741003.1</GBInterval_accession>
+          </GBInterval>
+        </GBFeature_intervals>
+        <GBFeature_partial5 value="true"/>
+        <GBFeature_quals>
+          <GBQualifier>
+            <GBQualifier_name>gene</GBQualifier_name>
+            <GBQualifier_value>N</GBQualifier_value>
+          </GBQualifier>
+          <GBQualifier>
+            <GBQualifier_name>codon_start</GBQualifier_name>
+            <GBQualifier_value>3</GBQualifier_value>
+          </GBQualifier>
+          <GBQualifier>
+            <GBQualifier_name>transl_table</GBQualifier_name>
+            <GBQualifier_value>1</GBQualifier_value>
+          </GBQualifier>
+          <GBQualifier>
+            <GBQualifier_name>product</GBQualifier_name>
+            <GBQualifier_value>N protein</GBQualifier_value>
+          </GBQualifier>
+          <GBQualifier>
+            <GBQualifier_name>protein_id</GBQualifier_name>
+            <GBQualifier_value>AHZ65624.1</GBQualifier_value>
+          </GBQualifier>
+          <GBQualifier>
+            <GBQualifier_name>translation</GBQualifier_name>
+            <GBQualifier_value>ELAPTASAFMGMSQFKLTHQNNDDHGNPVYFLRYSGAIKLDPKNPNYNKWLELLEQNIDAYKTFPKKEKKQKAPKEESTDQMSEPPKEQRVQGSITQRTRTRPSVQPGPMIDVNTD</GBQualifier_value>
+          </GBQualifier>
+        </GBFeature_quals>
+      </GBFeature>
+    </GBSeq_feature-table>
+    <GBSeq_sequence>ctgagcttgctcctacagccagtgcttttatgggtatgtcgcaatttaaacttacccatcagaacaatgatgatcatggcaaccctgtgtacttccttcggtacagtggagccattaaacttgacccaaagaatcccaactacaataagtggttggagcttcttgagcaaaatattgatgcctacaaaaccttccctaagaaggaaaagaaacaaaaggcaccaaaagaagaatcaacagaccaaatgtctgaacctcctaaggagcagcgtgtgcaaggtagcatcactcagcgcactcgcacccgtccaagtgttcagcctggtccaatgattgatgttaacactgattagtgtcactcaaagtaacaagatcgcggcaatcgtttgtgtttggtaacccc</GBSeq_sequence>
+  </GBSeq>

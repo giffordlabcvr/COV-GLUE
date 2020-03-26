@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<GBSeq>
+
+    <GBSeq_locus>LV469811</GBSeq_locus>
+    <GBSeq_length>4062</GBSeq_length>
+    <GBSeq_strandedness>double</GBSeq_strandedness>
+    <GBSeq_moltype>DNA</GBSeq_moltype>
+    <GBSeq_topology>linear</GBSeq_topology>
+    <GBSeq_division>PAT</GBSeq_division>
+    <GBSeq_update-date>30-MAR-2017</GBSeq_update-date>
+    <GBSeq_create-date>30-MAR-2017</GBSeq_create-date>
+    <GBSeq_definition>JP 2016536346-A/1: IMMUNOGENIC MIDDLE EAST RESPIRATORY SYNDROME CORONAVIRUS (MERS-CoV) COMPOSITIONS AND METHODS</GBSeq_definition>
+    <GBSeq_primary-accession>LV469811</GBSeq_primary-accession>
+    <GBSeq_accession-version>LV469811.1</GBSeq_accession-version>
+    <GBSeq_other-seqids>
+      <GBSeqid>dbj|LV469811.1|</GBSeqid>
+      <GBSeqid>pat|JP|2016536346|1</GBSeqid>
+      <GBSeqid>gi|1172042316</GBSeqid>
+    </GBSeq_other-seqids>
+    <GBSeq_keywords>
+      <GBKeyword>JP 2016536346-A/1</GBKeyword>
+    </GBSeq_keywords>
+    <GBSeq_source>Middle East respiratory syndrome-related coronavirus (MERS-CoV)</GBSeq_source>
+    <GBSeq_organism>Middle East respiratory syndrome-related coronavirus</GBSeq_organism>
+    <GBSeq_taxonomy>Viruses; ssRNA viruses; ssRNA positive-strand viruses, no DNA stage; Nidovirales; Coronaviridae; Coronavirinae; Betacoronavirus</GBSeq_taxonomy>
+    <GBSeq_references>
+      <GBReference>
+        <GBReference_reference>1</GBReference_reference>
+        <GBReference_position>1..4062</GBReference_position>
+        <GBReference_authors>
+          <GBAuthor>Massare,M.</GBAuthor>
+          <GBAuthor>Liu,Y.</GBAuthor>
+          <GBAuthor>Smith,G.</GBAuthor>
+        </GBReference_authors>
+        <GBReference_title>IMMUNOGENIC MIDDLE EAST RESPIRATORY SYNDROME CORONAVIRUS (MERS-CoV) COMPOSITIONS AND METHODS</GBReference_title>
+        <GBReference_journal>JP2016536346-A 1 24-NOV-2016 Novavax Inc</GBReference_journal>
+      </GBReference>
+    </GBSeq_references>
+    <GBSeq_comment>OS MERS-CoV~PN JP 2016536346-A/1~PD 24-NOV-2016~PF 19-SEP-2014 JP 2016544012~PR 19-SEP-2013 US 61/880111~PA Novavax Inc~PI michael massare,ye liu,gale smith~PT 'IMMUNOGENIC MIDDLE EAST RESPIRATORY SYNDROME CORONAVIRUS~PT (MERS-CoV)~PT COMPOSITIONS AND METHODS'~PS N1~CC~FH Key Location/Qualifiers.</GBSeq_comment>
+    <GBSeq_feature-table>
+      <GBFeature>
+        <GBFeature_key>source</GBFeature_key>
+        <GBFeature_location>1..4062</GBFeature_location>
+        <GBFeature_intervals>
+          <GBInterval>
+            <GBInterval_from>1</GBInterval_from>
+            <GBInterval_to>4062</GBInterval_to>
+            <GBInterval_accession>LV469811.1</GBInterval_accession>
+          </GBInterval>
+        </GBFeature_intervals>
+        <GBFeature_quals>
+          <GBQualifier>
+            <GBQualifier_name>organism</GBQualifier_name>
+            <GBQualifier_value>Middle East respiratory syndrome-related coronavirus</GBQualifier_value>
+          </GBQualifier>
+          <GBQualifier>
+            <GBQualifier_name>mol_type</GBQualifier_name>
+            <GBQualifier_value>unassigned DNA</GBQualifier_value>
+          </GBQualifier>
+          <GBQualifier>
+            <GBQualifier_name>db_xref</GBQualifier_name>
+            <GBQualifier_value>taxon:1335626</GBQualifier_value>
+          </GBQualifier>
+        </GBFeature_quals>
+      </GBFeature>
+    </GBSeq_feature-table>
+    <GBSeq_sequence>atgatccactccgtgttcctgttgatgttcctgttgactcctaccgaaagctacgttgatgttggtccagattccgtgaagagcgcctgcatcgaggtggatatccagcaaacattcttcgacaagacctggccgaggcccatcgatgtctccaaggctgacggtatcatctaccctcagggcagaacttactctaacatcactatcacataccaaggcctgttcccataccagggtgaccacggcgatatgtacgtctacagcgctggacacgctaccggaaccactcctcagaagctcttcgttgccaactactcacaggacgtgaagcaattcgctaacggattcgtggtccgtatcggtgctgccgctaacagcaccggtactgtgatcatctctcccagcacttcagccacaatccgcaagatctaccctgctttcatgctgggttcctctgtgggcaacttctccgatggaaagatgggcaggttcttcaaccacactctcgtcctgctccctgacggctgcggaacattgctgagggccttctactgtatcttggagcctagatctggcaaccactgcccagctggaaacagctacacctcattcgccacctaccacactccagctacagactgtagcgatggtaactacaaccgtaacgcttcgttgaactccttcaaggaatacttcaacctgcgcaactgcacattcatgtacacctacaacatcactgaggacgaaatcctggagtggttcggaatcacacagaccgcccaaggtgttcacctcttcagctcacgttacgtggatttgtacggtggcaacatgttccagttcgctactctcccagtctacgacacaatcaagtactactccatcatcccgcactctatccgtagcatccaatcagaccgcaaggcctgggccgctttctacgtctacaagctgcagcctctcaccttcctcttggatttctccgttgacggctacatccgtcgcgctatcgattgcggattcaacgacttgtctcagctgcactgttcgtacgaatccttcgacgtcgagtcgggagtttactccgtgtcgtccttcgaggccaagccctcgggttccgttgtggagcaagctgagggtgtggagtgcgacttctctcctctgctcagcggtactccccctcaggtctacaacttcaagcgtctggttttcaccaactgcaactacaacctcactaagttgctgtctttgttcagcgtgaacgacttcacctgctcacagatctcgcccgccgctatcgctagcaactgttactctagcctgatcctcgattacttctcatacccactgtccatgaagtctgacctcagcgtctcatcggccggcccgatctcccaattcaactacaagcagtctttcagcaaccctacctgcttgatcctggctactgtgccacacaacctgacaaccatcacaaagccgctcaagtactcttacatcaacaagtgctcaaggctcttgtcggacgatagaaccgaagtcccacaactggtgaacgctaaccagtactccccttgcgtctctatcgttccaagcaccgtctgggaagacggcgattactaccgcaagcagctctcccccttggagggaggtggctggttggtggcctcaggatcgacagtcgctatgaccgagcagctgcaaatgggtttcggcatcactgtgcagtacggtactgatacaaactccgtctgccctaagctggaattcgccaacgacacaaagatcgcttctcagctgggtaactgcgtggagtactccctctacggcgtgtctggacgcggtgtcttccaaaactgtactgccgtcggtgttcgtcagcaacgcttcgtctacgacgcttaccagaacctcgttggttactactccgacgatggcaactactactgcttgagggcttgtgtgtccgtgcccgtgtccgtgatctacgacaaggaaaccaagactcacgccaccctgttcggtagcgtggcttgcgagcacatctcctctactatgtcacaatactccaggtctacaagatcgatgctcaagaggagagactccacatacggaccattgcagaccccagtgggatgcgtcctcggtttggtgaacagctcactgttcgtggaagattgcaagctgcccctcggccagtccctgtgtgctctcccggacaccccctctacattgaccccgcgttcagttcgctcggtgcccggagagatgagactggcttccatcgctttcaaccacccaatccaggtggaccaattgaactcgtcctacttcaagctgagcatcccgacaaacttctcattcggtgtcacccaggagtacatccaaactacaatccagaaggtcaccgttgactgcaagcagtacgtgtgtaacggcttccaaaagtgcgaacagctgctcagggagtacggacaattctgttctaagatcaaccaggccttgcacggtgctaacctgcgtcaagacgattctgtgcgcaacctgttcgccagcgtcaagtctagccagtcatcgcctatcatcccaggattcggtggtgacttcaacctcaccttgctggaacctgtcagcatctcaactggttcgaggtccgccagatctgctatcgaggatctcttgttcgacaaggtgaccatcgctgaccccggctacatgcaaggatacgacgattgcatgcagcaaggccctgccagcgctagagatctgatctgtgcccagtacgttgctggatacaaggtgttgccaccgctgatggacgtgaacatggaagccgcttacacctcctccctgctgggttccatcgctggcgtcggatggactgctggtctcagctcattcgccgctatccccttcgcccaaagcatcttctaccgtttgaacggtgtcggcatcactcagcaagttttgtcagagaaccagaagctgatcgctaacaagttcaaccaagccctgggcgctatgcagaccggattcaccactacaaacgaagccttccgtaaggtgcaagacgctgtcaacaacaacgcccaggctctctccaagttggcctccgagctgtctaacaccttcggcgccatctctgctagcatcggagatatcatccagcgtctggacgtgctcgagcaggatgctcaaatcgacaggctgatcaacggcagattgaccactctgaacgccttcgtcgctcagcaactcgttagatcagaatcggctgctctgtccgctcagctcgctaaggacaaggtgaacgagtgcgtgaaggcccaaagcaagcgttcaggtttctgtggacagggcacccacatcgtgtctttcgtcgtgaacgctcccaacggtctgtacttcatgcacgtcggctactacccttcaaaccacatcgaggtggtctcggcctacggtctctgcgatgccgctaacccgactaactgtatcgctcccgtgaacggctacttcatcaagaccaacaacactcgcatcgtggacgaatggtcctacaccggctcgtccttctacgcccctgagccaatcacttcactgaacacaaagtacgtcgctccccacgttacttaccagaacatctcgacaaacttgccccctccattgctgggtaactcaaccggcatcgacttccaagatgaactggacgagttcttcaagaacgtgtccacatctatccctaacttcggctccctgacccagatcaacacaaccctcttggatctcacttacgaaatgttgtccctgcagcaagttgtgaaggccctgaacgaatcttacatcgatctcaaggagttgggaaactacacctactacaacaagtggccatggtacatctggctcggattcatcgctggtttggtggccctcgctttgtgcgtcttcttcatcctgtgctgtaccggctgcggaactaactgtatgggcaagctgaagtgcaaccgttgctgtgatcgctacgaggaatacgacctggagccccacaaggtgcacgtccactaa</GBSeq_sequence>
+  </GBSeq>

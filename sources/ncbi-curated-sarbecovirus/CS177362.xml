@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<GBSeq>
+
+    <GBSeq_locus>CS177362</GBSeq_locus>
+    <GBSeq_length>825</GBSeq_length>
+    <GBSeq_strandedness>double</GBSeq_strandedness>
+    <GBSeq_moltype>DNA</GBSeq_moltype>
+    <GBSeq_topology>linear</GBSeq_topology>
+    <GBSeq_division>PAT</GBSeq_division>
+    <GBSeq_update-date>14-JUL-2006</GBSeq_update-date>
+    <GBSeq_create-date>14-OCT-2005</GBSeq_create-date>
+    <GBSeq_definition>Sequence 3 from Patent EP1584628</GBSeq_definition>
+    <GBSeq_primary-accession>CS177362</GBSeq_primary-accession>
+    <GBSeq_accession-version>CS177362.1</GBSeq_accession-version>
+    <GBSeq_other-seqids>
+      <GBSeqid>emb|CS177362.1|</GBSeqid>
+      <GBSeqid>pat|EP|1584628|3</GBSeqid>
+      <GBSeqid>gi|77733170</GBSeqid>
+    </GBSeq_other-seqids>
+    <GBSeq_source>Severe acute respiratory syndrome-related coronavirus</GBSeq_source>
+    <GBSeq_organism>Severe acute respiratory syndrome-related coronavirus</GBSeq_organism>
+    <GBSeq_taxonomy>Viruses; Riboviria; Nidovirales; Cornidovirineae; Coronaviridae; Orthocoronavirinae; Betacoronavirus; Sarbecovirus</GBSeq_taxonomy>
+    <GBSeq_references>
+      <GBReference>
+        <GBReference_reference>1</GBReference_reference>
+        <GBReference_position>1..825</GBReference_position>
+        <GBReference_authors>
+          <GBAuthor>Lee,F.J.</GBAuthor>
+          <GBAuthor>Yu,C.J.</GBAuthor>
+          <GBAuthor>Chang,M.F.</GBAuthor>
+          <GBAuthor>Ho,H.N.</GBAuthor>
+        </GBReference_authors>
+        <GBReference_title>Viral protein</GBReference_title>
+        <GBReference_journal>EP1584628-A2 3 12-OCT-2005 Yung Shin Pharm. Ind. Co. Ltd. (TW)</GBReference_journal>
+      </GBReference>
+    </GBSeq_references>
+    <GBSeq_feature-table>
+      <GBFeature>
+        <GBFeature_key>source</GBFeature_key>
+        <GBFeature_location>1..825</GBFeature_location>
+        <GBFeature_intervals>
+          <GBInterval>
+            <GBInterval_from>1</GBInterval_from>
+            <GBInterval_to>825</GBInterval_to>
+            <GBInterval_accession>CS177362.1</GBInterval_accession>
+          </GBInterval>
+        </GBFeature_intervals>
+        <GBFeature_quals>
+          <GBQualifier>
+            <GBQualifier_name>organism</GBQualifier_name>
+            <GBQualifier_value>Severe acute respiratory syndrome-related coronavirus</GBQualifier_value>
+          </GBQualifier>
+          <GBQualifier>
+            <GBQualifier_name>mol_type</GBQualifier_name>
+            <GBQualifier_value>unassigned DNA</GBQualifier_value>
+          </GBQualifier>
+          <GBQualifier>
+            <GBQualifier_name>db_xref</GBQualifier_name>
+            <GBQualifier_value>taxon:694009</GBQualifier_value>
+          </GBQualifier>
+        </GBFeature_quals>
+      </GBFeature>
+    </GBSeq_feature-table>
+    <GBSeq_sequence>atggatttgtttatgagattttttactcttggatcaattactgcacagccagtaaaaattgacaatgcttctcctgcaagtactgttcatgctacagcaacgataccgctacaagcctcactccctttcggatggcttgttattggcgttgcatttcttgctgtttttcagagcgctaccaaaataattgcgctcaataaaagatggcagctagccctttataagggcttccagttcatttgcaatttactgctgctatttgttaccatctattcacatcttttgcttgtcgctgcaggtatggaggcgcaatttttgtacctctatgccttgatatattttctacaatgcatcaacgcatgtagaattattatgagatgttggctttgttggaagtgcaaatccaagaacccattactttatgatgccaactactttgtttgctggcacacacataactatgactactgtataccatataacagtgtcacagatacaattgtcgttactgaaggtgacggcatttcaacaccaaaactcaaagaagactaccaaattggtggttattctgaggataggcactcaggtgttaaagactatgtcgttgtacatggctatttcaccgaagtttactaccagcttgagtctacacaaattactacagacactggtattgaaaatgctacattcttcatctttaacaagcttgttaaagacccaccgaatgtgcaaatacacacaatcgacggctcttcaggagttgctaatccagcaatggatccaatttatgatgagccgacgacgactactagcgtgcctttgtaa</GBSeq_sequence>
+  </GBSeq>

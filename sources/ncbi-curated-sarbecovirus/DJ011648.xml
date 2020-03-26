@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<GBSeq>
+
+    <GBSeq_locus>DJ011648</GBSeq_locus>
+    <GBSeq_length>1269</GBSeq_length>
+    <GBSeq_strandedness>double</GBSeq_strandedness>
+    <GBSeq_moltype>DNA</GBSeq_moltype>
+    <GBSeq_topology>linear</GBSeq_topology>
+    <GBSeq_division>PAT</GBSeq_division>
+    <GBSeq_update-date>04-OCT-2007</GBSeq_update-date>
+    <GBSeq_create-date>04-OCT-2007</GBSeq_create-date>
+    <GBSeq_definition>MULTI-ALLELIC MOLECULAR DETECTION OF SARS-ASSOCIATED CORONAVIRUS</GBSeq_definition>
+    <GBSeq_primary-accession>DJ011648</GBSeq_primary-accession>
+    <GBSeq_accession-version>DJ011648.1</GBSeq_accession-version>
+    <GBSeq_other-seqids>
+      <GBSeqid>dbj|DJ011648.1|</GBSeqid>
+      <GBSeqid>pat|JP|2007503213|68</GBSeqid>
+      <GBSeqid>gi|157903177</GBSeqid>
+    </GBSeq_other-seqids>
+    <GBSeq_keywords>
+      <GBKeyword>JP 2007503213-A/68</GBKeyword>
+    </GBSeq_keywords>
+    <GBSeq_source>SARS coronavirus Tor2</GBSeq_source>
+    <GBSeq_organism>SARS coronavirus Tor2</GBSeq_organism>
+    <GBSeq_taxonomy>Viruses; Riboviria; Nidovirales; Cornidovirineae; Coronaviridae; Orthocoronavirinae; Betacoronavirus; Sarbecovirus</GBSeq_taxonomy>
+    <GBSeq_references>
+      <GBReference>
+        <GBReference_reference>1</GBReference_reference>
+        <GBReference_position>1..1269</GBReference_position>
+        <GBReference_authors>
+          <GBAuthor>Kosutorikisu,R.G.</GBAuthor>
+        </GBReference_authors>
+        <GBReference_title>MULTI-ALLELIC MOLECULAR DETECTION OF SARS-ASSOCIATED CORONAVIRUS</GBReference_title>
+        <GBReference_journal>JP2007503213-A 68 22-FEB-2007 BIRCH BIOMEDICAL RESEARCH INC</GBReference_journal>
+      </GBReference>
+    </GBSeq_references>
+    <GBSeq_comment>OS SARS coronavirus Tor2~PN JP 2007503213-A/68~PD 22-FEB-2007~PF 13-AUG-2004 JP 2006524704~PR 22-AUG-2003 US 60/496995,03-JUN-2004 US 60/576314 PI reondiosu g kosutorikisu~CC~FH Key Location/Qualifiers.</GBSeq_comment>
+    <GBSeq_feature-table>
+      <GBFeature>
+        <GBFeature_key>source</GBFeature_key>
+        <GBFeature_location>1..1269</GBFeature_location>
+        <GBFeature_intervals>
+          <GBInterval>
+            <GBInterval_from>1</GBInterval_from>
+            <GBInterval_to>1269</GBInterval_to>
+            <GBInterval_accession>DJ011648.1</GBInterval_accession>
+          </GBInterval>
+        </GBFeature_intervals>
+        <GBFeature_quals>
+          <GBQualifier>
+            <GBQualifier_name>organism</GBQualifier_name>
+            <GBQualifier_value>SARS coronavirus Tor2</GBQualifier_value>
+          </GBQualifier>
+          <GBQualifier>
+            <GBQualifier_name>mol_type</GBQualifier_name>
+            <GBQualifier_value>unassigned DNA</GBQualifier_value>
+          </GBQualifier>
+          <GBQualifier>
+            <GBQualifier_name>db_xref</GBQualifier_name>
+            <GBQualifier_value>taxon:227984</GBQualifier_value>
+          </GBQualifier>
+        </GBFeature_quals>
+      </GBFeature>
+    </GBSeq_feature-table>
+    <GBSeq_sequence>atgtctgataatggaccccaatcaaaccaacgtagtgccccccgcattacatttggtggacccacagattcaactgacaataaccagaatggaggacgcaatggggcaaggccaaaacagcgccgaccccaaggtttacccaataatactgcgtcttggttcacagctctcactcagcatggcaaggaggaacttagattccctcgaggccagggcgttccaatcaacaccaatagtggtccagatgaccaaattggctactaccgaagagctacccgacgagttcgtggtggtgacggcaaaatgaaagagctcagccccagatggtacttctattacctaggaactggcccagaagcttcacttccctacggcgctaacaaagaaggcatcgtatgggttgcaactgagggagccttgaatacacccaaagaccacattggcacccgcaatcctaataacaatgctgccaccgtgctacaacttcctcaaggaacaacattgccaaaaggcttctacgcagagggaagcagaggcggcagtcaagcctcttctcgctcctcatcacgtagtcgcggtaattcaagaaattcaactcctggcagcagtaggggaaattctcctgctcgaatggctagcggaggtggtgaaactgccctcgcgctattgctgctagacagattgaaccagcttgagagcaaagtttctggtaaaggccaacaacaacaaggccaaactgtcactaagaaatctgctgctgaggcatctaaaaagcctcgccaaaaacgtactgccacaaaacagtacaacgtcactcaagcatttgggagacgtggtccagaacaaacccaaggaaatttcggggaccaagacctaatcagacaaggaactgattacaaacattggccgcaaattgcacaatttgctccaagtgcctctgcattctttggaatgtcacgcattggcatggaagtcacaccttcgggaacatggctgacttatcatggagccattaaattggatgacaaagatccacaattcaaagacaacgtcatactgctgaacaagcacattgacgcatacaaaacattcccaccaacagagcctaaaaaggacaaaaagaaaaagactgatgaagctcagcctttgccgcagagacaaaagaagcagcccactgtgactcttcttcctgcggctgacatggatgatttctccagacaacttcaaaattccatgagtggagcttctgctgattcaactcaggcataa</GBSeq_sequence>
+  </GBSeq>

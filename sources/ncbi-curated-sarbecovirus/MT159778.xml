@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<GBSeq>
+
+    <GBSeq_locus>MT159778</GBSeq_locus>
+    <GBSeq_length>483</GBSeq_length>
+    <GBSeq_strandedness>single</GBSeq_strandedness>
+    <GBSeq_moltype>RNA</GBSeq_moltype>
+    <GBSeq_topology>linear</GBSeq_topology>
+    <GBSeq_division>VRL</GBSeq_division>
+    <GBSeq_update-date>09-MAR-2020</GBSeq_update-date>
+    <GBSeq_create-date>09-MAR-2020</GBSeq_create-date>
+    <GBSeq_definition>Severe acute respiratory syndrome coronavirus 2 isolate SARS-CoV-2/NG01/human/2020/NGA ORF1ab polyprotein, RdRp region, (orf1ab) gene, partial cds</GBSeq_definition>
+    <GBSeq_primary-accession>MT159778</GBSeq_primary-accession>
+    <GBSeq_accession-version>MT159778.1</GBSeq_accession-version>
+    <GBSeq_other-seqids>
+      <GBSeqid>gb|MT159778.1|</GBSeqid>
+      <GBSeqid>gi|1819735432</GBSeqid>
+    </GBSeq_other-seqids>
+    <GBSeq_source>Severe acute respiratory syndrome coronavirus 2 (SARS-CoV-2)</GBSeq_source>
+    <GBSeq_organism>Severe acute respiratory syndrome coronavirus 2</GBSeq_organism>
+    <GBSeq_taxonomy>Viruses; Riboviria; Nidovirales; Cornidovirineae; Coronaviridae; Orthocoronavirinae; Betacoronavirus; Sarbecovirus</GBSeq_taxonomy>
+    <GBSeq_references>
+      <GBReference>
+        <GBReference_reference>1</GBReference_reference>
+        <GBReference_position>1..483</GBReference_position>
+        <GBReference_authors>
+          <GBAuthor>Salako,B.L.</GBAuthor>
+          <GBAuthor>Audu,R.A.</GBAuthor>
+          <GBAuthor>Sunday,O.A.</GBAuthor>
+          <GBAuthor>Okwuraiwe,A.</GBAuthor>
+          <GBAuthor>Amao,O.</GBAuthor>
+          <GBAuthor>Shaibu,J.O.</GBAuthor>
+          <GBAuthor>Onwuamah,C.</GBAuthor>
+          <GBAuthor>James,A.</GBAuthor>
+          <GBAuthor>Ajibaye,O.</GBAuthor>
+          <GBAuthor>Iwalokun,B.</GBAuthor>
+          <GBAuthor>Salu,O.</GBAuthor>
+          <GBAuthor>Orenolu,R.</GBAuthor>
+          <GBAuthor>Anyanwu,R.</GBAuthor>
+          <GBAuthor>Obaleye,O.</GBAuthor>
+          <GBAuthor>Ige,F.</GBAuthor>
+          <GBAuthor>Faleye,T.</GBAuthor>
+          <GBAuthor>Abiodun,M.</GBAuthor>
+          <GBAuthor>Oni,G.</GBAuthor>
+          <GBAuthor>Olohungbebe,M.</GBAuthor>
+        </GBReference_authors>
+        <GBReference_title>Partial Genomic Sequence and Phylogenetic Analysis of SARS-COV-2 Isolated from an Index Case of Coronavirus Disease 2020 in Nigeria</GBReference_title>
+        <GBReference_journal>Unpublished</GBReference_journal>
+      </GBReference>
+      <GBReference>
+        <GBReference_reference>2</GBReference_reference>
+        <GBReference_position>1..483</GBReference_position>
+        <GBReference_authors>
+          <GBAuthor>Salako,B.L.</GBAuthor>
+          <GBAuthor>Audu,R.A.</GBAuthor>
+          <GBAuthor>Sunday,O.A.</GBAuthor>
+          <GBAuthor>Okwuraiwe,A.</GBAuthor>
+          <GBAuthor>Amao,O.</GBAuthor>
+          <GBAuthor>Shaibu,J.O.</GBAuthor>
+          <GBAuthor>Onwuamah,C.</GBAuthor>
+          <GBAuthor>James,A.</GBAuthor>
+          <GBAuthor>Ajibaye,O.</GBAuthor>
+          <GBAuthor>Iwalokun,B.</GBAuthor>
+          <GBAuthor>Salu,O.</GBAuthor>
+          <GBAuthor>Orenolu,R.</GBAuthor>
+          <GBAuthor>Anyanwu,R.</GBAuthor>
+          <GBAuthor>Obaleye,O.</GBAuthor>
+          <GBAuthor>Ige,F.</GBAuthor>
+          <GBAuthor>Faleye,T.</GBAuthor>
+          <GBAuthor>Abiodun,M.</GBAuthor>
+          <GBAuthor>Oni,G.</GBAuthor>
+          <GBAuthor>Olohungbebe,M.</GBAuthor>
+        </GBReference_authors>
+        <GBReference_title>Direct Submission</GBReference_title>
+        <GBReference_journal>Submitted (05-MAR-2020) Nigerian Institute of Medical Research, Nigerian Institute of Medical Research, 6, Edmund Crescent, Off Murtala Mohammed Way, Yaba, Lagos State 234-101212, Nigeria</GBReference_journal>
+      </GBReference>
+    </GBSeq_references>
+    <GBSeq_feature-table>
+      <GBFeature>
+        <GBFeature_key>source</GBFeature_key>
+        <GBFeature_location>1..483</GBFeature_location>
+        <GBFeature_intervals>
+          <GBInterval>
+            <GBInterval_from>1</GBInterval_from>
+            <GBInterval_to>483</GBInterval_to>
+            <GBInterval_accession>MT159778.1</GBInterval_accession>
+          </GBInterval>
+        </GBFeature_intervals>
+        <GBFeature_quals>
+          <GBQualifier>
+            <GBQualifier_name>organism</GBQualifier_name>
+            <GBQualifier_value>Severe acute respiratory syndrome coronavirus 2</GBQualifier_value>
+          </GBQualifier>
+          <GBQualifier>
+            <GBQualifier_name>mol_type</GBQualifier_name>
+            <GBQualifier_value>genomic RNA</GBQualifier_value>
+          </GBQualifier>
+          <GBQualifier>
+            <GBQualifier_name>isolate</GBQualifier_name>
+            <GBQualifier_value>SARS-CoV-2/NG01/human/2020/NGA</GBQualifier_value>
+          </GBQualifier>
+          <GBQualifier>
+            <GBQualifier_name>isolation_source</GBQualifier_name>
+            <GBQualifier_value>sputum</GBQualifier_value>
+          </GBQualifier>
+          <GBQualifier>
+            <GBQualifier_name>host</GBQualifier_name>
+            <GBQualifier_value>Homo sapiens</GBQualifier_value>
+          </GBQualifier>
+          <GBQualifier>
+            <GBQualifier_name>db_xref</GBQualifier_name>
+            <GBQualifier_value>taxon:2697049</GBQualifier_value>
+          </GBQualifier>
+          <GBQualifier>
+            <GBQualifier_name>country</GBQualifier_name>
+            <GBQualifier_value>Nigeria: Lagos</GBQualifier_value>
+          </GBQualifier>
+          <GBQualifier>
+            <GBQualifier_name>collection_date</GBQualifier_name>
+            <GBQualifier_value>27-Feb-2020</GBQualifier_value>
+          </GBQualifier>
+        </GBFeature_quals>
+      </GBFeature>
+      <GBFeature>
+        <GBFeature_key>gene</GBFeature_key>
+        <GBFeature_location>&lt;1..&gt;483</GBFeature_location>
+        <GBFeature_intervals>
+          <GBInterval>
+            <GBInterval_from>1</GBInterval_from>
+            <GBInterval_to>483</GBInterval_to>
+            <GBInterval_accession>MT159778.1</GBInterval_accession>
+          </GBInterval>
+        </GBFeature_intervals>
+        <GBFeature_partial5 value="true"/>
+        <GBFeature_partial3 value="true"/>
+        <GBFeature_quals>
+          <GBQualifier>
+            <GBQualifier_name>gene</GBQualifier_name>
+            <GBQualifier_value>orf1ab</GBQualifier_value>
+          </GBQualifier>
+        </GBFeature_quals>
+      </GBFeature>
+      <GBFeature>
+        <GBFeature_key>CDS</GBFeature_key>
+        <GBFeature_location>&lt;1..&gt;483</GBFeature_location>
+        <GBFeature_intervals>
+          <GBInterval>
+            <GBInterval_from>1</GBInterval_from>
+            <GBInterval_to>483</GBInterval_to>
+            <GBInterval_accession>MT159778.1</GBInterval_accession>
+          </GBInterval>
+        </GBFeature_intervals>
+        <GBFeature_partial5 value="true"/>
+        <GBFeature_partial3 value="true"/>
+        <GBFeature_quals>
+          <GBQualifier>
+            <GBQualifier_name>gene</GBQualifier_name>
+            <GBQualifier_value>orf1ab</GBQualifier_value>
+          </GBQualifier>
+          <GBQualifier>
+            <GBQualifier_name>EC_number</GBQualifier_name>
+            <GBQualifier_value>2.7.7.48</GBQualifier_value>
+          </GBQualifier>
+          <GBQualifier>
+            <GBQualifier_name>note</GBQualifier_name>
+            <GBQualifier_value>multifunctional protein involved in the transcription and replication of viral RNAs; contains proteinases responsible for polyprotein cleavage</GBQualifier_value>
+          </GBQualifier>
+          <GBQualifier>
+            <GBQualifier_name>codon_start</GBQualifier_name>
+            <GBQualifier_value>1</GBQualifier_value>
+          </GBQualifier>
+          <GBQualifier>
+            <GBQualifier_name>transl_table</GBQualifier_name>
+            <GBQualifier_value>1</GBQualifier_value>
+          </GBQualifier>
+          <GBQualifier>
+            <GBQualifier_name>product</GBQualifier_name>
+            <GBQualifier_value>ORF1ab polyprotein</GBQualifier_value>
+          </GBQualifier>
+          <GBQualifier>
+            <GBQualifier_name>protein_id</GBQualifier_name>
+            <GBQualifier_value>QII57166.1</GBQualifier_value>
+          </GBQualifier>
+          <GBQualifier>
+            <GBQualifier_name>translation</GBQualifier_name>
+            <GBQualifier_value>MPNMLRIMASLVLARKHTTCCSLSHRFYRLANECAQVLSEMVMCGGSLYVKPGGTSSGDATTAYANSVFNICQAVTANVNALLSTDGNKIADKYVRNLQHRLYECLYRNRDVDTDFVNEFYAYLRKHFSMMILSDDAVVCFNSTYASQGLVASIKNFKSVL</GBQualifier_value>
+          </GBQualifier>
+        </GBFeature_quals>
+      </GBFeature>
+      <GBFeature>
+        <GBFeature_key>mat_peptide</GBFeature_key>
+        <GBFeature_location>&lt;1..&gt;483</GBFeature_location>
+        <GBFeature_intervals>
+          <GBInterval>
+            <GBInterval_from>1</GBInterval_from>
+            <GBInterval_to>483</GBInterval_to>
+            <GBInterval_accession>MT159778.1</GBInterval_accession>
+          </GBInterval>
+        </GBFeature_intervals>
+        <GBFeature_partial5 value="true"/>
+        <GBFeature_partial3 value="true"/>
+        <GBFeature_quals>
+          <GBQualifier>
+            <GBQualifier_name>gene</GBQualifier_name>
+            <GBQualifier_value>orf1ab</GBQualifier_value>
+          </GBQualifier>
+          <GBQualifier>
+            <GBQualifier_name>product</GBQualifier_name>
+            <GBQualifier_value>RdRp</GBQualifier_value>
+          </GBQualifier>
+          <GBQualifier>
+            <GBQualifier_name>note</GBQualifier_name>
+            <GBQualifier_value>RNA-dependent RNA polymerase</GBQualifier_value>
+          </GBQualifier>
+          <GBQualifier>
+            <GBQualifier_name>peptide</GBQualifier_name>
+            <GBQualifier_value>MPNMLRIMASLVLARKHTTCCSLSHRFYRLANECAQVLSEMVMCGGSLYVKPGGTSSGDATTAYANSVFNICQAVTANVNALLSTDGNKIADKYVRNLQHRLYECLYRNRDVDTDFVNEFYAYLRKHFSMMILSDDAVVCFNSTYASQGLVASIKNFKSVL</GBQualifier_value>
+          </GBQualifier>
+        </GBFeature_quals>
+      </GBFeature>
+    </GBSeq_feature-table>
+    <GBSeq_sequence>atgcctaacatgcttagaattatggcctcacttgttcttgctcgcaaacatacaacgtgttgtagcttgtcacaccgtttctatagattagctaatgagtgtgctcaagtattgagtgaaatggtcatgtgtggcggttcactatatgttaaaccaggtggaacctcatcaggagatgccacaactgcttatgctaatagtgtttttaacatttgtcaagctgtcacggccaatgttaatgcacttttatctactgatggtaacaaaattgccgataagtatgtccgcaatttacaacacagactttatgagtgtctctatagaaatagagatgttgacacagactttgtgaatgagttttacgcatatttgcgtaaacatttctcaatgatgatactctctgacgatgctgttgtgtgtttcaatagcacttatgcatctcaaggtctagtggctagcataaagaactttaagtcagttctt</GBSeq_sequence>
+  </GBSeq>

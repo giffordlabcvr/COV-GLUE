@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<GBSeq>
+
+    <GBSeq_locus>AY360146</GBSeq_locus>
+    <GBSeq_length>1269</GBSeq_length>
+    <GBSeq_strandedness>single</GBSeq_strandedness>
+    <GBSeq_moltype>RNA</GBSeq_moltype>
+    <GBSeq_topology>linear</GBSeq_topology>
+    <GBSeq_division>VRL</GBSeq_division>
+    <GBSeq_update-date>02-SEP-2003</GBSeq_update-date>
+    <GBSeq_create-date>02-SEP-2003</GBSeq_create-date>
+    <GBSeq_definition>SARS coronavirus HPZ-2003 nucleocapsid protein (NP) gene, complete cds</GBSeq_definition>
+    <GBSeq_primary-accession>AY360146</GBSeq_primary-accession>
+    <GBSeq_accession-version>AY360146.1</GBSeq_accession-version>
+    <GBSeq_other-seqids>
+      <GBSeqid>gb|AY360146.1|</GBSeqid>
+      <GBSeqid>gi|34329618</GBSeqid>
+    </GBSeq_other-seqids>
+    <GBSeq_source>SARS coronavirus HPZ-2003</GBSeq_source>
+    <GBSeq_organism>SARS coronavirus HPZ-2003</GBSeq_organism>
+    <GBSeq_taxonomy>Viruses; Riboviria; Nidovirales; Cornidovirineae; Coronaviridae; Orthocoronavirinae; Betacoronavirus; Sarbecovirus</GBSeq_taxonomy>
+    <GBSeq_references>
+      <GBReference>
+        <GBReference_reference>1</GBReference_reference>
+        <GBReference_position>1..1269</GBReference_position>
+        <GBReference_authors>
+          <GBAuthor>Zhu,H.P.</GBAuthor>
+          <GBAuthor>Lu,Q.Y.</GBAuthor>
+          <GBAuthor>Lu,Y.Y.</GBAuthor>
+          <GBAuthor>Yao,P.P.</GBAuthor>
+          <GBAuthor>Xu,F.</GBAuthor>
+          <GBAuthor>Ge,Q.</GBAuthor>
+          <GBAuthor>Weng,J.Q.</GBAuthor>
+          <GBAuthor>Yan,J.Y.</GBAuthor>
+          <GBAuthor>Gong,L.M.</GBAuthor>
+          <GBAuthor>Shi,W.</GBAuthor>
+          <GBAuthor>Zhao,Z.Y.</GBAuthor>
+          <GBAuthor>Zhu,Z.Y.</GBAuthor>
+        </GBReference_authors>
+        <GBReference_title>Cloning and expression of nucleocapsid protein gene of SARS associated coronavirus</GBReference_title>
+        <GBReference_journal>Unpublished</GBReference_journal>
+      </GBReference>
+      <GBReference>
+        <GBReference_reference>2</GBReference_reference>
+        <GBReference_position>1..1269</GBReference_position>
+        <GBReference_authors>
+          <GBAuthor>Zhu,H.P.</GBAuthor>
+          <GBAuthor>Lu,Q.Y.</GBAuthor>
+          <GBAuthor>Lu,Y.Y.</GBAuthor>
+          <GBAuthor>Yao,P.P.</GBAuthor>
+          <GBAuthor>Xu,F.</GBAuthor>
+          <GBAuthor>Ge,Q.</GBAuthor>
+          <GBAuthor>Weng,J.Q.</GBAuthor>
+          <GBAuthor>Yan,J.Y.</GBAuthor>
+          <GBAuthor>Gong,L.M.</GBAuthor>
+          <GBAuthor>Shi,W.</GBAuthor>
+          <GBAuthor>Zhao,Z.Y.</GBAuthor>
+          <GBAuthor>Zhu,Z.Y.</GBAuthor>
+        </GBReference_authors>
+        <GBReference_title>Direct Submission</GBReference_title>
+        <GBReference_journal>Submitted (04-AUG-2003) Zhejiang Provincial Key Laboratory of HFRS, Zhejiang Center for Disease Prevention and Control, 17 Lao Zhe Da Zhi Road, Hangzhou, Zhejiang 310009, P.R. China</GBReference_journal>
+      </GBReference>
+    </GBSeq_references>
+    <GBSeq_feature-table>
+      <GBFeature>
+        <GBFeature_key>source</GBFeature_key>
+        <GBFeature_location>1..1269</GBFeature_location>
+        <GBFeature_intervals>
+          <GBInterval>
+            <GBInterval_from>1</GBInterval_from>
+            <GBInterval_to>1269</GBInterval_to>
+            <GBInterval_accession>AY360146.1</GBInterval_accession>
+          </GBInterval>
+        </GBFeature_intervals>
+        <GBFeature_quals>
+          <GBQualifier>
+            <GBQualifier_name>organism</GBQualifier_name>
+            <GBQualifier_value>SARS coronavirus HPZ-2003</GBQualifier_value>
+          </GBQualifier>
+          <GBQualifier>
+            <GBQualifier_name>mol_type</GBQualifier_name>
+            <GBQualifier_value>genomic RNA</GBQualifier_value>
+          </GBQualifier>
+          <GBQualifier>
+            <GBQualifier_name>db_xref</GBQualifier_name>
+            <GBQualifier_value>taxon:243925</GBQualifier_value>
+          </GBQualifier>
+        </GBFeature_quals>
+      </GBFeature>
+      <GBFeature>
+        <GBFeature_key>gene</GBFeature_key>
+        <GBFeature_location>1..1269</GBFeature_location>
+        <GBFeature_intervals>
+          <GBInterval>
+            <GBInterval_from>1</GBInterval_from>
+            <GBInterval_to>1269</GBInterval_to>
+            <GBInterval_accession>AY360146.1</GBInterval_accession>
+          </GBInterval>
+        </GBFeature_intervals>
+        <GBFeature_quals>
+          <GBQualifier>
+            <GBQualifier_name>gene</GBQualifier_name>
+            <GBQualifier_value>NP</GBQualifier_value>
+          </GBQualifier>
+        </GBFeature_quals>
+      </GBFeature>
+      <GBFeature>
+        <GBFeature_key>CDS</GBFeature_key>
+        <GBFeature_location>1..1269</GBFeature_location>
+        <GBFeature_intervals>
+          <GBInterval>
+            <GBInterval_from>1</GBInterval_from>
+            <GBInterval_to>1269</GBInterval_to>
+            <GBInterval_accession>AY360146.1</GBInterval_accession>
+          </GBInterval>
+        </GBFeature_intervals>
+        <GBFeature_quals>
+          <GBQualifier>
+            <GBQualifier_name>gene</GBQualifier_name>
+            <GBQualifier_value>NP</GBQualifier_value>
+          </GBQualifier>
+          <GBQualifier>
+            <GBQualifier_name>codon_start</GBQualifier_name>
+            <GBQualifier_value>1</GBQualifier_value>
+          </GBQualifier>
+          <GBQualifier>
+            <GBQualifier_name>transl_table</GBQualifier_name>
+            <GBQualifier_value>1</GBQualifier_value>
+          </GBQualifier>
+          <GBQualifier>
+            <GBQualifier_name>product</GBQualifier_name>
+            <GBQualifier_value>nucleocapsid protein</GBQualifier_value>
+          </GBQualifier>
+          <GBQualifier>
+            <GBQualifier_name>protein_id</GBQualifier_name>
+            <GBQualifier_value>AAQ63890.1</GBQualifier_value>
+          </GBQualifier>
+          <GBQualifier>
+            <GBQualifier_name>translation</GBQualifier_name>
+            <GBQualifier_value>MSDNGPQSNQRSAPRITFGGPTDSTDNNQNGGRNGARPKQRRPQGLPNNTASWFTALTQHGKEELRFPRGQGVPINTNSGPDDQIGYYRRATRRVRGGDGKMKELSPRWYFYYLGTGPEASLPYGANKEGIVWVATEGALNTPKDHIGTRNPNNNAATVLQLPQGTTLPKGFYAEGSRGGSQASSRSSSRSRGNSRNSTPGSSRGNSPARMASGGGETALALLLLDRLNQLESKVSGKGQQQQGQTVTKKSAAEASKKPRQKRTATKQYNVTQAFGRRGPEQTQGNFGDQDLIRQGTDYKHWPQIAQFAPSASAFFGMSRIGMEVTPSGTWLTYHGAIKLDDKDPQFKDNVILLNKHIDAYKTFPPTEPKKDKKKKTDEAQPLPQRQKKQPTVTLLPAADMDDFSRQLQNSMSGASADSTQA</GBQualifier_value>
+          </GBQualifier>
+        </GBFeature_quals>
+      </GBFeature>
+    </GBSeq_feature-table>
+    <GBSeq_sequence>atgtctgataatggaccccaatcaaaccaacgtagtgccccccgcattacatttggtggacccacagattcaactgacaataaccagaatggaggacgcaatggggcaaggccaaaacagcgccgaccccaaggtttacccaataatactgcgtcttggttcacagctctcactcagcatggcaaggaggaacttagattccctcgaggccagggcgttccaatcaacaccaatagtggtccagatgaccaaattggctactaccgaagagctacccgacgagttcgtggtggtgacggcaaaatgaaagagctcagccccagatggtacttctattacctaggaactggcccagaagcttcacttccctacggcgctaacaaagaaggcatcgtatgggttgcaactgagggagccttgaatacacccaaagaccacattggcacccgcaatcctaataacaatgctgccaccgtgctacaacttcctcaaggaacaacattgccaaaaggcttctacgcagagggaagcagaggcggcagtcaagcctcttctcgctcctcatcacgtagtcgcggtaattcaagaaattcaactcctggcagcagtaggggaaattctcctgctcgaatggctagcggaggtggtgaaactgccctcgcgctattgctgctagacagattgaaccagcttgagagcaaagtttctggtaaaggccaacaacaacaaggccaaactgtcactaagaaatctgctgctgaggcatctaaaaagcctcgccaaaaacgtactgccacaaaacagtacaacgtcactcaagcatttgggagacgtggtccagaacaaacccaaggaaatttcggggaccaagacctaatcagacaaggaactgattacaaacattggccgcaaattgcacaatttgctccaagtgcctctgcattctttggaatgtcacgcattggcatggaagtcacaccttcgggaacatggctgacttatcatggagccattaaattggatgacaaagatccacaattcaaagacaacgtcatactgctgaacaagcacattgacgcatacaaaacattcccaccaacagagcctaaaaaggacaaaaagaaaaagactgatgaagctcagcctttgccgcagagacaaaagaagcagcccactgtgactcttcttcctgcggctgacatggatgatttctccagacaacttcaaaattccatgagtggagcttctgctgattcaactcaggcataa</GBSeq_sequence>
+  </GBSeq>

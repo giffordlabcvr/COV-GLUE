@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<GBSeq>
+
+    <GBSeq_locus>AY702026</GBSeq_locus>
+    <GBSeq_length>666</GBSeq_length>
+    <GBSeq_strandedness>single</GBSeq_strandedness>
+    <GBSeq_moltype>RNA</GBSeq_moltype>
+    <GBSeq_topology>linear</GBSeq_topology>
+    <GBSeq_division>VRL</GBSeq_division>
+    <GBSeq_update-date>01-SEP-2004</GBSeq_update-date>
+    <GBSeq_create-date>01-SEP-2004</GBSeq_create-date>
+    <GBSeq_definition>SARS coronavirus GD322 M protein gene, complete cds</GBSeq_definition>
+    <GBSeq_primary-accession>AY702026</GBSeq_primary-accession>
+    <GBSeq_accession-version>AY702026.1</GBSeq_accession-version>
+    <GBSeq_other-seqids>
+      <GBSeqid>gb|AY702026.1|</GBSeqid>
+      <GBSeqid>gi|51573972</GBSeqid>
+    </GBSeq_other-seqids>
+    <GBSeq_source>SARS coronavirus GD322</GBSeq_source>
+    <GBSeq_organism>SARS coronavirus GD322</GBSeq_organism>
+    <GBSeq_taxonomy>Viruses; Riboviria; Nidovirales; Cornidovirineae; Coronaviridae; Orthocoronavirinae; Betacoronavirus; Sarbecovirus</GBSeq_taxonomy>
+    <GBSeq_references>
+      <GBReference>
+        <GBReference_reference>1</GBReference_reference>
+        <GBReference_position>1..666</GBReference_position>
+        <GBReference_authors>
+          <GBAuthor>Hu,Z.</GBAuthor>
+          <GBAuthor>Zhao,W.</GBAuthor>
+          <GBAuthor>Yan,H.</GBAuthor>
+        </GBReference_authors>
+        <GBReference_title>The analyses on M genes' variation rules of SARS-CoV and their influence upon the possible B cell epitopes of M genes</GBReference_title>
+        <GBReference_journal>Unpublished</GBReference_journal>
+      </GBReference>
+      <GBReference>
+        <GBReference_reference>2</GBReference_reference>
+        <GBReference_position>1..666</GBReference_position>
+        <GBReference_authors>
+          <GBAuthor>Zhao,W.</GBAuthor>
+          <GBAuthor>Yan,H.</GBAuthor>
+          <GBAuthor>Hu,Z.</GBAuthor>
+          <GBAuthor>Fang,D.</GBAuthor>
+          <GBAuthor>Zhang,W.</GBAuthor>
+          <GBAuthor>Zhou,J.</GBAuthor>
+          <GBAuthor>Long,B.</GBAuthor>
+          <GBAuthor>Jiang,L.</GBAuthor>
+        </GBReference_authors>
+        <GBReference_title>Direct Submission</GBReference_title>
+        <GBReference_journal>Submitted (29-JUL-2004) Department of Microbiology, First Military Medical University, Tong He, Guang Zhou, Guang Dong 510515, P.R. China</GBReference_journal>
+      </GBReference>
+    </GBSeq_references>
+    <GBSeq_feature-table>
+      <GBFeature>
+        <GBFeature_key>source</GBFeature_key>
+        <GBFeature_location>1..666</GBFeature_location>
+        <GBFeature_intervals>
+          <GBInterval>
+            <GBInterval_from>1</GBInterval_from>
+            <GBInterval_to>666</GBInterval_to>
+            <GBInterval_accession>AY702026.1</GBInterval_accession>
+          </GBInterval>
+        </GBFeature_intervals>
+        <GBFeature_quals>
+          <GBQualifier>
+            <GBQualifier_name>organism</GBQualifier_name>
+            <GBQualifier_value>SARS coronavirus GD322</GBQualifier_value>
+          </GBQualifier>
+          <GBQualifier>
+            <GBQualifier_name>mol_type</GBQualifier_name>
+            <GBQualifier_value>genomic RNA</GBQualifier_value>
+          </GBQualifier>
+          <GBQualifier>
+            <GBQualifier_name>isolate</GBQualifier_name>
+            <GBQualifier_value>GD322</GBQualifier_value>
+          </GBQualifier>
+          <GBQualifier>
+            <GBQualifier_name>isolation_source</GBQualifier_name>
+            <GBQualifier_value>throat swabs and gargle of patient with SARS</GBQualifier_value>
+          </GBQualifier>
+          <GBQualifier>
+            <GBQualifier_name>db_xref</GBQualifier_name>
+            <GBQualifier_value>taxon:291613</GBQualifier_value>
+          </GBQualifier>
+          <GBQualifier>
+            <GBQualifier_name>country</GBQualifier_name>
+            <GBQualifier_value>China</GBQualifier_value>
+          </GBQualifier>
+        </GBFeature_quals>
+      </GBFeature>
+      <GBFeature>
+        <GBFeature_key>CDS</GBFeature_key>
+        <GBFeature_location>1..666</GBFeature_location>
+        <GBFeature_intervals>
+          <GBInterval>
+            <GBInterval_from>1</GBInterval_from>
+            <GBInterval_to>666</GBInterval_to>
+            <GBInterval_accession>AY702026.1</GBInterval_accession>
+          </GBInterval>
+        </GBFeature_intervals>
+        <GBFeature_quals>
+          <GBQualifier>
+            <GBQualifier_name>codon_start</GBQualifier_name>
+            <GBQualifier_value>1</GBQualifier_value>
+          </GBQualifier>
+          <GBQualifier>
+            <GBQualifier_name>transl_table</GBQualifier_name>
+            <GBQualifier_value>1</GBQualifier_value>
+          </GBQualifier>
+          <GBQualifier>
+            <GBQualifier_name>product</GBQualifier_name>
+            <GBQualifier_value>M protein</GBQualifier_value>
+          </GBQualifier>
+          <GBQualifier>
+            <GBQualifier_name>protein_id</GBQualifier_name>
+            <GBQualifier_value>AAU07933.1</GBQualifier_value>
+          </GBQualifier>
+          <GBQualifier>
+            <GBQualifier_name>translation</GBQualifier_name>
+            <GBQualifier_value>MADNGTITVEELKQLLEQWNLVIGFLFLAWIMLLQFAYSNRNRFLYIIKLVFLWLLWPVTLACFVLAAVYRINWVTGGIAIAMACIVGLMWLSYFVASFRLFARTRSMWSFNPETNILLNVPLRGTIVTRPLMESELVIGAVIIRGHLRMAGHSLGRCDIKDLPKEITVATSRTLSYYKLGASQRVGTDSGFAAYNRYRIGNYKLNTDHAGSNDNIALLVQ</GBQualifier_value>
+          </GBQualifier>
+        </GBFeature_quals>
+      </GBFeature>
+    </GBSeq_feature-table>
+    <GBSeq_sequence>atggcagacaacggtactattaccgttgaggagcttaaacaactcctggaacaatggaacctagtaataggtttcctattcctagcctggattatgttactacaatttgcctattctaatcggaacaggtttttgtacataataaagcttgttttcctctggctcttgtggccagtaacacttgcttgctttgtgcttgctgctgtctacagaattaattgggtgactggcgggattgcgattgcaatggcttgtattgtaggcttgatgtggcttagctacttcgttgcttccttcaggctgtttgctcgtacccgctcaatgtggtcattcaacccagaaacaaacattcttctcaatgtgcctctccgggggacaattgtgaccagaccgctcatggaaagtgaacttgtcattggtgctgtgatcattcgtggtcacttgcgaatggccggacactccctagggcgctgtgacattaaggacctgccaaaagagatcactgtggctacatcacgaacgctttcttattacaaattaggagcgtcgcagcgtgtaggcactgattcaggttttgctgcatacaaccgctaccgtattggaaactataaattaaatacagaccacgccggtagcaacgacaatattgctttgctagtacagtaa</GBSeq_sequence>
+  </GBSeq>

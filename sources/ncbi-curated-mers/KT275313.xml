@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<GBSeq>
+
+    <GBSeq_locus>KT275313</GBSeq_locus>
+    <GBSeq_length>431</GBSeq_length>
+    <GBSeq_strandedness>single</GBSeq_strandedness>
+    <GBSeq_moltype>RNA</GBSeq_moltype>
+    <GBSeq_topology>linear</GBSeq_topology>
+    <GBSeq_division>VRL</GBSeq_division>
+    <GBSeq_update-date>17-DEC-2015</GBSeq_update-date>
+    <GBSeq_create-date>17-DEC-2015</GBSeq_create-date>
+    <GBSeq_definition>Middle East respiratory syndrome coronavirus isolate ADFCA-HKU7 spike protein gene, partial cds</GBSeq_definition>
+    <GBSeq_primary-accession>KT275313</GBSeq_primary-accession>
+    <GBSeq_accession-version>KT275313.1</GBSeq_accession-version>
+    <GBSeq_other-seqids>
+      <GBSeqid>gb|KT275313.1|</GBSeqid>
+      <GBSeqid>gi|883877695</GBSeqid>
+    </GBSeq_other-seqids>
+    <GBSeq_source>Middle East respiratory syndrome-related coronavirus (MERS-CoV)</GBSeq_source>
+    <GBSeq_organism>Middle East respiratory syndrome-related coronavirus</GBSeq_organism>
+    <GBSeq_taxonomy>Viruses; ssRNA viruses; ssRNA positive-strand viruses, no DNA stage; Nidovirales; Coronaviridae; Coronavirinae; Betacoronavirus</GBSeq_taxonomy>
+    <GBSeq_references>
+      <GBReference>
+        <GBReference_reference>1</GBReference_reference>
+        <GBReference_position>1..431</GBReference_position>
+        <GBReference_authors>
+          <GBAuthor>Al Hammadi,Z.M.</GBAuthor>
+          <GBAuthor>Chu,D.K.</GBAuthor>
+          <GBAuthor>Eltahir,Y.M.</GBAuthor>
+          <GBAuthor>Al Hosani,F.</GBAuthor>
+          <GBAuthor>Al Mulla,M.</GBAuthor>
+          <GBAuthor>Tarnini,W.</GBAuthor>
+          <GBAuthor>Hall,A.J.</GBAuthor>
+          <GBAuthor>Perera,R.A.</GBAuthor>
+          <GBAuthor>Abdelkhalek,M.M.</GBAuthor>
+          <GBAuthor>Peiris,J.S.</GBAuthor>
+          <GBAuthor>Al Muhairi,S.S.</GBAuthor>
+          <GBAuthor>Poon,L.L.</GBAuthor>
+        </GBReference_authors>
+        <GBReference_title>Asymptomatic MERS-CoV Infection in Humans Possibly Linked to Infected Dromedaries Imported from Oman to United Arab Emirates, May 2015</GBReference_title>
+        <GBReference_journal>Emerging Infect. Dis. 21 (12), 2197-2200 (2015)</GBReference_journal>
+        <GBReference_xref>
+          <GBXref>
+            <GBXref_dbname>doi</GBXref_dbname>
+            <GBXref_id>10.3201/eid2112.151132</GBXref_id>
+          </GBXref>
+        </GBReference_xref>
+        <GBReference_pubmed>26584223</GBReference_pubmed>
+      </GBReference>
+      <GBReference>
+        <GBReference_reference>2</GBReference_reference>
+        <GBReference_position>1..431</GBReference_position>
+        <GBReference_authors>
+          <GBAuthor>Chu,D.K.W.</GBAuthor>
+          <GBAuthor>Peiris,M.J.S.</GBAuthor>
+          <GBAuthor>Poon,L.L.M.</GBAuthor>
+        </GBReference_authors>
+        <GBReference_title>Direct Submission</GBReference_title>
+        <GBReference_journal>Submitted (10-JUL-2015) School of Public Health, The University of Hong Kong, 21 Sassoon Road, Pokfulam, Hong Kong</GBReference_journal>
+      </GBReference>
+    </GBSeq_references>
+    <GBSeq_comment>##Assembly-Data-START## ; Assembly Method :: Geneious v. 8 ; Sequencing Technology :: Sanger dideoxy sequencing ; ##Assembly-Data-END##</GBSeq_comment>
+    <GBSeq_feature-table>
+      <GBFeature>
+        <GBFeature_key>source</GBFeature_key>
+        <GBFeature_location>1..431</GBFeature_location>
+        <GBFeature_intervals>
+          <GBInterval>
+            <GBInterval_from>1</GBInterval_from>
+            <GBInterval_to>431</GBInterval_to>
+            <GBInterval_accession>KT275313.1</GBInterval_accession>
+          </GBInterval>
+        </GBFeature_intervals>
+        <GBFeature_quals>
+          <GBQualifier>
+            <GBQualifier_name>organism</GBQualifier_name>
+            <GBQualifier_value>Middle East respiratory syndrome-related coronavirus</GBQualifier_value>
+          </GBQualifier>
+          <GBQualifier>
+            <GBQualifier_name>mol_type</GBQualifier_name>
+            <GBQualifier_value>genomic RNA</GBQualifier_value>
+          </GBQualifier>
+          <GBQualifier>
+            <GBQualifier_name>isolate</GBQualifier_name>
+            <GBQualifier_value>ADFCA-HKU7</GBQualifier_value>
+          </GBQualifier>
+          <GBQualifier>
+            <GBQualifier_name>host</GBQualifier_name>
+            <GBQualifier_value>Homo sapiens</GBQualifier_value>
+          </GBQualifier>
+          <GBQualifier>
+            <GBQualifier_name>db_xref</GBQualifier_name>
+            <GBQualifier_value>taxon:1335626</GBQualifier_value>
+          </GBQualifier>
+          <GBQualifier>
+            <GBQualifier_name>country</GBQualifier_name>
+            <GBQualifier_value>United Arab Emirates</GBQualifier_value>
+          </GBQualifier>
+          <GBQualifier>
+            <GBQualifier_name>collection_date</GBQualifier_name>
+            <GBQualifier_value>09-May-2015</GBQualifier_value>
+          </GBQualifier>
+        </GBFeature_quals>
+      </GBFeature>
+      <GBFeature>
+        <GBFeature_key>CDS</GBFeature_key>
+        <GBFeature_location>&lt;1..&gt;431</GBFeature_location>
+        <GBFeature_intervals>
+          <GBInterval>
+            <GBInterval_from>1</GBInterval_from>
+            <GBInterval_to>431</GBInterval_to>
+            <GBInterval_accession>KT275313.1</GBInterval_accession>
+          </GBInterval>
+        </GBFeature_intervals>
+        <GBFeature_partial5 value="true"/>
+        <GBFeature_partial3 value="true"/>
+        <GBFeature_quals>
+          <GBQualifier>
+            <GBQualifier_name>codon_start</GBQualifier_name>
+            <GBQualifier_value>1</GBQualifier_value>
+          </GBQualifier>
+          <GBQualifier>
+            <GBQualifier_name>transl_table</GBQualifier_name>
+            <GBQualifier_value>1</GBQualifier_value>
+          </GBQualifier>
+          <GBQualifier>
+            <GBQualifier_name>product</GBQualifier_name>
+            <GBQualifier_value>spike protein</GBQualifier_value>
+          </GBQualifier>
+          <GBQualifier>
+            <GBQualifier_name>protein_id</GBQualifier_name>
+            <GBQualifier_value>AKQ21085.1</GBQualifier_value>
+          </GBQualifier>
+          <GBQualifier>
+            <GBQualifier_name>translation</GBQualifier_name>
+            <GBQualifier_value>SVIYDKETKTHATLFGSVACEHISSTMSQYSRSTRSMLKRRDSTYGPLQTPVGCVLGLVNSSLFVEDCKLPLGQSLCALPDTPSTLTPRSVRSVPGEMRLASIAFNHPIQVDQLNSSYFKLSIPTNFSFGVTQEYIQTTIQKVT</GBQualifier_value>
+          </GBQualifier>
+        </GBFeature_quals>
+      </GBFeature>
+    </GBSeq_feature-table>
+    <GBSeq_sequence>tctgtcatctatgataaagaaactaaaacccacgctactctatttggtagtgttgcatgtgaacacatttcctctaccatgtctcaatactcccgttctacgcgatcaatgcttaaacggcgagattctacatatggtccccttcagacacctgttggttgtgtcctaggacttgttaattcctctttgttcgtagaggactgcaagttgcctcttggtcaatctctctgtgctcttcctgacacacctagtactctcacacctcgcagtgtgcgctctgttccaggtgaaatgcgcttggcatccattgcttttaatcatcctattcaggttgatcaacttaatagtagttattttaaattaagtatacctactaatttttcctttggtgtgactcaggagtacattcagacaaccattcagaaagttac</GBSeq_sequence>
+  </GBSeq>

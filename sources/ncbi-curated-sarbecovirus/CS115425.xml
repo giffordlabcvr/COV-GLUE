@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<GBSeq>
+
+    <GBSeq_locus>CS115425</GBSeq_locus>
+    <GBSeq_length>525</GBSeq_length>
+    <GBSeq_strandedness>double</GBSeq_strandedness>
+    <GBSeq_moltype>DNA</GBSeq_moltype>
+    <GBSeq_topology>linear</GBSeq_topology>
+    <GBSeq_division>PAT</GBSeq_division>
+    <GBSeq_update-date>08-JUL-2005</GBSeq_update-date>
+    <GBSeq_create-date>08-JUL-2005</GBSeq_create-date>
+    <GBSeq_definition>Sequence 166 from Patent WO2005057464</GBSeq_definition>
+    <GBSeq_primary-accession>CS115425</GBSeq_primary-accession>
+    <GBSeq_accession-version>CS115425.1</GBSeq_accession-version>
+    <GBSeq_other-seqids>
+      <GBSeqid>emb|CS115425.1|</GBSeqid>
+      <GBSeqid>pat|WO|2005057464|166</GBSeqid>
+      <GBSeqid>gi|70664221</GBSeqid>
+    </GBSeq_other-seqids>
+    <GBSeq_source>Severe acute respiratory syndrome-related coronavirus</GBSeq_source>
+    <GBSeq_organism>Severe acute respiratory syndrome-related coronavirus</GBSeq_organism>
+    <GBSeq_taxonomy>Viruses; Riboviria; Nidovirales; Cornidovirineae; Coronaviridae; Orthocoronavirinae; Betacoronavirus; Sarbecovirus</GBSeq_taxonomy>
+    <GBSeq_references>
+      <GBReference>
+        <GBReference_reference>1</GBReference_reference>
+        <GBReference_position>1..525</GBReference_position>
+        <GBReference_authors>
+          <GBAuthor>Brahmachari,S.K.</GBAuthor>
+          <GBAuthor>Dash,D.</GBAuthor>
+          <GBAuthor>Sharma,R.</GBAuthor>
+          <GBAuthor>Maheshwari,J.K.</GBAuthor>
+        </GBReference_authors>
+        <GBReference_title>A computer based versatile method for identifying protein coding dna sequences useful as drug targets</GBReference_title>
+        <GBReference_journal>WO2005057464-A1 166 23-JUN-2005 Council of Scientific and Industrial Research (IN)</GBReference_journal>
+      </GBReference>
+    </GBSeq_references>
+    <GBSeq_feature-table>
+      <GBFeature>
+        <GBFeature_key>source</GBFeature_key>
+        <GBFeature_location>1..525</GBFeature_location>
+        <GBFeature_intervals>
+          <GBInterval>
+            <GBInterval_from>1</GBInterval_from>
+            <GBInterval_to>525</GBInterval_to>
+            <GBInterval_accession>CS115425.1</GBInterval_accession>
+          </GBInterval>
+        </GBFeature_intervals>
+        <GBFeature_quals>
+          <GBQualifier>
+            <GBQualifier_name>organism</GBQualifier_name>
+            <GBQualifier_value>Severe acute respiratory syndrome-related coronavirus</GBQualifier_value>
+          </GBQualifier>
+          <GBQualifier>
+            <GBQualifier_name>mol_type</GBQualifier_name>
+            <GBQualifier_value>unassigned DNA</GBQualifier_value>
+          </GBQualifier>
+          <GBQualifier>
+            <GBQualifier_name>db_xref</GBQualifier_name>
+            <GBQualifier_value>taxon:694009</GBQualifier_value>
+          </GBQualifier>
+        </GBFeature_quals>
+      </GBFeature>
+    </GBSeq_feature-table>
+    <GBSeq_sequence>gtgacgagcttggcactgatcccattgaagattatgaacaaaactggaacactaagcatggcagtggtgcactccgtgaactcactcgtgagctcaatggaggtgcagtcactcgctatgtcgacaacaatttctgtggcccagatgggtaccctcttgattgcatcaaagattttctcgcacgcgcgggcaagtcaatgtgcactctttccgaacaacttgattacatcgagtcgaagagaggtgtctactgctgccgtgaccatgagcatgaaattgcctggttcactgagcgctctgataagagctacgagcaccagacacccttcgaaattaagagtgccaagaaatttgacactttcaaaggggaatgcccaaagtttgtgtttcctcttaactcaaaagtcaaagtcattcaaccacgtgttgaaaagaaaaagactgagggtttcatggggcgtatacgctctgtgtaccctgttgcatctccacaggagtgtaacaatatgcacttgtctaccttga</GBSeq_sequence>
+  </GBSeq>

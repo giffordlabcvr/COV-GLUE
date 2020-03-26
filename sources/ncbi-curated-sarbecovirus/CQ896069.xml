@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<GBSeq>
+
+    <GBSeq_locus>CQ896069</GBSeq_locus>
+    <GBSeq_length>1483</GBSeq_length>
+    <GBSeq_strandedness>single</GBSeq_strandedness>
+    <GBSeq_moltype>RNA</GBSeq_moltype>
+    <GBSeq_topology>linear</GBSeq_topology>
+    <GBSeq_division>PAT</GBSeq_division>
+    <GBSeq_update-date>05-NOV-2004</GBSeq_update-date>
+    <GBSeq_create-date>05-NOV-2004</GBSeq_create-date>
+    <GBSeq_definition>Sequence 47 from Patent WO2004089983</GBSeq_definition>
+    <GBSeq_primary-accession>CQ896069</GBSeq_primary-accession>
+    <GBSeq_accession-version>CQ896069.1</GBSeq_accession-version>
+    <GBSeq_other-seqids>
+      <GBSeqid>emb|CQ896069.1|</GBSeqid>
+      <GBSeqid>pat|WO|2004089983|47</GBSeqid>
+      <GBSeqid>gi|55467991</GBSeqid>
+    </GBSeq_other-seqids>
+    <GBSeq_source>Severe acute respiratory syndrome-related coronavirus</GBSeq_source>
+    <GBSeq_organism>Severe acute respiratory syndrome-related coronavirus</GBSeq_organism>
+    <GBSeq_taxonomy>Viruses; Riboviria; Nidovirales; Cornidovirineae; Coronaviridae; Orthocoronavirinae; Betacoronavirus; Sarbecovirus</GBSeq_taxonomy>
+    <GBSeq_references>
+      <GBReference>
+        <GBReference_reference>1</GBReference_reference>
+        <GBReference_position>1..1483</GBReference_position>
+        <GBReference_authors>
+          <GBAuthor>Haagmans,B.L.</GBAuthor>
+          <GBAuthor>Kuiken,T.</GBAuthor>
+          <GBAuthor>Fouchier,R.A.</GBAuthor>
+          <GBAuthor>Osterhaus,A.D.</GBAuthor>
+        </GBReference_authors>
+        <GBReference_title>Sars</GBReference_title>
+        <GBReference_journal>WO2004089983-A2 47 21-OCT-2004 Vironovative B.V. (NL)</GBReference_journal>
+      </GBReference>
+    </GBSeq_references>
+    <GBSeq_feature-table>
+      <GBFeature>
+        <GBFeature_key>source</GBFeature_key>
+        <GBFeature_location>1..1483</GBFeature_location>
+        <GBFeature_intervals>
+          <GBInterval>
+            <GBInterval_from>1</GBInterval_from>
+            <GBInterval_to>1483</GBInterval_to>
+            <GBInterval_accession>CQ896069.1</GBInterval_accession>
+          </GBInterval>
+        </GBFeature_intervals>
+        <GBFeature_quals>
+          <GBQualifier>
+            <GBQualifier_name>organism</GBQualifier_name>
+            <GBQualifier_value>Severe acute respiratory syndrome-related coronavirus</GBQualifier_value>
+          </GBQualifier>
+          <GBQualifier>
+            <GBQualifier_name>mol_type</GBQualifier_name>
+            <GBQualifier_value>unassigned RNA</GBQualifier_value>
+          </GBQualifier>
+          <GBQualifier>
+            <GBQualifier_name>db_xref</GBQualifier_name>
+            <GBQualifier_value>taxon:694009</GBQualifier_value>
+          </GBQualifier>
+        </GBFeature_quals>
+      </GBFeature>
+      <GBFeature>
+        <GBFeature_key>misc_feature</GBFeature_key>
+        <GBFeature_location>1..1483</GBFeature_location>
+        <GBFeature_intervals>
+          <GBInterval>
+            <GBInterval_from>1</GBInterval_from>
+            <GBInterval_to>1483</GBInterval_to>
+            <GBInterval_accession>CQ896069.1</GBInterval_accession>
+          </GBInterval>
+        </GBFeature_intervals>
+        <GBFeature_quals>
+          <GBQualifier>
+            <GBQualifier_name>note</GBQualifier_name>
+            <GBQualifier_value>unknown sequence</GBQualifier_value>
+          </GBQualifier>
+        </GBFeature_quals>
+      </GBFeature>
+    </GBSeq_feature-table>
+    <GBSeq_sequence>ttgcataccgcaatgttcttcttcgtaagaacggtaataagggagccggtggtcatagctgtggcatgatctaaagtcttatgacttaggtgacgagcttggcactgatcccattgaagattatgaacaaaactggaacactaagcatggcagtggtgcactccgtgaactcactcgtgagctcaatggaggtgcagtcactcgctatgtcgacaacaatttctgtggcccagatgggtaccctcttgattgcatcaaagattttctcgcacgcgcgggcaagtcaatgtgcactctttccgaacaacttgattacatcgagtcgaagagaggtgtctactgctgccgtgaccatgagcatgaaattgcctgggttcactgagcgctctgataagagctacgagcaccagacacccttcgaaattaagagtgccaagaaaattgacactttcaaaaggggaatgccccaaagcttgtgtttcctcttaactcaaaagtcaaagtcattcaaccacgtgttgaaaagaaaaagactgagggtttcatggggcgtatacgctctgtgtaccctgttgcatctccacaggagtgtaacaatatgcacttgtctaccttgatgaaatgtaatcattgcgatgaagcttcatggcagacgtgcgactttctgaaagccacttgtgaacattgtggcactgaaaatttagttattgaaggacctagtacatgtgggtacctacctactaatgctgtagtgaaaatgccatgtcctgcctgtcaagacccagagattggacctgagcatagtgttgcagattatcacaaccactcaaacattgaaactcgactccgcaagggaggtaggactagatgttttggaggctgtgtgtttgcctatgttggctgctataataagcgtgcctactgggttcctcgtgctagtgctgatattggctcaggccatactggcattactggtgacaatgtggagaccttgaatgaggatctccttgagatactgagtcgtgaacgtgttaacattaacattgttggcgattttcatttgaatgaagaggttgccatcaytttggcatcyttctctgcttctacaagtgcctttattgacactataaagagtcttgattacaagtctttcaaaaccattgttgagtcctgcggtaactataaagttaccaagggaaagcccgtaaaaggtgcttggaacattggacaacagagatcagttttaacaccactgtgtggttttccctcacaggctgctggtgttatcagatcaatttttgcgcgcacacttgatgcagcaaaccactcaattcctgatttgcaaagagcagctgtcaccatacttgatggtatttctgaacagtcattacgtcttgtcgacgccatggtttatacttcagacctgctcaccaacagtgtcattattatggcatatgtaactggtggtcttgtacaacagact</GBSeq_sequence>
+  </GBSeq>

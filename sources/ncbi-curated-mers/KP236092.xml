@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<GBSeq>
+
+    <GBSeq_locus>KP236092</GBSeq_locus>
+    <GBSeq_length>4062</GBSeq_length>
+    <GBSeq_strandedness>single</GBSeq_strandedness>
+    <GBSeq_moltype>RNA</GBSeq_moltype>
+    <GBSeq_topology>linear</GBSeq_topology>
+    <GBSeq_division>VRL</GBSeq_division>
+    <GBSeq_update-date>14-DEC-2014</GBSeq_update-date>
+    <GBSeq_create-date>14-DEC-2014</GBSeq_create-date>
+    <GBSeq_definition>Middle East respiratory syndrome coronavirus strain Abu Dhabi/Oman_UAE_7_2013 S protein (S) gene, complete cds</GBSeq_definition>
+    <GBSeq_primary-accession>KP236092</GBSeq_primary-accession>
+    <GBSeq_accession-version>KP236092.1</GBSeq_accession-version>
+    <GBSeq_other-seqids>
+      <GBSeqid>gb|KP236092.1|</GBSeqid>
+      <GBSeqid>gi|730518839</GBSeqid>
+    </GBSeq_other-seqids>
+    <GBSeq_source>Middle East respiratory syndrome-related coronavirus (MERS-CoV)</GBSeq_source>
+    <GBSeq_organism>Middle East respiratory syndrome-related coronavirus</GBSeq_organism>
+    <GBSeq_taxonomy>Viruses; ssRNA viruses; ssRNA positive-strand viruses, no DNA stage; Nidovirales; Coronaviridae; Coronavirinae; Betacoronavirus</GBSeq_taxonomy>
+    <GBSeq_references>
+      <GBReference>
+        <GBReference_reference>1</GBReference_reference>
+        <GBReference_position>1..4062</GBReference_position>
+        <GBReference_authors>
+          <GBAuthor>Tao,Y.</GBAuthor>
+          <GBAuthor>Queen,K.</GBAuthor>
+          <GBAuthor>Li,Y.</GBAuthor>
+          <GBAuthor>Paden,C.R.</GBAuthor>
+          <GBAuthor>Zhang,J.</GBAuthor>
+          <GBAuthor>Al-Ameri,A.</GBAuthor>
+          <GBAuthor>Amer,W.A.</GBAuthor>
+          <GBAuthor>AlHamly,N.</GBAuthor>
+          <GBAuthor>Weber,S.</GBAuthor>
+          <GBAuthor>Imambaccus,H.</GBAuthor>
+          <GBAuthor>Sasse,J.</GBAuthor>
+          <GBAuthor>Gerber,S.</GBAuthor>
+          <GBAuthor>Al Hosany,F.I.</GBAuthor>
+          <GBAuthor>Tong,S.</GBAuthor>
+        </GBReference_authors>
+        <GBReference_title>Direct Submission</GBReference_title>
+        <GBReference_journal>Submitted (04-DEC-2014) Division of Viral Diseases, Centers for Disease Control and Prevention, 1600 Clifton Rd, Atlanta, GA 30333, USA</GBReference_journal>
+      </GBReference>
+    </GBSeq_references>
+    <GBSeq_comment>##Assembly-Data-START## ; Sequencing Technology :: Sanger dideoxy sequencing ; ##Assembly-Data-END##</GBSeq_comment>
+    <GBSeq_feature-table>
+      <GBFeature>
+        <GBFeature_key>source</GBFeature_key>
+        <GBFeature_location>1..4062</GBFeature_location>
+        <GBFeature_intervals>
+          <GBInterval>
+            <GBInterval_from>1</GBInterval_from>
+            <GBInterval_to>4062</GBInterval_to>
+            <GBInterval_accession>KP236092.1</GBInterval_accession>
+          </GBInterval>
+        </GBFeature_intervals>
+        <GBFeature_quals>
+          <GBQualifier>
+            <GBQualifier_name>organism</GBQualifier_name>
+            <GBQualifier_value>Middle East respiratory syndrome-related coronavirus</GBQualifier_value>
+          </GBQualifier>
+          <GBQualifier>
+            <GBQualifier_name>mol_type</GBQualifier_name>
+            <GBQualifier_value>genomic RNA</GBQualifier_value>
+          </GBQualifier>
+          <GBQualifier>
+            <GBQualifier_name>strain</GBQualifier_name>
+            <GBQualifier_value>Abu Dhabi/Oman_UAE_7_2013</GBQualifier_value>
+          </GBQualifier>
+          <GBQualifier>
+            <GBQualifier_name>isolation_source</GBQualifier_name>
+            <GBQualifier_value>nasopharyngeal aspirate</GBQualifier_value>
+          </GBQualifier>
+          <GBQualifier>
+            <GBQualifier_name>host</GBQualifier_name>
+            <GBQualifier_value>Homo sapiens</GBQualifier_value>
+          </GBQualifier>
+          <GBQualifier>
+            <GBQualifier_name>db_xref</GBQualifier_name>
+            <GBQualifier_value>taxon:1335626</GBQualifier_value>
+          </GBQualifier>
+          <GBQualifier>
+            <GBQualifier_name>country</GBQualifier_name>
+            <GBQualifier_value>United Arab Emirates</GBQualifier_value>
+          </GBQualifier>
+          <GBQualifier>
+            <GBQualifier_name>collection_date</GBQualifier_name>
+            <GBQualifier_value>29-Oct-2013</GBQualifier_value>
+          </GBQualifier>
+        </GBFeature_quals>
+      </GBFeature>
+      <GBFeature>
+        <GBFeature_key>gene</GBFeature_key>
+        <GBFeature_location>1..4062</GBFeature_location>
+        <GBFeature_intervals>
+          <GBInterval>
+            <GBInterval_from>1</GBInterval_from>
+            <GBInterval_to>4062</GBInterval_to>
+            <GBInterval_accession>KP236092.1</GBInterval_accession>
+          </GBInterval>
+        </GBFeature_intervals>
+        <GBFeature_quals>
+          <GBQualifier>
+            <GBQualifier_name>gene</GBQualifier_name>
+            <GBQualifier_value>S</GBQualifier_value>
+          </GBQualifier>
+        </GBFeature_quals>
+      </GBFeature>
+      <GBFeature>
+        <GBFeature_key>CDS</GBFeature_key>
+        <GBFeature_location>1..4062</GBFeature_location>
+        <GBFeature_intervals>
+          <GBInterval>
+            <GBInterval_from>1</GBInterval_from>
+            <GBInterval_to>4062</GBInterval_to>
+            <GBInterval_accession>KP236092.1</GBInterval_accession>
+          </GBInterval>
+        </GBFeature_intervals>
+        <GBFeature_quals>
+          <GBQualifier>
+            <GBQualifier_name>gene</GBQualifier_name>
+            <GBQualifier_value>S</GBQualifier_value>
+          </GBQualifier>
+          <GBQualifier>
+            <GBQualifier_name>codon_start</GBQualifier_name>
+            <GBQualifier_value>1</GBQualifier_value>
+          </GBQualifier>
+          <GBQualifier>
+            <GBQualifier_name>transl_table</GBQualifier_name>
+            <GBQualifier_value>1</GBQualifier_value>
+          </GBQualifier>
+          <GBQualifier>
+            <GBQualifier_name>product</GBQualifier_name>
+            <GBQualifier_value>S protein</GBQualifier_value>
+          </GBQualifier>
+          <GBQualifier>
+            <GBQualifier_name>protein_id</GBQualifier_name>
+            <GBQualifier_value>AIZ48769.1</GBQualifier_value>
+          </GBQualifier>
+          <GBQualifier>
+            <GBQualifier_name>translation</GBQualifier_name>
+            <GBQualifier_value>MIHSVFLLMFLLTPTESYVDVGPDSVKSACIEVDIQQTFFDKTWPRPIDVSKADGIIYPQGRTYSNITITYQGLFPYQGDHGDMYVYSAGHATGTTPQKLFVANYSQDVKQFANGFVVRIGAAANSTGTVIISPSTSATIRKIYPAFMLGSSVGNFSDGKMGRFFNHTLVLLPDGCGTLLRAFYCILEPRSGNHCPAGNSYTSFATYHTPATDCSDGNYNRNASLNSFKEYFNLRNCTFMYTYNITEDEILEWFGITQTAQGVHLFSSRYVDLYGGNMFQFATLXVYDTIKYYSIIPHSIRSIQSDRKAWAAFYVYKLQPLTFLLDFSVDGYIRRAIDCGFNDLSQLHCSYESFDVESGVYSVSSFEAKPSGSVVEQAEGVECDFSPLLSGTPPQVYNFKRLVFTNCNYNLTKLLSLFSVNDFTCSQISPAAIASNCYSSLILDYFSYPLSMKSDLSVSSAGPISQFNYKQSFSNPTCLILATVPHNLTTITKPLKYSYINKXSRLLSDDRTEVPQLVNANQYSPCVSIVPSTVWEDGDYYRKQLSPLEGGGWLVASGSTVAMTEQLQMGFGITVQYGTDTNSVCPKLEFANDTKIASQLGNCVEYSLYGVSGRGVFQNCTAVGVRQQRFVYDAYQNLVGYYSDDGNYYCLRACVSVPVSVIYDKETKTHATLFGSVACEHISSTMSQYSRSTRSMLKRRDSTYGPLQTPVGCVLGLVNSSLFVEDCKLPLGQSLCALPDTPSTLTPRSVRSVPGEMRLASIAFNHPIQVDQLNSSYFKLSIPTNFSFGVTQEYIQTTIQKVTVDCKQYICNGFQKCEQLLREYGQFCSKINQALHGANLRQDDSVRNLFASVKSSQSSPIIPGFGGDFNLTLLEPVSISTGSRSARSAIEDLLFDKVTIADPGYMQGYDDCMQQGPASARDLICAQYVAGYKVLPPLMDVNMEAAYTSSLLGSIAGVGWTAGLSSFAAIPFAQSIFYRLNGVGITQQVLSENQKLIANKFNQALGAMQTGFTTTNEAFRKVQDAVNNNAQALSKLASELSNTFGAISASIGDIIQRLDVLEQDAQIDRLINGRLTTLNAFVAQQLVRSESAALSAQLAKDKVNECVKAQSKRSGFCGQGTHIVSFVVNAPNGLYFMHVGYYPSNHIEVVSAYGLCDAANPTNCIAPVNGYFIKTNNTRIVDEWSYTGSSFYSPEPITSLNTKYVAPQVTYQNISTNLPPPLLGNSTGIDFQDELDEFFKNVSTSIPNFGSLTQINTTLLDLTYEMLSLQQVVKALNESYIDLKELGNYTYYNKWPWYIWLGFIAGLVALALCVFFILCCTGCGTNCMGKLKCNRCCDRYEEYDLEPHKVHVH</GBQualifier_value>
+          </GBQualifier>
+        </GBFeature_quals>
+      </GBFeature>
+    </GBSeq_feature-table>
+    <GBSeq_sequence>atgatacactcagtgtttctactgatgttcttgttaacacctacagaaagttacgttgatgtagggccagattctgttaagtctgcttgtattgaggttgatatacaacagactttctttgataaaacttggcctaggccaattgatgtttctaaggctgacggtattatataccctcaaggccgtacatattctaacataactatcacttatcaaggtctttttccctatcagggagaccatggtgatatgtatgtttactctgcaggacatgctacaggcacaactccacaaaagttgtttgtagctaactattctcaggacgtcaaacagtttgctaatgggtttgtcgtccgtataggagcagctgccaattccactggcactgttattattagcccatctaccagcgctactatacgaaaaatttaccctgcttttatgctgggttcttcagttggtaatttctcagatggtaaaatgggccgcttcttcaatcatactctagttcttttgcccgatggatgtggcactttacttagagctttttattgtattctagagcctcgctctggaaatcattgtcctgctggcaattcctatacttcttttgccacttatcacactcctgcaacagattgttctgatggcaattacaatcgtaatgccagtctgaactcttttaaggagtattttaatttacgtaactgcacctttatgtacacttataacattaccgaagatgagattttagagtggtttggcattacacaaactgctcaaggtgttcacctcttctcatctcggtatgttgatttgtacggcggcaatatgtttcaatttgccaccttgcytgtttatgatactattaagtattactctatcattcctcacagtattcgttctatccaaagtgatagaaaagcttgggctgccttctacgtatataaacttcaaccgttaactttcctgttggatttttctgttgatggttatatacgcagagctatagactgtggttttaatgatttgtcacaactccactgctcatatgaatccttcgatgttgaatctggagtttattcagtttcgtctttcgaagcaaaaccttctggctcagttgtggaacaggctgaaggtgttgaatgtgatttttcacctcttctgtctggcacacctcctcaggtttataatttcaagcgtttggtttttaccaattgcaattataatcttaccaaattgctttcacttttttctgtgaatgattttacttgtagtcaaatatctccagcagcaattgctagcaactgttattcttcactgattttggattacttttcatacccacttagtatgaaatccgatctcagtgttagttctgctggtccaatatcccagtttaattataaacagtccttttctaatcccacatgtttgattttagcgactgttcctcataaccttactactattactaagcctcttaagtacagctatattaacaagtkctctcgtcttctttctgatgatcgtactgaagtacctcagttagtgaacgctaatcaatactcaccctgtgtatccattgtcccatccactgtgtgggaagacggtgattattataggaaacaactatctccacttgaaggtggtggctggcttgttgctagtggctcaactgttgccatgactgagcaattacagatgggctttggtattacagttcaatatggtacagacaccaatagtgtttgccccaagcttgaatttgctaatgacacaaaaattgcctctcaattaggcaattgcgtggaatattccctctatggtgtttcgggccgtggtgtttttcagaattgcacagctgtaggtgttcgacagcagcgctttgtttatgatgcgtaccagaatttagttggctattattctgatgatggcaactactactgtttgcgtgcttgtgttagtgttcctgtttctgtcatctatgataaagaaactaaaacccacgctactctatttggtagtgttgcatgtgaacacatttcttctaccatgtctcaatactcccgttctacgcgatcaatgcttaaacggcgagattctacatatggcccccttcagacacctgttggttgtgtcctaggacttgttaattcctctttgttcgtagaggactgcaagttgcctctcggtcaatctctctgtgctcttcctgacacacctagtactcttacacctcgcagtgtgcgctctgttccaggtgaaatgcgcttggcatccattgcttttaatcatcccattcaggttgatcaacttaatagtagttattttaaattaagtatacccactaatttttcctttggtgtgactcaggagtacattcagacaaccattcagaaagttactgttgattgtaaacagtacatttgcaatggtttccagaagtgtgagcaattactgcgcgagtatggccagttttgttccaaaataaaccaggctctccatggtgccaatttacgccaggatgattctgtacgtaatttgtttgcgagcgtgaaaagctctcaatcatctcctatcataccaggttttggaggtgactttaatttgacacttctagaacctgtttctatatctactggcagtcgtagtgcacgtagtgctattgaggatttgctatttgacaaagtcactatagctgatcctggttatatgcaaggttacgatgattgtatgcagcaaggtccagcatcagctcgtgatcttatttgtgctcaatatgtggctggttataaagtattacctcctcttatggatgttaatatggaagccgcgtatacttcatctttgcttggcagcatagcaggtgttggctggactgctggcttatcctcctttgctgctattccatttgcacagagtatcttttataggttaaacggtgttggcattactcaacaggttctttcagagaaccaaaagcttattgccaataagtttaatcaggctctgggagctatgcaaacaggcttcactacaactaatgaagcttttcggaaggttcaggatgctgtgaacaacaatgcacaggctctatccaaattagctagcgagctatctaatacttttggtgctatttccgcttctattggagacatcatacaacgtcttgatgttctcgaacaggacgcccaaatagacagacttattaatggccgtttgacaacactaaatgcttttgttgcacagcagcttgttcgttccgaatcagctgctctttccgctcaattggctaaagataaagtcaatgagtgtgtcaaggcacaatccaagcgttctggattttgcggtcaaggcacacatatagtgtcctttgttgtaaatgcccctaatggcctttacttcatgcatgttggttattaccctagcaaccacattgaggttgtttctgcttatggtctttgcgatgcagctaaccctactaattgtatagcccctgttaatggctactttattaaaactaataacactaggattgttgatgagtggtcatatactggctcgtccttctattcacctgagcccatcacctcccttaatactaagtatgttgcaccacaggtgacataccaaaacatttctactaacctccctcctcctcttctcggcaattccaccgggattgacttccaagatgagttggatgagtttttcaaaaatgttagcaccagtatacctaattttggttctctaacacagattaatactacattactcgatcttacctacgagatgttgtctcttcaacaagttgttaaagcccttaatgagtcttacatagaccttaaagagcttggcaattatacttattacaacaaatggccgtggtacatttggcttggttttattgctgggcttgttgccttagctctatgcgtcttcttcatactgtgctgcactggttgtggcacaaactgtatgggaaaacttaagtgtaatcgttgttgtgatagatacgaggaatacgacctcgagccgcataaggttcatgttcactaa</GBSeq_sequence>
+  </GBSeq>

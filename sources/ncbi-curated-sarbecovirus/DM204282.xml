@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<GBSeq>
+
+    <GBSeq_locus>DM204282</GBSeq_locus>
+    <GBSeq_length>918</GBSeq_length>
+    <GBSeq_strandedness>double</GBSeq_strandedness>
+    <GBSeq_moltype>DNA</GBSeq_moltype>
+    <GBSeq_topology>linear</GBSeq_topology>
+    <GBSeq_division>PAT</GBSeq_division>
+    <GBSeq_update-date>01-OCT-2009</GBSeq_update-date>
+    <GBSeq_create-date>01-OCT-2009</GBSeq_create-date>
+    <GBSeq_definition>A method for producing a virus protease</GBSeq_definition>
+    <GBSeq_primary-accession>DM204282</GBSeq_primary-accession>
+    <GBSeq_accession-version>DM204282.1</GBSeq_accession-version>
+    <GBSeq_other-seqids>
+      <GBSeqid>dbj|DM204282.1|</GBSeqid>
+      <GBSeqid>pat|JP|2009124993|1</GBSeqid>
+      <GBSeqid>gi|260225700</GBSeqid>
+    </GBSeq_other-seqids>
+    <GBSeq_keywords>
+      <GBKeyword>JP 2009124993-A/1</GBKeyword>
+    </GBSeq_keywords>
+    <GBSeq_source>Severe acute respiratory syndrome-related coronavirus</GBSeq_source>
+    <GBSeq_organism>Severe acute respiratory syndrome-related coronavirus</GBSeq_organism>
+    <GBSeq_taxonomy>Viruses; Riboviria; Nidovirales; Cornidovirineae; Coronaviridae; Orthocoronavirinae; Betacoronavirus; Sarbecovirus</GBSeq_taxonomy>
+    <GBSeq_references>
+      <GBReference>
+        <GBReference_reference>1</GBReference_reference>
+        <GBReference_position>1..918</GBReference_position>
+        <GBReference_authors>
+          <GBAuthor>Nishii,W.</GBAuthor>
+          <GBAuthor>Yokoyama,S.</GBAuthor>
+          <GBAuthor>Kim,L.</GBAuthor>
+          <GBAuthor>Muramatsu,T.</GBAuthor>
+        </GBReference_authors>
+        <GBReference_title>A method for producing a virus protease</GBReference_title>
+        <GBReference_journal>JP2009124993-A 1 11-JUN-2009 RIKEN</GBReference_journal>
+      </GBReference>
+    </GBSeq_references>
+    <GBSeq_comment>OS SARS coronavirus~PN JP 2009124993-A/1~PD 11-JUN-2009~PF 22-NOV-2007 JP 2007303242~PI wataru nishii,shigeyuki yokoyama,longtai kim,tomonari PI muramatsu~CC~FH Key Location/Qualifiers~FT CDS (1)..(918).</GBSeq_comment>
+    <GBSeq_feature-table>
+      <GBFeature>
+        <GBFeature_key>source</GBFeature_key>
+        <GBFeature_location>1..918</GBFeature_location>
+        <GBFeature_intervals>
+          <GBInterval>
+            <GBInterval_from>1</GBInterval_from>
+            <GBInterval_to>918</GBInterval_to>
+            <GBInterval_accession>DM204282.1</GBInterval_accession>
+          </GBInterval>
+        </GBFeature_intervals>
+        <GBFeature_quals>
+          <GBQualifier>
+            <GBQualifier_name>organism</GBQualifier_name>
+            <GBQualifier_value>Severe acute respiratory syndrome-related coronavirus</GBQualifier_value>
+          </GBQualifier>
+          <GBQualifier>
+            <GBQualifier_name>mol_type</GBQualifier_name>
+            <GBQualifier_value>unassigned DNA</GBQualifier_value>
+          </GBQualifier>
+          <GBQualifier>
+            <GBQualifier_name>db_xref</GBQualifier_name>
+            <GBQualifier_value>taxon:694009</GBQualifier_value>
+          </GBQualifier>
+        </GBFeature_quals>
+      </GBFeature>
+    </GBSeq_feature-table>
+    <GBSeq_sequence>agtggttttaggaaaatggcattcccgtcaggcaaagttgaagggtgcatggtacaagtaacctgtggaactacaactcttaatggattgtggttggatgacacagtatactgtccaagacatgtcatttgcacagcagaagacatgcttaatcctaactatgaagatctgctcattcgcaaatccaaccatagctttcttgttcaggctggcaatgttcaacttcgtgttattggccattctatgcaaaattgtctgcttaggcttaaagttgatacttctaaccctaagacacccaagtataaatttgtccgtatccaacctggtcaaacattttcagttctagcatgctacaatggttcaccatctggtgtttatcagtgtgccatgagacctaatcataccattaaaggttctttccttaatggatcatgtggtagtgttggttttaacattgattatgattgcgtgtctttctgctatatgcatcatatggagcttccaacaggagtacacgctggtactgacttagaaggtaaattctatggtccatttgttgacagacaaactgcacaggctgcaggtacagacacaaccataacattaaatgttttggcatggctgtatgctgctgttatcaatggtgataggtggtttcttaatagattcaccactactttgaatgactttaaccttgtggcaatgaagtacaactatgaacctttgacacaagatcatgttgacatattgggacctctttctgctcaaacaggaattgccgtcttagatatgtgtgctgctttgaaagagctgctgcagaatggtatgaatggtcgtactatccttggtagcactattttagaagatgagtttacaccatttgatgttgttagacaatgctctggtgttaccttccaa</GBSeq_sequence>
+  </GBSeq>

@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<GBSeq>
+
+    <GBSeq_locus>KP769415</GBSeq_locus>
+    <GBSeq_length>1242</GBSeq_length>
+    <GBSeq_strandedness>single</GBSeq_strandedness>
+    <GBSeq_moltype>RNA</GBSeq_moltype>
+    <GBSeq_topology>linear</GBSeq_topology>
+    <GBSeq_division>VRL</GBSeq_division>
+    <GBSeq_update-date>15-JUN-2015</GBSeq_update-date>
+    <GBSeq_create-date>15-JUN-2015</GBSeq_create-date>
+    <GBSeq_definition>Middle East respiratory syndrome coronavirus isolate MyH010414 nucleocapsid (N) gene, complete cds</GBSeq_definition>
+    <GBSeq_primary-accession>KP769415</GBSeq_primary-accession>
+    <GBSeq_accession-version>KP769415.1</GBSeq_accession-version>
+    <GBSeq_other-seqids>
+      <GBSeqid>gb|KP769415.1|</GBSeqid>
+      <GBSeqid>gi|829620334</GBSeqid>
+    </GBSeq_other-seqids>
+    <GBSeq_source>Middle East respiratory syndrome-related coronavirus (MERS-CoV)</GBSeq_source>
+    <GBSeq_organism>Middle East respiratory syndrome-related coronavirus</GBSeq_organism>
+    <GBSeq_taxonomy>Viruses; ssRNA viruses; ssRNA positive-strand viruses, no DNA stage; Nidovirales; Coronaviridae; Coronavirinae; Betacoronavirus</GBSeq_taxonomy>
+    <GBSeq_references>
+      <GBReference>
+        <GBReference_reference>1</GBReference_reference>
+        <GBReference_position>1..1242</GBReference_position>
+        <GBReference_authors>
+          <GBAuthor>Mat-Rahim,N.A.</GBAuthor>
+          <GBAuthor>Tengku Abdul Rashid,T.R.</GBAuthor>
+          <GBAuthor>Suppiah,J.</GBAuthor>
+          <GBAuthor>Thayan,R.</GBAuthor>
+          <GBAuthor>Yusof,M.A.</GBAuthor>
+          <GBAuthor>Sa'at,Z.</GBAuthor>
+        </GBReference_authors>
+        <GBReference_title>Nucleocapsid gene analysis from an imported case of Middle East respiratory syndrome coronavirus, Malaysia</GBReference_title>
+        <GBReference_journal>Asian Pac J Trop Dis 5 (7) (2015) In press</GBReference_journal>
+      </GBReference>
+      <GBReference>
+        <GBReference_reference>2</GBReference_reference>
+        <GBReference_position>1..1242</GBReference_position>
+        <GBReference_authors>
+          <GBAuthor>Mat-Rahim,N.A.</GBAuthor>
+          <GBAuthor>Tengku Abdul Rashid,T.R.</GBAuthor>
+          <GBAuthor>Suppiah,J.</GBAuthor>
+          <GBAuthor>Thayan,R.</GBAuthor>
+          <GBAuthor>Yusof,M.A.</GBAuthor>
+          <GBAuthor>Sa'at,Z.</GBAuthor>
+        </GBReference_authors>
+        <GBReference_title>Direct Submission</GBReference_title>
+        <GBReference_journal>Submitted (11-FEB-2015) Virology Unit, Institute for Medical Research, Jalan Pahang, Kuala Lumpur, Federal Territory 50588, Malaysia</GBReference_journal>
+      </GBReference>
+    </GBSeq_references>
+    <GBSeq_feature-table>
+      <GBFeature>
+        <GBFeature_key>source</GBFeature_key>
+        <GBFeature_location>1..1242</GBFeature_location>
+        <GBFeature_intervals>
+          <GBInterval>
+            <GBInterval_from>1</GBInterval_from>
+            <GBInterval_to>1242</GBInterval_to>
+            <GBInterval_accession>KP769415.1</GBInterval_accession>
+          </GBInterval>
+        </GBFeature_intervals>
+        <GBFeature_quals>
+          <GBQualifier>
+            <GBQualifier_name>organism</GBQualifier_name>
+            <GBQualifier_value>Middle East respiratory syndrome-related coronavirus</GBQualifier_value>
+          </GBQualifier>
+          <GBQualifier>
+            <GBQualifier_name>mol_type</GBQualifier_name>
+            <GBQualifier_value>genomic RNA</GBQualifier_value>
+          </GBQualifier>
+          <GBQualifier>
+            <GBQualifier_name>isolate</GBQualifier_name>
+            <GBQualifier_value>MyH010414</GBQualifier_value>
+          </GBQualifier>
+          <GBQualifier>
+            <GBQualifier_name>host</GBQualifier_name>
+            <GBQualifier_value>Homo sapiens</GBQualifier_value>
+          </GBQualifier>
+          <GBQualifier>
+            <GBQualifier_name>db_xref</GBQualifier_name>
+            <GBQualifier_value>taxon:1335626</GBQualifier_value>
+          </GBQualifier>
+          <GBQualifier>
+            <GBQualifier_name>country</GBQualifier_name>
+            <GBQualifier_value>Malaysia</GBQualifier_value>
+          </GBQualifier>
+          <GBQualifier>
+            <GBQualifier_name>collection_date</GBQualifier_name>
+            <GBQualifier_value>13-Apr-2014</GBQualifier_value>
+          </GBQualifier>
+        </GBFeature_quals>
+      </GBFeature>
+      <GBFeature>
+        <GBFeature_key>gene</GBFeature_key>
+        <GBFeature_location>1..1242</GBFeature_location>
+        <GBFeature_intervals>
+          <GBInterval>
+            <GBInterval_from>1</GBInterval_from>
+            <GBInterval_to>1242</GBInterval_to>
+            <GBInterval_accession>KP769415.1</GBInterval_accession>
+          </GBInterval>
+        </GBFeature_intervals>
+        <GBFeature_quals>
+          <GBQualifier>
+            <GBQualifier_name>gene</GBQualifier_name>
+            <GBQualifier_value>N</GBQualifier_value>
+          </GBQualifier>
+        </GBFeature_quals>
+      </GBFeature>
+      <GBFeature>
+        <GBFeature_key>CDS</GBFeature_key>
+        <GBFeature_location>1..1242</GBFeature_location>
+        <GBFeature_intervals>
+          <GBInterval>
+            <GBInterval_from>1</GBInterval_from>
+            <GBInterval_to>1242</GBInterval_to>
+            <GBInterval_accession>KP769415.1</GBInterval_accession>
+          </GBInterval>
+        </GBFeature_intervals>
+        <GBFeature_quals>
+          <GBQualifier>
+            <GBQualifier_name>gene</GBQualifier_name>
+            <GBQualifier_value>N</GBQualifier_value>
+          </GBQualifier>
+          <GBQualifier>
+            <GBQualifier_name>note</GBQualifier_name>
+            <GBQualifier_value>N protein</GBQualifier_value>
+          </GBQualifier>
+          <GBQualifier>
+            <GBQualifier_name>codon_start</GBQualifier_name>
+            <GBQualifier_value>1</GBQualifier_value>
+          </GBQualifier>
+          <GBQualifier>
+            <GBQualifier_name>transl_table</GBQualifier_name>
+            <GBQualifier_value>1</GBQualifier_value>
+          </GBQualifier>
+          <GBQualifier>
+            <GBQualifier_name>product</GBQualifier_name>
+            <GBQualifier_value>nucleocapsid</GBQualifier_value>
+          </GBQualifier>
+          <GBQualifier>
+            <GBQualifier_name>protein_id</GBQualifier_name>
+            <GBQualifier_value>AKL80590.1</GBQualifier_value>
+          </GBQualifier>
+          <GBQualifier>
+            <GBQualifier_name>translation</GBQualifier_name>
+            <GBQualifier_value>MASPAAPRAVSFADNNDITNTNLSRGRGRNPKPRAAPNNTVSWYTGLTQHGKVPLTFPPGQGVPLNANSTPAQNAGYWRRQDRKINTGNGIKQLAPRWYFYYTGTGPEAALPFRAVKDGIVWVHEHGATDAPSTFGTRNPNNDSAIVTQFAPGTKLPKNFHIEGTGGNSQSSSRASSVSRNSSRSSSQGSRSGNSTRGTSPGPSGIGAVGGDLLYLDLLNRLQALESGKVKQSQPKVITKKDAAAAKNKMRHKRTSTKSFNMVQAFGLRGPGDLQGNFGDLQLNKLGTEDPRWPQIAELAPTASAFMGMSQFKLTHQNNDDHGNPVYFLRYSGAIKLDPKNPNYNKWLELLEQNIDAYKTFPKKEKKQKAPKEESTDQMSEPPKEQRVQGSITQRTRTRPSVQPGPMIDVNTD</GBQualifier_value>
+          </GBQualifier>
+        </GBFeature_quals>
+      </GBFeature>
+    </GBSeq_feature-table>
+    <GBSeq_sequence>atggcatcccctgctgcacctcgtgctgtttcctttgccgataacaatgatataacaaatacaaacctgtctcgaggtagaggacgtaatccaaaaccacgagctgcaccaaataacactgtctcttggtacactgggcttacccaacacgggaaagtccctcttacctttccacctgggcagggtgtacctcttaatgccaattccaccccagcgcaaaatgctgggtattggcggagacaggacagaaaaattaataccgggaatggaattaagcaactggctcccaggtggtacttctactacactggaaccggacccgaagcagcactcccattccgggctgttaaggatggcatcgtttgggtccatgaacatggcgccactgatgctccttcaacttttgggacgcggaaccctaacaatgattcagctattgttacacaattcgcgcccggtactaagcttcctaaaaacttccacattgaggggactggaggcaatagtcaatcatcttcaagagcctctagcgtaagcagaaactcttccagatctagttcacaaggttcaagatcaggaaactctacccgcggcacttctccaggtccatctggaatcggagcagtaggaggtgatctactttaccttgatcttctgaacagactacaagcccttgagtctggcaaagtaaagcaatcgcagccaaaagtaatcactaagaaagatgctgctgctgctaaaaataagatgcgccacaagcgcacttccaccaaaagtttcaacatggtgcaagcttttggtcttcgcggaccaggagacctccagggaaactttggtgatcttcaattgaataaactcggcactgaggacccacgttggccccaaattgctgagcttgctcctacagccagtgcttttatgggtatgtcgcaatttaaacttacccatcagaacaatgatgatcatggcaaccctgtgtacttccttcggtacagtggagccattaaacttgacccaaagaatcccaactacaataagtggttggagcttcttgagcaaaatattgatgcctacaaaaccttccctaagaaggaaaagaaacaaaaggcaccaaaagaagaatcaacagaccaaatgtctgaacctcctaaggagcagcgtgtgcaaggtagcatcactcagcgcactcgcacccgtccaagtgttcagcctggtccaatgattgatgttaacactgattag</GBSeq_sequence>
+  </GBSeq>

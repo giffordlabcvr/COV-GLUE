@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<GBSeq>
+
+    <GBSeq_locus>JA177333</GBSeq_locus>
+    <GBSeq_length>666</GBSeq_length>
+    <GBSeq_strandedness>double</GBSeq_strandedness>
+    <GBSeq_moltype>DNA</GBSeq_moltype>
+    <GBSeq_topology>linear</GBSeq_topology>
+    <GBSeq_division>PAT</GBSeq_division>
+    <GBSeq_update-date>19-APR-2011</GBSeq_update-date>
+    <GBSeq_create-date>19-APR-2011</GBSeq_create-date>
+    <GBSeq_definition>Sequence 18 from Patent EP2295590</GBSeq_definition>
+    <GBSeq_primary-accession>JA177333</GBSeq_primary-accession>
+    <GBSeq_accession-version>JA177333.1</GBSeq_accession-version>
+    <GBSeq_other-seqids>
+      <GBSeqid>emb|JA177333.1|</GBSeqid>
+      <GBSeqid>pat|EP|2295590|18</GBSeqid>
+      <GBSeqid>gi|329625649</GBSeqid>
+    </GBSeq_other-seqids>
+    <GBSeq_source>Severe acute respiratory syndrome-related coronavirus</GBSeq_source>
+    <GBSeq_organism>Severe acute respiratory syndrome-related coronavirus</GBSeq_organism>
+    <GBSeq_taxonomy>Viruses; Riboviria; Nidovirales; Cornidovirineae; Coronaviridae; Orthocoronavirinae; Betacoronavirus; Sarbecovirus</GBSeq_taxonomy>
+    <GBSeq_references>
+      <GBReference>
+        <GBReference_reference>1</GBReference_reference>
+        <GBReference_position>1..666</GBReference_position>
+        <GBReference_authors>
+          <GBAuthor>ORTEGO,F.</GBAuthor>
+          <GBAuthor>ENJUANES SANCHES,L.</GBAuthor>
+          <GBAuthor>PLANA DURAN,J.</GBAuthor>
+          <GBAuthor>DOMINGO-SOLANS,E.</GBAuthor>
+          <GBAuthor>CERIANI,J.</GBAuthor>
+        </GBReference_authors>
+        <GBReference_title>Nucleic acid sequences encoding proteins capable of associating into a virus-like particle</GBReference_title>
+        <GBReference_journal>EP2295590-A1 18 16-MAR-2011 CONSEJO SUPERIOR INVESTIGACION [ES]; FORT DODGE VETERINARIA S A [ES]</GBReference_journal>
+      </GBReference>
+    </GBSeq_references>
+    <GBSeq_feature-table>
+      <GBFeature>
+        <GBFeature_key>source</GBFeature_key>
+        <GBFeature_location>1..666</GBFeature_location>
+        <GBFeature_intervals>
+          <GBInterval>
+            <GBInterval_from>1</GBInterval_from>
+            <GBInterval_to>666</GBInterval_to>
+            <GBInterval_accession>JA177333.1</GBInterval_accession>
+          </GBInterval>
+        </GBFeature_intervals>
+        <GBFeature_quals>
+          <GBQualifier>
+            <GBQualifier_name>organism</GBQualifier_name>
+            <GBQualifier_value>Severe acute respiratory syndrome-related coronavirus</GBQualifier_value>
+          </GBQualifier>
+          <GBQualifier>
+            <GBQualifier_name>mol_type</GBQualifier_name>
+            <GBQualifier_value>unassigned DNA</GBQualifier_value>
+          </GBQualifier>
+          <GBQualifier>
+            <GBQualifier_name>db_xref</GBQualifier_name>
+            <GBQualifier_value>taxon:694009</GBQualifier_value>
+          </GBQualifier>
+        </GBFeature_quals>
+      </GBFeature>
+    </GBSeq_feature-table>
+    <GBSeq_sequence>atggcagacaacggtactattaccgttgaggagcttaaacaactcctggaacaatggaacctagtaataggtttcctattcctagcctggattatgttactacaatttgcctattctaatcggaacaggtttttgtacataataaagcttgttttcctctggctcttgtggccagtaacacttgcttgttttgtgcttgctgctgtctacagaattaattgggtgactggcgggattgcgattgcaatggcttgtattgtaggcttgatgtggcttagctacttcgttgcttccttcaggctgtttgctcgtacccgctcaatgtggtcattcaacccagaaacaaacattcttctcaatgtgcctctccgggggacaattgtgaccagaccgctcatggaaagtgaacttgtcattggtgctgtgatcattcgtggtcacttgcgaatggccggacaccccctagggcgctgtgacattaaggacctgccaaaagagatcactgtggctacatcacgaacgctttcttattacaaattaggagcgtcgcagcgtgtaggcactgattcaggttttgctgcatacaaccgctaccgtattggaaactataaattaaatacagaccacgccggtagcaacgacaatattgctttgctagtacagtaa</GBSeq_sequence>
+  </GBSeq>

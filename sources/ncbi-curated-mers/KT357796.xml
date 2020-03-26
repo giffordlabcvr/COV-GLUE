@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<GBSeq>
+
+    <GBSeq_locus>KT357796</GBSeq_locus>
+    <GBSeq_length>1799</GBSeq_length>
+    <GBSeq_strandedness>single</GBSeq_strandedness>
+    <GBSeq_moltype>RNA</GBSeq_moltype>
+    <GBSeq_topology>linear</GBSeq_topology>
+    <GBSeq_division>VRL</GBSeq_division>
+    <GBSeq_update-date>12-APR-2016</GBSeq_update-date>
+    <GBSeq_create-date>12-APR-2016</GBSeq_create-date>
+    <GBSeq_definition>Middle East respiratory syndrome coronavirus isolate Riyadh_1104/KSA/2014 spike protein gene, partial cds</GBSeq_definition>
+    <GBSeq_primary-accession>KT357796</GBSeq_primary-accession>
+    <GBSeq_accession-version>KT357796.1</GBSeq_accession-version>
+    <GBSeq_other-seqids>
+      <GBSeqid>gb|KT357796.1|</GBSeqid>
+      <GBSeqid>gi|1016048689</GBSeqid>
+    </GBSeq_other-seqids>
+    <GBSeq_source>Middle East respiratory syndrome-related coronavirus (MERS-CoV)</GBSeq_source>
+    <GBSeq_organism>Middle East respiratory syndrome-related coronavirus</GBSeq_organism>
+    <GBSeq_taxonomy>Viruses; ssRNA viruses; ssRNA positive-strand viruses, no DNA stage; Nidovirales; Coronaviridae; Coronavirinae; Betacoronavirus</GBSeq_taxonomy>
+    <GBSeq_references>
+      <GBReference>
+        <GBReference_reference>1</GBReference_reference>
+        <GBReference_position>1..1799</GBReference_position>
+        <GBReference_authors>
+          <GBAuthor>Corman,V.M.</GBAuthor>
+          <GBAuthor>Albarrak,A.M.</GBAuthor>
+          <GBAuthor>Omrani,A.S.</GBAuthor>
+          <GBAuthor>Albarrak,M.M.</GBAuthor>
+          <GBAuthor>Farah,M.E.</GBAuthor>
+          <GBAuthor>Almasri,M.</GBAuthor>
+          <GBAuthor>Muth,D.</GBAuthor>
+          <GBAuthor>Sieberg,A.</GBAuthor>
+          <GBAuthor>Meyer,B.</GBAuthor>
+          <GBAuthor>Assiri,A.M.</GBAuthor>
+          <GBAuthor>Binger,T.</GBAuthor>
+          <GBAuthor>Steinhagen,K.</GBAuthor>
+          <GBAuthor>Lattwein,E.</GBAuthor>
+          <GBAuthor>Al-Tawfiq,J.</GBAuthor>
+          <GBAuthor>Muller,M.A.</GBAuthor>
+          <GBAuthor>Drosten,C.</GBAuthor>
+          <GBAuthor>Memish,Z.A.</GBAuthor>
+        </GBReference_authors>
+        <GBReference_title>Viral Shedding and Antibody Response in 37 Patients With Middle East Respiratory Syndrome Coronavirus Infection</GBReference_title>
+        <GBReference_journal>Clin. Infect. Dis. 62 (4), 477-483 (2016)</GBReference_journal>
+        <GBReference_xref>
+          <GBXref>
+            <GBXref_dbname>doi</GBXref_dbname>
+            <GBXref_id>10.1093/cid/civ951</GBXref_id>
+          </GBXref>
+        </GBReference_xref>
+        <GBReference_pubmed>26565003</GBReference_pubmed>
+      </GBReference>
+      <GBReference>
+        <GBReference_reference>2</GBReference_reference>
+        <GBReference_position>1..1799</GBReference_position>
+        <GBReference_authors>
+          <GBAuthor>Corman,V.M.</GBAuthor>
+          <GBAuthor>Memish,Z.A.</GBAuthor>
+          <GBAuthor>Drosten,C.</GBAuthor>
+        </GBReference_authors>
+        <GBReference_title>Direct Submission</GBReference_title>
+        <GBReference_journal>Submitted (30-JUL-2015) Institute of Virology, University of Bonn Medical Centre, Sigmund-Freud-Str. 25, Bonn 53127, Germany</GBReference_journal>
+      </GBReference>
+    </GBSeq_references>
+    <GBSeq_comment>##Assembly-Data-START## ; Assembly Method :: geneious v. 6 ; Sequencing Technology :: Sanger dideoxy sequencing; Illumina ; ##Assembly-Data-END##</GBSeq_comment>
+    <GBSeq_feature-table>
+      <GBFeature>
+        <GBFeature_key>source</GBFeature_key>
+        <GBFeature_location>1..1799</GBFeature_location>
+        <GBFeature_intervals>
+          <GBInterval>
+            <GBInterval_from>1</GBInterval_from>
+            <GBInterval_to>1799</GBInterval_to>
+            <GBInterval_accession>KT357796.1</GBInterval_accession>
+          </GBInterval>
+        </GBFeature_intervals>
+        <GBFeature_quals>
+          <GBQualifier>
+            <GBQualifier_name>organism</GBQualifier_name>
+            <GBQualifier_value>Middle East respiratory syndrome-related coronavirus</GBQualifier_value>
+          </GBQualifier>
+          <GBQualifier>
+            <GBQualifier_name>mol_type</GBQualifier_name>
+            <GBQualifier_value>genomic RNA</GBQualifier_value>
+          </GBQualifier>
+          <GBQualifier>
+            <GBQualifier_name>isolate</GBQualifier_name>
+            <GBQualifier_value>Riyadh_1104/KSA/2014</GBQualifier_value>
+          </GBQualifier>
+          <GBQualifier>
+            <GBQualifier_name>host</GBQualifier_name>
+            <GBQualifier_value>Homo sapiens</GBQualifier_value>
+          </GBQualifier>
+          <GBQualifier>
+            <GBQualifier_name>db_xref</GBQualifier_name>
+            <GBQualifier_value>taxon:1335626</GBQualifier_value>
+          </GBQualifier>
+          <GBQualifier>
+            <GBQualifier_name>country</GBQualifier_name>
+            <GBQualifier_value>Saudi Arabia</GBQualifier_value>
+          </GBQualifier>
+          <GBQualifier>
+            <GBQualifier_name>collection_date</GBQualifier_name>
+            <GBQualifier_value>2014</GBQualifier_value>
+          </GBQualifier>
+        </GBFeature_quals>
+      </GBFeature>
+      <GBFeature>
+        <GBFeature_key>CDS</GBFeature_key>
+        <GBFeature_location>&lt;1..&gt;1799</GBFeature_location>
+        <GBFeature_intervals>
+          <GBInterval>
+            <GBInterval_from>1</GBInterval_from>
+            <GBInterval_to>1799</GBInterval_to>
+            <GBInterval_accession>KT357796.1</GBInterval_accession>
+          </GBInterval>
+        </GBFeature_intervals>
+        <GBFeature_partial5 value="true"/>
+        <GBFeature_partial3 value="true"/>
+        <GBFeature_quals>
+          <GBQualifier>
+            <GBQualifier_name>codon_start</GBQualifier_name>
+            <GBQualifier_value>3</GBQualifier_value>
+          </GBQualifier>
+          <GBQualifier>
+            <GBQualifier_name>transl_table</GBQualifier_name>
+            <GBQualifier_value>1</GBQualifier_value>
+          </GBQualifier>
+          <GBQualifier>
+            <GBQualifier_name>product</GBQualifier_name>
+            <GBQualifier_value>spike protein</GBQualifier_value>
+          </GBQualifier>
+          <GBQualifier>
+            <GBQualifier_name>protein_id</GBQualifier_name>
+            <GBQualifier_value>AMW90838.1</GBQualifier_value>
+          </GBQualifier>
+          <GBQualifier>
+            <GBQualifier_name>translation</GBQualifier_name>
+            <GBQualifier_value>YNITEDEILEWFGITQTAQGVHLFSSRYVDLYGGNMFQFATLPVYDTIKYYSIIPHSIRSIQSDRKAWAAFYVYKLQPLTFLLDFSVDGYIRRAIDCGFNDLSQLHCSYESFDVESGVYSVSSFEAKPSGSVVEQAEGVECDFSPLLSGTPPQVYNFKRLVFTNCNYNFTKLLSLFSVNDFTCSQISPAAIASNCYSSLILDYFSYPLSMKSDLSVSSAGPISQFNYKQSFSNPTCLILATVPHNLTTITKPLKYSYINKCSRLLSDDRTEVPQLVNANQYSPCVSIVPSTVWEDGDYYRKQLSPLEGGGWLVASGSTVAMTEQLQMGFGITVQYGTDTNSVCPKLEFANDTKIASQLGNCVEYSLYGVSGRGVFQNCTAVGVRQQRFVYDAYQNLVGYYSDDGNYYCLRACVSVPVSVIYDKETKTHATLFGSVACEHISSTMSQYSRSTRSMLKRRDSTYGPLQTPVGCVLGLVNSSLFVEDCKLPLGQSLCALPDTPSTLTPRSVRSVPGEMRLASIAFNHPIQVDQLNSSYFKLSIPTNFSFGVTQEYIQTTIQKVTVDCKQYVCNGFQKCEQLLREYGQFCSKINQALHGANLR</GBQualifier_value>
+          </GBQualifier>
+        </GBFeature_quals>
+      </GBFeature>
+    </GBSeq_feature-table>
+    <GBSeq_sequence>cttataacattaccgaagatgagattttagagtggtttggcattacacaaactgctcaaggtgttcacctcttctcatctcggtatgttgatttgtacggcggcaatatgtttcaatttgccaccttgcctgtttatgatactattaagtattactctatcattcctcacagtattcgttctatccaaagtgatagaaaagcttgggctgccttctacgtatataaacttcaaccgttaactttcctgttggatttttctgttgatggttatatacgcagagctatagactgtggttttaatgatttgtcacaactccactgctcatatgaatccttcgatgttgaatctggagtttattcagtttcgtctttcgaagcaaaaccttctggctcagttgtggaacaggctgaaggtgttgaatgtgatttttcacctcttctgtctggcacacctcctcaggtttataatttcaagcgtttggtttttaccaattgcaattataattttaccaaattgctttcacttttttctgtgaatgattttacttgtagtcaaatatctccagcagcaattgctagcaactgttattcttcactgattttggattacttttcatacccacttagtatgaaatccgatctcagtgttagttctgctggtccaatatcccagtttaattataaacagtccttttctaatcccacatgtttgattttagcgactgttcctcataaccttactactattactaagcctcttaagtacagctatattaacaagtgctctcgtcttctttctgatgatcgtactgaagtacctcagttagtgaacgctaatcaatactcaccctgtgtatccattgtcccatccactgtgtgggaagacggtgattattataggaaacaactatctccacttgaaggtggtggctggcttgttgctagtggctcaactgttgccatgactgagcaattacagatgggctttggtattacagttcaatatggtacagacaccaatagtgtttgccccaagcttgaatttgctaatgacacaaaaattgcctctcaattaggcaattgcgtggaatattccctctatggtgtttcgggccgtggtgtttttcagaattgcacagctgtaggtgttcgacagcagcgctttgtttatgatgcgtaccagaatttagttggctattattctgatgatggcaactactactgtttgcgtgcttgtgttagtgttcctgtttctgtcatctatgataaagaaactaaaacccacgctactctatttggtagtgttgcatgtgaacacatttcttctaccatgtctcaatactcccgttctacgcgatcaatgcttaaacggcgagattctacatatggcccccttcagacacctgttggttgtgtcctaggacttgttaattcctctttgttcgtagaggactgcaagttgcctctcggtcaatctctctgtgctcttcctgacacacctagtactctcacacctcgcagtgtgcgctctgttccaggtgaaatgcgcttggcatccattgcttttaatcatcccattcaggttgatcaacttaatagtagttattttaaattaagtatacccactaatttttcctttggtgtgactcaggagtacattcagacaaccattcagaaagttactgttgattgtaaacagtacgtttgcaatggtttccagaagtgtgagcaattactgcgcgagtatggccagttttgttccaaaataaaccaggctctccatggtgccaatttacgc</GBSeq_sequence>
+  </GBSeq>

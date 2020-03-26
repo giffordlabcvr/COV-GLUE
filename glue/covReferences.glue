@@ -1,0 +1,9 @@
+delete reference REF_HKU1
+delete reference REF_SARS
+delete reference REF_MERS
+delete reference REF_Hibeco
+
+create reference REF_HKU1 ncbi-refseq-betacorona NC_006577
+create reference REF_MERS ncbi-refseq-betacorona NC_019843
+create reference REF_SARS ncbi-refseq-betacorona NC_004718
+create reference REF_Hibeco ncbi-refseq-betacorona NC_025217

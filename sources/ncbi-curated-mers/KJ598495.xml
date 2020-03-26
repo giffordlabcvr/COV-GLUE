@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<GBSeq>
+
+    <GBSeq_locus>KJ598495</GBSeq_locus>
+    <GBSeq_length>605</GBSeq_length>
+    <GBSeq_strandedness>single</GBSeq_strandedness>
+    <GBSeq_moltype>RNA</GBSeq_moltype>
+    <GBSeq_topology>linear</GBSeq_topology>
+    <GBSeq_division>VRL</GBSeq_division>
+    <GBSeq_update-date>01-MAY-2014</GBSeq_update-date>
+    <GBSeq_create-date>01-MAY-2014</GBSeq_create-date>
+    <GBSeq_definition>Middle East respiratory syndrome coronavirus isolate Qatar_1_2013-2 ORF1a gene, partial cds</GBSeq_definition>
+    <GBSeq_primary-accession>KJ598495</GBSeq_primary-accession>
+    <GBSeq_accession-version>KJ598495.1</GBSeq_accession-version>
+    <GBSeq_other-seqids>
+      <GBSeqid>gb|KJ598495.1|</GBSeqid>
+      <GBSeqid>gi|615796075</GBSeqid>
+    </GBSeq_other-seqids>
+    <GBSeq_source>Middle East respiratory syndrome-related coronavirus (MERS-CoV)</GBSeq_source>
+    <GBSeq_organism>Middle East respiratory syndrome-related coronavirus</GBSeq_organism>
+    <GBSeq_taxonomy>Viruses; ssRNA viruses; ssRNA positive-strand viruses, no DNA stage; Nidovirales; Coronaviridae; Coronavirinae; Betacoronavirus</GBSeq_taxonomy>
+    <GBSeq_references>
+      <GBReference>
+        <GBReference_reference>1</GBReference_reference>
+        <GBReference_position>1..605</GBReference_position>
+        <GBReference_authors>
+          <GBAuthor>Nowotny,N.</GBAuthor>
+          <GBAuthor>Kolodziejek,J.</GBAuthor>
+        </GBReference_authors>
+        <GBReference_title>Middle East respiratory syndrome coronavirus (MERS-CoV) in dromedary camels, Oman, 2013</GBReference_title>
+        <GBReference_journal>Euro Surveill. 19 (16) (2014)</GBReference_journal>
+        <GBReference_pubmed>24786259</GBReference_pubmed>
+        <GBReference_remark>Publication Status: Online-Only</GBReference_remark>
+      </GBReference>
+      <GBReference>
+        <GBReference_reference>2</GBReference_reference>
+        <GBReference_position>1..605</GBReference_position>
+        <GBReference_authors>
+          <GBAuthor>Stalin Raj,V.</GBAuthor>
+          <GBAuthor>Farag,E.A.B.A.</GBAuthor>
+          <GBAuthor>Lamers,M.M.</GBAuthor>
+          <GBAuthor>Reusken,C.B.E.M.</GBAuthor>
+          <GBAuthor>AlHajri,M.M.</GBAuthor>
+          <GBAuthor>Koopmans,M.P.G.</GBAuthor>
+          <GBAuthor>Haagmans,B.L.</GBAuthor>
+        </GBReference_authors>
+        <GBReference_title>Isolation and characterization of MERS-CoV from dromedary camels in Qatar</GBReference_title>
+        <GBReference_journal>Unpublished</GBReference_journal>
+      </GBReference>
+      <GBReference>
+        <GBReference_reference>3</GBReference_reference>
+        <GBReference_position>1..605</GBReference_position>
+        <GBReference_authors>
+          <GBAuthor>Stalin Raj,V.</GBAuthor>
+          <GBAuthor>Lamers,M.M.</GBAuthor>
+          <GBAuthor>Al Dhahiry,S.H.S.</GBAuthor>
+          <GBAuthor>Reusken,C.B.E.M.</GBAuthor>
+          <GBAuthor>AlHajri,M.M.</GBAuthor>
+          <GBAuthor>Koopmans,M.P.G.</GBAuthor>
+          <GBAuthor>Haagmans,B.L.</GBAuthor>
+        </GBReference_authors>
+        <GBReference_title>Direct Submission</GBReference_title>
+        <GBReference_journal>Submitted (20-MAR-2014) Department of Viroscience, Erasmus Medical Center, Dr.Molenwaterplein 50, Rotterdam 3000CA, Netherlands</GBReference_journal>
+      </GBReference>
+    </GBSeq_references>
+    <GBSeq_comment>##Assembly-Data-START## ; Assembly Method :: CLC Bio v. 5.1 ; Sequencing Technology :: Sanger dideoxy sequencing ; ##Assembly-Data-END##</GBSeq_comment>
+    <GBSeq_feature-table>
+      <GBFeature>
+        <GBFeature_key>source</GBFeature_key>
+        <GBFeature_location>1..605</GBFeature_location>
+        <GBFeature_intervals>
+          <GBInterval>
+            <GBInterval_from>1</GBInterval_from>
+            <GBInterval_to>605</GBInterval_to>
+            <GBInterval_accession>KJ598495.1</GBInterval_accession>
+          </GBInterval>
+        </GBFeature_intervals>
+        <GBFeature_quals>
+          <GBQualifier>
+            <GBQualifier_name>organism</GBQualifier_name>
+            <GBQualifier_value>Middle East respiratory syndrome-related coronavirus</GBQualifier_value>
+          </GBQualifier>
+          <GBQualifier>
+            <GBQualifier_name>mol_type</GBQualifier_name>
+            <GBQualifier_value>genomic RNA</GBQualifier_value>
+          </GBQualifier>
+          <GBQualifier>
+            <GBQualifier_name>isolate</GBQualifier_name>
+            <GBQualifier_value>Qatar_1_2013-2</GBQualifier_value>
+          </GBQualifier>
+          <GBQualifier>
+            <GBQualifier_name>host</GBQualifier_name>
+            <GBQualifier_value>Camelus dromedarius</GBQualifier_value>
+          </GBQualifier>
+          <GBQualifier>
+            <GBQualifier_name>db_xref</GBQualifier_name>
+            <GBQualifier_value>taxon:1335626</GBQualifier_value>
+          </GBQualifier>
+          <GBQualifier>
+            <GBQualifier_name>country</GBQualifier_name>
+            <GBQualifier_value>Qatar</GBQualifier_value>
+          </GBQualifier>
+          <GBQualifier>
+            <GBQualifier_name>collection_date</GBQualifier_name>
+            <GBQualifier_value>17-Oct-2013</GBQualifier_value>
+          </GBQualifier>
+        </GBFeature_quals>
+      </GBFeature>
+      <GBFeature>
+        <GBFeature_key>CDS</GBFeature_key>
+        <GBFeature_location>&lt;1..&gt;605</GBFeature_location>
+        <GBFeature_intervals>
+          <GBInterval>
+            <GBInterval_from>1</GBInterval_from>
+            <GBInterval_to>605</GBInterval_to>
+            <GBInterval_accession>KJ598495.1</GBInterval_accession>
+          </GBInterval>
+        </GBFeature_intervals>
+        <GBFeature_partial5 value="true"/>
+        <GBFeature_partial3 value="true"/>
+        <GBFeature_quals>
+          <GBQualifier>
+            <GBQualifier_name>codon_start</GBQualifier_name>
+            <GBQualifier_value>1</GBQualifier_value>
+          </GBQualifier>
+          <GBQualifier>
+            <GBQualifier_name>transl_table</GBQualifier_name>
+            <GBQualifier_value>1</GBQualifier_value>
+          </GBQualifier>
+          <GBQualifier>
+            <GBQualifier_name>product</GBQualifier_name>
+            <GBQualifier_value>ORF1a</GBQualifier_value>
+          </GBQualifier>
+          <GBQualifier>
+            <GBQualifier_name>protein_id</GBQualifier_name>
+            <GBQualifier_value>AHX71942.1</GBQualifier_value>
+          </GBQualifier>
+          <GBQualifier>
+            <GBQualifier_name>translation</GBQualifier_name>
+            <GBQualifier_value>VFVTTLTSDYTITVFVTVNLAKVCTYAIFAYSPQLTLVFPEVKMILLLYTCLGFMCTCYFGVFSLLNLKLRAPMGVYDFKVSTQEFRFMTANNLTAPRNSWEAMALNFKLIGIGGTPCIKVAAMQSKLTDLKCTSVVLLSVLQQLHLEANSRAWAFCVKCHNDILAATDPSEAFEKFVSLFATLMTFSGNVDLDALASDIF</GBQualifier_value>
+          </GBQualifier>
+        </GBFeature_quals>
+      </GBFeature>
+    </GBSeq_feature-table>
+    <GBSeq_sequence>gtttttgtcactacactcactagtgattatacgattacagtctttgttactgtcaaccttgcaaaagtttgcacttatgccatctttgcttactcaccacagcttacacttgtgtttccggaagtgaagatgatacttttattatacacatgtttaggtttcatgtgtacttgctattttggtgtcttctctcttttgaaccttaagcttagagcacctatgggtgtctatgactttaaggtctcaacacaagagttcagattcatgactgctaacaatctaactgcacctagaaattcttgggaggctatggctctgaactttaagttaataggtattggcggtacaccttgtataaaggttgctgctatgcagtctaaacttacagatcttaaatgcacatctgtggttctcctctctgtgctccaacagttacacttagaggctaatagtagggcctgggctttctgtgttaaatgccataatgatatattggcagcaacagaccccagtgaggctttcgagaaattcgtaagtctctttgccactttaatgactttttctggtaatgtagatcttgatgcgttagctagtgatatttttga</GBSeq_sequence>
+  </GBSeq>
