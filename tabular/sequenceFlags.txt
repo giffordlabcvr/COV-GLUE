@@ -1,4 +1,4 @@
-source.name	sequenceID	include_in_ref_tree	ref_tree_candidate	analyse_aa_replacements	analyse_aa_deletions	analyse_aa_insertions	cdhit_cluster	is_l_lineage
+source.name	sequenceID	include_in_ref_tree	ref_tree_candidate	analyse_variation	analyse_aa_deletions	analyse_aa_insertions	cdhit_cluster	is_l_lineage
 cov-gisaid	EPI_ISL_402119	true	true	true	true	true	0	true
 cov-gisaid	EPI_ISL_402120	false	true	true	true	true	0	-
 cov-gisaid	EPI_ISL_402121	false	true	true	true	true	0	-
