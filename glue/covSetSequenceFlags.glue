@@ -16,7 +16,7 @@
   multi-set field sequence -w "sequenceID in ('EPI_ISL_406592', 'EPI_ISL_406595')" ref_tree_candidate false
 
   # exclude sequences with "warn" status on GISAID, this implies quality issues, usually multiple or long runs of NNNs
-  multi-set field sequence -w "status_code = 'warn'" ref_tree_candidate false
+  multi-set field sequence -w "gisaid_status_code = 'warn'" ref_tree_candidate false
 
   # exclude USA/WA-UW65/2020 following nextstrain. On a long branch on its own, with lots of unique mutations.
   # need to revisit these / automate error detection
