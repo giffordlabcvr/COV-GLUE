@@ -1,4 +1,10 @@
 Accession ID	Passage details/history	Submission Date	Status code	Status comment	Host
+EPI_ISL_417924	Original	2020-03-27	normal	Stretches of NNNs (3.29% of overall sequence).	Human
+EPI_ISL_417921	Original	2020-03-27	normal		Human
+EPI_ISL_417922	Original	2020-03-27	normal		Human
+EPI_ISL_417923	Original	2020-03-27	normal		Human
+EPI_ISL_417918	Original	2020-03-27	normal		Human
+EPI_ISL_417917	Orignal	2020-03-27	normal		Human
 EPI_ISL_417880	Vero E6, 1st passage	2020-03-27	info	Gap of 3 nucleotides when compared to the reference sequence.	Human
 EPI_ISL_417879	Vero E6, 1st passage	2020-03-27	normal		Human
 EPI_ISL_417186	Original	2020-03-24	normal		Human
