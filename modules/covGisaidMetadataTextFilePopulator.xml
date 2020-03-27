@@ -77,7 +77,7 @@
     </textFileColumn>
     <textFileColumn>
         <header>Status code</header>
-        <property>status_code</property>
+        <property>gisaid_status_code</property>
     </textFileColumn>
     <textFileColumn>
         <header>Status comment</header>
