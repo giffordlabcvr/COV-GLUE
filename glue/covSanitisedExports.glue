@@ -1,0 +1,10 @@
+run script glue/covSanitisedMetadata.js
+
+module covSanitisedFastaExporter
+  export -a -f covGlueSanitisedSequences.fasta
+  exit
+  
+module covSanitisedFastaAlignmentExporter
+  export AL_GISAID_CONSTRAINED -a -o covGlueSanitisedAlignmentWholeGenome.fasta
+  export AL_GISAID_CONSTRAINED -r REF_MASTER_WUHAN_HU_1 -f coding_spanning_region -a -o covGlueSanitisedAlignmentCodingSpanningRegion.fasta
+  exit

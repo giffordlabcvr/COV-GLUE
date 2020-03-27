@@ -22,6 +22,6 @@ module covPhyloImporter
   exit
 
 module covFigtreeNexusExporter
-  export tree AL_GISAID_CONSTRAINED -f trees/displayTree.nexus
+  export tree AL_GISAID_CONSTRAINED -f trees/covGlueReferenceFigTree.nexus
   exit
   
