@@ -157,4 +157,9 @@ reference REF_MASTER_WUHAN_HU_1
     add segment 29558 29674
     exit
     
+  add feature-location coding_spanning_region
+  feature-location coding_spanning_region
+    add segment 266 29674
+    exit
+    
   exit 

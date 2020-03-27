@@ -6,6 +6,13 @@ feature whole_genome set metatag INFORMATIONAL true
 create feature 5UTR -p whole_genome "5' untranslated region"
 feature 5UTR set field displayName "5' UTR"
 
+# This is a nucleotide region spanning from the first nt of the
+# first coding region (ORF_1a) to the last nt of the last coding region (ORF_10).
+# It's for convenience really, to filter out the ends of the genome that are often
+# poorly sequenced or full of errors.
+create feature coding_spanning_region -p whole_genome "Coding-spanning region"
+feature coding_spanning_region set field displayName "Coding-spanning region"
+
 create feature ORF_1a -p whole_genome
 feature ORF_1a
   set field displayName "ORF 1a"
