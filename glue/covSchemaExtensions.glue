@@ -22,20 +22,20 @@ schema-project cov
   table sequence
     create field length INTEGER
     create field isolate VARCHAR
-    create field passage_details VARCHAR
+    create field gisaid_passage_details VARCHAR
     create field collection_year INTEGER 
     create field collection_month VARCHAR
     create field collection_month_day INTEGER
     create field submission_year INTEGER 
     create field submission_month VARCHAR
     create field submission_month_day INTEGER
-    create field status_code VARCHAR
-    create field status_comment VARCHAR 300
+    create field gisaid_status_code VARCHAR
+    create field gisaid_status_comment VARCHAR 300
     create field host_species VARCHAR 100
     create field place_sampled VARCHAR 100
-    create field originating_lab VARCHAR 300
-    create field submitting_lab VARCHAR 300
-    create field authors CLOB
+    create field gisaid_originating_lab VARCHAR 300
+    create field gisaid_submitting_lab VARCHAR 300
+    create field gisaid_authors CLOB
     create field ref_tree_candidate BOOLEAN
     create field include_in_ref_tree BOOLEAN
     create field is_l_lineage BOOLEAN

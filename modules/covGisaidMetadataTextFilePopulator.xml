@@ -8,7 +8,7 @@
     </textFileColumn>
     <textFileColumn>
         <header>Passage details/history</header>
-        <property>passage_details</property>
+        <property>gisaid_passage_details</property>
     </textFileColumn>
     <textFileColumn>
         <header>Submission Date</header>
@@ -81,7 +81,7 @@
     </textFileColumn>
     <textFileColumn>
         <header>Status comment</header>
-        <property>status_comment</property>
+        <property>gisaid_status_comment</property>
     </textFileColumn>
     <textFileColumn>
         <header>Host</header>

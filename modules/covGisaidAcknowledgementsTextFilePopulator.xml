@@ -107,15 +107,15 @@
     </textFileColumn>
     <textFileColumn>
         <header>Originating lab</header>
-        <property>originating_lab</property>
+        <property>gisaid_originating_lab</property>
     </textFileColumn>
     <textFileColumn>
         <header>Submitting lab</header>
-        <property>submitting_lab</property>
+        <property>gisaid_submitting_lab</property>
     </textFileColumn>
     <textFileColumn>
         <header>Authors</header>
-        <property>authors</property>
+        <property>gisaid_authors</property>
     </textFileColumn>
     <skipMissing>true</skipMissing>
 </textFilePopulator>
