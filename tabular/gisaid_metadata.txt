@@ -1,4 +1,40 @@
 Accession ID	Passage details/history	Submission Date	Status code	Status comment	Host
+EPI_ISL_417525	LLC-MK2	2020-03-27	normal		Human
+EPI_ISL_417487	Original	2020-03-26	normal		Human
+EPI_ISL_417514	Original	2020-03-27	normal		Human
+EPI_ISL_417515	Original	2020-03-27	normal		Human
+EPI_ISL_417517	Original	2020-03-27	normal		Human
+EPI_ISL_417513	Original	2020-03-27	normal		Human
+EPI_ISL_417516	Original	2020-03-27	normal		Human
+EPI_ISL_417504	Original	2020-03-26	normal		Human
+EPI_ISL_417512	Original	2020-03-27	normal		Human
+EPI_ISL_417505	Original	2020-03-26	normal		Human
+EPI_ISL_417503	Original	2020-03-26	normal		Human
+EPI_ISL_417502	Original	2020-03-26	normal		Human
+EPI_ISL_417490	Original	2020-03-26	normal	Stretches of NNNs (1.47% of overall sequence).	Human
+EPI_ISL_417510	Original	2020-03-27	normal		Human
+EPI_ISL_417489	Original	2020-03-26	normal	Stretches of NNNs (1.05% of overall sequence).	Human
+EPI_ISL_417501	Original	2020-03-26	normal		Human
+EPI_ISL_417500	Original	2020-03-26	normal		Human
+EPI_ISL_417499	Original	2020-03-26	normal		Human
+EPI_ISL_417488	Original	2020-03-26	normal		Human
+EPI_ISL_417509	Original	2020-03-27	normal		Human
+EPI_ISL_417508	Original	2020-03-27	normal		Human
+EPI_ISL_417498	Original	2020-03-26	normal		Human
+EPI_ISL_417497	Original	2020-03-26	normal		Human
+EPI_ISL_417496	Original	2020-03-26	info	Insertion of 1 nucleotide when compared to the reference sequence.	Human
+EPI_ISL_417507	Original	2020-03-27	normal		Human
+EPI_ISL_417495	Original	2020-03-26	normal		Human
+EPI_ISL_417494	Original	2020-03-26	info	Insertion of 1 nucleotide when compared to the reference sequence.	Human
+EPI_ISL_417493	Original	2020-03-26	normal		Human
+EPI_ISL_417492	Original	2020-03-26	normal		Human
+EPI_ISL_417486	Original	2020-03-26	normal		Human
+EPI_ISL_417485	Original	2020-03-26	normal		Human
+EPI_ISL_417482	Original	2020-03-26	normal	Stretches of NNNs (4.14% of overall sequence).	Human
+EPI_ISL_417506	Original	2020-03-27	normal		Human
+EPI_ISL_417484	Original	2020-03-26	normal		Human
+EPI_ISL_417483	Original	2020-03-26	normal		Human
+EPI_ISL_417491	Vero E6	2020-03-26	normal		Human
 EPI_ISL_417481	Original	2020-03-26	normal		Human
 EPI_ISL_417480	Original	2020-03-26	normal		Human
 EPI_ISL_417479	Original	2020-03-26	normal		Human
@@ -1341,9 +1377,9 @@ EPI_ISL_414425	Original	2020-03-12	normal		Human
 EPI_ISL_414424	Original	2020-03-12	normal		Human
 EPI_ISL_414423	Original	2020-03-12	normal		Human
 EPI_ISL_414414	Original	2020-03-12	normal		Human
-EPI_ISL_414380	Vero P1	2020-03-12	normal	Long 382bp deletion in ORF8 confirmed with PCR, Sanger and repeat with new NGS library. 0.15% Unique Mutations.	Human
-EPI_ISL_414379	Vero P1	2020-03-12	normal	Long 382bp deletion in ORF8 confirmed with PCR, Sanger and repeat with new NGS library. 0.16% Unique Mutations.	Human
-EPI_ISL_414378	Vero P1	2020-03-12	normal	Long 382bp deletion in ORF8 confirmed with PCR, Sanger and repeat with new NGS library. 0.18% Unique Mutations.	Human
+EPI_ISL_414380	Vero P1	2020-03-12	info	Long 382bp deletion in ORF8 confirmed with PCR, Sanger and repeat with new NGS library. NS8 is missing.	Human
+EPI_ISL_414379	Vero P1	2020-03-12	info	Long 382bp deletion in ORF8 confirmed with PCR, Sanger and repeat with new NGS library. NS8 is missing.	Human
+EPI_ISL_414378	Vero P1	2020-03-12	info	Long 382bp deletion in ORF8 confirmed with PCR, Sanger and repeat with new NGS library. NS8 is missing.	Human
 EPI_ISL_414375	Original	2020-03-12	normal		Human
 EPI_ISL_413219	Original	2020-03-04	normal		Human
 EPI_ISL_414374	Original	2020-03-11	normal		Human
