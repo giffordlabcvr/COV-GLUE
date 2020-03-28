@@ -1,4 +1,5 @@
 Accession ID	Passage details/history	Submission Date	Status code	Status comment	Host
+EPI_ISL_417920	Original	2020-03-27	normal	%UniqueMutations 0.14%.	Human
 EPI_ISL_418168	Original	2020-03-28	normal		Human
 EPI_ISL_418167	Original	2020-03-28	normal		Human
 EPI_ISL_418166	Original	2020-03-28	normal		Human
