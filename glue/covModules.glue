@@ -42,6 +42,8 @@ create module --fileName modules/covFastaProteinAlignmentExporter.xml
 create module --fileName modules/covFastaProteinAlignmentExporterSeqIdOnly.xml
 create module --fileName modules/covFastaExporter.xml
 create module --fileName modules/covFastaAlignmentExporterSeqIdOnly.xml
+create module --fileName modules/covSanitisedFastaAlignmentExporter.xml
+create module --fileName modules/covSanitisedFastaExporter.xml
 
 create module --fileName modules/covReplacementRenderer.xml --loadResources
 create module --fileName modules/covListReplacementsRenderer.xml --loadResources

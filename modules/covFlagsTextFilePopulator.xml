@@ -22,18 +22,8 @@
         <nullRegex>-</nullRegex>
     </textFileColumn>
     <textFileColumn>
-        <header>analyse_aa_replacements</header>
-        <property>analyse_aa_replacements</property>
-        <nullRegex>-</nullRegex>
-    </textFileColumn>
-    <textFileColumn>
-        <header>analyse_aa_deletions</header>
-        <property>analyse_aa_deletions</property>
-        <nullRegex>-</nullRegex>
-    </textFileColumn>
-    <textFileColumn>
-        <header>analyse_aa_insertions</header>
-        <property>analyse_aa_insertions</property>
+        <header>analyse_variation</header>
+        <property>analyse_variation</property>
         <nullRegex>-</nullRegex>
     </textFileColumn>
     <textFileColumn>

@@ -26,4 +26,6 @@ project cov
   # tuning the CD-HIT step.
   run file glue/covTreeAndFlags.glue
   
+  run file glue/covSanitisedExports.glue
+  
   exit

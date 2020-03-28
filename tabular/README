@@ -1,0 +1,85 @@
+# This directory contains regular updates of sequence data produced by
+# CoV-GLUE. Not all data is in the public domain, so please do not redistribute
+# outside of COGUK / CVR
+
+###############################################
+# Data direct from GISAID (http://gisaid.org) #
+###############################################
+
+# All GISAID CoV sequences as FASTA. WARNING: contains FASTA format errors. 
+gisaid_cov2020_sequences.fasta
+
+# The GISAID acknowledgement spreadsheet as tab-delimited text
+gisaid_cov2020_acknowledgement_table.txt
+
+# Additional GISAID metadata scraped from the web
+gisaid_metadata.txt
+
+# When the last automatic update began
+gisaidTimeStamp.txt
+
+#######################################
+# Sanitised data produced by CoV-GLUE #
+#######################################
+
+# All sequences as FASTA with simplified IDs and format errors corrected
+covGlueSanitisedSequences.fasta
+
+# As above but in a "constrained" alignment with reference Wuhan-Hu-1
+# i.e. columns arising from insertions are absent 
+covGlueSanitisedAlignmentWholeGenome.fasta
+
+# Similar constrained alignment but limited to the region from the
+# first nt of the first coding region (ORF 1a) to the last nt of the
+# last coding region (ORF 10)
+covGlueSanitisedAlignmentCodingSpanningRegion.fasta
+
+# The CoV-GLUE "global reference tree", as a FigTree file with 
+# integrated metadata http://cov-glue.cvr.gla.ac.uk/#/globalRefTree
+covGlueReferenceFigTree.nexus
+
+# A merge of all the metadata, with additional derived data, sequence
+# statistics and flags produced by CoV-GLUE
+covGlueSanitisedMetadata.txt
+
+# List of the fields in the sanitised metadata with comments where necessary
+source.name 
+sequenceID 
+length 
+# isolate == "virus name" in GISAID
+isolate
+host_species
+collection_year
+collection_month
+collection_month_day
+submission_year
+submission_month
+submission_month_day
+place_sampled
+m49_country.display_name
+m49_country.m49_sub_region.display_name
+m49_country.m49_region.display_name
+gisaid_passage_details
+# GISAID QC mechanism: warn / info / normal
+gisaid_status_code 
+# GISAID QC comment
+gisaid_status_comment 
+gisaid_originating_lab
+gisaid_submitting_lab
+gisaid_authors
+# true if various QC and metadata criteria are met
+# if true, CoV-GLUE includes sequence in its analysis of AA replacements etc.
+analyse_variation 
+# ref_tree_candidate is a subset of analyse_variation, 
+# if true, sequence may be selected to appear in the CoV-GLUE reference tree
+ref_tree_candidate 
+# if true, appears in the CoV-GLUE reference tree
+include_in_ref_tree 
+# for those sequences where include_in_ref_tree == true, 
+# number of cluster which CD-HIT-EST assigned the sequence to
+cdhit_cluster 
+# most coarse-grained lineage assignment for the pandemic.
+# if true, belongs to the clade characterised by amino acid L at ORF8 codon 84
+# if false, belongs to the clade characterised by amino acid S at ORF8 codon 84
+is_l_lineage
+

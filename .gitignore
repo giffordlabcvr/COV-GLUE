@@ -1,2 +1,5 @@
 .gradle
 sequences
+covGlueSanitisedAlignmentCodingSpanningRegion.fasta
+covGlueSanitisedAlignmentWholeGenome.fasta
+covGlueSanitisedSequences.fasta

@@ -22,9 +22,9 @@ _.each(featuresList, function(featureObj) {
 		}
 	});
 	glue.inMode("module/covFastaProteinAlignmentExporterSeqIdOnly", function() {
-		glue.command(["export", "AL_GISAID_CONSTRAINED", "-s", selectorModuleName, "-a", "-o", "alignments/cov_"+featureObj.name+".faa"]);
+		glue.command(["export", "AL_GISAID_CONSTRAINED", "-s", selectorModuleName, "-w", "sequence.analyse_variation = true", "-o", "alignments/cov_"+featureObj.name+".faa"]);
 	});
 	glue.inMode("module/covFastaAlignmentExporterSeqIdOnly", function() {
-		glue.command(["export", "AL_GISAID_CONSTRAINED", "-s", selectorModuleName, "-a", "-o", "alignments/cov_"+featureObj.name+".fna"]);
+		glue.command(["export", "AL_GISAID_CONSTRAINED", "-s", selectorModuleName, "-w", "sequence.analyse_variation = true", "-o", "alignments/cov_"+featureObj.name+".fna"]);
 	});
 });
