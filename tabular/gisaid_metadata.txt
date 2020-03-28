@@ -1,4 +1,7 @@
 Accession ID	Passage details/history	Submission Date	Status code	Status comment	Host
+EPI_ISL_416491	Original	2020-03-22	normal		Human
+EPI_ISL_416492	Original	2020-03-22	normal		Human
+EPI_ISL_416523	Original	2020-03-22	normal		Human
 EPI_ISL_417924	Original	2020-03-27	normal	Stretches of NNNs (3.29% of overall sequence).	Human
 EPI_ISL_417921	Original	2020-03-27	normal		Human
 EPI_ISL_417922	Original	2020-03-27	normal		Human
@@ -1051,8 +1054,6 @@ EPI_ISL_416568	Original	2020-03-23	normal	Stretches of NNNs (1.18% of overall se
 EPI_ISL_416567	Original	2020-03-23	normal		Human
 EPI_ISL_416566	Original	2020-03-23	normal		Human
 EPI_ISL_416565	Original	2020-03-23	normal		Human
-EPI_ISL_416492	Original	2020-03-22	info	Gap of 1 nucleotide at two different locations when compared to the reference sequence.	Human
-EPI_ISL_416523	Original	2020-03-22	info	Gap of 1 nucleotide at two different locations when compared to the reference sequence.	Human
 EPI_ISL_416541	Original	2020-03-23	normal		Human
 EPI_ISL_416542	Original	2020-03-23	normal		Human
 EPI_ISL_416543	Original	2020-03-23	normal		Human
@@ -1114,7 +1115,6 @@ EPI_ISL_416484	hCoV-19/Spain/Valencia5/2020	2020-03-22	normal		Human
 EPI_ISL_416485	Original	2020-03-22	normal		Human
 EPI_ISL_416486	Original	2020-03-22	normal		Human
 EPI_ISL_416487	Original	2020-03-22	normal		Human
-EPI_ISL_416491	Original	2020-03-22	normal	Insertion of 6 nucleotides when compared to the reference sequence. %UniqueMutations 0.07%.	Human
 EPI_ISL_416489	Original	2020-03-22	normal	Insertion of 6 nucleotides when compared to the reference sequence. %UniqueMutations 0.08%.	Human
 EPI_ISL_416459	Original	2020-03-22	warn	Long stretches of NNNs (34.16% of overall sequence).	Human
 EPI_ISL_416460	Original	2020-03-22	normal		Human
@@ -1962,6 +1962,14 @@ EPI_ISL_413519	unknown	2020-03-06	normal		Human
 EPI_ISL_413518	unknown	2020-03-06	normal		Human
 EPI_ISL_413517	Original	2020-03-06	normal		Human
 EPI_ISL_413498	Original	2020-03-06	normal		Human
+EPI_ISL_413497	Original	2020-03-06	normal		Human
+EPI_ISL_413496	Original	2020-03-06	normal		Human
+EPI_ISL_413495	Original	2020-03-06	normal		Human
+EPI_ISL_413494	Original	2020-03-06	normal		Human
+EPI_ISL_413493	Original	2020-03-06	normal		Human
+EPI_ISL_413492	Original	2020-03-06	normal		Human
+EPI_ISL_413491	Original	2020-03-06	normal		Human
+EPI_ISL_413490	Original	2020-03-05	normal		Human
 EPI_ISL_413497	Original	2020-03-06	normal		Human
 EPI_ISL_413496	Original	2020-03-06	normal		Human
 EPI_ISL_413495	Original	2020-03-06	normal		Human
