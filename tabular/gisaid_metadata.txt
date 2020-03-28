@@ -1,4 +1,7 @@
 Accession ID	Passage details/history	Submission Date	Status code	Status comment	Host
+EPI_ISL_417929	Original	2020-03-27	warn	Long stretches of NNNs (11.04% of overall sequence).	Human
+EPI_ISL_417945	Original	2020-03-27	warn	Long stretches of NNNs (26.11% of overall sequence).	Human
+EPI_ISL_417943	Original	2020-03-27	warn	Long stretches of NNNs (19.16% of overall sequence).	Human
 EPI_ISL_417920	Original	2020-03-27	normal	%UniqueMutations 0.14%.	Human
 EPI_ISL_418168	Original	2020-03-28	normal		Human
 EPI_ISL_418167	Original	2020-03-28	normal		Human
@@ -185,17 +188,14 @@ EPI_ISL_417987	Original	2020-03-28	normal		Human
 EPI_ISL_417986	Original	2020-03-28	normal		Human
 EPI_ISL_417925	Original	2020-03-27	warn	Long stretches of NNNs (9.01% of overall sequence).	Human
 EPI_ISL_417926	Original	2020-03-27	warn	Long stretches of NNNs (10.17% of overall sequence).	Human
-EPI_ISL_417929	Original	2020-03-27	warn	Long stretches of NNNs (11.04% of overall sequence).	Human
 EPI_ISL_417930	Original	2020-03-27	warn	Long stretches of NNNs (15.24% of overall sequence).	Human
 EPI_ISL_417934	Original	2020-03-27	warn	Long stretches of NNNs (11.18% of overall sequence).	Human
 EPI_ISL_417936	Original	2020-03-27	warn	Long stretches of NNNs (11.97% of overall sequence).	Human
 EPI_ISL_417940	Original	2020-03-27	warn	Long stretches of NNNs (28.23% of overall sequence).	Human
-EPI_ISL_417945	Original	2020-03-27	warn	Long stretches of NNNs (26.11% of overall sequence).	Human
 EPI_ISL_417949	Original	2020-03-27	warn	Long stretches of NNNs (9.18% of overall sequence).	Human
 EPI_ISL_417951	Original	2020-03-27	warn	Long stretches of NNNs (18.41% of overall sequence).	Human
 EPI_ISL_417953	Original	2020-03-27	warn	Long stretches of NNNs (17.41% of overall sequence).	Human
 EPI_ISL_417982	Original	2020-03-27	warn	Long stretches of NNNs (9.20% of overall sequence).	Human
-EPI_ISL_417943	Original	2020-03-27	warn	Long stretches of NNNs (19.16% of overall sequence).	Human
 EPI_ISL_417983	Original	2020-03-27	warn	Long stretches of NNNs (19.26% of overall sequence).	Human
 EPI_ISL_417984	Original	2020-03-27	warn	Long stretches of NNNs (15.45% of overall sequence).	Human
 EPI_ISL_417985	Original	2020-03-27	warn	Long stretches of NNNs (19.62% of overall sequence).	Human
