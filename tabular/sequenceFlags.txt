@@ -1154,8 +1154,8 @@ cov-gisaid	EPI_ISL_416486	true	true	true	44	true
 cov-gisaid	EPI_ISL_416487	false	true	true	0	-
 cov-gisaid	EPI_ISL_416488	true	true	true	0	true
 cov-gisaid	EPI_ISL_416489	-	false	false	-	-
-cov-gisaid	EPI_ISL_416491	-	false	false	-	-
-cov-gisaid	EPI_ISL_416492	-	false	false	-	-
+cov-gisaid	EPI_ISL_416491	false	true	true	0	-
+cov-gisaid	EPI_ISL_416492	false	true	true	0	-
 cov-gisaid	EPI_ISL_416493	false	true	true	0	-
 cov-gisaid	EPI_ISL_416494	false	true	true	0	-
 cov-gisaid	EPI_ISL_416495	false	true	true	0	-
@@ -1186,7 +1186,7 @@ cov-gisaid	EPI_ISL_416519	false	true	true	0	-
 cov-gisaid	EPI_ISL_416520	true	true	true	318	true
 cov-gisaid	EPI_ISL_416521	false	true	true	0	-
 cov-gisaid	EPI_ISL_416522	false	true	true	0	-
-cov-gisaid	EPI_ISL_416523	-	false	false	-	-
+cov-gisaid	EPI_ISL_416523	false	true	true	0	-
 cov-gisaid	EPI_ISL_416524	false	true	true	0	-
 cov-gisaid	EPI_ISL_416525	false	true	true	0	-
 cov-gisaid	EPI_ISL_416526	false	true	true	318	-
