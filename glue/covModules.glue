@@ -58,4 +58,5 @@ create module --fileName modules/covHanada2006ReplacementClassifier.xml
 create module --fileName modules/covGrantham1974DistanceCalculator.xml
 create module --fileName modules/covMiyata1979DistanceCalculator.xml
 
+create module --fileName modules/covPrimerProbeMismatch.xml --loadResources
 
