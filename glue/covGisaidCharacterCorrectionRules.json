@@ -1,0 +1,37 @@
+{
+	"EPI_ISL_414688" : {
+		"45": {
+				"character": "-",
+				"position": "any",
+				"correction": "delete"
+		}
+	},
+	"EPI_ISL_415148": {
+		"45": {
+				"character": "-",
+				"position": "any",
+				"correction": "delete"
+		}
+	},
+	"EPI_ISL_415435": {
+		"45": {
+				"character": "-",
+				"position": "any",
+				"correction": "delete"
+		}
+	},
+	"EPI_ISL_416142": {
+		"45": {
+				"character": "-",
+				"position": "any",
+				"correction": "delete"
+		}
+	},
+	"EPI_ISL_416513": {
+		"45": {
+				"character": "-",
+				"position": "any",
+				"correction": "delete"
+		}
+	}
+}
