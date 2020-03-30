@@ -150,6 +150,13 @@ schema-project cov
   
   create link cov_primer_probe cov_primer_probe_assay -m MANY_TO_ONE
   
+  # link from primer/probe to variation detecting a match
   create link cov_primer_probe -s seq_match variation -d cov_pp_seq_match -m ONE_TO_ONE
+
+  # link from primer/probe to variation detecting an insertion
+  create link cov_primer_probe -s seq_insertion variation -d cov_pp_seq_insertion -m ONE_TO_ONE
+
+  # link from primer/probe to variation detecting a deletion
+  create link cov_primer_probe -s seq_deletion variation -d cov_pp_seq_deletion -m ONE_TO_ONE
   
   exit
