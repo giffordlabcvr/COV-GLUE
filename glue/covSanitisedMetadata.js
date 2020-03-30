@@ -1,8 +1,8 @@
 
 
 var tabularData = glue.command(["list", "sequence", 
-	"source.name", 
 	"sequenceID", 
+	"source.name", 
 	"length", 
     "isolate",
     "host_species",
