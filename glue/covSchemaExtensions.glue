@@ -120,11 +120,11 @@ schema-project cov
     # number of hits of fwd / reverse regex on reference sequence Wuhan-Hu-1. 
     # Should be 1 ideally, otherwise there is something wrong with the primer/probe definition
     create field ref_hits INTEGER
-    # sequence as it would appear in a forward oriented genome, null unless ref_hits == 1
+    # sequence as it would appear in a forward oriented genome
     create field sequence_to_scan VARCHAR 100
-    # true if sequence_fwd == sequence_to_scan, null unless ref_hits == 1
+    # true if sequence_fwd == sequence_to_scan
     create field fwd_orientation BOOLEAN
-    # coordinates on reference sequence Wuhan-Hu-1, null unless ref_hits == 1
+    # coordinates on reference sequence Wuhan-Hu-1
     create field ref_start INTEGER
     create field ref_end INTEGER
     # length of sequence_to_scan, null unless ref_hits == 1
@@ -152,6 +152,9 @@ schema-project cov
   
   # link from primer/probe to variation detecting a match
   create link cov_primer_probe -s seq_match variation -d cov_pp_seq_match -m ONE_TO_ONE
+
+  # link from primer/probe to variation detecting a match
+  create link cov_primer_probe -s seq_pullout variation -d cov_pp_seq_pullout -m ONE_TO_ONE
 
   # link from primer/probe to variation detecting an insertion
   create link cov_primer_probe -s seq_insertion variation -d cov_pp_seq_insertion -m ONE_TO_ONE

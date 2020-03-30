@@ -1,5 +1,6 @@
 glue.command(["multi-unset", "link-target", "cov_primer_probe", "-a", "cov_primer_probe_assay"]);
 glue.command(["multi-unset", "link-target", "cov_primer_probe", "-a", "seq_match"]);
+glue.command(["multi-unset", "link-target", "cov_primer_probe", "-a", "seq_pullout"]);
 glue.command(["multi-unset", "link-target", "cov_primer_probe", "-a", "seq_insertion"]);
 glue.command(["multi-unset", "link-target", "cov_primer_probe", "-a", "seq_deletion"]);
 glue.command(["multi-delete", "cov_primer_probe", "-a"]);
@@ -169,7 +170,7 @@ _.each(ppObjs, function(ppObj) {
 });
 
 var ppObjs = glue.tableToObjects(glue.command(["list", "custom-table-row", "cov_primer_probe", 
-	"id", "fwd_orientation", "ref_start", "ref_end", "sequence_fwd_regex", "sequence_rev_regex"]));
+	"id", "fwd_orientation", "ref_start", "ref_end", "sequence_fwd_regex", "sequence_rev_regex", "length"]));
 
 _.each(ppObjs, function(ppObj) {
 	// create "sequence match" variation at specific location
@@ -183,10 +184,25 @@ _.each(ppObjs, function(ppObj) {
 			} else {
 				glue.command(["set", "metatag", "REGEX_NT_PATTERN", ppObj.sequence_rev_regex]);
 			}
-			glue.command(["set", "link-target", "cov_pp_seq_match", "custom-table-row/cov_primer_probe/"+ppObj.id]);
+			glue.command(["set", "link-target", "cov_pp_seq_match", 
+				"custom-table-row/cov_primer_probe/"+ppObj.id]);
 		});
 	});
-	// create "sequence insertion" variation at specific location
+	// create "sequence pullout" variation at specific location
+	// just pulls out whatever's there at that location.
+ 	var pulloutVariationName = "cov_pp_seq_pullout:"+ppObj.id;
+	glue.inMode("reference/REF_MASTER_WUHAN_HU_1/feature-location/whole_genome", function() {
+		glue.command(["create", "variation", pulloutVariationName, "-t", "nucleotideRegexPolymorphism", 
+			"--nucleotide", ppObj.ref_start, ppObj.ref_end]);
+		glue.inMode("variation/"+pulloutVariationName, function() {
+			var dots = Array(ppObj.length+1).join(".");
+			glue.command(["set", "metatag", "REGEX_NT_PATTERN", dots]);
+			glue.command(["set", "link-target", "cov_pp_seq_pullout", 
+				"custom-table-row/cov_primer_probe/"+ppObj.id]);
+		});
+	});
+
+ 	// create "sequence insertion" variation at specific location
  	var insertionVariationName = "cov_pp_seq_insertion:"+ppObj.id;
 	glue.inMode("reference/REF_MASTER_WUHAN_HU_1/feature-location/whole_genome", function() {
 		glue.command(["create", "variation", insertionVariationName, "-t", "nucleotideInsertion", 

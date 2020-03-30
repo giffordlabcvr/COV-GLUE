@@ -24,16 +24,14 @@ function reportSingleFasta(fastaFilePath) {
 	var rasVariationMatchDocument;
 	
 	var matchResults = variationMatchResults(queryNucleotides, queryToTargetRefSegs, targetRefName, "name like 'cov_pp_seq_match:%'");
-	//var matchResults = variationMatchResults(queryNucleotides, queryToTargetRefSegs, targetRefName, "name like 'cov_pp_seq_match:RdRP_SARSr-P1'");
+	var pulloutResults = variationMatchResults(queryNucleotides, queryToTargetRefSegs, targetRefName, "name like 'cov_pp_seq_pullout:%'");
 	var insertionResults = variationMatchResults(queryNucleotides, queryToTargetRefSegs, targetRefName, "name like 'cov_pp_seq_insertion:%'");
 	var deletionResults = variationMatchResults(queryNucleotides, queryToTargetRefSegs, targetRefName, "name like 'cov_pp_seq_deletion:%'");
 
-	//glue.log("FINEST", "matchResults", matchResults);
-	//glue.log("FINEST", "insertionResults", insertionResults);
-	//glue.log("FINEST", "deletionResults", deletionResults);
-
 	var vNameToMatchResult = {};
 	_.each(matchResults, function(mr) {vNameToMatchResult[mr.variationName] = mr});
+	var vNameToPulloutResult = {};
+	_.each(pulloutResults, function(pr) {vNameToPulloutResult[pr.variationName] = pr});
 	var vNameToInsertionResult = {};
 	_.each(insertionResults, function(ir) {vNameToInsertionResult[ir.variationName] = ir});
 	var vNameToDeletionResult = {};
@@ -51,6 +49,7 @@ function reportSingleFasta(fastaFilePath) {
 		});
 		_.each(assayObj.ppObjs, function(ppObj) {
 			ppObj.seqMatchResult = vNameToMatchResult[ppObj["seq_match.name"]];
+			ppObj.seqPulloutResult = vNameToPulloutResult[ppObj["seq_pullout.name"]];
 			ppObj.seqInsertionResult = vNameToInsertionResult[ppObj["seq_insertion.name"]];
 			ppObj.seqDeletionResult = vNameToDeletionResult[ppObj["seq_deletion.name"]];
 		});
@@ -60,8 +59,23 @@ function reportSingleFasta(fastaFilePath) {
 		_.each(assayObj.ppObjs, function(ppObj) {
 			var issues = [];
 			assayObj.ppDnToIssues[ppObj.display_name] = issues;
+			var insufficientCoverage = [];
 			if(ppObj.seqMatchResult.sufficientCoverage == false) {
-				
+				insufficientCoverage.push("mismatch");
+			}
+			if(ppObj.seqInsertionResult.sufficientCoverage == false) {
+				insufficientCoverage.push("insertion");
+			}
+			if(ppObj.seqDeletionResult.sufficientCoverage == false) {
+				insufficientCoverage.push("deletion");
+			}
+			if(insufficientCoverage.length > 0) {
+				issues.push("Insufficient coverage to determine "+insufficientCoverage.join("/"));
+			}
+			if(ppObj.seqMatchResult.sufficientCoverage == true && ppObj.seqMatchResult.present == false) {
+				for(var i = 0; i < ppObj.sequence_to_scan.length; i++) {
+					
+				}
 			}
 		});		
 	});
