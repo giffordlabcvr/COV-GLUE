@@ -1,4 +1,36 @@
 Accession ID	Passage details/history	Submission Date	Status code	Status comment	Host
+EPI_ISL_418278	Original	2020-03-30	warn	Long stretches of NNNs (10.34% of overall sequence).	Human
+EPI_ISL_418281	Original	2020-03-30	warn	Long stretches of NNNs (7.52% of overall sequence).	Human
+EPI_ISL_418433	Original	2020-03-30	normal	Stretches of NNNs (1.13% of overall sequence).	Human
+EPI_ISL_418434	Original	2020-03-30	normal	Stretches of NNNs (1.13% of overall sequence).	Human
+EPI_ISL_418435	Original	2020-03-30	normal	Stretches of NNNs (2.18% of overall sequence).	Human
+EPI_ISL_418436	Original	2020-03-30	normal	Stretches of NNNs (3.99% of overall sequence).	Human
+EPI_ISL_418437	Original	2020-03-30	normal	Stretches of NNNs (3.99% of overall sequence).	Human
+EPI_ISL_418584	Original	2020-03-30	normal		Human
+EPI_ISL_418583	Original	2020-03-30	normal		Human
+EPI_ISL_418582	Original	2020-03-30	normal		Human
+EPI_ISL_418581	Original	2020-03-30	normal		Human
+EPI_ISL_418580	Original	2020-03-30	normal		Human
+EPI_ISL_418548	Original	2020-03-30	normal		Human
+EPI_ISL_418516	Original	2020-03-30	normal		Human
+EPI_ISL_418515	Original	2020-03-30	normal		Human
+EPI_ISL_418514	Original	2020-03-30	normal		Human
+EPI_ISL_418442	Original	2020-03-30	normal		Human
+EPI_ISL_418511	Original	2020-03-30	normal		Human
+EPI_ISL_418513	Original	2020-03-30	normal		Human
+EPI_ISL_418512	Original	2020-03-30	normal		Human
+EPI_ISL_418510	Original	2020-03-30	normal		Human
+EPI_ISL_418507	Original	2020-03-30	normal		Human
+EPI_ISL_418508	Original	2020-03-30	normal		Human
+EPI_ISL_418509	Original	2020-03-30	normal		Human
+EPI_ISL_418506	Original	2020-03-30	normal		Human
+EPI_ISL_418504	Original	2020-03-30	normal		Human
+EPI_ISL_418503	Original	2020-03-30	normal		Human
+EPI_ISL_418502	Original	2020-03-30	normal		Human
+EPI_ISL_418441	Original	2020-03-30	normal		Human
+EPI_ISL_418440	Original	2020-03-30	normal	Stretches of NNNs (2.94% of overall sequence).	Human
+EPI_ISL_418439	Original	2020-03-30	normal	Stretches of NNNs (2.14% of overall sequence).	Human
+EPI_ISL_418438	Original	2020-03-30	normal	Stretches of NNNs (1.13% of overall sequence).	Human
 EPI_ISL_418244	Original	2020-03-29	info	Gap of 3 nucleotides when compared to the reference sequence.	Human
 EPI_ISL_418432	Original	2020-03-30	normal		Human
 EPI_ISL_418431	Original	2020-03-30	normal		Human
@@ -148,9 +180,9 @@ EPI_ISL_418288	Original	2020-03-30	normal	Stretches of NNNs (2.27% of overall se
 EPI_ISL_418287	Original	2020-03-30	normal	Stretches of NNNs (1.30% of overall sequence).	Human
 EPI_ISL_418286	Original	2020-03-30	normal	Stretches of NNNs (1.30% of overall sequence).	Human
 EPI_ISL_418285	Original	2020-03-30	normal	Stretches of NNNs (3.11% of overall sequence).	Human
-EPI_ISL_418282	Original	2020-03-30	normal	Stretches of NNNs (1.14% of overall sequence).	Human
-EPI_ISL_418284	Original	2020-03-30	warn	Long stretches of NNNs (6.47% of overall sequence).	Human
-EPI_ISL_418283	Original	2020-03-30	warn	Long stretches of NNNs (9.28% of overall sequence).	Human
+EPI_ISL_418282	Original	2020-03-30	normal	Stretches of NNNs (1.13% of overall sequence).	Human
+EPI_ISL_418284	Original	2020-03-30	normal	Stretches of NNNs (2.32% of overall sequence).	Human
+EPI_ISL_418283	Original	2020-03-30	normal	Stretches of NNNs (3.11% of overall sequence).	Human
 EPI_ISL_418280	Original	2020-03-30	normal	Stretches of NNNs (1.13% of overall sequence).	Human
 EPI_ISL_418279	Original	2020-03-30	normal	Stretches of NNNs (1.13% of overall sequence).	Human
 EPI_ISL_418277	Original	2020-03-30	normal	Stretches of NNNs (1.15% of overall sequence).	Human
