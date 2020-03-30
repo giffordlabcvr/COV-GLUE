@@ -30,7 +30,7 @@ schema-project cov
     create field submission_month VARCHAR
     create field submission_month_day INTEGER
     create field gisaid_status_code VARCHAR
-    create field gisaid_status_comment VARCHAR 300
+    create field gisaid_status_comment CLOB
     create field host_species VARCHAR 100
     create field place_sampled VARCHAR 100
     create field gisaid_originating_lab VARCHAR 300
