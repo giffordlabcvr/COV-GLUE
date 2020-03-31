@@ -15,13 +15,13 @@ _.each(proteinAlmt.aminoAcidFasta.sequences, function(membObj) {
 	seqIdToOrf8Codon84Aa[membObj.id] = membObj.sequence;
 });
 
-// look at the sequence plus its 10 nearest neighbours in the tree, what is happening in ORF 8 
+// look at the sequence plus its 5 nearest neighbours in the tree, what is happening in ORF 8 
 // take a majority vote. If equivocal then throw an error.
 var seqIdToNeighbours;
 
 glue.inMode("module/covPhyloUtility", function() {
 	var resultRows = glue.tableToObjects(glue.command(["alignment-phylogeny", "list", "neighbours", "AL_GISAID_CONSTRAINED", "phylogeny", 
-		"-n", "10"]));
+		"-n", "5"]));
 	seqIdToNeighbours = _.groupBy(resultRows, function(resultRow) { return resultRow["startSequenceID"];});
 });
 
