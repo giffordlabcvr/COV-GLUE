@@ -1,0 +1,100 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+@media screen {
+	body {
+	    margin-left: 50px;
+	    margin-right: 50px;
+	}
+}
+
+.tableHeader {
+    background-color: #dbf0ff;
+}
+
+table {
+    border: 1px solid #000;
+    border-collapse: collapse;
+}
+
+tr {
+    border-top: 1px solid #000;
+	border-bottom: 1px solid #000;
+}
+
+tr + tr {
+    border-top: 1px solid #bbb;
+}
+
+td {
+    border-left: 1px solid #000;
+    vertical-align: top;
+}
+
+td + td {
+    border-left: 1px solid #bbb;
+}
+
+th + th {
+    border-left: 1px solid #bbb;
+}
+
+td, th {
+    padding: 8px;
+}
+
+.pagebreak { page-break-before: always; }
+
+
+#title {
+	display: inline-block;
+}
+ 
+#logo img {
+	display: inline-block;
+	float: right;
+	height:136px;
+}
+
+
+#block1 {
+	width: 100%;
+	overflow: hidden;
+}
+
+#titleAndLogo {
+	float: left;
+	width: 50%;
+	padding-bottom: 100%;
+    margin-bottom: -100%;
+}
+
+#overview {
+    width:50%;
+}
+
+#systemConfigTable {
+    width:50%;
+}
+
+#assayReports {
+    font-size: 10pt;
+}
+
+.issue {
+    background-color: #ffcccc;
+}
+
+#logos {
+	float: left;
+	width: 70%;
+	text-align: right;
+	padding-bottom: 100%;
+    margin-bottom: -100%;
+}
+
+#cvrLogo {
+	display: inline-block;
+	height:177px;	
+}
