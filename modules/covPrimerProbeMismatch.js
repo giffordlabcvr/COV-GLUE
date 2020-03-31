@@ -115,22 +115,32 @@ function singleSequenceReport(fastaFilePath, queryName, queryNucleotides) {
 			ppObj.issues = [];
 			ppObj.displayIssues = [];
 			var insufficientCoverage = [];
+			// insufficientCoverageMismatches if alignment doesn't completely cover the region
+			// or if there are any Ns in the region.
 			if(ppObj.seqMatchResult.sufficientCoverage == false) {
-				ppObj.issues.push({ type: "insufficientCoverageMatch" });
-				insufficientCoverage.push("mismatch");
+				ppObj.issues.push({ type: "insufficientCoverageMismatches" });
+				insufficientCoverage.push("mismatches");
+			} else if(ppObj.seqPulloutResult.sufficientCoverage == true &&
+					ppObj.seqPulloutResult.matches.length > 0 &&
+					ppObj.seqPulloutResult.matches[0].queryNts.indexOf("N") >= 0) {
+				ppObj.issues.push({ type: "insufficientCoverageMismatches" });
+				insufficientCoverage.push("mismatches");
 			}
 			if(ppObj.seqInsertionResult.sufficientCoverage == false) {
-				ppObj.issues.push({ type: "insufficientCoverageInsertion" });
-				insufficientCoverage.push("insertion");
+				ppObj.issues.push({ type: "insufficientCoverageInsertions" });
+				insufficientCoverage.push("insertions");
 			}
 			if(ppObj.seqDeletionResult.sufficientCoverage == false) {
-				ppObj.issues.push({ type: "insufficientCoverageDeletion" });
-				insufficientCoverage.push("deletion");
+				ppObj.issues.push({ type: "insufficientCoverageDeletions" });
+				insufficientCoverage.push("deletions");
 			}
 			if(insufficientCoverage.length > 0) {
 				ppObj.displayIssues.push("Insufficient coverage to determine "+insufficientCoverage.join("/"));
 			}
-			if(ppObj.seqMatchResult.sufficientCoverage == true && ppObj.seqMatchResult.present == false) {
+			if(ppObj.seqMatchResult.sufficientCoverage == true && 
+					ppObj.seqPulloutResult.matches.length > 0 &&
+					ppObj.seqMatchResult.present == false &&
+					insufficientCoverage.indexOf("mismatches") < 0) {
 				var mismatches = [];
 				var pulloutMatch = ppObj.seqPulloutResult.matches[0];
 				var pulloutMatchNts = pulloutMatch.queryNts;
@@ -164,6 +174,56 @@ function singleSequenceReport(fastaFilePath, queryName, queryNucleotides) {
 					glue.logInfo("ppObj.seqMatchResult", ppObj.seqMatchResult);
 					glue.logInfo("ppObj.seqPulloutResult", ppObj.seqPulloutResult);
 					throw new Error("Could not find mismatched character despite match variation reporting absent.");
+				}
+			}
+			
+			if(ppObj.seqDeletionResult.sufficientCoverage == true && ppObj.seqDeletionResult.present == true) {
+				var deletions = [];
+				_.each(ppObj.seqDeletionResult.matches, function(delMatch) {
+					var refFirstNtDeleted = delMatch.refFirstNtDeleted;
+					var refLastNtDeleted = delMatch.refLastNtDeleted;
+					var deletedRefNts = delMatch.deletedRefNts;
+					ppObj.issues.push({ type: "deletion", 
+						refFirstNtDeleted: refFirstNtDeleted,
+						refLastNtDeleted: refLastNtDeleted,
+						qryLastNtBeforeDel: delMatch.qryLastNtBeforeDel,
+						qryFirstNtAfterDel: delMatch.qryFirstNtAfterDel,
+						deletedRefNts: deletedRefNts });
+					var delString;
+					if(refFirstNtDeleted == refLastNtDeleted) {
+						delString = refFirstNtDeleted;
+					} else {
+						delString = refFirstNtDeleted+"-"+refLastNtDeleted;
+					}
+					deletions.push(delString);
+				});
+				if(deletions.length > 0) {
+					var displayString = deletions.length + " " +
+						(deletions.length == 1 ? "deletion" : "deletions") + ": " +
+							deletions.join(", ");
+					ppObj.displayIssues.push(displayString);
+				}
+			}
+
+			if(ppObj.seqInsertionResult.sufficientCoverage == true && ppObj.seqInsertionResult.present == true) {
+				var insertions = [];
+				_.each(ppObj.seqInsertionResult.matches, function(insMatch) {
+					var refLastNtBeforeIns = insMatch.refLastNtBeforeIns;
+					var refFirstNtAfterIns = insMatch.refFirstNtAfterIns;
+					var insertedQryNts = insMatch.insertedQryNts;
+					ppObj.issues.push({ type: "insertion", 
+						refLastNtBeforeIns: refLastNtBeforeIns,
+						refFirstNtAfterIns: refFirstNtAfterIns,
+						qryFirstInsertedNt: insMatch.qryFirstInsertedNt,
+						qryLastInsertedNt: insMatch.qryLastInsertedNt,
+						insertedQryNts: insertedQryNts });
+					insertions.push(refLastNtBeforeIns+"-"+insertedQryNts+"-"+refFirstNtAfterIns);
+				});
+				if(insertions.length > 0) {
+					var displayString = insertions.length + " " +
+						(insertions.length == 1 ? "insertion" : "insertions") + ": " +
+							insertions.join(", ");
+					ppObj.displayIssues.push(displayString);
 				}
 			}
 			if(ppObj.issues.length > 0) {
