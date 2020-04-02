@@ -1,4 +1,8 @@
 Accession ID	Passage details/history	Submission Date	Status code	Status comment	Host
+EPI_ISL_419388	Original	2020-04-02	normal		Human
+EPI_ISL_418285	Original	2020-03-30	normal	Stretches of NNNs (3.11% of overall sequence).	Human
+EPI_ISL_419387	original	2020-04-02	normal		Human
+EPI_ISL_419386	Original	2020-04-02	normal		Human
 EPI_ISL_419313	Original	2020-04-02	normal	Gap of 15 nucleotides in NSP4 region and 21 nucleotides in NSP14 when compared to the reference sequence. %UniqueMutations 0.12%.	Human
 EPI_ISL_419311	Original	2020-04-02	normal		Human
 EPI_ISL_419310	Original	2020-04-02	normal		Human
@@ -673,7 +677,6 @@ EPI_ISL_418289	Original	2020-03-30	normal	Stretches of NNNs (1.30% of overall se
 EPI_ISL_418288	Original	2020-03-30	normal	Stretches of NNNs (2.27% of overall sequence).	Human
 EPI_ISL_418287	Original	2020-03-30	normal	Stretches of NNNs (1.30% of overall sequence).	Human
 EPI_ISL_418286	Original	2020-03-30	normal	Stretches of NNNs (1.30% of overall sequence).	Human
-EPI_ISL_418285	Original	2020-03-30	normal	Stretches of NNNs (3.11% of overall sequence).	Human
 EPI_ISL_418282	Original	2020-03-30	normal	Stretches of NNNs (1.13% of overall sequence).	Human
 EPI_ISL_418284	Original	2020-03-30	normal	Stretches of NNNs (2.32% of overall sequence).	Human
 EPI_ISL_418283	Original	2020-03-30	normal	Stretches of NNNs (3.11% of overall sequence).	Human
@@ -2371,6 +2374,7 @@ EPI_ISL_415594	Original	2020-03-18	normal		Human
 EPI_ISL_415595	Original	2020-03-18	normal		Human
 EPI_ISL_415596	Original	2020-03-18	normal		Human
 EPI_ISL_415597	Original	2020-03-18	normal		Human
+EPI_ISL_415598	Original	2020-03-18	normal		Human
 EPI_ISL_415598	Original	2020-03-18	normal		Human
 EPI_ISL_415605	Original	2020-03-18	normal		Human
 EPI_ISL_415606	Original	2020-03-18	normal		Human
