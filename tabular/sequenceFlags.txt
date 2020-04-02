@@ -3227,3 +3227,5 @@ cov-gisaid	EPI_ISL_419309	false	true	true	0	-
 cov-gisaid	EPI_ISL_419310	false	true	true	0	-
 cov-gisaid	EPI_ISL_419311	false	true	true	0	-
 cov-gisaid	EPI_ISL_419313	true	true	true	55	true
+cov-gisaid	EPI_ISL_419386	false	true	true	0	-
+cov-gisaid	EPI_ISL_419387	false	true	true	0	-
