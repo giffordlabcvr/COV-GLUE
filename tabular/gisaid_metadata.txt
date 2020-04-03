@@ -1,7 +1,225 @@
 Accession ID	Passage details/history	Submission Date	Status code	Status comment	Host
+EPI_ISL_419607	Original	2020-04-02	normal		Human
+EPI_ISL_419606	Original	2020-04-02	normal		Human
+EPI_ISL_419605	Original	2020-04-02	normal	Stretches of NNNs (1.68% of overall sequence).	Human
+EPI_ISL_419604	Original	2020-04-02	normal		Human
+EPI_ISL_419528	Original	2020-04-02	normal	Stretches of NNNs (1.39% of overall sequence).	Human
+EPI_ISL_419603	Original	2020-04-02	normal		Human
+EPI_ISL_419602	Original	2020-04-02	normal		Human
+EPI_ISL_419601	Original	2020-04-02	normal		Human
+EPI_ISL_419600	Original	2020-04-02	normal		Human
+EPI_ISL_419599	Original	2020-04-02	normal		Human
+EPI_ISL_419598	Original	2020-04-02	normal		Human
+EPI_ISL_419597	Original	2020-04-02	normal		Human
+EPI_ISL_419596	Original	2020-04-02	normal		Human
+EPI_ISL_419595	Original	2020-04-02	normal		Human
+EPI_ISL_419594	Original	2020-04-02	normal		Human
+EPI_ISL_419593	Original	2020-04-02	normal		Human
+EPI_ISL_419592	Original	2020-04-02	normal		Human
+EPI_ISL_419591	Original	2020-04-02	normal		Human
+EPI_ISL_419590	Original	2020-04-02	normal		Human
+EPI_ISL_419589	Original	2020-04-02	normal		Human
+EPI_ISL_419588	Original	2020-04-02	normal		Human
+EPI_ISL_419587	Original	2020-04-02	normal		Human
+EPI_ISL_419586	Original	2020-04-02	normal		Human
+EPI_ISL_419585	Original	2020-04-02	normal		Human
+EPI_ISL_419584	Original	2020-04-02	normal		Human
+EPI_ISL_419583	Original	2020-04-02	normal		Human
+EPI_ISL_419582	Original	2020-04-02	normal		Human
+EPI_ISL_419581	Original	2020-04-02	normal	Stretches of NNNs (3.99% of overall sequence).	Human
+EPI_ISL_419580	Original	2020-04-02	normal		Human
+EPI_ISL_419579	Original	2020-04-02	normal		Human
+EPI_ISL_419578	Original	2020-04-02	normal		Human
+EPI_ISL_419577	Original	2020-04-02	normal	Stretches of NNNs (1.73% of overall sequence).	Human
+EPI_ISL_419576	Original	2020-04-02	normal	Stretches of NNNs (1.02% of overall sequence).	Human
+EPI_ISL_419575	Original	2020-04-02	normal	Stretches of NNNs (1.62% of overall sequence).	Human
+EPI_ISL_419574	Original	2020-04-02	normal	Stretches of NNNs (4.12% of overall sequence). NSP11 is missing.	Human
+EPI_ISL_419573	Original	2020-04-02	normal		Human
+EPI_ISL_419572	Original	2020-04-02	normal	Stretches of NNNs (2.16% of overall sequence).	Human
+EPI_ISL_419571	Original	2020-04-02	normal	Stretches of NNNs (1.39% of overall sequence).	Human
+EPI_ISL_419570	Original	2020-04-02	normal		Human
+EPI_ISL_419569	Original	2020-04-02	normal		Human
+EPI_ISL_419568	Original	2020-04-02	normal		Human
+EPI_ISL_419567	Original	2020-04-02	normal	Stretches of NNNs (1.82% of overall sequence).	Human
+EPI_ISL_419527	Original	2020-04-02	warn	Long stretches of NNNs (5.51% of overall sequence).	Human
+EPI_ISL_419566	Original	2020-04-02	normal		Human
+EPI_ISL_419565	Original	2020-04-02	normal	Stretches of NNNs (2.24% of overall sequence).	Human
+EPI_ISL_419564	Original	2020-04-02	normal		Human
+EPI_ISL_419563	Original	2020-04-02	normal		Human
+EPI_ISL_419562	Original	2020-04-02	normal		Human
+EPI_ISL_419561	Original	2020-04-02	normal		Human
+EPI_ISL_419560	Original	2020-04-02	normal		Human
+EPI_ISL_419559	Original	2020-04-02	normal		Human
+EPI_ISL_419558	Original	2020-04-02	normal		Human
+EPI_ISL_419557	Original	2020-04-02	normal		Human
+EPI_ISL_419556	Original	2020-04-02	normal		Human
+EPI_ISL_419555	Original	2020-04-02	normal		Human
+EPI_ISL_419554	Original	2020-04-02	normal		Human
+EPI_ISL_419553	Original	2020-04-02	normal		Human
+EPI_ISL_419552	Original	2020-04-02	normal		Human
+EPI_ISL_419551	Original	2020-04-02	normal		Human
+EPI_ISL_419550	Original	2020-04-02	normal		Human
+EPI_ISL_419549	Original	2020-04-02	normal		Human
+EPI_ISL_419548	Original	2020-04-02	normal		Human
+EPI_ISL_419547	Original	2020-04-02	normal	Stretches of NNNs (1.39% of overall sequence).	Human
+EPI_ISL_419546	Original	2020-04-02	normal		Human
+EPI_ISL_419545	Original	2020-04-02	normal		Human
+EPI_ISL_419544	Original	2020-04-02	normal		Human
+EPI_ISL_419543	Original	2020-04-02	normal		Human
+EPI_ISL_419542	Original	2020-04-02	normal		Human
+EPI_ISL_419541	Original	2020-04-02	normal		Human
+EPI_ISL_419540	Original	2020-04-02	normal		Human
+EPI_ISL_419539	Original	2020-04-02	normal		Human
+EPI_ISL_419538	Original	2020-04-02	normal		Human
+EPI_ISL_419537	Original	2020-04-02	normal		Human
+EPI_ISL_419536	Original	2020-04-02	normal		Human
+EPI_ISL_419535	Original	2020-04-02	normal		Human
+EPI_ISL_419534	Original	2020-04-02	normal		Human
+EPI_ISL_419533	Original	2020-04-02	normal		Human
+EPI_ISL_419532	Original	2020-04-02	normal		Human
+EPI_ISL_419531	Original	2020-04-02	normal		Human
+EPI_ISL_419530	Original	2020-04-02	normal		Human
+EPI_ISL_419529	Original	2020-04-02	normal		Human
+EPI_ISL_419524	Original	2020-04-02	normal	Stretches of NNNs (1.39% of overall sequence).	Human
+EPI_ISL_419523	Original	2020-04-02	warn	Long stretches of NNNs (10.09% of overall sequence).	Human
+EPI_ISL_419522	Original	2020-04-02	normal	Stretches of NNNs (2.20% of overall sequence).	Human
+EPI_ISL_419517	Original	2020-04-02	normal	Stretches of NNNs (1.39% of overall sequence).	Human
+EPI_ISL_419515	Original	2020-04-02	normal	Stretches of NNNs (3.21% of overall sequence).	Human
+EPI_ISL_419526	Original	2020-04-02	normal	Stretches of NNNs (2.19% of overall sequence).	Human
+EPI_ISL_419525	Original	2020-04-02	normal	Stretches of NNNs (1.39% of overall sequence).	Human
+EPI_ISL_419513	Original	2020-04-02	warn	Long stretches of NNNs (7.01% of overall sequence).	Human
+EPI_ISL_419512	Original	2020-04-02	warn	Long stretches of NNNs (6.04% of overall sequence).	Human
+EPI_ISL_419521	Original	2020-04-02	normal	Stretches of NNNs (2.46% of overall sequence).	Human
+EPI_ISL_419520	Original	2020-04-02	normal	Stretches of NNNs (4.17% of overall sequence).	Human
+EPI_ISL_419519	Original	2020-04-02	normal	Stretches of NNNs (2.65% of overall sequence).	Human
+EPI_ISL_419518	Original	2020-04-02	normal	Stretches of NNNs (1.39% of overall sequence).	Human
+EPI_ISL_419516	Original	2020-04-02	normal	Stretches of NNNs (1.63% of overall sequence).	Human
+EPI_ISL_419514	Original	2020-04-02	warn	Long stretches of NNNs (9.87% of overall sequence).	Human
+EPI_ISL_419387	Original	2020-04-02	normal		Human
+EPI_ISL_419511	Original	2020-04-02	warn	Long stretches of NNNs (6.30% of overall sequence). NSP11 is missing.	Human
+EPI_ISL_419510	Original	2020-04-02	normal	Stretches of NNNs (3.22% of overall sequence). NSP11 is missing.	Human
+EPI_ISL_419509	Original	2020-04-02	normal	Stretches of NNNs (4.10% of overall sequence). NSP11 is missing.	Human
+EPI_ISL_419508	Original	2020-04-02	normal		Human
+EPI_ISL_419507	Original	2020-04-02	warn	Long stretches of NNNs (6.02% of overall sequence). NSP11 is missing.	Human
+EPI_ISL_419506	Original	2020-04-02	normal	Stretches of NNNs (1.71% of overall sequence). NSP11 is missing.	Human
+EPI_ISL_419505	Original	2020-04-02	normal	Stretches of NNNs (4.99% of overall sequence). NSP11 is missing.	Human
+EPI_ISL_419504	Original	2020-04-02	normal	Stretches of NNNs (4.43% of overall sequence). NSP11 is missing.	Human
+EPI_ISL_419503	Original	2020-04-02	normal	Stretches of NNNs (2.23% of overall sequence). NSP11 is missing.	Human
+EPI_ISL_419502	Original	2020-04-02	normal	Stretches of NNNs (4.85% of overall sequence). NSP11 is missing.	Human
+EPI_ISL_419501	Original	2020-04-02	warn	Long stretches of NNNs (30.93% of overall sequence). NS7a is missing. NSP11 is missing. NS7b is missing. NS6 is missing.	Human
+EPI_ISL_419500	Original	2020-04-02	warn	Long stretches of NNNs (12.79% of overall sequence). NSP11 is missing.	Human
+EPI_ISL_419499	Original	2020-04-02	normal		Human
+EPI_ISL_419498	Original	2020-04-02	normal		Human
+EPI_ISL_419497	Original	2020-04-02	normal	Stretches of NNNs (4.54% of overall sequence). NSP11 is missing. NS7b is missing.	Human
+EPI_ISL_419496	Original	2020-04-02	normal		Human
+EPI_ISL_419495	Original	2020-04-02	normal	Stretches of NNNs (3.17% of overall sequence). NSP11 is missing.	Human
+EPI_ISL_419494	Original	2020-04-02	warn	Long stretches of NNNs (5.55% of overall sequence). NSP11 is missing.	Human
+EPI_ISL_419493	Original	2020-04-02	warn	Long stretches of NNNs (5.09% of overall sequence). NSP11 is missing.	Human
+EPI_ISL_419492	Original	2020-04-02	warn	Long stretches of NNNs (5.37% of overall sequence). NSP11 is missing.	Human
+EPI_ISL_419491	Original	2020-04-02	normal	NSP11 is missing.	Human
+EPI_ISL_419490	Original	2020-04-02	warn	Long stretches of NNNs (5.36% of overall sequence). NSP11 is missing.	Human
+EPI_ISL_419489	Original	2020-04-02	normal	Stretches of NNNs (3.32% of overall sequence). NSP11 is missing.	Human
+EPI_ISL_419488	Original	2020-04-02	normal	Stretches of NNNs (4.21% of overall sequence). NSP11 is missing.	Human
+EPI_ISL_419487	Original	2020-04-02	normal	Stretches of NNNs (2.57% of overall sequence). NSP11 is missing.	Human
+EPI_ISL_419486	Original	2020-04-02	normal	Stretches of NNNs (1.22% of overall sequence). NSP11 is missing.	Human
+EPI_ISL_419485	Original	2020-04-02	normal	Stretches of NNNs (1.08% of overall sequence). NSP11 is missing.	Human
+EPI_ISL_419484	Original	2020-04-02	normal	Stretches of NNNs (1.28% of overall sequence).	Human
+EPI_ISL_419483	Original	2020-04-02	warn	Long stretches of NNNs (5.42% of overall sequence). NSP11 is missing.	Human
+EPI_ISL_419482	Original	2020-04-02	normal	Stretches of NNNs (2.44% of overall sequence). NSP11 is missing.	Human
+EPI_ISL_419481	Original	2020-04-02	warn	Long stretches of NNNs (6.04% of overall sequence). NSP11 is missing.	Human
+EPI_ISL_419480	Original	2020-04-02	normal	Stretches of NNNs (4.89% of overall sequence). NSP11 is missing.	Human
+EPI_ISL_419479	Original	2020-04-02	warn	Long stretches of NNNs (5.21% of overall sequence). NSP11 is missing.	Human
+EPI_ISL_419478	Original	2020-04-02	normal	Stretches of NNNs (1.36% of overall sequence). NSP11 is missing.	Human
+EPI_ISL_419477	Original	2020-04-02	normal	Stretches of NNNs (3.51% of overall sequence). NSP11 is missing.	Human
+EPI_ISL_419476	Original	2020-04-02	normal	Stretches of NNNs (3.42% of overall sequence). NSP11 is missing.	Human
+EPI_ISL_419475	Original	2020-04-02	warn	Long stretches of NNNs (5.44% of overall sequence). NSP11 is missing.	Human
+EPI_ISL_419474	Original	2020-04-02	normal		Human
+EPI_ISL_419473	Original	2020-04-02	normal	Stretches of NNNs (1.85% of overall sequence). NSP11 is missing.	Human
+EPI_ISL_419472	Original	2020-04-02	normal		Human
+EPI_ISL_419471	Original	2020-04-02	normal	Stretches of NNNs (3.52% of overall sequence). NSP11 is missing.	Human
+EPI_ISL_419470	Original	2020-04-02	normal	Stretches of NNNs (3.66% of overall sequence). NSP11 is missing.	Human
+EPI_ISL_419469	Original	2020-04-02	normal	Stretches of NNNs (2.91% of overall sequence). NSP11 is missing.	Human
+EPI_ISL_419468	Original	2020-04-02	normal	Stretches of NNNs (1.48% of overall sequence). NSP11 is missing.	Human
+EPI_ISL_419467	Original	2020-04-02	warn	Long stretches of NNNs (6.93% of overall sequence). NSP11 is missing.	Human
+EPI_ISL_419466	Original	2020-04-02	normal	Stretches of NNNs (2.69% of overall sequence). NSP11 is missing.	Human
+EPI_ISL_419465	Original	2020-04-02	normal	Stretches of NNNs (1.83% of overall sequence).	Human
+EPI_ISL_419464	Original	2020-04-02	normal	Stretches of NNNs (4.23% of overall sequence). NSP11 is missing.	Human
+EPI_ISL_419463	Original	2020-04-02	normal	Stretches of NNNs (2.02% of overall sequence). NSP11 is missing.	Human
+EPI_ISL_419462	Original	2020-04-02	normal	Stretches of NNNs (1.36% of overall sequence). NSP11 is missing.	Human
+EPI_ISL_419461	Original	2020-04-02	warn	Long stretches of NNNs (6.18% of overall sequence). NSP11 is missing.	Human
+EPI_ISL_419460	Original	2020-04-02	normal	Stretches of NNNs (2.38% of overall sequence). NSP11 is missing.	Human
+EPI_ISL_419459	Original	2020-04-02	normal	Stretches of NNNs (1.70% of overall sequence). NSP11 is missing.	Human
+EPI_ISL_419458	Original	2020-04-02	normal	Stretches of NNNs (4.48% of overall sequence). NSP11 is missing.	Human
+EPI_ISL_419457	Original	2020-04-02	warn	Long stretches of NNNs (6.63% of overall sequence). NSP11 is missing.	Human
+EPI_ISL_419456	Original	2020-04-02	warn	Long stretches of NNNs (16.61% of overall sequence). NSP11 is missing.	Human
+EPI_ISL_419455	Original	2020-04-02	normal	Stretches of NNNs (1.45% of overall sequence). NSP11 is missing.	Human
+EPI_ISL_419454	Original	2020-04-02	warn	Long stretches of NNNs (5.03% of overall sequence). NSP11 is missing.	Human
+EPI_ISL_419453	Original	2020-04-02	normal		Human
+EPI_ISL_419452	Original	2020-04-02	warn	Long stretches of NNNs (7.20% of overall sequence). NSP11 is missing.	Human
+EPI_ISL_419451	Original	2020-04-02	warn	Long stretches of NNNs (42.76% of overall sequence). NSP11 is missing. NSP10 is missing. NSP9 is missing. NSP15 is missing.	Human
+EPI_ISL_419450	Original	2020-04-02	normal	Stretches of NNNs (3.13% of overall sequence). NSP11 is missing.	Human
+EPI_ISL_419449	Original	2020-04-02	normal	Stretches of NNNs (1.05% of overall sequence).	Human
+EPI_ISL_419448	Original	2020-04-02	normal	Stretches of NNNs (1.05% of overall sequence).	Human
+EPI_ISL_419447	Original	2020-04-02	normal	Stretches of NNNs (2.37% of overall sequence). NSP11 is missing.	Human
+EPI_ISL_419446	Original	2020-04-02	normal	Stretches of NNNs (3.56% of overall sequence). NSP11 is missing.	Human
+EPI_ISL_419445	Original	2020-04-02	warn	Long stretches of NNNs (6.82% of overall sequence). NSP11 is missing.	Human
+EPI_ISL_419444	Original	2020-04-02	warn	Long stretches of NNNs (7.08% of overall sequence). Insertion of 1 nucleotide(s) found at refpos 6930 (FRAMESHIFT). Insertion of 1 nucleotides when compared to the reference sequence. NSP11 is missing. NS8 is missing. %UniqueMutations 0.29%.	Human
+EPI_ISL_419443	Original	2020-04-02	normal		Human
+EPI_ISL_419442	Original	2020-04-02	warn	Long stretches of NNNs (12.14% of overall sequence). Insertion of 1 nucleotide(s) found at refpos 16551 (FRAMESHIFT). Insertion of 1 nucleotides when compared to the reference sequence. NSP11 is missing. NSP1 is missing. NSP13 is missing. %UniqueMutations 0.08%.	Human
+EPI_ISL_419441	Original	2020-04-02	warn	Long stretches of NNNs (5.25% of overall sequence). NSP11 is missing.	Human
+EPI_ISL_419440	Original	2020-04-02	normal		Human
+EPI_ISL_419439	Original	2020-04-02	normal		Human
+EPI_ISL_419438	Original	2020-04-02	normal		Human
+EPI_ISL_419437	Original	2020-04-02	normal	Stretches of NNNs (4.84% of overall sequence). NSP11 is missing.	Human
+EPI_ISL_419436	Original	2020-04-02	normal	Stretches of NNNs (1.23% of overall sequence). NSP11 is missing.	Human
+EPI_ISL_419435	Original	2020-04-02	warn	Long stretches of NNNs (6.48% of overall sequence). Insertion of 1 nucleotide(s) found at refpos 6700 (FRAMESHIFT). Insertion of 1 nucleotide(s) found at refpos 7278 (FRAMESHIFT). Insertion of 1 nucleotide(s) found at refpos 10046 (FRAMESHIFT). Insertion of 3 nucleotides when compared to the reference sequence. NSP11 is missing. NSP14 is missing.	Human
+EPI_ISL_419434	Original	2020-04-02	normal		Human
+EPI_ISL_419433	Original	2020-04-02	normal	Stretches of NNNs (3.34% of overall sequence). NSP11 is missing.	Human
+EPI_ISL_419432	Original	2020-04-02	warn	Long stretches of NNNs (5.85% of overall sequence). NSP11 is missing.	Human
+EPI_ISL_419431	Original	2020-04-02	normal	Stretches of NNNs (3.91% of overall sequence). NSP11 is missing.	Human
+EPI_ISL_419430	Original	2020-04-02	normal	Stretches of NNNs (4.86% of overall sequence). NSP11 is missing.	Human
+EPI_ISL_419429	Original	2020-04-02	warn	Long stretches of NNNs (7.82% of overall sequence). Insertion of 1 nucleotide(s) found at refpos 10919 (FRAMESHIFT). Insertion of 1 nucleotides when compared to the reference sequence. NSP11 is missing. M is missing. NSP5 is missing. NSP14 is missing.	Human
+EPI_ISL_419428	Original	2020-04-02	normal		Human
+EPI_ISL_419427	Original	2020-04-02	warn	Long stretches of NNNs (14.57% of overall sequence). Insertion of 1 nucleotide(s) found at refpos 7926 (FRAMESHIFT). Insertion of 1 nucleotides when compared to the reference sequence. NSP11 is missing. NSP1 is missing. NSP6 is missing.	Human
+EPI_ISL_419426	Original	2020-04-02	normal	Stretches of NNNs (4.95% of overall sequence). NSP11 is missing.	Human
+EPI_ISL_419425	Original	2020-04-02	normal		Human
+EPI_ISL_419424	Original	2020-04-02	normal		Human
+EPI_ISL_419423	Original	2020-04-02	warn	Long stretches of NNNs (5.67% of overall sequence). NSP11 is missing.	Human
+EPI_ISL_419422	Original	2020-04-02	normal		Human
+EPI_ISL_419421	Original	2020-04-02	normal		Human
+EPI_ISL_419420	Original	2020-04-02	normal		Human
+EPI_ISL_419419	Original	2020-04-02	warn	Long stretches of NNNs (15.20% of overall sequence). NSP11 is missing. NSP15 is missing. %UniqueMutations 0.72%.	Human
+EPI_ISL_419418	Original	2020-04-02	normal		Human
+EPI_ISL_419417	Original	2020-04-02	warn	Long stretches of NNNs (5.09% of overall sequence). NSP11 is missing.	Human
+EPI_ISL_419416	Original	2020-04-02	warn	Long stretches of NNNs (5.42% of overall sequence). NSP11 is missing.	Human
+EPI_ISL_419415	Original	2020-04-02	warn	Long stretches of NNNs (10.96% of overall sequence). NSP11 is missing. NS7b is missing.	Human
+EPI_ISL_419414	Original	2020-04-02	warn	Long stretches of NNNs (5.54% of overall sequence). NSP11 is missing.	Human
+EPI_ISL_419413	Original	2020-04-02	normal	Stretches of NNNs (3.13% of overall sequence). NSP11 is missing.	Human
+EPI_ISL_419412	Original	2020-04-02	normal		Human
+EPI_ISL_419411	Original	2020-04-02	normal	Stretches of NNNs (2.98% of overall sequence). NSP16 is missing.	Human
+EPI_ISL_419410	Original	2020-04-02	warn	Long stretches of NNNs (8.72% of overall sequence). NSP11 is missing.	Human
+EPI_ISL_419409	Original	2020-04-02	normal		Human
+EPI_ISL_419408	Original	2020-04-02	warn	Long stretches of NNNs (6.53% of overall sequence). NSP11 is missing.	Human
+EPI_ISL_419407	Original	2020-04-02	normal		Human
+EPI_ISL_419406	Original	2020-04-02	normal		Human
+EPI_ISL_419405	Original	2020-04-02	normal	Stretches of NNNs (1.73% of overall sequence). Insertion of 1 nucleotide(s) found at refpos 19343 (FRAMESHIFT). Insertion of 1 nucleotides when compared to the reference sequence. NSP11 is missing. %UniqueMutations 0.07%.	Human
+EPI_ISL_419404	Original	2020-04-02	normal	Stretches of NNNs (3.33% of overall sequence). NSP11 is missing.	Human
+EPI_ISL_419403	Original	2020-04-02	warn	Long stretches of NNNs (5.84% of overall sequence). NSP11 is missing.	Human
+EPI_ISL_419402	Original	2020-04-02	normal	Stretches of NNNs (4.46% of overall sequence). NSP11 is missing.	Human
+EPI_ISL_419401	Original	2020-04-02	warn	Long stretches of NNNs (8.78% of overall sequence). NSP11 is missing.	Human
+EPI_ISL_419400	Original	2020-04-02	normal	Stretches of NNNs (4.36% of overall sequence). NSP11 is missing.	Human
+EPI_ISL_419399	Original	2020-04-02	normal		Human
+EPI_ISL_419398	Original	2020-04-02	warn	Long stretches of NNNs (10.12% of overall sequence). NS7a is missing. NSP11 is missing. %UniqueMutations 0.16%.	Human
+EPI_ISL_419397	Original	2020-04-02	normal		Human
+EPI_ISL_419396	Original	2020-04-02	normal		Human
+EPI_ISL_419395	Original	2020-04-02	normal		Human
+EPI_ISL_419394	Original	2020-04-02	normal		Human
+EPI_ISL_419393	Original	2020-04-02	normal		Human
+EPI_ISL_419392	Original	2020-04-02	normal		Human
+EPI_ISL_419391	Original	2020-04-02	normal		Human
+EPI_ISL_419390	Original	2020-04-02	normal		Human
 EPI_ISL_419388	Original	2020-04-02	normal		Human
 EPI_ISL_418285	Original	2020-03-30	normal	Stretches of NNNs (3.11% of overall sequence).	Human
-EPI_ISL_419387	original	2020-04-02	normal		Human
 EPI_ISL_419386	Original	2020-04-02	normal		Human
 EPI_ISL_419313	Original	2020-04-02	normal	Gap of 15 nucleotides in NSP4 region and 21 nucleotides in NSP14 when compared to the reference sequence. %UniqueMutations 0.12%.	Human
 EPI_ISL_419311	Original	2020-04-02	normal		Human
@@ -2374,7 +2592,6 @@ EPI_ISL_415594	Original	2020-03-18	normal		Human
 EPI_ISL_415595	Original	2020-03-18	normal		Human
 EPI_ISL_415596	Original	2020-03-18	normal		Human
 EPI_ISL_415597	Original	2020-03-18	normal		Human
-EPI_ISL_415598	Original	2020-03-18	normal		Human
 EPI_ISL_415598	Original	2020-03-18	normal		Human
 EPI_ISL_415605	Original	2020-03-18	normal		Human
 EPI_ISL_415606	Original	2020-03-18	normal		Human
