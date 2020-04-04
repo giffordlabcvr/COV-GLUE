@@ -34,6 +34,12 @@ covGlueSanitisedAlignmentWholeGenome.fasta
 # last coding region (ORF 10)
 covGlueSanitisedAlignmentCodingSpanningRegion.fasta
 
+# Constrained nucleotide alignments for each of the coding regions NSP1, NSP2, etc.
+covConstrainedAlignment_<region>.fna
+
+# Constrained amino acid alignments for each of the coding regions NSP1, NSP2, etc.
+covConstrainedAlignment_<region>.faa
+
 # The CoV-GLUE "global reference tree as a FigTree file with 
 # integrated metadata http://cov-glue.cvr.gla.ac.uk/#/globalRefTree
 covGlueReferenceFigTree.nexus
@@ -90,11 +96,11 @@ longest_n_run
 num_bivalent_ambigs
 # Number of IUPAC ambiguity codes with 3 values in the sequence
 num_trivalent_ambigs
-# Number of hyphen (gap characters) in the sequence, these would normally be removed
+# Number of hyphen (gap characters) in the original sequence, these would normally be removed
 num_hyphens
-# Number of whitespace characters in the sequence, these would normally be removed
+# Number of whitespace characters in the original sequence, these would normally be removed
 num_whitespace
-# Number of other non-FASTA characters in the sequence, these would normally be removed
+# Number of other non-FASTA characters in the original sequence, these would normally be removed
 num_other
 # Boolean: did the sequence contain non-FASTA characters that were removed without
 # a specific rule for this sequence?
