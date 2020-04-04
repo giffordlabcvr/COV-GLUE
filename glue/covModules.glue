@@ -1,6 +1,5 @@
 # Basic modules
 
-create module --fileName modules/covGisaidFastaImporter.xml
 create module --fileName modules/covGisaidAcknowledgementsTextFilePopulator.xml
 create module --fileName modules/covGisaidMetadataTextFilePopulator.xml
 create module --fileName modules/covFlagsTextFilePopulator.xml

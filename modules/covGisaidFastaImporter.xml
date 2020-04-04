@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<fastaImporter>
-	<sourceName>cov-gisaid</sourceName>
-	<idParser>
-		<matchPattern>(EPI_ISL_\d+)</matchPattern>
-	</idParser>
-</fastaImporter>
