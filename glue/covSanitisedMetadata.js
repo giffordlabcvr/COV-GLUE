@@ -27,7 +27,14 @@ var tabularData = glue.command(["list", "sequence",
 	"include_in_ref_tree", 
 	"cdhit_cluster", 
 	"is_l_lineage",
-	
+    "num_ns",
+    "longest_n_run",
+    "num_bivalent_ambigs",
+    "num_trivalent_ambigs",
+    "num_hyphens",
+    "num_whitespace",
+    "num_other",
+    "uncorrected_illegals",
 	]);
 
 glue.inMode("module/tabularUtilityTab", function() {

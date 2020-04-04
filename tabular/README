@@ -34,7 +34,7 @@ covGlueSanitisedAlignmentWholeGenome.fasta
 # last coding region (ORF 10)
 covGlueSanitisedAlignmentCodingSpanningRegion.fasta
 
-# The CoV-GLUE "global reference tree", as a FigTree file with 
+# The CoV-GLUE "global reference tree as a FigTree file with 
 # integrated metadata http://cov-glue.cvr.gla.ac.uk/#/globalRefTree
 covGlueReferenceFigTree.nexus
 
@@ -82,4 +82,24 @@ cdhit_cluster
 # if true, belongs to the clade characterised by amino acid L at ORF8 codon 84
 # if false, belongs to the clade characterised by amino acid S at ORF8 codon 84
 is_l_lineage
+# Number of n characters in the sequence
+num_ns
+# Longest run of consecutive Ns in the sequence
+longest_n_run
+# Number of IUPAC ambiguity codes with 2 values in the sequence
+num_bivalent_ambigs
+# Number of IUPAC ambiguity codes with 3 values in the sequence
+num_trivalent_ambigs
+# Number of hyphen (gap characters) in the sequence, these would normally be removed
+num_hyphens
+# Number of whitespace characters in the sequence, these would normally be removed
+num_whitespace
+# Number of other non-FASTA characters in the sequence, these would normally be removed
+num_other
+# Boolean: did the sequence contain non-FASTA characters that were removed without
+# a specific rule for this sequence?
+uncorrected_illegals
+
+
+
 
