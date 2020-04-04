@@ -4,10 +4,12 @@ run file glue/covInitProject.glue
 
 project cov
 
-  # Import sequences from non-version-controlled multi-fasta
-  module covGisaidFastaImporter import -f sequences/gisaid_cov2020_sequences.fasta
-  # save sequences back to disk in single fastas
-  export source -p sources cov-gisaid
+  # Clean up sequences from non-version-controlled single fastas which were produced
+  # by splitGisaidFasta.sh into and save in single fastas in sources/cov-gisaid, also save sequence stats file in tabular.
+  run script glue/covGisaidFastaInitialCleanup.js
+  
+  # import cov-gisaid individual fastas.
+  import source sources/cov-gisaid
 
   # other sequence related data
   run file glue/covLoadSequenceData.glue
