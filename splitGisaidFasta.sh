@@ -1,3 +1,6 @@
+rm -rf sequences/single_fastas
+mkdir -p sequences/single_fastas
+
 regex=".*(EPI_ISL_[0-9]+).*"
 while read line
 do
@@ -15,4 +18,4 @@ do
     else
 	    echo $line >> $outfile
     fi
-done < sequences/gisaid_cov202sequences.fasta
+done < sequences/gisaid_cov2020_sequences.fasta

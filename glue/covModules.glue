@@ -4,6 +4,7 @@ create module --fileName modules/covGisaidFastaImporter.xml
 create module --fileName modules/covGisaidAcknowledgementsTextFilePopulator.xml
 create module --fileName modules/covGisaidMetadataTextFilePopulator.xml
 create module --fileName modules/covFlagsTextFilePopulator.xml
+create module --fileName modules/covSeqStatsTextFilePopulator.xml
 create module --fileName modules/covMafftAligner.xml
 create module --fileName modules/covBlastFastaAlignmentImporter.xml
 create module --fileName modules/covRaxmlPhylogenyGenerator.xml

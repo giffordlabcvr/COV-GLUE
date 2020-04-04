@@ -5,25 +5,22 @@ var seqStatsMap = {};
 
 var fastaFiles = glue.getTableColumn(glue.command(["file-util", "list-files", "--directory", "sequences/single_fastas/"]), "fileName");
 
+var totalNumFiles = fastaFiles.length;
+var filesProcessed = 0;
 
 _.each(fastaFiles, function(fastaFile) {
 	var fastaString = glue.command(["file-util", "load-string", "sequences/single_fastas/"+fastaFile]).fileUtilLoadStringResult.loadedString;
 	var fastaLines = fastaString.split(/\r\n|\r|\n/g);
 
+	if(filesProcessed % 500 == 0) {
+		glue.logInfo("Character correction / stats applied to "+filesProcessed+" of "+totalNumFiles);
+	}
+	filesProcessed++;
+	
 	var cleanedUpLines = [];
 
 	var seqID = null;
-	var seqStats = {
-			num_ns: 0,
-			longest_n_run: 0,
-			num_bivalent_ambigs: 0,
-			num_trivalent_ambigs: 0,
-			num_hyphens: 0,
-			num_whitespace: 0,
-			num_other: 0,
-			illegalFastaChars: []
-	};
-	seqStatsMap[seqID] = seqStats;
+	var seqStats = null;
 	
 	var ntPos = 1;
 
@@ -33,7 +30,18 @@ _.each(fastaFiles, function(fastaFile) {
 			return;
 		} else if(trimmedLine[0] == '>') {
 			seqID = trimmedLine.substring(1);
-			seqStats.sequenceID = seqID;
+			seqStats = {
+					num_ns: 0,
+					longest_n_run: 0,
+					num_bivalent_ambigs: 0,
+					num_trivalent_ambigs: 0,
+					num_hyphens: 0,
+					num_whitespace: 0,
+					num_other: 0,
+					uncorrected_illegals: false,
+					illegalFastaChars: []
+			};
+			seqStatsMap[seqID] = seqStats;
 		} else {
 			var cleanedUpChars = [];
 			var currentNRunLength;
@@ -58,7 +66,7 @@ _.each(fastaFiles, function(fastaFile) {
 						seqStats.num_trivalent_ambigs++;
 						cleanedUpChar = char.toUpperCase();
 					} else {
-						// illegal in some sense.
+						// unsual character in some sense.
 						var type;
 						if(char == "-") {
 							seqStats.num_hyphens++;
@@ -73,7 +81,7 @@ _.each(fastaFiles, function(fastaFile) {
 						var asciiCode = char.charCodeAt(0);
 						// attempt to apply corrections from rules
 						var correctionApplied = false;
-						var sequenceCorrections = correctionsMap[seqID].corrections;
+						var sequenceCorrections = correctionsMap[seqID];
 						if(sequenceCorrections != null) {
 							var asciiCodeCorrection = sequenceCorrections[asciiCode];
 							if(asciiCodeCorrection != null && 
@@ -82,8 +90,12 @@ _.each(fastaFiles, function(fastaFile) {
 								correctionApplied = true;
 							} 
 						}
-						// if no correction applied, make record of illegal character
-						if(!correctionApplied) {
+						// if no correction applied, unusual character will be skipped
+						// if not hyphen, the 
+						// uncorrected_illegal flag will be set to true.
+						// we also make record of illegal character which could be output somewhere else.
+						if(type != "hyphen" && !correctionApplied) {
+							seqStats.uncorrected_illegals = true;
 							var illegalFastaChar = _.find(seqStats.illegalFastaChars, function(ifc) {
 								return ifc.asciiCode == asciiCode;
 							});
@@ -114,6 +126,23 @@ _.each(fastaFiles, function(fastaFile) {
 	glue.command(["file-util", "save-string", cleanedUpFastaString, "sources/cov-gisaid/"+seqID+".fasta"]);
 });
 
-var seqStatsLines = ["num_ns\tlongest_n_run\tnum_bivalent_ambigs\tnum_trivalent_ambigs\tnum_hyphens\tnum_whitespace\tnum_other\n"];
+var seqStatsLines = ["sequenceID\tnum_ns\tlongest_n_run\tnum_bivalent_ambigs\tnum_trivalent_ambigs\tnum_hyphens\tnum_whitespace\tnum_other\tuncorrected_illegals\n"];
 
-// seqStatsMap
+_.each(_.pairs(seqStatsMap), function(pair) {
+	var sequenceID = pair[0];
+	var seqStats = pair[1];
+	var line = sequenceID+"\t"+
+		seqStats.num_ns+"\t"+
+		seqStats.longest_n_run+"\t"+
+		seqStats.num_bivalent_ambigs+"\t"+
+		seqStats.num_trivalent_ambigs+"\t"+
+		seqStats.num_hyphens+"\t"+
+		seqStats.num_whitespace+
+		"\t"+seqStats.num_other+
+		"\t"+seqStats.uncorrected_illegals+
+		"\n";
+	seqStatsLines.push(line);
+});
+
+glue.command(["file-util", "save-string", seqStatsLines.join(""), "tabular/gisaidSeqCharacterStats.txt"]);
+

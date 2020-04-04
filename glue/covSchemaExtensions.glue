@@ -41,6 +41,14 @@ schema-project cov
     create field is_l_lineage BOOLEAN
     create field analyse_variation BOOLEAN
     create field cdhit_cluster INTEGER
+    create field num_ns INTEGER
+    create field longest_n_run INTEGER
+    create field num_bivalent_ambigs INTEGER
+    create field num_trivalent_ambigs INTEGER
+    create field num_hyphens INTEGER
+    create field num_whitespace INTEGER
+    create field num_other INTEGER
+    create field uncorrected_illegals BOOLEAN
     exit
 
   table feature

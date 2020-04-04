@@ -11,6 +11,7 @@
   console set cmd-result-format tab
   module covGisaidAcknowledgementsTextFilePopulator populate --fileName tabular/gisaid_cov2020_acknowledgement_table.txt
   module covGisaidMetadataTextFilePopulator populate --fileName tabular/gisaid_metadata.txt
+  module covSeqStatsTextFilePopulator populate -f tabular/gisaidSeqCharacterStats.txt
   console unset cmd-result-format
 
   # deals with case where FASTA is ahead of either metadata (submission_year = null) or acknowledgements (isolate = null).
