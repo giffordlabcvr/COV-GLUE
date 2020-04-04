@@ -130,6 +130,9 @@ function createDeletion(deletionObj) {
 		if(deletionObj.parentFeature == "ORF_1a") {
 			glue.command(["set", "field", "parent_feature", "ORF_1a"]);
 			var parent1aDelObj = orf1aDeletions[deletionObj.refNtStart+":"+deletionObj.refNtEnd];
+			if(parent1aDelObj == null) {
+				glue.logInfo("parent1aDelObj == null for deletionObj", deletionObj);
+			}
 			parent1aDelObj.skipCreation = true;
 			var parent1abDelObj = orf1abDeletions[deletionObj.refNtStart+":"+deletionObj.refNtEnd];
 			parent1abDelObj.skipCreation = true;
