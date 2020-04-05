@@ -101,7 +101,8 @@ num_other
 # Boolean: did the sequence contain non-FASTA characters that were removed without
 # a specific rule for this sequence?
 uncorrected_illegals
-
-
+# Number of unique SNPs the sequence has at its non-gap/non-N locations,
+# relative to Wuhan-Hu-1. 
+num_unique_snps
 
 

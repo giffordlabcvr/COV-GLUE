@@ -49,6 +49,7 @@ schema-project cov
     create field num_whitespace INTEGER
     create field num_other INTEGER
     create field uncorrected_illegals BOOLEAN
+    create field num_unique_snps INTEGER
     exit
 
   table feature

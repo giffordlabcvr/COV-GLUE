@@ -27,6 +27,10 @@
 		<annotationName>cdhit_cluster</annotationName>
 		<template>${renderNestedProperty('sequence.cdhit_cluster')}</template>
 	</freemarkerAnnotationGenerator>
+	<freemarkerAnnotationGenerator>
+		<annotationName>num_unique_snps</annotationName>
+		<template>${renderNestedProperty('sequence.num_unique_snps')}</template>
+	</freemarkerAnnotationGenerator>
 	<figtreeProperty type="integer" name="tipLabels.fontSize">13</figtreeProperty>
 	<figtreeProperty name="tipLabels.colorAttribute">region</figtreeProperty>
 	<figtreeProperty name="tipLabels.displayAttribute">isolate</figtreeProperty>

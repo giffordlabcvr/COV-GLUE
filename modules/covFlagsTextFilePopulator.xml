@@ -36,5 +36,10 @@
         <property>orf_8_aa_84</property>
         <nullRegex>-</nullRegex>
     </textFileColumn>
+    <textFileColumn>
+        <header>num_unique_snps</header>
+        <property>num_unique_snps</property>
+        <nullRegex>-</nullRegex>
+    </textFileColumn>
     <skipMissing>true</skipMissing>
 </textFilePopulator>

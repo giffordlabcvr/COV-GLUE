@@ -22,6 +22,9 @@ project cov
 
   alignment AL_GISAID_CONSTRAINED export command-document -f alignments/AL_GISAID_CONSTRAINED.json
 
+  # count unique SNPs, will be saved as a flag and also is used to select ref tree candidates.
+  run script glue/covCountUniqueSNPs.js
+
   run file glue/covSetSequenceFlags.glue
   
   # capture this part in its own script as we may want to rerun it after

@@ -34,6 +34,7 @@ var tabularData = glue.command(["list", "sequence",
     "num_whitespace",
     "num_other",
     "uncorrected_illegals",
+    "num_unique_snps"
 	]);
 
 glue.inMode("module/tabularUtilityTab", function() {

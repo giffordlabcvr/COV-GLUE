@@ -11,24 +11,11 @@
   # GISAID sequences where host_species != "Human" excluded from the reference tree except
   multi-set field sequence -w "(host_species = null or !(host_species = 'Human'))" ref_tree_candidate false
 
-  # exclude Shenzhen/SZTH-001 Shenzhen/SZTH-004 following NextStrain and various virological.org posts which. 
-  # think they have sequencing errors (e.g. http://virological.org/t/phylodynamic-analysis-129-genomes-24-feb-2020/356/4)
-  multi-set field sequence -w "sequenceID in ('EPI_ISL_406592', 'EPI_ISL_406595')" ref_tree_candidate false
-
   # exclude sequences with "warn" status on GISAID, this implies quality issues, usually multiple or long runs of NNNs
   multi-set field sequence -w "gisaid_status_code = 'warn'" ref_tree_candidate false
 
-  # exclude USA/WA-UW65/2020 following nextstrain. On a long branch on its own, with lots of unique mutations.
-  # need to revisit these / automate error detection
-  sequence cov-gisaid EPI_ISL_415593 set field ref_tree_candidate false
-
-  # exclude USA/CA-CDPH-UC28/2020. On a long branch on its own, with lots of unique mutations.
-  # need to revisit these / automate error detection
-  sequence cov-gisaid EPI_ISL_417332 set field ref_tree_candidate false
-
-  # exclude Turkey/6224-Ankara1034/2020. On a long branch on its own, with lots of unique mutations.
-  # need to revisit these / automate error detection
-  sequence cov-gisaid EPI_ISL_417413 set field ref_tree_candidate false
+  # exclude sequences with more than 10 unique SNPs.
+  multi-set field sequence -w "num_unique_snps > 10" ref_tree_candidate false
 
   # exclude EPI_ISL_410545 (Vero E6 cell line of Italian isolate INMI1) in favour of directly sequenced clinical sample EPI_ISL_410546
   sequence cov-gisaid EPI_ISL_410545 set field ref_tree_candidate false
