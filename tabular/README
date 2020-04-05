@@ -84,10 +84,6 @@ include_in_ref_tree
 # for those sequences where include_in_ref_tree == true, 
 # number of cluster which CD-HIT-EST assigned the sequence to
 cdhit_cluster 
-# most coarse-grained lineage assignment for the pandemic.
-# if true, belongs to the clade characterised by amino acid L at ORF8 codon 84
-# if false, belongs to the clade characterised by amino acid S at ORF8 codon 84
-is_l_lineage
 # Number of n characters in the sequence
 num_ns
 # Longest run of consecutive Ns in the sequence

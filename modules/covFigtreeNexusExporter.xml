@@ -20,8 +20,8 @@
 		<template>${renderNestedProperty('sequence.m49_country.m49_region.id')}</template>
 	</freemarkerAnnotationGenerator>
 	<freemarkerAnnotationGenerator>
-		<annotationName>is_l_lineage</annotationName>
-		<template>${renderNestedProperty('sequence.is_l_lineage')}</template>
+		<annotationName>orf_8_aa_84</annotationName>
+		<template>${renderNestedProperty('sequence.orf_8_aa_84')}</template>
 	</freemarkerAnnotationGenerator>
 	<freemarkerAnnotationGenerator>
 		<annotationName>cdhit_cluster</annotationName>

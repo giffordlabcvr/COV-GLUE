@@ -32,8 +32,8 @@
         <nullRegex>-</nullRegex>
     </textFileColumn>
     <textFileColumn>
-        <header>is_l_lineage</header>
-        <property>is_l_lineage</property>
+        <header>orf_8_aa_84</header>
+        <property>orf_8_aa_84</property>
         <nullRegex>-</nullRegex>
     </textFileColumn>
     <skipMissing>true</skipMissing>

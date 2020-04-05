@@ -9,10 +9,11 @@ module covPhyloUtility
     -o trees/gisaidMidpointRooted.tree NEWICK_BOOTSTRAPS
   exit
   
-# reroot using L lineage (ORF8 L84S) as outgroup
+# reroot using S lineage (ORF8 L84S) as outgroup (maximally, it may not work in the strict case)
 module covPhyloUtility
   reroot-alignment-phylogeny AL_GISAID_CONSTRAINED phylogeny \
-    -w "sequence.include_in_ref_tree = true and sequence.is_l_lineage = true" \
+    --whereClause "sequence.include_in_ref_tree = true and sequence.orf_8_aa_84 = 'L'" \
+    --exWhereClause "sequence.include_in_ref_tree = true and sequence.orf_8_aa_84 = 'S'" \
     -o trees/gisaidOutgroupRooted.tree NEWICK_BOOTSTRAPS
   exit
 
