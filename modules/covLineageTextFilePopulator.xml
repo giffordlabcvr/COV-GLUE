@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<textFilePopulator>
+    <columnDelimiterRegex>\t</columnDelimiterRegex>
+    <textFileColumn>
+        <identifier>true</identifier>
+        <header>gisaid</header>
+        <property>sequenceID</property>
+    </textFileColumn>
+    <textFileColumn>
+        <header>lineage</header>
+        <property>rambaut_lineage</property>
+    </textFileColumn>
+    <textFileColumn>
+        <header>representative</header>
+        <property>rambaut_representative</property>
+        <valueConverter>
+            <matchPattern>^1$</matchPattern>
+            <outputTemplate>true</outputTemplate>
+        </valueConverter>
+    </textFileColumn>
+    <skipMissing>true</skipMissing>
+</textFilePopulator>

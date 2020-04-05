@@ -1,0 +1,4 @@
+multi-unset field sequence -a rambaut_representative
+multi-unset field sequence -a rambaut_lineage
+module covLineageTextFilePopulator populate -f tabular/gisaid_lineages.txt
+multi-set field sequence -w "rambaut_lineage != null and rambaut_representative = null" rambaut_representative false

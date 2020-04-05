@@ -49,6 +49,8 @@ schema-project cov
     create field num_whitespace INTEGER
     create field num_other INTEGER
     create field uncorrected_illegals BOOLEAN
+    create field rambaut_lineage VARCHAR
+    create field rambaut_representative BOOLEAN
     exit
 
   table feature

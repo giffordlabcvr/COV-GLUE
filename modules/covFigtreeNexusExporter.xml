@@ -27,6 +27,14 @@
 		<annotationName>cdhit_cluster</annotationName>
 		<template>${renderNestedProperty('sequence.cdhit_cluster')}</template>
 	</freemarkerAnnotationGenerator>
+	<freemarkerAnnotationGenerator>
+		<annotationName>rambaut_lineage</annotationName>
+		<template>${renderNestedProperty('sequence.rambaut_lineage')}</template>
+	</freemarkerAnnotationGenerator>
+	<freemarkerAnnotationGenerator>
+		<annotationName>rambaut_representative</annotationName>
+		<template>${renderNestedProperty('sequence.rambaut_representative')}</template>
+	</freemarkerAnnotationGenerator>
 	<figtreeProperty type="integer" name="tipLabels.fontSize">13</figtreeProperty>
 	<figtreeProperty name="tipLabels.colorAttribute">region</figtreeProperty>
 	<figtreeProperty name="tipLabels.displayAttribute">isolate</figtreeProperty>
