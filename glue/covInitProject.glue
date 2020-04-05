@@ -1,6 +1,6 @@
 delete project cov
 
-create project cov "A GLUE project for Coronavirus (cov)" --minVersion 1.1.89
+create project cov "A GLUE project for Coronavirus (cov)" --minVersion 1.1.90
 
 run file glue/covSchemaExtensions.glue
  
