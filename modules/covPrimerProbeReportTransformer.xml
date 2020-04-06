@@ -1,5 +1,5 @@
 <freemarkerDocTransformer>
 	<templateFileName>covPrimerProbeReportTransformer.ftlh</templateFileName>
 	<resourceFileName>covPrimerProbeReportTransformer.css</resourceFileName>
-	<resourceFileName>cvrLogo.jpg</resourceFileName>
+	<resourceFileName>cvrLogo.png</resourceFileName>
 </freemarkerDocTransformer>

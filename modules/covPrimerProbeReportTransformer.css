@@ -54,7 +54,9 @@ td, th {
 #logo img {
 	display: inline-block;
 	float: right;
-	height:136px;
+	height:71px;
+	padding-left:40px;
+	padding-top:15px;
 }
 
 

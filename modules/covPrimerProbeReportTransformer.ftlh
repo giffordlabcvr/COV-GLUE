@@ -8,7 +8,7 @@ ${getResourceAsString('covPrimerProbeReportTransformer.css')?no_esc}
 <body>
 
 <div id="logo">
-	<img id="cvrLogo" alt="CVR logo" src="data:image/jpeg;base64,${getResourceAsBase64('cvrLogo.jpg')}" />
+	<img id="cvrLogo" alt="CVR logo" src="data:image/jpeg;base64,${getResourceAsBase64('cvrLogo.png')}" />
 </div>
 
 <div id="title">
@@ -54,30 +54,31 @@ ${getResourceAsString('covPrimerProbeReportTransformer.css')?no_esc}
 <tbody>
 <#list covPPReport.assays as assay>
 <tr>
-<#if assay.anyIssues>
-<td rowspan="${assay.ppObjs?size + 1}">
+<#if assay.primersWithIssues gt 0>
+<td rowspan="${assay.primersWithIssues}">
 <#else>
 <td>
 </#if>
 <a href="${assay.url}" target="_blank">${assay.organisation}</a>
 </td>
-<#if assay.anyIssues>
-<td rowspan="${assay.ppObjs?size + 1}">
+<#if assay.primersWithIssues gt 0>
+<td rowspan="${assay.primersWithIssues}">
 <#else>
 <td>
 </#if>
 ${assay.display_name}</td>
-<#if !assay.anyIssues>
+<#if assay.primersWithIssues = 0>
 <td colspan="4">No issues detected</td>
-</#if>
 </tr>
-<#if assay.anyIssues>
-<#list assay.ppObjs as ppObj>
-<tr>
-<#if !ppObj.anyIssues>
-<td>${ppObj.display_name}</td>
-<td colspan="3">No issues detected</td>
 <#else>
+<#list assay.ppObjs as ppObj>
+<#assign firstIssueFound = false>
+<#if ppObj.anyIssues>
+<#if firstIssueFound>
+<tr>
+<#else>
+<#assign firstIssueFound = true>
+</#if>
 <td class="issue">${ppObj.display_name}</td>
 <td class="issue">${ppObj.ref_start?c}-${ppObj.ref_end?c}</td>
 <td class="issue">${ppObj.sequence_to_scan}</td>
@@ -89,8 +90,8 @@ ${assay.display_name}</td>
 <span>${displayIssue}</span>
 </#list>
 </td>
-</#if>
 </tr>
+</#if>
 </#list>
 </#if>
 </#list>

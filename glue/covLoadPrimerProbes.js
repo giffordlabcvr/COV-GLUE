@@ -1,6 +1,5 @@
 glue.command(["multi-unset", "link-target", "cov_primer_probe", "-a", "cov_primer_probe_assay"]);
-glue.command(["multi-unset", "link-target", "cov_primer_probe", "-a", "seq_match"]);
-glue.command(["multi-unset", "link-target", "cov_primer_probe", "-a", "seq_pullout"]);
+glue.command(["multi-unset", "link-target", "variation", "-a", "cov_pp_seq_mismatch"]);
 glue.command(["multi-unset", "link-target", "cov_primer_probe", "-a", "seq_insertion"]);
 glue.command(["multi-unset", "link-target", "cov_primer_probe", "-a", "seq_deletion"]);
 glue.command(["multi-delete", "cov_primer_probe", "-a"]);
@@ -28,15 +27,15 @@ var ntCharToSubChars = {
 	"N": ["A", "C", "G", "T"]
 }
 
-// build map concrete / ambiguous NT chars to a regex of concrete / ambig chars which match them.
-var ntCharToRegex = {};
+//build map concrete / ambiguous NT chars to a list of concrete / ambig chars which match them.
+var ntCharToAllowed = {};
 
 _.each(_.pairs(ntCharToSubChars), function(pair) {
 	var ntChar = pair[0];
 	var subChars = pair[1];
-	var regex;
+	var allowed;
 	if(subChars.length == 1) {
-		regex = ntChar;
+		allowed = [ntChar];
 	} else {
 		var fullSubChars = subChars.slice(); // copy array
 		_.each(_.pairs(ntCharToSubChars), function(pair2) {
@@ -44,16 +43,28 @@ _.each(_.pairs(ntCharToSubChars), function(pair) {
 				fullSubChars.push(pair2[0]);
 			}
 		});
-		regex = "["+fullSubChars.join("")+"]";
+		allowed = fullSubChars;
 	}
-	ntCharToRegex[ntChar] = regex;
+	ntCharToAllowed[ntChar] = allowed;
 });
+
+var articPrimers;
 
 // load primers and probes from Nuno's table.
 glue.inMode("module/tabularUtilityTab", function() {
 	ppObjs = glue.tableToObjects(glue.command(["load-tabular", "tabular/faria_probes_primers/Primers_probes.txt"]));
+	articPrimers = glue.tableToObjects(glue.command(["load-tabular", "tabular/artic_primers/nCoV-2019_V3.tsv"]));
 });
 
+_.each(articPrimers, function(articPrimer) {
+	ppObjs.push({
+		"Assay": "nCoV-2019 nanopore primers V3",
+		"Organisation": "ARTIC Network", 
+		"Reference": "https://github.com/artic-network/artic-ncov2019",
+		"Name_primer_or_probe": articPrimer.name,
+		"Sequence" : articPrimer.seq
+	});
+});
 
 _.each(ppObjs, function(ppObj) {
 	var assayID = ppObj["Assay"].trim().replace(" ", "_");
@@ -98,8 +109,8 @@ _.each(ppObjs, function(ppObj) {
  	});
  	
  	// create "match anywhere" forward and reverse variations based on these regexes.
- 	var fwdVariationName = "cov_pp_seq_match_anywhere_fwd:"+ppID;
- 	var revVariationName = "cov_pp_seq_match_anywhere_rev:"+ppID;
+ 	var fwdVariationName = "cov_pp_match_fwd:"+ppID;
+ 	var revVariationName = "cov_pp_match_rev:"+ppID;
 	glue.inMode("reference/REF_MASTER_WUHAN_HU_1/feature-location/whole_genome", function() {
 		glue.command(["create", "variation", fwdVariationName, "-t", "nucleotideRegexPolymorphism", "--nucleotide", 1, 29903]);
 		glue.inMode("variation/"+fwdVariationName, function() {
@@ -115,7 +126,7 @@ _.each(ppObjs, function(ppObj) {
 	// and whether the primer is forward or reverse.
 	var fwdHitObjs;
 	var revHitObjs;
-	glue.inMode("alignment/AL_GISAID_CONSTRAINED/member/cov-gisaid/EPI_ISL_402125", function() {
+	glue.inMode("alignment/AL_GISAID_UNCONSTRAINED/member/cov-gisaid/EPI_ISL_402125", function() {
 		fwdHitObjs = glue.tableToObjects(glue.command(["variation", "scan", 
 			"-r", "REF_MASTER_WUHAN_HU_1", "-f", "whole_genome", 
 			"--whereClause", "name = '"+fwdVariationName+"'", "--showMatchesAsTable"]));
@@ -170,44 +181,39 @@ _.each(ppObjs, function(ppObj) {
 });
 
 var ppObjs = glue.tableToObjects(glue.command(["list", "custom-table-row", "cov_primer_probe", 
-	"id", "fwd_orientation", "ref_start", "ref_end", "sequence_fwd_regex", "sequence_rev_regex", "length"]));
+	"id", "sequence_to_scan", "fwd_orientation", "ref_start", "ref_end", "sequence_fwd_regex", "sequence_rev_regex", "length"]));
 
 _.each(ppObjs, function(ppObj) {
-	// create "sequence match" variation at specific location
- 	var matchVariationName = "cov_pp_seq_match:"+ppObj.id;
-	glue.inMode("reference/REF_MASTER_WUHAN_HU_1/feature-location/whole_genome", function() {
-		glue.command(["create", "variation", matchVariationName, "-t", "nucleotideRegexPolymorphism", 
-			"--nucleotide", ppObj.ref_start, ppObj.ref_end]);
-		glue.inMode("variation/"+matchVariationName, function() {
-			if(ppObj.fwd_orientation) {
-				glue.command(["set", "metatag", "REGEX_NT_PATTERN", ppObj.sequence_fwd_regex]);
-			} else {
-				glue.command(["set", "metatag", "REGEX_NT_PATTERN", ppObj.sequence_rev_regex]);
-			}
-			glue.command(["set", "link-target", "cov_pp_seq_match", 
-				"custom-table-row/cov_primer_probe/"+ppObj.id]);
+	// create single nucleotide mismatch variations.
+	// These look for a mismatch at a given single nucleotide location.
+	// Alignment must have succeeded for a certain flanking region on 
+	// either side to call the mismatch.
+	var ppSeqPos = 0;
+	var mismatchFlankingNts = 3; // this would mean 3 before, 3 after.
+	for(var ntLoc = ppObj.ref_start; ntLoc <= ppObj.ref_end; ntLoc++) {
+		var singleMismatchVariationName = "cov_pp_mismatch:"+ppObj.id+":"+ntLoc;
+		var seqToScanNt = ppObj.sequence_to_scan[ppSeqPos];
+		var dots = Array(mismatchFlankingNts+1).join(".");
+		var regex = dots+"[^"+ntCharToAllowed[seqToScanNt].join("")+"]"+dots;
+		glue.inMode("reference/REF_MASTER_WUHAN_HU_1/feature-location/whole_genome", function() {
+			glue.command(["create", "variation", singleMismatchVariationName, "-t", "nucleotideRegexPolymorphism", 
+				"--nucleotide", ntLoc-mismatchFlankingNts, ntLoc+mismatchFlankingNts]);
+			glue.inMode("variation/"+singleMismatchVariationName, function() {
+				glue.command(["set", "metatag", "REGEX_NT_PATTERN", regex]);
+				glue.command(["set", "link-target", "cov_pp_seq_mismatch", 
+					"custom-table-row/cov_primer_probe/"+ppObj.id]);
+			});
 		});
-	});
-	// create "sequence pullout" variation at specific location
-	// just pulls out whatever's there at that location.
- 	var pulloutVariationName = "cov_pp_seq_pullout:"+ppObj.id;
-	glue.inMode("reference/REF_MASTER_WUHAN_HU_1/feature-location/whole_genome", function() {
-		glue.command(["create", "variation", pulloutVariationName, "-t", "nucleotideRegexPolymorphism", 
-			"--nucleotide", ppObj.ref_start, ppObj.ref_end]);
-		glue.inMode("variation/"+pulloutVariationName, function() {
-			var dots = Array(ppObj.length+1).join(".");
-			glue.command(["set", "metatag", "REGEX_NT_PATTERN", dots]);
-			glue.command(["set", "link-target", "cov_pp_seq_pullout", 
-				"custom-table-row/cov_primer_probe/"+ppObj.id]);
-		});
-	});
-
+		ppSeqPos++;
+	}
+	
  	// create "sequence insertion" variation at specific location
  	var insertionVariationName = "cov_pp_seq_insertion:"+ppObj.id;
 	glue.inMode("reference/REF_MASTER_WUHAN_HU_1/feature-location/whole_genome", function() {
 		glue.command(["create", "variation", insertionVariationName, "-t", "nucleotideInsertion", 
 			"--nucleotide", ppObj.ref_start, ppObj.ref_end]);
 		glue.inMode("variation/"+insertionVariationName, function() {
+			glue.command(["set", "metatag", "ALLOW_PARTIAL_COVERAGE", "true"]);
 			glue.command(["set", "link-target", "cov_pp_seq_insertion", "custom-table-row/cov_primer_probe/"+ppObj.id]);
 		});
 	});
@@ -217,6 +223,7 @@ _.each(ppObjs, function(ppObj) {
 		glue.command(["create", "variation", deletionVariationName, "-t", "nucleotideDeletion", 
 			"--nucleotide", ppObj.ref_start, ppObj.ref_end]);
 		glue.inMode("variation/"+deletionVariationName, function() {
+			glue.command(["set", "metatag", "ALLOW_PARTIAL_COVERAGE", "true"]);
 			glue.command(["set", "link-target", "cov_pp_seq_deletion", "custom-table-row/cov_primer_probe/"+ppObj.id]);
 		});
 	});
@@ -233,7 +240,12 @@ ATTAAAGGTTTATACCTTCCCAGGTAACAAACCAACCAACTTTCGATCTCTTGTAGATCTGTTCTCTAAACGAACTTTAA
 function sequenceToRegex(sequence) {
 	var seqRegex = "";
 	for(var i = 0; i < sequence.length; i++) {
-		seqRegex += ntCharToRegex[sequence[i]];
+		var allowedChars = ntCharToAllowed[sequence[i]].join("");
+		if(allowedChars.length == 1) {
+			seqRegex += allowedChars;
+		} else {
+			seqRegex += "["+allowedChars+"]";
+		}
 	}
 	return seqRegex;
 }

@@ -162,6 +162,9 @@ schema-project cov
   # link from primer/probe to variation detecting a match
   create link cov_primer_probe -s seq_match variation -d cov_pp_seq_match -m ONE_TO_ONE
 
+  # link from primer/probe to variations each detecting a single point mismatch
+  create link cov_primer_probe -s seq_mismatch variation -d cov_pp_seq_mismatch -m ONE_TO_MANY
+
   # link from primer/probe to variation detecting a match
   create link cov_primer_probe -s seq_pullout variation -d cov_pp_seq_pullout -m ONE_TO_ONE
 

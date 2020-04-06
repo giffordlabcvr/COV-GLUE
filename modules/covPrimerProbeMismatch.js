@@ -76,15 +76,13 @@ function singleSequenceReport(fastaFilePath, queryName, queryNucleotides) {
 	
 	var rasVariationMatchDocument;
 	
-	var matchResults = variationMatchResults(queryNucleotides, queryToTargetRefSegs, targetRefName, "name like 'cov_pp_seq_match:%'");
-	var pulloutResults = variationMatchResults(queryNucleotides, queryToTargetRefSegs, targetRefName, "name like 'cov_pp_seq_pullout:%'");
+	var mismatchResults = variationMatchResults(queryNucleotides, queryToTargetRefSegs, targetRefName, "name like 'cov_pp_mismatch:%'");
 	var insertionResults = variationMatchResults(queryNucleotides, queryToTargetRefSegs, targetRefName, "name like 'cov_pp_seq_insertion:%'");
 	var deletionResults = variationMatchResults(queryNucleotides, queryToTargetRefSegs, targetRefName, "name like 'cov_pp_seq_deletion:%'");
 
-	var vNameToMatchResult = {};
-	_.each(matchResults, function(mr) {vNameToMatchResult[mr.variationName] = mr});
-	var vNameToPulloutResult = {};
-	_.each(pulloutResults, function(pr) {vNameToPulloutResult[pr.variationName] = pr});
+	
+	var vNameToMismatchResult = {};
+	_.each(mismatchResults, function(mr) {vNameToMismatchResult[mr.variationName] = mr});
 	var vNameToInsertionResult = {};
 	_.each(insertionResults, function(ir) {vNameToInsertionResult[ir.variationName] = ir});
 	var vNameToDeletionResult = {};
@@ -94,6 +92,7 @@ function singleSequenceReport(fastaFilePath, queryName, queryNucleotides) {
 			glue.command(["list", "custom-table-row", "cov_primer_probe_assay", 
 				"-s", "organisation",
 				//"-w", "id = 'NIID_2019-nCOV_N'", // Limited test 
+				//"-w", "id = 'E_sarbeco'", // Limited test 
 				"id", "display_name", "organisation", "url"]));
 	
 	_.each(assayObjs, function(assayObj) {
@@ -101,81 +100,93 @@ function singleSequenceReport(fastaFilePath, queryName, queryNucleotides) {
 			assayObj.ppObjs = glue.tableToObjects(glue.command(["list", "link-target", "cov_primer_probe", 
 				"id", "display_name", "sequence_fwd", "sequence_fwd_regex", "sequence_rev", "sequence_rev_regex", 
 				"ref_hits", "sequence_to_scan", "fwd_orientation", "ref_start", "ref_end", "length", 
-				"seq_match.name", "seq_pullout.name", "seq_insertion.name", "seq_deletion.name"]));
+				"seq_insertion.name", "seq_deletion.name"]));
 		});
 		_.each(assayObj.ppObjs, function(ppObj) {
-			ppObj.seqMatchResult = vNameToMatchResult[ppObj["seq_match.name"]];
-			ppObj.seqPulloutResult = vNameToPulloutResult[ppObj["seq_pullout.name"]];
+			glue.inMode("custom-table-row/cov_primer_probe/"+ppObj.id, function() {
+				var mismatchVariationNames = glue.getTableColumn(glue.command(["list", "link-target", "seq_mismatch"]), "name");
+				ppObj.seqMismatchVarNames = mismatchVariationNames;
+				ppObj.seqMismatchResults = [];
+				_.each(mismatchVariationNames, function(varName) {
+					ppObj.seqMismatchResults.push(vNameToMismatchResult[varName]);
+				});
+			});
 			ppObj.seqInsertionResult = vNameToInsertionResult[ppObj["seq_insertion.name"]];
 			ppObj.seqDeletionResult = vNameToDeletionResult[ppObj["seq_deletion.name"]];
 		});
-		assayObj.anyIssues = false;
+		assayObj.primersWithIssues = 0;
 		_.each(assayObj.ppObjs, function(ppObj) {
 			ppObj.anyIssues = false;
 			ppObj.issues = [];
 			ppObj.displayIssues = [];
-			var insufficientCoverage = [];
-			// insufficientCoverageMismatches if alignment doesn't completely cover the region
-			// or if there are any Ns in the region.
-			if(ppObj.seqMatchResult.sufficientCoverage == false) {
-				ppObj.issues.push({ type: "insufficientCoverageMismatches" });
-				insufficientCoverage.push("mismatches");
-			} else if(ppObj.seqPulloutResult.sufficientCoverage == true &&
-					ppObj.seqPulloutResult.matches.length > 0 &&
-					ppObj.seqPulloutResult.matches[0].queryNts.indexOf("N") >= 0) {
-				ppObj.issues.push({ type: "insufficientCoverageMismatches" });
-				insufficientCoverage.push("mismatches");
-			}
-			if(ppObj.seqInsertionResult.sufficientCoverage == false) {
-				ppObj.issues.push({ type: "insufficientCoverageInsertions" });
-				insufficientCoverage.push("insertions");
-			}
-			if(ppObj.seqDeletionResult.sufficientCoverage == false) {
-				ppObj.issues.push({ type: "insufficientCoverageDeletions" });
-				insufficientCoverage.push("deletions");
-			}
-			if(insufficientCoverage.length > 0) {
-				ppObj.displayIssues.push("Insufficient coverage to determine "+insufficientCoverage.join("/"));
-			}
-			if(ppObj.seqMatchResult.sufficientCoverage == true && 
-					ppObj.seqPulloutResult.matches.length > 0 &&
-					ppObj.seqMatchResult.present == false &&
-					insufficientCoverage.indexOf("mismatches") < 0) {
-				var mismatches = [];
-				var pulloutMatch = ppObj.seqPulloutResult.matches[0];
-				var pulloutMatchNts = pulloutMatch.queryNts;
-				var sequenceToScan = ppObj.sequence_to_scan;
-				glue.logInfo("sequenceToScan", sequenceToScan);
-				glue.logInfo("pulloutMatchNts", pulloutMatchNts);
-
-				for(var i = 0; i < sequenceToScan.length; i++) {
-					var ppSequenceChar = sequenceToScan[i];
-					var allowedNts = ntCharToAllowed[ppSequenceChar];
-					var queryNt = pulloutMatchNts[i];
-					if(allowedNts.indexOf(queryNt) < 0) {
-						var refCoord = ppObj.ref_start+i;
-						ppObj.issues.push({ type: "mismatch", 
-							ppSequenceChar: ppSequenceChar,
-							allowedNts: allowedNts,
-							queryNt: queryNt,
-							refCoord: refCoord,
-							queryCoord:pulloutMatch.queryNtStart+i });
-						mismatches.push(ppSequenceChar+refCoord+queryNt);
+			var insufficientCoverageRegions = [];
+			var currentInsufficientCoverage = null;
+			var mismatches = [];
+			
+			var sequenceToScan = ppObj.sequence_to_scan;
+			for(var i = 0; i < sequenceToScan.length; i++) {
+				var refCoord = ppObj.ref_start+i;
+				var mismatchResult = ppObj.seqMismatchResults[i];
+				var sufficientCoverageLoc = true;
+				if(mismatchResult.sufficientCoverage == false) {
+					sufficientCoverageLoc = false;
+				} else {
+					currentInsufficientCoverage = null;
+					if(mismatchResult.present == true) {
+						var match = mismatchResult.matches[0];
+						// offset accounts for flanking
+						var offset = refCoord - match.refNtStart;
+						var allowedNts = ntCharToAllowed[ppSequenceChar];
+						var ppSequenceChar = sequenceToScan[i];
+						var queryNt = match.queryNts[offset];
+						var queryCoord = match.queryNtStart+offset;
+						if(queryNt == "N") {
+							sufficientCoverageLoc = false;
+						} else {
+							ppObj.issues.push({ type: "mismatch", 
+								ppSequenceChar: ppSequenceChar,
+								allowedNts: allowedNts,
+								queryNt: queryNt,
+								refCoord: refCoord,
+								queryCoord:queryCoord });
+							mismatches.push(ppSequenceChar+refCoord+queryNt);
+						}
 					}
 				}
-				if(mismatches.length > 0) {
-					var displayString = mismatches.length + " " +
-						(mismatches.length == 1 ? "mismatch" : "mismatches") + ": " +
-							mismatches.join(", ");
-					ppObj.displayIssues.push(displayString);
-				} else {
-					// sanity check.
-					glue.logInfo("ntCharToAllowed", ntCharToAllowed);
-					glue.logInfo("ppObj.seqMatchResult", ppObj.seqMatchResult);
-					glue.logInfo("ppObj.seqPulloutResult", ppObj.seqPulloutResult);
-					throw new Error("Could not find mismatched character despite match variation reporting absent.");
+				if(sufficientCoverageLoc == false) {
+					if(currentInsufficientCoverage == null) {
+						currentInsufficientCoverage = {
+								ref_start: refCoord,
+								ref_end: refCoord
+						};
+						insufficientCoverageRegions.push(currentInsufficientCoverage);
+					} else {
+						currentInsufficientCoverage.ref_end = refCoord;
+					}
 				}
 			}
+			
+			if(insufficientCoverageRegions.length > 0) {
+				ppObj.issues.push({ type: "insufficientCoverage", 
+					regions: insufficientCoverageRegions });
+				var message = "Insufficient coverage at ";
+				var displayRegions = _.map(insufficientCoverageRegions, function(region) {
+					if(region.ref_start == region.ref_end) { 
+						return region.ref_start; 
+					} else {
+						return region.ref_start + "-" + region.ref_end;
+					}
+				});
+				var message = "Insufficient coverage at "+displayRegions.join(", ");
+				ppObj.displayIssues.push(message);
+			}
+			if(mismatches.length > 0) {
+				var displayString = mismatches.length + " " +
+					(mismatches.length == 1 ? "mismatch" : "mismatches") + ": " +
+						mismatches.join(", ");
+				ppObj.displayIssues.push(displayString);
+			} 
+			
 			
 			if(ppObj.seqDeletionResult.sufficientCoverage == true && ppObj.seqDeletionResult.present == true) {
 				var deletions = [];
@@ -228,7 +239,7 @@ function singleSequenceReport(fastaFilePath, queryName, queryNucleotides) {
 			}
 			if(ppObj.issues.length > 0) {
 				ppObj.anyIssues = true;
-				assayObj.anyIssues = true;
+				assayObj.primersWithIssues ++;
 			}
 		});		
 	});
