@@ -76,17 +76,10 @@ function singleSequenceReport(fastaFilePath, queryName, queryNucleotides) {
 	
 	var rasVariationMatchDocument;
 	
-	var mismatchResults = variationMatchResults(queryNucleotides, queryToTargetRefSegs, targetRefName, "name like 'cov_pp_mismatch:%'");
-	var insertionResults = variationMatchResults(queryNucleotides, queryToTargetRefSegs, targetRefName, "name like 'cov_pp_seq_insertion:%'");
-	var deletionResults = variationMatchResults(queryNucleotides, queryToTargetRefSegs, targetRefName, "name like 'cov_pp_seq_deletion:%'");
-
+	var matchResults = variationMatchResults(queryNucleotides, queryToTargetRefSegs, targetRefName, "name like 'cov_pp_match:%'");
 	
-	var vNameToMismatchResult = {};
-	_.each(mismatchResults, function(mr) {vNameToMismatchResult[mr.variationName] = mr});
-	var vNameToInsertionResult = {};
-	_.each(insertionResults, function(ir) {vNameToInsertionResult[ir.variationName] = ir});
-	var vNameToDeletionResult = {};
-	_.each(deletionResults, function(dr) {vNameToDeletionResult[dr.variationName] = dr});
+	var vNameToMatchResult = {};
+	_.each(matchResults, function(mr) {vNameToMatchResult[mr.variationName] = mr});
 	
 	var assayObjs = glue.tableToObjects(
 			glue.command(["list", "custom-table-row", "cov_primer_probe_assay", 
@@ -100,147 +93,157 @@ function singleSequenceReport(fastaFilePath, queryName, queryNucleotides) {
 			assayObj.ppObjs = glue.tableToObjects(glue.command(["list", "link-target", "cov_primer_probe", 
 				"id", "display_name", "sequence_fwd", "sequence_fwd_regex", "sequence_rev", "sequence_rev_regex", 
 				"ref_hits", "sequence_to_scan", "fwd_orientation", "ref_start", "ref_end", "length", 
-				"seq_insertion.name", "seq_deletion.name"]));
-		});
-		_.each(assayObj.ppObjs, function(ppObj) {
-			glue.inMode("custom-table-row/cov_primer_probe/"+ppObj.id, function() {
-				var mismatchVariationNames = glue.getTableColumn(glue.command(["list", "link-target", "seq_mismatch"]), "name");
-				ppObj.seqMismatchVarNames = mismatchVariationNames;
-				ppObj.seqMismatchResults = [];
-				_.each(mismatchVariationNames, function(varName) {
-					ppObj.seqMismatchResults.push(vNameToMismatchResult[varName]);
-				});
-			});
-			ppObj.seqInsertionResult = vNameToInsertionResult[ppObj["seq_insertion.name"]];
-			ppObj.seqDeletionResult = vNameToDeletionResult[ppObj["seq_deletion.name"]];
+				"seq_match.name", "seq_insertion.name", "seq_deletion.name"]));
 		});
 		assayObj.primersWithIssues = 0;
 		_.each(assayObj.ppObjs, function(ppObj) {
 			ppObj.anyIssues = false;
 			ppObj.issues = [];
 			ppObj.displayIssues = [];
-			var insufficientCoverageRegions = [];
-			var currentInsufficientCoverage = null;
-			var mismatches = [];
+			// use the seq_match variation as a first pass. This will normally get
+			// sufficientCoverage == true and present == true, in which case, no issues.
+			// Otherwise run the insertion, deletion and single mismatch variations and
+			// generate issues as necessary.
+			ppObj.seqMatchResult = vNameToMatchResult[ppObj["seq_match.name"]];
 			
-			var sequenceToScan = ppObj.sequence_to_scan;
-			for(var i = 0; i < sequenceToScan.length; i++) {
-				var refCoord = ppObj.ref_start+i;
-				var mismatchResult = ppObj.seqMismatchResults[i];
-				var sufficientCoverageLoc = true;
-				if(mismatchResult.sufficientCoverage == false) {
-					sufficientCoverageLoc = false;
-				} else {
-					currentInsufficientCoverage = null;
-					if(mismatchResult.present == true) {
-						var match = mismatchResult.matches[0];
-						// offset accounts for flanking
-						var offset = refCoord - match.refNtStart;
-						var allowedNts = ntCharToAllowed[ppSequenceChar];
-						var ppSequenceChar = sequenceToScan[i];
-						var queryNt = match.queryNts[offset];
-						var queryCoord = match.queryNtStart+offset;
-						if(queryNt == "N") {
-							sufficientCoverageLoc = false;
+			if( (!ppObj.seqMatchResult.sufficientCoverage) ||
+				(!ppObj.seqMatchResult.present) ) {
+				
+				ppObj.seqDeletionResult = 
+					variationMatchResults(queryNucleotides, queryToTargetRefSegs, targetRefName, 
+							"name = '"+ppObj["seq_deletion.name"]+"'")[0];
+				ppObj.seqInsertionResult = 
+					variationMatchResults(queryNucleotides, queryToTargetRefSegs, targetRefName, 
+							"name = '"+ppObj["seq_insertion.name"]+"'")[0];
+				ppObj.seqMismatchResults = 
+					variationMatchResults(queryNucleotides, queryToTargetRefSegs, targetRefName, 
+							"cov_pp_seq_mismatch.id = '"+ppObj.id+"'");
+
+				ppObj.seqMismatchResults = _.sortBy(ppObj.seqMismatchResults, function(smr) {return smr.variationName; });
+			
+				var insufficientCoverageRegions = [];
+				var currentInsufficientCoverage = null;
+				var mismatches = [];
+				
+				var sequenceToScan = ppObj.sequence_to_scan;
+				for(var i = 0; i < sequenceToScan.length; i++) {
+					var refCoord = ppObj.ref_start+i;
+					var mismatchResult = ppObj.seqMismatchResults[i];
+					var sufficientCoverageLoc = true;
+					if(mismatchResult.sufficientCoverage == false) {
+						sufficientCoverageLoc = false;
+					} else {
+						currentInsufficientCoverage = null;
+						if(mismatchResult.present == true) {
+							var match = mismatchResult.matches[0];
+							// offset accounts for flanking
+							var offset = refCoord - match.refNtStart;
+							var allowedNts = ntCharToAllowed[ppSequenceChar];
+							var ppSequenceChar = sequenceToScan[i];
+							var queryNt = match.queryNts[offset];
+							var queryCoord = match.queryNtStart+offset;
+							if(queryNt == "N") {
+								sufficientCoverageLoc = false;
+							} else {
+								ppObj.issues.push({ type: "mismatch", 
+									ppSequenceChar: ppSequenceChar,
+									allowedNts: allowedNts,
+									queryNt: queryNt,
+									refCoord: refCoord,
+									queryCoord:queryCoord });
+								mismatches.push(ppSequenceChar+refCoord+queryNt);
+							}
+						}
+					}
+					if(sufficientCoverageLoc == false) {
+						if(currentInsufficientCoverage == null) {
+							currentInsufficientCoverage = {
+									ref_start: refCoord,
+									ref_end: refCoord
+							};
+							insufficientCoverageRegions.push(currentInsufficientCoverage);
 						} else {
-							ppObj.issues.push({ type: "mismatch", 
-								ppSequenceChar: ppSequenceChar,
-								allowedNts: allowedNts,
-								queryNt: queryNt,
-								refCoord: refCoord,
-								queryCoord:queryCoord });
-							mismatches.push(ppSequenceChar+refCoord+queryNt);
+							currentInsufficientCoverage.ref_end = refCoord;
 						}
 					}
 				}
-				if(sufficientCoverageLoc == false) {
-					if(currentInsufficientCoverage == null) {
-						currentInsufficientCoverage = {
-								ref_start: refCoord,
-								ref_end: refCoord
-						};
-						insufficientCoverageRegions.push(currentInsufficientCoverage);
-					} else {
-						currentInsufficientCoverage.ref_end = refCoord;
+				
+				if(insufficientCoverageRegions.length > 0) {
+					ppObj.issues.push({ type: "coverageAlmtIssues", 
+						regions: insufficientCoverageRegions });
+					var displayRegions = _.map(insufficientCoverageRegions, function(region) {
+						if(region.ref_start == region.ref_end) { 
+							return region.ref_start; 
+						} else {
+							return region.ref_start + "-" + region.ref_end;
+						}
+					});
+					var message = "Coverage/alignment issues at "+displayRegions.join(", ");
+					ppObj.displayIssues.push(message);
+				}
+				if(mismatches.length > 0) {
+					var displayString = mismatches.length + " " +
+						(mismatches.length == 1 ? "mismatch" : "mismatches") + ": " +
+							mismatches.join(", ");
+					ppObj.displayIssues.push(displayString);
+				} 
+				
+				
+				if(ppObj.seqDeletionResult.sufficientCoverage == true && ppObj.seqDeletionResult.present == true) {
+					var deletions = [];
+					_.each(ppObj.seqDeletionResult.matches, function(delMatch) {
+						var refFirstNtDeleted = delMatch.refFirstNtDeleted;
+						var refLastNtDeleted = delMatch.refLastNtDeleted;
+						var deletedRefNts = delMatch.deletedRefNts;
+						ppObj.issues.push({ type: "deletion", 
+							refFirstNtDeleted: refFirstNtDeleted,
+							refLastNtDeleted: refLastNtDeleted,
+							qryLastNtBeforeDel: delMatch.qryLastNtBeforeDel,
+							qryFirstNtAfterDel: delMatch.qryFirstNtAfterDel,
+							deletedRefNts: deletedRefNts });
+						var delString;
+						if(refFirstNtDeleted == refLastNtDeleted) {
+							delString = refFirstNtDeleted;
+						} else {
+							delString = refFirstNtDeleted+"-"+refLastNtDeleted;
+						}
+						deletions.push(delString);
+					});
+					if(deletions.length > 0) {
+						var displayString = deletions.length + " " +
+							(deletions.length == 1 ? "deletion" : "deletions") + ": " +
+								deletions.join(", ");
+						ppObj.displayIssues.push(displayString);
 					}
 				}
-			}
-			
-			if(insufficientCoverageRegions.length > 0) {
-				ppObj.issues.push({ type: "insufficientCoverage", 
-					regions: insufficientCoverageRegions });
-				var message = "Insufficient coverage at ";
-				var displayRegions = _.map(insufficientCoverageRegions, function(region) {
-					if(region.ref_start == region.ref_end) { 
-						return region.ref_start; 
-					} else {
-						return region.ref_start + "-" + region.ref_end;
+	
+				if(ppObj.seqInsertionResult.sufficientCoverage == true && ppObj.seqInsertionResult.present == true) {
+					var insertions = [];
+					_.each(ppObj.seqInsertionResult.matches, function(insMatch) {
+						var refLastNtBeforeIns = insMatch.refLastNtBeforeIns;
+						var refFirstNtAfterIns = insMatch.refFirstNtAfterIns;
+						var insertedQryNts = insMatch.insertedQryNts;
+						ppObj.issues.push({ type: "insertion", 
+							refLastNtBeforeIns: refLastNtBeforeIns,
+							refFirstNtAfterIns: refFirstNtAfterIns,
+							qryFirstInsertedNt: insMatch.qryFirstInsertedNt,
+							qryLastInsertedNt: insMatch.qryLastInsertedNt,
+							insertedQryNts: insertedQryNts });
+						insertions.push(refLastNtBeforeIns+"-"+insertedQryNts+"-"+refFirstNtAfterIns);
+					});
+					if(insertions.length > 0) {
+						var displayString = insertions.length + " " +
+							(insertions.length == 1 ? "insertion" : "insertions") + ": " +
+								insertions.join(", ");
+						ppObj.displayIssues.push(displayString);
 					}
-				});
-				var message = "Insufficient coverage at "+displayRegions.join(", ");
-				ppObj.displayIssues.push(message);
-			}
-			if(mismatches.length > 0) {
-				var displayString = mismatches.length + " " +
-					(mismatches.length == 1 ? "mismatch" : "mismatches") + ": " +
-						mismatches.join(", ");
-				ppObj.displayIssues.push(displayString);
-			} 
-			
-			
-			if(ppObj.seqDeletionResult.sufficientCoverage == true && ppObj.seqDeletionResult.present == true) {
-				var deletions = [];
-				_.each(ppObj.seqDeletionResult.matches, function(delMatch) {
-					var refFirstNtDeleted = delMatch.refFirstNtDeleted;
-					var refLastNtDeleted = delMatch.refLastNtDeleted;
-					var deletedRefNts = delMatch.deletedRefNts;
-					ppObj.issues.push({ type: "deletion", 
-						refFirstNtDeleted: refFirstNtDeleted,
-						refLastNtDeleted: refLastNtDeleted,
-						qryLastNtBeforeDel: delMatch.qryLastNtBeforeDel,
-						qryFirstNtAfterDel: delMatch.qryFirstNtAfterDel,
-						deletedRefNts: deletedRefNts });
-					var delString;
-					if(refFirstNtDeleted == refLastNtDeleted) {
-						delString = refFirstNtDeleted;
-					} else {
-						delString = refFirstNtDeleted+"-"+refLastNtDeleted;
-					}
-					deletions.push(delString);
-				});
-				if(deletions.length > 0) {
-					var displayString = deletions.length + " " +
-						(deletions.length == 1 ? "deletion" : "deletions") + ": " +
-							deletions.join(", ");
-					ppObj.displayIssues.push(displayString);
+				}
+				if(ppObj.issues.length > 0) {
+					ppObj.anyIssues = true;
+					assayObj.primersWithIssues ++;
 				}
 			}
 
-			if(ppObj.seqInsertionResult.sufficientCoverage == true && ppObj.seqInsertionResult.present == true) {
-				var insertions = [];
-				_.each(ppObj.seqInsertionResult.matches, function(insMatch) {
-					var refLastNtBeforeIns = insMatch.refLastNtBeforeIns;
-					var refFirstNtAfterIns = insMatch.refFirstNtAfterIns;
-					var insertedQryNts = insMatch.insertedQryNts;
-					ppObj.issues.push({ type: "insertion", 
-						refLastNtBeforeIns: refLastNtBeforeIns,
-						refFirstNtAfterIns: refFirstNtAfterIns,
-						qryFirstInsertedNt: insMatch.qryFirstInsertedNt,
-						qryLastInsertedNt: insMatch.qryLastInsertedNt,
-						insertedQryNts: insertedQryNts });
-					insertions.push(refLastNtBeforeIns+"-"+insertedQryNts+"-"+refFirstNtAfterIns);
-				});
-				if(insertions.length > 0) {
-					var displayString = insertions.length + " " +
-						(insertions.length == 1 ? "insertion" : "insertions") + ": " +
-							insertions.join(", ");
-					ppObj.displayIssues.push(displayString);
-				}
-			}
-			if(ppObj.issues.length > 0) {
-				ppObj.anyIssues = true;
-				assayObj.primersWithIssues ++;
-			}
 		});		
 	});
 	

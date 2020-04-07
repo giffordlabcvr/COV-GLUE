@@ -38,16 +38,16 @@ ${getResourceAsString('covPrimerProbeReportTransformer.css')?no_esc}
 <col width="20%"></col>
 <col width="15%"></col>
 <col width="15%"></col>
-<col width="10%"></col>
 <col width="20%"></col>
+<col width="10%"></col>
 <col width="20%"></col>
 
 <tr class="tableHeader">
   <td><b>Publication</b></td>
   <td><b>Assay</b></td>
   <td><b>Primer/probe</b></td>
-  <td><b>Reference location</b></td>
   <td><b>Primer/probe sequence</b></td>
+  <td><b>Location on reference</b></td>
   <td><b>Query sequence issues</b></td>
 </tr>
 </thead>
@@ -80,8 +80,8 @@ ${assay.display_name}</td>
 <#assign firstIssueFound = true>
 </#if>
 <td class="issue">${ppObj.display_name}</td>
-<td class="issue">${ppObj.ref_start?c}-${ppObj.ref_end?c}</td>
 <td class="issue">${ppObj.sequence_to_scan}</td>
+<td class="issue">${ppObj.ref_start?c}-${ppObj.ref_end?c}</td>
 <td class="issue">
 <#list ppObj.displayIssues as displayIssue>
 <#if displayIssue?index gt 0>

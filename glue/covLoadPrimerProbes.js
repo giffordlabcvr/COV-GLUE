@@ -1,4 +1,5 @@
 glue.command(["multi-unset", "link-target", "cov_primer_probe", "-a", "cov_primer_probe_assay"]);
+glue.command(["multi-unset", "link-target", "cov_primer_probe", "-a", "seq_match"]);
 glue.command(["multi-unset", "link-target", "variation", "-a", "cov_pp_seq_mismatch"]);
 glue.command(["multi-unset", "link-target", "cov_primer_probe", "-a", "seq_insertion"]);
 glue.command(["multi-unset", "link-target", "cov_primer_probe", "-a", "seq_deletion"]);
@@ -184,6 +185,33 @@ var ppObjs = glue.tableToObjects(glue.command(["list", "custom-table-row", "cov_
 	"id", "sequence_to_scan", "fwd_orientation", "ref_start", "ref_end", "sequence_fwd_regex", "sequence_rev_regex", "length"]));
 
 _.each(ppObjs, function(ppObj) {
+	var matchVariationName = "cov_pp_match:"+ppObj.id;
+	var pattern;
+	if(ppObj.fwd_orientation) {
+		pattern = ppObj.sequence_fwd_regex;
+	} else {
+		pattern = ppObj.sequence_rev_regex;
+	}
+	var type;
+	if(pattern.match(/^[ACGT]+$/) != null) {
+		type = "nucleotideSimplePolymorphism";
+	} else {
+		type = "nucleotideRegexPolymorphism";
+	}
+	glue.inMode("reference/REF_MASTER_WUHAN_HU_1/feature-location/whole_genome", function() {
+		glue.command(["create", "variation", matchVariationName, "-t", type, 
+			"--nucleotide", ppObj.ref_start, ppObj.ref_end]);
+		glue.inMode("variation/"+matchVariationName, function() {
+			if(type == "nucleotideRegexPolymorphism") {
+				glue.command(["set", "metatag", "REGEX_NT_PATTERN", pattern]);
+			} else {
+				glue.command(["set", "metatag", "SIMPLE_NT_PATTERN", pattern]);
+			}
+			glue.command(["set", "link-target", "cov_pp_seq_match", 
+				"custom-table-row/cov_primer_probe/"+ppObj.id]);
+		});
+	});
+	
 	// create single nucleotide mismatch variations.
 	// These look for a mismatch at a given single nucleotide location.
 	// Alignment must have succeeded for a certain flanking region on 
@@ -191,7 +219,7 @@ _.each(ppObjs, function(ppObj) {
 	var ppSeqPos = 0;
 	var mismatchFlankingNts = 3; // this would mean 3 before, 3 after.
 	for(var ntLoc = ppObj.ref_start; ntLoc <= ppObj.ref_end; ntLoc++) {
-		var singleMismatchVariationName = "cov_pp_mismatch:"+ppObj.id+":"+ntLoc;
+		var singleMismatchVariationName = "cov_pp_mismatch:"+ppObj.id+":"+pad(ntLoc, 6);
 		var seqToScanNt = ppObj.sequence_to_scan[ppSeqPos];
 		var dots = Array(mismatchFlankingNts+1).join(".");
 		var regex = dots+"[^"+ntCharToAllowed[seqToScanNt].join("")+"]"+dots;
@@ -229,6 +257,13 @@ _.each(ppObjs, function(ppObj) {
 	});
 });
 
+function pad(num, size) {
+    var s = num+"";
+    while (s.length < size) {
+    	s = "0" + s;
+    }
+    return s;
+}
 
 /*
  
