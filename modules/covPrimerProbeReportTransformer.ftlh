@@ -51,6 +51,7 @@ ${getResourceAsString('covPrimerProbeReportTransformer.css')?no_esc}
   <td><b>Query sequence issues</b></td>
 </tr>
 </thead>
+<#assign knownIssues = false>
 <tbody>
 <#list covPPReport.assays as assay>
 <tr>
@@ -73,16 +74,23 @@ ${assay.display_name}</td>
 <#else>
 <#list assay.ppObjs as ppObj>
 <#assign firstIssueFound = false>
-<#if ppObj.anyIssues>
+<#if ppObj.numKnownIssues gt 0>
+<#assign knownIssues = true>
+</#if>
+<#if ppObj.numIssues gt 0>
 <#if firstIssueFound>
 <tr>
 <#else>
 <#assign firstIssueFound = true>
 </#if>
-<td class="issue">${ppObj.display_name}</td>
-<td class="issue">${ppObj.sequence_to_scan}</td>
-<td class="issue">${ppObj.ref_start?c}-${ppObj.ref_end?c}</td>
-<td class="issue">
+<#assign class = "issue">
+<#if ppObj.numIssues = ppObj.numKnownIssues>
+<#assign class = "">
+</#if>
+<td class="${class}">${ppObj.display_name}</td>
+<td class="${class}">${ppObj.sequence_to_scan}</td>
+<td class="${class}">${ppObj.ref_start?c}-${ppObj.ref_end?c}</td>
+<td class="${class}">
 <#list ppObj.displayIssues as displayIssue>
 <#if displayIssue?index gt 0>
 <br/>
@@ -97,8 +105,10 @@ ${assay.display_name}</td>
 </#list>
 </tbody>
 </table>
-
-
-
+<#if knownIssues>
+<p>
+<small>* This is a known issue relating to the primer/probe design rather than a sequence polymorphism.</small>
+</p>
+</#if>
 </body>
 </html>

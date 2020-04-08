@@ -217,7 +217,7 @@ _.each(ppObjs, function(ppObj) {
 	// Alignment must have succeeded for a certain flanking region on 
 	// either side to call the mismatch.
 	var ppSeqPos = 0;
-	var mismatchFlankingNts = 3; // this would mean 3 before, 3 after.
+	var mismatchFlankingNts = 0; // 3 would mean 3 before, 3 after.
 	for(var ntLoc = ppObj.ref_start; ntLoc <= ppObj.ref_end; ntLoc++) {
 		var singleMismatchVariationName = "cov_pp_mismatch:"+ppObj.id+":"+pad(ntLoc, 6);
 		var seqToScanNt = ppObj.sequence_to_scan[ppSeqPos];

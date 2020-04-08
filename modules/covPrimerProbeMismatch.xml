@@ -23,4 +23,7 @@
 			</pathCompleter>
 		</parameter>
 	</function>
+	<function>
+		<name>runTests</name>
+	</function>
 </ecmaFunctionInvoker>
