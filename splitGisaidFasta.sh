@@ -11,6 +11,9 @@ do
 	        id="${BASH_REMATCH[1]}"
 	        outfile="sequences/single_fastas/${id}.fasta"
 	        echo ">${id}" > $outfile
+	    elif [[ ${line} == '>||' ]]
+	    then
+			echo "Found known bad header >||"
 	    else
 	    	echo Bad header $line
 	    	exit 1
