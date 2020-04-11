@@ -113,6 +113,7 @@ function singleSequenceReport(fastaFilePath, queryName, queryNucleotides) {
 			ppObj.numKnownIssues = 0;
 			ppObj.issues = [];
 			ppObj.displayIssues = [];
+			ppObj.unknownDisplayIssues = [];
 			// use the seq_match variation as a first pass. This will normally get
 			// sufficientCoverage == true and present == true, in which case, no issues.
 			// Otherwise run the insertion, deletion and single mismatch variations and
@@ -165,6 +166,8 @@ function singleSequenceReport(fastaFilePath, queryName, queryNucleotides) {
 							(deletions.length == 1 ? "deletion" : "deletions") + ": " +
 								deletions.join(", ");
 						ppObj.displayIssues.push(displayString);
+						ppObj.unknownDisplayIssues.push(displayString);
+
 					}
 				}
 
@@ -172,6 +175,7 @@ function singleSequenceReport(fastaFilePath, queryName, queryNucleotides) {
 				var insufficientCoverageRegions = [];
 				var currentInsufficientCoverage = null;
 				var mismatches = [];
+				var unknownMismatches = [];
 				
 				var sequenceToScan = ppObj.sequence_to_scan;
 				for(var i = 0; i < sequenceToScan.length; i++) {
@@ -184,7 +188,6 @@ function singleSequenceReport(fastaFilePath, queryName, queryNucleotides) {
 					if(mismatchResult.sufficientCoverage == false) {
 						sufficientCoverageLoc = false;
 					} else {
-						currentInsufficientCoverage = null;
 						if(mismatchResult.present == true) {
 							var match = mismatchResult.matches[0];
 							// offset accounts for flanking
@@ -196,6 +199,7 @@ function singleSequenceReport(fastaFilePath, queryName, queryNucleotides) {
 							if(queryNt == "N") {
 								sufficientCoverageLoc = false;
 							} else {
+								currentInsufficientCoverage = null;
 								var mismatchString = ppSequenceChar+refCoord+queryNt;
 								var knownIssue = _.find(knownMismatchIssues, function(kmi) {
 									return kmi.ppId == ppObj.id && kmi.mismatch == mismatchString;
@@ -209,8 +213,13 @@ function singleSequenceReport(fastaFilePath, queryName, queryNucleotides) {
 									queryCoord: queryCoord, 
 									knownIssue: knownIssue});
 								
+								if(!knownIssue) {
+									unknownMismatches.push(mismatchString);
+								}
 								mismatches.push(mismatchString+(knownIssue?"*":""));
 							}
+						} else {
+							currentInsufficientCoverage = null;
 						}
 					}
 					if(sufficientCoverageLoc == false) {
@@ -238,6 +247,7 @@ function singleSequenceReport(fastaFilePath, queryName, queryNucleotides) {
 					});
 					var message = "Coverage/alignment issues at "+displayRegions.join(", ");
 					ppObj.displayIssues.push(message);
+					ppObj.unknownDisplayIssues.push(message);
 				}
 				if(mismatches.length > 0) {
 					var displayString = mismatches.length + " " +
@@ -245,7 +255,12 @@ function singleSequenceReport(fastaFilePath, queryName, queryNucleotides) {
 						mismatches.join(", ");
 					ppObj.displayIssues.push(displayString);
 				} 
-				
+				if(unknownMismatches.length > 0) {
+					var displayString = unknownMismatches.length + " " +
+						(unknownMismatches.length == 1 ? "mismatch" : "mismatches") + ": " +
+						unknownMismatches.join(", ");
+					ppObj.unknownDisplayIssues.push(displayString);
+				} 
 				if(ppObj.seqInsertionResult.sufficientCoverage == true && ppObj.seqInsertionResult.present == true) {
 					var insertions = [];
 					_.each(ppObj.seqInsertionResult.matches, function(insMatch) {
@@ -269,6 +284,7 @@ function singleSequenceReport(fastaFilePath, queryName, queryNucleotides) {
 							(insertions.length == 1 ? "insertion" : "insertions") + ": " +
 								insertions.join(", ");
 						ppObj.displayIssues.push(displayString);
+						ppObj.unknownDisplayIssues.push(displayString);
 					}
 				}
 				ppObj.issues = _.sortBy(ppObj.issues, function(iss) {
@@ -605,6 +621,23 @@ function runTests() {
 		    "ppId": "2019-nCoV_N3-P"
 		  }
 	]);
+	runTest("nCoV-2019_86_RIGHT coverage 26306-26308", [{type:"replaceSingle",loc:26306, replacement:"N"},
+		{type:"replaceSingle",loc:26307, replacement:"N"},
+		{type:"replaceSingle",loc:26308, replacement:"N"}], 
+			[
+				{
+				    "type": "coverageAlmtIssues",
+				    "regions": [
+				      {
+				        "ref_start": 26306,
+				        "ref_end": 26308
+				      }
+				    ],
+				    "ppId": "nCoV-2019_86_RIGHT"
+				  }
+			]);
+
+	
 		
 }
 
@@ -660,9 +693,33 @@ function applyMod(resultSeq, mod) {
 }
 
 function reportMultiFasta(fastaFilePath) {
-	throw new Error("reportMultiFasta is unimplemented");
+	var fastaDoc;
+	glue.inMode("module/covFastaUtility", function() {
+		fastaDoc = glue.command(["load-nucleotide-fasta", fastaFilePath]);
+	});
+	var issuesFileLines = ["multi_fasta_path\tfasta_id\tassay_name\tprimer_name\tprimer_sequence\tref_start\tref_end\tissue\tassay_publication\tassay_url\n"]
+	var summaryFileLines = ["multi_fasta_path\tfasta_id\tnum_issues\n"]
+	_.each(fastaDoc.nucleotideFasta.sequences, function(seq) {
+		var queryName = seq.id;
+		var queryNucleotides = seq.sequence;
+		var resultDoc = singleSequenceReport(fastaFilePath, queryName, queryNucleotides);
+		var numUnknown = 0;
+		_.each(resultDoc.covPPReport.assays, function(assayObj) {
+			_.each(assayObj.ppObjs, function(ppObj) {
+				numUnknown += (ppObj.numIssues - ppObj.numKnownIssues);
+				_.each(ppObj.unknownDisplayIssues, function(udi) {
+					issuesFileLines.push(fastaFilePath+"\t"+queryName+"\t"+
+							assayObj.display_name+"\t"+ppObj.display_name+"\t"+ppObj.sequence_to_scan+"\t"+
+							ppObj.ref_start+"\t"+ppObj.ref_end+"\t"+
+							udi+"\t"+assayObj.organisation+"\t"+assayObj.url+"\n");
+				});
+			});
+		});
+		summaryFileLines.push(fastaFilePath+"\t"+queryName+"\t"+numUnknown+"\n");
+	});
+	var issuesFilePath = fastaFilePath.substring(0, fastaFilePath.lastIndexOf("."))+"_ppReport_issues.txt";
+	glue.command(["file-util", "save-string", issuesFileLines.join(""), issuesFilePath]);
+	var summaryFilePath = fastaFilePath.substring(0, fastaFilePath.lastIndexOf("."))+"_ppReport_summary.txt";
+	glue.command(["file-util", "save-string", summaryFileLines.join(""), summaryFilePath]);
 }
 
-function reportFastaDirectory(fastaDir) {
-	throw new Error("reportFastaDirectory is unimplemented");
-}

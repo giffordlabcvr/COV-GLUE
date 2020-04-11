@@ -15,15 +15,6 @@
 		</parameter>
 	</function>
 	<function>
-		<name>reportFastaDirectory</name>
-		<parameter>
-			<name>fastaDir</name>
-			<pathCompleter>
-				<directoriesOnly>true</directoriesOnly>
-			</pathCompleter>
-		</parameter>
-	</function>
-	<function>
 		<name>runTests</name>
 	</function>
 </ecmaFunctionInvoker>
