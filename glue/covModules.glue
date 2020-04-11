@@ -6,6 +6,7 @@ create module --fileName modules/covFlagsTextFilePopulator.xml
 create module --fileName modules/covSeqStatsTextFilePopulator.xml
 create module --fileName modules/covMafftAligner.xml
 create module --fileName modules/covBlastFastaAlignmentImporter.xml
+create module --fileName modules/covStrictFastaAlignmentImporter.xml
 create module --fileName modules/covRaxmlPhylogenyGenerator.xml
 
 create module --fileName modules/covSimpleFastaAlignmentExporter.xml

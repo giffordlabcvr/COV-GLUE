@@ -67,6 +67,14 @@ _.each(articPrimers, function(articPrimer) {
 	});
 });
 
+// special variation for detecting deletions anywhere on the genome.
+glue.inMode("reference/REF_MASTER_WUHAN_HU_1/feature-location/whole_genome", function() {
+	glue.command(["create", "variation", "cov_pp_any_deletion", "-t", "nucleotideDeletion", "--nucleotide", 1, 29903]);
+	glue.inMode("variation/cov_pp_any_deletion", function() {
+		glue.command(["set", "metatag", "ALLOW_PARTIAL_COVERAGE", true]);
+	});
+});
+
 _.each(ppObjs, function(ppObj) {
 	var assayID = ppObj["Assay"].trim().replace(" ", "_");
 	if(assayID == "See_note") {return;}
