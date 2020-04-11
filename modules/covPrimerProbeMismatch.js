@@ -375,7 +375,7 @@ function generateQueryToTargetRefSegs(targetRefName, nucleotides) {
 }
 
 function runTests() {
-	/*runTest("vanilla", [], []);
+	runTest("vanilla", [], []);
 	runTest("E_sarbeco_F1, T26274G", [{type:"replaceSingle",loc:26274, replacement:"G"}], 
 			[
 				{
@@ -418,25 +418,24 @@ function runTests() {
 	// deletion of 4 nts at end of E_sarbeco_F1, this is also the first 4 of nCoV-2019_86_RIGHT
 	runTest("E_sarbeco_F1, nCoV-2019_86_RIGHT, 26291-26294del", [{type:"replaceRegion",locStart:26291, locEnd:26294, replacement:""}], 
 			[
+				{
+				    "type": "deletion",
+				    "refFirstNtDeleted": 26291,
+				    "refLastNtDeleted": 26294,
+				    "qryLastNtBeforeDel": 26290,
+				    "qryFirstNtAfterDel": 26291,
+				    "deletedRefNts": "GCGT",
+				    "ppId": "E_Sarbeco_F1"
+				  },
 				  {
-					    "type": "deletion",
-					    "refFirstNtDeleted": 26291,
-					    "refLastNtDeleted": 26294,
-					    "qryLastNtBeforeDel": 26290,
-					    "qryFirstNtAfterDel": 26291,
-					    "deletedRefNts": "GCGT",
-					    "ppId": "nCoV-2019_86_RIGHT"
-					  },
-					  {
-					    "type": "deletion",
-					    "refFirstNtDeleted": 26291,
-					    "refLastNtDeleted": 26294,
-					    "qryLastNtBeforeDel": 26290,
-					    "qryFirstNtAfterDel": 26291,
-					    "deletedRefNts": "GCGT",
-					    "ppId": "E_Sarbeco_F1"
-					  }
-
+				    "type": "deletion",
+				    "refFirstNtDeleted": 26291,
+				    "refLastNtDeleted": 26294,
+				    "qryLastNtBeforeDel": 26290,
+				    "qryFirstNtAfterDel": 26291,
+				    "deletedRefNts": "GCGT",
+				    "ppId": "nCoV-2019_86_RIGHT"
+				  }
 			]);
 	// deletion of 13 nts overlapping the start of E_sarbeco_F1
 	runTest("E_sarbeco_F1 26260-26272del", [{type:"replaceRegion",locStart:26260, locEnd:26272, replacement:""}], 
@@ -444,12 +443,13 @@ function runTests() {
 				{
 				    "type": "deletion",
 				    "refFirstNtDeleted": 26260,
-				    "refLastNtDeleted": 26260,
+				    "refLastNtDeleted": 26272,
 				    "qryLastNtBeforeDel": 26259,
 				    "qryFirstNtAfterDel": 26260,
 				    "deletedRefNts": "TCGGAAGAGACAG",
 				    "ppId": "E_Sarbeco_F1"
 				  }
+
 			]);
 	// deletion of 10 nts overlapping the end of E_sarbeco_F1 and start of nCoV-2019_86_RIGHT
 	runTest("E_sarbeco_F1, nCoV-2019_86_RIGHT 26286-26295del", [{type:"replaceRegion",locStart:26286, locEnd:26295, replacement:""}], 
@@ -525,7 +525,7 @@ function runTests() {
 				    "insertedQryNts": "TAGAT",
 				    "ppId": "E_Sarbeco_F1"
 				  }
-			]);*/
+			]);
 			runTest("E_sarbeco_F1 various", [
 				{type:"insertRegion",afterLoc:26270,insertion:"TAGTAGATAT"},
 				// note, locations shifted after insertion
@@ -583,6 +583,29 @@ function runTests() {
 				    "ppId": "nCoV-2019_86_RIGHT"
 				  }
 		]);
+	// this primer location has a Y (C/T) ambiguity character.
+	// the reference has a T, so replacing with a C or Y should give no issues
+	runTest("2019-nCoV_N3-P ambig 1", [{type:"replaceSingle",loc:28705, replacement:"C"}], []);
+	runTest("2019-nCoV_N3-P ambig 2", [{type:"replaceSingle",loc:28705, replacement:"T"}], []);
+	runTest("2019-nCoV_N3-P ambig 3", [{type:"replaceSingle",loc:28705, replacement:"Y"}], []);
+	// but replacing with a G should give a mismatch.
+	runTest("2019-nCoV_N3-P ambig 4", [{type:"replaceSingle",loc:28705, replacement:"G"}], [
+		{
+		    "type": "mismatch",
+		    "ppSequenceChar": "Y",
+		    "allowedNts": [
+		      "C",
+		      "T",
+		      "Y"
+		    ],
+		    "queryNt": "G",
+		    "refCoord": 28705,
+		    "queryCoord": 28705,
+		    "knownIssue": false,
+		    "ppId": "2019-nCoV_N3-P"
+		  }
+	]);
+		
 }
 
 function runTest(testName, mods, expectedIssues) {
