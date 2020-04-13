@@ -1,37 +1,49 @@
-# this project build targets the web resource and expects updated 
-# alignment, tree files and sequence flags, to be in place.
-
 run file glue/covInitProject.glue
 
 project cov
  
+  # Clean up sequences from non-version-controlled single fastas which were produced
+  # by splitGisaidFasta.sh into and save in single fastas in sources/cov-gisaid, also save sequence stats file in tabular.
+  run script glue/covGisaidFastaInitialCleanup.js
+  
   # import cov-gisaid individual fastas.
   import source sources/cov-gisaid
 
-  # other sequence related data.
+  # other sequence related data
   run file glue/covLoadSequenceData.glue
 
-  # import pre-built constrained alignment
-  import alignment -f alignments/AL_GISAID_CONSTRAINED.json
+  create alignment AL_GISAID_CONSTRAINED -r REF_MASTER_WUHAN_HU_1 
+  alignment AL_GISAID_CONSTRAINED add member -a
+  compute alignment AL_GISAID_CONSTRAINED covMafftAligner
+
+  # alignment AL_GISAID_CONSTRAINED export command-document -f alignments/AL_GISAID_CONSTRAINED.json
+
+  # count unique SNPs, will be saved as a flag and also is used to select ref tree candidates.
+  # run script glue/covCountUniqueSNPs.js
+
+  # run file glue/covSetSequenceFlags.glue
   
-  # saved sequence flags from almtTree build
-  module covFlagsTextFilePopulator populate -f tabular/sequenceFlags.txt
+  # capture this part in its own script as we may want to rerun it after
+  # tuning the CD-HIT step.
+  # run file glue/covTreeAndFlags.glue
   
   # generate deletions
-  run script glue/covGenerateGisaidDeletions.js
+  # run script glue/covGenerateGisaidDeletions.js
 
   # generate replacements
-  run script glue/covGenerateGisaidReplacements.js
+  # run script glue/covGenerateGisaidReplacements.js
 
   # generate insertions
-  run script glue/covGenerateGisaidInsertions.js
+  # run script glue/covGenerateGisaidInsertions.js
 
   # import phylogeny
-  module covPhyloImporter
-    import phylogeny AL_GISAID_CONSTRAINED -w "sequence.include_in_ref_tree = true" -i trees/gisaidOutgroupRooted.tree NEWICK_BOOTSTRAPS -f phylogeny
-    exit
+  # module covPhyloImporter
+    # import phylogeny AL_GISAID_CONSTRAINED -w "sequence.include_in_ref_tree = true" -i trees/gisaidOutgroupRooted.tree NEWICK_BOOTSTRAPS -f phylogeny
+    # exit
+
+  # run file glue/covSanitisedExports.glue
 
   # Validate
-  validate
+  # validate
 
 exit

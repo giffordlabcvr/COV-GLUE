@@ -54,11 +54,6 @@ task buildCovGlueDB(type: JavaExec, dependsOn: 'copyGluetoolsJar') {
 	args '-c', 'remote-gluetools-config.xml', '-i', 'run', 'file', 'covProject.glue'
 }
 
-task buildCovAlmtAndTree(type: JavaExec, dependsOn: 'copyGluetoolsJar') {
-	classpath "build/runtimeJars/gluetools-core.jar"
-	main 'uk.ac.gla.cvr.gluetools.core.console.Console'
-	args '-c', 'remote-gluetools-config.xml', '-i', 'run', 'file', 'covAlmtTreeUpdate.glue'
-}
 
 def scmCustomKey = '/Users/joshsinger/.ssh/github_id_rsa'
 
