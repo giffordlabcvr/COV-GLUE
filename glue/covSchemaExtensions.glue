@@ -50,6 +50,8 @@ schema-project cov
     create field num_other INTEGER
     create field uncorrected_illegals BOOLEAN
     create field num_unique_snps INTEGER
+    create field pang_lineage VARCHAR
+    create field pang_representative BOOLEAN
     exit
 
   table feature
