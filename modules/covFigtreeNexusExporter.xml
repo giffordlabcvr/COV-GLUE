@@ -24,8 +24,8 @@
 		<template>${renderNestedProperty('sequence.orf_8_aa_84')}</template>
 	</freemarkerAnnotationGenerator>
 	<freemarkerAnnotationGenerator>
-		<annotationName>cdhit_cluster</annotationName>
-		<template>${renderNestedProperty('sequence.cdhit_cluster')}</template>
+		<annotationName>pang_lineage</annotationName>
+		<template>${renderNestedProperty('sequence.pang_lineage')}</template>
 	</freemarkerAnnotationGenerator>
 	<freemarkerAnnotationGenerator>
 		<annotationName>num_unique_snps</annotationName>
