@@ -1,0 +1,11 @@
+<ecmaFunctionInvoker>
+	<scriptFileName>covAssignLineages.js</scriptFileName>
+	<function>
+		<name>assignLineages</name>
+		<consumesDocument>true</consumesDocument>
+		<parameter>
+			<name>document</name>
+		</parameter>
+		<documentResultType/> 
+	</function>
+</ecmaFunctionInvoker>
