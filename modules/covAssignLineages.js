@@ -25,6 +25,67 @@ function setLeafSeqIDs(subtree) {
 	}
 }
 
+function setInternalLineage(subtree) {
+	var userData;
+	var subtreeType;
+	if(subtree.internal != null) { // internal node
+		userData = subtree.internal.userData;
+		if(userData == null) {
+			userData = {};
+			subtree.internal.userData = userData;
+		}
+		subtreeType = "internal";
+		var branches = subtree.internal.branch;
+		var childLineages = [];
+		_.each(branches, function(branch) {
+			childLineages.push(setInternalLineage(branch));
+		});
+		var commonLineage = findCommonLineage(childLineages);
+		userData.lineage = commonLineage;
+		return commonLineage;
+	} else { // leaf node
+		userData = subtree.leaf.userData;
+		subtreeType = "leaf";
+		var seqPath = userData["name"].replace("alignment/AL_GISAID_UNCONSTRAINED/member/", "");
+		var leafLineage;
+		glue.inMode("sequence/"+seqPath, function() {
+			leafLineage = glue.command(["show", "property", "pang_lineage"]).propertyValueResult.value;
+		});
+		userData.lineage = leafLineage;
+		return leafLineage;
+	}
+}
+
+function checkLineages() {
+	var glueTree;
+	glue.inMode("module/covPhyloUtility", function() {
+		glueTree = glue.command(["read-alignment-phylogeny", "AL_GISAID_UNCONSTRAINED", "phylogeny"]);
+	});
+	setInternalLineage(glueTree.phyloTree.root);
+	glue.logInfo("glueTree", glueTree);
+}
+
+function findCommonLineage(childLineages) {
+	var commonLineageBits = null;
+	
+	_.each(childLineages, function(childLineage) {
+		var childLineageBits = childLineage.split(".");
+		if(commonLineageBits == null) {
+			commonLineageBits = childLineageBits;
+		} else {
+			var i = 0;
+			while(i < commonLineageBits.length && i < childLineageBits.length) {
+				if(childLineageBits[i] != commonLineageBits[i]) {
+					break;
+				}
+				i++;
+			}
+			commonLineageBits = commonLineageBits.slice(0, i);
+		}
+	});
+	return commonLineageBits.join(".");
+}
+
 function assignLineages(document) {
 	
 	var placerResult = document.inputDocument.placerResult;

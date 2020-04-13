@@ -8,4 +8,8 @@
 		</parameter>
 		<documentResultType/> 
 	</function>
+	<function>
+		<name>checkLineages</name>
+	</function>
+	
 </ecmaFunctionInvoker>
