@@ -2,5 +2,6 @@
 <maxLikelihoodPlacer>
     <alignmentAlignmentName>AL_GISAID_UNCONSTRAINED</alignmentAlignmentName>
     <phyloAlignmentName>AL_GISAID_UNCONSTRAINED</phyloAlignmentName>
+    <selectorName>covReferencePhylogenyColumnsSelector</selectorName>
     <phyloFieldName>phylogeny</phyloFieldName>
 </maxLikelihoodPlacer>
