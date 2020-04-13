@@ -1,0 +1,8 @@
+ # this is a dummy alignment really, it just contains the reference in order for a linking alignment to exist.
+  create alignment AL_GISAID_UNCONSTRAINED
+  alignment AL_GISAID_UNCONSTRAINED
+    add member cov-gisaid EPI_ISL_402125
+    member cov-gisaid EPI_ISL_402125 
+      add segment 1 29903 1 29903
+      exit
+    exit  

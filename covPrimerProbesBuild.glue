@@ -1,0 +1,26 @@
+# minimal project build just focusing on primer/probe mismatch scanning. 
+
+run file glue/covInitProject.glue
+
+project cov
+ 
+  # reference FASTA.
+  create source cov-gisaid
+  import sequence cov-gisaid EPI_ISL_402125 FASTA sources/cov-gisaid/EPI_ISL_402125.fasta
+
+  run file glue/covFeatures.glue
+  run file glue/covMasterReference.glue
+  run file glue/covUnconstrainedAlignment.glue
+  
+  # don't need this module for this use case, and it fails validation without the constrained
+  # alignment being in place 
+  delete module covMaxLikelihoodPlacer 
+
+  run script glue/covLoadPrimerProbes.js
+  
+  # Validate
+  validate
+
+  module covPrimerProbeMismatch invoke-function runTests
+
+exit
