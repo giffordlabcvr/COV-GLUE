@@ -25,7 +25,7 @@ function setLeafSeqIDs(subtree) {
 	}
 }
 
-function setInternalLineage(subtree) {
+function setInternalLineage(lineageToParent, subtree) {
 	var userData;
 	var subtreeType;
 	if(subtree.internal != null) { // internal node
@@ -38,9 +38,18 @@ function setInternalLineage(subtree) {
 		var branches = subtree.internal.branch;
 		var childLineages = [];
 		_.each(branches, function(branch) {
-			childLineages.push(setInternalLineage(branch));
+			childLineages.push(setInternalLineage(lineageToParent, branch));
 		});
 		var commonLineage = findCommonLineage(childLineages);
+		_.each(childLineages, function(childLineage) {
+			if(commonLineage != childLineage) {
+				var oldParent = lineageToParent[childLineage];
+				if(oldParent != null) {
+					throw new Error("Lineage "+childLineage+" is parented in two locations "+oldParent+" and "+commonLineage);
+				}
+				lineageToParent[childLineage] = commonLineage;
+			}
+		});
 		userData.lineage = commonLineage;
 		return commonLineage;
 	} else { // leaf node
@@ -61,8 +70,10 @@ function checkLineages() {
 	glue.inMode("module/covPhyloUtility", function() {
 		glueTree = glue.command(["read-alignment-phylogeny", "AL_GISAID_UNCONSTRAINED", "phylogeny"]);
 	});
-	setInternalLineage(glueTree.phyloTree.root);
-	glue.logInfo("glueTree", glueTree);
+	var lineageToParent = {};
+	setInternalLineage(lineageToParent, glueTree.phyloTree.root);
+	glue.logInfo("lineageToParent", lineageToParent);
+	
 }
 
 function findCommonLineage(childLineages) {
