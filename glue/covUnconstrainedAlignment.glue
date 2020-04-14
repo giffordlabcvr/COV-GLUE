@@ -1,3 +1,4 @@
+  delete alignment AL_GISAID_UNCONSTRAINED
   create alignment AL_GISAID_UNCONSTRAINED
   alignment AL_GISAID_UNCONSTRAINED
     # Wuhan-Hu-1 has to be here for annotation reasons

@@ -1,73 +1,21 @@
-// recursive function to set the sequenceIDs throughout the tree.
-function setLeafSeqIDs(subtree) {
+function setSubtreeLineage(subtree) {
 	var userData;
-	var subtreeType;
-	if(subtree.internal != null) { // internal node
-		userData = subtree.internal.userData;
-		subtreeType = "internal";
-	} else { // leaf node
-		userData = subtree.leaf.userData;
-		subtreeType = "leaf";
-	}
-	if(subtreeType == "leaf") {
-		if(userData["name"].indexOf("cov-gisaid/") > 0) {
-			userData["treevisualiser-leafSourceName"] = "cov-gisaid";
-			userData["treevisualiser-leafSequenceID"] = userData["name"].substring(userData["name"].lastIndexOf("/")+1);
-		} else {
-			userData["treevisualiser-leafSourceName"] = "submitted";
-			userData["treevisualiser-leafSequenceID"] = userData["name"];
-		}
-	} else { // internal node
-		var branches = subtree.internal.branch;
-		_.each(branches, function(branch) {
-			setLeafSeqIDs(branch);
-		});
-	}
-}
-
-function setSubtreeLineage(lineageToParent, subtree) {
-	var userData;
-	var subtreeType;
 	if(subtree.internal != null) { // internal node
 		userData = subtree.internal.userData;
 		if(userData == null) {
 			userData = {};
 			subtree.internal.userData = userData;
 		}
-		subtreeType = "internal";
 		var branches = subtree.internal.branch;
-		var leafChildLineages = [];
-		var internalChildLineages = [];
-		
+		var childLineages = [];
 		_.each(branches, function(branch) {
-			var branchLineage = setSubtreeLineage(lineageToParent, branch);
-			if(branch.internal != null) {
-				internalChildLineages.push(branchLineage);
-			} else {
-				leafChildLineages.push(branchLineage);
-			}
+			childLineages.push(setSubtreeLineage(branch));
 		});
-		var childLineages = internalChildLineages.concat(leafChildLineages);
-		var subTreeLineage;
-		if(leafChildLineages.length == 1) {
-			subTreeLineage = leafChildLineages[0];
-		} else {
-			subTreeLineage = findCommonLineage(childLineages);
-		}
-		_.each(childLineages, function(childLineage) {
-			if(subTreeLineage != childLineage) {
-				var oldParent = lineageToParent[childLineage];
-				if(oldParent != null && oldParent != subTreeLineage) {
-					throw new Error("Lineage "+childLineage+" has incompatible parents "+oldParent+" and "+subTreeLineage);
-				}
-				lineageToParent[childLineage] = subTreeLineage;
-			}
-		});
+		subTreeLineage = findCommonLineage(childLineages);
 		userData.lineage = subTreeLineage;
 		return subTreeLineage;
 	} else { // leaf node
 		userData = subtree.leaf.userData;
-		subtreeType = "leaf";
 		var seqPath = userData["name"].replace("alignment/AL_GISAID_UNCONSTRAINED/member/", "");
 		var leafLineage;
 		glue.inMode("sequence/"+seqPath, function() {
@@ -78,18 +26,110 @@ function setSubtreeLineage(lineageToParent, subtree) {
 	}
 }
 
-function checkLineages() {
+function findPlacementLineages(subtree, lineages, queryName) {
+	if(subtree.internal != null) { // internal node
+		userData = subtree.internal.userData;
+		var lineage = null;
+		if(userData != null) {
+			lineage = userData.lineage;
+			if(lineage != null) {
+				lineages.push(lineage);
+			}
+		}
+		var branches = subtree.internal.branch;
+		for(var i = 0; i < branches.length; i++) {
+			var branch = branches[i];
+			var branchResult = findPlacementLineages(branch, lineages, queryName);
+			if(branchResult != null) {
+				return branchResult;
+			}
+		}
+		if(lineage != null) {
+			lineages.pop();
+		}
+		return null;
+	} else { // leaf node
+		userData = subtree.leaf.userData;
+		if(userData != null && userData["name"] == queryName) {
+			return lineages;
+		}
+		return null;
+	}
+}
+
+
+function checkMonophyletic(current, completed, subtree) {
+	var userData;
+	var subtreeType;
+	var newlyEntered;
+	if(subtree.internal != null) { // internal node
+		newlyEntered = checkLineageStatus(current, completed, subtree.internal.userData.lineage);
+		//glue.logInfo("Entering '"+subtree.internal.userData.lineage+"'");
+		_.each(subtree.internal.branch, function(branch) {
+			checkMonophyletic(current, completed, branch);
+		});
+		//glue.logInfo("Exiting '"+subtree.internal.userData.lineage+"'");
+	} else {
+		newlyEntered = checkLineageStatus(current, completed, subtree.leaf.userData.lineage);
+	}
+	_.each(newlyEntered, function(lineage) {
+		delete current[lineage];
+		glue.logInfo("Exited lineage '"+lineage+"' ");
+		completed[lineage] = "yes";
+	});
+}
+
+function checkLineageStatus(current, completed, lineage) {
+	var newlyEntered = [];
+	var lineageBits = lineage.split(".");
+	var ancestors = {};
+	for(var i = 0; i <= lineageBits.length; i++) {
+		var ancestorLineage = lineageBits.slice(0, i).join(".");
+		ancestors[ancestorLineage] = "yes";
+		if(completed[ancestorLineage]) {
+			glue.log("INFO", "Warning: Lineage '"+ancestorLineage+"' is not monophyletic");
+		}
+	}
+	_.each(_.keys(ancestors), function(lineage) {
+		if(current[lineage] == null) {
+			current[lineage] = "yes";
+			glue.logInfo("Entered lineage '"+lineage+"' ");
+			newlyEntered.push(lineage);
+		}
+	});
+	return newlyEntered;
+}
+	
+function setLineagesInTree() {
+	// set the lineage field on internal nodes and leaves in the tree.
 	var glueTree;
 	glue.inMode("module/covPhyloUtility", function() {
 		glueTree = glue.command(["read-alignment-phylogeny", "AL_GISAID_UNCONSTRAINED", "phylogeny"]);
 	});
-	var lineageToParent = {};
-	setSubtreeLineage(lineageToParent, glueTree.phyloTree.root);
-	glue.logInfo("lineageToParent", lineageToParent);
+	setSubtreeLineage(glueTree.phyloTree.root);
+	// take all the internal nodes assigned to a given lineage X. 
+	// there should be a single internal node such that all its internal node descendents
+	// are assigned to lineage X or its sublineages
+	checkMonophyletic({}, {}, glueTree.phyloTree.root);
+
+	var glueTreeJson = JSON.stringify(glueTree);
+	//glue.logInfo("glueTreeJson", glueTreeJson);
+	glue.inMode("alignment/AL_GISAID_UNCONSTRAINED", function() {
+		glue.command(["set", "field", "phylogeny", glueTreeJson]);
+	});
 	
 }
 
 function findCommonLineage(childLineages) {
+	if(childLineages.length == 2) {
+		if(isAncestorLineage(childLineages[0], childLineages[1])) {
+			return childLineages[0];
+		}
+		if(isAncestorLineage(childLineages[1], childLineages[0])) {
+			return childLineages[1];
+		}
+	}
+	
 	var commonLineageBits = null;
 	
 	_.each(childLineages, function(childLineage) {
@@ -107,10 +147,63 @@ function findCommonLineage(childLineages) {
 			commonLineageBits = commonLineageBits.slice(0, i);
 		}
 	});
-	return commonLineageBits.join(".");
+	var commonLineage = commonLineageBits.join(".");
+	return commonLineage;
 }
 
-function assignLineages(document) {
+function placeSequenceToFile(sequenceID, filePath) {
+	var seqNts;
+	glue.inMode("sequence/cov-gisaid/"+sequenceID, function() {
+		seqNts = glue.command(["show", "nucleotides"]).nucleotidesResult.nucleotides;
+	});
+	var fastaDocument = { 
+		nucleotideFasta: {
+			sequences: [
+				{
+					id: sequenceID,
+					sequence: seqNts
+				}
+			]
+		}
+	};
+	var placerResult;
+	glue.inMode("module/covMaxLikelihoodPlacer", function() {
+		placerResult = glue.command({
+			place: {
+				"fasta-document": {
+					fastaCommandDocument: fastaDocument
+				}
+			}
+		});
+	});
+	var placerResultString = JSON.stringify(placerResult);
+	glue.command(["file-util", "save-string", placerResultString, filePath]);
+
+}
+
+function assignLineagesFromPlacerFile(filePath) {
+	var fileString = glue.command(["file-util", "load-string", filePath]).fileUtilLoadStringResult.loadedString;
+	var placerResult = JSON.parse(fileString);
+	var document = {
+			inputDocument: {
+				placerResult: placerResult
+			}
+	};
+	return assignLineagesFromPlacerDocument(document);
+}
+
+// return true if lineage1 is an ancestor of lineage2 (lineages are their own ancestors)
+function isAncestorLineage(lineage1, lineage2) {
+	if(lineage2.indexOf(lineage1) == 0) {
+		return true;
+	}
+	if(lineage1 == "B.7" && lineage2 == "B.10") {
+		return true;
+	}
+	return false;
+}
+
+function assignLineagesFromPlacerDocument(document) {
 	
 	var placerResult = document.inputDocument.placerResult;
 	
@@ -126,7 +219,7 @@ function assignLineages(document) {
 		}));
 	});
 
-	var queryNameToLineageResult = {};
+	var queryLineageResults = [];
 	
 	_.each(queryObjs, function(queryObj) {
 		var queryName = queryObj.queryName;
@@ -161,15 +254,61 @@ function assignLineages(document) {
 						}
 				});
 			});
-			// somehow generate a lineage result for this placement.
-			var placementLineages = findPlacementLineages(glueTree, queryName);
+			// generate a lineage result for this placement.
+			var placementLineages = findPlacementLineages(glueTree.phyloTree.root, [], queryName);
+			var placementLineageResult = {
+					likeWeightRatio: placementObj.likeWeightRatio,
+					lineages: _.uniq(placementLineages)
+			};
+			placementLineageResults.push(placementLineageResult);
+		});
+		// somehow combine the lineage results into a result for the query
+		var lineageFractionsMap = {};
+		_.each(placementLineageResults, function(placementLineageResult) {
+			_.each(placementLineageResult.lineages, function(lineage) {
+				var oldFraction = lineageFractionsMap[lineage];
+				if(oldFraction == null) {
+					oldFraction = 0.0;
+				}
+				var newFraction = oldFraction + placementLineageResult.likeWeightRatio;
+				lineageFractionsMap[lineage] = newFraction;
+			});
+		});
+		var lineageFractions = [];
+		_.each(_.pairs(lineageFractionsMap), function(pair) {
+			lineageFractions.push({
+				lineage: pair[0],
+				totalLikelihoodWeightRatio: pair[1]
+			});
+		});
+		var bestLineage = null;
+		var bestLikelihoodWeightRatio;
+		// best lineage is defined as follows:
+		// take the set of lineages with totalLikelihoodWeightRatio > 50%
+		// which of these is not an ancestor of any other in the set
+		var candidateLineageFractions = _.filter(lineageFractions, function(lf) {
+			return lf.totalLikelihoodWeightRatio > 0.5;
+		});
+		_.each(candidateLineageFractions, function(clf) {
+			if(bestLineage == null || isAncestorLineage(bestLineage, clf.lineage)) {
+				bestLineage = clf.lineage;
+				bestLikelihoodWeightRatio = clf.totalLikelihoodWeightRatio;
+			}
 		});
 		
-		// somehow combine the lineage results into a result for the query
+		queryLineageResults.push({
+				queryName: queryName,
+				lineageFractions: lineageFractions,
+				bestLineage: bestLineage,
+				bestLikelihoodWeightRatio: bestLikelihoodWeightRatio
+		});
+		
 	});
 	
 	return {
 		covAssignLineagesResult: {
+			queryLineageResults: queryLineageResults
 		}
 	}
 }
+
