@@ -25,7 +25,7 @@ function setLeafSeqIDs(subtree) {
 	}
 }
 
-function setInternalLineage(lineageToParent, subtree) {
+function setSubtreeLineage(lineageToParent, subtree) {
 	var userData;
 	var subtreeType;
 	if(subtree.internal != null) { // internal node
@@ -36,22 +36,35 @@ function setInternalLineage(lineageToParent, subtree) {
 		}
 		subtreeType = "internal";
 		var branches = subtree.internal.branch;
-		var childLineages = [];
+		var leafChildLineages = [];
+		var internalChildLineages = [];
+		
 		_.each(branches, function(branch) {
-			childLineages.push(setInternalLineage(lineageToParent, branch));
-		});
-		var commonLineage = findCommonLineage(childLineages);
-		_.each(childLineages, function(childLineage) {
-			if(commonLineage != childLineage) {
-				var oldParent = lineageToParent[childLineage];
-				if(oldParent != null) {
-					throw new Error("Lineage "+childLineage+" is parented in two locations "+oldParent+" and "+commonLineage);
-				}
-				lineageToParent[childLineage] = commonLineage;
+			var branchLineage = setSubtreeLineage(lineageToParent, branch);
+			if(branch.internal != null) {
+				internalChildLineages.push(branchLineage);
+			} else {
+				leafChildLineages.push(branchLineage);
 			}
 		});
-		userData.lineage = commonLineage;
-		return commonLineage;
+		var childLineages = internalChildLineages.concat(leafChildLineages);
+		var subTreeLineage;
+		if(leafChildLineages.length == 1) {
+			subTreeLineage = leafChildLineages[0];
+		} else {
+			subTreeLineage = findCommonLineage(childLineages);
+		}
+		_.each(childLineages, function(childLineage) {
+			if(subTreeLineage != childLineage) {
+				var oldParent = lineageToParent[childLineage];
+				if(oldParent != null && oldParent != subTreeLineage) {
+					throw new Error("Lineage "+childLineage+" has incompatible parents "+oldParent+" and "+subTreeLineage);
+				}
+				lineageToParent[childLineage] = subTreeLineage;
+			}
+		});
+		userData.lineage = subTreeLineage;
+		return subTreeLineage;
 	} else { // leaf node
 		userData = subtree.leaf.userData;
 		subtreeType = "leaf";
@@ -71,7 +84,7 @@ function checkLineages() {
 		glueTree = glue.command(["read-alignment-phylogeny", "AL_GISAID_UNCONSTRAINED", "phylogeny"]);
 	});
 	var lineageToParent = {};
-	setInternalLineage(lineageToParent, glueTree.phyloTree.root);
+	setSubtreeLineage(lineageToParent, glueTree.phyloTree.root);
 	glue.logInfo("lineageToParent", lineageToParent);
 	
 }
@@ -149,6 +162,7 @@ function assignLineages(document) {
 				});
 			});
 			// somehow generate a lineage result for this placement.
+			var placementLineages = findPlacementLineages(glueTree, queryName);
 		});
 		
 		// somehow combine the lineage results into a result for the query
