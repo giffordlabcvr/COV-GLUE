@@ -181,6 +181,7 @@ function placeSequenceToFile(sequenceID, filePath) {
 
 }
 
+// note this is for testing, the input is a json, not XML.
 function assignLineagesFromPlacerFile(filePath) {
 	var fileString = glue.command(["file-util", "load-string", filePath]).fileUtilLoadStringResult.loadedString;
 	var placerResult = JSON.parse(fileString);
@@ -194,6 +195,9 @@ function assignLineagesFromPlacerFile(filePath) {
 
 // return true if lineage1 is an ancestor of lineage2 (lineages are their own ancestors)
 function isAncestorLineage(lineage1, lineage2) {
+	if(lineage1 == "SARS-CoV-2") {
+		return true;
+	}
 	if(lineage2.indexOf(lineage1) == 0) {
 		return true;
 	}
@@ -276,8 +280,12 @@ function assignLineagesFromPlacerDocument(document) {
 		});
 		var lineageFractions = [];
 		_.each(_.pairs(lineageFractionsMap), function(pair) {
+			var lineage = pair[0];
+			if(lineage == "") {
+				lineage = "SARS-CoV-2";
+			}
 			lineageFractions.push({
-				lineage: pair[0],
+				lineage: lineage,
 				totalLikelihoodWeightRatio: pair[1]
 			});
 		});
