@@ -117,7 +117,7 @@ function generateQueryToTargetRefSegs(targetRefName, nucleotides) {
 		});
 		glue.log("FINE", "covReportingController.generateQueryToTargetRefSegs, alignResult", alignResult);
 	});
-	return alignResult.compoundAlignerResult.sequence[0].alignedSegment;
+	return alignResult.mafftAlignerResult.sequence[0].alignedSegment;
 	
 }
 
@@ -472,6 +472,19 @@ function placeFasta(fastaMap, resultMap, placerResultContainer) {
 			resultMap[queryName].placements = placements;
 		});
 		
+		var lineageAssignmentResultDocument;
+		glue.inMode("module/covAssignLineages", function() {
+			lineageAssignmentResultDocument = glue.command({
+				"invoke-function": {
+					"functionName": "assignLineagesFromPlacerDocument",
+					"document": placerResultDocument
+				}
+			});
+		});
+		_.each(lineageAssignmentResultDocument.covAssignLineagesResult.queryLineageResults, 
+				function(queryLineageResult) {
+			resultMap[queryLineageResult.queryName].lineageAssignmentResult = queryLineageResult;
+		});
 	}
 }
 
