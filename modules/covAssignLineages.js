@@ -185,12 +185,7 @@ function placeSequenceToFile(sequenceID, filePath) {
 function assignLineagesFromPlacerFile(filePath) {
 	var fileString = glue.command(["file-util", "load-string", filePath]).fileUtilLoadStringResult.loadedString;
 	var placerResult = JSON.parse(fileString);
-	var document = {
-			inputDocument: {
-				placerResult: placerResult
-			}
-	};
-	return assignLineagesFromPlacerDocument(document);
+	return assignLineagesFromPlacerDocument(placerResult);
 }
 
 // return true if lineage1 is an ancestor of lineage2 (lineages are their own ancestors)
@@ -207,9 +202,74 @@ function isAncestorLineage(lineage1, lineage2) {
 	return false;
 }
 
-function assignLineagesFromPlacerDocument(document) {
-	
-	var placerResult = document.inputDocument.placerResult;
+function assignLineagesDocumentForSequenceBatch(whereClause, offset, batchSize) {
+	var fastaDocument;
+	glue.inMode("module/covFastaExporter", function() {
+		fastaDocument = glue.command(["export", "-w", whereClause, "--offset", 
+			offset, "--batchSize", batchSize, "--preview"]);
+	});
+	return assignLineagesDocumentForFastaDocument(fastaDocument);
+}
+
+function assignLineagesForSequenceBatch(whereClause, offset, batchSize) {
+	return assignLineagesDocumentToObjectList(assignLineagesDocumentForSequenceBatch(whereClause, offset, batchSize));
+}
+
+function assignLineagesDocumentForSequences(whereClause) {
+	var fastaDocument;
+	glue.inMode("module/covFastaExporter", function() {
+		fastaDocument = glue.command(["export", "-w", whereClause, "--preview"]);
+	});
+	return assignLineagesDocumentForFastaDocument(fastaDocument);
+}
+
+function assignLineagesForSequences(whereClause) {
+	return assignLineagesDocumentToObjectList(assignLineagesDocumentForSequences(whereClause));
+}
+
+function assignLineagesDocumentForFile(fastaFilePath) {
+	var fastaDocument;
+	glue.inMode("module/covFastaUtility", function() {
+		fastaDocument = glue.command(["load-nucleotide-fasta", fastaFilePath]);
+	});
+	return assignLineagesDocumentForFastaDocument(fastaDocument);
+}
+
+function assignLineagesForFile(fastaFilePath) {
+	return assignLineagesDocumentToObjectList(assignLineagesDocumentForFile(fastaFilePath));
+}
+
+
+function assignLineagesDocumentForFastaDocument(fastaDocument) {
+	var placerDocument;
+	glue.inMode("module/covMaxLikelihoodPlacer", function() {
+		placerDocument = glue.command({
+			"place": {
+				"fasta-document": {
+					"fastaCommandDocument": fastaDocument
+				}
+			}
+		});
+	});
+	return assignLineagesFromPlacerDocument(placerDocument);
+}
+
+function assignLineagesForFastaDocument(fastaDocument) {
+	return assignLineagesDocumentToObjectList(assignLineagesDocumentForFastaDocument(fastaDocument));
+}
+
+
+function assignLineagesDocumentToObjectList(documentResult) {
+	glue.logInfo("documentResult", documentResult);
+	return _.map(documentResult.covAssignLineagesResult.queryLineageResults, 
+			function(qlr) { return { 
+				queryName: qlr.queryName, 
+				lineage: qlr.bestLineage, 
+				likelihoodWeightRatio: qlr.bestLikelihoodWeightRatio
+			} });
+}
+
+function assignLineagesFromPlacerDocument(placerResult) {
 	
 	var queryObjs;
 
