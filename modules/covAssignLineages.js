@@ -203,7 +203,7 @@ function isAncestorLineage(lineage1, lineage2) {
 
 function assignLineagesDocumentForSequenceBatch(whereClause, offset, batchSize) {
 	var fastaDocument;
-	glue.inMode("module/covFastaExporter", function() {
+	glue.inMode("module/covAssignLineagesFastaExporter", function() {
 		fastaDocument = glue.command(["export", "-w", whereClause, "--offset", 
 			offset, "--batchSize", batchSize, "--preview"]);
 	});
@@ -216,7 +216,7 @@ function assignLineagesForSequenceBatch(whereClause, offset, batchSize) {
 
 function assignLineagesDocumentForSequences(whereClause) {
 	var fastaDocument;
-	glue.inMode("module/covFastaExporter", function() {
+	glue.inMode("module/covAssignLineagesFastaExporter", function() {
 		fastaDocument = glue.command(["export", "-w", whereClause, "--preview"]);
 	});
 	return assignLineagesDocumentForFastaDocument(fastaDocument);

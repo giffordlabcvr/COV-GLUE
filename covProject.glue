@@ -67,6 +67,9 @@ project cov
   # this allows assignment of lineages to work.
   module covAssignLineages invoke-function setLineagesInTree
   
+  # assign and store lineages for all sequences.
+  run script glue/covAssignAndStoreLineages.js
+  
   # generate deletions
   # run script glue/covGenerateGisaidDeletions.js
 

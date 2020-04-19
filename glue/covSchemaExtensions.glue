@@ -52,6 +52,8 @@ schema-project cov
     create field num_unique_snps INTEGER
     create field pang_lineage VARCHAR
     create field pang_representative BOOLEAN
+    create field cov_glue_lineage VARCHAR
+    create field cov_glue_lw_ratio DOUBLE
     exit
 
   table feature
