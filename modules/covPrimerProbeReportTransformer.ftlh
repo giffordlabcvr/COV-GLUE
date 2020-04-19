@@ -32,19 +32,41 @@ ${getResourceAsString('covPrimerProbeReportTransformer.css')?no_esc}
 </div>
 
 <p>
+<h4>Overview</h4>
+This bioinformatics procedure analysed a SARS-CoV-2 genome "query sequence" to compare it 
+with a range of published primer/probe designs for sequencing and diagnostics assays. 
+</p>
+<p>
+Any mismatches, insertions or deletions detected could suggest that the sequenced viral 
+strain may fail to bind to the specific primer, and so the associated assay may be ineffective or suboptimal. However, please
+do bear in mind that the reported issues are based purely on a simple sequence comparison, so further 
+investigation of primer and probe properties (e.g. melting temperature, secondary structure, 
+complementarity) and laboratory investigation of assay efficacy is advised. 
+</p>
+<p>
+Where coverage / alignment issues are reported, this indicates Ns in the primer sequence region, 
+or that the query sequence does not fully cover the primer sequence region, or that there has
+been a problem in the alignment step of the procedure.
+</p>
+<p>
+Genome reference coordinates are based on the Wuhan-Hu-1 strain, GenBank accession MN908947.3.
+</p>
+<p>
 <h4>Assay reports</h4>
 <table id="assayReports">
 <thead>
+<col width="16%"></col>
+<col width="12%"></col>
+<col width="12%"></col>
+<col width="12%"></col>
 <col width="20%"></col>
-<col width="15%"></col>
-<col width="15%"></col>
-<col width="20%"></col>
-<col width="10%"></col>
+<col width="8%"></col>
 <col width="20%"></col>
 
 <tr class="tableHeader">
   <td><b>Publication</b></td>
   <td><b>Assay</b></td>
+  <td><b>Purpose</b></td>
   <td><b>Primer/probe</b></td>
   <td><b>Primer/probe sequence</b></td>
   <td><b>Location on reference</b></td>
@@ -68,6 +90,12 @@ ${getResourceAsString('covPrimerProbeReportTransformer.css')?no_esc}
 <td>
 </#if>
 ${assay.display_name}</td>
+<#if assay.primersWithIssues gt 0>
+<td rowspan="${assay.primersWithIssues}">
+<#else>
+<td>
+</#if>
+${assay.assay_type_display}</td>
 <#if assay.primersWithIssues = 0>
 <td colspan="4">No issues detected</td>
 </tr>

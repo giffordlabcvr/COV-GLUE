@@ -118,6 +118,9 @@ schema-project cov
     create field display_name VARCHAR 100
     create field organisation VARCHAR 200
     create field url VARCHAR 300
+    # currently the assay_type values are 'whole_genome_sequencing' and 'diagnostic_amplification' 
+    create field assay_type VARCHAR 50
+    create field assay_type_display VARCHAR 50
     exit
 
   table cov_primer_probe

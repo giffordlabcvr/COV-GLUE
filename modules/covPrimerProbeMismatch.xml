@@ -8,6 +8,14 @@
 		</parameter>
 	</function>
 	<function>
+		<name>reportSingleFastaFromDocument</name>
+		<parameter>
+			<name>document</name>
+		</parameter>
+		<consumesDocument>true</consumesDocument>
+		<documentResultType/>
+	</function>
+	<function>
 		<name>reportMultiFasta</name>
 		<parameter>
 			<name>fastaFilePath</name>

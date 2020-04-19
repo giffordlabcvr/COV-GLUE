@@ -62,7 +62,7 @@ function reportSingleFasta(fastaFilePath) {
 	var queryName = fastaDoc.nucleotideFasta.sequences[0].id;
 	var queryNucleotides = fastaDoc.nucleotideFasta.sequences[0].sequence;
 	
-	var resultDoc = singleSequenceReport(fastaFilePath, queryName, queryNucleotides);
+	var resultDoc = singleSequenceReportAux(fastaFilePath, queryName, queryNucleotides);
 	glue.log("FINEST", "resultDoc", resultDoc);
 	var htmlFilePath = fastaFilePath.substring(0, fastaFilePath.lastIndexOf("."))+"_ppReport.html";
 
@@ -75,9 +75,23 @@ function reportSingleFasta(fastaFilePath) {
 	glue.log("FINEST", "Wrote primer/probe report: "+htmlFilePath);
 }
 
-function singleSequenceReport(fastaFilePath, queryName, queryNucleotides) {
+
+function reportSingleFastaFromDocument(document) {
+	var fastaFilePath = document.inputDocument.fastaFilePath;
+	var queryName = document.inputDocument.queryName;
+	var queryNucleotides = document.inputDocument.queryNucleotides;
+	var targetRefName = document.inputDocument.targetRefName;
+	var queryToTargetRefSegs = document.inputDocument.queryToTargetRefSegs;
+	return singleSequenceReport(fastaFilePath, queryName, queryNucleotides, targetRefName, queryToTargetRefSegs);
+}
+
+function singleSequenceReportAux(fastaFilePath, queryName, queryNucleotides) {
 	var targetRefName = "REF_MASTER_WUHAN_HU_1";
 	var queryToTargetRefSegs = generateQueryToTargetRefSegs(targetRefName, queryNucleotides);
+	return singleSequenceReport(fastaFilePath, queryName, queryNucleotides, targetRefName, queryToTargetRefSegs);
+}
+
+function singleSequenceReport(fastaFilePath, queryName, queryNucleotides, targetRefName, queryToTargetRefSegs) {
 	
 	var projectVersion = 
 		glue.command(["show","setting","project-version"]).projectShowSettingResult.settingValue;
@@ -98,7 +112,7 @@ function singleSequenceReport(fastaFilePath, queryName, queryNucleotides) {
 				"-s", "organisation",
 				//"-w", "id = 'NIID_2019-nCOV_N'", // Limited test 
 				//"-w", "id = 'E_sarbeco'", // Limited test 
-				"id", "display_name", "organisation", "url"]));
+				"id", "display_name", "organisation", "url", "assay_type", "assay_type_display"]));
 	
 	_.each(assayObjs, function(assayObj) {
 		glue.inMode("custom-table-row/cov_primer_probe_assay/"+assayObj.id, function() {
@@ -643,7 +657,7 @@ function runTests() {
 
 function runTest(testName, mods, expectedIssues) {
 	var testSeq = buildTestSequence(mods);
-	var report = singleSequenceReport(testName, testName, testSeq);
+	var report = singleSequenceReportAux(testName, testName, testSeq);
 	var actualIssues = [];
 	_.each(report.covPPReport.assays, function(assay) {
 		_.each(assay.ppObjs, function(ppObj) {
@@ -702,7 +716,7 @@ function reportMultiFasta(fastaFilePath) {
 	_.each(fastaDoc.nucleotideFasta.sequences, function(seq) {
 		var queryName = seq.id;
 		var queryNucleotides = seq.sequence;
-		var resultDoc = singleSequenceReport(fastaFilePath, queryName, queryNucleotides);
+		var resultDoc = singleSequenceReportAux(fastaFilePath, queryName, queryNucleotides);
 		var numUnknown = 0;
 		_.each(resultDoc.covPPReport.assays, function(assayObj) {
 			_.each(assayObj.ppObjs, function(ppObj) {

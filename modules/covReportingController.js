@@ -95,7 +95,8 @@ function initResultMap(fastaDocument, fastaMap, resultMap, placerResultContainer
 	// apply phylogenetic placement
 	placeFasta(fastaMap, resultMap, placerResultContainer);
 
-	glue.log("FINE", "covReportingController.initResultMap, result map after genotyping", resultMap);
+	
+	glue.log("FINE", "covReportingController.initResultMap, result map after placement / lineage assignment", resultMap);
 }
 
 function generateQueryToTargetRefSegs(targetRefName, nucleotides) {
@@ -336,20 +337,28 @@ function generateDeletions(queryNucleotides, targetRefName, queryToTargetRefSegs
 function generateSingleFastaReport(fastaMap, resultMap, fastaFilePath) {
 	
 	_.each(_.values(resultMap), function(sequenceResult) {
-		var targetRefName = "REF_MASTER_WUHAN_HU_1";
-		var nucleotides = fastaMap[sequenceResult.id].sequence;
-		var queryToTargetRefSegs = generateQueryToTargetRefSegs(targetRefName, nucleotides);
-		var queryNucleotides = fastaMap[sequenceResult.id].sequence;
-		sequenceResult.featuresWithCoverage = generateFeaturesWithCoverage(targetRefName, queryToTargetRefSegs);
+		if(sequenceResult.isForwardCov) {
+			var sequenceId = sequenceResult.id;
+			var targetRefName = "REF_MASTER_WUHAN_HU_1";
+			var nucleotides = fastaMap[sequenceId].sequence;
+			var queryToTargetRefSegs = generateQueryToTargetRefSegs(targetRefName, nucleotides);
+			var queryNucleotides = fastaMap[sequenceId].sequence;
+			sequenceResult.featuresWithCoverage = generateFeaturesWithCoverage(targetRefName, queryToTargetRefSegs);
 
-		sequenceResult.targetRefName = targetRefName;
+			sequenceResult.targetRefName = targetRefName;
 
-		sequenceResult.visualisationHints = visualisationHints(queryNucleotides, targetRefName, queryToTargetRefSegs);
-		
-		sequenceResult.replacements = generateReplacements(queryNucleotides, targetRefName, queryToTargetRefSegs);
-		sequenceResult.insertions = generateInsertions(queryNucleotides, targetRefName, queryToTargetRefSegs);
-		sequenceResult.deletions = generateDeletions(queryNucleotides, targetRefName, queryToTargetRefSegs);
+			sequenceResult.visualisationHints = visualisationHints(queryNucleotides, targetRefName, queryToTargetRefSegs);
+
+			sequenceResult.primerProbeMismatchReport = 
+				primerProbeMismatchReport(fastaFilePath, sequenceId, queryNucleotides, targetRefName, queryToTargetRefSegs);
+
+
+			sequenceResult.replacements = generateReplacements(queryNucleotides, targetRefName, queryToTargetRefSegs);
+			sequenceResult.insertions = generateInsertions(queryNucleotides, targetRefName, queryToTargetRefSegs);
+			sequenceResult.deletions = generateDeletions(queryNucleotides, targetRefName, queryToTargetRefSegs);
+		}
 	});
+	
 	
 	var results = _.values(resultMap);
 	
@@ -472,6 +481,8 @@ function placeFasta(fastaMap, resultMap, placerResultContainer) {
 			resultMap[queryName].placements = placements;
 		});
 		
+		glue.setRunningDescription("Lineage assignment for "+numSeqs+" sequence"+((numSeqs > 1) ? "s" : ""));
+
 		var lineageAssignmentResultDocument;
 		glue.inMode("module/covAssignLineages", function() {
 			lineageAssignmentResultDocument = glue.command({
@@ -561,3 +572,23 @@ function addOverview(covReport) {
 	
 }
 
+function primerProbeMismatchReport(fastaFilePath, sequenceId, queryNucleotides, targetRefName, queryToTargetRefSegs) {
+	var primerProbeMismatchDocument;
+	glue.inMode("module/covPrimerProbeMismatch", function() {
+		primerProbeMismatchDocument = glue.command({
+			"invoke-function": {
+				"functionName": "reportSingleFastaFromDocument",
+				"document": {
+					inputDocument: {
+						fastaFilePath: fastaFilePath,
+						queryName: sequenceId,
+						queryNucleotides: queryNucleotides,
+						targetRefName: targetRefName,
+						queryToTargetRefSegs: queryToTargetRefSegs
+					}
+				}
+			}
+		});
+	});
+	return primerProbeMismatchDocument;
+}

@@ -51,15 +51,22 @@ _.each(_.pairs(ntCharToSubChars), function(pair) {
 
 var articPrimers;
 
-// load primers and probes from Nuno's table.
 glue.inMode("module/tabularUtilityTab", function() {
+	// load primers and probes from Nuno's table.
 	ppObjs = glue.tableToObjects(glue.command(["load-tabular", "tabular/faria_probes_primers/Primers_probes.txt"]));
+	_.each(ppObjs, function(ppObj) {
+		ppObj["AssayType"] = "diagnostic_amplification";
+		ppObj["AssayTypeDisplay"] = "Amplification for diagnostics";
+	});
+	// load artic V3 primers
 	articPrimers = glue.tableToObjects(glue.command(["load-tabular", "tabular/artic_primers/nCoV-2019_V3.tsv"]));
 });
 
 _.each(articPrimers, function(articPrimer) {
 	ppObjs.push({
 		"Assay": "nCoV-2019 nanopore primers V3",
+		"AssayType": "whole_genome_sequencing",
+		"AssayTypeDisplay": "Whole genome sequencing",
 		"Organisation": "ARTIC Network", 
 		"Reference": "https://github.com/artic-network/artic-ncov2019",
 		"Name_primer_or_probe": articPrimer.name,
@@ -89,6 +96,8 @@ _.each(ppObjs, function(ppObj) {
  			}
  			glue.command(["set", "field", "organisation", organisation.trim()]);
  			glue.command(["set", "field", "url", ppObj["Reference"].trim()]);
+ 			glue.command(["set", "field", "assay_type", ppObj["AssayType"].trim()]);
+ 			glue.command(["set", "field", "assay_type_display", ppObj["AssayTypeDisplay"].trim()]);
  		}); 	 	
  	}
  	var ppID = ppObj["Name_primer_or_probe"].trim().replace(" ", "_");
