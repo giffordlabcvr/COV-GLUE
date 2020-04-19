@@ -64,17 +64,16 @@ function checkMonophyletic(current, completed, subtree) {
 	var newlyEntered;
 	if(subtree.internal != null) { // internal node
 		newlyEntered = checkLineageStatus(current, completed, subtree.internal.userData.lineage);
-		//glue.logInfo("Entering '"+subtree.internal.userData.lineage+"'");
 		_.each(subtree.internal.branch, function(branch) {
 			checkMonophyletic(current, completed, branch);
 		});
-		//glue.logInfo("Exiting '"+subtree.internal.userData.lineage+"'");
+		//glue.log("FINEST", "Exiting '"+subtree.internal.userData.lineage+"'");
 	} else {
 		newlyEntered = checkLineageStatus(current, completed, subtree.leaf.userData.lineage);
 	}
 	_.each(newlyEntered, function(lineage) {
 		delete current[lineage];
-		glue.logInfo("Exited lineage '"+lineage+"' ");
+		glue.log("FINEST", "Exited lineage '"+lineage+"' ");
 		completed[lineage] = "yes";
 	});
 }
@@ -93,7 +92,7 @@ function checkLineageStatus(current, completed, lineage) {
 	_.each(_.keys(ancestors), function(lineage) {
 		if(current[lineage] == null) {
 			current[lineage] = "yes";
-			glue.logInfo("Entered lineage '"+lineage+"' ");
+			glue.log("FINEST", "Entered lineage '"+lineage+"' ");
 			newlyEntered.push(lineage);
 		}
 	});
@@ -113,7 +112,7 @@ function setLineagesInTree() {
 	checkMonophyletic({}, {}, glueTree.phyloTree.root);
 
 	var glueTreeJson = JSON.stringify(glueTree);
-	//glue.logInfo("glueTreeJson", glueTreeJson);
+	//glue.log("FINEST", "glueTreeJson", glueTreeJson);
 	glue.inMode("alignment/AL_GISAID_UNCONSTRAINED", function() {
 		glue.command(["set", "field", "phylogeny", glueTreeJson]);
 	});
@@ -260,7 +259,7 @@ function assignLineagesForFastaDocument(fastaDocument) {
 
 
 function assignLineagesDocumentToObjectList(documentResult) {
-	glue.logInfo("documentResult", documentResult);
+	glue.log("FINEST", "documentResult", documentResult);
 	return _.map(documentResult.covAssignLineagesResult.queryLineageResults, 
 			function(qlr) { return { 
 				queryName: qlr.queryName, 

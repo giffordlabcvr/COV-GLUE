@@ -63,6 +63,10 @@ project cov
   # reroot phylogeny and export display tree, this has the side effect of loading the final ref tree
   run file glue/covRerootPhylogeny.glue
   
+  # set the pangolin lineage as internal node properties in the reference tree.
+  # this allows assignment of lineages to work.
+  module covAssignLineages invoke-function setLineagesInTree
+  
   # generate deletions
   # run script glue/covGenerateGisaidDeletions.js
 
