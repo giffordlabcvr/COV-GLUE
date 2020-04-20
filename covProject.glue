@@ -73,16 +73,19 @@ project cov
   # load the primer/probe data
   run script glue/covLoadPrimerProbes.js
   
+  # run the rules to exclude some sequences from the variation analysis
+  run file glue/covSetAnalyseVariationFlag.glue
+  
   # generate deletions
-  # run script glue/covGenerateGisaidDeletions.js
+  run script glue/covGenerateGisaidDeletions.js
 
   # generate replacements
-  # run script glue/covGenerateGisaidReplacements.js
+  run script glue/covGenerateGisaidReplacements.js
 
   # generate insertions
-  # run script glue/covGenerateGisaidInsertions.js
+  run script glue/covGenerateGisaidInsertions.js
 
-  # run file glue/covSanitisedExports.glue
+  run file glue/covSanitisedExports.glue
 
   # Validate
   validate
