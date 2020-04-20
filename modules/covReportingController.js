@@ -34,8 +34,12 @@ function reportDocument(document) {
 	var placerResultContainer = {};
 	// apply blast recogniser / genotyping together on set, as this is more efficient.
 	initResultMap(fastaDocument, fastaMap, resultMap, placerResultContainer);
+	var numSeqs = fastaDocument.nucleotideFasta.sequences.length;
+	var processed = 1;
 	// apply report generation to each sequence in the set.
 	var covReports = _.map(fastaDocument.nucleotideFasta.sequences, function(sequence) {
+		glue.setRunningDescription("Sequence analysis for "+processed+"/"+numSeqs+" sequence"+((numSeqs > 1) ? "s" : ""));
+		processed++;
 		return generateSingleFastaReport(_.pick(fastaMap, sequence.id), _.pick(resultMap, sequence.id), filePath);
 	});
 	var result = {
@@ -188,6 +192,7 @@ function generateReplacements(queryNucleotides, targetRefName, queryToTargetRefS
 							refAaObj.definiteAas != queryAaObj.definiteAas) {
 						var replacementObj = {
 								feature: featureObj.name,
+								featureDisplayName: featureObj.displayName,
 								codonLabel: queryAaObj.codonLabel,
 								refAas: refAaObj.definiteAas,
 								queryAas: queryAaObj.definiteAas
@@ -218,6 +223,9 @@ function generateReplacements(queryNucleotides, targetRefName, queryToTargetRefS
 			});
 		});
 		replacement.replacement.known_replacements = knownCovReplacements;
+		replacement.displayText = 
+			"AA replacement in "+replacement.replacement.featureDisplayName+": "+
+				refAas.join('/')+replacement.replacement.codonLabel+queryAas.join('/');
 	});
 	return replacementsList;
 }
@@ -252,6 +260,7 @@ function generateInsertions(queryNucleotides, targetRefName, queryToTargetRefSeg
 				}
 			}));
 			_.each(insertionsFound, function(insertionObj) {
+				insertionObj.featureDisplayName = featureObj.displayName;
 				glue.logInfo("insertionObj", insertionObj);
 				insertionsList.push({
 					insertion: insertionObj
@@ -269,10 +278,25 @@ function generateInsertions(queryNucleotides, targetRefName, queryToTargetRefSeg
 						" and first_codon_after_int = "+insertion.insertion.refFirstCodonAfterIns+
 						" and inserted_aas = '"+insertion.insertion.insertedQryAas+"'", 
 						"id", "display_name", "num_seqs"]));
-				_.each(foundCovInsertions, function(foundIns) {
-					knownCovInsertions.push({"known_insertion": foundIns});
-				});
-		}
+			_.each(foundCovInsertions, function(foundIns) {
+				knownCovInsertions.push({"known_insertion": foundIns});
+			});
+			var displayInsertedAas = insertion.insertion.insertedQryAas;
+			if(displayInsertedAas.length > 6) {
+				displayInsertedAas = displayInsertedAas.substring(0, 3)+"..."+displayInsertedAas.substring(displayInsertedAas.length-3, displayInsertedAas.length);
+			}
+			insertion.displayText = 
+				"AA insertion in "+insertion.insertion.featureDisplayName+": "+
+				insertion.insertion.refLastCodonBeforeIns+"-"+displayInsertedAas+"-"+insertion.insertion.refFirstCodonAfterIns;
+		} else {
+			var displayInsertedNts = insertion.insertion.insertedQryNts;
+			if(displayInsertedNts.length > 6) {
+				displayInsertedNts = displayInsertedNts.substring(0, 3)+"..."+displayInsertedNts.substring(displayInsertedNts.length-3, displayInsertedNts.length);
+			}
+			insertion.displayText = 
+				"Nucleotide insertion in "+insertion.insertion.featureDisplayName+": "+
+				insertion.insertion.refLastNtBeforeIns+"-"+displayInsertedNts+"-"+insertion.insertion.refFirstNtAfterIns;
+		}		
 		insertion.insertion.known_insertions = knownCovInsertions;
 	});
 	return insertionsList;
@@ -308,6 +332,7 @@ function generateDeletions(queryNucleotides, targetRefName, queryToTargetRefSegs
 				}
 			}));
 			_.each(deletionsFound, function(deletionObj) {
+				deletionObj.featureDisplayName = featureObj.displayName;
 				glue.logInfo("deletionObj", deletionObj);
 				deletionsList.push({
 					deletion: deletionObj
@@ -327,6 +352,13 @@ function generateDeletions(queryNucleotides, targetRefName, queryToTargetRefSegs
 			_.each(foundCovDeletions, function(foundDel) {
 				knownCovDeletions.push({"known_deletion": foundDel});
 			});
+			deletion.displayText = 
+				"AA deletion in "+deletion.deletion.featureDisplayName+": "+
+					deletion.deletion.refFirstCodonDeleted+"-"+deletion.deletion.refLastCodonDeleted;
+		} else {
+			deletion.displayText = 
+				"Nucleotide deletion in "+deletion.deletion.featureDisplayName+": "+
+					deletion.deletion.refFirstNtDeleted+"-"+deletion.deletion.refLastNtDeleted;
 		}
 		deletion.deletion.known_deletions = knownCovDeletions;
 	});
@@ -352,10 +384,12 @@ function generateSingleFastaReport(fastaMap, resultMap, fastaFilePath) {
 			sequenceResult.primerProbeMismatchReport = 
 				primerProbeMismatchReport(fastaFilePath, sequenceId, queryNucleotides, targetRefName, queryToTargetRefSegs);
 
+			var differences = [];
+			differences = differences.concat(generateReplacements(queryNucleotides, targetRefName, queryToTargetRefSegs));
+			differences = differences.concat(generateInsertions(queryNucleotides, targetRefName, queryToTargetRefSegs));
+			differences = differences.concat(generateDeletions(queryNucleotides, targetRefName, queryToTargetRefSegs));
 
-			sequenceResult.replacements = generateReplacements(queryNucleotides, targetRefName, queryToTargetRefSegs);
-			sequenceResult.insertions = generateInsertions(queryNucleotides, targetRefName, queryToTargetRefSegs);
-			sequenceResult.deletions = generateDeletions(queryNucleotides, targetRefName, queryToTargetRefSegs);
+			sequenceResult.differences = differences;
 		}
 	});
 	
