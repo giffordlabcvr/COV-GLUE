@@ -12,7 +12,7 @@ ${getResourceAsString('covPrimerProbeReportTransformer.css')?no_esc}
 </div>
 
 <div id="title">
-<h2>SARS-CoV-2 Primer/probe mismatch report</h2>
+<h2>SARS-CoV-2 Primer/probe analysis report</h2>
 </div>
 
 <div id="overview">
@@ -31,27 +31,28 @@ ${getResourceAsString('covPrimerProbeReportTransformer.css')?no_esc}
 </table>
 </div>
 
-<p>
 <h4>Overview</h4>
-This bioinformatics procedure analysed a SARS-CoV-2 genome "query sequence" to compare it 
+<small>
+<p>
+This bioinformatics procedure analyses a SARS-CoV-2 genomic "query sequence" to compare it 
 with a range of published primer/probe designs for sequencing and diagnostics assays. 
 </p>
 <p>
 Any mismatches, insertions or deletions detected could suggest that the sequenced viral 
-strain may fail to bind to the specific primer, and so the associated assay may be ineffective or suboptimal. However, please
+strain may fail to bind to the specific primer/probe, and so the associated assay may be ineffective or suboptimal. However, please
 do bear in mind that the reported issues are based purely on a simple sequence comparison, so further 
 investigation of primer and probe properties (e.g. melting temperature, secondary structure, 
 complementarity) and laboratory investigation of assay efficacy is advised. 
 </p>
 <p>
-Where coverage / alignment issues are reported, this indicates Ns in the primer sequence region, 
-or that the query sequence does not fully cover the primer sequence region, or that there has
+Where coverage / alignment issues are reported, this indicates N characters in the primer/probe region, 
+or that the query sequence does not fully cover the primer/probe region, or that there has
 been a problem in the alignment step of the procedure.
 </p>
 <p>
 Genome reference coordinates are based on the Wuhan-Hu-1 strain, GenBank accession MN908947.3.
 </p>
-<p>
+</small>
 <h4>Assay reports</h4>
 <table id="assayReports">
 <thead>

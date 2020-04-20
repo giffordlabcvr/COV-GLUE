@@ -100,6 +100,9 @@ function singleSequenceReport(fastaFilePath, queryName, queryNucleotides, target
 	
 	var rasVariationMatchDocument;
 	
+	var diagnosticsIssues = 0;
+	var sequencingIssues = 0;
+	
 	var matchResults = variationMatchResults(queryNucleotides, queryToTargetRefSegs, targetRefName, "name like 'cov_pp_match:%'");
 	
 	var vNameToMatchResult = {};
@@ -319,6 +322,11 @@ function singleSequenceReport(fastaFilePath, queryName, queryNucleotides, target
 					ppObj.numKnownIssues = _.filter(ppObj.issues, function(iss) {return iss.knownIssue;} ).length;
 					assayObj.primersWithIssues ++;
 				}
+				if(assayObj.assay_type == 'diagnostic_amplification') {
+					diagnosticsIssues += ppObj.numIssues - ppObj.numKnownIssues;
+				} else if(assayObj.assay_type == 'whole_genome_sequencing') {
+					sequencingIssues += ppObj.numIssues - ppObj.numKnownIssues;
+				} 
 			}
 
 		});		
@@ -329,6 +337,8 @@ function singleSequenceReport(fastaFilePath, queryName, queryNucleotides, target
 			fastaFilePath: fastaFilePath,
 			sequenceID: queryName,
 			assays: assayObjs,
+			diagnosticsIssues: diagnosticsIssues,
+			sequencingIssues: sequencingIssues,
 			projectVersion: projectVersion,
 			glueVersion: glueVersion,
 			reportGenerationDate: todaysDate()
