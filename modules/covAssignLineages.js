@@ -324,9 +324,11 @@ function assignLineagesFromPlacerDocument(placerResult) {
 						}
 				});
 			});
-			if(placementObj.placementIndex == 1) {
-				glue.command(["file-util", "save-string", JSON.stringify(glueTree, null, 2), "tree.json"]);
-			}
+			// write out the tree for a specific placement, useful for debugging.
+			// good online JSON browser here: https://codebeautify.org/jsonviewer
+			//if(placementObj.placementIndex == 1) {
+			//	glue.command(["file-util", "save-string", JSON.stringify(glueTree, null, 2), "tree.json"]);
+			//}
 			// generate a lineage result for this placement.
 			var placementLineages = findPlacementLineages(glueTree.phyloTree.root, [], queryName);
 			var placementLineageResult = {
