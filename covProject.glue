@@ -68,7 +68,7 @@ project cov
   module covAssignLineages invoke-function setLineagesInTree
   
   # assign and store lineages for all sequences.
-  run script glue/covAssignAndStoreLineages.js
+  # run script glue/covAssignAndStoreLineages.js
 
   # load the primer/probe data
   run script glue/covLoadPrimerProbes.js

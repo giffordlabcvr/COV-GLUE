@@ -74,16 +74,10 @@ gisaid_originating_lab
 gisaid_submitting_lab
 gisaid_authors
 # true if various QC and metadata criteria are met
-# if true, CoV-GLUE includes sequence in its analysis of AA replacements etc.
+# if true, CoV-GLUE includes sequence in its analysis of SNPs, AA replacements, indels etc.
 analyse_variation 
-# ref_tree_candidate is a subset of analyse_variation, 
-# if true, sequence may be selected to appear in the CoV-GLUE reference tree
-ref_tree_candidate 
 # if true, appears in the CoV-GLUE reference tree
 include_in_ref_tree 
-# for those sequences where include_in_ref_tree == true, 
-# number of cluster which CD-HIT-EST assigned the sequence to
-cdhit_cluster 
 # Number of n characters in the sequence
 num_ns
 # Longest run of consecutive Ns in the sequence

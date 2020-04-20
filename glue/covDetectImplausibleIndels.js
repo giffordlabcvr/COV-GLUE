@@ -43,7 +43,7 @@ glue.inMode("alignment/AL_GISAID_CONSTRAINED", function() {
 					"--excludeAbsent", "--showMatchesAsTable"]));
 				
 				_.each(memberDelObjs, function(memberDelObj) {
-					if(!memberDelObj.deletionIsCodonAligned && memberDelObj.deletedRefNts.length % 3 != 0) {
+					if(memberDelObj.deletedRefNts.length % 3 != 0) {
 						containsImplausibleDeletion = true;
 					}
 				});
@@ -62,7 +62,7 @@ glue.inMode("alignment/AL_GISAID_CONSTRAINED", function() {
 					"--excludeAbsent", "--showMatchesAsTable"]));
 				
 				_.each(memberInsObjs, function(memberInsObj) {
-					if(!memberInsObj.insertionIsCodonAligned || memberInsObj.insertedQryAas.length > 10) {
+					if(memberInsObj.insertedQryNts.length % 3 != 0) {
 						containsImplausibleInsertion = true;
 					}
 				});
@@ -77,18 +77,16 @@ glue.inMode("alignment/AL_GISAID_CONSTRAINED", function() {
 });
 
 _.each(implausibleDeletionAlmtMembers, function(almtMemberObj) {
-	glue.log("WARNING", "implausible deletion detected for sequence "+almtMemberObj["sequence.sequenceID"]+", it will be excluded from the reference tree and from replacement, deletion and insertion analysis");
+	glue.log("WARNING", "implausible deletion detected for sequence "+almtMemberObj["sequence.sequenceID"]+", it will be excluded from variation analysis");
 	glue.inMode("sequence/"+almtMemberObj["sequence.source.name"]+"/"+almtMemberObj["sequence.sequenceID"], function() {
 		glue.command(["set", "field", "analyse_variation", "false"]);
-		glue.command(["set", "field", "ref_tree_candidate", "false"]);
 	});
 });
 
 _.each(implausibleInsertionAlmtMembers, function(almtMemberObj) {
-	glue.log("WARNING", "implausible insertion detected for sequence "+almtMemberObj["sequence.sequenceID"]+", it will be excluded from the reference tree and from replacement, deletion and insertion analysis");
+	glue.log("WARNING", "implausible insertion detected for sequence "+almtMemberObj["sequence.sequenceID"]+", it will be excluded from variation analysis");
 	glue.inMode("sequence/"+almtMemberObj["sequence.source.name"]+"/"+almtMemberObj["sequence.sequenceID"], function() {
 		glue.command(["set", "field", "analyse_variation", "false"]);
-		glue.command(["set", "field", "ref_tree_candidate", "false"]);
 	});
 });
 

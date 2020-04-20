@@ -1,0 +1,34 @@
+  #####################################################################################
+  ##         Rules for whether sequences are included in the variation analysis      ##
+  #####################################################################################
+
+  # all sequences are analysed by default
+  multi-set field sequence -a analyse_variation true
+
+  # non complete genomes (length < 29000) excluded from the analysis
+  multi-set field sequence -w "length < 29000" analyse_variation false
+
+  # GISAID sequences where host_species != "Human" excluded from the analysis
+  multi-set field sequence -w "(host_species = null or !(host_species = 'Human'))" analyse_variation false
+
+  # exclude sequences with "warn" status on GISAID, this implies quality issues,
+  # usually multiple or long runs of NNNs
+  multi-set field sequence -w "gisaid_status_code = 'warn'" analyse_variation false
+
+  # exclude sequences with more than 10 unique SNPs.
+  multi-set field sequence -w "num_unique_snps > 10" analyse_variation false
+
+  # exclude EPI_ISL_410545 (Vero E6 cell line of Italian isolate INMI1) in favour of directly sequenced clinical sample EPI_ISL_410546
+  sequence cov-gisaid EPI_ISL_410545 set field analyse_variation false
+
+  # exclude EPI_ISL_410720 (Vero E6 cell line of French isolate IDF0372) in favour of directly sequenced clinical sample EPI_ISL_406596
+  sequence cov-gisaid EPI_ISL_410720 set field analyse_variation false
+
+  # exclude EPI_ISL_410984 (Vero E6 cell line of French isolate IDF0515) in favour of directly sequenced clinical sample EPI_ISL_408430
+  sequence cov-gisaid EPI_ISL_410984 set field analyse_variation false
+
+  # detect implausible insertions / deletions and in these cases exclude from variation analysis
+  run script glue/covDetectImplausibleIndels.js
+
+  
+  

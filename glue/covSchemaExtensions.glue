@@ -36,11 +36,9 @@ schema-project cov
     create field gisaid_originating_lab VARCHAR 300
     create field gisaid_submitting_lab VARCHAR 300
     create field gisaid_authors CLOB
-    create field ref_tree_candidate BOOLEAN
     create field include_in_ref_tree BOOLEAN
     create field orf_8_aa_84 VARCHAR
     create field analyse_variation BOOLEAN
-    create field cdhit_cluster INTEGER
     create field num_ns INTEGER
     create field longest_n_run INTEGER
     create field num_bivalent_ambigs INTEGER
