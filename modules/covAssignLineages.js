@@ -192,10 +192,17 @@ function isAncestorLineage(lineage1, lineage2) {
 	if(lineage1 == "SARS-CoV-2") {
 		return true;
 	}
-	if(lineage2.indexOf(lineage1) == 0) {
+	if(lineage1 == "B.7" && lineage2 == "B.10") {
 		return true;
 	}
-	if(lineage1 == "B.7" && lineage2 == "B.10") {
+	var lineage1Bits = lineage1.split(".")
+	var lineage2Bits = lineage2.split(".")
+	if(lineage1Bits.length <= lineage2Bits.length) {
+		for(var i = 0; i < lineage1Bits.length; i++) {
+			if(lineage1Bits[i] != lineage2Bits[i]) {
+				return false;
+			}
+		}
 		return true;
 	}
 	return false;
@@ -317,9 +324,13 @@ function assignLineagesFromPlacerDocument(placerResult) {
 						}
 				});
 			});
+			if(placementObj.placementIndex == 1) {
+				glue.command(["file-util", "save-string", JSON.stringify(glueTree, null, 2), "tree.json"]);
+			}
 			// generate a lineage result for this placement.
 			var placementLineages = findPlacementLineages(glueTree.phyloTree.root, [], queryName);
 			var placementLineageResult = {
+					placementIndex: placementObj.placementIndex,
 					likeWeightRatio: placementObj.likeWeightRatio,
 					lineages: _.uniq(placementLineages)
 			};
@@ -365,6 +376,7 @@ function assignLineagesFromPlacerDocument(placerResult) {
 		
 		queryLineageResults.push({
 				queryName: queryName,
+				placementLineageResults: placementLineageResults,
 				lineageFractions: lineageFractions,
 				bestLineage: bestLineage,
 				bestLikelihoodWeightRatio: bestLikelihoodWeightRatio
