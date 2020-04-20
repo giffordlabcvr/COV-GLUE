@@ -9,6 +9,16 @@ schema-project cov
   create custom-table cov_insertion
   create custom-table cov_insertion_sequence
 
+  create custom-table cov_nt_mutation
+  create custom-table cov_nt_mutation_sequence
+
+  create custom-table cov_nt_deletion
+  create custom-table cov_nt_deletion_sequence
+
+  create custom-table cov_nt_insertion
+  create custom-table cov_nt_insertion_sequence
+
+
   create custom-table cov_primer_probe_assay
   create custom-table cov_primer_probe
 
@@ -62,6 +72,14 @@ schema-project cov
     create field phylogeny CLOB
     exit
 
+  table cov_nt_mutation
+    create field display_name VARCHAR
+    create field reference_nt INTEGER
+    create field reference_base VARCHAR
+    create field mutation_base VARCHAR
+    create field num_seqs INTEGER
+    exit
+
   table cov_replacement
     create field display_name VARCHAR
     create field codon_label VARCHAR
@@ -80,6 +98,13 @@ schema-project cov
     create field parent_codon_label VARCHAR
     exit
 
+  table cov_nt_deletion
+    create field display_name VARCHAR
+    create field reference_nt_start INTEGER
+    create field reference_nt_end INTEGER
+    create field num_seqs INTEGER
+    exit
+
   table cov_deletion
     create field display_name VARCHAR
     create field start_codon VARCHAR
@@ -92,6 +117,15 @@ schema-project cov
     create field parent_feature VARCHAR
     create field parent_start_codon VARCHAR
     create field parent_end_codon VARCHAR
+    exit
+
+  table cov_nt_insertion
+    create field display_name VARCHAR
+    create field last_ref_nt_before INTEGER
+    create field first_ref_nt_after INTEGER
+    create field num_seqs INTEGER
+    create field inserted_nts_length INTEGER
+    create field inserted_nts VARCHAR
     exit
 
   table cov_insertion
@@ -161,6 +195,20 @@ schema-project cov
   create link variation cov_insertion -m ONE_TO_ONE
   create link cov_insertion cov_insertion_sequence -m ONE_TO_MANY
   create link sequence cov_insertion_sequence -m ONE_TO_MANY
+
+  create link variation cov_nt_mutation -m ONE_TO_ONE
+  create link cov_nt_mutation cov_nt_mutation_sequence -m ONE_TO_MANY
+  create link sequence cov_nt_mutation_sequence -m ONE_TO_MANY
+
+  create link variation cov_nt_deletion -m ONE_TO_ONE
+  create link cov_nt_deletion cov_nt_deletion_sequence -m ONE_TO_MANY
+  create link sequence cov_nt_deletion_sequence -m ONE_TO_MANY
+
+  create link variation cov_nt_insertion -m ONE_TO_ONE
+  create link cov_nt_insertion cov_nt_insertion_sequence -m ONE_TO_MANY
+  create link sequence cov_nt_insertion_sequence -m ONE_TO_MANY
+
+
   
   create link cov_primer_probe cov_primer_probe_assay -m MANY_TO_ONE
   
