@@ -102,6 +102,7 @@ schema-project cov
     create field display_name VARCHAR
     create field reference_nt_start INTEGER
     create field reference_nt_end INTEGER
+    create field parent_feature VARCHAR
     create field num_seqs INTEGER
     exit
 
@@ -124,6 +125,7 @@ schema-project cov
     create field last_ref_nt_before INTEGER
     create field first_ref_nt_after INTEGER
     create field num_seqs INTEGER
+    create field parent_feature VARCHAR
     create field inserted_nts_length INTEGER
     create field inserted_nts VARCHAR
     exit
@@ -208,6 +210,8 @@ schema-project cov
   create link cov_nt_insertion cov_nt_insertion_sequence -m ONE_TO_MANY
   create link sequence cov_nt_insertion_sequence -m ONE_TO_MANY
 
+  create link cov_deletion cov_nt_deletion -m ONE_TO_ONE
+  create link cov_insertion cov_nt_insertion -m ONE_TO_ONE
 
   
   create link cov_primer_probe cov_primer_probe_assay -m MANY_TO_ONE
