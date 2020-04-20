@@ -1,0 +1,36 @@
+# minimal project build just focusing on primer/probe mismatch scanning. 
+
+run file glue/covInitProject.glue
+
+project cov
+   
+  # import cov-gisaid individual fastas.
+  import source sources/cov-gisaid
+
+  # features, master reference, feature locations.
+  run file glue/covFeatures.glue
+  run file glue/covMasterReference.glue
+  run script glue/covCheckFeatureLocations.js
+
+  # various other bits of sequence data and metadata
+  run script glue/covSetSequenceLengths.js 
+
+  # have to temporarily change result format to avoid bug in table rendering library.
+  console set cmd-result-format tab
+  module covGisaidAcknowledgementsTextFilePopulator populate --fileName tabular/gisaid_cov2020_acknowledgement_table.txt
+  module covGisaidMetadataTextFilePopulator populate --fileName tabular/gisaid_metadata.txt
+  module covSeqStatsTextFilePopulator populate -f tabular/gisaidSeqCharacterStats.txt
+  console unset cmd-result-format
+  # PANGOLIN lineage assignments and representative flag.
+  run script glue/covLoadPangLineages.js
+
+  # deals with case where FASTA is ahead of either GISAID metadata (submission_year = null) or 
+  # GISAID acknowledgements (isolate = null).
+  # in this case we just remove these sequences.
+  # the reverse case is dealt with by skipMissing flags in the TextFilePopulators above.
+  delete sequence -w "source.name = 'cov-gisaid' and (submission_year = null or isolate = null)"
+  
+  # Validate
+  validate
+
+exit
