@@ -1,7 +1,13 @@
 
-var whereClause = "true";
+// Full set.
+// var whereClause = "true";
+
 // test with ~125 sequences
 // var whereClause = "sequenceID > 'EPI_ISL_410000' and sequenceID <= 'EPI_ISL_412999'";
+
+// restrict to sequences which have a PANGOLIN lineage, when just interested in 
+// comparing the two lineage assignment methods 
+var whereClause = "pang_lineage != null";
 
 glue.command(["multi-unset", "field", "sequence", "-w", whereClause, "cov_glue_lineage"]);
 glue.command(["multi-unset", "field", "sequence", "-w", whereClause, "cov_glue_lw_ratio"]);
