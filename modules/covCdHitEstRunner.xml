@@ -1,4 +1,4 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <cdHitEstRunner>
-    <sequenceIdentityThreshold>0.9995</sequenceIdentityThreshold>
+    <sequenceIdentityThreshold>0.995</sequenceIdentityThreshold>
 </cdHitEstRunner>

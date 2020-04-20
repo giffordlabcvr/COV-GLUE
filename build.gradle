@@ -1,7 +1,7 @@
 apply plugin: 'pl.allegro.tech.build.axion-release'
 apply plugin: 'org.hidetake.ssh'
 
-project.ext.set("glueVersion", "1.1.89")
+project.ext.set("glueVersion", "1.1.92")
 
 ssh.settings { knownHosts = allowAnyHosts }
 
@@ -54,11 +54,6 @@ task buildCovGlueDB(type: JavaExec, dependsOn: 'copyGluetoolsJar') {
 	args '-c', 'remote-gluetools-config.xml', '-i', 'run', 'file', 'covProject.glue'
 }
 
-task buildCovAlmtAndTree(type: JavaExec, dependsOn: 'copyGluetoolsJar') {
-	classpath "build/runtimeJars/gluetools-core.jar"
-	main 'uk.ac.gla.cvr.gluetools.core.console.Console'
-	args '-c', 'remote-gluetools-config.xml', '-i', 'run', 'file', 'covAlmtTreeUpdate.glue'
-}
 
 def scmCustomKey = '/Users/joshsinger/.ssh/github_id_rsa'
 

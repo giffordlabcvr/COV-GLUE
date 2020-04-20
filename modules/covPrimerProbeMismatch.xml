@@ -1,0 +1,28 @@
+<ecmaFunctionInvoker>
+	<scriptFileName>covPrimerProbeMismatch.js</scriptFileName>
+	<function>
+		<name>reportSingleFasta</name>
+		<parameter>
+			<name>fastaFilePath</name>
+			<pathCompleter/>
+		</parameter>
+	</function>
+	<function>
+		<name>reportSingleFastaFromDocument</name>
+		<parameter>
+			<name>document</name>
+		</parameter>
+		<consumesDocument>true</consumesDocument>
+		<documentResultType/>
+	</function>
+	<function>
+		<name>reportMultiFasta</name>
+		<parameter>
+			<name>fastaFilePath</name>
+			<pathCompleter/>
+		</parameter>
+	</function>
+	<function>
+		<name>runTests</name>
+	</function>
+</ecmaFunctionInvoker>

@@ -9,6 +9,16 @@ schema-project cov
   create custom-table cov_insertion
   create custom-table cov_insertion_sequence
 
+  create custom-table cov_nt_mutation
+  create custom-table cov_nt_mutation_sequence
+
+  create custom-table cov_nt_deletion
+  create custom-table cov_nt_deletion_sequence
+
+  create custom-table cov_nt_insertion
+  create custom-table cov_nt_insertion_sequence
+
+
   create custom-table cov_primer_probe_assay
   create custom-table cov_primer_probe
 
@@ -30,17 +40,28 @@ schema-project cov
     create field submission_month VARCHAR
     create field submission_month_day INTEGER
     create field gisaid_status_code VARCHAR
-    create field gisaid_status_comment VARCHAR 300
+    create field gisaid_status_comment CLOB
     create field host_species VARCHAR 100
     create field place_sampled VARCHAR 100
     create field gisaid_originating_lab VARCHAR 300
     create field gisaid_submitting_lab VARCHAR 300
     create field gisaid_authors CLOB
-    create field ref_tree_candidate BOOLEAN
     create field include_in_ref_tree BOOLEAN
-    create field is_l_lineage BOOLEAN
+    create field orf_8_aa_84 VARCHAR
     create field analyse_variation BOOLEAN
-    create field cdhit_cluster INTEGER
+    create field num_ns INTEGER
+    create field longest_n_run INTEGER
+    create field num_bivalent_ambigs INTEGER
+    create field num_trivalent_ambigs INTEGER
+    create field num_hyphens INTEGER
+    create field num_whitespace INTEGER
+    create field num_other INTEGER
+    create field uncorrected_illegals BOOLEAN
+    create field num_unique_snps INTEGER
+    create field pang_lineage VARCHAR
+    create field pang_representative BOOLEAN
+    create field cov_glue_lineage VARCHAR
+    create field cov_glue_lw_ratio DOUBLE
     exit
 
   table feature
@@ -49,6 +70,14 @@ schema-project cov
 
   table alignment
     create field phylogeny CLOB
+    exit
+
+  table cov_nt_mutation
+    create field display_name VARCHAR
+    create field reference_nt INTEGER
+    create field reference_base VARCHAR
+    create field mutation_base VARCHAR
+    create field num_seqs INTEGER
     exit
 
   table cov_replacement
@@ -69,6 +98,13 @@ schema-project cov
     create field parent_codon_label VARCHAR
     exit
 
+  table cov_nt_deletion
+    create field display_name VARCHAR
+    create field reference_nt_start INTEGER
+    create field reference_nt_end INTEGER
+    create field num_seqs INTEGER
+    exit
+
   table cov_deletion
     create field display_name VARCHAR
     create field start_codon VARCHAR
@@ -81,6 +117,15 @@ schema-project cov
     create field parent_feature VARCHAR
     create field parent_start_codon VARCHAR
     create field parent_end_codon VARCHAR
+    exit
+
+  table cov_nt_insertion
+    create field display_name VARCHAR
+    create field last_ref_nt_before INTEGER
+    create field first_ref_nt_after INTEGER
+    create field num_seqs INTEGER
+    create field inserted_nts_length INTEGER
+    create field inserted_nts VARCHAR
     exit
 
   table cov_insertion
@@ -105,6 +150,9 @@ schema-project cov
     create field display_name VARCHAR 100
     create field organisation VARCHAR 200
     create field url VARCHAR 300
+    # currently the assay_type values are 'whole_genome_sequencing' and 'diagnostic_amplification' 
+    create field assay_type VARCHAR 50
+    create field assay_type_display VARCHAR 50
     exit
 
   table cov_primer_probe
@@ -120,11 +168,11 @@ schema-project cov
     # number of hits of fwd / reverse regex on reference sequence Wuhan-Hu-1. 
     # Should be 1 ideally, otherwise there is something wrong with the primer/probe definition
     create field ref_hits INTEGER
-    # sequence as it would appear in a forward oriented genome, null unless ref_hits == 1
+    # sequence as it would appear in a forward oriented genome
     create field sequence_to_scan VARCHAR 100
-    # true if sequence_fwd == sequence_to_scan, null unless ref_hits == 1
+    # true if sequence_fwd == sequence_to_scan
     create field fwd_orientation BOOLEAN
-    # coordinates on reference sequence Wuhan-Hu-1, null unless ref_hits == 1
+    # coordinates on reference sequence Wuhan-Hu-1
     create field ref_start INTEGER
     create field ref_end INTEGER
     # length of sequence_to_scan, null unless ref_hits == 1
@@ -147,9 +195,33 @@ schema-project cov
   create link variation cov_insertion -m ONE_TO_ONE
   create link cov_insertion cov_insertion_sequence -m ONE_TO_MANY
   create link sequence cov_insertion_sequence -m ONE_TO_MANY
+
+  create link variation cov_nt_mutation -m ONE_TO_ONE
+  create link cov_nt_mutation cov_nt_mutation_sequence -m ONE_TO_MANY
+  create link sequence cov_nt_mutation_sequence -m ONE_TO_MANY
+
+  create link variation cov_nt_deletion -m ONE_TO_ONE
+  create link cov_nt_deletion cov_nt_deletion_sequence -m ONE_TO_MANY
+  create link sequence cov_nt_deletion_sequence -m ONE_TO_MANY
+
+  create link variation cov_nt_insertion -m ONE_TO_ONE
+  create link cov_nt_insertion cov_nt_insertion_sequence -m ONE_TO_MANY
+  create link sequence cov_nt_insertion_sequence -m ONE_TO_MANY
+
+
   
   create link cov_primer_probe cov_primer_probe_assay -m MANY_TO_ONE
   
+  # link from primer/probe to variation detecting a match
   create link cov_primer_probe -s seq_match variation -d cov_pp_seq_match -m ONE_TO_ONE
+
+  # link from primer/probe to variations each detecting a single point mismatch
+  create link cov_primer_probe -s seq_mismatch variation -d cov_pp_seq_mismatch -m ONE_TO_MANY
+
+  # link from primer/probe to variation detecting an insertion
+  create link cov_primer_probe -s seq_insertion variation -d cov_pp_seq_insertion -m ONE_TO_ONE
+
+  # link from primer/probe to variation detecting a deletion
+  create link cov_primer_probe -s seq_deletion variation -d cov_pp_seq_deletion -m ONE_TO_ONE
   
   exit

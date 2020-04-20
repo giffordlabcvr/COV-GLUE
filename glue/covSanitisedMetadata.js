@@ -1,8 +1,8 @@
 
 
 var tabularData = glue.command(["list", "sequence", 
-	"source.name", 
 	"sequenceID", 
+	"source.name", 
 	"length", 
     "isolate",
     "host_species",
@@ -23,11 +23,16 @@ var tabularData = glue.command(["list", "sequence",
 	"gisaid_submitting_lab",
 	"gisaid_authors",
 	"analyse_variation", 
-	"ref_tree_candidate", 
 	"include_in_ref_tree", 
-	"cdhit_cluster", 
-	"is_l_lineage",
-	
+    "num_ns",
+    "longest_n_run",
+    "num_bivalent_ambigs",
+    "num_trivalent_ambigs",
+    "num_hyphens",
+    "num_whitespace",
+    "num_other",
+    "uncorrected_illegals",
+    "num_unique_snps"
 	]);
 
 glue.inMode("module/tabularUtilityTab", function() {

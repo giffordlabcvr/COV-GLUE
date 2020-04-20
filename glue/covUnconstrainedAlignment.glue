@@ -1,0 +1,9 @@
+  delete alignment AL_GISAID_UNCONSTRAINED
+  create alignment AL_GISAID_UNCONSTRAINED
+  alignment AL_GISAID_UNCONSTRAINED
+    # Wuhan-Hu-1 has to be here for annotation reasons
+    add member cov-gisaid EPI_ISL_402125
+    add member -w "include_in_ref_tree = true"
+    exit 
+   
+  compute alignment AL_GISAID_UNCONSTRAINED covMafftAligner

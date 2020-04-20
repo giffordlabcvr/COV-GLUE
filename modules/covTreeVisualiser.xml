@@ -1,6 +1,14 @@
 <treeVisualiser>
 	<leafTextGapPct>2.5</leafTextGapPct>
 	<freemarkerAnnotationGenerator>
+		<annotationName>isolatePlusLineage</annotationName>
+		<template><![CDATA[${renderNestedProperty('sequence.isolate')} (${renderNestedProperty('sequence.pang_lineage')})]]></template>
+	</freemarkerAnnotationGenerator>
+	<freemarkerAnnotationGenerator>
+		<annotationName>lineage</annotationName>
+		<template><![CDATA[${renderNestedProperty('sequence.pang_lineage')}]]></template>
+	</freemarkerAnnotationGenerator>
+	<freemarkerAnnotationGenerator>
 		<annotationName>isolate</annotationName>
 		<template><![CDATA[${renderNestedProperty('sequence.isolate')}]]></template>
 	</freemarkerAnnotationGenerator>

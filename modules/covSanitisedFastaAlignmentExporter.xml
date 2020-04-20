@@ -1,4 +1,4 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <fastaAlignmentExporter>
-    <idTemplate>${sequence.source.name}/${sequence.sequenceID}</idTemplate>
+    <idTemplate>${sequence.sequenceID}</idTemplate>
 </fastaAlignmentExporter>

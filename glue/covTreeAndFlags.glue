@@ -5,7 +5,7 @@
     import phylogeny AL_GISAID_CONSTRAINED -w "sequence.include_in_ref_tree = true" -i trees/gisaidConstrainedUnrooted.tree NEWICK_BOOTSTRAPS -f phylogeny
     exit
 
-  run script glue/covSetIsLLinneage.js
+  run script glue/covSetOrf8Aa84.js
 
   run file glue/covRerootPhylogeny.glue
   

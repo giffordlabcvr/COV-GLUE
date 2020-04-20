@@ -20,12 +20,16 @@
 		<template>${renderNestedProperty('sequence.m49_country.m49_region.id')}</template>
 	</freemarkerAnnotationGenerator>
 	<freemarkerAnnotationGenerator>
-		<annotationName>is_l_lineage</annotationName>
-		<template>${renderNestedProperty('sequence.is_l_lineage')}</template>
+		<annotationName>orf_8_aa_84</annotationName>
+		<template>${renderNestedProperty('sequence.orf_8_aa_84')}</template>
 	</freemarkerAnnotationGenerator>
 	<freemarkerAnnotationGenerator>
-		<annotationName>cdhit_cluster</annotationName>
-		<template>${renderNestedProperty('sequence.cdhit_cluster')}</template>
+		<annotationName>pang_lineage</annotationName>
+		<template>${renderNestedProperty('sequence.pang_lineage')}</template>
+	</freemarkerAnnotationGenerator>
+	<freemarkerAnnotationGenerator>
+		<annotationName>num_unique_snps</annotationName>
+		<template>${renderNestedProperty('sequence.num_unique_snps')}</template>
 	</freemarkerAnnotationGenerator>
 	<figtreeProperty type="integer" name="tipLabels.fontSize">13</figtreeProperty>
 	<figtreeProperty name="tipLabels.colorAttribute">region</figtreeProperty>

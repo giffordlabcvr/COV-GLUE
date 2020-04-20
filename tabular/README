@@ -34,7 +34,13 @@ covGlueSanitisedAlignmentWholeGenome.fasta
 # last coding region (ORF 10)
 covGlueSanitisedAlignmentCodingSpanningRegion.fasta
 
-# The CoV-GLUE "global reference tree", as a FigTree file with 
+# Constrained nucleotide alignments for each of the coding regions NSP1, NSP2, etc.
+covConstrainedAlignment_<region>.fna
+
+# Constrained amino acid alignments for each of the coding regions NSP1, NSP2, etc.
+covConstrainedAlignment_<region>.faa
+
+# The CoV-GLUE "global reference tree as a FigTree file with 
 # integrated metadata http://cov-glue.cvr.gla.ac.uk/#/globalRefTree
 covGlueReferenceFigTree.nexus
 
@@ -68,18 +74,29 @@ gisaid_originating_lab
 gisaid_submitting_lab
 gisaid_authors
 # true if various QC and metadata criteria are met
-# if true, CoV-GLUE includes sequence in its analysis of AA replacements etc.
+# if true, CoV-GLUE includes sequence in its analysis of SNPs, AA replacements, indels etc.
 analyse_variation 
-# ref_tree_candidate is a subset of analyse_variation, 
-# if true, sequence may be selected to appear in the CoV-GLUE reference tree
-ref_tree_candidate 
 # if true, appears in the CoV-GLUE reference tree
 include_in_ref_tree 
-# for those sequences where include_in_ref_tree == true, 
-# number of cluster which CD-HIT-EST assigned the sequence to
-cdhit_cluster 
-# most coarse-grained lineage assignment for the pandemic.
-# if true, belongs to the clade characterised by amino acid L at ORF8 codon 84
-# if false, belongs to the clade characterised by amino acid S at ORF8 codon 84
-is_l_lineage
+# Number of n characters in the sequence
+num_ns
+# Longest run of consecutive Ns in the sequence
+longest_n_run
+# Number of IUPAC ambiguity codes with 2 values in the sequence
+num_bivalent_ambigs
+# Number of IUPAC ambiguity codes with 3 values in the sequence
+num_trivalent_ambigs
+# Number of hyphen (gap characters) in the original sequence, these would normally be removed
+num_hyphens
+# Number of whitespace characters in the original sequence, these would normally be removed
+num_whitespace
+# Number of other non-FASTA characters in the original sequence, these would normally be removed
+num_other
+# Boolean: did the sequence contain non-FASTA characters that were removed without
+# a specific rule for this sequence?
+uncorrected_illegals
+# Number of unique SNPs the sequence has at its non-gap/non-N locations,
+# relative to Wuhan-Hu-1. 
+num_unique_snps
+
 

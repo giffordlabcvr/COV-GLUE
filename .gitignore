@@ -3,3 +3,4 @@ sequences
 covGlueSanitisedAlignmentCodingSpanningRegion.fasta
 covGlueSanitisedAlignmentWholeGenome.fasta
 covGlueSanitisedSequences.fasta
+alignments/covConstrainedAlignment*

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<textFilePopulator>
+    <columnDelimiterRegex>\t</columnDelimiterRegex>
+    <textFileColumn>
+        <identifier>true</identifier>
+        <header>sequenceID</header>
+        <property>sequenceID</property>
+    </textFileColumn>
+    <textFileColumn>
+        <header>num_ns</header>
+        <property>num_ns</property>
+    </textFileColumn>
+    <textFileColumn>
+        <header>longest_n_run</header>
+        <property>longest_n_run</property>
+    </textFileColumn>
+    <textFileColumn>
+        <header>num_bivalent_ambigs</header>
+        <property>num_bivalent_ambigs</property>
+    </textFileColumn>
+    <textFileColumn>
+        <header>num_trivalent_ambigs</header>
+        <property>num_trivalent_ambigs</property>
+    </textFileColumn>
+    <textFileColumn>
+        <header>num_hyphens</header>
+        <property>num_hyphens</property>
+    </textFileColumn>
+    <textFileColumn>
+        <header>num_whitespace</header>
+        <property>num_whitespace</property>
+    </textFileColumn>
+    <textFileColumn>
+        <header>num_other</header>
+        <property>num_other</property>
+    </textFileColumn>
+    <textFileColumn>
+        <header>uncorrected_illegals</header>
+        <property>uncorrected_illegals</property>
+    </textFileColumn>
+    
+    
+    
+</textFilePopulator>

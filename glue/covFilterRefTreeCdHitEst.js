@@ -10,6 +10,8 @@ glue.inMode("module/covCdHitEstRunner", function() {
 
 var clusterGroups = _.groupBy(clusterRows, function(cr) {return cr.clusterNumber;});
 
+var numSeqsProcessed = 0;
+
 _.each(_.pairs(clusterGroups), function(pair) {
 	var clusterNumber = pair[0];
 	var clusterCountries = {};
@@ -41,5 +43,10 @@ _.each(_.pairs(clusterGroups), function(pair) {
 				}
 			}
 		});
+		numSeqsProcessed++;
+		if(numSeqsProcessed % 500 == 0) {
+			glue.command(["new-context"]); // memory saving
+		}
+
 	});
 });

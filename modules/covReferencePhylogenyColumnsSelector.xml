@@ -1,38 +1,6 @@
 <alignmentColumnsSelector>
 	<relRefName>REF_MASTER_WUHAN_HU_1</relRefName>
-		<aminoAcidRegionSelector>
-			<featureName>ORF_1ab</featureName>
-		</aminoAcidRegionSelector>
-		<aminoAcidRegionSelector>
-			<featureName>S</featureName>
-		</aminoAcidRegionSelector>
-		<aminoAcidRegionSelector>
-			<featureName>ORF_3a</featureName>
-		</aminoAcidRegionSelector>
-		<aminoAcidRegionSelector>
-			<featureName>E</featureName>
-		</aminoAcidRegionSelector>
-		<aminoAcidRegionSelector>
-			<featureName>M</featureName>
-		</aminoAcidRegionSelector>
-		<aminoAcidRegionSelector>
-			<featureName>ORF_6</featureName>
-		</aminoAcidRegionSelector>
-		<aminoAcidRegionSelector>
-			<featureName>ORF_7a</featureName>
-		</aminoAcidRegionSelector>
-		<aminoAcidRegionSelector>
-			<featureName>ORF_7b</featureName>
-		</aminoAcidRegionSelector>
-		<aminoAcidRegionSelector>
-			<featureName>ORF_8</featureName>
-		</aminoAcidRegionSelector>
-		<aminoAcidRegionSelector>
-			<featureName>N</featureName>
-		</aminoAcidRegionSelector>
-		<aminoAcidRegionSelector>
-			<featureName>ORF_10</featureName>
-		</aminoAcidRegionSelector>
-
-
+		<nucleotideRegionSelector>
+			<featureName>coding_spanning_region</featureName>
+		</nucleotideRegionSelector>
 </alignmentColumnsSelector>

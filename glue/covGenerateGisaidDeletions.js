@@ -127,21 +127,31 @@ function createDeletion(deletionObj) {
 		glue.command(["set", "field", "reference_nt_start", deletionObj.refNtStart]);		
 		glue.command(["set", "field", "reference_nt_end", deletionObj.refNtEnd]);		
 		glue.command(["set", "field", "num_seqs", deletionObj.memberSeqs.length]);
+		// ORF 1a / 1ab corresponding deletion may not exist
+		// if the sequence doesn't cover the whole of ORF1a / ORF1ab
+		// (deletion variations will currently report insufficient coverage in these scenarios, 
+		// which is probably too strict)
 		if(deletionObj.parentFeature == "ORF_1a") {
-			glue.command(["set", "field", "parent_feature", "ORF_1a"]);
 			var parent1aDelObj = orf1aDeletions[deletionObj.refNtStart+":"+deletionObj.refNtEnd];
-			parent1aDelObj.skipCreation = true;
+			if(parent1aDelObj != null) {
+				parent1aDelObj.skipCreation = true;
+				glue.command(["set", "field", "parent_feature", "ORF_1a"]);
+				glue.command(["set", "field", "parent_start_codon", parent1aDelObj.startCodon]);
+				glue.command(["set", "field", "parent_end_codon", parent1aDelObj.endCodon]);
+			}
 			var parent1abDelObj = orf1abDeletions[deletionObj.refNtStart+":"+deletionObj.refNtEnd];
-			parent1abDelObj.skipCreation = true;
-			glue.command(["set", "field", "parent_start_codon", parent1aDelObj.startCodon]);
-			glue.command(["set", "field", "parent_end_codon", parent1aDelObj.endCodon]);
+			if(parent1aDelObj != null) {
+				parent1abDelObj.skipCreation = true;
+			}
 		}
 		if(deletionObj.parentFeature == "ORF_1ab") {
-			glue.command(["set", "field", "parent_feature", "ORF_1ab"]);
 			var parentDelObj = orf1abDeletions[deletionObj.refNtStart+":"+deletionObj.refNtEnd];
-			parentDelObj.skipCreation = true;
-			glue.command(["set", "field", "parent_start_codon", parentDelObj.startCodon]);
-			glue.command(["set", "field", "parent_end_codon", parentDelObj.endCodon]);
+			if(parentDelObj != null) {
+				glue.command(["set", "field", "parent_feature", "ORF_1ab"]);
+				parentDelObj.skipCreation = true;
+				glue.command(["set", "field", "parent_start_codon", parentDelObj.startCodon]);
+				glue.command(["set", "field", "parent_end_codon", parentDelObj.endCodon]);
+			}
 		}
 		glue.command(["set", "link-target", "variation", 
 			"reference/REF_MASTER_WUHAN_HU_1/feature-location/"+deletionObj.feature+
