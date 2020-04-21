@@ -37,12 +37,44 @@ function findPlacementLineages(subtree, lineages, queryName) {
 			}
 		}
 		var branches = subtree.internal.branch;
+		var lineagesResult = null;
+		var resultBranch = null;
+		var nonResultBranches = [];
 		for(var i = 0; i < branches.length; i++) {
 			var branch = branches[i];
 			var branchResult = findPlacementLineages(branch, lineages, queryName);
 			if(branchResult != null) {
-				return branchResult;
+				lineagesResult = branchResult;
+				resultBranch = branch;
+			} else {
+				nonResultBranches.push(branch);
 			}
+		}
+		// add the common lineage of any sister subtrees of the query taxon, that are on a near-zero length branch.
+		if(resultBranch != null && resultBranch.leaf != null) {
+			var additionalLineage = null;
+			_.each(nonResultBranches, function(nonResultBranch) {
+				var length = null;
+				if(nonResultBranch.userData.length < 0.000006) { // this is approx 1/5 of a nucleotide in SARS-COV-2
+					var nonResultLineage = null;
+					if(nonResultBranch.internal != null) {
+						nonResultLineage = nonResultBranch.internal.userData.lineage;
+					} else {
+						nonResultLineage = nonResultBranch.leaf.userData.lineage;
+					}
+					if(additionalLineage == null) {
+						additionalLineage = nonResultLineage;
+					} else {
+						additionalLineage = findCommonLineage([additionalLineage, nonResultLineage]);
+					}
+				} 
+			});
+			if(additionalLineage != null) {
+				lineagesResult.push(additionalLineage);
+			}
+		}
+		if(lineagesResult != null) {
+			return lineagesResult;
 		}
 		if(lineage != null) {
 			lineages.pop();
