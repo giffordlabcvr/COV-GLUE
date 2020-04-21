@@ -4,4 +4,7 @@
     <phyloAlignmentName>AL_GISAID_UNCONSTRAINED</phyloAlignmentName>
     <selectorName>covReferencePhylogenyColumnsSelector</selectorName>
     <phyloFieldName>phylogeny</phyloFieldName>
+    <raxmlEpaRunner>
+    	<accumulatedThreshold>0.95</accumulatedThreshold>
+    </raxmlEpaRunner>
 </maxLikelihoodPlacer>
