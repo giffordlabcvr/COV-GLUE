@@ -310,7 +310,7 @@ function visualisePhyloAsSvg(document) {
 		});
 	} else {
 		glue.inMode("module/covPhyloUtility", function() {
-			glueTree = glue.command(["read-alignment-phylogeny", "AL_GISAID_CONSTRAINED", "phylogeny"]);
+			glueTree = glue.command(["read-alignment-phylogeny", "AL_GISAID_UNCONSTRAINED", "phylogeny"]);
 		});
 	}
 
