@@ -75,6 +75,10 @@ glue.inMode("alignment/AL_GISAID_CONSTRAINED", function() {
 			});
 		
 			_.each(allFeatureInsObjs, function(memberInsObj) {
+				// there seem to be spurious very long insertions 
+				if(memberInsObj.insertedQryNts.length > 100) {
+					return;
+				}
 				var ntHash = stringHash(memberInsObj.insertedQryNts);
 				var ntInsertionID = memberInsObj.featureName+":nca:"+memberInsObj.refLastNtBeforeIns+":"+ntHash+":"+memberInsObj.refFirstNtAfterIns;
 				var ntInsertionObj = ntInsertionsSet[ntInsertionID];

@@ -122,7 +122,7 @@ schema-project cov
     exit
 
   table cov_nt_insertion
-    create field display_name VARCHAR
+    create field display_name VARCHAR 300
     create field last_ref_nt_before INTEGER
     create field first_ref_nt_after INTEGER
     create field num_seqs INTEGER
@@ -132,7 +132,7 @@ schema-project cov
     exit
 
   table cov_insertion
-    create field display_name VARCHAR
+    create field display_name VARCHAR 300
     create field last_codon_before VARCHAR
     create field last_codon_before_int INTEGER
     create field first_codon_after VARCHAR
