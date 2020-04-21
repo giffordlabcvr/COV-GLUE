@@ -1,22 +1,22 @@
 schema-project cov
 
   create custom-table cov_replacement
-  create custom-table cov_replacement_sequence
+  create custom-table cov_replacement_sequence --idFieldLength 200
 
   create custom-table cov_deletion
-  create custom-table cov_deletion_sequence
+  create custom-table cov_deletion_sequence --idFieldLength 200
 
   create custom-table cov_insertion
-  create custom-table cov_insertion_sequence
+  create custom-table cov_insertion_sequence --idFieldLength 200
 
   create custom-table cov_nt_mutation
-  create custom-table cov_nt_mutation_sequence
+  create custom-table cov_nt_mutation_sequence --idFieldLength 200
 
   create custom-table cov_nt_deletion
-  create custom-table cov_nt_deletion_sequence
+  create custom-table cov_nt_deletion_sequence --idFieldLength 200
 
   create custom-table cov_nt_insertion
-  create custom-table cov_nt_insertion_sequence
+  create custom-table cov_nt_insertion_sequence --idFieldLength 200
 
 
   create custom-table cov_primer_probe_assay

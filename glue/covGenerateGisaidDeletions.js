@@ -1,16 +1,17 @@
 glue.command(["multi-unset", "link-target", "variation", "cov_deletion", "-a"]);
 glue.command(["multi-unset", "link-target", "cov_deletion_sequence", "cov_deletion", "-a"]);
 glue.command(["multi-unset", "link-target", "cov_deletion_sequence", "sequence", "-a"]);
-glue.command(["multi-delete", "cov_deletion", "-a"]);
-glue.command(["multi-delete", "cov_deletion_sequence", "-a"]);
 
 glue.command(["multi-unset", "link-target", "cov_deletion", "cov_nt_deletion", "-a"]);
 glue.command(["multi-unset", "link-target", "variation", "cov_nt_deletion", "-a"]);
 glue.command(["multi-unset", "link-target", "cov_nt_deletion_sequence", "cov_nt_deletion", "-a"]);
 glue.command(["multi-unset", "link-target", "cov_nt_deletion_sequence", "sequence", "-a"]);
+
+glue.command(["multi-delete", "cov_deletion", "-a"]);
+glue.command(["multi-delete", "cov_deletion_sequence", "-a"]);
+
 glue.command(["multi-delete", "cov_nt_deletion", "-a"]);
 glue.command(["multi-delete", "cov_nt_deletion_sequence", "-a"]);
-
 
 glue.command(["multi-delete", "variation", "-w", "name like 'cov_aa_del%'"]);
 glue.command(["multi-delete", "variation", "-w", "name like 'cov_nt_del%'"]);
@@ -42,10 +43,13 @@ var orf1abDeletions = {};
 var processed = 0;
 
 // all non-excluded seqs
-//var whereClause = "sequence.analyse_variation = true";
+var whereClause = "sequence.analyse_variation = true";
+
+//just delete everything
+//var whereClause = "false";
 
 // sequences containing (a) non-codon-aligned deletion in NSP2, (b) codon-aligned deletion in NSP1, (c) no deletions
-var whereClause = "sequence.analyse_variation = true and sequence.sequenceID in ('EPI_ISL_410486', 'EPI_ISL_420775', 'EPI_ISL_402135')"
+//var whereClause = "sequence.analyse_variation = true and sequence.sequenceID in ('EPI_ISL_410486', 'EPI_ISL_420775', 'EPI_ISL_402125')"
 
 
 glue.inMode("alignment/AL_GISAID_CONSTRAINED", function() {
@@ -129,14 +133,12 @@ glue.inMode("alignment/AL_GISAID_CONSTRAINED", function() {
 });
 
 //create NT (non codon aligned) deletions
-
 _.each(_.values(ntDeletionsSet), function(ntDeletionObj) {
 	if(ntDeletionObj.feature == "ORF_1a" || ntDeletionObj.feature == "ORF_1ab") {
 		return;
 	}
 	createNtDeletion(ntDeletionObj);
 });
-
 // create any ORF1a/ORF1ab ntDeletions which are not already represented by NSP ntDeletions
 // eg if they span cleavage locations.
 _.each(_.values(orf1aNtDeletions), function(ntDeletionObj) {
@@ -145,8 +147,6 @@ _.each(_.values(orf1aNtDeletions), function(ntDeletionObj) {
 	}
 	createNtDeletion(ntDeletionObj);
 });
-
-
 _.each(_.values(orf1abNtDeletions), function(ntDeletionObj) {
 	if(ntDeletionObj.skipCreation) {
 		return;
@@ -154,15 +154,15 @@ _.each(_.values(orf1abNtDeletions), function(ntDeletionObj) {
 	createNtDeletion(ntDeletionObj);
 });
 
-//create codon aligned deletions
+// -----------
 
+//create codon aligned deletions
 _.each(_.values(deletionsSet), function(deletionObj) {
 	if(deletionObj.feature == "ORF_1a" || deletionObj.feature == "ORF_1ab") {
 		return;
 	}
 	createDeletion(deletionObj);
 });
-
 // create any ORF1a/ORF1ab deletions which are not already represented by NSP deletions
 // eg if they span cleavage locations.
 _.each(_.values(orf1aDeletions), function(deletionObj) {
@@ -171,8 +171,6 @@ _.each(_.values(orf1aDeletions), function(deletionObj) {
 	}
 	createDeletion(deletionObj);
 });
-
-
 _.each(_.values(orf1abDeletions), function(deletionObj) {
 	if(deletionObj.skipCreation) {
 		return;
