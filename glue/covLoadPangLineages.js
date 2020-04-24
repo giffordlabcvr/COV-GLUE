@@ -1,5 +1,6 @@
 glue.command(["multi-unset", "field", "sequence", "-a", "pang_lineage"]);
 glue.command(["multi-unset", "field", "sequence", "-a", "pang_representative"]);
+glue.command(["multi-unset", "field", "sequence", "-a", "pang_bootstrap"]);
 
 // load data from PANGOLIN project lineages table.
 var pangSeqObjs;
@@ -20,9 +21,10 @@ _.each(pangSeqObjs, function(pangSeqObj) {
 		glue.log("FINEST", "PANGOLIN lineage data: sequence row relates to missing GISAID sequence ID "+seqID);
 	} else {
 		glue.inMode("sequence/cov-gisaid/"+seqID, function() {
-			glue.command(["set", "field", "pang_lineage", pangSeqObj.lineage]);
+			glue.command(["set", "field", "pang_lineage", pangSeqObj.lineage.trim()]);
+			glue.command(["set", "field", "pang_bootstrap", pangSeqObj.bootstrap.trim()]);
 			glue.command(["set", "field", "pang_representative", 
-				pangSeqObj.representative != null && pangSeqObj.representative == "1"]);
+				pangSeqObj.representative != null && pangSeqObj.representative.trim() == "1"]);
 		});
 	}
 	

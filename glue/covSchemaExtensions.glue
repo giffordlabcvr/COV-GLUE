@@ -1,22 +1,22 @@
 schema-project cov
 
   create custom-table cov_replacement
-  create custom-table cov_replacement_sequence
+  create custom-table cov_replacement_sequence --idFieldLength 200
 
   create custom-table cov_deletion
-  create custom-table cov_deletion_sequence
+  create custom-table cov_deletion_sequence --idFieldLength 200
 
   create custom-table cov_insertion
-  create custom-table cov_insertion_sequence
+  create custom-table cov_insertion_sequence --idFieldLength 200
 
   create custom-table cov_nt_mutation
-  create custom-table cov_nt_mutation_sequence
+  create custom-table cov_nt_mutation_sequence --idFieldLength 200
 
   create custom-table cov_nt_deletion
-  create custom-table cov_nt_deletion_sequence
+  create custom-table cov_nt_deletion_sequence --idFieldLength 200
 
   create custom-table cov_nt_insertion
-  create custom-table cov_nt_insertion_sequence
+  create custom-table cov_nt_insertion_sequence --idFieldLength 200
 
 
   create custom-table cov_primer_probe_assay
@@ -59,6 +59,7 @@ schema-project cov
     create field uncorrected_illegals BOOLEAN
     create field num_unique_snps INTEGER
     create field pang_lineage VARCHAR
+    create field pang_bootstrap VARCHAR
     create field pang_representative BOOLEAN
     create field cov_glue_lineage VARCHAR
     create field cov_glue_lw_ratio DOUBLE
@@ -102,6 +103,7 @@ schema-project cov
     create field display_name VARCHAR
     create field reference_nt_start INTEGER
     create field reference_nt_end INTEGER
+    create field parent_feature VARCHAR
     create field num_seqs INTEGER
     exit
 
@@ -120,16 +122,17 @@ schema-project cov
     exit
 
   table cov_nt_insertion
-    create field display_name VARCHAR
+    create field display_name VARCHAR 300
     create field last_ref_nt_before INTEGER
     create field first_ref_nt_after INTEGER
     create field num_seqs INTEGER
+    create field parent_feature VARCHAR
     create field inserted_nts_length INTEGER
     create field inserted_nts VARCHAR
     exit
 
   table cov_insertion
-    create field display_name VARCHAR
+    create field display_name VARCHAR 300
     create field last_codon_before VARCHAR
     create field last_codon_before_int INTEGER
     create field first_codon_after VARCHAR
@@ -208,6 +211,8 @@ schema-project cov
   create link cov_nt_insertion cov_nt_insertion_sequence -m ONE_TO_MANY
   create link sequence cov_nt_insertion_sequence -m ONE_TO_MANY
 
+  create link cov_deletion cov_nt_deletion -m ONE_TO_ONE
+  create link cov_insertion cov_nt_insertion -m ONE_TO_ONE
 
   
   create link cov_primer_probe cov_primer_probe_assay -m MANY_TO_ONE
