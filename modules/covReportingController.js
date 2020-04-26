@@ -583,7 +583,18 @@ function placeFasta(fastaMap, resultMap, placerResultContainer) {
 		});
 		_.each(lineageAssignmentResultDocument.covAssignLineagesResult.queryLineageResults, 
 				function(queryLineageResult) {
-			resultMap[queryLineageResult.queryName].lineageAssignmentResult = queryLineageResult;
+			var resultObj = resultMap[queryLineageResult.queryName];
+			resultObj.lineageAssignmentResult = queryLineageResult;
+			if(queryLineageResult.placementLineageResults != null) {
+				_.each(queryLineageResult.placementLineageResults, function(placementLineageResult) {
+					var placement = _.find(resultObj.placements, function(pl) {
+						return pl.placementIndex == placementLineageResult.placementIndex;
+					});
+					if(placementLineageResult.lineages != null && placementLineageResult.lineages.length > 0) {
+						placement.bestLineage = placementLineageResult.lineages[placementLineageResult.lineages.length-1];
+					}
+				});
+			}
 		});
 	}
 }

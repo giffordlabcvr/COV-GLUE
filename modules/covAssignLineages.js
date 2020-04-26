@@ -32,6 +32,7 @@ function findPlacementLineages(subtree, lineages, queryName) {
 		var lineage = null;
 		if(userData != null) {
 			lineage = userData.lineage;
+			if(lineage == "") {lineage = "SARS-CoV-2";}
 			if(lineage != null) {
 				lineages.push(lineage);
 			}
@@ -70,6 +71,7 @@ function findPlacementLineages(subtree, lineages, queryName) {
 				} 
 			});
 			if(additionalLineage != null) {
+				if(additionalLineage == "") {additionalLineage = "SARS-CoV-2";}
 				lineagesResult.push(additionalLineage);
 			}
 		}
