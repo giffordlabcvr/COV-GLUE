@@ -151,7 +151,7 @@ svg {
 	fill: #009933;
 }
 
-.leafNodeInsertionCircle_insertion_different_aas {
+.leafNodeInsertionCircle_insertion_different_nts {
     stroke: none;
 	fill: #ffcc00;
 }
@@ -159,6 +159,18 @@ svg {
 .leafNodeInsertionCircle_no_insertion {
     stroke: none;
 	fill: #ff3300;
+}
+
+.leafNodeCircle_basic {
+	stroke: DarkGrey;
+	stroke-width: 2px;
+	fill: none;
+}
+
+.leafNodeCircle_highlighted {
+	stroke: Red;
+	stroke-width: 2px;
+	fill: Red;
 }
 
 .deletionLetter {
@@ -175,7 +187,8 @@ svg {
 
 .leafNodeAaText_A {
 	text-anchor: middle;
-	fill: Black;
+	fill: White;
+	stroke: White;
 }
 .leafNodeAaText_C {
 	text-anchor: middle;
@@ -183,15 +196,18 @@ svg {
 }
 .leafNodeAaText_D {
 	text-anchor: middle;
-	fill: Black;
+	fill: White;
+	stroke: White;
 }
 .leafNodeAaText_E {
 	text-anchor: middle;
-	fill: Black;
+	fill: White;
+	stroke: White;
 }
 .leafNodeAaText_F {
 	text-anchor: middle;
-	fill: Black;
+	fill: White;
+	stroke: White;
 }
 .leafNodeAaText_G {
 	text-anchor: middle;
@@ -207,7 +223,8 @@ svg {
 }
 .leafNodeAaText_K {
 	text-anchor: middle;
-	fill: Black;
+	fill: White;
+	stroke: White;
 }
 .leafNodeAaText_L {
 	text-anchor: middle;
@@ -215,7 +232,8 @@ svg {
 }
 .leafNodeAaText_M {
 	text-anchor: middle;
-	fill: Black;
+	fill: White;
+	stroke: White;
 }
 .leafNodeAaText_N {
 	text-anchor: middle;
@@ -231,7 +249,8 @@ svg {
 }
 .leafNodeAaText_R {
 	text-anchor: middle;
-	fill: Black;
+	fill: White;
+	stroke: White;
 }
 .leafNodeAaText_S {
 	text-anchor: middle;
@@ -244,11 +263,13 @@ svg {
 }
 .leafNodeAaText_V {
 	text-anchor: middle;
-	fill: Black;
+	fill: White;
+	stroke: White;
 }
 .leafNodeAaText_W {
 	text-anchor: middle;
-	fill: Black;
+	fill: White;
+	stroke: White;
 }
 .leafNodeAaText_Y {
 	text-anchor: middle;

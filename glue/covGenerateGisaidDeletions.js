@@ -193,9 +193,9 @@ function createNtDeletion(ntDeletionObj) {
 	glue.inMode("custom-table-row/cov_nt_deletion/"+ntDeletionObj.id, function() {
 		var displayName;
 		if(ntDeletionObj.refNtStart == ntDeletionObj.refNtEnd) {
-			displayName = ntDeletionObj.refNtStart+":del";	
+			displayName = ntDeletionObj.refNtStart;	
 		} else {
-			displayName = ntDeletionObj.refNtStart+"-"+ntDeletionObj.refNtEnd+":del";	
+			displayName = ntDeletionObj.refNtStart+"-"+ntDeletionObj.refNtEnd;	
 		}
 		glue.command(["set", "field", "display_name", displayName]);
 		glue.command(["set", "field", "reference_nt_start", ntDeletionObj.refNtStart]);		
@@ -255,9 +255,9 @@ function createDeletion(deletionObj) {
 	glue.inMode("custom-table-row/cov_deletion/"+deletionObj.id, function() {
 		var displayName;
 		if(deletionObj.startCodon == deletionObj.endCodon) {
-			displayName = deletionObj.startCodon+":del";	
+			displayName = deletionObj.startCodon;	
 		} else {
-			displayName = deletionObj.startCodon+"-"+deletionObj.endCodon+":del";	
+			displayName = deletionObj.startCodon+"-"+deletionObj.endCodon;	
 		}
 		glue.command(["set", "field", "display_name", displayName]);
 		glue.command(["set", "field", "start_codon", deletionObj.startCodon]);		

@@ -9,26 +9,22 @@
 	<#if parent_feature??>
 	<parentFeature>${variation.featureLoc.feature.parent.name}</parentFeature>
 	<parentFeatureDisplayName>${variation.featureLoc.feature.parent.displayName}</parentFeatureDisplayName>
-	<parentLastCodonBefore>${parent_last_codon_before}</parentLastCodonBefore>
-	<parentFirstCodonAfter>${parent_first_codon_after}</parentFirstCodonAfter>
+	<#if cov_insertion??>
+	<codonAligned glueType="Boolean">true</codonAligned>
+	<parentLastCodonBefore>${cov_insertion.parent_last_codon_before}</parentLastCodonBefore>
+	<parentFirstCodonAfter>${cov_insertion.parent_first_codon_after}</parentFirstCodonAfter>
+	<#else>
+	<codonAligned glueType="Boolean">false</codonAligned>
+	</#if>
 	</#if>
 	<referenceSequence>${variation.featureLoc.referenceSequence.name}</referenceSequence>
-	<lastCodonBefore>${last_codon_before}</lastCodonBefore>
-	<firstCodonAfter>${first_codon_after}</firstCodonAfter>
+	<#if cov_insertion??>
+	<lastCodonBefore>${cov_insertion.last_codon_before}</lastCodonBefore>
+	<firstCodonAfter>${cov_insertion.first_codon_after}</firstCodonAfter>
+	<insertedAas>${cov_insertion.inserted_aas}</insertedAas>
+	</#if>
 	<lastRefNtBefore>${last_ref_nt_before?c}</lastRefNtBefore>
 	<firstRefNtAfter>${first_ref_nt_after?c}</firstRefNtAfter>
-	<insertedAas>${inserted_aas}</insertedAas>
+	<insertedNts>${inserted_nts}</insertedNts>
 	<numSeqs>${num_seqs}</numSeqs>
-
-	<#list cov_insertion_sequence as cms>
-    <containingSeq glueType="Object[]">
-    	<sourceName>${cms.sequence.source.name}</sourceName>
-    	<sequenceID>${cms.sequence.sequenceID}</sequenceID>
-    	<isolate>${cms.sequence.isolate}</isolate>
-    	<countryId>${cms.sequence.m49_country.id}</countryId>
-    	<placeSampled>${cms.sequence.place_sampled}</placeSampled>
-    	<countryDisplayName>${cms.sequence.m49_country.display_name}</countryDisplayName>
-	    <collectionDate><#if cms.sequence.collection_month_day??>${cms.sequence.collection_month_day}-</#if><#if cms.sequence.collection_month??>${cms.sequence.collection_month}-</#if>${cms.sequence.collection_year?c}</collectionDate>
-    </containingSeq>
-    </#list>
 </insertion>

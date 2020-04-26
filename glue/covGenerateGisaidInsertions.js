@@ -79,6 +79,10 @@ glue.inMode("alignment/AL_GISAID_CONSTRAINED", function() {
 				if(memberInsObj.insertedQryNts.length > 100) {
 					return;
 				}
+				// skip insertions consisting purely of Ns
+				if(memberInsObj.insertedQryNts.match("^N+$") != null) {
+					return;
+				}
 				var ntHash = stringHash(memberInsObj.insertedQryNts);
 				var ntInsertionID = memberInsObj.featureName+":nca:"+memberInsObj.refLastNtBeforeIns+":"+ntHash+":"+memberInsObj.refFirstNtAfterIns;
 				var ntInsertionObj = ntInsertionsSet[ntInsertionID];
