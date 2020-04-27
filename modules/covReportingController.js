@@ -1,5 +1,10 @@
-var featuresList = glue.tableToObjects(
-		glue.command(["list", "feature", "-w", "featureMetatags.name = 'CODES_AMINO_ACIDS' and featureMetatags.value = true", "name", "displayName", "parent.name"]));
+var featuresList1 = glue.tableToObjects(
+		glue.command(["list", "feature", "-w", "not (name in ('ORF_1a', 'ORF_1ab')) and featureMetatags.name = 'CODES_AMINO_ACIDS' and featureMetatags.value = true", "name", "displayName", "parent.name"]));
+
+var featuresList2 = glue.tableToObjects(
+		glue.command(["list", "feature", "-w", "name in ('ORF_1a', 'ORF_1ab')"]));
+
+var featuresList = featuresList1.concat(featuresList2);
 
 
 function reportFastaWeb(base64, filePath) {
@@ -157,6 +162,9 @@ function generateReplacements(queryNucleotides, targetRefName, queryToTargetRefS
 	var comparisonRefName = "REF_MASTER_WUHAN_HU_1";
 	var replacementsList = [];
 	_.each(featuresList, function(featureObj) {
+		if(featureObj.name == "ORF_1a" || featureObj.name == "ORF_1ab") {
+			return; // don't report replacements in these features, rely on NSPs instead.
+		}
 		var refAaObjsMap = {};
 		glue.inMode("reference/"+comparisonRefName+"/feature-location/"+featureObj.name, function() {
 			var refAaObjs = glue.tableToObjects(glue.command(["amino-acid"]));
@@ -224,8 +232,11 @@ function generateReplacements(queryNucleotides, targetRefName, queryToTargetRefS
 		});
 		replacement.replacement.known_replacements = knownCovReplacements;
 		replacement.displayText = 
-			"AA replacement in "+replacement.replacement.featureDisplayName+": "+
+			"amino acid replacement in "+replacement.replacement.featureDisplayName+": "+
 				refAas.join('/')+replacement.replacement.codonLabel+queryAas.join('/');
+		if(knownCovReplacements.length > 0) {
+			replacement.knownLink = "replacement/"+knownCovReplacements[0].known_replacement.id;
+		}
 	});
 	return replacementsList;
 }
@@ -233,6 +244,7 @@ function generateReplacements(queryNucleotides, targetRefName, queryToTargetRefS
 function generateInsertions(queryNucleotides, targetRefName, queryToTargetRefSegs) {
 	var comparisonRefName = "REF_MASTER_WUHAN_HU_1";
 	var insertionsList = [];
+	var insertionsSet = {};
 	_.each(featuresList, function(featureObj) {
 		glue.inMode("module/covFastaSequenceReporter", function() {
 			var insertionsFound = glue.tableToObjects(glue.command({
@@ -260,44 +272,66 @@ function generateInsertions(queryNucleotides, targetRefName, queryToTargetRefSeg
 				}
 			}));
 			_.each(insertionsFound, function(insertionObj) {
+				// skip very long insertions 
+				if(insertionObj.insertedQryNts.length > 100) {
+					return;
+				}
+				// skip insertions consisting purely of Ns
+				if(insertionObj.insertedQryNts.match("^N+$") != null) {
+					return;
+				}
 				insertionObj.featureDisplayName = featureObj.displayName;
 				glue.logInfo("insertionObj", insertionObj);
-				insertionsList.push({
-					insertion: insertionObj
-				});
+				var insertionKey = insertionObj.refLastNtBeforeIns+":"+insertionObj.insertedQryNts+":"+insertionObj.refFirstNtAfterIns;
+				if(insertionsSet[insertionKey] == null) { // don't report same insertion twice for both feature and parent feature.
+					insertionsList.push({
+						insertion: insertionObj
+					});
+					insertionsSet[insertionKey] = "yes";
+				}
 			});
 		});
 	});
 	_.each(insertionsList, function(insertion) {
-		var knownCovInsertions = [];
 		if(insertion.insertion.insertionIsCodonAligned) {
-			var foundCovInsertions = glue.tableToObjects(
-					glue.command(["list", "custom-table-row", "cov_insertion", 
-						"-w", "variation.featureLoc.feature.name = '"+insertion.insertion.variationFeature+"'"+
-						" and last_codon_before_int = "+insertion.insertion.refLastCodonBeforeIns+
-						" and first_codon_after_int = "+insertion.insertion.refFirstCodonAfterIns+
-						" and inserted_aas = '"+insertion.insertion.insertedQryAas+"'", 
-						"id", "display_name", "num_seqs"]));
-			_.each(foundCovInsertions, function(foundIns) {
-				knownCovInsertions.push({"known_insertion": foundIns});
-			});
 			var displayInsertedAas = insertion.insertion.insertedQryAas;
 			if(displayInsertedAas.length > 6) {
 				displayInsertedAas = displayInsertedAas.substring(0, 3)+"..."+displayInsertedAas.substring(displayInsertedAas.length-3, displayInsertedAas.length);
 			}
 			insertion.displayText = 
-				"AA insertion in "+insertion.insertion.featureDisplayName+": "+
+				"codon-aligned insertion in "+insertion.insertion.featureDisplayName+": "+
 				insertion.insertion.refLastCodonBeforeIns+"-"+displayInsertedAas+"-"+insertion.insertion.refFirstCodonAfterIns;
 		} else {
 			var displayInsertedNts = insertion.insertion.insertedQryNts;
 			if(displayInsertedNts.length > 6) {
 				displayInsertedNts = displayInsertedNts.substring(0, 3)+"..."+displayInsertedNts.substring(displayInsertedNts.length-3, displayInsertedNts.length);
 			}
-			insertion.displayText = 
-				"Nucleotide insertion in "+insertion.insertion.featureDisplayName+": "+
-				insertion.insertion.refLastNtBeforeIns+"-"+displayInsertedNts+"-"+insertion.insertion.refFirstNtAfterIns;
+			if(insertion.insertion.insertedQryNts.length % 3 != 0) {
+				insertion.displayText = 
+					"frameshifting insertion in "+insertion.insertion.featureDisplayName+": ";
+			} else {
+				insertion.displayText = 
+					"non-codon-aligned insertion in "+insertion.insertion.featureDisplayName+": ";
+			}
+			insertion.displayText += insertion.insertion.refLastNtBeforeIns+"-"+displayInsertedNts+"-"+insertion.insertion.refFirstNtAfterIns;
+
 		}		
+		var knownCovInsertions = [];
+		var foundCovInsertions = glue.tableToObjects(
+				glue.command(["list", "custom-table-row", "cov_nt_insertion", 
+					"-w", "variation.featureLoc.feature.name = '"+insertion.insertion.variationFeature+"'"+
+					" and last_ref_nt_before = "+insertion.insertion.refLastNtBeforeIns+
+					" and first_ref_nt_after = "+insertion.insertion.refFirstNtAfterIns+
+					" and inserted_nts = '"+insertion.insertion.insertedQryNts+"'", 
+					"id", "display_name", "num_seqs"]));
+		_.each(foundCovInsertions, function(foundIns) {
+			knownCovInsertions.push({"known_insertion": foundIns});
+		});
 		insertion.insertion.known_insertions = knownCovInsertions;
+		if(knownCovInsertions.length > 0) {
+			insertion.knownLink = "insertion/"+knownCovInsertions[0].known_insertion.id;
+		}
+
 	});
 	return insertionsList;
 }
@@ -305,6 +339,7 @@ function generateInsertions(queryNucleotides, targetRefName, queryToTargetRefSeg
 function generateDeletions(queryNucleotides, targetRefName, queryToTargetRefSegs) {
 	var comparisonRefName = "REF_MASTER_WUHAN_HU_1";
 	var deletionsList = [];
+	var deletionsSet = {};
 	_.each(featuresList, function(featureObj) {
 		glue.inMode("module/covFastaSequenceReporter", function() {
 			var deletionsFound = glue.tableToObjects(glue.command({
@@ -334,33 +369,53 @@ function generateDeletions(queryNucleotides, targetRefName, queryToTargetRefSegs
 			_.each(deletionsFound, function(deletionObj) {
 				deletionObj.featureDisplayName = featureObj.displayName;
 				glue.logInfo("deletionObj", deletionObj);
-				deletionsList.push({
-					deletion: deletionObj
-				});
+				var deletionKey = deletionObj.refFirstNtDeleted+":"+deletionObj.refLastNtDeleted;
+				if(deletionsSet[deletionKey] == null) { // don't report the same deletion twice for both feature and parent feature.
+					deletionsList.push({
+						deletion: deletionObj
+					});
+					deletionsSet[deletionKey] = "yes";
+				}
 			});
 		});
 	});
 	_.each(deletionsList, function(deletion) {
-		var knownCovDeletions = [];
 		if(deletion.deletion.deletionIsCodonAligned) {
-			var foundCovDeletions = glue.tableToObjects(
-				glue.command(["list", "custom-table-row", "cov_deletion", 
+			deletion.displayText = 
+				"codon-aligned deletion in "+deletion.deletion.featureDisplayName+": ";
+			if(deletion.deletion.refFirstCodonDeleted == deletion.deletion.refLastCodonDeleted) {
+				deletion.displayText += "codon "+deletion.deletion.refFirstCodonDeleted;
+			} else {
+				deletion.displayText += "codons "+deletion.deletion.refFirstCodonDeleted+"-"+deletion.deletion.refLastCodonDeleted;
+			}
+		} else {
+			if(deletion.deletion.deletedRefNts.length % 3 != 0) {
+				deletion.displayText = 
+					"frameshifting deletion in "+deletion.deletion.featureDisplayName+": ";
+			} else {
+				deletion.displayText = 
+					"non-codon-aligned deletion in "+deletion.deletion.featureDisplayName+": ";
+			}
+			if(deletion.deletion.refFirstNtDeleted == deletion.deletion.refLastNtDeleted) {
+				deletion.displayText += "nucleotide "+deletion.deletion.refFirstNtDeleted;
+			} else {
+				deletion.displayText += "nucleotides "+deletion.deletion.refFirstNtDeleted+"-"+deletion.deletion.refLastNtDeleted;
+			}
+		}
+		var knownCovDeletions = [];
+		var foundCovDeletions = glue.tableToObjects(
+				glue.command(["list", "custom-table-row", "cov_nt_deletion", 
 					"-w", "variation.featureLoc.feature.name = '"+deletion.deletion.variationFeature+"'"+
-					" and start_codon_int <= "+deletion.deletion.refFirstCodonDeleted+
-					" and end_codon_int >= "+deletion.deletion.refLastCodonDeleted, 
+					" and reference_nt_start = "+deletion.deletion.refFirstNtDeleted+
+					" and reference_nt_end = "+deletion.deletion.refLastNtDeleted, 
 					"id", "display_name", "num_seqs"]));
 			_.each(foundCovDeletions, function(foundDel) {
 				knownCovDeletions.push({"known_deletion": foundDel});
 			});
-			deletion.displayText = 
-				"AA deletion in "+deletion.deletion.featureDisplayName+": "+
-					deletion.deletion.refFirstCodonDeleted+"-"+deletion.deletion.refLastCodonDeleted;
-		} else {
-			deletion.displayText = 
-				"Nucleotide deletion in "+deletion.deletion.featureDisplayName+": "+
-					deletion.deletion.refFirstNtDeleted+"-"+deletion.deletion.refLastNtDeleted;
-		}
 		deletion.deletion.known_deletions = knownCovDeletions;
+		if(knownCovDeletions.length > 0) {
+			deletion.knownLink = "deletion/"+knownCovDeletions[0].known_deletion.id;
+		}
 	});
 	return deletionsList;
 }
@@ -528,7 +583,18 @@ function placeFasta(fastaMap, resultMap, placerResultContainer) {
 		});
 		_.each(lineageAssignmentResultDocument.covAssignLineagesResult.queryLineageResults, 
 				function(queryLineageResult) {
-			resultMap[queryLineageResult.queryName].lineageAssignmentResult = queryLineageResult;
+			var resultObj = resultMap[queryLineageResult.queryName];
+			resultObj.lineageAssignmentResult = queryLineageResult;
+			if(queryLineageResult.placementLineageResults != null) {
+				_.each(queryLineageResult.placementLineageResults, function(placementLineageResult) {
+					var placement = _.find(resultObj.placements, function(pl) {
+						return pl.placementIndex == placementLineageResult.placementIndex;
+					});
+					if(placementLineageResult.lineages != null && placementLineageResult.lineages.length > 0) {
+						placement.bestLineage = placementLineageResult.lineages[placementLineageResult.lineages.length-1];
+					}
+				});
+			}
 		});
 	}
 }

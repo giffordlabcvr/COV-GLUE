@@ -6,7 +6,7 @@
 <#assign leafTextGapPx = treeVisDoc.leafTextGapPx>
 <#assign leafTextFontSize = treeVisDoc.leafTextFontSize>
 	
-<#assign leafNodeRadiusPx = verticalLeafSpacePx / 2>
+<#assign leafNodeRadiusPx = verticalLeafSpacePx * 0.6>
 	
 <svg width="${svgWidthPx}" height="${svgHeightPx}"
      xmlns="http://www.w3.org/2000/svg">
@@ -42,8 +42,7 @@
      <#if leafNode.properties.multipleResidues??>
 	  </g>
 	 </#if>
-	</#if>
-    <#if leafNode.properties.deletionCode ??>
+	<#elseif leafNode.properties.deletionCode ??>
  	<#if leafNode.properties.deletionCode = "deletion">
       <circle class="leafNodeDeletionCircle_deletion"
     	cx="${leafNode.x + leafNodeRadiusPx}" cy="${leafNode.y}" r="${leafNodeRadiusPx}"/>
@@ -57,18 +56,17 @@
 	  	x="${leafNode.x + leafNodeRadiusPx}" y="${leafNode.y}" height="${verticalLeafSpacePx}"
 	  	dy=".35em">+</text>
 	</#if>
-	</#if>
-    <#if leafNode.properties.insertionCode ??>
+	<#elseif leafNode.properties.insertionCode ??>
  	<#if leafNode.properties.insertionCode = "insertion">
       <circle class="leafNodeInsertionCircle_insertion"
     	cx="${leafNode.x + leafNodeRadiusPx}" cy="${leafNode.y}" r="${leafNodeRadiusPx}"/>
      <text class="insertionLetter"
 	  	x="${leafNode.x + leafNodeRadiusPx}" y="${leafNode.y}" height="${verticalLeafSpacePx}"
 	  	dy=".35em">+</text>
-	<#elseif leafNode.properties.insertionCode = "insertion_different_aas">
+	<#elseif leafNode.properties.insertionCode = "insertion_different_nts">
 	  <g class="multipleAasBackground">
-	  <title>Alternative insertion: ${leafNode.properties.insertedAAs}</title>
-      <circle class="leafNodeInsertionCircle_insertion_different_aas"
+	  <title>Alternative insertion: ${leafNode.properties.insertedNTs}</title>
+      <circle class="leafNodeInsertionCircle_insertion_different_nts"
     	cx="${leafNode.x + leafNodeRadiusPx}" cy="${leafNode.y}" r="${leafNodeRadiusPx}"/>
      <text class="insertionLetter"
 	  	x="${leafNode.x + leafNodeRadiusPx}" y="${leafNode.y}" height="${verticalLeafSpacePx}"
@@ -81,6 +79,9 @@
 	  	x="${leafNode.x + leafNodeRadiusPx}" y="${leafNode.y}" height="${verticalLeafSpacePx}"
 	  	dy=".35em">-</text>
 	</#if>
+	<#else>
+      <circle <#if leafNode.highlighted!false>class="leafNodeCircle_highlighted"<#else>class="leafNodeCircle_basic"</#if>
+    	cx="${leafNode.x + (leafNodeRadiusPx/2)}" cy="${leafNode.y}" r="${leafNodeRadiusPx/2}"/>
 	</#if>
 
 	

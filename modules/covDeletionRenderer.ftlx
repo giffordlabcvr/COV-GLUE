@@ -9,25 +9,20 @@
 	<#if parent_feature??>
 	<parentFeature>${variation.featureLoc.feature.parent.name}</parentFeature>
 	<parentFeatureDisplayName>${variation.featureLoc.feature.parent.displayName}</parentFeatureDisplayName>
-	<parentStartCodon>${parent_start_codon}</parentStartCodon>
-	<parentEndCodon>${parent_end_codon}</parentEndCodon>
+	<#if cov_deletion??>
+	<codonAligned glueType="Boolean">true</codonAligned>
+	<parentStartCodon>${cov_deletion.parent_start_codon}</parentStartCodon>
+	<parentEndCodon>${cov_deletion.parent_end_codon}</parentEndCodon>
+	<#else>
+	<codonAligned glueType="Boolean">false</codonAligned>
+	</#if>
 	</#if>
 	<referenceSequence>${variation.featureLoc.referenceSequence.name}</referenceSequence>
-	<startCodon>${start_codon}</startCodon>
-	<endCodon>${end_codon}</endCodon>
+	<#if cov_deletion??>
+	<startCodon>${cov_deletion.start_codon}</startCodon>
+	<endCodon>${cov_deletion.end_codon}</endCodon>
+	</#if>
 	<referenceNtStart>${reference_nt_start?c}</referenceNtStart>
 	<referenceNtEnd>${reference_nt_end?c}</referenceNtEnd>
 	<numSeqs>${num_seqs}</numSeqs>
-
-	<#list cov_deletion_sequence as cms>
-    <containingSeq glueType="Object[]">
-    	<sourceName>${cms.sequence.source.name}</sourceName>
-    	<sequenceID>${cms.sequence.sequenceID}</sequenceID>
-    	<isolate>${cms.sequence.isolate}</isolate>
-    	<countryId>${cms.sequence.m49_country.id}</countryId>
-    	<placeSampled>${cms.sequence.place_sampled}</placeSampled>
-    	<countryDisplayName>${cms.sequence.m49_country.display_name}</countryDisplayName>
-	    <collectionDate><#if cms.sequence.collection_month_day??>${cms.sequence.collection_month_day}-</#if><#if cms.sequence.collection_month??>${cms.sequence.collection_month}-</#if>${cms.sequence.collection_year?c}</collectionDate>
-    </containingSeq>
-    </#list>
 </deletion>
