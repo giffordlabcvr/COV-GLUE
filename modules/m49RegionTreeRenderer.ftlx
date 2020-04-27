@@ -1,0 +1,17 @@
+<#include "/utils/glueDocUtils.ftlx">
+<m49Region>
+	<id>${id}</id>
+	<displayName>${display_name}</displayName>
+	<#list m49_sub_region as subRegion>
+    <m49SubRegion glueType="Object[]">
+		<id>${subRegion.id}</id>
+		<displayName>${subRegion.display_name}</displayName>
+		<#list subRegion.m49_intermediate_region as intermediateRegion>
+	    <m49IntermediateRegion glueType="Object[]">
+			<id>${intermediateRegion.id}</id>
+			<displayName>${intermediateRegion.display_name}</displayName>
+	    </m49IntermediateRegion>
+	    </#list>
+    </m49SubRegion>
+    </#list>
+</m49Region>
