@@ -29,6 +29,8 @@ _.each(featuresList, function(featureObj) {
 var implausibleDeletionAlmtMembers = [];
 var implausibleInsertionAlmtMembers = [];
 
+var processed = 0;
+
 glue.inMode("alignment/AL_GISAID_CONSTRAINED", function() {
 	var almtMemberObjs = glue.tableToObjects(glue.command(["list", "member"]));
 	_.each(almtMemberObjs, function(almtMemberObj) {
@@ -72,21 +74,41 @@ glue.inMode("alignment/AL_GISAID_CONSTRAINED", function() {
 				implausibleInsertionAlmtMembers.push(almtMemberObj);
 			}
 
+			processed++;
+			if(processed % 500) {
+				glue.logInfo("Processed implausible indels, "+processed+" sequences. ");
+				glue.command(["new-context"]);
+			}
+			
 		});
 	}); 
 });
+
+processed = 0;
 
 _.each(implausibleDeletionAlmtMembers, function(almtMemberObj) {
 	glue.log("WARNING", "implausible deletion detected for sequence "+almtMemberObj["sequence.sequenceID"]+", it will be excluded from variation analysis");
 	glue.inMode("sequence/"+almtMemberObj["sequence.source.name"]+"/"+almtMemberObj["sequence.sequenceID"], function() {
 		glue.command(["set", "field", "analyse_variation", "false"]);
+		processed++;
+		if(processed % 500) {
+			glue.logInfo("Set analyse-variation to false for implausible deletions, "+processed+" sequences. ");
+			glue.command(["new-context"]);
+		}
 	});
 });
+
+processed = 0;
 
 _.each(implausibleInsertionAlmtMembers, function(almtMemberObj) {
 	glue.log("WARNING", "implausible insertion detected for sequence "+almtMemberObj["sequence.sequenceID"]+", it will be excluded from variation analysis");
 	glue.inMode("sequence/"+almtMemberObj["sequence.source.name"]+"/"+almtMemberObj["sequence.sequenceID"], function() {
 		glue.command(["set", "field", "analyse_variation", "false"]);
+		processed++;
+		if(processed % 500) {
+			glue.logInfo("Set analyse-variation to false for implausible insertions, "+processed+" sequences. ");
+			glue.command(["new-context"]);
+		}
 	});
 });
 
