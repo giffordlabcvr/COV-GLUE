@@ -1,0 +1,33 @@
+  # This is part of the main build, but can also be used to update an existing build
+  # when there has been an update to the Rambaut et al. lineages repo.
+
+  # Null these out as they are based on the previous lineage assignment system.
+  multi-unset field sequence -a cov_glue_lineage
+  multi-unset field sequence -a cov_glue_lw_ratio
+
+  # PANGOLIN lineage assignments and representative flag.
+  run script glue/covLoadPangLineages.js
+
+  # all sequences excluded from the reference tree by default
+  multi-set field sequence -a include_in_ref_tree false
+
+  # currently, include in ref tree iff sequence is flagged as a PANGOLIN representative
+  multi-set field sequence -w "pang_representative = true" include_in_ref_tree true
+
+  # compute the unconstrained alignment
+  run file glue/covUnconstrainedAlignment.glue
+
+  # generate the reference tree
+  run file glue/covGeneratePhylogeny.glue
+  # import unrooted tree so we can set ORF8 position 84 amino acid . 
+  module covPhyloImporter
+    import phylogeny AL_GISAID_UNCONSTRAINED -w "sequence.include_in_ref_tree = true" -i trees/globalRefTreeUnrooted.tree NEWICK_BOOTSTRAPS -f phylogeny
+    exit
+  run script glue/covSetOrf8Aa84.js
+  # reroot phylogeny and export display tree, this has the side effect of loading the final ref tree
+  run file glue/covRerootPhylogeny.glue
+  
+  # set the pangolin lineage as internal node properties in the reference tree.
+  # this allows assignment of lineages to work.
+  module covAssignLineages invoke-function setLineagesInTree
+  

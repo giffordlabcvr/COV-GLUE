@@ -25,9 +25,8 @@ project cov
   module covGisaidAcknowledgementsTextFilePopulator populate --fileName tabular/gisaid_cov2020_acknowledgement_table.txt
   module covGisaidMetadataTextFilePopulator populate --fileName tabular/gisaid_metadata.txt
   module covSeqStatsTextFilePopulator populate -f tabular/gisaidSeqCharacterStats.txt
+  
   console unset cmd-result-format
-  # PANGOLIN lineage assignments and representative flag.
-  run script glue/covLoadPangLineages.js
 
   # deals with case where FASTA is ahead of either GISAID metadata (submission_year = null) or 
   # GISAID acknowledgements (isolate = null).
@@ -43,30 +42,10 @@ project cov
   # now this has been populated we can count the unique SNPs
   run script glue/covCountUniqueSNPs.js
 
+  # build the unconstrained alignment, global ref tree, and other 
+  # stuff for assigning lineages.
+  run file glue/covRebuildGlobalRefs.glue
 
-  # all sequences excluded from the reference tree by default
-  multi-set field sequence -a include_in_ref_tree false
-
-  # currently, include in ref tree iff sequence is flagged as a PANGOLIN representative
-  multi-set field sequence -w "pang_representative = true" include_in_ref_tree true
-
-  # compute the unconstrained alignment
-  run file glue/covUnconstrainedAlignment.glue
-
-  # generate the reference tree
-  run file glue/covGeneratePhylogeny.glue
-  # import unrooted tree so we can set ORF8 position 84 amino acid . 
-  module covPhyloImporter
-    import phylogeny AL_GISAID_UNCONSTRAINED -w "sequence.include_in_ref_tree = true" -i trees/globalRefTreeUnrooted.tree NEWICK_BOOTSTRAPS -f phylogeny
-    exit
-  run script glue/covSetOrf8Aa84.js
-  # reroot phylogeny and export display tree, this has the side effect of loading the final ref tree
-  run file glue/covRerootPhylogeny.glue
-  
-  # set the pangolin lineage as internal node properties in the reference tree.
-  # this allows assignment of lineages to work.
-  module covAssignLineages invoke-function setLineagesInTree
-  
   # assign and store lineages for all sequences.
   run script glue/covAssignAndStoreLineages.js
 
