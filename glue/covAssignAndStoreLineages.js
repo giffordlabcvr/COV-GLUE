@@ -1,6 +1,6 @@
 
 // Full set.
-var whereClause = "true";
+var whereClause = "analyse_variation = true";
 
 // test with ~125 sequences
 // var whereClause = "sequenceID > 'EPI_ISL_410000' and sequenceID <= 'EPI_ISL_412999'";
