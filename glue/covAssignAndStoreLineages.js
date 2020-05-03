@@ -18,7 +18,7 @@ var batchSize = 50;
 var processed = 0;
 var offset = 0;
 
-glue.log("FINEST", "Assiging lineages for "+numSeqs+" sequences");
+glue.log("FINEST", "Assigning lineages for "+numSeqs+" sequences");
 
 while(processed < numSeqs) {
 	var batchAssignments;
