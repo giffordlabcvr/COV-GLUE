@@ -77,7 +77,6 @@ schema-project cov
     create field reference_nt INTEGER
     create field reference_base VARCHAR
     create field mutation_base VARCHAR
-    create field num_seqs INTEGER
     exit
 
   table cov_replacement
