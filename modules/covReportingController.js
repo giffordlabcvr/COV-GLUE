@@ -2,7 +2,7 @@ var featuresList1 = glue.tableToObjects(
 		glue.command(["list", "feature", "-w", "not (name in ('ORF_1a', 'ORF_1ab')) and featureMetatags.name = 'CODES_AMINO_ACIDS' and featureMetatags.value = true", "name", "displayName", "parent.name"]));
 
 var featuresList2 = glue.tableToObjects(
-		glue.command(["list", "feature", "-w", "name in ('ORF_1a', 'ORF_1ab')"]));
+		glue.command(["list", "feature", "-w", "name in ('ORF_1a', 'ORF_1ab')", "name", "displayName", "parent.name"]));
 
 var featuresList = featuresList1.concat(featuresList2);
 
