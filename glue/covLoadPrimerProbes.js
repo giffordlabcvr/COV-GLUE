@@ -192,6 +192,8 @@ _.each(ppObjs, function(ppObj) {
  	 		glue.command(["set", "field", "ref_end", 29282]);
  	 		glue.command(["set", "field", "length", 20]);
  		} else {
+ 			glue.log("SEVERE", "Forward hits for "+ppID+": "+fwdHitObjs.length);
+ 			glue.log("SEVERE", "Reverse hits for "+ppID+": "+revHitObjs.length);
  			throw new Error("Primer/probe sequence "+ppID+" not found exactly once in the Wuhan-Hu-1 reference strain");
  		}
  	});
