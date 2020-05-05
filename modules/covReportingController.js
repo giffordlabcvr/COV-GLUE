@@ -145,7 +145,7 @@ function generateFeaturesWithCoverage(targetRefName, queryToTargetRefSegs) {
 							},
 							"targetRefName":targetRefName,
 							"relRefName":"REF_MASTER_WUHAN_HU_1",
-							"linkingAlmtName":"AL_GISAID_UNCONSTRAINED",
+							"linkingAlmtName":"AL_UNCONSTRAINED_DUMMY",
 							"featureName":feature.name
 						}
 			}).fastaSequenceAlignmentFeatureCoverageResult.coveragePercentage;
@@ -184,7 +184,7 @@ function generateReplacements(queryNucleotides, targetRefName, queryToTargetRefS
 						},
 						"targetRefName":targetRefName,
 						"relRefName":comparisonRefName,
-						"linkingAlmtName":"AL_GISAID_UNCONSTRAINED",
+						"linkingAlmtName":"AL_UNCONSTRAINED_DUMMY",
 						"featureName":featureObj.name
 					}
 				}
@@ -259,7 +259,7 @@ function generateInsertions(queryNucleotides, targetRefName, queryToTargetRefSeg
 							},
 							"targetRefName":targetRefName,
 							"relRefName":comparisonRefName,
-							"linkingAlmtName":"AL_GISAID_UNCONSTRAINED",
+							"linkingAlmtName":"AL_UNCONSTRAINED_DUMMY",
 							"featureName":featureObj.name,
 							"whereClause":"name = 'cov_aa_ins_detect:"+featureObj.name+"'",
 							"descendentFeatures": false,
@@ -354,7 +354,7 @@ function generateDeletions(queryNucleotides, targetRefName, queryToTargetRefSegs
 							},
 							"targetRefName":targetRefName,
 							"relRefName":comparisonRefName,
-							"linkingAlmtName":"AL_GISAID_UNCONSTRAINED",
+							"linkingAlmtName":"AL_UNCONSTRAINED_DUMMY",
 							"featureName":featureObj.name,
 							"whereClause":"name = 'cov_aa_del_detect:"+featureObj.name+"'",
 							"descendentFeatures": false,

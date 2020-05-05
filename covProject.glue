@@ -23,8 +23,8 @@ project cov
   # dummy unconstrained alignment just contains master ref, required in a few
   # situations 
   create alignment AL_UNCONSTRAINED_DUMMY
-  alignment AL_UNCONSTRAINED_DUMMY add member cov-gisaid EPL_ISL_402125
-  alignment AL_UNCONSTRAINED_DUMMY member cov-gisaid EPL_ISL_402125 add segment 1 29903 1 29903
+  alignment AL_UNCONSTRAINED_DUMMY add member cov-gisaid EPI_ISL_402125
+  alignment AL_UNCONSTRAINED_DUMMY member cov-gisaid EPI_ISL_402125 add segment 1 29903 1 29903
 
 
   # have to temporarily change result format to avoid bug in table rendering library.

@@ -378,7 +378,7 @@ function variationMatchResults(queryNucleotides, queryToTargetRefSegs, targetRef
 						"whereClause": whereClause,
 						"targetRefName":targetRefName,
 						"relRefName":targetRefName,
-						"linkingAlmtName":"AL_GISAID_UNCONSTRAINED",
+						"linkingAlmtName":"AL_UNCONSTRAINED_DUMMY",
 						"featureName":"whole_genome",
 						"descendentFeatures":"false",
 						"excludeAbsent":"false",
