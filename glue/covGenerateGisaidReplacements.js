@@ -75,7 +75,7 @@ _.each(featuresList, function(featureObj) {
 					}
 				});
 				processed++;
-				if(processed % 500) {
+				if(processed % 500 == 0) {
 					glue.logInfo("Processed for replacements in "+featureObj.name+": "+processed+" sequences. ");
 					glue.command(["new-context"]);
 				}
@@ -175,7 +175,7 @@ _.each(_.values(replacementsSet), function(replacementObj) {
 	});
 	
 	processed++;
-	if(processed % 500) {
+	if(processed % 500 == 0) {
 		glue.logInfo("Created "+processed+" replacements. ");
 		glue.command(["new-context"]);
 	}
