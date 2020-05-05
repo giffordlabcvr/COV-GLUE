@@ -32,8 +32,8 @@ project cov
   module covGisaidAcknowledgementsTextFilePopulator populate --fileName tabular/gisaid_cov2020_acknowledgement_table.txt
   module covGisaidMetadataTextFilePopulator populate --fileName tabular/gisaid_metadata.txt
   module covSeqStatsTextFilePopulator populate -f tabular/gisaidSeqCharacterStats.txt
-  
   console unset cmd-result-format
+  run script glue/covSetCollectionDate.js
 
   # deals with case where FASTA is ahead of either GISAID metadata (submission_year = null) or 
   # GISAID acknowledgements (isolate = null).
@@ -55,6 +55,9 @@ project cov
 
   # assign and store lineages for all sequences.
   run script glue/covAssignAndStoreLineages.js
+
+  # sortable lineage field
+  glue/covSetLineageSortable.js
 
   # load the primer/probe data
   run script glue/covLoadPrimerProbes.js

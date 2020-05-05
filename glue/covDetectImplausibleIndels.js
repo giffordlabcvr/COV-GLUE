@@ -75,7 +75,7 @@ glue.inMode("alignment/AL_GISAID_CONSTRAINED", function() {
 			}
 
 			processed++;
-			if(processed % 500) {
+			if(processed % 500 == 0) {
 				glue.logInfo("Processed implausible indels, "+processed+" sequences. ");
 				glue.command(["new-context"]);
 			}
@@ -91,7 +91,7 @@ _.each(implausibleDeletionAlmtMembers, function(almtMemberObj) {
 	glue.inMode("sequence/"+almtMemberObj["sequence.source.name"]+"/"+almtMemberObj["sequence.sequenceID"], function() {
 		glue.command(["set", "field", "analyse_variation", "false"]);
 		processed++;
-		if(processed % 500) {
+		if(processed % 500 == 0) {
 			glue.logInfo("Set analyse-variation to false for implausible deletions, "+processed+" sequences. ");
 			glue.command(["new-context"]);
 		}
@@ -105,7 +105,7 @@ _.each(implausibleInsertionAlmtMembers, function(almtMemberObj) {
 	glue.inMode("sequence/"+almtMemberObj["sequence.source.name"]+"/"+almtMemberObj["sequence.sequenceID"], function() {
 		glue.command(["set", "field", "analyse_variation", "false"]);
 		processed++;
-		if(processed % 500) {
+		if(processed % 500 == 0) {
 			glue.logInfo("Set analyse-variation to false for implausible insertions, "+processed+" sequences. ");
 			glue.command(["new-context"]);
 		}
