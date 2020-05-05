@@ -144,7 +144,7 @@ _.each(ppObjs, function(ppObj) {
 	// and whether the primer is forward or reverse.
 	var fwdHitObjs;
 	var revHitObjs;
-	glue.inMode("alignment/AL_GISAID_UNCONSTRAINED/member/cov-gisaid/EPI_ISL_402125", function() {
+	glue.inMode("alignment/AL_UNCONSTRAINED_DUMMY/member/cov-gisaid/EPI_ISL_402125", function() {
 		fwdHitObjs = glue.tableToObjects(glue.command(["variation", "scan", 
 			"-r", "REF_MASTER_WUHAN_HU_1", "-f", "whole_genome", 
 			"--whereClause", "name = '"+fwdVariationName+"'", "--showMatchesAsTable"]));
