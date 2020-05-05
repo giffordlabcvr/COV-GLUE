@@ -59,7 +59,6 @@ schema-project cov
     create field uncorrected_illegals BOOLEAN
     create field num_unique_snps INTEGER
     create field pang_lineage VARCHAR
-    create field pang_bootstrap VARCHAR
     create field pang_representative BOOLEAN
     create field cov_glue_lineage VARCHAR
     create field cov_glue_lw_ratio DOUBLE
@@ -78,7 +77,6 @@ schema-project cov
     create field reference_nt INTEGER
     create field reference_base VARCHAR
     create field mutation_base VARCHAR
-    create field num_seqs INTEGER
     exit
 
   table cov_replacement

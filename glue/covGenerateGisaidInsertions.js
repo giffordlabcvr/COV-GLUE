@@ -140,6 +140,7 @@ glue.inMode("alignment/AL_GISAID_CONSTRAINED", function() {
 			processed++;
 			if(processed % 250 == 0) {
 				glue.log("FINEST", "Processed "+processed+" alignment members for insertions");
+				glue.command(["new-context"]);
 			}
 		});
 	}); 

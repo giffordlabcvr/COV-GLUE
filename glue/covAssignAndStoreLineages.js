@@ -1,13 +1,13 @@
 
 // Full set.
-// var whereClause = "true";
+var whereClause = "analyse_variation = true";
 
 // test with ~125 sequences
 // var whereClause = "sequenceID > 'EPI_ISL_410000' and sequenceID <= 'EPI_ISL_412999'";
 
 // restrict to sequences which have a PANGOLIN lineage, when just interested in 
 // comparing the two lineage assignment methods 
-var whereClause = "pang_lineage != null";
+// var whereClause = "pang_lineage != null";
 
 glue.command(["multi-unset", "field", "sequence", "-w", whereClause, "cov_glue_lineage"]);
 glue.command(["multi-unset", "field", "sequence", "-w", whereClause, "cov_glue_lw_ratio"]);
@@ -18,7 +18,7 @@ var batchSize = 50;
 var processed = 0;
 var offset = 0;
 
-glue.log("FINEST", "Assiging lineages for "+numSeqs+" sequences");
+glue.log("FINEST", "Assigning lineages for "+numSeqs+" sequences");
 
 while(processed < numSeqs) {
 	var batchAssignments;

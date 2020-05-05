@@ -15,6 +15,7 @@ var replacementsSet = {};
 var orf1aReplacements = {}; 
 var orf1abReplacements = {}; 
 
+
 _.each(featuresList, function(featureObj) {
 	var refAaObjsMap = {};
 	glue.inMode("reference/"+comparisonRefName+"/feature-location/"+featureObj.name, function() {
@@ -25,6 +26,7 @@ _.each(featuresList, function(featureObj) {
 	});
 	glue.inMode("alignment/AL_GISAID_CONSTRAINED", function() {
 		var almtMemberObjs = glue.tableToObjects(glue.command(["list", "member", "-w", "sequence.analyse_variation = true"]));
+		var processed = 0;
 		_.each(almtMemberObjs, function(almtMemberObj) {
 			glue.inMode("member/"+almtMemberObj["sequence.source.name"]+"/"+almtMemberObj["sequence.sequenceID"], function() {
 				var memberAaObjs = glue.tableToObjects(glue.command(["amino-acid", "-r", comparisonRefName, "-f", featureObj.name]));
@@ -72,12 +74,19 @@ _.each(featuresList, function(featureObj) {
 						}
 					}
 				});
+				processed++;
+				if(processed % 500) {
+					glue.logInfo("Processed for replacements in "+featureObj.name+": "+processed+" sequences. ");
+					glue.command(["new-context"]);
+				}
 			});
 			
 		}); 
 	});
 	
 });
+
+processed = 0;
 
 _.each(_.values(replacementsSet), function(replacementObj) {
 	if(replacementObj.feature == "ORF_1a" || replacementObj.feature == "ORF_1ab") {
@@ -164,4 +173,11 @@ _.each(_.values(replacementsSet), function(replacementObj) {
 			glue.command(["set", "link-target", "sequence", "sequence/"+sourceName+"/"+sequenceID]);
 		});
 	});
+	
+	processed++;
+	if(processed % 500) {
+		glue.logInfo("Created "+processed+" replacements. ");
+		glue.command(["new-context"]);
+	}
+
 });
