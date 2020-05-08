@@ -57,7 +57,7 @@ project cov
   run script glue/covAssignAndStoreLineages.js
 
   # sortable lineage field
-  glue/covSetLineageSortable.js
+  run script glue/covSetLineageSortable.js
 
   # load the primer/probe data
   run script glue/covLoadPrimerProbes.js
