@@ -53,6 +53,9 @@ project cov
   # stuff for assigning lineages.
   run file glue/covRebuildGlobalRefs.glue
 
+  # run the rules to exclude some sequences from the variation analysis
+  run file glue/covSetAnalyseVariationFlag.glue
+
   # assign and store lineages for all sequences.
   run script glue/covAssignAndStoreLineages.js
 
@@ -61,9 +64,6 @@ project cov
 
   # load the primer/probe data
   run script glue/covLoadPrimerProbes.js
-  
-  # run the rules to exclude some sequences from the variation analysis
-  run file glue/covSetAnalyseVariationFlag.glue
   
   # generate deletions
   run script glue/covGenerateGisaidDeletions.js
