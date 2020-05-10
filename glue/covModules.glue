@@ -44,6 +44,7 @@ create module --fileName modules/covTreeVisualisationTransformer.xml --loadResou
 create module --fileName modules/covTreeVisualiser.xml
 create module --fileName modules/covFastaProteinAlignmentExporter.xml
 create module --fileName modules/covFastaProteinAlignmentExporterSeqIdOnly.xml
+create module --fileName modules/covFastaProteinAlignmentExporterSourcePlusSeqId.xml
 create module --fileName modules/covFastaExporter.xml
 create module --fileName modules/covFastaAlignmentExporterSeqIdOnly.xml
 create module --fileName modules/covSanitisedFastaAlignmentExporter.xml
@@ -64,3 +65,5 @@ create module --fileName modules/covMiyata1979DistanceCalculator.xml
 
 create module --fileName modules/covPrimerProbeMismatch.xml --loadResources
 create module --fileName modules/covPrimerProbeReportTransformer.xml --loadResources
+
+create module --fileName modules/covCogUkRefsTextFilePopulator.xml

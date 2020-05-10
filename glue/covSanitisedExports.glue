@@ -1,7 +1,7 @@
 run script glue/covSanitisedMetadata.js
 
 module covSanitisedFastaExporter
-  export -a -f covGlueSanitisedSequences.fasta
+  export -w "source.name = 'cov-gisaid'" -f covGlueSanitisedSequences.fasta
   exit
   
 module covSanitisedFastaAlignmentExporter

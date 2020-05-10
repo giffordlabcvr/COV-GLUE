@@ -1,0 +1,46 @@
+sequenceID	isolate	place_sampled	m49_country.id	collection_month_day	collection_month	collection_year
+EDB2108	Scotland/EDB2108/2020	Europe / United Kingdom / Scotland / Midlothian	GBR	20	APR	2020
+EDB2132	Scotland/EDB2132/2020	Europe / United Kingdom / Scotland / Edinburgh	GBR	20	APR	2020
+EDB2168	Scotland/EDB2168/2020	Europe / United Kingdom / Scotland / Edinburgh	GBR	20	APR	2020
+EDB2341	Scotland/EDB2341/2020	Europe / United Kingdom / Scotland / Edinburgh	GBR	22	APR	2020
+EDB2357	Scotland/EDB2357/2020	Europe / United Kingdom / Scotland / Midlothian	GBR	22	APR	2020
+EDB2361	Scotland/EDB2361/2020	Europe / United Kingdom / Scotland / Edinburgh	GBR	22	APR	2020
+EDB2377	Scotland/EDB2377/2020	Europe / United Kingdom / Scotland / Edinburgh	GBR	22	APR	2020
+EXET-1350E3	England/EXET-1350E3/2020	Europe / United Kingdom / England / Devon	GBR	4	APR	2020
+EXET-13511D	England/EXET-13511D/2020	Europe / United Kingdom / England / Devon	GBR	6	APR	2020
+EXET-1351FF	England/EXET-1351FF/2020	Europe / United Kingdom / England / Devon	GBR	4	APR	2020
+EXET-13520B	England/EXET-13520B/2020	Europe / United Kingdom / England / Devon	GBR	4	APR	2020
+EXET-13521A	England/EXET-13521A/2020	Europe / United Kingdom / England / Devon	GBR	4	APR	2020
+LIVE-991DC	England/LIVE-991DC/2020	Europe / United Kingdom / England	GBR	7	APR	2020
+LIVE-99691	England/LIVE-99691/2020	Europe / United Kingdom / England	GBR	9	APR	2020
+LIVE-99840	England/LIVE-99840/2020	Europe / United Kingdom / England	GBR	9	APR	2020
+LIVE-998D7	England/LIVE-998D7/2020	Europe / United Kingdom / England	GBR	9	APR	2020
+LIVE-99BCF	England/LIVE-99BCF/2020	Europe / United Kingdom / England	GBR	13	APR	2020
+LIVE-9B9C3	England/LIVE-9B9C3/2020	Europe / United Kingdom / England	GBR	21	APR	2020
+LIVE-9BAA2	England/LIVE-9BAA2/2020	Europe / United Kingdom / England	GBR	22	APR	2020
+LOND-D390B	England/LOND-D390B/2020	Europe / United Kingdom / England	GBR	3	APR	2020
+LOND-D39CF	England/LOND-D39CF/2020	Europe / United Kingdom / England	GBR	6	APR	2020
+LOND-D3FAF	England/LOND-D3FAF/2020	Europe / United Kingdom / England	GBR	4	APR	2020
+LOND-D5426	England/LOND-D5426/2020	Europe / United Kingdom / England	GBR	15	APR	2020
+LOND-D5471	England/LOND-D5471/2020	Europe / United Kingdom / England	GBR	15	APR	2020
+LOND-D5E64	England/LOND-D5E64/2020	Europe / United Kingdom / England	GBR	19	APR	2020
+NIRE-FB396	Northern Ireland/NIRE-FB396/2020	Europe / United Kingdom / Northern Ireland / Down	GBR	19	MAR	2020
+NIRE-FB3D2	Northern Ireland/NIRE-FB3D2/2020	Europe / United Kingdom / Northern Ireland / Antrim	GBR	20	MAR	2020
+NIRE-FB3E1	Northern Ireland/NIRE-FB3E1/2020	Europe / United Kingdom / Northern Ireland / Armagh	GBR	20	MAR	2020
+NIRE-FB466	Northern Ireland/NIRE-FB466/2020	Europe / United Kingdom / Northern Ireland / Antrim	GBR	17	MAR	2020
+NORW-E6EAC	England/NORW-E6EAC/2020	Europe / United Kingdom / England	GBR	-	-	2020
+NORW-E6EBB	England/NORW-E6EBB/2020	Europe / United Kingdom / England / Suffolk	GBR	21	APR	2020
+NORW-E6F12	England/NORW-E6F12/2020	Europe / United Kingdom / England / Suffolk	GBR	18	APR	2020
+NORW-E6FA9	England/NORW-E6FA9/2020	Europe / United Kingdom / England / Norfolk	GBR	19	APR	2020
+NORW-E8217	England/NORW-E8217/2020	Europe / United Kingdom / England / Norfolk	GBR	8	APR	2020
+NORW-E85C3	England/NORW-E85C3/2020	Europe / United Kingdom / England / Norfolk	GBR	18	APR	2020
+NORW-E8666	England/NORW-E8666/2020	Europe / United Kingdom / England / Norfolk	GBR	17	APR	2020
+NORW-E86FD	England/NORW-E86FD/2020	Europe / United Kingdom / England / Norfolk	GBR	17	APR	2020
+NORW-E9805	England/NORW-E9805/2020	Europe / United Kingdom / England / Norfolk	GBR	23	APR	2020
+NOTT-110109	England/NOTT-110109/2020	Europe / United Kingdom / England / Nottingham	GBR	10	APR	2020
+PHEC-18FF9	England/20149012504/2020	Europe / United Kingdom / England / Hertfordshire	GBR	2	APR	2020
+PHEC-1B503	England/20149004804/2020	Europe / United Kingdom / England / Hertfordshire	GBR	3	APR	2020
+PHEC-1B65B	England/20149054104/2020	Europe / United Kingdom / England / Hertfordshire	GBR	4	APR	2020
+PHEC-1C71B	England/20169001804/2020	Europe / United Kingdom / England / Hertfordshire	GBR	17	APR	2020
+PHWC-23A09	Wales/PHWC-23A09/2020	Europe / United Kingdom / Wales	GBR	11	MAR	2020
+PHWC-23A36	Wales/PHWC-23A36/2020	Europe / United Kingdom / Wales	GBR	11	MAR	2020

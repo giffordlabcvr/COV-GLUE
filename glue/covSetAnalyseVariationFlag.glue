@@ -5,6 +5,9 @@
   # all sequences are analysed by default
   multi-set field sequence -a analyse_variation true
 
+  # these are just reference sequences for the global ref tree, not part of the analysis.
+  multi-set field sequence -w "source.name = 'cov-coguk-refs' analyse_variation false
+
   # non complete genomes (length < 29000) and monsters (length > 35000) excluded from the analysis
   multi-set field sequence -w "length < 29000 or length > 35000" analyse_variation false
 
