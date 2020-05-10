@@ -1,7 +1,7 @@
 
 
 var seqObjs = glue.tableToObjects(glue.command(["list", "sequence", 
-	"-w", "source.name = 'cov-gisaid' and cov_glue_lineage != null", 
+	"-w", "cov_glue_lineage != null", 
 	"source.name", "sequenceID", "cov_glue_lineage"]));
 
 var processed = 0;

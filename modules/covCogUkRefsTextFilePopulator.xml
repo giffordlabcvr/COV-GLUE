@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<textFilePopulator>
+    <columnDelimiterRegex>\t</columnDelimiterRegex>
+    <textFileColumn>
+        <identifier>true</identifier>
+        <header>sequenceID</header>
+        <property>sequenceID</property>
+    </textFileColumn>
+    <textFileColumn>
+        <header>isolate</header>
+        <property>isolate</property>
+    </textFileColumn>
+    <textFileColumn>
+        <header>place_sampled</header>
+        <property>place_sampled</property>
+    </textFileColumn>
+    <isoCountryTextFileColumn codeStyle="ALPHA_3">
+        <header>m49_country.id</header>
+        <property>m49_country</property>
+    </isoCountryTextFileColumn>
+    <textFileColumn>
+        <header>collection_month_day</header>
+        <property>collection_month_day</property>
+        <nullRegex>-</nullRegex>
+    </textFileColumn>
+    <textFileColumn>
+        <header>collection_month</header>
+        <property>collection_month</property>
+        <nullRegex>-</nullRegex>
+    </textFileColumn>
+    <textFileColumn>
+        <header>collection_year</header>
+        <property>collection_year</property>
+    </textFileColumn>
+    <skipMissing>true</skipMissing>
+</textFilePopulator>

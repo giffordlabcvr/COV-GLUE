@@ -1,6 +1,7 @@
 
 
 var tabularData = glue.command(["list", "sequence", 
+	"-w", "source.name = 'cov-gisaid'",
 	"sequenceID", 
 	"source.name", 
 	"length", 
