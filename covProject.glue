@@ -36,7 +36,7 @@ project cov
   module covGisaidAcknowledgementsTextFilePopulator populate --fileName tabular/gisaid_cov2020_acknowledgement_table.txt
   module covGisaidMetadataTextFilePopulator populate --fileName tabular/gisaid_metadata.txt
   module covSeqStatsTextFilePopulator populate -f tabular/gisaidSeqCharacterStats.txt
-  module covCogUkRefsTextFilePopulator populate -w "source.name = 'cov-coguk-refs'" -f tabular/cogukRefsMetadata.txt  console unset cmd-result-format
+  module covCogUkRefsTextFilePopulator populate -w "source.name = 'cov-coguk-refs'" -f tabular/cogukRefsMetadata.txt
   console unset cmd-result-format
   
   run script glue/covSetCollectionDate.js
