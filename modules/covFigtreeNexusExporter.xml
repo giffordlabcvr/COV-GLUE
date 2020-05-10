@@ -1,7 +1,7 @@
 <nexusExporter>
 	<freemarkerAnnotationGenerator>
-		<annotationName>gisaid_id</annotationName>
-		<template>${renderNestedProperty('sequence.sequenceID')}</template>
+		<annotationName>source_and_seq_id</annotationName>
+		<template>${renderNestedProperty('sequence.source.name')}/${renderNestedProperty('sequence.sequenceID')}</template>
 	</freemarkerAnnotationGenerator>
 	<freemarkerAnnotationGenerator>
 		<annotationName>country</annotationName>
@@ -10,6 +10,10 @@
 	<freemarkerAnnotationGenerator>
 		<annotationName>isolate</annotationName>
 		<template>${renderNestedProperty('sequence.isolate')}</template>
+	</freemarkerAnnotationGenerator>
+	<freemarkerAnnotationGenerator>
+		<annotationName>place_sampled</annotationName>
+		<template>${renderNestedProperty('sequence.place_sampled')}</template>
 	</freemarkerAnnotationGenerator>
 	<freemarkerAnnotationGenerator>
 		<annotationName>sub_region</annotationName>
@@ -26,10 +30,6 @@
 	<freemarkerAnnotationGenerator>
 		<annotationName>pang_lineage</annotationName>
 		<template>${renderNestedProperty('sequence.pang_lineage')}</template>
-	</freemarkerAnnotationGenerator>
-	<freemarkerAnnotationGenerator>
-		<annotationName>num_unique_snps</annotationName>
-		<template>${renderNestedProperty('sequence.num_unique_snps')}</template>
 	</freemarkerAnnotationGenerator>
 	<figtreeProperty type="integer" name="tipLabels.fontSize">13</figtreeProperty>
 	<figtreeProperty name="tipLabels.colorAttribute">region</figtreeProperty>

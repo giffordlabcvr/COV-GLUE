@@ -167,7 +167,7 @@ function visualisePhyloAsSvg(document) {
 							"lcEnd": aaVisCodonLabel,
 							"targetRefName":targetRefName,
 							"relRefName":"REF_MASTER_WUHAN_HU_1",
-							"linkingAlmtName":"AL_GISAID_UNCONSTRAINED",
+							"linkingAlmtName":"AL_UNCONSTRAINED_DUMMY",
 							"featureName":visFeatureName
 						}
 					}
@@ -204,7 +204,7 @@ function visualisePhyloAsSvg(document) {
 								"showMatchesAsDocument": false,
 								"targetRefName":targetRefName,
 								"relRefName":"REF_MASTER_WUHAN_HU_1",
-								"linkingAlmtName":"AL_GISAID_UNCONSTRAINED",
+								"linkingAlmtName":"AL_UNCONSTRAINED_DUMMY",
 								"featureName":visFeatureName
 							}
 						}
@@ -235,7 +235,7 @@ function visualisePhyloAsSvg(document) {
 								"showMatchesAsDocument": false,
 								"targetRefName":targetRefName,
 								"relRefName":"REF_MASTER_WUHAN_HU_1",
-								"linkingAlmtName":"AL_GISAID_UNCONSTRAINED",
+								"linkingAlmtName":"AL_UNCONSTRAINED_DUMMY",
 								"featureName":visFeatureName
 							}
 						}

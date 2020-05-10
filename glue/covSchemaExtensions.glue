@@ -62,6 +62,10 @@ schema-project cov
     create field pang_representative BOOLEAN
     create field cov_glue_lineage VARCHAR
     create field cov_glue_lw_ratio DOUBLE
+    create field cov_glue_lineage_sortable VARCHAR
+    # set to non null if the 3 constituent parts are present (which they normally are)
+    # suitable for sorting / filtering
+    create field collection_date DATE
     exit
 
   table feature

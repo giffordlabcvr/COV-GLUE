@@ -144,7 +144,7 @@ _.each(ppObjs, function(ppObj) {
 	// and whether the primer is forward or reverse.
 	var fwdHitObjs;
 	var revHitObjs;
-	glue.inMode("alignment/AL_GISAID_UNCONSTRAINED/member/cov-gisaid/EPI_ISL_402125", function() {
+	glue.inMode("alignment/AL_UNCONSTRAINED_DUMMY/member/cov-gisaid/EPI_ISL_402125", function() {
 		fwdHitObjs = glue.tableToObjects(glue.command(["variation", "scan", 
 			"-r", "REF_MASTER_WUHAN_HU_1", "-f", "whole_genome", 
 			"--whereClause", "name = '"+fwdVariationName+"'", "--showMatchesAsTable"]));
@@ -192,6 +192,8 @@ _.each(ppObjs, function(ppObj) {
  	 		glue.command(["set", "field", "ref_end", 29282]);
  	 		glue.command(["set", "field", "length", 20]);
  		} else {
+ 			glue.log("SEVERE", "Forward hits for "+ppID+": "+fwdHitObjs.length);
+ 			glue.log("SEVERE", "Reverse hits for "+ppID+": "+revHitObjs.length);
  			throw new Error("Primer/probe sequence "+ppID+" not found exactly once in the Wuhan-Hu-1 reference strain");
  		}
  	});

@@ -12,6 +12,10 @@ project cov
   # import cov-gisaid individual fastas.
   import source sources/cov-gisaid
 
+  # import cov-coguk-refs sequences, these are COG-UK sequences that
+  # appear in the global reference tree but are not on GISAID
+  import source sources/cov-coguk-refs
+
   # features, master reference, feature locations.
   run file glue/covFeatures.glue
   run file glue/covMasterReference.glue
@@ -20,13 +24,22 @@ project cov
   # various other bits of sequence data and metadata
   run script glue/covSetSequenceLengths.js 
 
+  # dummy unconstrained alignment just contains master ref, required in a few
+  # situations 
+  create alignment AL_UNCONSTRAINED_DUMMY
+  alignment AL_UNCONSTRAINED_DUMMY add member cov-gisaid EPI_ISL_402125
+  alignment AL_UNCONSTRAINED_DUMMY member cov-gisaid EPI_ISL_402125 add segment 1 29903 1 29903
+
+  # various metadata-related steps.
   # have to temporarily change result format to avoid bug in table rendering library.
   console set cmd-result-format tab
   module covGisaidAcknowledgementsTextFilePopulator populate --fileName tabular/gisaid_cov2020_acknowledgement_table.txt
   module covGisaidMetadataTextFilePopulator populate --fileName tabular/gisaid_metadata.txt
   module covSeqStatsTextFilePopulator populate -f tabular/gisaidSeqCharacterStats.txt
-  
+  module covCogUkRefsTextFilePopulator populate -w "source.name = 'cov-coguk-refs'" -f tabular/cogukRefsMetadata.txt
   console unset cmd-result-format
+  
+  run script glue/covSetCollectionDate.js
 
   # deals with case where FASTA is ahead of either GISAID metadata (submission_year = null) or 
   # GISAID acknowledgements (isolate = null).
@@ -34,26 +47,29 @@ project cov
   # the reverse case is dealt with by skipMissing flags in the TextFilePopulators above.
   delete sequence -w "source.name = 'cov-gisaid' and (submission_year = null or isolate = null)"
 
-  # populate the constrained alignment.
+  # populate the constrained alignment (GISAID only)
   create alignment AL_GISAID_CONSTRAINED -r REF_MASTER_WUHAN_HU_1 
-  alignment AL_GISAID_CONSTRAINED add member -a
+  alignment AL_GISAID_CONSTRAINED add member -w "source.name = 'cov-gisaid'"
   compute alignment AL_GISAID_CONSTRAINED covMafftAligner
   
-  # now this has been populated we can count the unique SNPs
+  # now this has been populated we can count the unique SNPs (GISAID ONLY)
   run script glue/covCountUniqueSNPs.js
 
   # build the unconstrained alignment, global ref tree, and other 
   # stuff for assigning lineages.
   run file glue/covRebuildGlobalRefs.glue
 
-  # assign and store lineages for all sequences.
+  # run the rules to exclude some sequences from the variation analysis
+  run file glue/covSetAnalyseVariationFlag.glue
+
+  # assign and store lineages for all sequences where analyse_variation is true
   run script glue/covAssignAndStoreLineages.js
+
+  # sortable lineage field
+  run script glue/covSetLineageSortable.js
 
   # load the primer/probe data
   run script glue/covLoadPrimerProbes.js
-  
-  # run the rules to exclude some sequences from the variation analysis
-  run file glue/covSetAnalyseVariationFlag.glue
   
   # generate deletions
   run script glue/covGenerateGisaidDeletions.js
