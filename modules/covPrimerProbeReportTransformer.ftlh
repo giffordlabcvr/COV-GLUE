@@ -12,7 +12,7 @@ ${getResourceAsString('covPrimerProbeReportTransformer.css')?no_esc}
 </div>
 
 <div id="title">
-<h2>SARS-CoV-2 Primer/probe analysis report</h2>
+<h2>hCoV-19/SARS-CoV-2 Primer/probe analysis report</h2>
 </div>
 
 <div id="overview">
@@ -34,7 +34,7 @@ ${getResourceAsString('covPrimerProbeReportTransformer.css')?no_esc}
 <h4>Overview</h4>
 <small>
 <p>
-This bioinformatics procedure analyses a SARS-CoV-2 genomic "query sequence" to compare it 
+This bioinformatics procedure analyses an hCoV-19/SARS-CoV-2 genomic "query sequence" to compare it 
 with a range of published primer/probe designs for sequencing and diagnostics assays. 
 </p>
 <p>
