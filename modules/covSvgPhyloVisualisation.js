@@ -13,6 +13,9 @@ function setLeafSeqIDs(subtree) {
 		if(userData["name"].indexOf("cov-gisaid/") > 0) {
 			userData["treevisualiser-leafSourceName"] = "cov-gisaid";
 			userData["treevisualiser-leafSequenceID"] = userData["name"].substring(userData["name"].lastIndexOf("/")+1);
+		} else if(userData["name"].indexOf("cov-coguk-refs/") > 0) {
+			userData["treevisualiser-leafSourceName"] = "cov-coguk-refs";
+			userData["treevisualiser-leafSequenceID"] = userData["name"].substring(userData["name"].lastIndexOf("/")+1);
 		} else {
 			userData["treevisualiser-leafSourceName"] = "submitted";
 			userData["treevisualiser-leafSequenceID"] = userData["name"];
@@ -72,9 +75,9 @@ function visualisePhyloAsSvg(document) {
 	glue.logInfo("document.inputDocument", document.inputDocument);
 
 	var almtMemberObjs;
-	glue.inMode("alignment/AL_GISAID_CONSTRAINED", function() {
+	glue.inMode("alignment/AL_GISAID_UNCONSTRAINED", function() {
 		almtMemberObjs = glue.tableToObjects(glue.command(["list", "member", "-w", "sequence.include_in_ref_tree = true"]));
-		// generate a map of sequenceID to AA value for the GISAID sequences.
+		// generate a map of sequenceID to AA value for the sequences.
 		_.each(almtMemberObjs, function(almtMemberObj) {
 			var sequenceID = almtMemberObj["sequence.sequenceID"];
 			glue.inMode("member/"+almtMemberObj["sequence.source.name"]+"/"+sequenceID, function() {
