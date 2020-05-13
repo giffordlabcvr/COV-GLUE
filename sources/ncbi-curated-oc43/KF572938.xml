@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<GBSeq>
+
+    <GBSeq_locus>KF572938</GBSeq_locus>
+    <GBSeq_length>2783</GBSeq_length>
+    <GBSeq_strandedness>single</GBSeq_strandedness>
+    <GBSeq_moltype>RNA</GBSeq_moltype>
+    <GBSeq_topology>linear</GBSeq_topology>
+    <GBSeq_division>VRL</GBSeq_division>
+    <GBSeq_update-date>06-FEB-2015</GBSeq_update-date>
+    <GBSeq_create-date>06-FEB-2015</GBSeq_create-date>
+    <GBSeq_definition>Human coronavirus OC43 strain 5656_07 RNA-dependent RNA polymerase (RdRp) gene, partial cds</GBSeq_definition>
+    <GBSeq_primary-accession>KF572938</GBSeq_primary-accession>
+    <GBSeq_accession-version>KF572938.1</GBSeq_accession-version>
+    <GBSeq_other-seqids>
+      <GBSeqid>gb|KF572938.1|</GBSeqid>
+      <GBSeqid>gi|675146479</GBSeqid>
+    </GBSeq_other-seqids>
+    <GBSeq_source>Human coronavirus OC43 (HCoV-OC43)</GBSeq_source>
+    <GBSeq_organism>Human coronavirus OC43</GBSeq_organism>
+    <GBSeq_taxonomy>Viruses; Riboviria; Nidovirales; Cornidovirineae; Coronaviridae; Orthocoronavirinae; Betacoronavirus; Embecovirus</GBSeq_taxonomy>
+    <GBSeq_references>
+      <GBReference>
+        <GBReference_reference>1</GBReference_reference>
+        <GBReference_position>1..2783</GBReference_position>
+        <GBReference_authors>
+          <GBAuthor>Zhang,Y.</GBAuthor>
+          <GBAuthor>Li,J.</GBAuthor>
+          <GBAuthor>Xiao,Y.</GBAuthor>
+          <GBAuthor>Zhang,J.</GBAuthor>
+          <GBAuthor>Wang,Y.</GBAuthor>
+          <GBAuthor>Chen,L.</GBAuthor>
+          <GBAuthor>Paranhos-Baccala,G.</GBAuthor>
+          <GBAuthor>Ren,L.</GBAuthor>
+          <GBAuthor>Wang,J.</GBAuthor>
+        </GBReference_authors>
+        <GBReference_title>Genotype shift in human coronavirus OC43 and emergence of a novel genotype by natural recombination</GBReference_title>
+        <GBReference_journal>J. Infect. (2014) In press</GBReference_journal>
+        <GBReference_xref>
+          <GBXref>
+            <GBXref_dbname>doi</GBXref_dbname>
+            <GBXref_id>10.1016/j.jinf.2014.12.005</GBXref_id>
+          </GBXref>
+        </GBReference_xref>
+        <GBReference_pubmed>25530469</GBReference_pubmed>
+        <GBReference_remark>Publication Status: Available-Online prior to print</GBReference_remark>
+      </GBReference>
+      <GBReference>
+        <GBReference_reference>2</GBReference_reference>
+        <GBReference_position>1..2783</GBReference_position>
+        <GBReference_authors>
+          <GBAuthor>Zhang,Y.</GBAuthor>
+          <GBAuthor>Ren,L.</GBAuthor>
+          <GBAuthor>Wang,J.</GBAuthor>
+        </GBReference_authors>
+        <GBReference_title>Direct Submission</GBReference_title>
+        <GBReference_journal>Submitted (26-AUG-2013) Dr. Christophe Merieux Laboratory, Institute of Pathogen Biology, Chinese Academy of Medical Sciences (CAMS) &amp; Peking Union Medical College, No. 9 Dong Dan San Tiao, DongCheng District, Beijing, Beijing 100730, P.R. China</GBReference_journal>
+      </GBReference>
+    </GBSeq_references>
+    <GBSeq_feature-table>
+      <GBFeature>
+        <GBFeature_key>source</GBFeature_key>
+        <GBFeature_location>1..2783</GBFeature_location>
+        <GBFeature_intervals>
+          <GBInterval>
+            <GBInterval_from>1</GBInterval_from>
+            <GBInterval_to>2783</GBInterval_to>
+            <GBInterval_accession>KF572938.1</GBInterval_accession>
+          </GBInterval>
+        </GBFeature_intervals>
+        <GBFeature_quals>
+          <GBQualifier>
+            <GBQualifier_name>organism</GBQualifier_name>
+            <GBQualifier_value>Human coronavirus OC43</GBQualifier_value>
+          </GBQualifier>
+          <GBQualifier>
+            <GBQualifier_name>mol_type</GBQualifier_name>
+            <GBQualifier_value>genomic RNA</GBQualifier_value>
+          </GBQualifier>
+          <GBQualifier>
+            <GBQualifier_name>strain</GBQualifier_name>
+            <GBQualifier_value>5656_07</GBQualifier_value>
+          </GBQualifier>
+          <GBQualifier>
+            <GBQualifier_name>isolation_source</GBQualifier_name>
+            <GBQualifier_value>nasal and throat swab</GBQualifier_value>
+          </GBQualifier>
+          <GBQualifier>
+            <GBQualifier_name>host</GBQualifier_name>
+            <GBQualifier_value>Homo sapiens</GBQualifier_value>
+          </GBQualifier>
+          <GBQualifier>
+            <GBQualifier_name>db_xref</GBQualifier_name>
+            <GBQualifier_value>taxon:31631</GBQualifier_value>
+          </GBQualifier>
+          <GBQualifier>
+            <GBQualifier_name>country</GBQualifier_name>
+            <GBQualifier_value>China: Beijing</GBQualifier_value>
+          </GBQualifier>
+          <GBQualifier>
+            <GBQualifier_name>collection_date</GBQualifier_name>
+            <GBQualifier_value>Jul-2007</GBQualifier_value>
+          </GBQualifier>
+        </GBFeature_quals>
+      </GBFeature>
+      <GBFeature>
+        <GBFeature_key>gene</GBFeature_key>
+        <GBFeature_location>&lt;1..&gt;2783</GBFeature_location>
+        <GBFeature_intervals>
+          <GBInterval>
+            <GBInterval_from>1</GBInterval_from>
+            <GBInterval_to>2783</GBInterval_to>
+            <GBInterval_accession>KF572938.1</GBInterval_accession>
+          </GBInterval>
+        </GBFeature_intervals>
+        <GBFeature_partial5 value="true"/>
+        <GBFeature_partial3 value="true"/>
+        <GBFeature_quals>
+          <GBQualifier>
+            <GBQualifier_name>gene</GBQualifier_name>
+            <GBQualifier_value>RdRp</GBQualifier_value>
+          </GBQualifier>
+        </GBFeature_quals>
+      </GBFeature>
+      <GBFeature>
+        <GBFeature_key>CDS</GBFeature_key>
+        <GBFeature_location>join(&lt;1..24,24..&gt;2783)</GBFeature_location>
+        <GBFeature_intervals>
+          <GBInterval>
+            <GBInterval_from>1</GBInterval_from>
+            <GBInterval_to>24</GBInterval_to>
+            <GBInterval_accession>KF572938.1</GBInterval_accession>
+          </GBInterval>
+          <GBInterval>
+            <GBInterval_from>24</GBInterval_from>
+            <GBInterval_to>2783</GBInterval_to>
+            <GBInterval_accession>KF572938.1</GBInterval_accession>
+          </GBInterval>
+        </GBFeature_intervals>
+        <GBFeature_operator>join</GBFeature_operator>
+        <GBFeature_partial5 value="true"/>
+        <GBFeature_partial3 value="true"/>
+        <GBFeature_quals>
+          <GBQualifier>
+            <GBQualifier_name>gene</GBQualifier_name>
+            <GBQualifier_value>RdRp</GBQualifier_value>
+          </GBQualifier>
+          <GBQualifier>
+            <GBQualifier_name>ribosomal_slippage</GBQualifier_name>
+          </GBQualifier>
+          <GBQualifier>
+            <GBQualifier_name>note</GBQualifier_name>
+            <GBQualifier_value>translated via a 1 ribosomal frameshift</GBQualifier_value>
+          </GBQualifier>
+          <GBQualifier>
+            <GBQualifier_name>codon_start</GBQualifier_name>
+            <GBQualifier_value>1</GBQualifier_value>
+          </GBQualifier>
+          <GBQualifier>
+            <GBQualifier_name>transl_table</GBQualifier_name>
+            <GBQualifier_value>1</GBQualifier_value>
+          </GBQualifier>
+          <GBQualifier>
+            <GBQualifier_name>product</GBQualifier_name>
+            <GBQualifier_value>RNA-dependent RNA polymerase</GBQualifier_value>
+          </GBQualifier>
+          <GBQualifier>
+            <GBQualifier_name>protein_id</GBQualifier_name>
+            <GBQualifier_value>AIL49618.1</GBQualifier_value>
+          </GBQualifier>
+          <GBQualifier>
+            <GBQualifier_name>translation</GBQualifier_name>
+            <GBQualifier_value>SKDTNFLNRVRGASVDARLVPCASGLSTDVQLRAFDIYNASVAGIGLHLKVNCCRFQRVDENGDKLDQFFVVKRTDLTIYNREMKCYERVKDCKFVAEHDFFTFDVEGSRVPHIVRKDLTKYTMLDLCYALRHFDRNDCMLLCDILSIYAGCEQSYFTKKDWYDFVENPDIINVYKKLGPIFNRALVSATEFADKLVEVGLVGVLTLDNQDLNGKWYDFGDYVIAAPGCGVAIADSYYSYIMPMLTMCHALDCELYVNNAYRLFDLVQYDFTDYKLELFNKYFKHWSMPYHPNTVDCQDDRCIIHCANFNILFSMGLPNTCFGPLVRQIFVDGVPFVVSIGYHYKELGIVMNMDVDTHRYRLSLKDLLLYAADPALHVASASALYDLRTCCFSVAAITSGVKFQTVKPGNFNQDFYDFVLSKGLLKEGSSVDLKHFFFTQDGNAAITDYNYYKYNLPTMVDIKQLLFVLEVVYKYFEIYDGGCIPASQVIVNNYDKSAGYPFNKFGKARLYYEALSFEEQDEIYAYTKRNVLPTLTQMNLKYAISAKNRARTVAGVSILSTMTGRMFHQKCLKSIAATRGVPVVIGTTKFYGGWDDMLRRLIKDVDNPVLMGWDYPKCDRAMPNILRIVSSLVLARKHETCCSQSDRFYRLANECAQVLSEIVMCGGCYYVKPGGTSSGDATTAFANSVFNICQAVSANVCALMSCNGNKIEDLSIRALQKRLYSHVYRSDKVDSTFVTEYYEFLNKHFSMMILSDDGVVCYNSDYASKGYIANISAFQQVLYYQNNVFMSESKCWVEHDINNGPHEFCSQHTMLVKMDGDDVYLPYPNPSRILGAGCFVDDLLKTDSVLLIERFVSLAIDAYPLVYHENEEYQKVFRVYLAYIKKLYNDLGNQILDSYSVILSTCDGQKFTDESFYKNMYLRSAVMQ</GBQualifier_value>
+          </GBQualifier>
+        </GBFeature_quals>
+      </GBFeature>
+    </GBSeq_feature-table>
+    <GBSeq_sequence>tcaaaagatactaattttttaaacgggttcggggtgcgagtgtagatgcccgtctcgtaccctgcgccagtggtttatctactgatgtacaattaagggcatttgatatttacaatgctagtgttgctggcattggtttacatttaaaagttaattgttgccgttttcagcgtgttgatgagaacggtgataaattagatcagttctttgttgttaagaggacagatctgactatatataatagagagatgaaatgctatgagcgtgtaaaagattgtaagtttgtggctgaacacgatttctttacatttgatgtagaaggtagtcgtgtgccacacattgtacgcaaggatttaacaaagtatactatgttggatctttgctatgcattgcgacattttgatcgcaatgattgcatgctgctttgtgacattctctctatatatgctggttgtgaacaatcctattttactaagaaggattggtatgattttgttgaaaatcctgatattattaatgtgtataaaaagctaggacctatttttaatagagccctagttagcgctactgagtttgcggacaaattggtggaggtaggcttagtaggcgttttaacacttgataatcaagatttaaatggtaaatggtatgattttggtgactatgttattgcagccccaggatgtggtgttgctatagcagattcttattattcttatatcatgcctatgctgaccatgtgtcatgcattggattgcgaattgtatgtgaataatgcttatagactatttgatcttgtacagtatgattttactgattacaagcttgaattgtttaataagtattttaagcactggagtatgccatatcatcctaacacggttgattgtcaggatgatcggtgtattatacattgtgctaattttaacatactttttagtatgggtttacctaatacatgttttgggcctcttgttaggcaaatttttgtggatggtgtgccttttgttgtttcaattggctaccattataaagaacttggtattgtgatgaatatggatgtggatacacatcgttatcgcttgtctttaaaagacttgcttttatatgctgctgatccagctttgcatgtagcttctgctagtgcattgtatgatttacgcacttgctgttttagtgttgccgctataacaagcggtgtaaaatttcaaacagttaaacctggtaattttaatcaggatttttatgattttgttttaagtaaaggcctgcttaaagagggtagctcagttgatctgaagcactttttctttacacaggatggtaatgctgctattactgattataattattataagtataatttgcccaccatggtggacattaagcagttgttgtttgttttggaagttgtttataagtattttgagatttatgatggtggttgtataccggcatcacaagtcattgttaataattatgataagagtgctggctatccatttaacaaatttggaaaagccaggctctattatgaagcattatcatttgaggaacaggatgaaatttacgcttatactaagcgtaatgtcctgccaacacttactcaaatgaatttgaaatatgctattagtgctaagaatagagcccgcactgttgctggtgtttccatacttagtactatgactggcagaatgtttcatcaaaaatgtttgaaaagtatagcagctacacgtggtgttcctgtagttataggcaccactaaattttatggtggctgggatgatatgttacgccgccttattaaagatgtcgacaatcctgtacttatgggttgggattatcctaagtgtgatcgtgctatgccaaacatactacgtattgttagtagtttggtattagcccgaaaacatgagacatgttgttcgcaaagcgataggttttatcgacttgcgaatgaatgcgcacaagttttgagtgaaattgttatgtgtggtggctgttattatgttaagcctggtggcactagtagtggtgatgcaactactgcttttgctaattcagtctttaacatatgtcaagctgtttcagccaatgtatgtgccttaatgtcatgcaatggcaataagattgaagatcttagtatacgtgctcttcagaagcgcttatactcacatgtgtatagaagtgataaggttgattcaacctttgtcacagaatattatgaatttttaaataagcattttagtatgatgattttgagtgatgatggggttgtgtgttataattctgattatgcgtccaaagggtatattgctaatataagtgcctttcaacaggtattatattatcaaaataacgtttttatgtcagaatccaaatgttgggttgaacatgacataaataatggacctcatgaattttgttcacaacacacaatgcttgtaaagatggatggtgacgatgtctaccttccatatcctaatcctagtcgtatattaggagctggatgttttgtagatgatttgttaaagactgatagtgttcttttaatagaacgatttgtaagtcttgcaatagatgcttatccacttgtgtatcatgaaaatgaagaataccaaaaggtttttcgtgtttatttggcgtatataaagaagttgtacaatgacctgggtaatcagatcttggatagctacagtgttattttaagtacttgtgatggacaaaagttcactgatgagtccttttacaagaacatgtatttaagaagtgcagtcatgcag</GBSeq_sequence>
+  </GBSeq>

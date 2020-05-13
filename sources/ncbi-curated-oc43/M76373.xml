@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<GBSeq>
+
+    <GBSeq_locus>HOBHEGA</GBSeq_locus>
+    <GBSeq_length>1304</GBSeq_length>
+    <GBSeq_strandedness>single</GBSeq_strandedness>
+    <GBSeq_moltype>RNA</GBSeq_moltype>
+    <GBSeq_topology>linear</GBSeq_topology>
+    <GBSeq_division>VRL</GBSeq_division>
+    <GBSeq_update-date>03-MAY-2002</GBSeq_update-date>
+    <GBSeq_create-date>02-AUG-1993</GBSeq_create-date>
+    <GBSeq_definition>Human coronavirus OC43 hemagglutinin-esterase (HE) gene, complete cds</GBSeq_definition>
+    <GBSeq_primary-accession>M76373</GBSeq_primary-accession>
+    <GBSeq_accession-version>M76373.1</GBSeq_accession-version>
+    <GBSeq_other-seqids>
+      <GBSeqid>gb|M76373.1|HOBHEGA</GBSeqid>
+      <GBSeqid>gi|329570</GBSeqid>
+    </GBSeq_other-seqids>
+    <GBSeq_source>Human coronavirus OC43 (HCoV-OC43)</GBSeq_source>
+    <GBSeq_organism>Human coronavirus OC43</GBSeq_organism>
+    <GBSeq_taxonomy>Viruses; Riboviria; Nidovirales; Cornidovirineae; Coronaviridae; Orthocoronavirinae; Betacoronavirus; Embecovirus</GBSeq_taxonomy>
+    <GBSeq_references>
+      <GBReference>
+        <GBReference_reference>1</GBReference_reference>
+        <GBReference_position>1..1304</GBReference_position>
+        <GBReference_authors>
+          <GBAuthor>Zhang,X.</GBAuthor>
+          <GBAuthor>Kousoulas,K.G.</GBAuthor>
+          <GBAuthor>Storz,J.</GBAuthor>
+        </GBReference_authors>
+        <GBReference_title>The hemagglutinin/esterase glycoproteins of bovine coronaviruses: sequence and functional comparison between virulent and avirulent strains</GBReference_title>
+        <GBReference_journal>Unpublished</GBReference_journal>
+      </GBReference>
+      <GBReference>
+        <GBReference_reference>2</GBReference_reference>
+        <GBReference_position>1..1304</GBReference_position>
+        <GBReference_authors>
+          <GBAuthor>Zhang,X.M.</GBAuthor>
+          <GBAuthor>Kousoulas,K.G.</GBAuthor>
+          <GBAuthor>Storz,J.</GBAuthor>
+        </GBReference_authors>
+        <GBReference_title>The hemagglutinin/esterase gene of human coronavirus strain OC43: phylogenetic relationships to bovine and murine coronaviruses and influenza C virus</GBReference_title>
+        <GBReference_journal>Virology 186 (1), 318-323 (1992)</GBReference_journal>
+        <GBReference_pubmed>1727608</GBReference_pubmed>
+      </GBReference>
+    </GBSeq_references>
+    <GBSeq_feature-table>
+      <GBFeature>
+        <GBFeature_key>source</GBFeature_key>
+        <GBFeature_location>1..1304</GBFeature_location>
+        <GBFeature_intervals>
+          <GBInterval>
+            <GBInterval_from>1</GBInterval_from>
+            <GBInterval_to>1304</GBInterval_to>
+            <GBInterval_accession>M76373.1</GBInterval_accession>
+          </GBInterval>
+        </GBFeature_intervals>
+        <GBFeature_quals>
+          <GBQualifier>
+            <GBQualifier_name>organism</GBQualifier_name>
+            <GBQualifier_value>Human coronavirus OC43</GBQualifier_value>
+          </GBQualifier>
+          <GBQualifier>
+            <GBQualifier_name>mol_type</GBQualifier_name>
+            <GBQualifier_value>genomic RNA</GBQualifier_value>
+          </GBQualifier>
+          <GBQualifier>
+            <GBQualifier_name>strain</GBQualifier_name>
+            <GBQualifier_value>OC43</GBQualifier_value>
+          </GBQualifier>
+          <GBQualifier>
+            <GBQualifier_name>db_xref</GBQualifier_name>
+            <GBQualifier_value>taxon:31631</GBQualifier_value>
+          </GBQualifier>
+        </GBFeature_quals>
+      </GBFeature>
+      <GBFeature>
+        <GBFeature_key>gene</GBFeature_key>
+        <GBFeature_location>16..1290</GBFeature_location>
+        <GBFeature_intervals>
+          <GBInterval>
+            <GBInterval_from>16</GBInterval_from>
+            <GBInterval_to>1290</GBInterval_to>
+            <GBInterval_accession>M76373.1</GBInterval_accession>
+          </GBInterval>
+        </GBFeature_intervals>
+        <GBFeature_quals>
+          <GBQualifier>
+            <GBQualifier_name>gene</GBQualifier_name>
+            <GBQualifier_value>HE</GBQualifier_value>
+          </GBQualifier>
+        </GBFeature_quals>
+      </GBFeature>
+      <GBFeature>
+        <GBFeature_key>CDS</GBFeature_key>
+        <GBFeature_location>16..1290</GBFeature_location>
+        <GBFeature_intervals>
+          <GBInterval>
+            <GBInterval_from>16</GBInterval_from>
+            <GBInterval_to>1290</GBInterval_to>
+            <GBInterval_accession>M76373.1</GBInterval_accession>
+          </GBInterval>
+        </GBFeature_intervals>
+        <GBFeature_quals>
+          <GBQualifier>
+            <GBQualifier_name>gene</GBQualifier_name>
+            <GBQualifier_value>HE</GBQualifier_value>
+          </GBQualifier>
+          <GBQualifier>
+            <GBQualifier_name>codon_start</GBQualifier_name>
+            <GBQualifier_value>1</GBQualifier_value>
+          </GBQualifier>
+          <GBQualifier>
+            <GBQualifier_name>transl_table</GBQualifier_name>
+            <GBQualifier_value>1</GBQualifier_value>
+          </GBQualifier>
+          <GBQualifier>
+            <GBQualifier_name>product</GBQualifier_name>
+            <GBQualifier_value>hemagglutinin-esterase</GBQualifier_value>
+          </GBQualifier>
+          <GBQualifier>
+            <GBQualifier_name>protein_id</GBQualifier_name>
+            <GBQualifier_value>AAA45460.1</GBQualifier_value>
+          </GBQualifier>
+          <GBQualifier>
+            <GBQualifier_name>translation</GBQualifier_name>
+            <GBQualifier_value>MFLLPRFILVSCIIGSLGFYNPPTNVVSHVNGDWFLFGDSRSDCNHIVNINPHNYSYMDLNPVLCDSGKISSKAGNSIFRSFHFTDFYNYTGEGQQIIFYEGVNFTPYHAFKCNRSGSNDIWMQNKGLFYTQVYKNMAVYRSLTFVNVPYVYNGSAQSTALCKSGSLVLNNPAYIAPQANSGDYYYKVEADFYLSGCDEYIVPLCIFNGKFLSNTKYYDDSQYYFNKDTGVIYGLNSTETITTGFDLNCYYLVLPSGNYLAISNELLLTVPTKAICLNKRKDFTPVQVVDSRWNNARQSDNMTAVACQPPYCYFRNSTTNYVGVYDINHGDAGFTSILSGLLYNSPCFSQQGVFRYDNVSSVWPLYPYGRCPTAADINNPDLPICVYDPLPVILLGILLGVAVIIIVVLLLYFMVDNGTRLHDA</GBQualifier_value>
+          </GBQualifier>
+        </GBFeature_quals>
+      </GBFeature>
+    </GBSeq_feature-table>
+    <GBSeq_sequence>ctaaactcagtgaaaatgtttttgcttcctagatttattctagttagctgcataattggtagcttaggtttttacaaccctcctaccaatgttgtttcgcatgtaaatggagattggtttttatttggtgacagtcgttcagattgtaatcatattgttaatatcaacccccataattattcttatatggaccttaatcctgttctgtgtgattctggtaaaatatcatctaaagctggcaactccatttttaggagttttcactttaccgatttttataattacacaggcgaaggtcaacaaattattttttatgagggtgttaattttacgccttatcatgcctttaaatgcaaccgttctggtagtaatgatatttggatgcagaataaaggcttgttttatactcaggtttataagaatatggctgtgtatcgcagccttacttttgttaatgtaccatatgtttataatggctctgcacaatctacagctctttgtaaatctggtagtttagtccttaataaccctgcatatatagctcctcaagctaactctggggattattattataaggttgaagctgatttttatttgtcaggttgtgacgagtatatcgtaccactttgtatttttaacggcaagtttttgtcgaatacaaagtattatgatgatagtcaatattattttaataaagacactggtgttatttatggtctcaattctacagaaaccattaccactggttttgatcttaattgttattatttagttttaccctctggtaattatttagccatttcaaatgagctattgttaactgttcctacgaaagcaatctgtcttaataagcgtaaggattttacgcctgtacaggttgttgattcgcggtggaacaatgccaggcagtctgataacatgacggcggttgcttgtcaacctccgtactgttattttcgtaattctactaccaactatgttggtgtttatgatattaatcatggagatgctggttttactagcatacttagtggtttgttatataattcaccttgtttttcgcagcaaggcgtttttaggtatgataatgttagcagtgtctggcctctctacccctatggcagatgtcccactgctgctgatattaataaccctgatttacccatttgtgtgtatgatccgctaccagttattttgcttggcattcttttgggcgttgcggtcataattattgtagttttgttgttatattttatggtggataatggtactaggctgcatgatgcttagaccataatctaaac</GBSeq_sequence>
+  </GBSeq>

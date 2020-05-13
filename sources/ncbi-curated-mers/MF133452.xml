@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<GBSeq>
+
+    <GBSeq_locus>MF133452</GBSeq_locus>
+    <GBSeq_length>270</GBSeq_length>
+    <GBSeq_strandedness>single</GBSeq_strandedness>
+    <GBSeq_moltype>RNA</GBSeq_moltype>
+    <GBSeq_topology>linear</GBSeq_topology>
+    <GBSeq_division>VRL</GBSeq_division>
+    <GBSeq_update-date>10-APR-2018</GBSeq_update-date>
+    <GBSeq_create-date>10-APR-2018</GBSeq_create-date>
+    <GBSeq_definition>UNVERIFIED: Middle East respiratory syndrome-related coronavirus isolate 20 genomic sequence</GBSeq_definition>
+    <GBSeq_primary-accession>MF133452</GBSeq_primary-accession>
+    <GBSeq_accession-version>MF133452.1</GBSeq_accession-version>
+    <GBSeq_other-seqids>
+      <GBSeqid>gb|MF133452.1|</GBSeqid>
+      <GBSeqid>gi|1374491457</GBSeqid>
+    </GBSeq_other-seqids>
+    <GBSeq_keywords>
+      <GBKeyword>UNVERIFIED</GBKeyword>
+      <GBKeyword>UNVERIFIED_ORGANISM</GBKeyword>
+    </GBSeq_keywords>
+    <GBSeq_source>Middle East respiratory syndrome-related coronavirus (MERS-CoV)</GBSeq_source>
+    <GBSeq_organism>Middle East respiratory syndrome-related coronavirus</GBSeq_organism>
+    <GBSeq_taxonomy>Viruses; Riboviria; Nidovirales; Cornidovirineae; Coronaviridae; Orthocoronavirinae; Betacoronavirus; Merbecovirus</GBSeq_taxonomy>
+    <GBSeq_references>
+      <GBReference>
+        <GBReference_reference>1</GBReference_reference>
+        <GBReference_position>1..270</GBReference_position>
+        <GBReference_authors>
+          <GBAuthor>Ibrahim,H.S.</GBAuthor>
+          <GBAuthor>Kafi,S.K.</GBAuthor>
+        </GBReference_authors>
+        <GBReference_title>Detection,isolation and sequence of middle east respiratory syndrome (MERS-CoV) among Sudanese patiens</GBReference_title>
+        <GBReference_journal>Unpublished</GBReference_journal>
+      </GBReference>
+      <GBReference>
+        <GBReference_reference>2</GBReference_reference>
+        <GBReference_position>1..270</GBReference_position>
+        <GBReference_authors>
+          <GBAuthor>Ibrahim,H.S.</GBAuthor>
+          <GBAuthor>Kafi,S.K.</GBAuthor>
+        </GBReference_authors>
+        <GBReference_title>Direct Submission</GBReference_title>
+        <GBReference_journal>Submitted (28-APR-2017) Research Lab, Microbiology, The National Ribat University, Buri, Khartoum 11111, Sudan</GBReference_journal>
+      </GBReference>
+    </GBSeq_references>
+    <GBSeq_comment>GenBank staff is unable to verify source organism and sequence and/or annotation provided by the submitter.; ; ##Assembly-Data-START## ; Sequencing Technology :: Sanger dideoxy sequencing ; ##Assembly-Data-END##</GBSeq_comment>
+    <GBSeq_feature-table>
+      <GBFeature>
+        <GBFeature_key>source</GBFeature_key>
+        <GBFeature_location>1..270</GBFeature_location>
+        <GBFeature_intervals>
+          <GBInterval>
+            <GBInterval_from>1</GBInterval_from>
+            <GBInterval_to>270</GBInterval_to>
+            <GBInterval_accession>MF133452.1</GBInterval_accession>
+          </GBInterval>
+        </GBFeature_intervals>
+        <GBFeature_quals>
+          <GBQualifier>
+            <GBQualifier_name>organism</GBQualifier_name>
+            <GBQualifier_value>Middle East respiratory syndrome-related coronavirus</GBQualifier_value>
+          </GBQualifier>
+          <GBQualifier>
+            <GBQualifier_name>mol_type</GBQualifier_name>
+            <GBQualifier_value>genomic RNA</GBQualifier_value>
+          </GBQualifier>
+          <GBQualifier>
+            <GBQualifier_name>isolate</GBQualifier_name>
+            <GBQualifier_value>20</GBQualifier_value>
+          </GBQualifier>
+          <GBQualifier>
+            <GBQualifier_name>isolation_source</GBQualifier_name>
+            <GBQualifier_value>sputum</GBQualifier_value>
+          </GBQualifier>
+          <GBQualifier>
+            <GBQualifier_name>db_xref</GBQualifier_name>
+            <GBQualifier_value>taxon:1335626</GBQualifier_value>
+          </GBQualifier>
+          <GBQualifier>
+            <GBQualifier_name>country</GBQualifier_name>
+            <GBQualifier_value>Sudan</GBQualifier_value>
+          </GBQualifier>
+          <GBQualifier>
+            <GBQualifier_name>collection_date</GBQualifier_name>
+            <GBQualifier_value>12-Jul-2015</GBQualifier_value>
+          </GBQualifier>
+        </GBFeature_quals>
+      </GBFeature>
+    </GBSeq_feature-table>
+    <GBSeq_sequence>gcaaattgtaattattgccctcgatcaccccgatatcatactggcgtacaaaatcagcagttattagatgttgatgagatcgtcgctaaagcaaaaattgcgaaagcacgtggtgcagggcgtttctgtatgggtcccgtgtagaggcaaaggcaaaaaactctgcggaggaaatttcttgtaatattactcttgccattcaccccgacgatttgaattttttgattatttttcccgttcaaattcatttatttccctcagcctcagttt</GBSeq_sequence>
+  </GBSeq>

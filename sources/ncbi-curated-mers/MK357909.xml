@@ -18,7 +18,7 @@
     </GBSeq_other-seqids>
     <GBSeq_source>Middle East respiratory syndrome-related coronavirus (MERS-CoV)</GBSeq_source>
     <GBSeq_organism>Middle East respiratory syndrome-related coronavirus</GBSeq_organism>
-    <GBSeq_taxonomy>Viruses; ssRNA viruses; ssRNA positive-strand viruses, no DNA stage; Nidovirales; Cornidovirineae; Coronaviridae; Orthocoronavirinae; Betacoronavirus</GBSeq_taxonomy>
+    <GBSeq_taxonomy>Viruses; Riboviria; Nidovirales; Cornidovirineae; Coronaviridae; Orthocoronavirinae; Betacoronavirus; Merbecovirus</GBSeq_taxonomy>
     <GBSeq_references>
       <GBReference>
         <GBReference_reference>1</GBReference_reference>

@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<GBSeq>
+
+    <GBSeq_locus>KT001383</GBSeq_locus>
+    <GBSeq_length>247</GBSeq_length>
+    <GBSeq_strandedness>single</GBSeq_strandedness>
+    <GBSeq_moltype>RNA</GBSeq_moltype>
+    <GBSeq_topology>linear</GBSeq_topology>
+    <GBSeq_division>VRL</GBSeq_division>
+    <GBSeq_update-date>08-JUN-2015</GBSeq_update-date>
+    <GBSeq_create-date>08-JUN-2015</GBSeq_create-date>
+    <GBSeq_definition>Middle East respiratory syndrome coronavirus strain MERS-CoV/KOR/KNIH/002_05_2015 N protein (N) gene, partial cds</GBSeq_definition>
+    <GBSeq_primary-accession>KT001383</GBSeq_primary-accession>
+    <GBSeq_accession-version>KT001383.1</GBSeq_accession-version>
+    <GBSeq_other-seqids>
+      <GBSeqid>gb|KT001383.1|</GBSeqid>
+      <GBSeqid>gi|827342870</GBSeqid>
+    </GBSeq_other-seqids>
+    <GBSeq_source>Middle East respiratory syndrome-related coronavirus (MERS-CoV)</GBSeq_source>
+    <GBSeq_organism>Middle East respiratory syndrome-related coronavirus</GBSeq_organism>
+    <GBSeq_taxonomy>Viruses; Riboviria; Nidovirales; Cornidovirineae; Coronaviridae; Orthocoronavirinae; Betacoronavirus; Merbecovirus</GBSeq_taxonomy>
+    <GBSeq_references>
+      <GBReference>
+        <GBReference_reference>1</GBReference_reference>
+        <GBReference_position>1..247</GBReference_position>
+        <GBReference_authors>
+          <GBAuthor>Yang,J.-S.</GBAuthor>
+          <GBAuthor>Cheong,H.-M.</GBAuthor>
+          <GBAuthor>Kim,Y.-J.</GBAuthor>
+          <GBAuthor>Kang,H.J.</GBAuthor>
+          <GBAuthor>Park,S.H.</GBAuthor>
+          <GBAuthor>Han,Y.W.</GBAuthor>
+          <GBAuthor>Lee,H.S.</GBAuthor>
+          <GBAuthor>Kim,J.A.</GBAuthor>
+          <GBAuthor>Kim,H.</GBAuthor>
+          <GBAuthor>Kim,A.-R.</GBAuthor>
+          <GBAuthor>Heo,D.R.</GBAuthor>
+          <GBAuthor>Kim,S.J.</GBAuthor>
+          <GBAuthor>Jung,H.-D.</GBAuthor>
+          <GBAuthor>Nam,J.-G.</GBAuthor>
+          <GBAuthor>Kim,S.S.</GBAuthor>
+        </GBReference_authors>
+        <GBReference_title>The first imported Middle east respiratory syndrome coronavirus cases in South Korea</GBReference_title>
+        <GBReference_journal>Unpublished</GBReference_journal>
+      </GBReference>
+      <GBReference>
+        <GBReference_reference>2</GBReference_reference>
+        <GBReference_position>1..247</GBReference_position>
+        <GBReference_authors>
+          <GBAuthor>Yang,J.-S.</GBAuthor>
+          <GBAuthor>Cheong,H.-M.</GBAuthor>
+          <GBAuthor>Kim,Y.-J.</GBAuthor>
+          <GBAuthor>Kang,H.J.</GBAuthor>
+          <GBAuthor>Park,S.H.</GBAuthor>
+          <GBAuthor>Han,Y.W.</GBAuthor>
+          <GBAuthor>Lee,H.S.</GBAuthor>
+          <GBAuthor>Kim,J.A.</GBAuthor>
+          <GBAuthor>Kim,H.</GBAuthor>
+          <GBAuthor>Kim,A.-R.</GBAuthor>
+          <GBAuthor>Heo,D.R.</GBAuthor>
+          <GBAuthor>Kim,S.J.</GBAuthor>
+          <GBAuthor>Jung,H.-D.</GBAuthor>
+          <GBAuthor>Nam,J.-G.</GBAuthor>
+          <GBAuthor>Kim,S.S.</GBAuthor>
+        </GBReference_authors>
+        <GBReference_title>Direct Submission</GBReference_title>
+        <GBReference_journal>Submitted (01-JUN-2015) Division of Respiratory Viruses, Korea National Institute of Health, KCDC, Osong Health Technology Administration Complex, 187 Osongsaengmyeong2(i)-ro, Osong-eup, Heungdeok-gu, Cheongju-si 363-951, Korea</GBReference_journal>
+      </GBReference>
+    </GBSeq_references>
+    <GBSeq_comment>##Assembly-Data-START## ; Sequencing Technology :: Sanger dideoxy sequencing ; ##Assembly-Data-END##</GBSeq_comment>
+    <GBSeq_feature-table>
+      <GBFeature>
+        <GBFeature_key>source</GBFeature_key>
+        <GBFeature_location>1..247</GBFeature_location>
+        <GBFeature_intervals>
+          <GBInterval>
+            <GBInterval_from>1</GBInterval_from>
+            <GBInterval_to>247</GBInterval_to>
+            <GBInterval_accession>KT001383.1</GBInterval_accession>
+          </GBInterval>
+        </GBFeature_intervals>
+        <GBFeature_quals>
+          <GBQualifier>
+            <GBQualifier_name>organism</GBQualifier_name>
+            <GBQualifier_value>Middle East respiratory syndrome-related coronavirus</GBQualifier_value>
+          </GBQualifier>
+          <GBQualifier>
+            <GBQualifier_name>mol_type</GBQualifier_name>
+            <GBQualifier_value>genomic RNA</GBQualifier_value>
+          </GBQualifier>
+          <GBQualifier>
+            <GBQualifier_name>strain</GBQualifier_name>
+            <GBQualifier_value>MERS-CoV/KOR/KNIH/002_05_2015</GBQualifier_value>
+          </GBQualifier>
+          <GBQualifier>
+            <GBQualifier_name>isolation_source</GBQualifier_name>
+            <GBQualifier_value>sputum</GBQualifier_value>
+          </GBQualifier>
+          <GBQualifier>
+            <GBQualifier_name>host</GBQualifier_name>
+            <GBQualifier_value>Homo sapiens</GBQualifier_value>
+          </GBQualifier>
+          <GBQualifier>
+            <GBQualifier_name>db_xref</GBQualifier_name>
+            <GBQualifier_value>taxon:1335626</GBQualifier_value>
+          </GBQualifier>
+          <GBQualifier>
+            <GBQualifier_name>country</GBQualifier_name>
+            <GBQualifier_value>South Korea</GBQualifier_value>
+          </GBQualifier>
+          <GBQualifier>
+            <GBQualifier_name>collection_date</GBQualifier_name>
+            <GBQualifier_value>20-May-2015</GBQualifier_value>
+          </GBQualifier>
+        </GBFeature_quals>
+      </GBFeature>
+      <GBFeature>
+        <GBFeature_key>gene</GBFeature_key>
+        <GBFeature_location>&lt;1..210</GBFeature_location>
+        <GBFeature_intervals>
+          <GBInterval>
+            <GBInterval_from>1</GBInterval_from>
+            <GBInterval_to>210</GBInterval_to>
+            <GBInterval_accession>KT001383.1</GBInterval_accession>
+          </GBInterval>
+        </GBFeature_intervals>
+        <GBFeature_partial5 value="true"/>
+        <GBFeature_quals>
+          <GBQualifier>
+            <GBQualifier_name>gene</GBQualifier_name>
+            <GBQualifier_value>N</GBQualifier_value>
+          </GBQualifier>
+        </GBFeature_quals>
+      </GBFeature>
+      <GBFeature>
+        <GBFeature_key>CDS</GBFeature_key>
+        <GBFeature_location>&lt;1..210</GBFeature_location>
+        <GBFeature_intervals>
+          <GBInterval>
+            <GBInterval_from>1</GBInterval_from>
+            <GBInterval_to>210</GBInterval_to>
+            <GBInterval_accession>KT001383.1</GBInterval_accession>
+          </GBInterval>
+        </GBFeature_intervals>
+        <GBFeature_partial5 value="true"/>
+        <GBFeature_quals>
+          <GBQualifier>
+            <GBQualifier_name>gene</GBQualifier_name>
+            <GBQualifier_value>N</GBQualifier_value>
+          </GBQualifier>
+          <GBQualifier>
+            <GBQualifier_name>codon_start</GBQualifier_name>
+            <GBQualifier_value>1</GBQualifier_value>
+          </GBQualifier>
+          <GBQualifier>
+            <GBQualifier_name>transl_table</GBQualifier_name>
+            <GBQualifier_value>1</GBQualifier_value>
+          </GBQualifier>
+          <GBQualifier>
+            <GBQualifier_name>product</GBQualifier_name>
+            <GBQualifier_value>N protein</GBQualifier_value>
+          </GBQualifier>
+          <GBQualifier>
+            <GBQualifier_name>protein_id</GBQualifier_name>
+            <GBQualifier_value>AKJ75496.1</GBQualifier_value>
+          </GBQualifier>
+          <GBQualifier>
+            <GBQualifier_name>translation</GBQualifier_name>
+            <GBQualifier_value>NKWLELLEQNIDAYKTFPKKEKKQKAPKEESTDQMSEPPKEQRVQGSITQRTRTRPSVQPGPMIDVNTD</GBQualifier_value>
+          </GBQualifier>
+        </GBFeature_quals>
+      </GBFeature>
+    </GBSeq_feature-table>
+    <GBSeq_sequence>aataagtggttggagcttcttgagcaaaatattgatgcctacaaaaccttccctaagaaggaaaagaaacaaaaggcaccaaaagaagaatcaacagaccaaatgtctgaacctccaaaggagcagcgtgtgcaaggtagcatcactcagcgcactcgcacccgtccaagtgttcagcctggtccaatgattgatgttaacactgattagtgtcactcaaagtaacaagatcgcggcaatcgtttgt</GBSeq_sequence>
+  </GBSeq>

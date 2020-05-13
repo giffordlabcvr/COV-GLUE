@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<GBSeq>
+
+    <GBSeq_locus>AB695079</GBSeq_locus>
+    <GBSeq_length>1488</GBSeq_length>
+    <GBSeq_strandedness>single</GBSeq_strandedness>
+    <GBSeq_moltype>RNA</GBSeq_moltype>
+    <GBSeq_topology>linear</GBSeq_topology>
+    <GBSeq_division>VRL</GBSeq_division>
+    <GBSeq_update-date>29-MAY-2012</GBSeq_update-date>
+    <GBSeq_create-date>29-MAY-2012</GBSeq_create-date>
+    <GBSeq_definition>Human coronavirus OC43 S gene for spike glycoprotein, partial cds, strain: HCoV-OC43/Niigata.JPN/11-335</GBSeq_definition>
+    <GBSeq_primary-accession>AB695079</GBSeq_primary-accession>
+    <GBSeq_accession-version>AB695079.1</GBSeq_accession-version>
+    <GBSeq_other-seqids>
+      <GBSeqid>dbj|AB695079.1|</GBSeqid>
+      <GBSeqid>gi|388557431</GBSeqid>
+    </GBSeq_other-seqids>
+    <GBSeq_source>Human coronavirus OC43 (HCoV-OC43)</GBSeq_source>
+    <GBSeq_organism>Human coronavirus OC43</GBSeq_organism>
+    <GBSeq_taxonomy>Viruses; Riboviria; Nidovirales; Cornidovirineae; Coronaviridae; Orthocoronavirinae; Betacoronavirus; Embecovirus</GBSeq_taxonomy>
+    <GBSeq_references>
+      <GBReference>
+        <GBReference_reference>1</GBReference_reference>
+        <GBReference_position>1..1488</GBReference_position>
+        <GBReference_authors>
+          <GBAuthor>Kon,M.</GBAuthor>
+          <GBAuthor>Watanabe,K.</GBAuthor>
+          <GBAuthor>Tazawa,T.</GBAuthor>
+          <GBAuthor>Watanabe,K.</GBAuthor>
+          <GBAuthor>Tamura,T.</GBAuthor>
+          <GBAuthor>Tsukagoshi,H.</GBAuthor>
+          <GBAuthor>Noda,M.</GBAuthor>
+          <GBAuthor>Kimura,H.</GBAuthor>
+          <GBAuthor>Mizuta,K.</GBAuthor>
+        </GBReference_authors>
+        <GBReference_title>Detection of Human Coronavirus NL63 and OC43 in Children with Acute Respiratory Infections in Niigata, Japan, between 2010 and 2011</GBReference_title>
+        <GBReference_journal>Jpn. J. Infect. Dis. 65 (3), 270-272 (2012)</GBReference_journal>
+        <GBReference_pubmed>22627314</GBReference_pubmed>
+      </GBReference>
+      <GBReference>
+        <GBReference_reference>2</GBReference_reference>
+        <GBReference_position>1..1488</GBReference_position>
+        <GBReference_authors>
+          <GBAuthor>Kon,M.</GBAuthor>
+          <GBAuthor>Watanabe,K.</GBAuthor>
+          <GBAuthor>Tazawa,T.</GBAuthor>
+          <GBAuthor>Watanabe,K.</GBAuthor>
+          <GBAuthor>Tamura,T.</GBAuthor>
+        </GBReference_authors>
+        <GBReference_title>Direct Submission</GBReference_title>
+        <GBReference_journal>Submitted (25-JAN-2012) Contact:Miyako Kon Niigata Prefectural Institute of Public Health and Environmental Sciences, Viology section; 314-1 Sowa, Nishiku, Niigatashi, Niigata 950-2144, Japan</GBReference_journal>
+      </GBReference>
+    </GBSeq_references>
+    <GBSeq_feature-table>
+      <GBFeature>
+        <GBFeature_key>source</GBFeature_key>
+        <GBFeature_location>1..1488</GBFeature_location>
+        <GBFeature_intervals>
+          <GBInterval>
+            <GBInterval_from>1</GBInterval_from>
+            <GBInterval_to>1488</GBInterval_to>
+            <GBInterval_accession>AB695079.1</GBInterval_accession>
+          </GBInterval>
+        </GBFeature_intervals>
+        <GBFeature_quals>
+          <GBQualifier>
+            <GBQualifier_name>organism</GBQualifier_name>
+            <GBQualifier_value>Human coronavirus OC43</GBQualifier_value>
+          </GBQualifier>
+          <GBQualifier>
+            <GBQualifier_name>mol_type</GBQualifier_name>
+            <GBQualifier_value>genomic RNA</GBQualifier_value>
+          </GBQualifier>
+          <GBQualifier>
+            <GBQualifier_name>strain</GBQualifier_name>
+            <GBQualifier_value>HCoV-OC43/Niigata.JPN/11-335</GBQualifier_value>
+          </GBQualifier>
+          <GBQualifier>
+            <GBQualifier_name>db_xref</GBQualifier_name>
+            <GBQualifier_value>taxon:31631</GBQualifier_value>
+          </GBQualifier>
+          <GBQualifier>
+            <GBQualifier_name>country</GBQualifier_name>
+            <GBQualifier_value>Japan:Niigata</GBQualifier_value>
+          </GBQualifier>
+          <GBQualifier>
+            <GBQualifier_name>collection_date</GBQualifier_name>
+            <GBQualifier_value>Feb-2011</GBQualifier_value>
+          </GBQualifier>
+        </GBFeature_quals>
+      </GBFeature>
+      <GBFeature>
+        <GBFeature_key>gene</GBFeature_key>
+        <GBFeature_location>1..&gt;1488</GBFeature_location>
+        <GBFeature_intervals>
+          <GBInterval>
+            <GBInterval_from>1</GBInterval_from>
+            <GBInterval_to>1488</GBInterval_to>
+            <GBInterval_accession>AB695079.1</GBInterval_accession>
+          </GBInterval>
+        </GBFeature_intervals>
+        <GBFeature_partial3 value="true"/>
+        <GBFeature_quals>
+          <GBQualifier>
+            <GBQualifier_name>gene</GBQualifier_name>
+            <GBQualifier_value>S</GBQualifier_value>
+          </GBQualifier>
+        </GBFeature_quals>
+      </GBFeature>
+      <GBFeature>
+        <GBFeature_key>CDS</GBFeature_key>
+        <GBFeature_location>1..&gt;1488</GBFeature_location>
+        <GBFeature_intervals>
+          <GBInterval>
+            <GBInterval_from>1</GBInterval_from>
+            <GBInterval_to>1488</GBInterval_to>
+            <GBInterval_accession>AB695079.1</GBInterval_accession>
+          </GBInterval>
+        </GBFeature_intervals>
+        <GBFeature_partial3 value="true"/>
+        <GBFeature_quals>
+          <GBQualifier>
+            <GBQualifier_name>gene</GBQualifier_name>
+            <GBQualifier_value>S</GBQualifier_value>
+          </GBQualifier>
+          <GBQualifier>
+            <GBQualifier_name>codon_start</GBQualifier_name>
+            <GBQualifier_value>1</GBQualifier_value>
+          </GBQualifier>
+          <GBQualifier>
+            <GBQualifier_name>transl_table</GBQualifier_name>
+            <GBQualifier_value>1</GBQualifier_value>
+          </GBQualifier>
+          <GBQualifier>
+            <GBQualifier_name>product</GBQualifier_name>
+            <GBQualifier_value>spike glycoprotein</GBQualifier_value>
+          </GBQualifier>
+          <GBQualifier>
+            <GBQualifier_name>protein_id</GBQualifier_name>
+            <GBQualifier_value>BAM16456.1</GBQualifier_value>
+          </GBQualifier>
+          <GBQualifier>
+            <GBQualifier_name>translation</GBQualifier_name>
+            <GBQualifier_value>MFLILLISLPTAFSVIGDLKCPLDSRTGSLNNIDTGPPSISTATVDVTNGLGTYYVLDRVYLNTTLFLNGYYPTSGSTYRNMALKGTDKLSTLWFKPPFLSDFINGIFAKVKNTKVFKDGVMYSEFPAITIGSTFVNTSYSVVVQPRTINSTQDGVNKLQGLLEVSVCQYNMCEYPHTICHPKLGNHFKELWHMDTGVVSCLYKRNFTYDVNATYLYFHFYQEGGTFYAYFTDTGVVTKFLFNVYLGMALSHYYVMPLTCISRRDIGFTLEYWVTPLTSRQYLLAFNQDGIIFNAVDCMSDFMSEIKCKTQSIAPPTGVYELNGYTVQPIADVYRRKPDLPNCNIEAWLNDKSVPSPLNWERKTFSNCNFNMSSLMSFIQADSFTCNNIDAAKIYGMCFSSITIDKFAIPNGRKVDLQLGNLGYLQSFNYRIDTTATSCQLYYNLPAANVSVSRFNPSTWNKRFGFIENSVFKPQPAGVLTNHDVVYAQHCFKAPK</GBQualifier_value>
+          </GBQualifier>
+        </GBFeature_quals>
+      </GBFeature>
+    </GBSeq_feature-table>
+    <GBSeq_sequence>atgtttttgatacttttaatttccttaccaacggctttttctgttataggagatttaaagtgtcctttagatagtcgtacaggtagccttaataatatagacaccggtcctccttctataagtactgctactgttgatgttactaatggtttgggtacttattatgttttagatcgtgtgtatttaaatactacgttgtttcttaatggttattaccctacttcaggttccacatatcgtaatatggcactgaagggaactgacaaattgagtacactatggtttaaaccaccatttctttctgattttattaatggtatttttgctaaggtcaaaaataccaaggtttttaaagatggtgtaatgtatagtgagttccctgctataactataggtagtacttttgtaaatacatcctatagtgtggtagtacaaccacgtacaattaattcaacacaggatggtgttaataaattacaaggtcttttagaggtctctgtttgccagtataatatgtgtgagtacccacatacgatttgtcatcctaaactgggtaatcacttcaaagaactatggcatatggatacaggtgttgtttcctgtttatataagcgtaatttcacatatgatgtgaatgctacttatttgtattttcatttttatcaagaaggtggtaccttttatgcatattttacagacactggtgttgttactaagtttttgtttaatgtttatttaggcatggcactttcacactactatgtcatgcctctgacttgtattagtaggcgtgatattggttttactttagaatattgggttacacccctcacttctagacaatatttactcgctttcaatcaagatggtattatttttaatgctgttgattgtatgagtgattttatgagtgagattaagtgtaaaacacaatctatagcaccacctactggtgtttatgaattaaacggttacactgttcagccaatagcagatgtttaccgacgcaaacctgatcttcccaattgcaatatagaagcttggcttaatgataagtcggtgccctctccattaaattgggaacgtaagacattttcaaattgtaattttaatatgagcagcctgatgtcttttattcaggcagactcatttacttgtaataatattgatgctgctaagatatatggtatgtgtttttccagcataactatagataagtttgctatacccaatggcaggaaggttgacctacaattgggtaatttgggctatttgcagtcatttaactatagaattgatactactgcaacaagttgtcagttgtattataatttacctgctgctaatgtttctgttagcaggtttaatccttctacttggaataagagatttggttttatagaaaattctgtttttaagcctcaacctgcaggtgttcttaccaatcatgatgtagtttatgcccaacattgttttaaagctcccaaa</GBSeq_sequence>
+  </GBSeq>

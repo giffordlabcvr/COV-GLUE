@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<GBSeq>
+
+    <GBSeq_locus>MHU14646</GBSeq_locus>
+    <GBSeq_length>4086</GBSeq_length>
+    <GBSeq_strandedness>single</GBSeq_strandedness>
+    <GBSeq_moltype>RNA</GBSeq_moltype>
+    <GBSeq_topology>linear</GBSeq_topology>
+    <GBSeq_division>VRL</GBSeq_division>
+    <GBSeq_update-date>16-APR-2001</GBSeq_update-date>
+    <GBSeq_create-date>29-OCT-1994</GBSeq_create-date>
+    <GBSeq_definition>Murine hepatitis virus S glycoprotein gene, complete cds</GBSeq_definition>
+    <GBSeq_primary-accession>U14646</GBSeq_primary-accession>
+    <GBSeq_accession-version>U14646.1</GBSeq_accession-version>
+    <GBSeq_other-seqids>
+      <GBSeqid>gb|U14646.1|MHU14646</GBSeqid>
+      <GBSeqid>gi|561671</GBSeqid>
+    </GBSeq_other-seqids>
+    <GBSeq_source>Murine hepatitis virus</GBSeq_source>
+    <GBSeq_organism>Murine hepatitis virus</GBSeq_organism>
+    <GBSeq_taxonomy>Viruses; Riboviria; Nidovirales; Cornidovirineae; Coronaviridae; Orthocoronavirinae; Betacoronavirus; Embecovirus</GBSeq_taxonomy>
+    <GBSeq_references>
+      <GBReference>
+        <GBReference_reference>1</GBReference_reference>
+        <GBReference_position>1..4086</GBReference_position>
+        <GBReference_authors>
+          <GBAuthor>Kunita,S.</GBAuthor>
+          <GBAuthor>Zhang,L.</GBAuthor>
+          <GBAuthor>Homberger,F.R.</GBAuthor>
+          <GBAuthor>Compton,S.R.</GBAuthor>
+        </GBReference_authors>
+        <GBReference_title>Molecular characterization of the S proteins of two enterotropic murine coronavirus strains</GBReference_title>
+        <GBReference_journal>Virus Res. 35 (3), 277-289 (1995)</GBReference_journal>
+        <GBReference_pubmed>7785316</GBReference_pubmed>
+      </GBReference>
+      <GBReference>
+        <GBReference_reference>2</GBReference_reference>
+        <GBReference_position>1..4086</GBReference_position>
+        <GBReference_authors>
+          <GBAuthor>Compton,S.R.</GBAuthor>
+        </GBReference_authors>
+        <GBReference_title>Direct Submission</GBReference_title>
+        <GBReference_journal>Submitted (13-SEP-1994) Susan R. Compton, Comparative Medicine, Yale University School of Medicine, P.O. Box 20816, New Haven, CT 06520-8016, USA</GBReference_journal>
+      </GBReference>
+    </GBSeq_references>
+    <GBSeq_feature-table>
+      <GBFeature>
+        <GBFeature_key>source</GBFeature_key>
+        <GBFeature_location>1..4086</GBFeature_location>
+        <GBFeature_intervals>
+          <GBInterval>
+            <GBInterval_from>1</GBInterval_from>
+            <GBInterval_to>4086</GBInterval_to>
+            <GBInterval_accession>U14646.1</GBInterval_accession>
+          </GBInterval>
+        </GBFeature_intervals>
+        <GBFeature_quals>
+          <GBQualifier>
+            <GBQualifier_name>organism</GBQualifier_name>
+            <GBQualifier_value>Murine hepatitis virus</GBQualifier_value>
+          </GBQualifier>
+          <GBQualifier>
+            <GBQualifier_name>mol_type</GBQualifier_name>
+            <GBQualifier_value>genomic RNA</GBQualifier_value>
+          </GBQualifier>
+          <GBQualifier>
+            <GBQualifier_name>strain</GBQualifier_name>
+            <GBQualifier_value>Y</GBQualifier_value>
+          </GBQualifier>
+          <GBQualifier>
+            <GBQualifier_name>db_xref</GBQualifier_name>
+            <GBQualifier_value>taxon:11138</GBQualifier_value>
+          </GBQualifier>
+          <GBQualifier>
+            <GBQualifier_name>lab_host</GBQualifier_name>
+            <GBQualifier_value>Mus musculus</GBQualifier_value>
+          </GBQualifier>
+        </GBFeature_quals>
+      </GBFeature>
+      <GBFeature>
+        <GBFeature_key>CDS</GBFeature_key>
+        <GBFeature_location>1..4086</GBFeature_location>
+        <GBFeature_intervals>
+          <GBInterval>
+            <GBInterval_from>1</GBInterval_from>
+            <GBInterval_to>4086</GBInterval_to>
+            <GBInterval_accession>U14646.1</GBInterval_accession>
+          </GBInterval>
+        </GBFeature_intervals>
+        <GBFeature_quals>
+          <GBQualifier>
+            <GBQualifier_name>codon_start</GBQualifier_name>
+            <GBQualifier_value>1</GBQualifier_value>
+          </GBQualifier>
+          <GBQualifier>
+            <GBQualifier_name>transl_table</GBQualifier_name>
+            <GBQualifier_value>1</GBQualifier_value>
+          </GBQualifier>
+          <GBQualifier>
+            <GBQualifier_name>product</GBQualifier_name>
+            <GBQualifier_value>S glycoprotein</GBQualifier_value>
+          </GBQualifier>
+          <GBQualifier>
+            <GBQualifier_name>protein_id</GBQualifier_name>
+            <GBQualifier_value>AAA87063.1</GBQualifier_value>
+          </GBQualifier>
+          <GBQualifier>
+            <GBQualifier_name>translation</GBQualifier_name>
+            <GBQualifier_value>MLFVFILLLPSCLGYIGDFRCINLVNTDTSNASAPSVSTEVVDVSKGIGTYYVLDRVYLNATLLLTGYYPVDSSNYRNLALTGTNTLSLNWYKSPFLSEFNDGIFAKVKNLKASLPRDSVSYFPTIVIGSNFVNTSYTVVLEPYNGIIMASICQYAICQLPYTDCKPNTGGNKLIGFWHTDLKSPVCILKRNFTFNVNAEWLYFHFYQQGGTFYAYYADVSSATTFLFSMYIGDVLTQYFVLPFMCTPTTSGVFSPQYWVTPLVKRQYLFNFNQRGVITSAVDCASSYTSEIKCKTQSMNPSTGVYDLTGYTVQPVGLVYRRVRNLPDCKIEDWLTAKTVPSPLNWERKTFQNCNFNLSSLLRFVQAESLSCSNIDASKVYGMCFGSVSIDKFAIPNRRRVDLQLGNSGFLQSFNYKIDTRATSCQLYYSLAQNNVTVNNHNPSSWNRRYGFNDVATFGSGKHDVAYAEACFTVGNEYCPCANPSIVSPCTQDKPKAANCPVGTRNRECNPLALGSNLFKCDCTCNPSPLTTYDLRCLQARSMLGVGDHCEGLGVLEDKCGGSNTCNCSADAFVGWAKDSCLSNGRCHIFSNLMLNGINSGTTCSTDLQLPNTEVVTGVCVKYDLYGITGQGVFKEVKADYYNSWQNLLYDVNGNLNGFRDIVTNKTYLIRSCYSGRVSAAYHQDAPEPALLYRNLKCDYVFNNNISREETPLNYFDSYLGCVVNADNSTEQSVDACDLRMGSGLCVNYSTTHRARRSVSTGYKLTTFEPFTVSIVNDSVESVGGLYEMQIPTNFTIASHQEFIQTRSPKVTIDCAAFVCGDYTACRQQLIEYGSFCDNINAILGEVNNLIDTMQLQVASALIQGVTLSSRLADGISGQIDDINFSPLLGCLGSQCSEGTMAAQGRSTIEDLLFDKVKLSDVGFVEAYNNCTGGQEVRDLLCVQSFNGIKVLPPVLSENQISGYTAGATASSMFPPWSAAAGVPFSLSVQYRINGLGVTMNVLSENQKMIASAFNNAIGAIQEGFDATNSALAKIQSVVNANAEALNNLLNQLSNRFGAISASLQEILSRLDALEAQAQIDRLINGRLTALNAYVSKQLSDMTLIKVSAAQAIEKVNECVKSQSPRINFCGNGNHILSLVQNAPYGLYFIHFSYVPTSFTTANVSPGLCISGDRGLAPKAGYFVQDDGEWKFIGSNYYYPEPITDKNSVIMSSCAVNYTRAPEVFLNTSIPNLPDFKEELDKWFKNQTSVAPDLSLDFEKLNVTFLDLTDEMNRIQDAIKKLNESYINLKEVGTYEMYVKWPWYVWLLIGLAGVAVCVLLFFICCCTGCGSCCFKKCGNCCDEYGGHQDSIVIHNISSHED</GBQualifier_value>
+          </GBQualifier>
+        </GBFeature_quals>
+      </GBFeature>
+    </GBSeq_feature-table>
+    <GBSeq_sequence>atgttgttcgtgtttattctactcttaccctcttgtttagggtatattggtgattttagatgtatcaaccttgtaaacactgacacctctaatgctagcgctccaagcgttagtactgaagtggttgatgtttccaaaggaatcggtacatattatgttctagaccgagtctacttaaatgccacattattgcttactggttattatcctgtggacagttccaattataggaatcttgctcttacaggcactaataccctaagccttaattggtataaatcaccctttttatcagaatttaatgatggcatatttgctaaggtaaagaaccttaaagcatctttgcccagggattctgtttcttattttcctactatagttataggtagtaattttgtcaatacttcctatactgtagtattggaaccatataatggtataatcatggcatccatttgccagtatgctatttgtcaactaccgtatacggattgtaagcccaatacgggtggtaataagttaattggtttttggcacacagatttaaaatctccggtgtgcattttaaagcgtaattttacgtttaacgttaatgccgaatggctttactttcatttttaccagcagggtggtactttttatgcgtattatgcagatgtttcttctgctactacgtttttgtttagtatgtatattggcgatgtgttaacacagtattttgtgttgccatttatgtgtactcctactacttcaggtgtcttttcaccgcagtattgggttacacctcttgttaaacgccaatatttatttaactttaatcagaggggtgttattactagtgctgttgattgtgctagtagttataccagtgaaataaagtgtaagactcaaagtatgaaccccagtacgggagtttatgatcttactggttacactgtgcaacctgttggtctagtgtaccgaagagttagaaatttgcccgattgtaaaatagaggattggttaactgctaagacagtaccctctcctctcaattgggaacgcaaaacctttcaaaattgtaacttcaacctgagcagtctattaagatttgttcaggctgagtcactctcatgcagtaatatagatgcctccaaggtctatggtatgtgttttggcagtgtatctatagataaatttgcaatacccaataggcgccgcgttgatcttcagctaggtaattcggggtttttgcaatcgtttaattataaaattgacacaagggcaacttcttgtcagctctattatagtcttgcacaaaataatgtcaccgtcaataaccataacccatcctcttggaacaggcggtatggatttaacgatgtggcaacatttggcagtggcaaacatgacgttgcatatgctgaagcgtgctttactgtgggtaatgaatattgcccatgtgccaaccccagcatagtatcgccatgcactcaagataaacctaaggctgctaattgtccagtaggcacacggaatcgtgagtgtaatcctctggcacttggcagtaatctatttaagtgtgattgcacttgtaaccctagccccctaactacctatgaccttagatgtcttcaagcaaggagcatgcttggcgtaggtgatcattgtgagggtctaggtgttttagaagataaatgtggtggcagcaacacatgcaattgttctgctgatgcctttgttggctgggctaaggacagttgcttatccaatggtcgttgccacatttttagcaatctgatgttaaatggcattaatagtggtactacttgttccaccgatttgcaattgcctaatactgaagtggtcactggcgtttgtgtcaagtacgacctctacggtattacaggtcaaggtgtttttaaggaggttaaggccgattattataatagctggcagaacctcttatatgatgttaatggtaacttaaacggtttccgcgatatcgttaccaataagacttatttaatacgaagttgttatagtgggcgcgtttctgctgcatatcatcaagatgcacccgaaccagcgctactatatcgcaatttaaaatgtgattatgtttttaataacaacatatcccgtgaggagacaccacttaactactttgatagttatttgggttgtgttgttaatgcggataattcaactgagcagtctgttgatgcgtgtgatctacgtatgggtagtggcctttgtgttaactactcaaccactcaccgagcgcgcaggtctgtcagtacgggttacaaattaactacctttgaaccatttacagtcagcattgtcaatgatagtgttgagtctgttggtggattatatgagatgcaaataccaaccaactttactatagctagccatcaggagttcatccaaacgaggtctccaaaggttactatagactgtgctgcatttgtctgtggtgattacacagcatgtcgccagcagttgattgagtatggctcattttgtgataatattaatgccattcttggcgaggtgaataacctcatagatactatgcaactacaagttgctagtgctctgatccaaggtgtcacgctaagttcacgcttggcagatggcatttcaggtcagattgatgatattaattttagtcctcttctaggttgtcttggctcacagtgcagcgaaggcaccatggcagcgcaagggcgctcaactatagaggatttgttattcgataaagtcaaactctctgatgttggctttgtcgaagcatataataattgcactggaggtcaagaagttagggacctattatgtgtgcaatcgttcaatggcatcaaagtgctaccgcctgtattgtctgagaaccaaatctccggctatacagcgggagctactgcatcttccatgttccccccatggtctgcagctgcaggtgtgccattttctttaagtgttcaatatagaattaatggtcttggtgtcactatgaatgttcttagtgaaaaccagaaaatgatagctagtgcatttaacaacgcgataggtgctatacaggaagggttcgatgcaaccaactctgcattagcaaaaattcagtccgttgtcaatgcaaatgcagaagcactcaataatttattaaaccagctttctaacaggtttggtgcaattagtgcttctttgcaagaaattctatctcgcctcgatgctcttgaagcacaggctcagatagaccgtcttattaatggcagattaactgcacttaatgcatatgtctctaagcagctgagtgacatgacccttattaaggtgagtgctgcccaggctatagagaaggtcaatgagtgtgttaaaagccaatcacctaggataaatttctgtggcaatggcaatcacatattgtcattagtccagaatgcgccttatggcttatattttatacatttcagctatgtgcctacatcctttacaacagcaaatgtgagtcctggactatgcatttctggtgatagaggattagcacctaaggctggatattttgttcaagatgatggagaatggaagttcataggcagcaattattactaccctgaacccattacagataaaaacagtgtcatcatgagtagttgcgcagtaaactacacgagggcaccggaagttttcttgaacacgtcaatccctaatctacccgactttaaggaggagctagataaatggtttaagaatcagacgtctgttgcgcctgatttatctctcgatttcgagaagctaaatgttactttcctggacctgacggatgagatgaacaggattcaggatgcaattaagaagttaaatgagagctacatcaatctcaaggaagttggcacatatgaaatgtatgtgaaatggccttggtatgtttggttgctaattggattagctggtgtagctgtttgtgtgttgttatttttcatatgctgctgcacaggttgcggctcatgttgttttaaaaagtgtggaaattgttgtgatgagtatggaggacaccaggacagtattgtgatacataatatttcatcccatgaggattga</GBSeq_sequence>
+  </GBSeq>

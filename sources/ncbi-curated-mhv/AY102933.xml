@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<GBSeq>
+
+    <GBSeq_locus>AY102933</GBSeq_locus>
+    <GBSeq_length>1077</GBSeq_length>
+    <GBSeq_strandedness>single</GBSeq_strandedness>
+    <GBSeq_moltype>mRNA</GBSeq_moltype>
+    <GBSeq_topology>linear</GBSeq_topology>
+    <GBSeq_division>VRL</GBSeq_division>
+    <GBSeq_update-date>06-JUN-2003</GBSeq_update-date>
+    <GBSeq_create-date>01-JUN-2003</GBSeq_create-date>
+    <GBSeq_definition>Murine hepatitis virus nucleocapsid protein mRNA, partial cds</GBSeq_definition>
+    <GBSeq_primary-accession>AY102933</GBSeq_primary-accession>
+    <GBSeq_accession-version>AY102933.1</GBSeq_accession-version>
+    <GBSeq_other-seqids>
+      <GBSeqid>gb|AY102933.1|</GBSeqid>
+      <GBSeqid>gi|31321947</GBSeqid>
+    </GBSeq_other-seqids>
+    <GBSeq_source>Murine hepatitis virus</GBSeq_source>
+    <GBSeq_organism>Murine hepatitis virus</GBSeq_organism>
+    <GBSeq_taxonomy>Viruses; Riboviria; Nidovirales; Cornidovirineae; Coronaviridae; Orthocoronavirinae; Betacoronavirus; Embecovirus</GBSeq_taxonomy>
+    <GBSeq_references>
+      <GBReference>
+        <GBReference_reference>1</GBReference_reference>
+        <GBReference_position>1..1077</GBReference_position>
+        <GBReference_authors>
+          <GBAuthor>Compton,S.R.</GBAuthor>
+          <GBAuthor>Ball-Goodrich,L.J.</GBAuthor>
+          <GBAuthor>Zeiss,C.J.</GBAuthor>
+          <GBAuthor>Johnson,L.K.</GBAuthor>
+          <GBAuthor>Johnson,E.A.</GBAuthor>
+          <GBAuthor>Macy,J.D.</GBAuthor>
+        </GBReference_authors>
+        <GBReference_title>Pathogenesis of mouse hepatitis virus infection in gamma interferon-deficient mice is modulated by co-infection with Helicobacter hepaticus</GBReference_title>
+        <GBReference_journal>Comp. Med. 53 (2), 197-206 (2003)</GBReference_journal>
+        <GBReference_pubmed>12784855</GBReference_pubmed>
+      </GBReference>
+      <GBReference>
+        <GBReference_reference>2</GBReference_reference>
+        <GBReference_position>1..1077</GBReference_position>
+        <GBReference_authors>
+          <GBAuthor>Compton,S.R.</GBAuthor>
+        </GBReference_authors>
+        <GBReference_title>Direct Submission</GBReference_title>
+        <GBReference_journal>Submitted (13-MAY-2002) Comparative Medicine, Yale University, 333 Cedar Street, New Haven, CT 06520-8016, USA</GBReference_journal>
+      </GBReference>
+    </GBSeq_references>
+    <GBSeq_feature-table>
+      <GBFeature>
+        <GBFeature_key>source</GBFeature_key>
+        <GBFeature_location>1..1077</GBFeature_location>
+        <GBFeature_intervals>
+          <GBInterval>
+            <GBInterval_from>1</GBInterval_from>
+            <GBInterval_to>1077</GBInterval_to>
+            <GBInterval_accession>AY102933.1</GBInterval_accession>
+          </GBInterval>
+        </GBFeature_intervals>
+        <GBFeature_quals>
+          <GBQualifier>
+            <GBQualifier_name>organism</GBQualifier_name>
+            <GBQualifier_value>Murine hepatitis virus</GBQualifier_value>
+          </GBQualifier>
+          <GBQualifier>
+            <GBQualifier_name>mol_type</GBQualifier_name>
+            <GBQualifier_value>mRNA</GBQualifier_value>
+          </GBQualifier>
+          <GBQualifier>
+            <GBQualifier_name>strain</GBQualifier_name>
+            <GBQualifier_value>G</GBQualifier_value>
+          </GBQualifier>
+          <GBQualifier>
+            <GBQualifier_name>db_xref</GBQualifier_name>
+            <GBQualifier_value>taxon:11138</GBQualifier_value>
+          </GBQualifier>
+        </GBFeature_quals>
+      </GBFeature>
+      <GBFeature>
+        <GBFeature_key>CDS</GBFeature_key>
+        <GBFeature_location>&lt;1..&gt;1077</GBFeature_location>
+        <GBFeature_intervals>
+          <GBInterval>
+            <GBInterval_from>1</GBInterval_from>
+            <GBInterval_to>1077</GBInterval_to>
+            <GBInterval_accession>AY102933.1</GBInterval_accession>
+          </GBInterval>
+        </GBFeature_intervals>
+        <GBFeature_partial5 value="true"/>
+        <GBFeature_partial3 value="true"/>
+        <GBFeature_quals>
+          <GBQualifier>
+            <GBQualifier_name>codon_start</GBQualifier_name>
+            <GBQualifier_value>1</GBQualifier_value>
+          </GBQualifier>
+          <GBQualifier>
+            <GBQualifier_name>transl_table</GBQualifier_name>
+            <GBQualifier_value>1</GBQualifier_value>
+          </GBQualifier>
+          <GBQualifier>
+            <GBQualifier_name>product</GBQualifier_name>
+            <GBQualifier_value>nucleocapsid protein</GBQualifier_value>
+          </GBQualifier>
+          <GBQualifier>
+            <GBQualifier_name>protein_id</GBQualifier_name>
+            <GBQualifier_value>AAM55465.1</GBQualifier_value>
+          </GBQualifier>
+          <GBQualifier>
+            <GBQualifier_name>translation</GBQualifier_name>
+            <GBQualifier_value>QKGKEFQFADGQGVPIANGIPATEQKGYWYRHNRRSFKTPDGQQKQLLPRWYFYYLGTGPYAGASYGDTIEGVFWVASSQADTNTRADIAERDPSSHEAIPTRFAPGTVLPQGFYVEGSGRSAPASRSGSRSQSRGPNNRARSSSNQRQPDSTVKPDMAEEIAALVLAKLGKDAGQPKQVTKQSAKEVRQKILNKPRQKRTPNKQCPVQQCFGKRGPNQNFGGPEMLKLGTSDPQFPILAELAPTASAFFFGSKLELVKKNSGGADEPTKDVYELQYSGAVRFDSTLPGFETIMKVLNENLNAYQKEAGGADVVSPKPQRKGRRQAQEKKDEVDNVSVAKPKSSVQRNVSRELTPEDRS</GBQualifier_value>
+          </GBQualifier>
+        </GBFeature_quals>
+      </GBFeature>
+    </GBSeq_feature-table>
+    <GBSeq_sequence>caaaagggaaaggagttccagtttgcagatggacaaggagtgcctattgccaatggaatcccagctactgagcaaaagggatactggtatagacacaaccgacgttcctttaaaacacctgatgggcagcagaagcaactactccccagatggtatttttactatcttggcacaggtccctatgctggagccagttatggagacaccattgaaggagtcttctgggttgcaagcagtcaagcggacaccaacacccgtgctgatattgctgaaagggacccaagcagtcatgaagctattcctactaggtttgcgcccggcacggtattgcctcaaggcttttatgttgaaggctcaggaaggtctgcacctgctagtcgatctggttcgcggtcacaatcccgtgggccaaataatcgcgctagaagcagctccaaccagcgccagcctgactctactgtaaaacctgatatggccgaagaaattgctgctcttgttttggctaagctcggtaaagatgccggccagcccaagcaagtaaccaagcaaagtgccaaagaagtcaggcagaaaattttaaacaagcctcgccaaaagaggactccaaacaagcagtgcccagtgcagcagtgttttggaaagagaggccccaatcagaattttggaggccctgaaatgttaaaacttggaactagtgatccacagttccccattcttgcagagttggccccaacagctagtgccttcttctttggatctaaattagaattggtcaaaaagaactctggtggtgcagatgaacccaccaaagatgtgtatgagctgcaatattcaggtgcagttagatttgatagtactctacctggttttgagactatcatgaaagtgttgaatgagaatttgaatgcctaccagaaggaagctggtggtgcagatgtagtgagccctaagccccaaagaaaagggcgtagacaggctcaggaaaagaaagatgaagtagataatgtaagcgttgccaagcccaaaagcagtgtgcagcgaaatgtaagtagagaattaaccccagaggatagaagt</GBSeq_sequence>
+  </GBSeq>

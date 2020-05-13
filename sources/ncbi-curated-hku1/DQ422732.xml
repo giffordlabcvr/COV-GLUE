@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<GBSeq>
+
+    <GBSeq_locus>DQ422732</GBSeq_locus>
+    <GBSeq_length>2783</GBSeq_length>
+    <GBSeq_strandedness>single</GBSeq_strandedness>
+    <GBSeq_moltype>RNA</GBSeq_moltype>
+    <GBSeq_topology>linear</GBSeq_topology>
+    <GBSeq_division>VRL</GBSeq_division>
+    <GBSeq_update-date>26-JUL-2016</GBSeq_update-date>
+    <GBSeq_create-date>11-JUN-2006</GBSeq_create-date>
+    <GBSeq_definition>Human coronavirus HKU1 strain N16 RNA-dependent RNA polymerase gene, partial cds</GBSeq_definition>
+    <GBSeq_primary-accession>DQ422732</GBSeq_primary-accession>
+    <GBSeq_accession-version>DQ422732.1</GBSeq_accession-version>
+    <GBSeq_other-seqids>
+      <GBSeqid>gb|DQ422732.1|</GBSeqid>
+      <GBSeqid>gi|90192506</GBSeqid>
+    </GBSeq_other-seqids>
+    <GBSeq_source>Human coronavirus HKU1 (HCoV-HKU1)</GBSeq_source>
+    <GBSeq_organism>Human coronavirus HKU1</GBSeq_organism>
+    <GBSeq_taxonomy>Viruses; Riboviria; Nidovirales; Cornidovirineae; Coronaviridae; Orthocoronavirinae; Betacoronavirus; Embecovirus</GBSeq_taxonomy>
+    <GBSeq_references>
+      <GBReference>
+        <GBReference_reference>1</GBReference_reference>
+        <GBReference_position>1..2783</GBReference_position>
+        <GBReference_authors>
+          <GBAuthor>Lau,S.K.</GBAuthor>
+          <GBAuthor>Woo,P.C.</GBAuthor>
+          <GBAuthor>Yip,C.C.</GBAuthor>
+          <GBAuthor>Tse,H.</GBAuthor>
+          <GBAuthor>Tsoi,H.W.</GBAuthor>
+          <GBAuthor>Cheng,V.C.</GBAuthor>
+          <GBAuthor>Lee,P.</GBAuthor>
+          <GBAuthor>Tang,B.S.</GBAuthor>
+          <GBAuthor>Cheung,C.H.</GBAuthor>
+          <GBAuthor>Lee,R.A.</GBAuthor>
+          <GBAuthor>So,L.Y.</GBAuthor>
+          <GBAuthor>Lau,Y.L.</GBAuthor>
+          <GBAuthor>Chan,K.H.</GBAuthor>
+          <GBAuthor>Yuen,K.Y.</GBAuthor>
+        </GBReference_authors>
+        <GBReference_title>Coronavirus HKU1 and Other Coronavirus Infections in Hong Kong</GBReference_title>
+        <GBReference_journal>J. Clin. Microbiol. 44 (6), 2063-2071 (2006)</GBReference_journal>
+        <GBReference_xref>
+          <GBXref>
+            <GBXref_dbname>doi</GBXref_dbname>
+            <GBXref_id>10.1128/JCM.02614-05</GBXref_id>
+          </GBXref>
+        </GBReference_xref>
+        <GBReference_pubmed>16757599</GBReference_pubmed>
+      </GBReference>
+      <GBReference>
+        <GBReference_reference>2</GBReference_reference>
+        <GBReference_position>1..2783</GBReference_position>
+        <GBReference_authors>
+          <GBAuthor>Lau,S.K.</GBAuthor>
+          <GBAuthor>Woo,P.C.</GBAuthor>
+          <GBAuthor>Yip,C.C.</GBAuthor>
+          <GBAuthor>Tse,H.</GBAuthor>
+          <GBAuthor>Tsoi,H.W.</GBAuthor>
+          <GBAuthor>Cheng,V.C.</GBAuthor>
+          <GBAuthor>Lee,P.</GBAuthor>
+          <GBAuthor>Tang,B.S.</GBAuthor>
+          <GBAuthor>Chan,K.H.</GBAuthor>
+          <GBAuthor>Yuen,K.Y.</GBAuthor>
+        </GBReference_authors>
+        <GBReference_title>Direct Submission</GBReference_title>
+        <GBReference_journal>Submitted (01-MAR-2006) Microbiology, The University of Hong Kong, Pokfulam Road, Hong Kong, China</GBReference_journal>
+      </GBReference>
+    </GBSeq_references>
+    <GBSeq_feature-table>
+      <GBFeature>
+        <GBFeature_key>source</GBFeature_key>
+        <GBFeature_location>1..2783</GBFeature_location>
+        <GBFeature_intervals>
+          <GBInterval>
+            <GBInterval_from>1</GBInterval_from>
+            <GBInterval_to>2783</GBInterval_to>
+            <GBInterval_accession>DQ422732.1</GBInterval_accession>
+          </GBInterval>
+        </GBFeature_intervals>
+        <GBFeature_quals>
+          <GBQualifier>
+            <GBQualifier_name>organism</GBQualifier_name>
+            <GBQualifier_value>Human coronavirus HKU1</GBQualifier_value>
+          </GBQualifier>
+          <GBQualifier>
+            <GBQualifier_name>mol_type</GBQualifier_name>
+            <GBQualifier_value>genomic RNA</GBQualifier_value>
+          </GBQualifier>
+          <GBQualifier>
+            <GBQualifier_name>strain</GBQualifier_name>
+            <GBQualifier_value>N16</GBQualifier_value>
+          </GBQualifier>
+          <GBQualifier>
+            <GBQualifier_name>isolation_source</GBQualifier_name>
+            <GBQualifier_value>clinical specimens</GBQualifier_value>
+          </GBQualifier>
+          <GBQualifier>
+            <GBQualifier_name>db_xref</GBQualifier_name>
+            <GBQualifier_value>taxon:290028</GBQualifier_value>
+          </GBQualifier>
+          <GBQualifier>
+            <GBQualifier_name>country</GBQualifier_name>
+            <GBQualifier_value>China: Hong Kong</GBQualifier_value>
+          </GBQualifier>
+        </GBFeature_quals>
+      </GBFeature>
+      <GBFeature>
+        <GBFeature_key>CDS</GBFeature_key>
+        <GBFeature_location>join(&lt;1..24,24..&gt;2783)</GBFeature_location>
+        <GBFeature_intervals>
+          <GBInterval>
+            <GBInterval_from>1</GBInterval_from>
+            <GBInterval_to>24</GBInterval_to>
+            <GBInterval_accession>DQ422732.1</GBInterval_accession>
+          </GBInterval>
+          <GBInterval>
+            <GBInterval_from>24</GBInterval_from>
+            <GBInterval_to>2783</GBInterval_to>
+            <GBInterval_accession>DQ422732.1</GBInterval_accession>
+          </GBInterval>
+        </GBFeature_intervals>
+        <GBFeature_operator>join</GBFeature_operator>
+        <GBFeature_partial5 value="true"/>
+        <GBFeature_partial3 value="true"/>
+        <GBFeature_quals>
+          <GBQualifier>
+            <GBQualifier_name>ribosomal_slippage</GBQualifier_name>
+          </GBQualifier>
+          <GBQualifier>
+            <GBQualifier_name>note</GBQualifier_name>
+            <GBQualifier_value>translated via -1 ribosomal frameshift</GBQualifier_value>
+          </GBQualifier>
+          <GBQualifier>
+            <GBQualifier_name>codon_start</GBQualifier_name>
+            <GBQualifier_value>1</GBQualifier_value>
+          </GBQualifier>
+          <GBQualifier>
+            <GBQualifier_name>transl_table</GBQualifier_name>
+            <GBQualifier_value>1</GBQualifier_value>
+          </GBQualifier>
+          <GBQualifier>
+            <GBQualifier_name>product</GBQualifier_name>
+            <GBQualifier_value>RNA-dependent RNA polymerase</GBQualifier_value>
+          </GBQualifier>
+          <GBQualifier>
+            <GBQualifier_name>protein_id</GBQualifier_name>
+            <GBQualifier_value>ABD91884.1</GBQualifier_value>
+          </GBQualifier>
+          <GBQualifier>
+            <GBQualifier_name>translation</GBQualifier_name>
+            <GBQualifier_value>SKDLNFLNRVRGTSVNARLVPCASGLSTDVQLRAFDICNTNRAGIGLYYKVNCCRFQRIDDDGNKLDKFFVVKRTNLEVYNKEKTYYELTKSCGVVAEHDFFTFDIDGSRVPHIVRRNLSKYTMLDLCYALRHFDRNDCSILCEILCEYADCKESYFSKKDWYDFVENPDIINIYKKLGPIFNRALLNTVIFADTLVEVGLVGVLTLDNQDLYGQWYDFGDFIQTAPGFGVAVADSYYSYMMPMLTMCHVLDCELFVNDSYRQFDLVQYDFTDYKLELFNKYFKYWGMKYHPNTVDCDNDRCIIHCANFNILFSMVLPNTCFGPLVRQIFVDGVPFVVSIGYHYKELGVVMNLDVDTHRYRLSLKDLLLYAADPAMHVASASALLDLRTCCFSVAAITSGIKFQTVKPGNFNQDFYEFVKSKGLFKEGSTVDLKHFFFTQDGNAAITDYNYYKYNLPTMVDIKQLLFVLEVVYKYFEIYDGGCIPASQVIVNNYDKSAGYPFNKFGKARLYYEALSFEEQNEIYAYTKRNVLPTLTQMNLKYAISAKNRARTVAGVSILSTMTGRMFHQKCLKSIAATRGVPVVIGTTKFYGGWDDMLRHLIKDVDNPVLMGWDYPKCDRAMPNILRIVSSLVLARKHEFCCSHGDRFYRLANECAQVLSEIVMCGGCYYVKPGGTSSGDATTAFANSVFNICQAVTANVCSLMACNGHKIEDLSIRNLQKRLYSNVYRTDYVDYTFVNEYYEFLCKHFSMMILSDDGVVCYNSDYANKGYIANISAFQQVLYYQNNVFMSESKCWVENDITNGPHEFCSQHTMLVKIDGDYVYLPYPDPSRILGAGCFVDDLLKTDSVLLIERFVSLAIDAYPLVYHENEEYQKVFRVYLEYIKKLYNDLGTQILDSYSVILSTCDGLKFTEESFYKNMYLKSAVMQ</GBQualifier_value>
+          </GBQualifier>
+        </GBFeature_quals>
+      </GBFeature>
+    </GBSeq_feature-table>
+    <GBSeq_sequence>tctaaagatttaaattttttaaacgggttaggggtactagtgtgaatgcccggctagtaccctgtgctagtggtttatctactgatgttcaattaagggcatttgacatttgtaataccaatagagctggtataggtttatattataaagtgaattgttgccgttttcagcgtatagatgacgacggtaataaattggataagttctttgttgtcaaaagaactaatttagaagtttataataaagagaaaacttattatgagttgactaaaagttgtggtgttgtggctgaacatgatttctttacatttgatattgatggtagtcgcgtgccacatatagttcgtaggaatctttcaaagtatactatgttagatctttgctatgcattgcgtcattttgatcgtaatgattgttcaatattgtgtgaaattctttgtgagtatgctgattgtaaagaatcctacttttctaagaaagattggtatgattttgttgaaaatcctgatattattaatatatataaaaaattaggtcctatttttaatagagctttacttaatactgtcatttttgcagacaccttagttgaagtaggtttagttggtgttttaactttagataaccaagatttgtatggtcaatggtatgattttggtgattttatacaaacagccccaggatttggtgtggcagtcgcagattcttactattcttatatgatgcctatgttaactatgtgtcatgtattagattgtgaattatttgttaatgatagttatagacaattcgatcttgtacagtatgattttactgattacaagttagagttgtttaataagtattttaagtattggggtatgaagtatcatcctaatactgtggattgtgataatgataggtgtattattcattgtgctaattttaatatactatttagtatggttttacctaatacttgttttggtccccttgttagacaaatttttgtagatggtgtaccgtttgttgtttctattggttaccattacaaagagttaggtgtagttatgaacttagatgttgacacacaccgttatcgcttgtctcttaaagatttacttctttatgcagcagatcctgctatgcatgttgcatctgctagtgctctgcttgatttacgaacttgttgttttagtgtagctgccattacaagtggtataaaatttcaaactgttaaaccaggtaactttaaccaagacttttacgagtttgttaaaagtaaaggcttgtttaaagagggtagtacagttgatttgaaacattttttctttactcaagatggtaatgctgcaattactgattataattattataagtataatttacctactatggttgatattaagcagttattgtttgtattagaagttgtttataaatattttgaaatttatgatggtggttgtataccagcatcacaagttattgttaataattatgataaaagtgctggttatccatttaacaaatttggtaaagccagactttattatgaggcattatcatttgaggaacagaatgaaatttatgcatatactaaacgtaatgttctgcccaccttaactcaaatgaatttaaaatatgctatcagtgctaagaatagagctcgcactgtagcaggtgtttctattcttagtactatgacaggccgaatgttccatcaaaaatgtttgaagagtatagcagccacccgaggtgttcctgttgttataggaaccactaaattttatggtggttgggacgatatgttacgtcatcttataaaggatgttgacaaccctgttcttatgggttgggattatcctaaatgtgatcgtgctatgccaaatattttgcgtattgttagtagtttagttttggcccgcaaacatgaattttgttgttcacatggtgatagattctatcgccttgcgaatgaatgtgcacaagttttgagtgaaatagttatgtgtggcggttgctattatgttaagcctggtggtactagcagtggtgatgcaactactgcttttgctaattctgtttttaatatatgtcaggctgttactgctaatgtttgttctcttatggcctgtaatggccataagattgaagatttaagtatacgcaatttacaaaaacgcttatactctaatgtttatcgtacagattatgttgattatacatttgttaatgagtattatgaatttttatgtaagcattttagtatgatgattttgagtgatgatggtgttgtctgttataactctgattatgctaataagggttatatagctaatataagtgcttttcaacaagttttgtactatcagaataatgtctttatgtctgaatctaaatgttgggttgaaaatgatattactaatggtcctcatgaattttgttcccaacatactatgttggttaagatagatggtgattatgtttatttaccatatccagatccttctagaatcttaggagctggttgttttgttgatgatttattgaagactgacagtgttcttttgatagagcgctttgtaagtctagctatagatgcttaccctttagtatatcatgaaaatgaagaataccaaaaagtctttcgcgtatatttagaatatataaaaaaactgtataatgatcttggtactcagatcttagatagttatagtgttattttaagtacttgtgatggtttaaagtttactgaagaatcattttacaagaatatgtatttaaaaagtgccgtgatgcag</GBSeq_sequence>
+  </GBSeq>

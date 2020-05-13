@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<GBSeq>
+
+    <GBSeq_locus>KF572787</GBSeq_locus>
+    <GBSeq_length>1347</GBSeq_length>
+    <GBSeq_strandedness>single</GBSeq_strandedness>
+    <GBSeq_moltype>RNA</GBSeq_moltype>
+    <GBSeq_topology>linear</GBSeq_topology>
+    <GBSeq_division>VRL</GBSeq_division>
+    <GBSeq_update-date>06-FEB-2015</GBSeq_update-date>
+    <GBSeq_create-date>06-FEB-2015</GBSeq_create-date>
+    <GBSeq_definition>Human coronavirus OC43 strain 5625_07 N protein (N) gene, complete cds</GBSeq_definition>
+    <GBSeq_primary-accession>KF572787</GBSeq_primary-accession>
+    <GBSeq_accession-version>KF572787.1</GBSeq_accession-version>
+    <GBSeq_other-seqids>
+      <GBSeqid>gb|KF572787.1|</GBSeqid>
+      <GBSeqid>gi|675146002</GBSeqid>
+    </GBSeq_other-seqids>
+    <GBSeq_source>Human coronavirus OC43 (HCoV-OC43)</GBSeq_source>
+    <GBSeq_organism>Human coronavirus OC43</GBSeq_organism>
+    <GBSeq_taxonomy>Viruses; Riboviria; Nidovirales; Cornidovirineae; Coronaviridae; Orthocoronavirinae; Betacoronavirus; Embecovirus</GBSeq_taxonomy>
+    <GBSeq_references>
+      <GBReference>
+        <GBReference_reference>1</GBReference_reference>
+        <GBReference_position>1..1347</GBReference_position>
+        <GBReference_authors>
+          <GBAuthor>Zhang,Y.</GBAuthor>
+          <GBAuthor>Li,J.</GBAuthor>
+          <GBAuthor>Xiao,Y.</GBAuthor>
+          <GBAuthor>Zhang,J.</GBAuthor>
+          <GBAuthor>Wang,Y.</GBAuthor>
+          <GBAuthor>Chen,L.</GBAuthor>
+          <GBAuthor>Paranhos-Baccala,G.</GBAuthor>
+          <GBAuthor>Ren,L.</GBAuthor>
+          <GBAuthor>Wang,J.</GBAuthor>
+        </GBReference_authors>
+        <GBReference_title>Genotype shift in human coronavirus OC43 and emergence of a novel genotype by natural recombination</GBReference_title>
+        <GBReference_journal>J. Infect. (2014) In press</GBReference_journal>
+        <GBReference_xref>
+          <GBXref>
+            <GBXref_dbname>doi</GBXref_dbname>
+            <GBXref_id>10.1016/j.jinf.2014.12.005</GBXref_id>
+          </GBXref>
+        </GBReference_xref>
+        <GBReference_pubmed>25530469</GBReference_pubmed>
+        <GBReference_remark>Publication Status: Available-Online prior to print</GBReference_remark>
+      </GBReference>
+      <GBReference>
+        <GBReference_reference>2</GBReference_reference>
+        <GBReference_position>1..1347</GBReference_position>
+        <GBReference_authors>
+          <GBAuthor>Zhang,Y.</GBAuthor>
+          <GBAuthor>Ren,L.</GBAuthor>
+          <GBAuthor>Wang,J.</GBAuthor>
+        </GBReference_authors>
+        <GBReference_title>Direct Submission</GBReference_title>
+        <GBReference_journal>Submitted (21-AUG-2013) Dr. Christophe Merieux Laboratory, Institute of Pathogen Biology, Chinese Academy of Medical Sciences (CAMS) &amp; Peking Union Medical College, No. 9 Dong Dan San Tiao, DongCheng District, Beijing, Beijing 100730, P.R. China</GBReference_journal>
+      </GBReference>
+    </GBSeq_references>
+    <GBSeq_feature-table>
+      <GBFeature>
+        <GBFeature_key>source</GBFeature_key>
+        <GBFeature_location>1..1347</GBFeature_location>
+        <GBFeature_intervals>
+          <GBInterval>
+            <GBInterval_from>1</GBInterval_from>
+            <GBInterval_to>1347</GBInterval_to>
+            <GBInterval_accession>KF572787.1</GBInterval_accession>
+          </GBInterval>
+        </GBFeature_intervals>
+        <GBFeature_quals>
+          <GBQualifier>
+            <GBQualifier_name>organism</GBQualifier_name>
+            <GBQualifier_value>Human coronavirus OC43</GBQualifier_value>
+          </GBQualifier>
+          <GBQualifier>
+            <GBQualifier_name>mol_type</GBQualifier_name>
+            <GBQualifier_value>genomic RNA</GBQualifier_value>
+          </GBQualifier>
+          <GBQualifier>
+            <GBQualifier_name>strain</GBQualifier_name>
+            <GBQualifier_value>5625_07</GBQualifier_value>
+          </GBQualifier>
+          <GBQualifier>
+            <GBQualifier_name>isolation_source</GBQualifier_name>
+            <GBQualifier_value>nasal and throat swab</GBQualifier_value>
+          </GBQualifier>
+          <GBQualifier>
+            <GBQualifier_name>host</GBQualifier_name>
+            <GBQualifier_value>Homo sapiens</GBQualifier_value>
+          </GBQualifier>
+          <GBQualifier>
+            <GBQualifier_name>db_xref</GBQualifier_name>
+            <GBQualifier_value>taxon:31631</GBQualifier_value>
+          </GBQualifier>
+          <GBQualifier>
+            <GBQualifier_name>country</GBQualifier_name>
+            <GBQualifier_value>China: Beijing</GBQualifier_value>
+          </GBQualifier>
+          <GBQualifier>
+            <GBQualifier_name>collection_date</GBQualifier_name>
+            <GBQualifier_value>Jul-2007</GBQualifier_value>
+          </GBQualifier>
+        </GBFeature_quals>
+      </GBFeature>
+      <GBFeature>
+        <GBFeature_key>gene</GBFeature_key>
+        <GBFeature_location>1..1347</GBFeature_location>
+        <GBFeature_intervals>
+          <GBInterval>
+            <GBInterval_from>1</GBInterval_from>
+            <GBInterval_to>1347</GBInterval_to>
+            <GBInterval_accession>KF572787.1</GBInterval_accession>
+          </GBInterval>
+        </GBFeature_intervals>
+        <GBFeature_quals>
+          <GBQualifier>
+            <GBQualifier_name>gene</GBQualifier_name>
+            <GBQualifier_value>N</GBQualifier_value>
+          </GBQualifier>
+        </GBFeature_quals>
+      </GBFeature>
+      <GBFeature>
+        <GBFeature_key>CDS</GBFeature_key>
+        <GBFeature_location>1..1347</GBFeature_location>
+        <GBFeature_intervals>
+          <GBInterval>
+            <GBInterval_from>1</GBInterval_from>
+            <GBInterval_to>1347</GBInterval_to>
+            <GBInterval_accession>KF572787.1</GBInterval_accession>
+          </GBInterval>
+        </GBFeature_intervals>
+        <GBFeature_quals>
+          <GBQualifier>
+            <GBQualifier_name>gene</GBQualifier_name>
+            <GBQualifier_value>N</GBQualifier_value>
+          </GBQualifier>
+          <GBQualifier>
+            <GBQualifier_name>codon_start</GBQualifier_name>
+            <GBQualifier_value>1</GBQualifier_value>
+          </GBQualifier>
+          <GBQualifier>
+            <GBQualifier_name>transl_table</GBQualifier_name>
+            <GBQualifier_value>1</GBQualifier_value>
+          </GBQualifier>
+          <GBQualifier>
+            <GBQualifier_name>product</GBQualifier_name>
+            <GBQualifier_value>N protein</GBQualifier_value>
+          </GBQualifier>
+          <GBQualifier>
+            <GBQualifier_name>protein_id</GBQualifier_name>
+            <GBQualifier_value>AIL49467.1</GBQualifier_value>
+          </GBQualifier>
+          <GBQualifier>
+            <GBQualifier_name>translation</GBQualifier_name>
+            <GBQualifier_value>MSFTPGKQSSSRASSGNRSGNGILKWADQSDQFRNVQTRGRRAQPKQTATSQQPSGGNVVPYYSWFSGITQFQKGKEFEFAEGQGVPIAPGVPATEAKGYWYRHNRRSFKTADGNQRQLLPRWYFYYLGTGPHAKDQYGTDINGVYWVASNQADVNTPADIVDRDPSSDEAIPTRFPPGTVLPQGYYIEGSGRSAPNSRSTSRTSSRASSAGSRSRANSGNRTPTSGVTPDMADQIASLVLAKLGKDATKPQQVTKHTAKEVRQKILNKPRQKRSPNKQCTVQQCFGKRGPNQNFGGGEMLKLGTSDPQFPILAELAPTAGAFFFGSKLELAKVQNLSGNPDEPQKDVYELRYNGAIRFDSTLSGFETIMKVLSENLNAYQQQDGMMNMSPKPQRQRGHKNGQGENDNISVAVPKSRVQQNKSIELTAEDISLLKKMDEPFTEDTSEI</GBQualifier_value>
+          </GBQualifier>
+        </GBFeature_quals>
+      </GBFeature>
+    </GBSeq_feature-table>
+    <GBSeq_sequence>atgtcttttactcctggtaagcaatccagtagtagagcgtcctctggaaatcggtctggtaatggcatcctcaagtgggccgatcagtccgaccagtttagaaatgttcaaaccaggggtagaagagctcaacccaagcaaactgctacttctcagcaaccatcaggagggaatgttgtaccctactattcttggttctctggaattactcagtttcaaaagggaaaggagtttgagtttgcagaaggacaaggtgtgcctattgcaccaggagtcccagctactgaagctaaggggtactggtacagacacaacagacgttcttttaaaacagccgatggcaaccagcgtcaactgctgccacgatggtatttttactatctgggaacaggaccgcatgctaaagaccagtacggcaccgatattaacggagtctactgggtcgctagcaaccaggctgatgtcaataccccggctgacattgtcgatcgggacccaagtagcgatgaggctattccgactaggtttccgcctggcacggtactccctcagggttactatattgaaggctcaggaaggtctgctcctaattccagatctacttcgcgcacatccagcagagcctctagtgcaggatcgcgtagtagagccaattctggcaatagaacccctacctctggtgtaacacctgacatggctgatcaaattgctagtcttgttctggcaaaacttggcaaggatgccaccaaacctcagcaagtaactaagcatactgccaaagaagtcagacagaaaattttgaataaaccccgccagaagaggagccccaataaacaatgcactgttcagcagtgttttggtaagagaggccctaatcagaattttggtggtggagaaatgttaaaacttggaactagtgacccacagttccccattcttgcagaactcgcacccacagctggtgcgtttttctttggatcaaaattagagttggccaaagtgcagaatttatctgggaatcctgacgagcctcagaaggatgtttatgaattgcgctataacggcgcaattaggtttgacagtacactttcaggctttgagaccataatgaaggtgctgagtgagaatttgaatgcctatcaacaacaagatggtatgatgaatatgagtccaaaaccacagcgtcagcgtggtcataagaatggacaaggagaaaatgataatataagtgttgcagtgcccaaaagccgcgtgcagcaaaataagagtatagagttgactgcagaggacatcagccttcttaagaagatggatgagccctttactgaagacacctcagaaatataa</GBSeq_sequence>
+  </GBSeq>

@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<GBSeq>
+
+    <GBSeq_locus>S62886</GBSeq_locus>
+    <GBSeq_length>4089</GBSeq_length>
+    <GBSeq_strandedness>single</GBSeq_strandedness>
+    <GBSeq_moltype>RNA</GBSeq_moltype>
+    <GBSeq_topology>linear</GBSeq_topology>
+    <GBSeq_division>VRL</GBSeq_division>
+    <GBSeq_update-date>10-AUG-2001</GBSeq_update-date>
+    <GBSeq_create-date>25-AUG-1993</GBSeq_create-date>
+    <GBSeq_definition>Human coronavirus OC43 surface glycoprotein S gene, complete cds</GBSeq_definition>
+    <GBSeq_primary-accession>S62886</GBSeq_primary-accession>
+    <GBSeq_accession-version>S62886.1</GBSeq_accession-version>
+    <GBSeq_other-seqids>
+      <GBSeqid>bbm|309800</GBSeqid>
+      <GBSeqid>bbs|134142</GBSeqid>
+      <GBSeqid>gb|S62886.1|</GBSeqid>
+      <GBSeqid>gi|386388</GBSeqid>
+    </GBSeq_other-seqids>
+    <GBSeq_source>Human coronavirus OC43 (HCoV-OC43)</GBSeq_source>
+    <GBSeq_organism>Human coronavirus OC43</GBSeq_organism>
+    <GBSeq_taxonomy>Viruses; Riboviria; Nidovirales; Cornidovirineae; Coronaviridae; Orthocoronavirinae; Betacoronavirus; Embecovirus</GBSeq_taxonomy>
+    <GBSeq_references>
+      <GBReference>
+        <GBReference_reference>1</GBReference_reference>
+        <GBReference_position>1..4089</GBReference_position>
+        <GBReference_authors>
+          <GBAuthor>Kunkel,F.</GBAuthor>
+          <GBAuthor>Herrler,G.</GBAuthor>
+        </GBReference_authors>
+        <GBReference_title>Structural and functional analysis of the surface protein of human coronavirus OC43</GBReference_title>
+        <GBReference_journal>Virology 195 (1), 195-202 (1993)</GBReference_journal>
+        <GBReference_xref>
+          <GBXref>
+            <GBXref_dbname>doi</GBXref_dbname>
+            <GBXref_id>10.1006/viro.1993.1360</GBXref_id>
+          </GBXref>
+        </GBReference_xref>
+        <GBReference_pubmed>8317096</GBReference_pubmed>
+        <GBReference_remark>GenBank staff at the National Library of Medicine created this entry [NCBI gibbsq 134142] from the original journal article.</GBReference_remark>
+      </GBReference>
+    </GBSeq_references>
+    <GBSeq_feature-table>
+      <GBFeature>
+        <GBFeature_key>source</GBFeature_key>
+        <GBFeature_location>1..4089</GBFeature_location>
+        <GBFeature_intervals>
+          <GBInterval>
+            <GBInterval_from>1</GBInterval_from>
+            <GBInterval_to>4089</GBInterval_to>
+            <GBInterval_accession>S62886.1</GBInterval_accession>
+          </GBInterval>
+        </GBFeature_intervals>
+        <GBFeature_quals>
+          <GBQualifier>
+            <GBQualifier_name>organism</GBQualifier_name>
+            <GBQualifier_value>Human coronavirus OC43</GBQualifier_value>
+          </GBQualifier>
+          <GBQualifier>
+            <GBQualifier_name>mol_type</GBQualifier_name>
+            <GBQualifier_value>genomic RNA</GBQualifier_value>
+          </GBQualifier>
+          <GBQualifier>
+            <GBQualifier_name>db_xref</GBQualifier_name>
+            <GBQualifier_value>taxon:31631</GBQualifier_value>
+          </GBQualifier>
+        </GBFeature_quals>
+      </GBFeature>
+      <GBFeature>
+        <GBFeature_key>CDS</GBFeature_key>
+        <GBFeature_location>join(5..838,838..4089)</GBFeature_location>
+        <GBFeature_intervals>
+          <GBInterval>
+            <GBInterval_from>5</GBInterval_from>
+            <GBInterval_to>838</GBInterval_to>
+            <GBInterval_accession>S62886.1</GBInterval_accession>
+          </GBInterval>
+          <GBInterval>
+            <GBInterval_from>838</GBInterval_from>
+            <GBInterval_to>4089</GBInterval_to>
+            <GBInterval_accession>S62886.1</GBInterval_accession>
+          </GBInterval>
+        </GBFeature_intervals>
+        <GBFeature_operator>join</GBFeature_operator>
+        <GBFeature_quals>
+          <GBQualifier>
+            <GBQualifier_name>note</GBQualifier_name>
+            <GBQualifier_value>hemaglutinin; conceptual translation presented here differs from translation in publication</GBQualifier_value>
+          </GBQualifier>
+          <GBQualifier>
+            <GBQualifier_name>codon_start</GBQualifier_name>
+            <GBQualifier_value>1</GBQualifier_value>
+          </GBQualifier>
+          <GBQualifier>
+            <GBQualifier_name>transl_table</GBQualifier_name>
+            <GBQualifier_value>1</GBQualifier_value>
+          </GBQualifier>
+          <GBQualifier>
+            <GBQualifier_name>product</GBQualifier_name>
+            <GBQualifier_value>surface glycoprotein S</GBQualifier_value>
+          </GBQualifier>
+          <GBQualifier>
+            <GBQualifier_name>protein_id</GBQualifier_name>
+            <GBQualifier_value>AAB27260.2</GBQualifier_value>
+          </GBQualifier>
+          <GBQualifier>
+            <GBQualifier_name>translation</GBQualifier_name>
+            <GBQualifier_value>MFLILLISLPTAFAVIGDLKCTSDTSYINDKDTGPPPISTDTVDVTNGLGTYYVLDRVYLNTTFLLNGYYPTSGSTYRNMALKGSVLLSRLWFKPPFLSDFINGIFAKVKNTKVIKDGVMYSEFPAITIGSTFVNTSYSVVVQPRTINSTQDGYNKLQGLLEVSVCQYNMCEYPQTICHPNLGNHRKELWHLDTGVVSCLYKRNFTYDVNADYLYFHFYQEGGTFYAYFTDTGVVTKFLFNVYLGMALSHYYVMPLTCNSKVKNGFTLEYWVTLSLLDQYLLAFNQDGIIFNAVDCMSDFMSEIKCKTQSIAPPTGVYELNGYTVQPIADVYRRKPNLPNCNIEAWLNDKSVPSPLNWERKTFSNCNFNMSSLMSFIQADSFTCNNIDAAKIYGMCFSSITIDKFAIPNGRKVDLQLGNLGYLQSFNYRIDTTATSCQLYYNLPAANVSVSRFNPSTWNKRFGFIEDSVFKPRPAGVLTNHDVVYAQHCFKAPKNFCPCKLNGSCVGSGPGKNNGIGTCPAGTNYLTCDNLCTPDPITFKATGTYKCPQTKSLVGIGEHCSGLAVKSDYCGGNSCTCRPQAFLGWSADSCLQGDKCNIFANFILHDVNSGLTCSTDLQKANTDIILGVCVNYDLYGILGQGIFVEVNATYYNSWQNLLYDSNGNLYGFRDYITNRTFMIRSCYSGRVSAAFHANSSEPALLSRNIKCNYVFNNSLTRQLQPINYFDSYLGCVVNAYNSTAIFVQTCDLTVGSGYCVDYSKNRRSRGAITTGYRFTNFEPFTVNSVNDSLEPVGGLYEIQIPSEFTIGNMEEFIQTSSPKVTIDCAAFVCGDYAACKSQLVGYGSFCDNINAILTEVNELLDTTQLQVANSLMNGVTLSTKLKDGVNFNVDDINFSPVLGCLGSECSKASSRSAIEDLLFDKVKLSDVGFVEAYNNCTGGAEIRDLICVQSYKGIKVLPPLLSENQISGYTLAATSASLFPPWTAAAGVPFYLNVQYRINGLGVTMDVLSQNQKLIANAFNNALYAIQEGFDATNSALVKIQAVVNANAEALNNLLQQLSNRFGAISASLQEILSRLDALEAEAQIDRLINGRLTALNAYVSQQLSDSTLVKFSAAQAMEKVNECVKSQSSRINFCGNGNHIISLVQNAPYGLYFIHFSYVPTKYVTAKVSPGLCIAGDRGIAPKSGYFVNVNNTWMYTGSGYYYLEPITENNVVVMSTWAVNYTKAPYVMLNTSIPNLHDFKEELDQWFKNQTSVAPDLSLDYINVTFLDLQVEMNRLQEAIKVLNQSYINLKDIGTYEYYVKWPWYVWLLICLAGVAMLVLLFFICCCTGCGTSCFKKCGGCCDDYTGYQELVIKTSHDD</GBQualifier_value>
+          </GBQualifier>
+        </GBFeature_quals>
+      </GBFeature>
+    </GBSeq_feature-table>
+    <GBSeq_sequence>aaacatgtttttgatacttttaatttccttaccaacggcttttgctgttataggagatttaaagtgtacttcagatactagttatattaatgataaagacaccggtcctcctcctataagtactgatactgttgatgttactaatggtttgggtacttattatgttttagatcgtgtgtatttaaatactacgtttttgcttaatggttattaccctacttcaggttccacatatcgtaatatggcactgaagggaagtgtactattgagcagactatggtttaaaccaccatttctttctgattttattaatggtatttttgctaaggtcaaaaataccaaggttattaaagatggtgtaatgtatagtgagttccctgctataactataggtagtacttttgtaaatacatcctatagtgtggtagtacaaccacgtacaatcaattcaacacaggatggttataataaattacaaggtcttttagaggtctctgtttgccagtataatatgtgcgagtacccacaaacgatttgtcatcctaacctgggtaatcatcgcaaagaactatggcatttggatacaggtgttgtttcctgtttatataagcgtaatttcacatatgatgtgaatgctgattatttgtattttcatttttatcaagaaggtggtactttttatgcatattttacagacactggtgttgttactaagtttttgtttaatgtttatttaggcatggcgctttcacactattatgtcatgcctctgacttgtaatagtaaggttaagaatggttttactttagaatattgggttactctctcacttctagacaatatttactcgctttcaatcaagatggtattatttttaatgctgttgattgtatgagtgattttatgagtgagattaagtgtaaaacacaatctatagcaccacctactggtgtttatgaattaaacggttacactgttcagccaatcgcagatgtttaccgacgtaaacctaatcttcccaattgcaatatagaagcttggcttaatgataagtcggtgccctctccattaaattgggaacgtaagacattttcaaattgtaattttaatatgagcagcctgatgtcttttattcaggcagactcatttacttgtaataatattgatgctgctaagatatatggtatgtgtttttccagcataactatagataagtttgctatacccaatggcaggaaggttgacctacaattgggtaatttgggctatttgcagtcatttaactatagaattgatactactgcaacaagttgtcagttgtattataatttacctgctgctaatgtttctgttagcaggtttaatccttctacttggaataagagatttggttttatagaagattctgtttttaagcctcgacctgcaggtgttcttactaatcatgatgtagtttatgcacaacactgtttcaaagctcctaaaaatttctgtccgtgtaaattgaatggttcgtgtgtaggtagtggtcctggtaaaaataatggtataggcacttgtcctgcaggtactaattatttaacttgtgataatttgtgcactcctgatcctattacatttaaagctacaggtacttataagtgcccccaaactaaatctttagttggcataggtgagcactgttcgggtcttgctgttaaaagtgattattgtggaggcaattcttgtacttgccgaccacaagcatttttgggttggtctgcagactcttgtttacaaggagacaagtgtaatatttttgctaattttattttgcatgatgttaatagtggtcttacttgttctactgatttacaaaaagctaacacagacataattcttggtgtttgtgttaattatgacctctatggtattttaggccaaggcatttttgttgaggttaatgcgacttattataatagttggcagaaccttttatatgattctaatggtaatctctacggttttagagactacataacaaacagaacttttatgattcgtagttgctatagcggtcgtgtttctgcggcctttcacgctaactcttccgaaccagcattgctatctcggaatattaaatgcaactacgtttttaataatagtcttacacgacagctgcaacccattaactattttgatagttatcttggttgtgttgtcaatgcttataatagtactgctatttttgttcaaacatgtgatctcacagtaggtagtggttactgtgtggattactctaaaaacagacgaagtcgtggagcgattaccactggttatcggtttactaattttgagccatttaccgttaattcagtaaacgatagtttagaacctgtaggtggtttgtatgaaattcaaataccttcagagtttactataggtaatatggaggagtttattcaaacaagctctcctaaagttactattgattgtgctgcatttgtctgtggtgattatgcagcatgtaaatcacagttggttggatatggtagtttctgtgataacattaatgcgatactcacagaagtaaatgaactacttgacactacacagttgcaagtagctaatagtttaatgaatggtgttactcttagcactaagcttaaagatggcgttaatttcaatgtagacgacatcaatttttcccctgtattaggttgtctaggcagcgaatgtagtaaagcttccagtagatctgctatagaggatttactttttgataaagtaaagttatctgatgtcggttttgttgaggcttataataattgtacaggaggtgccgaaattagggacctcatttgtgtgcaaagttataaaggcatcaaagtgttgcctccactgctctcagaaaatcagatcagtggatacactttggctgccacctctgctagtctatttcctccttggactgcagcagcaggtgtaccattttatttaaatgttcagtatcgcattaatgggcttggtgtcaccatggatgtgctaagtcaaaatcaaaagcttattgctaatgcatttaacaatgccctttatgctattcaggaagggttcgatgcaaccaattctgctttagttaaaattcaagctgttgttaatgcaaatgctgaagctcttaataacttattgcaacaactctctaatagatttggtgctataagtgcttctttacaagaaattctatctagacttgatgctcttgaagcggaagctcagatagatagacttattaatggtcgtcttaccgctcttaatgcttatgtttctcaacagcttagtgattctacactggtaaaatttagtgcagcacaagctatggagaaggttaatgaatgtgtcaaaagccaatcatctaggataaatttctgtggtaatggtaatcatattatatcattagtgcagaatgctccatatggtttgtattttatccactttagttatgtccctactaagtatgtcacagcgaaggttagtcccggtctgtgcattgctggtgatagaggtatagctcctaagagtggttattttgttaatgtaaataatacttggatgtacactggtagtggttactactaccttgaacctataactgaaaataatgttgttgttatgagtacctgggctgttaattatactaaagcgccgtatgtaatgctgaacacttcaatacccaaccttcatgattttaaggaagagttggatcaatggtttaaaaatcaaacatcagtggcaccagatttgtcacttgattatataaatgttacattcttggacctacaagttgaaatgaataggttacaggaggcaataaaagtcttaaatcagagctacatcaatctcaaggacattggtacatatgaatattatgtaaaatggccttggtatgtatggcttttaatctgccttgctggtgtagctatgcttgttttactattcttcatatgctgttgtacaggatgtgggactagttgttttaagaaatgtggtggttgttgtgatgattatactggataccaggagttagtaatcaaaacttcacatgacgactaa</GBSeq_sequence>
+  </GBSeq>

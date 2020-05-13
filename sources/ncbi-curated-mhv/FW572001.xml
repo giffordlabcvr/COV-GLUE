@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<GBSeq>
+
+    <GBSeq_locus>FW572001</GBSeq_locus>
+    <GBSeq_length>1767</GBSeq_length>
+    <GBSeq_strandedness>double</GBSeq_strandedness>
+    <GBSeq_moltype>DNA</GBSeq_moltype>
+    <GBSeq_topology>linear</GBSeq_topology>
+    <GBSeq_division>PAT</GBSeq_division>
+    <GBSeq_update-date>28-JAN-2011</GBSeq_update-date>
+    <GBSeq_create-date>28-JAN-2011</GBSeq_create-date>
+    <GBSeq_definition>WO 2010123083-A/1: Mouse hepatitis virus (MHV) detection antigens and/or Sendai virus (SeV) detection antigens, and MHV antibody and/or SeV antibody diagnosis kits thereof</GBSeq_definition>
+    <GBSeq_primary-accession>FW572001</GBSeq_primary-accession>
+    <GBSeq_accession-version>FW572001.1</GBSeq_accession-version>
+    <GBSeq_other-seqids>
+      <GBSeqid>dbj|FW572001.1|</GBSeqid>
+      <GBSeqid>pat|WO|2010123083|1</GBSeqid>
+      <GBSeqid>gi|320462551</GBSeqid>
+    </GBSeq_other-seqids>
+    <GBSeq_keywords>
+      <GBKeyword>WO 2010123083-A/1</GBKeyword>
+    </GBSeq_keywords>
+    <GBSeq_source>Murine hepatitis virus</GBSeq_source>
+    <GBSeq_organism>Murine hepatitis virus</GBSeq_organism>
+    <GBSeq_taxonomy>Viruses; Riboviria; Nidovirales; Cornidovirineae; Coronaviridae; Orthocoronavirinae; Betacoronavirus; Embecovirus</GBSeq_taxonomy>
+    <GBSeq_references>
+      <GBReference>
+        <GBReference_reference>1</GBReference_reference>
+        <GBReference_position>1..1767</GBReference_position>
+        <GBReference_authors>
+          <GBAuthor>Sasaki,N.</GBAuthor>
+          <GBAuthor>Asano,J.</GBAuthor>
+          <GBAuthor>Torigoe,D.</GBAuthor>
+          <GBAuthor>Akoin,T.</GBAuthor>
+        </GBReference_authors>
+        <GBReference_title>Mouse hepatitis virus (MHV) detection antigens and/or Sendai virus (SeV) detection antigens, and MHV antibody and/or SeV antibody diagnosis kits thereof</GBReference_title>
+        <GBReference_journal>WO2010123083-A 1 28-OCT-2010 National University Corporation Hokkaido University</GBReference_journal>
+      </GBReference>
+    </GBSeq_references>
+    <GBSeq_comment>OS Mouse hepatitis virus~PN WO 2010123083-A/1~PD 28-OCT-2010~PF 22-APR-2010 WO 2010JP057188~PR 23-APR-2009 JP 200 9-104906,23-APR-2009 JP 200 9-104905 PI nobuchika sasaki,jun asano,daisuke torigoe,takashi akoin CC~FH Key Location/Qualifiers~FT CDS (84)..(1451).</GBSeq_comment>
+    <GBSeq_feature-table>
+      <GBFeature>
+        <GBFeature_key>source</GBFeature_key>
+        <GBFeature_location>1..1767</GBFeature_location>
+        <GBFeature_intervals>
+          <GBInterval>
+            <GBInterval_from>1</GBInterval_from>
+            <GBInterval_to>1767</GBInterval_to>
+            <GBInterval_accession>FW572001.1</GBInterval_accession>
+          </GBInterval>
+        </GBFeature_intervals>
+        <GBFeature_quals>
+          <GBQualifier>
+            <GBQualifier_name>organism</GBQualifier_name>
+            <GBQualifier_value>Murine hepatitis virus</GBQualifier_value>
+          </GBQualifier>
+          <GBQualifier>
+            <GBQualifier_name>mol_type</GBQualifier_name>
+            <GBQualifier_value>unassigned DNA</GBQualifier_value>
+          </GBQualifier>
+          <GBQualifier>
+            <GBQualifier_name>db_xref</GBQualifier_name>
+            <GBQualifier_value>taxon:11138</GBQualifier_value>
+          </GBQualifier>
+        </GBFeature_quals>
+      </GBFeature>
+    </GBSeq_feature-table>
+    <GBSeq_sequence>tataagagtgattggcgtccgtacgtaccctctctactctaaaactcttgtagtttaaatctaatctaatctaaactttaaggatgtcttttgttcctgggcaagaaaatgccggtagcagaagctcctctggaaaccgcgctggtaatggaatcctcaagaagaccacttgggctgaccaaaccgagcgcgggttaaataatcaaaatagaggcagaaagaatcagcccaagcagactgcaactactcaacccaattccgggagtgtggttccccattactcttggttttcgggcattacccaattccagaagggaaaagagtttcagtttgcacaaggacaaggagtgcctattgccaatggaatcccagcttcacagcaaaagggatattggtacagacacaaccgacgttcctttaaaacacctgatggccagcagaagcagctactgcccagatggtatttttactatcttggaacagggccctatgctggcgcagagtatggcgacgatatcgaaggagttgtctgggtcgcaagccaacaggccgagactaggacctctgccgatattgttgaaagggacccaagtagccatgaggctattcctactaggtttgcgcccggtacggtattgcctcaaggtttttatgttgaaggctcaggaaggtctgcacctgctagtcgatctggttcgcggccacaatcccgtgggccaaataatcgcgctagaagcagttccaaccagcgccagcctgcctctactgtaaaacctgatatggccgaagaaattgctgctcttgttttggctaagctcggtaaagatgccggccagcctaagcaagtaacaaagcaaagtgccaaagaagtcaggcagaaaattttaaacaagcctcgtcaaaagaggactccaaacaagcagtgcccagtgcagcagtgttttggaaagagaggccccaatcagaattttggaggccctgaaatgttaaaacttggaactagtgatccacagttccccattcttgcagagttggccccaacagctggtgccttcttctttggatctaaattagaattggtcaaaaagaactctggtggtgctgatggacccaccaaagatgtgtatgagctgcaatattcaggtgcagttagatttgatagtactctacctggttttgagactatcatgaaagtgttgaatgagaatttgaatgcctaccagaatcaagatggtggtgcagatgtagtgagccctaagcctcagagaaagagagggacaaagcaaaaggctcagaaagatgaagtagataatgtaagcgttgcaaagcccaaaagctctgtgcagcgaaatgtaagtagagagttaacccctgaggatcgcagccttctggctcagatcctagatgatggcgtagtgccagatgggttagaagatgactctaatgtgtaaagagaatgaatcctatgtcggcactcggtggtaacccctcgcgagaaagtcgggataggacactctctatcagaatggatgtcttgctgtcataacagatagagaaggttgtggcagaccctgtatcaattagttgaaagagattgcaaaatagagaatgtgtgagagaagttagcaaggtcctacgtctaaccataagaacggcgataggcgccccctgggaagagctcacatcagggtactattcctgcaatgccctagtaaatgaatgaagttgatcatggccaattggaagaatcacaaaaaaaaaaaaaaa</GBSeq_sequence>
+  </GBSeq>

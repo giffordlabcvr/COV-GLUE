@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<GBSeq>
+
+    <GBSeq_locus>HOBOC43S</GBSeq_locus>
+    <GBSeq_length>4175</GBSeq_length>
+    <GBSeq_strandedness>single</GBSeq_strandedness>
+    <GBSeq_moltype>RNA</GBSeq_moltype>
+    <GBSeq_topology>linear</GBSeq_topology>
+    <GBSeq_division>VRL</GBSeq_division>
+    <GBSeq_update-date>03-MAY-2002</GBSeq_update-date>
+    <GBSeq_create-date>26-JUL-1993</GBSeq_create-date>
+    <GBSeq_definition>Human coronavirus OC43 spike protein, complete cds</GBSeq_definition>
+    <GBSeq_primary-accession>L14643</GBSeq_primary-accession>
+    <GBSeq_accession-version>L14643.1</GBSeq_accession-version>
+    <GBSeq_other-seqids>
+      <GBSeqid>gb|L14643.1|HOBOC43S</GBSeqid>
+      <GBSeqid>gi|306155</GBSeqid>
+    </GBSeq_other-seqids>
+    <GBSeq_source>Human coronavirus OC43 (HCoV-OC43)</GBSeq_source>
+    <GBSeq_organism>Human coronavirus OC43</GBSeq_organism>
+    <GBSeq_taxonomy>Viruses; Riboviria; Nidovirales; Cornidovirineae; Coronaviridae; Orthocoronavirinae; Betacoronavirus; Embecovirus</GBSeq_taxonomy>
+    <GBSeq_references>
+      <GBReference>
+        <GBReference_reference>1</GBReference_reference>
+        <GBReference_position>1..4175</GBReference_position>
+        <GBReference_authors>
+          <GBAuthor>Mounir,S.</GBAuthor>
+          <GBAuthor>Talbot,P.J.</GBAuthor>
+        </GBReference_authors>
+        <GBReference_title>Molecular characterization of the S protein gene of human coronavirus OC43</GBReference_title>
+        <GBReference_journal>J. Gen. Virol. 74 (Pt 9), 1981-1987 (1993)</GBReference_journal>
+        <GBReference_pubmed>8376972</GBReference_pubmed>
+      </GBReference>
+    </GBSeq_references>
+    <GBSeq_feature-table>
+      <GBFeature>
+        <GBFeature_key>source</GBFeature_key>
+        <GBFeature_location>1..4175</GBFeature_location>
+        <GBFeature_intervals>
+          <GBInterval>
+            <GBInterval_from>1</GBInterval_from>
+            <GBInterval_to>4175</GBInterval_to>
+            <GBInterval_accession>L14643.1</GBInterval_accession>
+          </GBInterval>
+        </GBFeature_intervals>
+        <GBFeature_quals>
+          <GBQualifier>
+            <GBQualifier_name>organism</GBQualifier_name>
+            <GBQualifier_value>Human coronavirus OC43</GBQualifier_value>
+          </GBQualifier>
+          <GBQualifier>
+            <GBQualifier_name>mol_type</GBQualifier_name>
+            <GBQualifier_value>genomic RNA</GBQualifier_value>
+          </GBQualifier>
+          <GBQualifier>
+            <GBQualifier_name>strain</GBQualifier_name>
+            <GBQualifier_value>OC43</GBQualifier_value>
+          </GBQualifier>
+          <GBQualifier>
+            <GBQualifier_name>db_xref</GBQualifier_name>
+            <GBQualifier_value>taxon:31631</GBQualifier_value>
+          </GBQualifier>
+        </GBFeature_quals>
+      </GBFeature>
+      <GBFeature>
+        <GBFeature_key>CDS</GBFeature_key>
+        <GBFeature_location>32..4093</GBFeature_location>
+        <GBFeature_intervals>
+          <GBInterval>
+            <GBInterval_from>32</GBInterval_from>
+            <GBInterval_to>4093</GBInterval_to>
+            <GBInterval_accession>L14643.1</GBInterval_accession>
+          </GBInterval>
+        </GBFeature_intervals>
+        <GBFeature_quals>
+          <GBQualifier>
+            <GBQualifier_name>codon_start</GBQualifier_name>
+            <GBQualifier_value>1</GBQualifier_value>
+          </GBQualifier>
+          <GBQualifier>
+            <GBQualifier_name>transl_table</GBQualifier_name>
+            <GBQualifier_value>1</GBQualifier_value>
+          </GBQualifier>
+          <GBQualifier>
+            <GBQualifier_name>product</GBQualifier_name>
+            <GBQualifier_value>spike protein</GBQualifier_value>
+          </GBQualifier>
+          <GBQualifier>
+            <GBQualifier_name>protein_id</GBQualifier_name>
+            <GBQualifier_value>AAA03055.1</GBQualifier_value>
+          </GBQualifier>
+          <GBQualifier>
+            <GBQualifier_name>translation</GBQualifier_name>
+            <GBQualifier_value>MFLILLISLPTAFAVIGDLKCTSDNINDKDTGPPPISTDTVDVTNGLGTYYVLDRVYLNTTLFLNGYYPTSGSTYRNMALKGSVLLSRLWFKPPFLSDFINGIFAKVKNTKVIKDRVMYSEFPAITIGSTFVNTSYSVVVQPRTINSTQDGDNKLQGLLEVSVCQYNMCEYPQTICHPNLGNHRKELWHLDTGVVSCLYKRNFTYDVNADYLYFHFYQEGGTFYAYFTDTGVVTKFLFNVYLGMALSHYYVMPLTCNSKLTLEYWVTPLTSRQYLLAFNQDGIIFNAEDCMSDFMSEIKCKTQSIAPPTGVYELNGYTVQPIADVYRRKPNLPNCNIEAWLNDKSVPSPLNWERKTFSNCNFNMSSLMSFIQADSFTCNNIDAAKIYGMCFSSITIDKFAIPNGRKVDLQLGNLGYLQSFNYRIDTTATSCQLYYNLPAANVSVSRFNPSTWNKRFGFIEDSVFKPRPAGVLTNHDVVYAQHCFKAPKNFCPCKLNGSCVGSGPGKNNGIGTCPAGTNYLTCDNLCTPDPITFTGTYKCPQTKSLVGIGEHCSGLAVKSDYCGGNSCTCRPQAFLGWSADSCLQGDKCNIFANFILHDVNSGLTCSTDLQKANTDIILGVCVNYDLYGILGQGIFVEVNATYYNSWQNLLYDSNGNLYGFRDYIINRTFMIRSCYSGRVSAAFHANSSEPALLFRNIKCNYVFNNSLTRQLQPINYFDSYLGCVVNAYNSTAISVQTCDLTVGSGYCVDYSKNRRSRGAITTGYRFTNFEPFTVNSVNDSLEPVGGLYEIQIPSEFTIGNMVEFIQTSSPKVTIDCAAFVCGDYAACKSQLVEYGSFCDNINAILTEVNELLDTTQLQVANSLMNGVTLSTKLKDGVNFNVDDINFSPVLGCLGSECSKASSRSAIEDLLFDKVKLSDVGFVEAYNNCTGGAEIRDLICVQSYKGIKVLPPLLSENQISGYTLAATSASLFPPWTAAAGVPFYLNVQYRINGLGVTMDVLSQNQKLIANAFNNALYAIQEGFDATNSALVKIQAVVNANAEALNNLLQQLSNRFGAISASLQEILSRLDALEAEAQIDRLINGRLTALNAYVSQQLSDSTLVKFSAAQAMEKVNECVKSQSSRINFCGNGNHIISLVQNAPYGLYFIHFSYVPTKYVTARVSPGLCIAGDRGIAPKSGYFVNVNNTWMYTGSGYYYPEPITENNVVVMSTCAVNYTKAPYVMLNTSIPNLPDFKEELDQWFKNQTSVAPDLSLDYINVTFLDLQVEMNRLQEAIKVLNQSYINLKDIGTYEYYVKWPWYVWLLICLAGVAMLVLLFFICCCTGCGTSCFKKCGGCCDDYTGYQELVIKTSHDD</GBQualifier_value>
+          </GBQualifier>
+        </GBFeature_quals>
+      </GBFeature>
+    </GBSeq_feature-table>
+    <GBSeq_sequence>ggctgcatgatgcttagaccataatctaaacatgtttttgatacttttaatttccttaccaacggcttttgctgttataggagatttaaagtgtacttcagataatattaatgataaagacaccggtcctcctcctataagtactgatactgttgatgttactaatggtttgggtacttattatgttttagatcgtgtgtatttaaatactacgttgtttcttaatggttattaccctacttcaggttccacatatcgtaatatggcactgaagggaagtgtactattgagcagactatggtttaaaccaccatttctttctgattttattaatggtatttttgctaaggtcaaaaataccaaggttattaaagatcgtgtaatgtatagtgagttccctgctataactataggtagtacttttgtaaatacatcctatagtgtggtagtacaaccacgtacaatcaattcaacacaggatggtgataataaattacaaggtcttttagaggtctctgtttgccagtataatatgtgcgagtacccacaaacgatttgtcatcctaacctgggtaatcatcgcaaagaactatggcatttggatacaggtgttgtttcctgtttatataagcgtaatttcacatatgatgtgaatgctgattatttgtattttcatttttatcaagaaggtggtactttttatgcatattttacagacactggtgttgttactaagtttttgtttaatgtttatttaggcatggcgctttcacactattatgtcatgcctctgacttgtaatagtaagcttactttagaatattgggttacacctctcacttctagacaatatttactcgctttcaatcaagatggtattatttttaatgctgaagattgtatgagtgattttatgagtgagattaagtgtaaaacacaatctatagcgccacctactggtgtttatgaattaaacggttacactgttcagccaatcgcagatgtttaccgacgtaaacctaatcttcccaattgcaatatagaagcttggcttaatgataagtcggtgccctctccattaaattgggaacgtaagacattttcaaattgtaattttaatatgagcagcctgatgtcttttattcaggcagactcatttacttgtaataatattgatgctgctaagatatatggtatgtgtttttccagcataactatagataagtttgctatacccaatggcaggaaggttgacctacaattgggtaatttgggctatttgcagtcatttaactatagaattgatactactgcaacaagttgtcagttgtattataatttacctgctgctaatgtttctgttagcaggtttaatccttctacttggaataagagatttggttttatagaagattctgtttttaagcctcgacctgcaggtgttcttactaatcatgatgtagtttatgcacaacactgtttcaaagctcctaaaaatttctgtccgtgtaaattgaatggttcgtgtgtaggtagtggtcctggtaaaaataatggtataggcacttgtcctgcaggtactaattatttaacttgtgataatttgtgcactcctgatcctattacatttacaggtacttataagtgcccccaaactaaatctttagttggcataggtgagcactgttcgggtcttgctgttaaaagtgattattgtggaggcaattcttgtacttgccgaccacaagcatttttgggttggtctgcagactcttgtttacaaggagacaagtgtaatatttttgctaattttattttgcatgatgttaatagtggtcttacttgttctactgatttacaaaaagctaacacagacataattcttggtgtttgtgttaattatgacctctatggtattttaggccaaggcatttttgttgaggttaatgcgacttattataatagttggcagaaccttttatatgattctaatggtaatctctacggttttagagactacataataaacagaacttttatgattcgtagttgctatagcggtcgtgtttctgcggcctttcacgctaactcttccgaaccagcattgctatttcggaatattaaatgcaactacgtttttaataatagtcttacacgacagctgcaacccattaactattttgatagttatcttggttgtgttgtcaatgcttataatagtactgctatttctgttcaaacatgtgatctcacagtaggtagtggttactgtgtggattactctaaaaacagacgaagtcgtggagcgattaccactggttatcggtttactaattttgagccatttactgttaattcagtaaacgatagtttagaacctgtaggtggtttgtatgaaattcaaataccttcagagtttactataggtaatatggtggagtttattcaaacaagctctcctaaagttactattgattgtgctgcatttgtctgtggtgattatgcagcatgtaaatcacagttggttgaatatggtagtttctgtgataacattaatgccatactcacagaagtaaatgaactacttgacactacacagttgcaagtagctaatagtttaatgaatggtgttactcttagcactaagcttaaagatggcgttaatttcaatgtagacgacatcaatttttcccctgtattaggttgtctaggcagcgaatgtagtaaagcttccagtagatctgctatagaggatttactttttgataaagtaaagttatctgatgtcggttttgttgaggcttataataattgtacaggaggtgccgaaattagggacctcatttgtgtgcaaagttataaaggcatcaaagtgttgcctccactgctctcagaaaatcagatcagtggatacactttggctgccacctctgctagtctatttcctccttggacagcagcagcaggtgtaccattttatttaaatgttcagtatcgcattaatgggcttggtgtcaccatggatgtgctaagtcaaaatcaaaagcttattgctaatgcatttaacaatgccctttatgctattcaggaagggttcgatgcaactaattctgctttagttaaaattcaagctgttgttaatgcaaatgctgaagctcttaataacttattgcaacaactctctaatagatttggtgctataagtgcttctttacaagaaattctatctagacttgatgctcttgaagcggaagctcagatagatagacttattaatggtcgtcttaccgctcttaatgcttatgtttctcaacagcttagtgattctacactggtaaaatttagtgcagcacaagctatggagaaggttaatgaatgtgtcaaaagccaatcatctaggataaatttctgtggtaatggtaatcatattatatcattagtgcagaatgctccatatggtttgtattttatccactttagttatgtccctactaagtatgtcacagcgagggttagtcctggtctgtgcattgctggtgatagaggtatagctcctaagagtggttattttgttaatgtaaataatacttggatgtacactggtagtggttactactaccctgaacctataactgaaaataatgttgttgttatgagtacctgcgctgttaattatactaaagcgccgtatgtaatgctgaacacttcaatacccaaccttcctgattttaaggaagagttggatcaatggtttaaaaatcaaacatcagtggcaccagatttgtcacttgattatataaatgttacattcttggacctacaagttgaaatgaataggttacaggaggcaataaaagtcttaaatcagagctacatcaatctcaaggacattggtacatatgaatattatgtaaaatggccttggtatgtatggcttttaatctgccttgctggtgtagctatgcttgttttactattcttcatatgctgttgtacaggatgtgggactagttgttttaagaaatgtggtggttgttgtgatgattatactggataccaggagttagtaatcaaaacttcacatgacgactaagttcgtctttgattcattgcactgatctcttgttagatctttttgcaatctagcatttgttaaagttcttaaggccacgccc</GBSeq_sequence>
+  </GBSeq>

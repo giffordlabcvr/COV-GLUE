@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<GBSeq>
+
+    <GBSeq_locus>MHVE2</GBSeq_locus>
+    <GBSeq_length>4023</GBSeq_length>
+    <GBSeq_strandedness>single</GBSeq_strandedness>
+    <GBSeq_moltype>RNA</GBSeq_moltype>
+    <GBSeq_topology>linear</GBSeq_topology>
+    <GBSeq_division>VRL</GBSeq_division>
+    <GBSeq_update-date>10-APR-2001</GBSeq_update-date>
+    <GBSeq_create-date>02-AUG-1993</GBSeq_create-date>
+    <GBSeq_definition>Murine hepatitis virus membrane associated glycoprotein E2 precursor, gene, complete cds</GBSeq_definition>
+    <GBSeq_primary-accession>M18379</GBSeq_primary-accession>
+    <GBSeq_accession-version>M18379.1</GBSeq_accession-version>
+    <GBSeq_other-seqids>
+      <GBSeqid>gb|M18379.1|MHVE2</GBSeqid>
+      <GBSeqid>gi|331844</GBSeqid>
+    </GBSeq_other-seqids>
+    <GBSeq_source>Murine hepatitis virus</GBSeq_source>
+    <GBSeq_organism>Murine hepatitis virus</GBSeq_organism>
+    <GBSeq_taxonomy>Viruses; Riboviria; Nidovirales; Cornidovirineae; Coronaviridae; Orthocoronavirinae; Betacoronavirus; Embecovirus</GBSeq_taxonomy>
+    <GBSeq_references>
+      <GBReference>
+        <GBReference_reference>1</GBReference_reference>
+        <GBReference_position>1..4023</GBReference_position>
+        <GBReference_authors>
+          <GBAuthor>Luytjes,W.</GBAuthor>
+          <GBAuthor>Sturman,L.S.</GBAuthor>
+          <GBAuthor>Bredenbeek,P.J.</GBAuthor>
+          <GBAuthor>Charite,J.</GBAuthor>
+          <GBAuthor>van der Zeijst,B.A.</GBAuthor>
+          <GBAuthor>Horzinek,M.C.</GBAuthor>
+          <GBAuthor>Spaan,W.J.</GBAuthor>
+        </GBReference_authors>
+        <GBReference_title>Primary structure of the glycoprotein E2 of coronavirus MHV-A59 and identification of the trypsin cleavage site</GBReference_title>
+        <GBReference_journal>Virology 161 (2), 479-487 (1987)</GBReference_journal>
+        <GBReference_pubmed>2825419</GBReference_pubmed>
+      </GBReference>
+    </GBSeq_references>
+    <GBSeq_feature-table>
+      <GBFeature>
+        <GBFeature_key>source</GBFeature_key>
+        <GBFeature_location>1..4023</GBFeature_location>
+        <GBFeature_intervals>
+          <GBInterval>
+            <GBInterval_from>1</GBInterval_from>
+            <GBInterval_to>4023</GBInterval_to>
+            <GBInterval_accession>M18379.1</GBInterval_accession>
+          </GBInterval>
+        </GBFeature_intervals>
+        <GBFeature_quals>
+          <GBQualifier>
+            <GBQualifier_name>organism</GBQualifier_name>
+            <GBQualifier_value>Murine hepatitis virus</GBQualifier_value>
+          </GBQualifier>
+          <GBQualifier>
+            <GBQualifier_name>mol_type</GBQualifier_name>
+            <GBQualifier_value>genomic RNA</GBQualifier_value>
+          </GBQualifier>
+          <GBQualifier>
+            <GBQualifier_name>strain</GBQualifier_name>
+            <GBQualifier_value>MHV-A59</GBQualifier_value>
+          </GBQualifier>
+          <GBQualifier>
+            <GBQualifier_name>db_xref</GBQualifier_name>
+            <GBQualifier_value>taxon:11138</GBQualifier_value>
+          </GBQualifier>
+        </GBFeature_quals>
+      </GBFeature>
+      <GBFeature>
+        <GBFeature_key>CDS</GBFeature_key>
+        <GBFeature_location>11..3985</GBFeature_location>
+        <GBFeature_intervals>
+          <GBInterval>
+            <GBInterval_from>11</GBInterval_from>
+            <GBInterval_to>3985</GBInterval_to>
+            <GBInterval_accession>M18379.1</GBInterval_accession>
+          </GBInterval>
+        </GBFeature_intervals>
+        <GBFeature_quals>
+          <GBQualifier>
+            <GBQualifier_name>codon_start</GBQualifier_name>
+            <GBQualifier_value>1</GBQualifier_value>
+          </GBQualifier>
+          <GBQualifier>
+            <GBQualifier_name>transl_table</GBQualifier_name>
+            <GBQualifier_value>1</GBQualifier_value>
+          </GBQualifier>
+          <GBQualifier>
+            <GBQualifier_name>product</GBQualifier_name>
+            <GBQualifier_value>membrane associated glycoprotein E2 precursor</GBQualifier_value>
+          </GBQualifier>
+          <GBQualifier>
+            <GBQualifier_name>protein_id</GBQualifier_name>
+            <GBQualifier_value>AAA46455.1</GBQualifier_value>
+          </GBQualifier>
+          <GBQualifier>
+            <GBQualifier_name>translation</GBQualifier_name>
+            <GBQualifier_value>MLFVFILFLPSCLGYIGDFRCIQLVNSNGANVSAPSISTETVEVSQGLGTYYVLDRVYLNATLLLTGYYPVDGSKFRNLALRGTNSVSLSWFQPPYLNQFNDGIFAKVQNLKTSTPSGATAYFPTIVIGSLFGYTSYTVVIEPYNGVIMASVCQYTICQLPYTDCKPNTNGNKLIGFWHTDVKPPICVLKRNFTLNVNADAFYFHFYQHGGTFYAYYADKPSATTFLFSVYIGDILTQYYVLPFICNPTAGSTFAPRYWVTPLVKRQYLFNFNQKGVITSAVDCASSYTSEIKCKTQSMLPSTGVYELSGYTVQPVGVVYRRVANLPACNIEEWLTARSVPSPLNWERKTFQNCNFNLSSLLRYVQAESLFCNNIDASKVYGRCFGSISVDKFAVPRSRQVDLQLGNSGFLQTANYKIDTAATSCQLHYTLPKNNVTINNHNPSSWNRRYGFNDAGVFGKNQHDVVYAQQCFTVRSSYCPCAQPDIVSPCTTQTKPKSAFVNVGDHCEGLGVLEDNCGNADPHKGCICANNSFIGWSHDTCLVNDRCQIFANILLNGINSGTTCSTDLQLPNTEVVTGICVKYDLYGITGQGVFKEVKADYYNSWQTLLYDVNGNLNGFRDLTTNKTYTIRSCYSGRVSAAFHKDAPEPALLYRNINCSYVFSNNISREENPLNYFDSYLGCVVNADNRTDEALPNCDLRMGAGLCVDYSKSRRAHRSVSTGYRLTTFEPYTPMLVNDSVQSVDGLYEMQIPTNFTIGHHEEFIQTRSPKVTIDCAAFVCGDNTACRQQLVEYGSFCVNVNAILNEVNNLLDNMQLQVASALMQGVTISSRLPDGISGPIDDINFSPLLGCIGSTCAEDGNGPSAIRGRSAIEDLLFDKVKLSDVGFVEAYNNCTGGQEVRDLLCVQSFNGIKVLPPVLSESQISGYTTGATAAAMFPPWSAAAGVPFSLSVQYRINGLGVTMNVLSENQKMIASAFNNALGAIQDGFDATNSALGKIQSVVNANAEALNNLLNQLSNRFGAISASLQEILTRLEAVEAKAQIDRLINGRLTALNAYISKQLSDSTLIKVSAAQAIEKVNECVKSQTTRINFCGNGNHILSLVQNAPYGLYFIHFSYVPISFTTANVSPGLCISGDRGLAPKAGYFVQDDGEWKFTGSSYYYPEPITDKNSVIMSSCAVNYTKAPEVFLNTSIPNPPDFKEELDKWFKNQTSIAPDLSLDFEKLNVTLLDLTYEMNRIQDAIKKLNESYINLKEVGTYEMYVKWPWYVWLLIGLAGVAVCVLLFFICCCTGCGSCCFKKCGNCCDEYGGHQDSIVIHNISSHED</GBQualifier_value>
+          </GBQualifier>
+        </GBFeature_quals>
+      </GBFeature>
+      <GBFeature>
+        <GBFeature_key>sig_peptide</GBFeature_key>
+        <GBFeature_location>11..58</GBFeature_location>
+        <GBFeature_intervals>
+          <GBInterval>
+            <GBInterval_from>11</GBInterval_from>
+            <GBInterval_to>58</GBInterval_to>
+            <GBInterval_accession>M18379.1</GBInterval_accession>
+          </GBInterval>
+        </GBFeature_intervals>
+        <GBFeature_quals>
+          <GBQualifier>
+            <GBQualifier_name>peptide</GBQualifier_name>
+            <GBQualifier_value>MLFVFILFLPSCLGYI</GBQualifier_value>
+          </GBQualifier>
+        </GBFeature_quals>
+      </GBFeature>
+      <GBFeature>
+        <GBFeature_key>mat_peptide</GBFeature_key>
+        <GBFeature_location>59..2161</GBFeature_location>
+        <GBFeature_intervals>
+          <GBInterval>
+            <GBInterval_from>59</GBInterval_from>
+            <GBInterval_to>2161</GBInterval_to>
+            <GBInterval_accession>M18379.1</GBInterval_accession>
+          </GBInterval>
+        </GBFeature_intervals>
+        <GBFeature_quals>
+          <GBQualifier>
+            <GBQualifier_name>product</GBQualifier_name>
+            <GBQualifier_value>E2 90B</GBQualifier_value>
+          </GBQualifier>
+          <GBQualifier>
+            <GBQualifier_name>peptide</GBQualifier_name>
+            <GBQualifier_value>GDFRCIQLVNSNGANVSAPSISTETVEVSQGLGTYYVLDRVYLNATLLLTGYYPVDGSKFRNLALRGTNSVSLSWFQPPYLNQFNDGIFAKVQNLKTSTPSGATAYFPTIVIGSLFGYTSYTVVIEPYNGVIMASVCQYTICQLPYTDCKPNTNGNKLIGFWHTDVKPPICVLKRNFTLNVNADAFYFHFYQHGGTFYAYYADKPSATTFLFSVYIGDILTQYYVLPFICNPTAGSTFAPRYWVTPLVKRQYLFNFNQKGVITSAVDCASSYTSEIKCKTQSMLPSTGVYELSGYTVQPVGVVYRRVANLPACNIEEWLTARSVPSPLNWERKTFQNCNFNLSSLLRYVQAESLFCNNIDASKVYGRCFGSISVDKFAVPRSRQVDLQLGNSGFLQTANYKIDTAATSCQLHYTLPKNNVTINNHNPSSWNRRYGFNDAGVFGKNQHDVVYAQQCFTVRSSYCPCAQPDIVSPCTTQTKPKSAFVNVGDHCEGLGVLEDNCGNADPHKGCICANNSFIGWSHDTCLVNDRCQIFANILLNGINSGTTCSTDLQLPNTEVVTGICVKYDLYGITGQGVFKEVKADYYNSWQTLLYDVNGNLNGFRDLTTNKTYTIRSCYSGRVSAAFHKDAPEPALLYRNINCSYVFSNNISREENPLNYFDSYLGCVVNADNRTDEALPNCDLRMGAGLCVDYSKSRRAHR</GBQualifier_value>
+          </GBQualifier>
+        </GBFeature_quals>
+      </GBFeature>
+      <GBFeature>
+        <GBFeature_key>mat_peptide</GBFeature_key>
+        <GBFeature_location>2162..3982</GBFeature_location>
+        <GBFeature_intervals>
+          <GBInterval>
+            <GBInterval_from>2162</GBInterval_from>
+            <GBInterval_to>3982</GBInterval_to>
+            <GBInterval_accession>M18379.1</GBInterval_accession>
+          </GBInterval>
+        </GBFeature_intervals>
+        <GBFeature_quals>
+          <GBQualifier>
+            <GBQualifier_name>product</GBQualifier_name>
+            <GBQualifier_value>E2 90A</GBQualifier_value>
+          </GBQualifier>
+          <GBQualifier>
+            <GBQualifier_name>peptide</GBQualifier_name>
+            <GBQualifier_value>SVSTGYRLTTFEPYTPMLVNDSVQSVDGLYEMQIPTNFTIGHHEEFIQTRSPKVTIDCAAFVCGDNTACRQQLVEYGSFCVNVNAILNEVNNLLDNMQLQVASALMQGVTISSRLPDGISGPIDDINFSPLLGCIGSTCAEDGNGPSAIRGRSAIEDLLFDKVKLSDVGFVEAYNNCTGGQEVRDLLCVQSFNGIKVLPPVLSESQISGYTTGATAAAMFPPWSAAAGVPFSLSVQYRINGLGVTMNVLSENQKMIASAFNNALGAIQDGFDATNSALGKIQSVVNANAEALNNLLNQLSNRFGAISASLQEILTRLEAVEAKAQIDRLINGRLTALNAYISKQLSDSTLIKVSAAQAIEKVNECVKSQTTRINFCGNGNHILSLVQNAPYGLYFIHFSYVPISFTTANVSPGLCISGDRGLAPKAGYFVQDDGEWKFTGSSYYYPEPITDKNSVIMSSCAVNYTKAPEVFLNTSIPNPPDFKEELDKWFKNQTSIAPDLSLDFEKLNVTLLDLTYEMNRIQDAIKKLNESYINLKEVGTYEMYVKWPWYVWLLIGLAGVAVCVLLFFICCCTGCGSCCFKKCGNCCDEYGGHQDSIVIHNISSHED</GBQualifier_value>
+          </GBQualifier>
+        </GBFeature_quals>
+      </GBFeature>
+    </GBSeq_feature-table>
+    <GBSeq_sequence>taatctaaacatgctgttcgtgtttattctatttttgccctcttgtttagggtatattggtgattttagatgtatccagcttgtgaattcaaacggtgctaatgttagtgctccaagcattagcactgagaccgttgaagtttcacaaggcctggggacatattatgtgttagatcgagtttatttaaatgccacattattgcttactggttactacccggtcgatggttctaagtttagaaacctcgctcttaggggaactaactcagttagcttgtcgtggtttcaaccaccctatttaaatcagtttaatgatggcatatttgcgaaggtgcagaaccttaagacaagtacgccatcaggtgcaactgcatattttcctactatagttataggtagtttgtttggctatacttcctataccgttgtaatagagccatataatggtgttataatggcctcagtgtgccagtataccatttgtcagttaccttacactgattgtaagcctaacactaatggtaataagcttatagggttttggcacacggatgtaaaacccccaatttgtgtgttaaagcgaaatttcacgcttaatgttaatgctgatgcattttattttcatttttaccaacatggtggtactttttatgcgtactatgcggataaaccctccgctactacgtttttgtttagtgtatatattggcgatattttaacacagtattatgtgttacctttcatctgcaacccaacagctggtagcacttttgctccgcgctattgggttacacctttggttaagcgccaatatttgtttaatttcaaccagaagggtgtcattactagtgctgttgattgtgctagtagttataccagtgaaataaaatgtaagacccagagcatgttacctagcactggtgtctatgagttatccggttatacggtccaaccagttggagttgtataccggcgtgttgctaacctcccagcttgtaatatagaggagtggcttactgctaggtcagtcccctcccctctcaactgggagcgtaagacttttcagaattgtaattttaatttaagcagcctgttacgttatgttcaggctgagagtttgttttgtaataatatcgatgcttccaaagtgtatggcaggtgctttggtagtatttcagttgataagtttgctgtaccccgaagtaggcaagttgatttacagcttggtaactctggatttctgcagactgctaattataagattgatacagctgccacttcgtgtcagctgcattacaccttgcctaagaataatgtcaccataaacaaccataacccctcgtcttggaataggaggtatggctttaatgatgctggcgtctttggcaaaaaccaacatgacgttgtttacgctcagcaatgttttactgtaagatctagttattgcccgtgtgctcaaccggacatagttagcccttgcactactcagactaagcctaagtctgcttttgttaatgtgggtgaccattgtgaaggcttaggtgttttagaagataattgtggcaatgctgatccacataagggttgtatctgtgccaacaattcatttattggatggtcacatgatacctgccttgttaatgatcgctgccaaatttttgctaatatattgttaaatggcattaatagtggtaccacatgttccacagatttgcagttgcctaatactgaagtggttactggcatttgtgtcaaatatgacctctacggtattactggacaaggtgtttttaaagaggttaaggctgactattataatagctggcaaacccttctgtatgatgttaatggtaatttgaatggttttcgtgatcttaccactaacaagacttatacgataaggagctgttatagtggccgtgtttctgctgcatttcataaagatgcacccgaaccggctctgctctatcgtaatataaattgtagctatgtttttagcaataatatttcccgtgaggagaacccacttaattactttgatagttatttgggttgtgttgttaatgctgataaccgcacggatgaggcgcttcctaattgtgatctccgtatgggtgctggcttatgcgttgattattcaaaatcacgcagggctcaccgatcagtttctactggctatcggttaactacatttgagccatacactccgatgttagttaatgatagtgtccaatccgttgatggattatatgagatgcaaataccaaccaattttactattgggcaccatgaggagttcattcaaactagatctccaaaggtgactatagattgtgctgcatttgtctgtggtgataacactgcatgcaggcagcagttggttgagtatggctctttctgtgttaatgttaatgccattcttaatgaggttaataacctcttggataatatgcaactacaagttgctagtgcattaatgcagggtgttactataagctcgagactgccagacggcatctcaggccctatagatgacattaattttagtcctctacttggatgcataggttcaacatgtgctgaagacggcaatggacctagtgcaatccgagggcgttctgctatagaggatttgttatttgacaaggtcaaattatctgatgttggctttgtcgaggcttataataattgcaccggtggtcaagaagttcgtgacctcctttgtgtacaatcttttaatggcatcaaagtattacctcctgtgttgtcagagagtcagatctctggctacacaaccggtgctactgcggcagctatgttcccaccgtggtcagcagctgccggtgtgccatttagtttaagtgttcaatatagaattaatggtttaggtgtcactatgaatgtgcttagtgagaaccaaaagatgattgctagtgcttttaacaatgcgctgggtgctatccaggatgggtttgatgcaaccaattctgctttaggtaagatccagtccgttgttaatgcaaatgctgaagcactcaataacttactaaatcagctttctaacaggtttggtgctattagtgcttctttacaagaaattctaactcggcttgaggctgtagaagcaaaagcccagatagatcgtcttattaatggcaggttaactgcacttaatgcgtatatatccaagcaacttagtgatagtacgcttattaaagttagtgctgctcaggccatagaaaaggtcaatgagtgcgttaagagccaaaccacgcgtattaatttctgtggcaatggtaatcatatattatctcttgtccagaatgcgccttatggcttatattttatacacttcagctatgtgccaatatcctttacaaccgcaaatgtgagtcctggactttgcatttctggtgatagaggattagcacctaaagctggatattttgttcaagatgatggagaatggaagttcacaggcagttcatattactaccctgaacccattacagataaaaacagtgtcattatgagtagttgcgcagtaaactacacaaaggcacctgaagttttcttgaacacttcaatacctaatccacccgactttaaggaggagttagataaatggtttaagaatcagacgtctattgcgcctgatttatctctcgatttcgagaagttaaatgttactttgctggacctgacgtatgagatgaacaggattcaggatgcaattaagaagttaaatgagagctacatcaacctcaaggaagttggcacatatgaaatgtatgtgaaatggccttggtatgtttggttgctaattggattagctggtgtagctgtttgtgtgttgttattctttatatgttgctgcacaggttgtggctcatgttgttttaagaagtgtggaaattgttgtgatgagtatggaggacaccaggacagtattgtgatacataatatttcctctcatgaggattgactatcacagcctctcctggaaagacagaaaatctaaac</GBSeq_sequence>
+  </GBSeq>

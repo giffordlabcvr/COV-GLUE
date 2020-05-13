@@ -1,0 +1,33 @@
+
+  # Delete modules
+  delete module betacovNcbiImporterHku1
+  delete module betacovNcbiImporterMers
+  delete module betacovNcbiImporterMhv
+  delete module betacovNcbiImporterOc43
+  delete module betacovNcbiImporterSars1
+
+  
+  # Create modules
+  create module -f modules/betacovNcbiImporterHku1.xml
+  create module -f modules/betacovNcbiImporterMers.xml
+  create module -f modules/betacovNcbiImporterMhv.xml
+  create module -f modules/betacovNcbiImporterOc43.xml
+  create module -f modules/betacovNcbiImporterSars1.xml
+
+
+  # Download NCBI sequences 
+  module betacovNcbiImporterHku1 import
+  module betacovNcbiImporterMers import
+  module betacovNcbiImporterMhv import
+  module betacovNcbiImporterOc43 import
+  module betacovNcbiImporterSars1 import
+
+
+  # Export sources
+  export source ncbi-curated-hku1
+  export source ncbi-curated-mers
+  export source ncbi-curated-mhv
+  export source ncbi-curated-oc43
+  export source ncbi-curated-sars1
+
+

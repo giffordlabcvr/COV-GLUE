@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<GBSeq>
+
+    <GBSeq_locus>MHVPRP</GBSeq_locus>
+    <GBSeq_length>2000</GBSeq_length>
+    <GBSeq_strandedness>single</GBSeq_strandedness>
+    <GBSeq_moltype>RNA</GBSeq_moltype>
+    <GBSeq_topology>linear</GBSeq_topology>
+    <GBSeq_division>VRL</GBSeq_division>
+    <GBSeq_update-date>16-APR-2001</GBSeq_update-date>
+    <GBSeq_create-date>04-AUG-1993</GBSeq_create-date>
+    <GBSeq_definition>Murine hepatitis virus polymerase-related protein gene, partial cds; and unknown gene</GBSeq_definition>
+    <GBSeq_primary-accession>M27198</GBSeq_primary-accession>
+    <GBSeq_accession-version>M27198.1</GBSeq_accession-version>
+    <GBSeq_other-seqids>
+      <GBSeqid>gb|M27198.1|MHVPRP</GBSeqid>
+      <GBSeqid>gi|928852</GBSeqid>
+    </GBSeq_other-seqids>
+    <GBSeq_keywords>
+      <GBKeyword>p28 protein</GBKeyword>
+      <GBKeyword>polymerase</GBKeyword>
+    </GBSeq_keywords>
+    <GBSeq_source>Murine hepatitis virus</GBSeq_source>
+    <GBSeq_organism>Murine hepatitis virus</GBSeq_organism>
+    <GBSeq_taxonomy>Viruses; Riboviria; Nidovirales; Cornidovirineae; Coronaviridae; Orthocoronavirinae; Betacoronavirus; Embecovirus</GBSeq_taxonomy>
+    <GBSeq_references>
+      <GBReference>
+        <GBReference_reference>1</GBReference_reference>
+        <GBReference_position>1..2000</GBReference_position>
+        <GBReference_authors>
+          <GBAuthor>Pachuk,C.J.</GBAuthor>
+          <GBAuthor>Bredenbeek,P.J.</GBAuthor>
+          <GBAuthor>Zoltick,P.W.</GBAuthor>
+          <GBAuthor>Spaan,W.J.</GBAuthor>
+          <GBAuthor>Weiss,S.R.</GBAuthor>
+        </GBReference_authors>
+        <GBReference_title>Molecular cloning of the gene encoding the putative polymerase of mouse hepatitis coronavirus, strain A59</GBReference_title>
+        <GBReference_journal>Virology 171 (1), 141-148 (1989)</GBReference_journal>
+        <GBReference_pubmed>2545027</GBReference_pubmed>
+      </GBReference>
+    </GBSeq_references>
+    <GBSeq_comment>On Aug 5, 1995 this sequence version replaced gi:341643.</GBSeq_comment>
+    <GBSeq_feature-table>
+      <GBFeature>
+        <GBFeature_key>source</GBFeature_key>
+        <GBFeature_location>1..2000</GBFeature_location>
+        <GBFeature_intervals>
+          <GBInterval>
+            <GBInterval_from>1</GBInterval_from>
+            <GBInterval_to>2000</GBInterval_to>
+            <GBInterval_accession>M27198.1</GBInterval_accession>
+          </GBInterval>
+        </GBFeature_intervals>
+        <GBFeature_quals>
+          <GBQualifier>
+            <GBQualifier_name>organism</GBQualifier_name>
+            <GBQualifier_value>Murine hepatitis virus</GBQualifier_value>
+          </GBQualifier>
+          <GBQualifier>
+            <GBQualifier_name>mol_type</GBQualifier_name>
+            <GBQualifier_value>genomic RNA</GBQualifier_value>
+          </GBQualifier>
+          <GBQualifier>
+            <GBQualifier_name>strain</GBQualifier_name>
+            <GBQualifier_value>A59</GBQualifier_value>
+          </GBQualifier>
+          <GBQualifier>
+            <GBQualifier_name>db_xref</GBQualifier_name>
+            <GBQualifier_value>taxon:11138</GBQualifier_value>
+          </GBQualifier>
+        </GBFeature_quals>
+      </GBFeature>
+      <GBFeature>
+        <GBFeature_key>CDS</GBFeature_key>
+        <GBFeature_location>99..125</GBFeature_location>
+        <GBFeature_intervals>
+          <GBInterval>
+            <GBInterval_from>99</GBInterval_from>
+            <GBInterval_to>125</GBInterval_to>
+            <GBInterval_accession>M27198.1</GBInterval_accession>
+          </GBInterval>
+        </GBFeature_intervals>
+        <GBFeature_quals>
+          <GBQualifier>
+            <GBQualifier_name>note</GBQualifier_name>
+            <GBQualifier_value>short ORF</GBQualifier_value>
+          </GBQualifier>
+          <GBQualifier>
+            <GBQualifier_name>codon_start</GBQualifier_name>
+            <GBQualifier_value>1</GBQualifier_value>
+          </GBQualifier>
+          <GBQualifier>
+            <GBQualifier_name>transl_table</GBQualifier_name>
+            <GBQualifier_value>1</GBQualifier_value>
+          </GBQualifier>
+          <GBQualifier>
+            <GBQualifier_name>product</GBQualifier_name>
+            <GBQualifier_value>unknown</GBQualifier_value>
+          </GBQualifier>
+          <GBQualifier>
+            <GBQualifier_name>protein_id</GBQualifier_name>
+            <GBQualifier_value>AAA74010.1</GBQualifier_value>
+          </GBQualifier>
+          <GBQualifier>
+            <GBQualifier_name>translation</GBQualifier_name>
+            <GBQualifier_value>MPAGLVLS</GBQualifier_value>
+          </GBQualifier>
+        </GBFeature_quals>
+      </GBFeature>
+      <GBFeature>
+        <GBFeature_key>CDS</GBFeature_key>
+        <GBFeature_location>210..&gt;2000</GBFeature_location>
+        <GBFeature_intervals>
+          <GBInterval>
+            <GBInterval_from>210</GBInterval_from>
+            <GBInterval_to>2000</GBInterval_to>
+            <GBInterval_accession>M27198.1</GBInterval_accession>
+          </GBInterval>
+        </GBFeature_intervals>
+        <GBFeature_partial3 value="true"/>
+        <GBFeature_quals>
+          <GBQualifier>
+            <GBQualifier_name>note</GBQualifier_name>
+            <GBQualifier_value>p28 related</GBQualifier_value>
+          </GBQualifier>
+          <GBQualifier>
+            <GBQualifier_name>codon_start</GBQualifier_name>
+            <GBQualifier_value>1</GBQualifier_value>
+          </GBQualifier>
+          <GBQualifier>
+            <GBQualifier_name>transl_table</GBQualifier_name>
+            <GBQualifier_value>1</GBQualifier_value>
+          </GBQualifier>
+          <GBQualifier>
+            <GBQualifier_name>product</GBQualifier_name>
+            <GBQualifier_value>polymerase-related protein</GBQualifier_value>
+          </GBQualifier>
+          <GBQualifier>
+            <GBQualifier_name>protein_id</GBQualifier_name>
+            <GBQualifier_value>AAA74011.1</GBQualifier_value>
+          </GBQualifier>
+          <GBQualifier>
+            <GBQualifier_name>translation</GBQualifier_name>
+            <GBQualifier_value>MAKMGKYGLGFKWAPEFPWMLPNASEKLGNPERSEEDGFCPSAAQEPKVKGKTLVNHVRVNCSRXPALECCVQSAIIRDIFVDEDPQKVEASTMMALQFGSAVLVKPSKRLSIQAWTNLGVLPKTAAMGLFKRVCLCNTRECSCDAHVAFHLFTVQPDGVCLGNGRFIGWFVPVTAIPEYAKQWLQPWSILLRKGGNKGSVTSGHFRRAVTMPVYDFNVEDACEEVHLNPKGKYSCKAYALLKGYRGVKPILFVDQYGCDYTGCLAKGLEDYGDLTLSEMKELFPVCADSLDSEVLVAWHVDRDPRAAMRVQTLATVRCIDYVGQPTEDVVDGDVVVREPAHLLAANAIVKRLPRLVETMLYTDSSVTEFCYKTKLCECGFITQFGYVDCCGDTCDFRGWVAGNMMDGFPCPGCTKNYMPWELEAQSSGVIPEGGVLFTQSTDTVNRESFKLYGHAVVPFGSAVYWSPCPGMWLPVIWSSVKSYSGLTYTGVVGCKAIVQETDAICRSLYMDYVQHKCGNLEQRAILGLDDVYHRQLLVNRGDYSLLLENVDLFVKRRAEFACKFATCGGGLVPLLLDGLVPRSYYLIKSGQAFTSM</GBQualifier_value>
+          </GBQualifier>
+        </GBFeature_quals>
+      </GBFeature>
+    </GBSeq_feature-table>
+    <GBSeq_sequence>tataagagtgattggcgtccgtacgtaccctctcaactctaaaactcttgtagtttaaatctaatctaaactttataaacggcacttcctgcgtgtccatgcccgcgggcctggtcttgtcatagtgctgacatttgtagttccttgactttcgttctctgccagtgacgtgtccattgggcgccagcagcccacccataggttgcataatggcaaagatgggcaaatacggtctcggcttcaaatgggccccagaatttccatggatgcttccgaacgcatcggagaagttgggtaaccctgagaggtcagaggaggatgggttttgcccctctgctgcgcaagaaccgaaagttaaaggaaaaactttggttaatcacgtgagggtgaattgtagccggnttccagctttggagtgctgtgttcagtctgccataatccgtgatatttttgtagatgaggatccccagaaggtggaggcctcaactatgatggcattgcagttcggtagtgccgtcttggttaagccatccaagcgcttgtctattcaggcatggactaatttgggtgtgcttcccaaaacagctgccatggggttgttcaagcgcgtctgcctgtgtaacaccagggagtgctcttgtgacgcccacgtggcctttcacctttttacggtccaacccgatggtgtatgcctgggtaatggccgttttataggctggttcgttccagtcacagccataccggagtatgcgaagcagtggttgcaaccctggtccatccttcttcgtaagggtggtaacaaagggtctgtgacatccggccacttccgccgcgctgttaccatgcctgtgtatgactttaatgtagaggatgcttgtgaggaggttcatcttaacccgaagggtaagtactcctgcaaggcgtatgctcttcttaagggctatcgcggtgttaagcccatcctgtttgtggaccagtatggttgcgactatactggatgtctcgccaagggtcttgaggactatggcgatctcaccttgagtgagatgaaggagttgttccctgtgtgcgctgactccttggatagtgaagtccttgtggcttggcacgttgatcgagatcctcgggctgctatgcgtgtccagactcttgctactgtacgttgcattgattatgtgggccaaccgaccgaggatgtggtggatggagatgtggtagtgcgtgagcctgctcatcttctcgcagccaatgccattgttaaaagactcccccgtttggtggagactatgctgtatacggattcgtccgttacagaattctgttataaaaccaagctgtgtgaatgcggttttatcacgcagtttggctatgtggattgttgtggtgacacctgcgattttcgtgggtgggttgccggcaatatgatggatggctttccatgtccagggtgtaccaaaaattatatgccctgggaattggaggcccagtcatcaggtgttataccagaaggaggtgttctattcactcagagcactgatacagtgaatcgtgagtcctttaagctctacggtcatgctgttgtgccttttggttctgctgtgtattggagcccttgcccaggtatgtggcttccagtaatttggtcttctgttaagtcatactctggtttgacttatacaggagtagttggttgtaaggcaattgttcaagagacagacgctatatgtcgttctctgtatatggattatgtccagcacaagtgtggcaatctcgagcagagagctatccttggattggacgatgtctatcatagacagttgcttgtgaataggggtgactatagtctcctccttgagaatgtggatttgtttgttaagcggcgcgctgaatttgcttgcaaattcgccacctgtggaggtggtcttgtacccctcctactagatggtttagtgccccgcagttattatttgattaagagtggtcaagctttcacctctatg</GBSeq_sequence>
+  </GBSeq>

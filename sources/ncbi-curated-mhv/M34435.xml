@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<GBSeq>
+
+    <GBSeq_locus>MHVAPEPA</GBSeq_locus>
+    <GBSeq_length>1000</GBSeq_length>
+    <GBSeq_strandedness>single</GBSeq_strandedness>
+    <GBSeq_moltype>RNA</GBSeq_moltype>
+    <GBSeq_topology>linear</GBSeq_topology>
+    <GBSeq_division>VRL</GBSeq_division>
+    <GBSeq_update-date>15-SEP-1990</GBSeq_update-date>
+    <GBSeq_create-date>02-AUG-1993</GBSeq_create-date>
+    <GBSeq_definition>Murine coronavirus peplomer (S) protein gene</GBSeq_definition>
+    <GBSeq_primary-accession>M34435</GBSeq_primary-accession>
+    <GBSeq_accession-version>M34435.1</GBSeq_accession-version>
+    <GBSeq_other-seqids>
+      <GBSeqid>gb|M34435.1|MHVAPEPA</GBSeqid>
+      <GBSeqid>gi|331832</GBSeqid>
+    </GBSeq_other-seqids>
+    <GBSeq_keywords>
+      <GBKeyword>peplomer protein</GBKeyword>
+    </GBSeq_keywords>
+    <GBSeq_source>Murine hepatitis virus</GBSeq_source>
+    <GBSeq_organism>Murine hepatitis virus</GBSeq_organism>
+    <GBSeq_taxonomy>Viruses; Riboviria; Nidovirales; Cornidovirineae; Coronaviridae; Orthocoronavirinae; Betacoronavirus; Embecovirus</GBSeq_taxonomy>
+    <GBSeq_references>
+      <GBReference>
+        <GBReference_reference>1</GBReference_reference>
+        <GBReference_position>1..1000</GBReference_position>
+        <GBReference_authors>
+          <GBAuthor>Banner,L.R.</GBAuthor>
+          <GBAuthor>Keck,J.G.</GBAuthor>
+          <GBAuthor>Lai,M.M.</GBAuthor>
+        </GBReference_authors>
+        <GBReference_title>A clustering of RNA recombination sites adjacent to a hypervariable region of the peplomer gene of murine coronavirus</GBReference_title>
+        <GBReference_journal>Virology 175 (2), 548-555 (1990)</GBReference_journal>
+        <GBReference_pubmed>2158184</GBReference_pubmed>
+      </GBReference>
+    </GBSeq_references>
+    <GBSeq_comment>Original source text: Murine (strain JHM-DL) RNA.</GBSeq_comment>
+    <GBSeq_feature-table>
+      <GBFeature>
+        <GBFeature_key>source</GBFeature_key>
+        <GBFeature_location>1..1000</GBFeature_location>
+        <GBFeature_intervals>
+          <GBInterval>
+            <GBInterval_from>1</GBInterval_from>
+            <GBInterval_to>1000</GBInterval_to>
+            <GBInterval_accession>M34435.1</GBInterval_accession>
+          </GBInterval>
+        </GBFeature_intervals>
+        <GBFeature_quals>
+          <GBQualifier>
+            <GBQualifier_name>organism</GBQualifier_name>
+            <GBQualifier_value>Murine hepatitis virus</GBQualifier_value>
+          </GBQualifier>
+          <GBQualifier>
+            <GBQualifier_name>mol_type</GBQualifier_name>
+            <GBQualifier_value>genomic RNA</GBQualifier_value>
+          </GBQualifier>
+          <GBQualifier>
+            <GBQualifier_name>db_xref</GBQualifier_name>
+            <GBQualifier_value>taxon:11138</GBQualifier_value>
+          </GBQualifier>
+        </GBFeature_quals>
+      </GBFeature>
+    </GBSeq_feature-table>
+    <GBSeq_sequence>tgagtctttgtcgtgtaataatattgatgcgtccaaagtgtatggtatgtgctttggtagtgtctcagttgataagtttgctttcccccgaagccgtcaaattgattttcaaattggcaactccggatttttgcaaacggctaattataagattgatatcgctgccacatcatgtcagctgtattacagtcttcctaagaataatgttaccattaataactataacccctcgtcttggaataggaggtatggttttaatgatgctggtgtgtttggcaaaagtaaacatgatgttgcctacgcccagnnatgttttnttgtgcgacctagctattgtccgtgtgcacaaccggaaatagttagtgcttgcactagtcagaccaaacccatgtctgcttattgccccacaggcacaattcatcgtgagtgttctctttggaatgggccccatttgcgctcggcacgtgtaggttccggcacgtacacgtgtgagtgcacttgtaaacccaatccatttgatacgtatgatctccgctgtgggcaaattaaaactattgttaatgtgggcgatcattgtgaaggtctgggtgttttagaagataaaggtggcaatagcgatccacataagggctgttcttgtgccaatgattcttttatcggatggtcacatgacacttgtttagtaaatgatcgctgcccaatttttgctaacatattgttaaatggcattaatagtgggactacgtgttccacagatttacaattgcctaatactgaagtggccactggcgtttgcgtcagatatgacctctatggtattactggtcnaggtgtttttaaagaggtcaaggcagnntattataatagctggcaggccctattatatgatgttaatggtaacttaaacgggttccgtgaccttaccactaacaagacttatacgataaggagctgttatagtggccgtgtttctgctgcatatcataaagaagcacccgaa</GBSeq_sequence>
+  </GBSeq>

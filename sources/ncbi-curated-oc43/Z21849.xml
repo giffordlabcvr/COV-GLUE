@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<GBSeq>
+
+    <GBSeq_locus>Z21849</GBSeq_locus>
+    <GBSeq_length>4086</GBSeq_length>
+    <GBSeq_strandedness>single</GBSeq_strandedness>
+    <GBSeq_moltype>RNA</GBSeq_moltype>
+    <GBSeq_topology>linear</GBSeq_topology>
+    <GBSeq_division>VRL</GBSeq_division>
+    <GBSeq_update-date>13-JUL-2001</GBSeq_update-date>
+    <GBSeq_create-date>03-MAR-1993</GBSeq_create-date>
+    <GBSeq_definition>Human coronavirus OC43 gene for surface protein</GBSeq_definition>
+    <GBSeq_primary-accession>Z21849</GBSeq_primary-accession>
+    <GBSeq_accession-version>Z21849.1</GBSeq_accession-version>
+    <GBSeq_other-seqids>
+      <GBSeqid>emb|Z21849.1|</GBSeqid>
+      <GBSeqid>gi|62391</GBSeqid>
+    </GBSeq_other-seqids>
+    <GBSeq_keywords>
+      <GBKeyword>surface protein</GBKeyword>
+    </GBSeq_keywords>
+    <GBSeq_source>Human coronavirus OC43 (HCoV-OC43)</GBSeq_source>
+    <GBSeq_organism>Human coronavirus OC43</GBSeq_organism>
+    <GBSeq_taxonomy>Viruses; Riboviria; Nidovirales; Cornidovirineae; Coronaviridae; Orthocoronavirinae; Betacoronavirus; Embecovirus</GBSeq_taxonomy>
+    <GBSeq_references>
+      <GBReference>
+        <GBReference_reference>1</GBReference_reference>
+        <GBReference_position>1..4086</GBReference_position>
+        <GBReference_authors>
+          <GBAuthor>Kuenkel,F.</GBAuthor>
+          <GBAuthor>Herrler,G.</GBAuthor>
+        </GBReference_authors>
+        <GBReference_title>Structural and functional analysis of the surface protein of Human coronavirus OC43</GBReference_title>
+        <GBReference_journal>Virology (1993) In press</GBReference_journal>
+      </GBReference>
+      <GBReference>
+        <GBReference_reference>2</GBReference_reference>
+        <GBReference_position>1..4086</GBReference_position>
+        <GBReference_authors>
+          <GBAuthor>Kuenkel,F.</GBAuthor>
+        </GBReference_authors>
+        <GBReference_title>Direct Submission</GBReference_title>
+        <GBReference_journal>Submitted (25-FEB-1993) Kuenkel F., Zentrum fuer Hygiene der Philipps Universitaet Marburg, Institut fuer Virologie, Robert-Koch-Str.17, Marburg, Hessen, Germany, W-3550</GBReference_journal>
+      </GBReference>
+    </GBSeq_references>
+    <GBSeq_feature-table>
+      <GBFeature>
+        <GBFeature_key>source</GBFeature_key>
+        <GBFeature_location>1..4086</GBFeature_location>
+        <GBFeature_intervals>
+          <GBInterval>
+            <GBInterval_from>1</GBInterval_from>
+            <GBInterval_to>4086</GBInterval_to>
+            <GBInterval_accession>Z21849.1</GBInterval_accession>
+          </GBInterval>
+        </GBFeature_intervals>
+        <GBFeature_quals>
+          <GBQualifier>
+            <GBQualifier_name>organism</GBQualifier_name>
+            <GBQualifier_value>Human coronavirus OC43</GBQualifier_value>
+          </GBQualifier>
+          <GBQualifier>
+            <GBQualifier_name>mol_type</GBQualifier_name>
+            <GBQualifier_value>genomic RNA</GBQualifier_value>
+          </GBQualifier>
+          <GBQualifier>
+            <GBQualifier_name>strain</GBQualifier_name>
+            <GBQualifier_value>HCV-OC43</GBQualifier_value>
+          </GBQualifier>
+          <GBQualifier>
+            <GBQualifier_name>db_xref</GBQualifier_name>
+            <GBQualifier_value>taxon:31631</GBQualifier_value>
+          </GBQualifier>
+          <GBQualifier>
+            <GBQualifier_name>clone</GBQualifier_name>
+            <GBQualifier_value>ATS8</GBQualifier_value>
+          </GBQualifier>
+        </GBFeature_quals>
+      </GBFeature>
+      <GBFeature>
+        <GBFeature_key>CDS</GBFeature_key>
+        <GBFeature_location>1..4086</GBFeature_location>
+        <GBFeature_intervals>
+          <GBInterval>
+            <GBInterval_from>1</GBInterval_from>
+            <GBInterval_to>4086</GBInterval_to>
+            <GBInterval_accession>Z21849.1</GBInterval_accession>
+          </GBInterval>
+        </GBFeature_intervals>
+        <GBFeature_quals>
+          <GBQualifier>
+            <GBQualifier_name>codon_start</GBQualifier_name>
+            <GBQualifier_value>1</GBQualifier_value>
+          </GBQualifier>
+          <GBQualifier>
+            <GBQualifier_name>transl_table</GBQualifier_name>
+            <GBQualifier_value>1</GBQualifier_value>
+          </GBQualifier>
+          <GBQualifier>
+            <GBQualifier_name>product</GBQualifier_name>
+            <GBQualifier_value>surface protein</GBQualifier_value>
+          </GBQualifier>
+          <GBQualifier>
+            <GBQualifier_name>protein_id</GBQualifier_name>
+            <GBQualifier_value>CAA79896.1</GBQualifier_value>
+          </GBQualifier>
+          <GBQualifier>
+            <GBQualifier_name>db_xref</GBQualifier_name>
+            <GBQualifier_value>GOA:P36334</GBQualifier_value>
+          </GBQualifier>
+          <GBQualifier>
+            <GBQualifier_name>db_xref</GBQualifier_name>
+            <GBQualifier_value>InterPro:IPR002552</GBQualifier_value>
+          </GBQualifier>
+          <GBQualifier>
+            <GBQualifier_name>db_xref</GBQualifier_name>
+            <GBQualifier_value>InterPro:IPR018548</GBQualifier_value>
+          </GBQualifier>
+          <GBQualifier>
+            <GBQualifier_name>db_xref</GBQualifier_name>
+            <GBQualifier_value>UniProtKB/Swiss-Prot:P36334</GBQualifier_value>
+          </GBQualifier>
+          <GBQualifier>
+            <GBQualifier_name>translation</GBQualifier_name>
+            <GBQualifier_value>MFLILLISLPTAFAVIGDLKCTSDTSYINDKDTGPPPISTDTVDVTNGLGTYYVLDRVYLNTTFLLNGYYPTSGSTYRNMALKGSVLLSRLWFKPPFLSDFINGIFAKVKNTKVIKDGVMYSEFPAITIGSTFVNTSYSVVVQPRTINSTQDGYNKLQGLLEVSVCQYNMCEYPQTICHPNLGNHRKELWHLDTGVVSCLYKRNFTYDVNADYLYFHFYQEGGTFYAYFTDTGVVTKFLFNVYLGMALSHYYVMPLTCNSKVKNGFTLEYWVTPLTSRQYLLAFNQDGIIFNAVDCMSDFMSEIKCKTQSIAPPTGVYELNGYTVQPIADVYRRKPNLPNCNIEAWLNDKSVPSPLNWERKTFSNCNFNMSSLMSFIQADSFTCNNIDAAKIYGMCFSSITIDKFAIPNGRKVDLQLGNLGYLQSFNYRIDTTATSCQLYYNLPAANVSVSRFNPSTWNKRFGFIEDSVFKPRPAGVLTNHDVVYAQHCFKAPKNFCPCKLNGSCVGSGPGKNNGIGTCPAGTNYLTCDNLCTPDPITFKATGTYKCPQTKSLVGIGEHCSGLAVKSDYCGGNPCTCRPQAFLGWSADSCLQGDKCNIFANFILHDVNSGLTCSTDLQKANTDIILGVCVNYDLYGILGQGIFVEVNATYYNSWQNLLYDSNGNLYGFRDYITNRTFMIRSCYSGRVSAAFHANSSEPALLSRNIKCNYVFNNSLTRQLQPINYFDSYLGCVVNAYNSTAISVQTCDLTVGSGYCVDYSKNRRSRGAITTGYRFTNFEPFTVNSVNDSLEPVGGLYEIQIPSEFTIGNMEEFIQTSSPKVTIDCAAFVCGDYAACKSQLVGYGSFCDNINAILTEVNELLDTTQLQVANSLMNGVTLSTKLKDGVNFNVDDINFSPVLGCLGSECSKASSRSAIEDLLFDKVKLSDVGFVEAYNNCTGGAEIRDLICVQSYKGIKVLPPLLSENQISGYTLAATSASLFPPWTAAAGVPFYLNVQYRINGLGVTMDVLSQNQKLIANAFNNALDAIQEGFDATNSALVKIQAVVNANAEALNNLLQQLSNRFGAISASLQEILSRLDALEAEAQIDRLINGRLTALNAYVSQQLSDSTLVKFSAAQAMEKVNECVKSQSSRINFCGNGNHIISLVQNAPYGLYFIHFSYVPTKYVTAKVSPGLCIAGDRGIAPKSGYFVNVNNTWMYTGSGYYYLEPITENNVVVMSTWAVNYTKAPYVMLNTSIPNLPDFKEELDQWFKNQTSVAPDLSLDYINVTFLDLQVEMNRLQEAIKVLNQSYINLKDIGTYEYYVKWPWYVWLLICLAGVAMLVLLFFICCCTGCGTSCFKKCGGCCDDYTGYQELVIKTSHDD</GBQualifier_value>
+          </GBQualifier>
+        </GBFeature_quals>
+      </GBFeature>
+    </GBSeq_feature-table>
+    <GBSeq_sequence>atgtttttgatacttttaatttccttaccaacggcttttgctgttataggagatttaaagtgtacttcagatactagttatattaatgataaagacaccggtcctcctcctataagtactgatactgttgatgttactaatggtttgggtacttattatgttttagatcgtgtgtatttaaatactacgtttttgcttaatggttattaccctacttcaggttccacatatcgtaatatggcactgaagggaagtgtactattgagcagactatggtttaaaccaccatttctttctgattttattaatggtatttttgctaaggtcaaaaataccaaggttattaaagatggtgtaatgtatagtgagttccctgctataactataggtagtacttttgtaaatacatcctatagtgtggtagtacaaccacgtacaatcaattcaacacaggatggttataataaattacaaggtcttttagaggtctctgtttgccagtataatatgtgcgagtacccacaaacgatttgtcatcctaacctgggtaatcatcgcaaagaactatggcatttggatacaggtgttgtttcctgtttatataagcgtaatttcacatatgatgtgaatgctgattatttgtattttcatttttatcaagaaggtggtactttttatgcatattttacagacactggtgttgttactaagtttttgtttaatgtttatttaggcatggcgctttcacactattatgtcatgcctctgacttgtaatagtaaggttaagaatggttttactttagaatattgggttactcctctcacttctagacaatatttactcgctttcaatcaagatggtattatttttaatgctgttgattgtatgagtgattttatgagtgagattaagtgtaaaacacaatctatagcaccacctactggtgtttatgaattaaacggttacactgttcagccaatcgcagatgtttaccgacgtaaacctaatcttcccaattgcaatatagaagcttggcttaatgataagtcggtgccctctccattaaattgggaacgtaagacattttcaaattgtaattttaatatgagcagcctgatgtcttttattcaggcagactcatttacttgtaataatattgatgctgctaagatatatggtatgtgtttttccagcataactatagataagtttgctatacccaatggcaggaaggttgacctacaattgggtaatttgggctatttgcagtcatttaactatagaattgatactactgcaacaagttgtcagttgtattataatttacctgctgctaatgtttctgttagcaggtttaatccttctacttggaataagagatttggttttatagaagattctgtttttaagcctcgacctgcaggtgttcttactaatcatgatgtagtttatgcacaacactgtttcaaagctcctaaaaatttctgtccgtgtaaattgaatggttcgtgtgtaggtagtggtcctggtaaaaataatggtataggcacttgtcctgcaggtactaattatttaacttgtgataatttgtgcactcctgatcctattacatttaaagctacaggtacttataagtgcccccaaactaaatctttagttggcataggtgagcactgttcgggtcttgctgttaaaagtgattattgtggaggcaatccttgtacttgccgaccacaagcatttttgggttggtctgcagactcttgtttacaaggagacaagtgtaatatttttgctaattttattttgcatgatgttaatagtggtcttacttgttctactgatttacaaaaagctaacacagacataattcttggtgtttgtgttaattatgacctctatggtattttaggccaaggcatttttgttgaggttaatgcgacttattataatagttggcagaaccttttatatgattctaatggtaatctctacggttttagagactacataacaaacagaacttttatgattcgtagttgctatagcggtcgtgtttctgcggcctttcacgctaactcttccgaaccagcattgctatctcggaatattaaatgcaactacgtttttaataatagtcttacacgacagctgcaacccattaactattttgatagttatcttggttgtgttgtcaatgcttataatagtactgctatttctgttcaaacatgtgatctcacagtaggtagtggttactgtgtggattactctaaaaacagacgaagtcgtggagcgattaccactggttatcggtttactaattttgagccatttaccgttaattcagtaaacgatagtttagaacctgtaggtggtttgtatgaaattcaaataccttcagagtttactataggtaatatggaggagtttattcaaacaagctctcctaaagttactattgattgtgctgcatttgtctgtggtgattatgcagcatgtaaatcacagttggttggatatggtagtttctgtgataacattaatgcgatactcacagaagtaaatgaactacttgacactacacagttgcaagtagctaatagtttaatgaatggtgttactcttagcactaagcttaaagatggcgttaatttcaatgtagacgacatcaatttttcccctgtattaggttgtctaggcagcgaatgtagtaaagcttccagtagatctgctatagaggatttactttttgataaagtaaagttatctgatgtcggttttgttgaggcttataataattgtacaggaggtgccgaaattagggacctcatttgtgtgcaaagttataaaggcatcaaagtgttgcctccactgctctcagaaaatcagatcagtggatacactttggctgccacctctgctagtctatttcctccttggacagcagcagcaggtgtaccattttatttaaatgttcagtatcgcattaatgggcttggtgtcaccatggatgtgctaagtcaaaatcaaaagcttattgctaatgcatttaacaatgcccttgatgctattcaggaagggttcgatgcaactaattctgctttagttaaaattcaagctgttgttaatgcaaatgctgaagctcttaataacttattgcaacaactctctaatagatttggtgctataagtgcttctttacaagaaattctatctagacttgatgctcttgaagcggaagctcagatagatagacttattaatggtcgtcttaccgctcttaatgcttatgtttctcaacagcttagtgattctacactggtaaaatttagtgcagcacaagctatggagaaggttaatgaatgtgtcaaaagccaatcatctaggataaatttctgtggtaatggtaatcatattatatcattagtgcagaatgctccatatggtttgtattttatccactttagttatgtccctactaagtatgtcacagcgaaggttagtcccggtctgtgcattgctggtgatagaggtatagctcctaagagtggttattttgttaatgtaaataatacttggatgtacactggtagtggttactactaccttgaacctataactgaaaataatgttgttgttatgagtacctgggctgttaattatactaaagcgccgtatgtaatgctgaacacttcaatacccaaccttcctgattttaaggaagagttggatcaatggtttaaaaatcaaacatcagtggcaccagatttgtcacttgattatataaatgttacattcttggacctacaagttgaaatgaataggttacaggaggcaataaaagtcttaaatcagagctacatcaatctcaaggacattggtacatatgaatattatgtaaaatggccttggtatgtatggcttttaatctgccttgctggtgtagctatgcttgttttactattcttcatatgctgttgtacaggatgtgggactagttgttttaagaaatgtggtggttgttgtgatgattatactggataccaggagttagtaatcaaaacttcacatgacgactaa</GBSeq_sequence>
+  </GBSeq>

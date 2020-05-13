@@ -1,0 +1,16 @@
+delete reference REF_Bat
+delete reference REF_HKU1
+delete reference REF_MERS
+delete reference REF_MHV
+delete reference REF_OC43
+delete reference REF_SARS1
+delete reference REF_TGEV
+
+create reference REF_Bat    ncbi-refseq-betacorona NC_025217
+create reference REF_HKU1   ncbi-refseq-betacorona NC_006577
+create reference REF_MERS   ncbi-refseq-betacorona NC_019843
+create reference REF_MHV    ncbi-refseq-betacorona NC_001846
+create reference REF_OC43   ncbi-refseq-betacorona NC_006213
+create reference REF_SARS1  ncbi-refseq-betacorona NC_004718
+create reference REF_TGEV   ncbi-refseq-betacorona NC_038861
+
