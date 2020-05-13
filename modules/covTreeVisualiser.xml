@@ -13,8 +13,8 @@
 		<template><![CDATA[${renderNestedProperty('sequence.isolate')}]]></template>
 	</freemarkerAnnotationGenerator>
 	<freemarkerAnnotationGenerator>
-		<annotationName>gisaidId</annotationName>
-		<template><![CDATA[${sequence.sequenceID}]]></template>
+		<annotationName>sequenceID</annotationName>
+		<template><![CDATA[<#if sequence.source.name = 'cov-gisaid'>GISAID: <#elseif sequence.source.name = 'cov-coguk-refs'>COG-UK: </#if>${sequence.sequenceID}]]></template>
 	</freemarkerAnnotationGenerator>
 	<freemarkerAnnotationGenerator>
 		<annotationName>country</annotationName>
