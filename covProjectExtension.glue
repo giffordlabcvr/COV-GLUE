@@ -2,34 +2,25 @@
 
 project cov
 
-  # delete sources 
-  delete source ncbi-refseq-betacorona
-  delete source ncbi-curated-mers
-  delete source ncbi-curated-sars
+	# Delete previous extension build
+	run file glue/betacovDeleteExtensionBuild.glue
 
-  # delete sources 
-  delete alignment AL_UNC_Betacoronavirus
+	# import cov-gisaid individual fasta
+	run file glue/betacovImportSources.glue
 
-  # delete modules 
-  delete module unconstrainedAlignmentImporter
+	# import cov-gisaid individual fasta
+	run file glue/betacovAlignments.glue
 
-  # import cov-gisaid individual fasta
-  import source sources/ncbi-curated-mers
-  import source sources/ncbi-curated-sars
-  import source sources/ncbi-refseq-betacorona
 
-  # other sequence related data.
-  #run file glue/extensionLoadSequenceData.glue
+	# import pre-built unconstrained betacoronavirus root alignment
+	create module -f modules/unconstrainedAlignmentImporter.xml
+	module unconstrainedAlignmentImporter import AL_UNC_Betacoronavirus -f alignments/betacorona-genome.aln.fna
+	module unconstrainedAlignmentImporter import AL_UNC_Sarbecovirus -f alignments/sarbeco-genome.aln.fna
 
-  # import pre-built unconstrained betacoronavirus root alignment
-  create module -f modules/unconstrainedAlignmentImporter.xml
-  module unconstrainedAlignmentImporter import AL_UNC_Betacoronavirus -f alignments/betacorona-genome.aln.fna
-  module unconstrainedAlignmentImporter import AL_UNC_Sarbecovirus -f alignments/sarbeco-genome.aln.fna
-
-  # define constrained alignment tree
-  run file glue/extensionAlignmentTree.glue
+	# define constrained alignment tree
+	run file glue/extensionAlignmentTree.glue
   
-  # Validate
-  validate
+	# Validate
+	validate
 
-  exit
+	exit
