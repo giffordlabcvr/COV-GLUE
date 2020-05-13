@@ -188,6 +188,14 @@ feature ORF_3a
   set metatag CODON_LABELER_MODULE covKuiken2006CodonLabeler
   exit
 
+create feature ORF_3b -p whole_genome
+feature ORF_3b
+  set field displayName "ORF 3b"
+  set metatag OWN_CODON_NUMBERING true
+  set metatag CODES_AMINO_ACIDS true
+  set metatag CODON_LABELER_MODULE covKuiken2006CodonLabeler
+  exit
+
 create feature E -p whole_genome "Envelope protein"
 feature E
   set field displayName "E"

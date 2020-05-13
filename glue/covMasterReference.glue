@@ -152,6 +152,11 @@ reference REF_MASTER_WUHAN_HU_1
     add segment 25393 26220
     exit
 
+  add feature-location ORF_3b
+  feature-location ORF_3b
+    add segment 25814 26278
+    exit
+
   add feature-location E
   feature-location E
     add segment 26245 26472
