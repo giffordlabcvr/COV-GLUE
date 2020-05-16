@@ -72,6 +72,8 @@ function visualisePhyloAsSvg(document) {
 	// map seqID to inserted AAs, populated when code is "insertion_different_nts"
 	var gisaidSeqIdToInsertedNTs = {};
 
+	var gisaidSeqIdToPopupLines = {};
+	
 	glue.logInfo("document.inputDocument", document.inputDocument);
 
 	var almtMemberObjs;
@@ -148,6 +150,31 @@ function visualisePhyloAsSvg(document) {
 			});
 		});
 	});
+
+	
+	var seqObjs = glue.tableToObjects(glue.command(["list", "sequence", "-w", 
+		"include_in_ref_tree = true", "source.name", "sequenceID", "collection_date", "m49_country.display_name"]));
+
+	
+	_.each(seqObjs, function(seqObj) {
+		var sequenceID = seqObj["sequenceID"];
+		var sourceName = seqObj["source.name"];
+		var date = seqObj["collection_date"];
+		var country = seqObj["m49_country.display_name"];
+		var popupLines = [];
+		if(sourceName == "cov-gisaid") {
+			popupLines.push("GISAID: "+sequenceID);
+		} else if(sourceName == "cov-coguk-refs") {
+			popupLines.push("COG-UK: "+sequenceID);
+		}
+		if(date != null) {
+			popupLines.push("Collected: "+date);
+		}
+		if(country != null) {
+			popupLines.push("Country: "+country);
+		}
+		gisaidSeqIdToPopupLines[sequenceID] = popupLines;
+	})
 	
 	
 	if(includeQuerySequence) {
@@ -367,6 +394,10 @@ function visualisePhyloAsSvg(document) {
 			if(insertedNTs != null) {
 				leafNode.properties.insertedNTs = insertedNTs;
 			}
+		}
+		var popupLines = gisaidSeqIdToPopupLines[seqID];
+		if(popupLines != null) {
+			leafNode.properties.popupLines = popupLines;
 		}
 	});
 	

@@ -8,9 +8,18 @@
 	
 <#assign leafNodeRadiusPx = verticalLeafSpacePx * 0.6>
 	
-<svg width="${svgWidthPx}" height="${svgHeightPx}"
+<svg version="1.1" width="${svgWidthPx}" height="${svgHeightPx}"
      xmlns="http://www.w3.org/2000/svg">
   <style>${getResourceAsString('covTreeVisualisationTransformer.css')?no_esc}</style>
+  
+  <script type="text/javascript"><![CDATA[
+  	console.log("FIIII!");
+	var leafTextElem = document.getElementById("leafText3");
+	leafTextElem.style.fill = 'green';
+    
+  	]]>
+  </script>
+  
   <linearGradient id="collapsedGrad" x1="0%" y1="0%" x2="100%" y2="0%">
     <stop offset="0%" style="stop-color:DarkGrey;stop-opacity:1" />
     <stop offset="60%" style="stop-color:DarkGrey;stop-opacity:1" />
@@ -89,9 +98,9 @@
   </g>
   <g font-size="${leafTextFontSize}">
   <#list treeVisDoc.leafNodes as leafNode>
-    <text <#if leafNode.highlighted!false>class="highlightedLeafText"<#else>class="leafText"</#if>
+    <a id="leafLink${leafNode?index}"><text <#if leafNode.highlighted!false>class="highlightedLeafText"<#else>class="leafText"</#if>
 	  	x="${leafNode.x+leafTextGapPx}" y="${leafNode.y}" width="${leafNode.properties.leafTextWidthPx}" height="${verticalLeafSpacePx}"
-	  	dy=".35em">${leafNode.properties.leafText?replace('X$', '')}</text>
+	  	dy=".35em">${leafNode.properties.leafText?replace('X$', '')}</text></a>
   </#list>
   </g>
   <#if treeVisDoc.collapsedSubtrees??>
@@ -124,7 +133,35 @@
   </#list>
   </g>
   </#if>
-
-
-
+  <#assign boxTextWidth = verticalLeafSpacePx * 15>
+  <#assign boxTextRCorner = verticalLeafSpacePx / 2>
+  <#list treeVisDoc.leafNodes as leafNode>
+	<#if leafNode.properties.popupLines ??>
+	<#assign roundedRectHeight = (leafNode.properties.popupLines?size * verticalLeafSpacePx)+(boxTextRCorner*2)>
+	<#assign yCenteringOffset = (roundedRectHeight/2 - verticalLeafSpacePx/2)>
+	<#assign xOffset = verticalLeafSpacePx>
+	<rect id="popupRect${leafNode?index}" 
+		x="${(leafNode.x+leafTextGapPx+leafNode.properties.leafTextWidthPx+xOffset)}" 
+		y="${(leafNode.y-(verticalLeafSpacePx/2))-yCenteringOffset}" rx="${boxTextRCorner}" ry="${boxTextRCorner}" 
+		fill="#404040" width="${boxTextWidth+(boxTextRCorner*2)}" 
+		height="${roundedRectHeight}" 
+		visibility="hidden">
+	    <set attributeName="visibility" from="hidden" to="visible" begin="leafLink${leafNode?index}.click" dur="10s"/>
+	</rect>
+	<path fill="#404040" 
+		d="M${leafNode.x+leafTextGapPx+leafNode.properties.leafTextWidthPx+(xOffset/2)} ${leafNode.y} l${1+(xOffset/2)} ${xOffset/2} l0 ${-xOffset} Z"
+		visibility="hidden">
+	    <set attributeName="visibility" from="hidden" to="visible" begin="leafLink${leafNode?index}.click" dur="10s"/>
+	</path>
+	<#list leafNode.properties.popupLines as popupLine>
+	<text class="popupText" 
+		x="${leafNode.x+leafTextGapPx+leafNode.properties.leafTextWidthPx+xOffset+boxTextRCorner}" 
+		y="${(leafNode.y+(popupLine?index * verticalLeafSpacePx)+boxTextRCorner)-yCenteringOffset}" 
+		width="${boxTextWidth}" dy=".35em" height="${verticalLeafSpacePx}" visibility="hidden">
+		${popupLine}
+	    <set attributeName="visibility" from="hidden" to="visible" begin="leafLink${leafNode?index}.click" dur="10s"/>
+	</text>
+	</#list>
+	</#if>
+  </#list>
 </svg>
