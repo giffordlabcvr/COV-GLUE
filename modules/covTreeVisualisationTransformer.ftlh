@@ -132,20 +132,27 @@
 	<#assign roundedRectHeight = (leafNode.properties.popupLines?size * verticalLeafSpacePx)+(boxTextRCorner*2)>
 	<#assign roundedRectWidth = boxTextWidth+(boxTextRCorner*2)>
 	<#assign yCenteringOffset = roundedRectHeight/2>
-	<#assign xOffset = verticalLeafSpacePx>
+	<#assign boxSpacer = verticalLeafSpacePx>
 	
-	<#assign roundedRectX = (leafNode.x+leafTextGapPx+leafNode.properties.leafTextWidthPx+xOffset)>
+	<#assign roundedRectX = (leafNode.x+leafTextGapPx+leafNode.properties.leafTextWidthPx+boxSpacer)>
+	<#assign roundedRectY = (leafNode.y-yCenteringOffset)>
+	<#assign trianglePath = "M"+(leafNode.x+leafTextGapPx+leafNode.properties.leafTextWidthPx+(boxSpacer/2))+" "+leafNode.y+" l"+(1+(boxSpacer/2))+" "+(boxSpacer/2)+" l0 "+(-boxSpacer)+" Z">
+	<#if roundedRectX+roundedRectWidth gt svgWidthPx>
+		<#assign roundedRectX = (leafNode.x+leafTextGapPx+(leafNode.properties.leafTextWidthPx/2)-(roundedRectWidth/2))>
+		<#assign roundedRectY = (leafNode.y-(verticalLeafSpacePx/2 + (boxSpacer*0.75) + roundedRectHeight))>
+		<#assign trianglePath = "M"+(leafNode.x+leafTextGapPx+leafNode.properties.leafTextWidthPx/2)+" "+(leafNode.y-(verticalLeafSpacePx/2 + boxSpacer/4))+" l"+(-boxSpacer/2)+" "+(-(1+boxSpacer/2))+" l"+boxSpacer+" 0 Z">
+	</#if>
 	
 	<rect id="popupRect${leafNode?index}" 
 		x="${roundedRectX}" 
-		y="${(leafNode.y-yCenteringOffset)-(verticalLeafSpacePx/2)}" rx="${boxTextRCorner}" ry="${boxTextRCorner}" 
+		y="${roundedRectY}" rx="${boxTextRCorner}" ry="${boxTextRCorner}" 
 		fill="#404040" width="${roundedRectWidth}" 
 		height="${roundedRectHeight}" 
 		visibility="hidden">
 	    <set attributeName="visibility" from="hidden" to="visible" begin="leafLink${leafNode?index}.click" end="leafLink${leafNode?index}.mouseout" />
 	</rect>
 	<path fill="#404040" 
-		d="M${leafNode.x+leafTextGapPx+leafNode.properties.leafTextWidthPx+(xOffset/2)} ${leafNode.y} l${1+(xOffset/2)} ${xOffset/2} l0 ${-xOffset} Z"
+		d="${trianglePath}"
 		visibility="hidden">
 	    <set attributeName="visibility" from="hidden" to="visible" begin="leafLink${leafNode?index}.click" end="leafLink${leafNode?index}.mouseout"/>
 	</path>
@@ -153,7 +160,7 @@
 	<text class="popupText" 
 		font-size="${leafTextFontSize}"
 		x="${roundedRectX+boxTextRCorner}" 
-		y="${(leafNode.y-yCenteringOffset)+(popupLine?index * verticalLeafSpacePx)+boxTextRCorner}" 
+		y="${roundedRectY+boxTextRCorner+(verticalLeafSpacePx/2)+(popupLine?index * verticalLeafSpacePx)}" 
 		width="${boxTextWidth}" dy=".35em" height="${verticalLeafSpacePx}" visibility="hidden">
 		${popupLine}
 	    <set attributeName="visibility" from="hidden" to="visible" begin="leafLink${leafNode?index}.click" end="leafLink${leafNode?index}.mouseout"/>
