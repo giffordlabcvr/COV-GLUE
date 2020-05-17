@@ -22,7 +22,11 @@ glue.inMode("module/tabularUtilityCsv", function() {
 		}
 		var oldSnp = singletonRow.snp.trim();
 		var newSnp = oldSnp.substring(oldSnp.length-2, oldSnp.length-1)+oldSnp.substring(0, oldSnp.length-2)+oldSnp.substring(oldSnp.length-1, oldSnp.length);
-		snps.push(newSnp);
+		if(!newSnp.endsWith("-")) { 
+			// no point recording these snps as we would replace a "-" with a "-" effectively.
+			// also there are some misaligned deletions here
+			snps.push(newSnp);
+		}
 	});
 });
 
