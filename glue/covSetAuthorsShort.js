@@ -1,9 +1,9 @@
 
 
 var seqObjs = glue.tableToObjects(glue.command(["list", "sequence", 
-//	"-w", "source.name = 'cov-gisaid'", 
+	"-w", "source.name = 'cov-gisaid'", 
 //	"-w", "sequenceID = 'EPI_ISL_417149'", 
-	"-w", "gisaid_authors like '%etl al%'", 
+//	"-w", "gisaid_authors like '%etl al%'", 
 	"source.name", "sequenceID", "m49_country.id", "gisaid_authors"]));
 
 var processed = 0;
