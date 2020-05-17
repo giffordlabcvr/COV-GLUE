@@ -61,6 +61,8 @@ schema-project cov
     create field num_unique_snps INTEGER
     create field pang_lineage VARCHAR
     create field pang_representative BOOLEAN
+    # comma separated list of masked SNP positions
+    create field pang_masked_snps VARCHAR 300
     create field cov_glue_lineage VARCHAR
     create field cov_glue_lw_ratio DOUBLE
     create field cov_glue_lineage_sortable VARCHAR
