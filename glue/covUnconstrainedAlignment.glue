@@ -7,3 +7,8 @@
     exit 
    
   compute alignment AL_GISAID_UNCONSTRAINED covMafftAligner
+  
+  # apply SNP masking to the unconstrained alignment
+  run script glue/covApplySnpMasking.js
+
+  

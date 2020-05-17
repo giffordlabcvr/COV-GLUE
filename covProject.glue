@@ -40,6 +40,7 @@ project cov
   console unset cmd-result-format
   
   run script glue/covSetCollectionDate.js
+  run script glue/covSetAuthorsShort.js
 
   # deals with case where FASTA is ahead of either GISAID metadata (submission_year = null) or 
   # GISAID acknowledgements (isolate = null).
