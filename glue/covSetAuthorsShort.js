@@ -1,8 +1,9 @@
 
 
 var seqObjs = glue.tableToObjects(glue.command(["list", "sequence", 
-	"-w", "source.name = 'cov-gisaid'", 
-//	"-w", "sequenceID = 'EPI_ISL_413550'", 
+//	"-w", "source.name = 'cov-gisaid'", 
+//	"-w", "sequenceID = 'EPI_ISL_417149'", 
+	"-w", "gisaid_authors like '%etl al%'", 
 	"source.name", "sequenceID", "m49_country.id", "gisaid_authors"]));
 
 var processed = 0;
@@ -26,9 +27,9 @@ _.each(seqObjs, function(seqObj) {
 		shortAuthors = "Virginia DCLS";
 	} else if(longAuthors.endsWith("et al") > 0 && longAuthors.length < 30) { 
 		shortAuthors = longAuthors+"."; // Chu et al
-	} else if(longAuthors.endsWith("et al." && longAuthors.length < 30) > 0) { 
+	} else if(longAuthors.endsWith("et al.") > 0 && longAuthors.length < 30) { 
 		shortAuthors = longAuthors; 
-	} else if(longAuthors.indexOf("etl al" && longAuthors.length < 30) > 0) { 
+	} else if(longAuthors.indexOf("etl al") > 0 && longAuthors.length < 30) { 
 		shortAuthors = longAuthors.replace("etl al", "et al.");// Chu etl al
 	} else if(longAuthors.indexOf("; ") > 0) {
 		var first = longAuthors.split("; ")[0];
