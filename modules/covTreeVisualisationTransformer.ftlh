@@ -125,17 +125,21 @@
   </#list>
   </g>
   </#if>
-  <#assign boxTextWidth = verticalLeafSpacePx * 20>
   <#assign boxTextRCorner = verticalLeafSpacePx / 2>
   <#list treeVisDoc.leafNodes as leafNode>
 	<#if leafNode.properties.popupLines ??>
+	<#assign boxTextWidth = leafNode.properties.leafPopupTextWidthPx>
 	<#assign roundedRectHeight = (leafNode.properties.popupLines?size * verticalLeafSpacePx)+(boxTextRCorner*2)>
-	<#assign yCenteringOffset = (roundedRectHeight/2 - verticalLeafSpacePx/2)>
+	<#assign roundedRectWidth = boxTextWidth+(boxTextRCorner*2)>
+	<#assign yCenteringOffset = roundedRectHeight/2>
 	<#assign xOffset = verticalLeafSpacePx>
+	
+	<#assign roundedRectX = (leafNode.x+leafTextGapPx+leafNode.properties.leafTextWidthPx+xOffset)>
+	
 	<rect id="popupRect${leafNode?index}" 
-		x="${(leafNode.x+leafTextGapPx+leafNode.properties.leafTextWidthPx+xOffset)}" 
-		y="${(leafNode.y-(verticalLeafSpacePx/2))-yCenteringOffset}" rx="${boxTextRCorner}" ry="${boxTextRCorner}" 
-		fill="#404040" width="${boxTextWidth+(boxTextRCorner*2)}" 
+		x="${roundedRectX}" 
+		y="${(leafNode.y-yCenteringOffset)-(verticalLeafSpacePx/2)}" rx="${boxTextRCorner}" ry="${boxTextRCorner}" 
+		fill="#404040" width="${roundedRectWidth}" 
 		height="${roundedRectHeight}" 
 		visibility="hidden">
 	    <set attributeName="visibility" from="hidden" to="visible" begin="leafLink${leafNode?index}.click" end="leafLink${leafNode?index}.mouseout" />
@@ -147,8 +151,9 @@
 	</path>
 	<#list leafNode.properties.popupLines as popupLine>
 	<text class="popupText" 
-		x="${leafNode.x+leafTextGapPx+leafNode.properties.leafTextWidthPx+xOffset+boxTextRCorner}" 
-		y="${(leafNode.y+(popupLine?index * verticalLeafSpacePx)+boxTextRCorner)-yCenteringOffset}" 
+		font-size="${leafTextFontSize}"
+		x="${roundedRectX+boxTextRCorner}" 
+		y="${(leafNode.y-yCenteringOffset)+(popupLine?index * verticalLeafSpacePx)+boxTextRCorner}" 
 		width="${boxTextWidth}" dy=".35em" height="${verticalLeafSpacePx}" visibility="hidden">
 		${popupLine}
 	    <set attributeName="visibility" from="hidden" to="visible" begin="leafLink${leafNode?index}.click" end="leafLink${leafNode?index}.mouseout"/>
