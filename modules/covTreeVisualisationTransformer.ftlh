@@ -11,15 +11,7 @@
 <svg version="1.1" width="${svgWidthPx}" height="${svgHeightPx}"
      xmlns="http://www.w3.org/2000/svg">
   <style>${getResourceAsString('covTreeVisualisationTransformer.css')?no_esc}</style>
-  
-  <script type="text/javascript"><![CDATA[
-  	console.log("FIIII!");
-	var leafTextElem = document.getElementById("leafText3");
-	leafTextElem.style.fill = 'green';
-    
-  	]]>
-  </script>
-  
+
   <linearGradient id="collapsedGrad" x1="0%" y1="0%" x2="100%" y2="0%">
     <stop offset="0%" style="stop-color:DarkGrey;stop-opacity:1" />
     <stop offset="60%" style="stop-color:DarkGrey;stop-opacity:1" />
@@ -133,7 +125,7 @@
   </#list>
   </g>
   </#if>
-  <#assign boxTextWidth = verticalLeafSpacePx * 15>
+  <#assign boxTextWidth = verticalLeafSpacePx * 20>
   <#assign boxTextRCorner = verticalLeafSpacePx / 2>
   <#list treeVisDoc.leafNodes as leafNode>
 	<#if leafNode.properties.popupLines ??>
@@ -146,12 +138,12 @@
 		fill="#404040" width="${boxTextWidth+(boxTextRCorner*2)}" 
 		height="${roundedRectHeight}" 
 		visibility="hidden">
-	    <set attributeName="visibility" from="hidden" to="visible" begin="leafLink${leafNode?index}.click" dur="10s"/>
+	    <set attributeName="visibility" from="hidden" to="visible" begin="leafLink${leafNode?index}.click" end="leafLink${leafNode?index}.mouseout" />
 	</rect>
 	<path fill="#404040" 
 		d="M${leafNode.x+leafTextGapPx+leafNode.properties.leafTextWidthPx+(xOffset/2)} ${leafNode.y} l${1+(xOffset/2)} ${xOffset/2} l0 ${-xOffset} Z"
 		visibility="hidden">
-	    <set attributeName="visibility" from="hidden" to="visible" begin="leafLink${leafNode?index}.click" dur="10s"/>
+	    <set attributeName="visibility" from="hidden" to="visible" begin="leafLink${leafNode?index}.click" end="leafLink${leafNode?index}.mouseout"/>
 	</path>
 	<#list leafNode.properties.popupLines as popupLine>
 	<text class="popupText" 
@@ -159,7 +151,7 @@
 		y="${(leafNode.y+(popupLine?index * verticalLeafSpacePx)+boxTextRCorner)-yCenteringOffset}" 
 		width="${boxTextWidth}" dy=".35em" height="${verticalLeafSpacePx}" visibility="hidden">
 		${popupLine}
-	    <set attributeName="visibility" from="hidden" to="visible" begin="leafLink${leafNode?index}.click" dur="10s"/>
+	    <set attributeName="visibility" from="hidden" to="visible" begin="leafLink${leafNode?index}.click" end="leafLink${leafNode?index}.mouseout"/>
 	</text>
 	</#list>
 	</#if>
