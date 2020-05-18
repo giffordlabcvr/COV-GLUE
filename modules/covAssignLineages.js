@@ -226,9 +226,6 @@ function isAncestorLineage(lineage1, lineage2) {
 	if(lineage1 == "SARS-CoV-2") {
 		return true;
 	}
-	if(lineage1 == "B.7" && lineage2 == "B.10") {
-		return true;
-	}
 	var lineage1Bits = lineage1.split(".")
 	var lineage2Bits = lineage2.split(".")
 	if(lineage1Bits.length <= lineage2Bits.length) {
