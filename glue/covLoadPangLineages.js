@@ -43,7 +43,6 @@ _.each(pangSeqObjs, function(pangSeqObj) {
 	// various rules to undo the transformation of isolate names that the lineages repo has done
 	// within lineage representatives
 	name = name.replace("Hong_Kong", "Hong Kong");
-	name = name.replace("USA/VA-DCLS-00", "USA/VA-DCLS-0");
 	name = name.replace("USA/UT-000", "USA/UT-0");
 	
 	var seqID;
