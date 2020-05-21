@@ -44,7 +44,9 @@ _.each(pangSeqObjs, function(pangSeqObj) {
 	// within lineage representatives
 	name = name.replace("Hong_Kong", "Hong Kong");
 	name = name.replace("USA/UT-000", "USA/UT-0");
-	name = name.replace("USA/WI-", "USA/WI-UW-");
+	if(name.indexOf("GMF") < 0) {
+		name = name.replace("USA/WI-", "USA/WI-UW-");
+	}
 	
 	var seqID;
 	var sourceName;
