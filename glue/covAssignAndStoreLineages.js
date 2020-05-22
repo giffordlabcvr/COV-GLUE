@@ -1,3 +1,5 @@
+glue.command(["commit"]);
+glue.command(["new-context"]);
 
 // Full set.
 var whereClause = "analyse_variation = true";
@@ -17,6 +19,9 @@ var numSeqs = glue.command(["count", "sequence", "-w", whereClause]).countResult
 var batchSize = 50;
 var processed = 0;
 var offset = 0;
+
+glue.command(["commit"]);
+glue.command(["new-context"]);
 
 glue.log("FINEST", "Assigning lineages for "+numSeqs+" sequences");
 
@@ -38,5 +43,5 @@ while(processed < numSeqs) {
 	glue.command(["new-context"]);
 	offset += batchSize;
 	processed += batchAssignments.length;
-	glue.log("FINEST", "Assigned lineages for "+processed+"/"+numSeqs+" sequences");
+	glue.log("INFO", "Assigned lineages for "+processed+"/"+numSeqs+" sequences");
 }
