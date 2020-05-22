@@ -16,7 +16,7 @@ glue.command(["multi-unset", "field", "sequence", "-w", whereClause, "cov_glue_l
 
 var numSeqs = glue.command(["count", "sequence", "-w", whereClause]).countResult.count;
 
-var batchSize = 50;
+var batchSize = 48;
 var processed = 0;
 var offset = 0;
 

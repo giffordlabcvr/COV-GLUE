@@ -297,7 +297,7 @@ function assignLineagesForFastaDocument(fastaDocument) {
 
 
 function assignLineagesDocumentToObjectList(documentResult) {
-	glue.log("FINEST", "documentResult", documentResult);
+	// glue.log("FINEST", "documentResult", documentResult);
 	return _.map(documentResult.covAssignLineagesResult.queryLineageResults, 
 			function(qlr) { return { 
 				queryName: qlr.queryName, 
