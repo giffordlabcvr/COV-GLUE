@@ -12,11 +12,6 @@ project cov
 	run file glue/betacovAlignments.glue
 
 
-	# import pre-built unconstrained betacoronavirus root alignment
-	create module -f modules/unconstrainedAlignmentImporter.xml
-	module unconstrainedAlignmentImporter import AL_UNC_Betacoronavirus -f alignments/betacorona-genome.aln.fna
-	module unconstrainedAlignmentImporter import AL_UNC_Sarbecovirus -f alignments/sarbeco-genome.aln.fna
-
 	# define constrained alignment tree
 	run file glue/extensionAlignmentTree.glue
   
