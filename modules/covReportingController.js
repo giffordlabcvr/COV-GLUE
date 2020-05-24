@@ -171,23 +171,25 @@ function generateCodingRegionSnps(queryNucleotides, targetRefName, queryToTarget
 			if(refCoord >= 266 && refCoord <= 29674) { // don't generate SNPs outside the coding region
 				var refNtChar = targetRefNucleotides[refCoord-1];
 				var queryNtChar = queryNucleotides[queryCoord-1];
-				var subChars = ntCharToSubChars[queryNtChar];
-				if(subChars != null) {
-					for(var j = 0; j < subChars.length; subChars++) {
-						var subChar = subChars[j];
-						if(subChar != refNtChar) {
-							var snpName = refNtChar+refCoord+subChar;
-							snps.push({
-								snp:{
-									name: snpName,
-									refNtChar: refNtChar,
-									refCoord: refCoord,
-									queryCoord: queryCoord,
-									queryAmbigNtChar: queryNtChar,
-									queryNtChar: subChar
-								}, 
-								displayText: "Coding region SNP: "+snpName
-							});
+				if("ACGT".indexOf(refNtChar) >= 0 && queryNtChar != "N") {
+					var subChars = ntCharToSubChars[queryNtChar];
+					if(subChars != null) {
+						for(var j = 0; j < subChars.length; j++) {
+							var subChar = subChars[j];
+							if(subChar != refNtChar) {
+								var snpName = refNtChar+refCoord+subChar;
+								snps.push({
+									snp:{
+										name: snpName,
+										refNtChar: refNtChar,
+										refCoord: refCoord,
+										queryCoord: queryCoord,
+										queryAmbigNtChar: queryNtChar,
+										queryNtChar: subChar
+									}, 
+									displayText: "Coding region SNP: "+snpName
+								});
+							}
 						}
 					}
 				}
