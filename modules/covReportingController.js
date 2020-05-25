@@ -131,6 +131,76 @@ function generateQueryToTargetRefSegs(targetRefName, nucleotides) {
 	
 }
 
+//static map of concrete / ambiguous NT chars to the set of concrete chars which match them.
+var ntCharToSubChars = {
+    "A": ["A"],
+	"C": ["C"],
+	"G": ["G"],
+	"T": ["T"],
+	"R": ["A", "G"],
+	"Y": ["C", "T"],
+	"K": ["G", "T"],
+	"M": ["A", "C"],
+	"S": ["C", "G"],
+	"W": ["A", "T"],
+	"B": ["C", "G", "T"],
+	"D": ["A", "G", "T"],
+	"H": ["A", "C", "T"],
+	"V": ["A", "C", "G"],
+	"N": ["A", "C", "G", "T"]
+}
+
+
+function generateCodingRegionSnps(queryNucleotides, targetRefName, queryToTargetRefSegs) {
+	var refSeqID;
+	var refSourceName;
+	glue.inMode("reference/"+targetRefName, function() {
+		var showSeqResult = glue.command(["show", "sequence"]).showSequenceResult;
+		refSeqID = showSeqResult["sequence.sequenceID"];
+		refSourceName = showSeqResult["sequence.source.name"];
+	});
+	var targetRefNucleotides;
+	glue.inMode("sequence/"+refSourceName+"/"+refSeqID, function() {
+		targetRefNucleotides = glue.command(["show", "nucleotides"]).nucleotidesResult.nucleotides;
+	});
+	var snps = [];
+	_.each(queryToTargetRefSegs, function(qaSeg) {
+		var refCoord = qaSeg.refStart;
+		var queryCoord = qaSeg.queryStart;
+		while(refCoord <= qaSeg.refEnd) {
+			if(refCoord >= 266 && refCoord <= 29674) { // don't generate SNPs outside the coding region
+				var refNtChar = targetRefNucleotides[refCoord-1];
+				var queryNtChar = queryNucleotides[queryCoord-1];
+				if("ACGT".indexOf(refNtChar) >= 0 && queryNtChar != "N") {
+					var subChars = ntCharToSubChars[queryNtChar];
+					if(subChars != null) {
+						for(var j = 0; j < subChars.length; j++) {
+							var subChar = subChars[j];
+							if(subChar != refNtChar) {
+								var snpName = refNtChar+refCoord+subChar;
+								snps.push({
+									snp:{
+										name: snpName,
+										refNtChar: refNtChar,
+										refCoord: refCoord,
+										queryCoord: queryCoord,
+										queryAmbigNtChar: queryNtChar,
+										queryNtChar: subChar
+									}, 
+									displayText: "Coding region SNP: "+snpName
+								});
+							}
+						}
+					}
+				}
+			}
+			refCoord++;
+			queryCoord++;
+		}
+	});
+	return snps;
+}
+
 function generateFeaturesWithCoverage(targetRefName, queryToTargetRefSegs) {
 	var featuresWithCoverage = []; 
 	
@@ -440,6 +510,7 @@ function generateSingleFastaReport(fastaMap, resultMap, fastaFilePath) {
 				primerProbeMismatchReport(fastaFilePath, sequenceId, queryNucleotides, targetRefName, queryToTargetRefSegs);
 
 			var differences = [];
+			differences = differences.concat(generateCodingRegionSnps(queryNucleotides, targetRefName, queryToTargetRefSegs));
 			differences = differences.concat(generateReplacements(queryNucleotides, targetRefName, queryToTargetRefSegs));
 			differences = differences.concat(generateInsertions(queryNucleotides, targetRefName, queryToTargetRefSegs));
 			differences = differences.concat(generateDeletions(queryNucleotides, targetRefName, queryToTargetRefSegs));

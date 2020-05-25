@@ -1,10 +1,33 @@
 glue.command(["multi-unset", "field", "sequence", "-w", "pang_lineage != null", "pang_lineage"]);
 glue.command(["multi-unset", "field", "sequence", "-w", "pang_representative != null", "pang_representative"]);
+glue.command(["multi-unset", "field", "sequence", "-w", "pang_masked_snps != null", "pang_masked_snps"]);
 
-// load data from PANGOLIN project lineages table.
+//load data from PANGOLIN project lineages table.
 var pangSeqObjs;
 glue.inMode("module/tabularUtilityCsv", function() {
 	pangSeqObjs = glue.tableToObjects(glue.command(["load-tabular", "tabular/lineages.2020-05-07.csv"]));
+});
+
+var isolateToSnps = {};
+
+//load data from PANGOLIN project lineages table.
+glue.inMode("module/tabularUtilityCsv", function() {
+	var singletonRows = glue.tableToObjects(glue.command(["load-tabular", "tabular/singletons.csv"]));
+	_.each(singletonRows, function(singletonRow) {
+		var taxon = singletonRow.taxon.trim();
+		var snps = isolateToSnps[taxon];
+		if(snps == null) {
+			snps = [];
+			isolateToSnps[taxon] = snps;
+		}
+		var oldSnp = singletonRow.snp.trim();
+		var newSnp = oldSnp.substring(oldSnp.length-2, oldSnp.length-1)+oldSnp.substring(0, oldSnp.length-2)+oldSnp.substring(oldSnp.length-1, oldSnp.length);
+		if(!newSnp.endsWith("-")) { 
+			// no point recording these snps as we would replace a "-" with a "-" effectively.
+			// also there are some misaligned deletions here
+			snps.push(newSnp);
+		}
+	});
 });
 
 var processed = 0;
@@ -15,12 +38,15 @@ _.each(pangSeqObjs, function(pangSeqObj) {
 	if(!representative) {
 		return;
 	}
+	var snps = isolateToSnps[name];
 	var lineage = pangSeqObj.lineage.trim();
 	// various rules to undo the transformation of isolate names that the lineages repo has done
 	// within lineage representatives
 	name = name.replace("Hong_Kong", "Hong Kong");
-	name = name.replace("USA/VA-DCLS-00", "USA/VA-DCLS-0");
 	name = name.replace("USA/UT-000", "USA/UT-0");
+	if(name.indexOf("GMF") < 0) {
+		name = name.replace("USA/WI-", "USA/WI-UW-");
+	}
 	
 	var seqID;
 	var sourceName;
@@ -63,6 +89,9 @@ _.each(pangSeqObjs, function(pangSeqObj) {
 		glue.inMode("sequence/"+sourceName+"/"+seqID, function() {
 			glue.command(["set", "field", "pang_lineage", lineage]);
 			glue.command(["set", "field", "pang_representative", representative]);
+			if(snps != null && snps.length > 0) {
+				glue.command(["set", "field", "pang_masked_snps", snps.join(",")]);
+			}
 		});
 	} else {
 		glue.log("WARNING", "No GISAID/COGUK sequence found for "+name+", representative of lineage "+lineage);

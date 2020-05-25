@@ -301,6 +301,10 @@ svg {
 	fill: DarkGrey;
 }
 
+.leafText:hover {
+  fill: black;
+}
+
 .leafLink:hover {
 	fill: Black;
 }
@@ -329,4 +333,8 @@ svg {
 
 .collapsedSubtreeLink:hover {
 	fill: Black;
+}
+
+.popupText {
+	fill: White;
 }

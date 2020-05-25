@@ -1,5 +1,5 @@
-// recursive function to set the sequenceIDs throughout the tree.
-function setLeafSeqIDs(subtree) {
+// recursive function to set the treevisualiser hints throughout the tree.
+function setTreeVisualiserHints(subtree, gisaidSeqIdToPopupLines) {
 	var userData;
 	var subtreeType;
 	if(subtree.internal != null) { // internal node
@@ -12,10 +12,20 @@ function setLeafSeqIDs(subtree) {
 	if(subtreeType == "leaf") {
 		if(userData["name"].indexOf("cov-gisaid/") > 0) {
 			userData["treevisualiser-leafSourceName"] = "cov-gisaid";
-			userData["treevisualiser-leafSequenceID"] = userData["name"].substring(userData["name"].lastIndexOf("/")+1);
+			var sequenceID = userData["name"].substring(userData["name"].lastIndexOf("/")+1);
+			userData["treevisualiser-leafSequenceID"] = sequenceID;
+			var popupLines = gisaidSeqIdToPopupLines[sequenceID];
+			if(popupLines != null && popupLines.length > 0) {
+				userData["treevisualiser-leafPopupLines"] = popupLines;
+			}
 		} else if(userData["name"].indexOf("cov-coguk-refs/") > 0) {
 			userData["treevisualiser-leafSourceName"] = "cov-coguk-refs";
-			userData["treevisualiser-leafSequenceID"] = userData["name"].substring(userData["name"].lastIndexOf("/")+1);
+			var sequenceID = userData["name"].substring(userData["name"].lastIndexOf("/")+1);
+			userData["treevisualiser-leafSequenceID"] = sequenceID;
+			var popupLines = gisaidSeqIdToPopupLines[sequenceID];
+			if(popupLines != null && popupLines.length > 0) {
+				userData["treevisualiser-leafPopupLines"] = popupLines;
+			}
 		} else {
 			userData["treevisualiser-leafSourceName"] = "submitted";
 			userData["treevisualiser-leafSequenceID"] = userData["name"];
@@ -23,7 +33,7 @@ function setLeafSeqIDs(subtree) {
 	} else { // internal node
 		var branches = subtree.internal.branch;
 		_.each(branches, function(branch) {
-			setLeafSeqIDs(branch);
+			setTreeVisualiserHints(branch, gisaidSeqIdToPopupLines);
 		});
 	}
 }
@@ -72,6 +82,8 @@ function visualisePhyloAsSvg(document) {
 	// map seqID to inserted AAs, populated when code is "insertion_different_nts"
 	var gisaidSeqIdToInsertedNTs = {};
 
+	var gisaidSeqIdToPopupLines = {};
+	
 	glue.logInfo("document.inputDocument", document.inputDocument);
 
 	var almtMemberObjs;
@@ -148,6 +160,35 @@ function visualisePhyloAsSvg(document) {
 			});
 		});
 	});
+
+	
+	var seqObjs = glue.tableToObjects(glue.command(["list", "sequence", "-w", 
+		"include_in_ref_tree = true", "source.name", "sequenceID", "collection_date", "m49_country.display_name", "gisaid_authors_short"]));
+
+	
+	_.each(seqObjs, function(seqObj) {
+		var sequenceID = seqObj["sequenceID"];
+		var sourceName = seqObj["source.name"];
+		var date = seqObj["collection_date"];
+		var country = seqObj["m49_country.display_name"];
+		var authors = seqObj["gisaid_authors_short"];
+		var popupLines = [];
+		if(sourceName == "cov-gisaid") {
+			popupLines.push("GISAID: "+sequenceID);
+		} else if(sourceName == "cov-coguk-refs") {
+			popupLines.push("COG-UK: "+sequenceID);
+		}
+		if(date != null) {
+			popupLines.push("Collected: "+date);
+		}
+		if(country != null) {
+			popupLines.push("Country: "+country);
+		}
+		if(authors != null) {
+			popupLines.push("Authors: "+authors);
+		}
+		gisaidSeqIdToPopupLines[sequenceID] = popupLines;
+	})
 	
 	
 	if(includeQuerySequence) {
@@ -317,9 +358,10 @@ function visualisePhyloAsSvg(document) {
 		});
 	}
 
-	// set treevisualiser-leafSourceName and treevisualiser-leafSequenceID throughout the tree.
-	// this will cause TreeVisualiser to set leafSourceName and leafSequenceID properties on the leaf objects within visualiseTreeResult
-	setLeafSeqIDs(glueTree.phyloTree.root);
+	// set treevisualiser-leafSourceName, treevisualiser-leafSequenceID and treevisualiser-leafPopupLines
+	// throughout the tree.
+	// this will cause TreeVisualiser to set various properties on the leaf objects within visualiseTreeResult
+	setTreeVisualiserHints(glueTree.phyloTree.root, gisaidSeqIdToPopupLines);
 	
 	// generate a visualisation document for the tree, 
 	// with the visualisation maths etc. done
@@ -367,6 +409,10 @@ function visualisePhyloAsSvg(document) {
 			if(insertedNTs != null) {
 				leafNode.properties.insertedNTs = insertedNTs;
 			}
+		}
+		var popupLines = gisaidSeqIdToPopupLines[seqID];
+		if(popupLines != null) {
+			leafNode.properties.popupLines = popupLines;
 		}
 	});
 	
