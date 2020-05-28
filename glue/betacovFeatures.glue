@@ -1,0 +1,19 @@
+# Betacoronavirus features  
+
+create feature ORF_8b -p whole_genome 
+feature ORF_8b
+  set field displayName "ORF 8a"
+  set metatag OWN_CODON_NUMBERING true
+  set metatag CODES_AMINO_ACIDS true
+  set metatag CODON_LABELER_MODULE covKuiken2006CodonLabeler
+  exit
+
+
+create feature ORF_9b -p whole_genome 
+feature ORF_9b
+  set field displayName "ORF 8a"
+  set metatag OWN_CODON_NUMBERING true
+  set metatag CODES_AMINO_ACIDS true
+  set metatag CODON_LABELER_MODULE covKuiken2006CodonLabeler
+  exit
+  
