@@ -33,11 +33,14 @@ _.each(codingfeatures, function(codingfeature) {
 		    var aminoAcid  = resultObj.aminoAcid;
 		    var numMembers = resultObj.numMembers;
 		    var pctMembers = resultObj.pctMembers;
-    		glue.logInfo("Processing position "+codonLabel+"frequency of '"+aminoAcid+"' = "+pctMembers);
+    		glue.logInfo("Processing position "+codonLabel+" - frequency of '"+aminoAcid+"' = "+pctMembers);
 		    
 		});
 
 	});
+	
+	//  Identify sequences containing the variations we selected
+	
 
 });
 
