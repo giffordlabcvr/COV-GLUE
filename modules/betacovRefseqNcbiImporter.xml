@@ -1,7 +1,7 @@
 <!-- SRLV paper sequences -->
 <ncbiImporter>
 
-  <sourceName>ncbi-refseq-betacorona</sourceName>
+  <sourceName>ncbi-refseqs</sourceName>
   <specificPrimaryAccessions>
 	
      <!-- HKU1 -->
@@ -18,6 +18,11 @@
 	 <primaryAccession>NC_019843</primaryAccession>
      <!-- Hedgehog CoV -->
 	 <primaryAccession>MK679660</primaryAccession>
+     <!-- Mouse hepatitis virus strain MHV-A59 -->
+	 <primaryAccession>NC_001846</primaryAccession>
+     <!-- Human coronavirus OC43 strain ATCC -->
+	 <primaryAccession>NC_006213</primaryAccession>
+
 
   </specificPrimaryAccessions>
   <sequenceFormat>GENBANK_XML</sequenceFormat>

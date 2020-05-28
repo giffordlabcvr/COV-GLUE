@@ -1,0 +1,13 @@
+
+  # Delete modules
+  delete module betacovRefseqNcbiImporter
+  
+  # Create modules
+  create module -f modules/betacovRefseqNcbiImporter.xml
+
+  # Download NCBI sequences 
+  module betacovRefseqNcbiImporter import
+
+  # Export source
+  export source ncbi-refseqs
+
