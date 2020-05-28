@@ -191,3 +191,80 @@ reference REF_SARS1
 	
   exit 
 
+
+
+reference REF_OC43
+  set field displayName "OC43 strain ATCC Reference Sequence"
+  add feature-location whole_genome
+  feature-location whole_genome
+    add segment 1 30741
+    exit
+
+  #add feature-location ORF_1ab
+  #feature-location ORF_1ab
+  #  add segment 210 13340 --spliceIndex 1
+  #  add segment 13340 21496 --spliceIndex 2 --translationModifier covOrf1abTranslationModifier
+  #  exit
+
+
+  add feature-location NSP2
+  feature-location NSP2
+	add segment 9948 10856
+	exit
+
+  add feature-location NSP3
+  feature-location NSP3
+	add segment 10857 11717
+	exit
+
+  add feature-location NSP4
+  feature-location NSP4
+	add segment 11718 11984
+	exit
+
+  add feature-location NSP5
+  feature-location NSP5
+	add segment 11985 12575
+	exit
+
+  add feature-location NSP6
+  feature-location NSP6
+	add segment 12576 12905
+	exit
+
+  add feature-location NSP7
+  feature-location NSP7
+	add segment 11773 12021
+	exit
+
+  add feature-location NSP8
+  feature-location NSP8
+	add segment 12022 12615
+	exit
+
+  add feature-location NSP9
+  feature-location NSP9
+	add segment 12616 12954
+	exit
+
+  add feature-location NSP10
+  feature-location NSP10
+	add segment 12955 13371
+	exit
+
+  add feature-location NSP11
+  feature-location NSP11
+	add segment 13372 13410
+	exit
+
+  add feature-location NSP12
+  feature-location NSP12
+    add segment 19472 20596
+    exit
+
+  add feature-location NSP13
+  feature-location NSP13
+	add segment 20597 21493
+	exit
+
+  exit 
