@@ -259,5 +259,9 @@ feature ORF_10
   set metatag CODES_AMINO_ACIDS true
   set metatag CODON_LABELER_MODULE covKuiken2006CodonLabeler
   exit
-  
+
+
+create feature 3UTR -p whole_genome "3' untranslated region"
+feature 3UTR set field displayName "3' UTR"
+
   
