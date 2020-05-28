@@ -41,6 +41,7 @@ _.each(codingfeatures, function(codingfeature) {
 	
 	//  Identify sequences containing the variations we selected
 	
+    // Create and export an alignment containing just these sequences 
 
 });
 
@@ -65,12 +66,10 @@ function initialise_refseq_feature_aa_map() {
 				glue.logInfo("Setting AA at position '"+codonLabel+"' to be:'"+aminoAcid+"'");
 
 			});
-
+			
 			refseqFeatureResultMap[codingfeature] = featureResultMap;
 		});
-
 	});
-
 	return refseqFeatureResultMap;
 }
 
