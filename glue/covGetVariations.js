@@ -1,5 +1,5 @@
 // Get variations
-var master_ref = 'REF_MASTER_WUHAN_HU_1';
+var master_ref = 'REF_MASTER_AAV2';
 var master_alignment = 'AL_GISAID_CONSTRAINED';
 
 //var codingfeatures = [ "ORF_1a", "NSP1", "NSP2", "NSP3", "NSP4", "NSP5", "NSP6",
@@ -11,6 +11,7 @@ var codingfeatures = [  "ORF_6" ]; // DEV
 
 // Get the reference sequence amino acid residues for each feature into map data structure
 var refseqFeatureAaMap = initialise_refseq_feature_aa_map();
+glue.logInfo("refseqFeatureAaMap "+refseqFeatureAaMap); 
 
 // Iterate through the coding features, retrieving variations that meet the criterion
 _.each(codingfeatures, function(codingfeature) {
@@ -18,10 +19,13 @@ _.each(codingfeatures, function(codingfeature) {
     glue.logInfo("Processing feature "+codingfeature+" in alignment "+master_alignment);
 
     // Get reference aminos for this feature from map
-    var featureMap = refseqFeatureAaMap.codingfeature;
+    var featureRefMap = refseqFeatureAaMap[codingfeature];
     
     // Use alignment to calculate aa frequencies in each listed coding feature
     var featureResultMap = {};
+    var variationsToInclude = {};
+    var sequencesToInclude = {};
+
 
 	glue.inMode("alignment/"+master_alignment, function(){
 	
@@ -30,10 +34,15 @@ _.each(codingfeatures, function(codingfeature) {
 		
 		    // Get differences from consensus
 		    var codonLabel = resultObj.codon;
+		    var refResultObj  = featureRefMap[codonLabel]
+		    var consensus  = refResultObj.definiteAas
+		    
 		    var aminoAcid  = resultObj.aminoAcid;
 		    var numMembers = resultObj.numMembers;
 		    var pctMembers = resultObj.pctMembers;
-    		glue.logInfo("Processing position "+codonLabel+" - frequency of '"+aminoAcid+"' = "+pctMembers);
+		    
+		    
+    		glue.logInfo("Processing position "+codonLabel+consensus+" - frequency of '"+aminoAcid+"' = "+pctMembers);
 		    
 		});
 
