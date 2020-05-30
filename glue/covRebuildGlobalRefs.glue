@@ -14,7 +14,7 @@
   run script glue/covLoadPangLineages.js
 
   # all sequences excluded from the reference tree by default
-  multi-set field sequence -a include_in_ref_tree false
+  multi-set field sequence -w "include_in_ref_tree = true" include_in_ref_tree false
 
   # currently, include in ref tree iff sequence is flagged as a PANGOLIN representative
   multi-set field sequence -w "pang_representative = true" include_in_ref_tree true
