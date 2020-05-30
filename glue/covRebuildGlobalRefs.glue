@@ -4,8 +4,8 @@
 
   # (re-)import cov-coguk-refs sequences, these are COG-UK sequences that
   # appear in the global reference tree but are not on GISAID
-  import source sources/cov-coguk-refs
   delete source cov-coguk-refs
+  import source sources/cov-coguk-refs
   console set cmd-result-format tab
   module covCogUkRefsTextFilePopulator populate -w "source.name = 'cov-coguk-refs'" -f tabular/cogukRefsMetadata.txt
   console unset cmd-result-format
