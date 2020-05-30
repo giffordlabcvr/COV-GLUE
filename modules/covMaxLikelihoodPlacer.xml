@@ -5,6 +5,7 @@
     <selectorName>covReferencePhylogenyColumnsSelector</selectorName>
     <phyloFieldName>phylogeny</phyloFieldName>
     <raxmlEpaRunner>
+		<substitutionModel>GTRGAMMA</substitutionModel>
     	<accumulatedThreshold>0.95</accumulatedThreshold>
     </raxmlEpaRunner>
 </maxLikelihoodPlacer>
