@@ -1,9 +1,14 @@
-  # This is part of the main build, but can also be used to update an existing build
-  # when there has been an update to the Rambaut et al. lineages repo.
+  # This is part of the main build, but can also be used to rebuild the alignment and
+  # tree (for checking) after there has been an update to the Rambaut et al. lineages repo.
+  # This should work as an independent run, based on a simple cov_glue project build starting point.
 
-  # Null these out as they are based on the previous lineage assignment system.
-  multi-unset field sequence -a cov_glue_lineage
-  multi-unset field sequence -a cov_glue_lw_ratio
+  # (re-)import cov-coguk-refs sequences, these are COG-UK sequences that
+  # appear in the global reference tree but are not on GISAID
+  import source sources/cov-coguk-refs
+  delete source cov-coguk-refs
+  console set cmd-result-format tab
+  module covCogUkRefsTextFilePopulator populate -w "source.name = 'cov-coguk-refs'" -f tabular/cogukRefsMetadata.txt
+  console unset cmd-result-format
 
   # PANGOLIN lineage assignments and representative flag.
   run script glue/covLoadPangLineages.js
