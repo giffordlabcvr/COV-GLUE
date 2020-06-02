@@ -38,6 +38,33 @@ function setTreeVisualiserHints(subtree, gisaidSeqIdToPopupLines) {
 	}
 }
 
+function wordWrap(longString, maxChars) {
+	var lines = [];
+	var remainingString = longString.trim();
+	while(remainingString.length > 0) {
+		if(remainingString.length <= maxChars) {
+			lines.push(remainingString);
+			break;
+		} else {
+			var lastSpaceIndex = null;
+			for(var i = maxChars-1; i >= 0; i--) {
+				if(remainingString[i] == ' ') {
+					lastSpaceIndex = i;
+					break;
+				}
+			}
+			if(lastSpaceIndex != null) {
+				lines.push(remainingString.substring(0, lastSpaceIndex));
+				remainingString = remainingString.substring(lastSpaceIndex).trim();
+			} else {
+				lines.push(remainingString.substring(0, maxChars-2)+"-");
+				remainingString = remainingString.substring(maxChars-2).trim();
+			}
+		}
+	}
+	return lines;
+}
+
 function visualisePhyloAsSvg(document) {
 	var glueTree;
 	
@@ -163,8 +190,10 @@ function visualisePhyloAsSvg(document) {
 
 	
 	var seqObjs = glue.tableToObjects(glue.command(["list", "sequence", "-w", 
-		"include_in_ref_tree = true", "source.name", "sequenceID", "collection_date", "m49_country.display_name", "gisaid_authors_short"]));
+		"include_in_ref_tree = true", "source.name", "sequenceID", "collection_date", "m49_country.display_name", 
+		"gisaid_authors_short", "gisaid_originating_lab", "gisaid_submitting_lab"]));
 
+	var maxChars = 50; // word wrapping param.
 	
 	_.each(seqObjs, function(seqObj) {
 		var sequenceID = seqObj["sequenceID"];
@@ -172,6 +201,8 @@ function visualisePhyloAsSvg(document) {
 		var date = seqObj["collection_date"];
 		var country = seqObj["m49_country.display_name"];
 		var authors = seqObj["gisaid_authors_short"];
+		var originatingLab = seqObj["gisaid_originating_lab"];
+		var submittingLab = seqObj["gisaid_submitting_lab"];
 		var popupLines = [];
 		if(sourceName == "cov-gisaid") {
 			popupLines.push("GISAID: "+sequenceID);
@@ -183,6 +214,12 @@ function visualisePhyloAsSvg(document) {
 		}
 		if(country != null) {
 			popupLines.push("Country: "+country);
+		}
+		if(originatingLab != null) {
+			popupLines = popupLines.concat(wordWrap("Originating lab: "+originatingLab, maxChars))
+		}
+		if(submittingLab != null) {
+			popupLines = popupLines.concat(wordWrap("Submitting lab: "+submittingLab, maxChars))
 		}
 		if(authors != null) {
 			popupLines.push("Authors: "+authors);
