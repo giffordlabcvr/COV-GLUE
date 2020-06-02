@@ -2,7 +2,11 @@ glue.command(["multi-unset", "field", "sequence", "-w", "pang_lineage != null", 
 glue.command(["multi-unset", "field", "sequence", "-w", "pang_representative != null", "pang_representative"]);
 glue.command(["multi-unset", "field", "sequence", "-w", "pang_masked_snps != null", "pang_masked_snps"]);
 
-//load data from PANGOLIN project lineages table.
+// load data from PANGOLIN project lineages table.
+// this will populate pang_... fields for
+// (1) Any GISAID sequences in the lineages table, if they can be found in COV-GLUE
+//     Although note, UK sequences in the lineages table do not have GISAID IDs even if they are on GISAID.
+// (2) Any COGUK sequences which are also marked as lineage representatives.
 var pangSeqObjs;
 glue.inMode("module/tabularUtilityCsv", function() {
 	pangSeqObjs = glue.tableToObjects(glue.command(["load-tabular", "tabular/lineages.metadata.csv"]));
@@ -34,9 +38,6 @@ var processed = 0;
 
 _.each(pangSeqObjs, function(pangSeqObj) {
 	var representative = pangSeqObj.representative != null && pangSeqObj.representative.trim() == "1";
-	if(!representative) {
-		return;
-	}
 	var name = pangSeqObj["name"];
 	var lineage = pangSeqObj.lineage.trim();
 	var snps = isolateToSnps[name];
@@ -47,33 +48,50 @@ _.each(pangSeqObjs, function(pangSeqObj) {
 	var gisaidID = pangSeqObj["GISAID ID"];
 	if(gisaidID != null) {
 		// first try cov-gisaid
-		var gisaidIsolateMatches = 
+		var gisaidIdMatches = 
 			glue.tableToObjects(glue.command(["list", "sequence", 
 				"-w", "source.name = 'cov-gisaid' and sequenceID = '"+gisaidID+"'"]));
-		if(gisaidIsolateMatches.length > 0) {
-			seqID = gisaidIsolateMatches[0]["sequenceID"]
-			sourceName = gisaidIsolateMatches[0]["source.name"]
+		if(gisaidIdMatches.length > 0) {
+			seqID = gisaidIdMatches[0]["sequenceID"]
+			sourceName = gisaidIdMatches[0]["source.name"]
 		}
 	} else {
-		// non-GISAID -- assume COG-UK
-		var cogukMatches;
-		var bits = name.split("/");
-		if(bits.length >= 3 && ["England", "Scotland", "Wales", "Northern_Ireland"].indexOf(bits[0]) >= 0) {
-			var cogUkId = bits[1];
-			// first try 'cov-coguk' source. This will exist when we are updating refs but not in the main build
-			var cogUkIdMatches = glue.tableToObjects(glue.command(["list", "sequence", 
-				"-w", "source.name = 'cov-coguk' and (sequenceID = '"+cogUkId+"' or isolate = '"+name+"')"]));
-			if(cogUkIdMatches.length > 0) {
-				seqID = cogUkIdMatches[0]["sequenceID"]
-				sourceName = cogUkIdMatches[0]["source.name"]
+		if(!representative) { // no GISAID ID, not representative
+			if(pangSeqObj["country"] == "UK") {
+				var transformedName = name.replace("Northern_Ireland", "Northern Ireland");
+				var gisaidIsolateMatches = 
+					glue.tableToObjects(glue.command(["list", "sequence", 
+						"-w", "source.name = 'cov-gisaid' and m49_country.id = 'GBR' and isolate = '"+transformedName+"'"]));
+				if(gisaidIsolateMatches.length > 0) {
+					seqID = gisaidIsolateMatches[0]["sequenceID"]
+					sourceName = gisaidIsolateMatches[0]["source.name"]
+				} else {
+					return;
+				}
+			} else {
+				return; 
 			}
-			// As fallback use 'cov-coguk-refs' source. This will exist when in the main build
-			if(seqID == null && sourceName == null) {
-				var cogUkRefsIdMatches = glue.tableToObjects(glue.command(["list", "sequence", 
-					"-w", "source.name = 'cov-coguk-refs' and (sequenceID = '"+cogUkId+"' or isolate = '"+name+"')"]));
-				if(cogUkRefsIdMatches.length > 0) {
-					seqID = cogUkRefsIdMatches[0]["sequenceID"]
-					sourceName = cogUkRefsIdMatches[0]["source.name"]
+		} else {
+			// no GISAID ID, representative
+			var cogukMatches;
+			var bits = name.split("/");
+			if(bits.length >= 3 && ["England", "Scotland", "Wales", "Northern_Ireland"].indexOf(bits[0]) >= 0) {
+				var cogUkId = bits[1];
+				// first try 'cov-coguk' source. This will exist when we are updating refs but not in the main build
+				var cogUkIdMatches = glue.tableToObjects(glue.command(["list", "sequence", 
+					"-w", "source.name = 'cov-coguk' and (sequenceID = '"+cogUkId+"' or isolate = '"+name+"')"]));
+				if(cogUkIdMatches.length > 0) {
+					seqID = cogUkIdMatches[0]["sequenceID"]
+					sourceName = cogUkIdMatches[0]["source.name"]
+				}
+				// As fallback use 'cov-coguk-refs' source. This will exist when in the main build
+				if(seqID == null && sourceName == null) {
+					var cogUkRefsIdMatches = glue.tableToObjects(glue.command(["list", "sequence", 
+						"-w", "source.name = 'cov-coguk-refs' and (sequenceID = '"+cogUkId+"' or isolate = '"+name+"')"]));
+					if(cogUkRefsIdMatches.length > 0) {
+						seqID = cogUkRefsIdMatches[0]["sequenceID"]
+						sourceName = cogUkRefsIdMatches[0]["source.name"]
+					}
 				}
 			}
 		}
@@ -81,6 +99,9 @@ _.each(pangSeqObjs, function(pangSeqObj) {
 	
 
 	if(seqID == null && sourceName == null) {
+		if(!representative) {
+			return; // not a GISAID sequence we could find, not representative
+		}
 		// should only drop through to this bit when we are updating to a new version of the lineages CSV.
 		// if the COGUK-COV-GLUE extension is loaded, it will associate sequences. 
 		// but we then need to export them back out again using covExportCogUkRefs.js
