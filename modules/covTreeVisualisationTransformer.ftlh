@@ -147,6 +147,9 @@
 			<#assign roundedRectY = (leafNode.y+(verticalLeafSpacePx/2 + (boxSpacer*0.75)))>
 			<#assign trianglePath = "M"+(leafNode.x+leafTextGapPx+leafNode.properties.leafTextWidthPx/2)+" "+(leafNode.y+(verticalLeafSpacePx/2 + boxSpacer/4))+" l"+(-boxSpacer/2)+" "+(1+boxSpacer/2)+" l"+boxSpacer+" 0 Z">
 		</#if>
+		<#if roundedRectX+roundedRectWidth gt svgWidthPx>
+			<#assign roundedRectX = (svgWidthPx - (roundedRectWidth + 5))>
+		</#if>
 	</#if>
 	
 	<rect id="popupRect${leafNode?index}" 
