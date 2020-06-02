@@ -137,10 +137,16 @@
 	<#assign roundedRectX = (leafNode.x+leafTextGapPx+leafNode.properties.leafTextWidthPx+boxSpacer)>
 	<#assign roundedRectY = (leafNode.y-yCenteringOffset)>
 	<#assign trianglePath = "M"+(leafNode.x+leafTextGapPx+leafNode.properties.leafTextWidthPx+(boxSpacer/2))+" "+leafNode.y+" l"+(1+(boxSpacer/2))+" "+(boxSpacer/2)+" l0 "+(-boxSpacer)+" Z">
-	<#if roundedRectX+roundedRectWidth gt svgWidthPx>
-		<#assign roundedRectX = (leafNode.x+leafTextGapPx+(leafNode.properties.leafTextWidthPx/2)-(roundedRectWidth/2))>
-		<#assign roundedRectY = (leafNode.y-(verticalLeafSpacePx/2 + (boxSpacer*0.75) + roundedRectHeight))>
-		<#assign trianglePath = "M"+(leafNode.x+leafTextGapPx+leafNode.properties.leafTextWidthPx/2)+" "+(leafNode.y-(verticalLeafSpacePx/2 + boxSpacer/4))+" l"+(-boxSpacer/2)+" "+(-(1+boxSpacer/2))+" l"+boxSpacer+" 0 Z">
+	<#if roundedRectX+roundedRectWidth gt svgWidthPx || roundedRectY lt 0 || (roundedRectY+roundedRectHeight) gt svgHeightPx>
+		<#if leafNode.y gt svgHeightPx / 2>
+			<#assign roundedRectX = (leafNode.x+leafTextGapPx+(leafNode.properties.leafTextWidthPx/2)-(roundedRectWidth/2))>
+			<#assign roundedRectY = (leafNode.y-(verticalLeafSpacePx/2 + (boxSpacer*0.75) + roundedRectHeight))>
+			<#assign trianglePath = "M"+(leafNode.x+leafTextGapPx+leafNode.properties.leafTextWidthPx/2)+" "+(leafNode.y-(verticalLeafSpacePx/2 + boxSpacer/4))+" l"+(-boxSpacer/2)+" "+(-(1+boxSpacer/2))+" l"+boxSpacer+" 0 Z">
+		<#else>
+			<#assign roundedRectX = (leafNode.x+leafTextGapPx+(leafNode.properties.leafTextWidthPx/2)-(roundedRectWidth/2))>
+			<#assign roundedRectY = (leafNode.y+(verticalLeafSpacePx/2 + (boxSpacer*0.75)))>
+			<#assign trianglePath = "M"+(leafNode.x+leafTextGapPx+leafNode.properties.leafTextWidthPx/2)+" "+(leafNode.y+(verticalLeafSpacePx/2 + boxSpacer/4))+" l"+(-boxSpacer/2)+" "+(1+boxSpacer/2)+" l"+boxSpacer+" 0 Z">
+		</#if>
 	</#if>
 	
 	<rect id="popupRect${leafNode?index}" 
