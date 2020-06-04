@@ -204,9 +204,13 @@ schema-project cov
   create link cov_insertion cov_insertion_sequence -m ONE_TO_MANY
   create link sequence cov_insertion_sequence -m ONE_TO_MANY
 
-  create link variation cov_nt_mutation -m ONE_TO_ONE
+  create link variation cov_nt_mutation -m ONE_TO_ONE --idFieldLength 200
   create link cov_nt_mutation cov_nt_mutation_sequence -m ONE_TO_MANY
   create link sequence cov_nt_mutation_sequence -m ONE_TO_MANY
+
+  create custom-table cov_nt_mutation_sequence_missing --idFieldLength 200
+  create link cov_nt_mutation cov_nt_mutation_sequence_missing -m ONE_TO_MANY
+  create link sequence cov_nt_mutation_sequence_missing -m ONE_TO_MANY
 
   create link variation cov_nt_deletion -m ONE_TO_ONE
   create link cov_nt_deletion cov_nt_deletion_sequence -m ONE_TO_MANY

@@ -1,0 +1,17 @@
+<ecmaFunctionInvoker>
+	<scriptFileName>covAssociateSNPs.js</scriptFileName>
+	<function>
+		<name>associateSNPs</name>
+		<parameter>
+			<name>whereClause</name>
+		</parameter>
+		<okFromNullResultType/> 
+	</function>
+	<function>
+		<name>findMissingSNPs</name>
+		<parameter>
+			<name>whereClause</name>
+		</parameter>
+		<okFromNullResultType/> 
+	</function>
+</ecmaFunctionInvoker>
