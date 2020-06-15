@@ -6,13 +6,14 @@
 # Data direct from GISAID (http://gisaid.org) #
 ###############################################
 
-# All GISAID CoV sequences as FASTA. WARNING: contains FASTA format errors. 
+# All GISAID CoV sequences as FASTA, obtained via the GISAID prgrammatic API. 
+# WARNING: may contain FASTA format errors. 
 gisaid_cov2020_sequences.fasta
 
 # The GISAID acknowledgement spreadsheet as tab-delimited text
 gisaid_cov2020_acknowledgement_table.txt
 
-# Additional GISAID metadata scraped from the web
+# Additional GISAID metadata obtained via the GISAID programmatic API.
 gisaid_metadata.txt
 
 # When the last automatic update began
@@ -65,11 +66,21 @@ place_sampled
 m49_country.display_name
 m49_country.m49_sub_region.display_name
 m49_country.m49_region.display_name
+# Rambaut et al. lineage as assigned by CoV-GLUE's pipeline
+cov_glue_lineage
+# Total likelihood-weight ratio output by the pipeline in the above assignment
+cov_glue_lw_ratio
 gisaid_passage_details
-# GISAID QC mechanism: warn / info / normal
-gisaid_status_code 
-# GISAID QC comment
-gisaid_status_comment 
+gisaid_specimen
+gisaid_patient_sex
+gisaid_patient_age
+gisaid_sequencing_technology
+gisaid_assembly_method
+gisaid_patient_status
+# the Rambaut et al. lineage, *as obtained from GISAID*.
+gisaid_lineage
+# the clade assignment, according to GISAID's own clade nomenclature
+gisaid_clade
 gisaid_originating_lab
 gisaid_submitting_lab
 gisaid_authors
@@ -98,5 +109,6 @@ uncorrected_illegals
 # Number of unique SNPs the sequence has at its non-gap/non-N locations,
 # relative to Wuhan-Hu-1. 
 num_unique_snps
-
+# Double: percentage coverage of the "coding spanning region"
+csr_coverage
 

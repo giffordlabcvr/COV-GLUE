@@ -12,7 +12,6 @@ project cov
   # import cov-gisaid individual fastas.
   import source sources/cov-gisaid
 
-
   # features, master reference, feature locations.
   run file glue/covFeatures.glue
   run file glue/covMasterReference.glue
@@ -51,6 +50,9 @@ project cov
   
   # now this has been populated we can count the unique SNPs (GISAID ONLY)
   run script glue/covCountUniqueSNPs.js
+
+  # now this has been populated we set the CSR coverage
+  run script glue/covSetCsrCoverage.js
 
   # build the unconstrained alignment, global ref tree, and other 
   # stuff for assigning lineages.

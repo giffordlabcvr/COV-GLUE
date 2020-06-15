@@ -40,10 +40,16 @@ schema-project cov
     create field submission_year INTEGER 
     create field submission_month VARCHAR
     create field submission_month_day INTEGER
-    create field gisaid_status_code VARCHAR
-    create field gisaid_status_comment CLOB
     create field host_species VARCHAR 100
     create field place_sampled VARCHAR 100
+    create field gisaid_specimen VARCHAR 100
+    create field gisaid_patient_sex VARCHAR 30
+    create field gisaid_patient_age VARCHAR 30
+    create field gisaid_sequencing_technology VARCHAR 300
+    create field gisaid_assembly_method CLOB
+    create field gisaid_patient_status VARCHAR 300
+    create field gisaid_lineage VARCHAR 100
+    create field gisaid_clade VARCHAR 100
     create field gisaid_originating_lab VARCHAR 300
     create field gisaid_submitting_lab VARCHAR 300
     create field gisaid_authors CLOB
@@ -70,6 +76,7 @@ schema-project cov
     # set to non null if the 3 constituent parts are present (which they normally are)
     # suitable for sorting / filtering
     create field collection_date DATE
+	create field csr_coverage DOUBLE
     exit
 
   table feature

@@ -14,9 +14,10 @@
   # GISAID sequences where host_species != "Human" excluded from the analysis
   multi-set field sequence -w "(host_species = null or !(host_species = 'Human'))" analyse_variation false
 
-  # exclude sequences with "warn" status on GISAID, this implies quality issues,
-  # usually multiple or long runs of NNNs
-  multi-set field sequence -w "gisaid_status_code = 'warn'" analyse_variation false
+  # exclude sequences with less than 95% coverage of the CSR.
+  # this is approximately equivalent to the Ns percentage threshold GISAID applies in order to 
+  # set the warn flag (amongst other reasons).
+  multi-set field sequence -w "csr_coverage < 95.0" analyse_variation false
 
   # exclude sequences with more than 10 unique SNPs.
   multi-set field sequence -w "num_unique_snps > 10" analyse_variation false

@@ -3,20 +3,20 @@
     <columnDelimiterRegex>\t</columnDelimiterRegex>
     <textFileColumn>
         <identifier>true</identifier>
-        <header>Accession ID</header>
+        <header>covv_accession_id</header>
         <property>sequenceID</property>
     </textFileColumn>
     <textFileColumn>
-        <header>Passage details/history</header>
+        <header>covv_passage</header>
         <property>gisaid_passage_details</property>
     </textFileColumn>
     <textFileColumn>
-        <header>Submission Date</header>
+        <header>covv_subm_date</header>
         <property>submission_year</property>
         <matchPattern>(\d\d\d\d)</matchPattern>
     </textFileColumn>
     <textFileColumn>
-        <header>Submission Date</header>
+        <header>covv_subm_date</header>
         <property>submission_month</property>
         <matchPattern>\d\d\d\d-(\d\d)</matchPattern>
         <outputTemplate>${g1}</outputTemplate>
@@ -70,22 +70,46 @@
         </valueConverter>
     </textFileColumn>
     <textFileColumn>
-        <header>Submission Date</header>
+        <header>covv_subm_date</header>
         <property>submission_month_day</property>
         <matchPattern>\d\d\d\d-\d\d-(\d\d)</matchPattern>
         <outputTemplate>${g1}</outputTemplate>
     </textFileColumn>
     <textFileColumn>
-        <header>Status code</header>
-        <property>gisaid_status_code</property>
-    </textFileColumn>
-    <textFileColumn>
-        <header>Status comment</header>
-        <property>gisaid_status_comment</property>
-    </textFileColumn>
-    <textFileColumn>
-        <header>Host</header>
+        <header>covv_host</header>
         <property>host_species</property>
+    </textFileColumn>
+    <textFileColumn>
+        <header>covv_specimen</header>
+        <property>gisaid_specimen</property>
+    </textFileColumn>
+    <textFileColumn>
+        <header>covv_gender</header>
+        <property>gisaid_patient_sex</property>
+    </textFileColumn>
+    <textFileColumn>
+        <header>covv_patient_age</header>
+        <property>gisaid_patient_age</property>
+    </textFileColumn>
+    <textFileColumn>
+        <header>covv_seq_technology</header>
+        <property>gisaid_sequencing_technology</property>
+    </textFileColumn>
+    <textFileColumn>
+        <header>covv_assembly_method</header>
+        <property>gisaid_assembly_method</property>
+    </textFileColumn>
+    <textFileColumn>
+        <header>covv_patient_status</header>
+        <property>gisaid_patient_status</property>
+    </textFileColumn>
+    <textFileColumn>
+        <header>covv_lineage</header>
+        <property>gisaid_lineage</property>
+    </textFileColumn>
+    <textFileColumn>
+        <header>covv_clade</header>
+        <property>gisaid_clade</property>
     </textFileColumn>
     <skipMissing>true</skipMissing>
 </textFilePopulator>
