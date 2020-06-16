@@ -70,4 +70,5 @@ create module --fileName modules/covPrimerProbeReportTransformer.xml --loadResou
 create module --fileName modules/covCogUkRefsTextFilePopulator.xml
 
 create module --fileName modules/covAssociateSNPs.xml --loadResources
+create module --fileName modules/covDownloadAnalysis.xml --loadResources
 

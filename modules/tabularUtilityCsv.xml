@@ -1,3 +1,6 @@
 <tabularUtility>
 	<columnDelimiterRegex>,</columnDelimiterRegex>
+	<outputFormat>CSV</outputFormat>
+	<nullRenderingString></nullRenderingString>
+	<trimNullValues>true</trimNullValues>
 </tabularUtility>

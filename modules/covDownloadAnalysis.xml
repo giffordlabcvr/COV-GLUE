@@ -1,0 +1,11 @@
+<ecmaFunctionInvoker>
+	<scriptFileName>covDownloadAnalysis.js</scriptFileName>
+	<function>
+		<name>downloadAnalysis</name>
+		<consumesDocument>true</consumesDocument>
+		<parameter>
+			<name>document</name>
+		</parameter>
+		<documentResultType/> 
+	</function>
+</ecmaFunctionInvoker>

@@ -1,1 +1,5 @@
-<tabularUtility/>
+<tabularUtility>
+	<outputFormat>TAB</outputFormat>
+	<nullRenderingString></nullRenderingString>
+	<trimNullValues>true</trimNullValues>
+</tabularUtility>
