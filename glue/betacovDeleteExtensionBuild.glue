@@ -1,0 +1,9 @@
+
+  # Delete sources used for comparative analysis of betacoronaviruses
+  delete source ncbi-refseqs
+  delete source ncbi-curated-hku1
+  delete source ncbi-curated-mers
+  delete source ncbi-curated-mhv
+  delete source ncbi-curated-oc43
+  delete source ncbi-curated-sars
+  delete source ncbi-curated-sars1

@@ -1,0 +1,9 @@
+
+  # Import source for comparative analysis of betacoronaviruses
+  import source sources/ncbi-refseqs
+  import source sources/ncbi-curated-hku1
+  import source sources/ncbi-curated-mers
+  import source sources/ncbi-curated-mhv
+  import source sources/ncbi-curated-oc43
+  import source sources/ncbi-curated-sars
+  import source sources/ncbi-curated-sars1
