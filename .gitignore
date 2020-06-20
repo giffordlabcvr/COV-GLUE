@@ -4,8 +4,4 @@ covGlueSanitisedAlignmentCodingSpanningRegion.fasta
 covGlueSanitisedAlignmentWholeGenome.fasta
 covGlueSanitisedSequences.fasta
 alignments/covConstrainedAlignment*
-tabular/gisaid_cov2020_acknowledgement_table.txt
-tabular/gisaid_metadata.txt
-tabular/covGlueSanitisedMetadata.txt
-tabular/gisaidSeqCharacterStats.txt
-tabular/gisaidTimeStamp.txt
+
