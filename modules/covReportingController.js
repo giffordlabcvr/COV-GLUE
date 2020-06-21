@@ -7,7 +7,7 @@ var featuresList2 = glue.tableToObjects(
 var featuresList = featuresList1.concat(featuresList2);
 
 
-function reportFastaWeb(base64, filePath) {
+function reportFastaWeb(base64, filePath, lineFeedStyle) {
 	glue.log("FINE", "covReportingController.reportFastaWeb invoked");
 	var fastaDocument;
 	glue.inMode("module/covFastaUtility", function() {
@@ -27,7 +27,25 @@ function reportFastaWeb(base64, filePath) {
 			"filePath": filePath
 		}
 	});
-	glue.setRunningDescription("Collating report");
+	var detailLevel = "summary";
+	var baseFileName = filePath;
+	var lastIndexOfDot = filePath.lastIndexOf(".");
+	if(lastIndexOfDot >= 0) {
+		baseFileName = filePath.substring(0, lastIndexOfDot);
+	}
+	var downloadFileName = baseFileName+"_analysis_summary.csv";
+
+	glue.setRunningDescription("Collating summary");
+	var summaryWebFileResult = downloadAnalysis({
+		inputDocument: {
+			detailLevel: "summary",
+			covWebReport: result.covWebReport,
+			downloadFileName: downloadFileName,
+			downloadFormat: "CSV",
+			lineFeedStyle: lineFeedStyle
+		}
+	});
+	result.covWebReport.tabularWebFileResult = summaryWebFileResult.tabularWebFileResult;
 	return result;
 }
 
@@ -275,7 +293,6 @@ function generateReplacements(queryNucleotides, targetRefName, queryToTargetRefS
 								refAas: refAaObj.definiteAas,
 								queryAas: queryAaObj.definiteAas
 						};
-						glue.logInfo("replacementObj", replacementObj);
 						replacementsList.push({
 							replacement: replacementObj
 						});
@@ -351,7 +368,6 @@ function generateInsertions(queryNucleotides, targetRefName, queryToTargetRefSeg
 					return;
 				}
 				insertionObj.featureDisplayName = featureObj.displayName;
-				glue.logInfo("insertionObj", insertionObj);
 				var insertionKey = insertionObj.refLastNtBeforeIns+":"+insertionObj.insertedQryNts+":"+insertionObj.refFirstNtAfterIns;
 				if(insertionsSet[insertionKey] == null) { // don't report same insertion twice for both feature and parent feature.
 					insertionsList.push({
@@ -438,7 +454,6 @@ function generateDeletions(queryNucleotides, targetRefName, queryToTargetRefSegs
 			}));
 			_.each(deletionsFound, function(deletionObj) {
 				deletionObj.featureDisplayName = featureObj.displayName;
-				glue.logInfo("deletionObj", deletionObj);
 				var deletionKey = deletionObj.refFirstNtDeleted+":"+deletionObj.refLastNtDeleted;
 				if(deletionsSet[deletionKey] == null) { // don't report the same deletion twice for both feature and parent feature.
 					deletionsList.push({

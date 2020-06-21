@@ -1,5 +1,6 @@
 <ecmaFunctionInvoker>
 	<scriptFileName>covReportingController.js</scriptFileName>
+	<scriptFileName>covDownloadAnalysis.js</scriptFileName>
 	<function>
 		<name>reportFastaWeb</name>
 		<consumesBinary>true</consumesBinary>
@@ -8,6 +9,9 @@
 		</parameter>
 		<parameter>
 			<name>fastaFilePath</name>
+		</parameter>
+		<parameter>
+			<name>lineFeedStyle</name>
 		</parameter>
 		<documentResultType/> 
 	</function>
