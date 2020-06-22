@@ -57,7 +57,9 @@ _.each(fastaFiles, function(fastaFile) {
 					cleanedUpChar = char.toUpperCase();
 				} else {
 					currentNRunLength = 0;
-					if("acgtuACGTU".indexOf(char) >= 0) {
+					if("uU".indexOf(char) >= 0) {
+						cleanedUpChar = "T";
+					} else if("acgtACGT".indexOf(char) >= 0) {
 						cleanedUpChar = char.toUpperCase();
 					} else if("rykmswRYKMSW".indexOf(char) >= 0) {
 						seqStats.num_bivalent_ambigs++;
