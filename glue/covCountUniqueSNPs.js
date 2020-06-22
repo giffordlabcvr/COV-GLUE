@@ -48,6 +48,9 @@ _.each(nucleotideAlmt.nucleotideFasta.sequences, function(membObj) {
 				positionInfo.refNt = membNt;
 			} else {
 				var subChars = ntCharToSubChars[membNt];
+				if(subChars == null) {
+					throw new Error("Unrecognised character "+membNt+" at position "+i+" in sequence "+membObj.id);
+				}
 				for(var j = 0; j < subChars.length; subChars++) {
 					var subChar = subChars[j];
 					var currentCount = positionInfo[subChar];
@@ -79,6 +82,9 @@ _.each(nucleotideAlmt.nucleotideFasta.sequences, function(membObj) {
 			if(membNt != '-' && membNt != 'N') {
 				var positionInfo = positionInfoArray[i];
 				var subChars = ntCharToSubChars[membNt];
+				if(subChars == null) {
+					throw new Error("Unrecognised character "+membNt+" at position "+i+" in sequence "+membObj.id);
+				}
 				var refNt = positionInfo.refNt;
 				for(var j = 0; j < subChars.length; subChars++) {
 					var subChar = subChars[j];
