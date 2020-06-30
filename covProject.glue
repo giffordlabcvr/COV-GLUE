@@ -61,6 +61,9 @@ project cov
   # run the rules to exclude some sequences from the variation analysis
   run file glue/covSetAnalyseVariationFlag.glue
 
+  # count and store the number of sequences retrieved and which pass exclusion criteria
+  run script glue/covCountGisaidRetrievedAndIncluded.js
+
   # assign and store lineages for all sequences where analyse_variation is true
   run script glue/covAssignAndStoreLineages.js
 
