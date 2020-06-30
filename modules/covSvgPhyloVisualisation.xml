@@ -8,4 +8,12 @@
 		</parameter>
 		<documentResultType/> 
 	</function>
+	<function>
+		<name>visualisePhyloAsNewick</name>
+		<consumesDocument>true</consumesDocument>
+		<parameter>
+			<name>document</name>
+		</parameter>
+		<documentResultType/> 
+	</function>
 </ecmaFunctionInvoker>

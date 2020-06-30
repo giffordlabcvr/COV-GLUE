@@ -114,7 +114,7 @@ function visualisePhyloAsSvg(document) {
 
 	var gisaidSeqIdToPopupLines = {};
 	
-	glue.logInfo("document.inputDocument", document.inputDocument);
+	// glue.logInfo("document.inputDocument", document.inputDocument);
 
 	var almtMemberObjs;
 	glue.inMode("alignment/AL_GISAID_UNCONSTRAINED", function() {
@@ -507,3 +507,67 @@ function visualisePhyloAsSvg(document) {
 		visualisePhyloAsSvgResult: visualisePhyloAsSvgResult
 	}
 }
+
+function visualisePhyloAsNewick(document) {
+	var glueTree;
+	
+	var queryName = document.inputDocument.queryName;
+	var placementIndex = document.inputDocument.placementIndex;
+	var placerResult = document.inputDocument.placerResult;
+	var webFileName = document.inputDocument.fileName;
+	
+	var includeQuerySequence = false;
+	if(queryName != null && placementIndex != null && placerResult != null) {
+		includeQuerySequence = true;
+	}
+	
+	//glue.logInfo("document.inputDocument", document.inputDocument);
+
+	if(includeQuerySequence) {
+		// generate a tree for the placement, as a command document.
+		glue.inMode("module/covMaxLikelihoodPlacer", function() {
+			glueTree = glue.command({
+					"export": {
+						"placement-from-document": {
+							"phylogeny": {
+								"placerResultDocument": placerResult,
+								"placementIndex": placementIndex,
+								"queryName": queryName, 
+								"leafName": queryName
+							}
+						}
+					}
+			});
+		});
+		glue.inMode("module/covPhyloUtility", function() {
+			// set query leaf node to non-member
+			glueTree = glue.command({
+				"update-leaves" : {
+					propertyName: "treevisualiser-nonmember",
+					propertyValue: "true",
+					leafNodeNames : [queryName], 
+					inputPhyloTree: glueTree
+				}
+			});
+		});
+	} else {
+		glue.inMode("module/covPhyloUtility", function() {
+			glueTree = glue.command(["read-alignment-phylogeny", "AL_GISAID_UNCONSTRAINED", "phylogeny"]);
+		});
+	}
+
+	var treeDocumentToNewickResult;
+	glue.inMode("module/covTreeVisualiser", function() {
+		treeDocumentToNewickResult = glue.command({
+			"tree-document-to-newick": {
+				"treeDocument" : glueTree, 
+				"leafTextAnnotationName": document.inputDocument.tipAnnotation
+			}
+		});
+	});
+
+	return glue.command(["file-util", "save-string-web-file", treeDocumentToNewickResult.treeDocumentToNewickResult.newickString, webFileName]);
+	
+}
+
+
