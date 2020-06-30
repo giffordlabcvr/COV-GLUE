@@ -5,7 +5,15 @@
 <#assign verticalLeafSpacePx = treeVisDoc.verticalLeafSpacePx>
 <#assign leafTextGapPx = treeVisDoc.leafTextGapPx>
 <#assign leafTextFontSize = treeVisDoc.leafTextFontSize>
-	
+
+
+<#if transformerInput.treeVisualisationLegend ??>	
+<#assign legendVisDoc = transformerInput.treeVisualisationLegend>
+<#assign legendHeightPx = legendVisDoc.legendPxHeight>
+<#assign legendFontSize = legendVisDoc.legendFontSize>
+<#assign svgHeightPx = svgHeightPx + legendHeightPx>
+</#if>
+				
 <#assign leafNodeRadiusPx = verticalLeafSpacePx * 0.6>
 	
 <svg version="1.1" width="${svgWidthPx}" height="${svgHeightPx}"
@@ -17,6 +25,41 @@
     <stop offset="60%" style="stop-color:DarkGrey;stop-opacity:1" />
     <stop offset="100%" style="stop-color:White;stop-opacity:1" />
   </linearGradient>  
+
+<#if transformerInput.treeVisualisationLegend ??>	
+  <g class="branchLengthLegendLine">
+    <line
+	  	x1="${legendVisDoc.branchLengthLegendCentreLine.x1}" 
+	  	y1="${legendVisDoc.branchLengthLegendCentreLine.y1}" 
+	  	x2="${legendVisDoc.branchLengthLegendCentreLine.x2}" 
+	  	y2="${legendVisDoc.branchLengthLegendCentreLine.y2}"/>
+    <#list legendVisDoc.branchLengthLegendTicks as branchLengthLegendTick>
+    <line
+	  	x1="${branchLengthLegendTick.x1}" 
+	  	y1="${branchLengthLegendTick.y1}" 
+	  	x2="${branchLengthLegendTick.x2}" 
+	  	y2="${branchLengthLegendTick.y2}"/>
+    </#list>
+  </g>    
+  <g class="legendText" font-size="${legendFontSize}">
+  	<#list legendVisDoc.branchLengthLegendValues as branchLengthLegendValue>
+    <text
+	  	x="${branchLengthLegendValue.x}"
+	  	y="${branchLengthLegendValue.y}"
+	  	width="${branchLengthLegendValue.width}" 
+	  	height="${branchLengthLegendValue.height}"
+	  	dy=".35em">${branchLengthLegendValue.text}</text>
+  	</#list>
+    <text
+	  	x="${legendVisDoc.branchLengthLegendUnits.x}"
+	  	y="${legendVisDoc.branchLengthLegendUnits.y}"
+	  	width="${legendVisDoc.branchLengthLegendUnits.width}" 
+	  	height="${legendVisDoc.branchLengthLegendUnits.height}"
+	  	dy=".35em">${legendVisDoc.branchLengthLegendUnits.text}</text>
+  </g>
+  <g transform="translate(0 ${legendHeightPx})">
+</#if>
+
   <g class="branch">
   <polyline points="${treeVisDoc.root.x1} ${treeVisDoc.root.y1}, ${treeVisDoc.root.x2} ${treeVisDoc.root.y2}"/>
   <#list treeVisDoc.branches as branch>
@@ -177,4 +220,8 @@
 	</#list>
 	</#if>
   </#list>
+
+<#if transformerInput.treeVisualisationLegend ??>	
+  </g>
+</#if>
 </svg>

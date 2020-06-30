@@ -71,6 +71,9 @@ function visualisePhyloAsSvg(document) {
 	var queryName = document.inputDocument.queryName;
 	var placementIndex = document.inputDocument.placementIndex;
 	var placerResult = document.inputDocument.placerResult;
+	
+	var webFileType = document.inputDocument.webFileType;
+	
 	var queryNucleotides = document.inputDocument.queryNucleotides;
 	var targetRefName = document.inputDocument.targetReferenceName;
 	var queryToTargetRefSegs = document.inputDocument.queryToTargetRefSegments;
@@ -453,43 +456,54 @@ function visualisePhyloAsSvg(document) {
 		}
 	});
 	
+	var includeLegendInTree = false;
+	if(document.inputDocument.legendFileName == null) {
+		includeLegendInTree = true;
+	}
+	
 	// from the visualisation documents, generate SVGs as GLUE web files.
 	var treeTransformResult;
 	glue.inMode("module/covTreeVisualisationTransformer", function() {
+		var transformerInput = {
+			treeVisualisation: visualiseTreeResult.visDocument.treeVisualisation
+		};
+		if(includeLegendInTree) {
+			transformerInput.treeVisualisationLegend = visualiseTreeResult.visDocument.treeVisualisationLegend
+		}
 		treeTransformResult = glue.command({ "transform-to-web-file": 
 			{
-				"webFileType": "WEB_PAGE",
+				"webFileType": webFileType,
 				"commandDocument":{
-					transformerInput: {
-						treeVisualisation: visualiseTreeResult.visDocument.treeVisualisation
-					}
+					transformerInput: transformerInput
 				},
 				"outputFile": document.inputDocument.fileName
 			}
 		});
 	});
 
-	var legendTransformResult;
-	glue.inMode("module/covTreeVisualisationLegendTransformer", function() {
-		legendTransformResult = glue.command({ "transform-to-web-file": 
-			{
-				"webFileType": "WEB_PAGE",
-				"commandDocument":{
-					transformerInput: {
-						treeVisualisationLegend: visualiseTreeResult.visDocument.treeVisualisationLegend
-					}
-				},
-				"outputFile": document.inputDocument.legendFileName
-			}
+	var visualisePhyloAsSvgResult = {
+		treeTransformResult: treeTransformResult
+	};
+	
+	if(!includeLegendInTree) {
+		var legendTransformResult;
+		glue.inMode("module/covTreeVisualisationLegendTransformer", function() {
+			legendTransformResult = glue.command({ "transform-to-web-file": 
+				{
+					"webFileType": webFileType,
+					"commandDocument":{
+						transformerInput: {
+							treeVisualisationLegend: visualiseTreeResult.visDocument.treeVisualisationLegend
+						}
+					},
+					"outputFile": document.inputDocument.legendFileName
+				}
+			});
 		});
-	});
-
-	glue.logInfo("legendTransformResult", legendTransformResult);
+	}
+	visualisePhyloAsSvgResult.legendTransformResult = legendTransformResult;
 	
 	return {
-		visualisePhyloAsSvgResult: {
-			treeTransformResult: treeTransformResult,
-			legendTransformResult: legendTransformResult
-		}
+		visualisePhyloAsSvgResult: visualisePhyloAsSvgResult
 	}
 }
