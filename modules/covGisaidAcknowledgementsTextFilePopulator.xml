@@ -12,6 +12,10 @@
         <matchPattern>hCo[vV]-19/(.*)</matchPattern>
         <outputTemplate>${g1}</outputTemplate>
     </textFileColumn>
+    <textFileColumn>
+        <header>Virus name</header>
+        <property>gisaid_virus_name</property>
+    </textFileColumn>
     <isoCountryTextFileColumn codeStyle="ALPHA_3">
         <header>Location</header>
         <property>m49_country</property>
