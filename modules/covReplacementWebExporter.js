@@ -28,6 +28,10 @@ function exportReplacements(downloadFormat, whereClause, sortProperties, fileNam
 function previewReplacements(whereClause, sortProperties) {
 	var tableResult;
 	
+	if(sortProperties == null || sortProperties.trim() == "") {
+		sortProperties = "id";
+	}
+	
 	tableResult = glue.command(["list", "custom-table-row", "cov_replacement", 
 		"-w", whereClause, "-s", sortProperties, 
 		"variation.featureLoc.feature.displayName",
