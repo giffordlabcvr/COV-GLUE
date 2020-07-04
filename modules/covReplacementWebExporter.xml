@@ -1,0 +1,33 @@
+<ecmaFunctionInvoker>
+    <scriptFileName>covReplacementWebExporter.js</scriptFileName>
+    <function>
+        <name>exportReplacements</name>
+        <parameter>
+            <name>format</name>
+        </parameter>
+        <parameter>
+            <name>whereClause</name>
+        </parameter>
+        <parameter>
+            <name>sortProperties</name>
+        </parameter>
+        <parameter>
+            <name>fileName</name>
+        </parameter>
+        <parameter>
+            <name>lineFeedStyle</name>
+        </parameter>
+		<documentResultType/>
+    </function>
+    <function>
+        <name>previewReplacements</name>
+        <parameter>
+            <name>whereClause</name>
+        </parameter>
+        <parameter>
+            <name>sortProperties</name>
+        </parameter>
+		<tableFromDocumentResultType/>
+    </function>
+</ecmaFunctionInvoker>
+
