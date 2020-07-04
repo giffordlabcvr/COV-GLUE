@@ -73,4 +73,5 @@ create module --fileName modules/covAssociateSNPs.xml --loadResources
 create module --fileName modules/covDownloadAnalysis.xml --loadResources
 
 create module --fileName modules/covReplacementWebExporter.xml --loadResources
+create module --fileName modules/covInsertionWebExporter.xml --loadResources
 
