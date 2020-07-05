@@ -21,6 +21,11 @@ function reportFastaWeb(base64, filePath, lineFeedStyle) {
 	if(numSequencesInFile > maxSequencesWithoutAuth && !glue.hasAuthorisation("covFastaAnalysisLargeSubmissions")) {
 		throw new Error("Not authorised to analyse FASTA files with more than "+maxSequencesWithoutAuth+" sequences");
 	}
+	// remove hyphens from FASTA.
+	_.each(fastaDocument.nucleotideFasta.sequences, function(seqObj) {
+		seqObj.sequence = seqObj.sequence.replace(/-/g, "");
+	});
+	
 	result = reportDocument({
 		reportFastaDocument: {
 			"fastaDocument": fastaDocument, 
