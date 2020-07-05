@@ -91,6 +91,7 @@ function visualisePhyloAsSvg(document) {
 	var visInsertionLastNtBeforeStart = document.inputDocument.visInsertionLastNtBeforeStart;
 	var visInsertionFirstNtAfterEnd = document.inputDocument.visInsertionFirstNtAfterEnd;
 	var visInsertedNts = document.inputDocument.visInsertedNts;
+	var includePopups = document.inputDocument.includePopups;
 
 	// map seqID to the AA residue at the requested loc
 	var gisaidSeqIdToAA = {};
@@ -198,37 +199,39 @@ function visualisePhyloAsSvg(document) {
 
 	var maxChars = 50; // word wrapping param.
 	
-	_.each(seqObjs, function(seqObj) {
-		var sequenceID = seqObj["sequenceID"];
-		var sourceName = seqObj["source.name"];
-		var date = seqObj["collection_date"];
-		var country = seqObj["m49_country.display_name"];
-		var authors = seqObj["gisaid_authors_short"];
-		var originatingLab = seqObj["gisaid_originating_lab"];
-		var submittingLab = seqObj["gisaid_submitting_lab"];
-		var popupLines = [];
-		if(sourceName == "cov-gisaid") {
-			popupLines.push("GISAID: "+sequenceID);
-		} else if(sourceName == "cov-coguk-refs") {
-			popupLines.push("COG-UK: "+sequenceID);
-		}
-		if(date != null) {
-			popupLines.push("Collected: "+date);
-		}
-		if(country != null) {
-			popupLines.push("Country: "+country);
-		}
-		if(originatingLab != null) {
-			popupLines = popupLines.concat(wordWrap("Originating lab: "+originatingLab, maxChars))
-		}
-		if(submittingLab != null) {
-			popupLines = popupLines.concat(wordWrap("Submitting lab: "+submittingLab, maxChars))
-		}
-		if(authors != null) {
-			popupLines.push("Authors: "+authors);
-		}
-		gisaidSeqIdToPopupLines[sequenceID] = popupLines;
-	})
+	if(includePopups) {
+		_.each(seqObjs, function(seqObj) {
+			var sequenceID = seqObj["sequenceID"];
+			var sourceName = seqObj["source.name"];
+			var date = seqObj["collection_date"];
+			var country = seqObj["m49_country.display_name"];
+			var authors = seqObj["gisaid_authors_short"];
+			var originatingLab = seqObj["gisaid_originating_lab"];
+			var submittingLab = seqObj["gisaid_submitting_lab"];
+			var popupLines = [];
+			if(sourceName == "cov-gisaid") {
+				popupLines.push("GISAID: "+sequenceID);
+			} else if(sourceName == "cov-coguk-refs") {
+				popupLines.push("COG-UK: "+sequenceID);
+			}
+			if(date != null) {
+				popupLines.push("Collected: "+date);
+			}
+			if(country != null) {
+				popupLines.push("Country: "+country);
+			}
+			if(originatingLab != null) {
+				popupLines = popupLines.concat(wordWrap("Originating lab: "+originatingLab, maxChars))
+			}
+			if(submittingLab != null) {
+				popupLines = popupLines.concat(wordWrap("Submitting lab: "+submittingLab, maxChars))
+			}
+			if(authors != null) {
+				popupLines.push("Authors: "+authors);
+			}
+			gisaidSeqIdToPopupLines[sequenceID] = popupLines;
+		})
+	}
 	
 	
 	if(includeQuerySequence) {
@@ -450,9 +453,11 @@ function visualisePhyloAsSvg(document) {
 				leafNode.properties.insertedNTs = insertedNTs;
 			}
 		}
-		var popupLines = gisaidSeqIdToPopupLines[seqID];
-		if(popupLines != null) {
-			leafNode.properties.popupLines = popupLines;
+		if(includePopups) {
+			var popupLines = gisaidSeqIdToPopupLines[seqID];
+			if(popupLines != null) {
+				leafNode.properties.popupLines = popupLines;
+			}
 		}
 	});
 	
