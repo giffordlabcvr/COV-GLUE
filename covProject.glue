@@ -29,7 +29,7 @@ project cov
   # various metadata-related steps.
   # have to temporarily change result format to avoid bug in table rendering library.
   console set cmd-result-format tab
-  module covGisaidAcknowledgementsTextFilePopulator populate --fileName tabular/gisaid_cov2020_acknowledgement_table.txt
+  module covGisaidRefsMetadataTextFilePopulator populate --fileName tabular/gisaidLineageRepresentatives.tsv
   module covGisaidMetadataTextFilePopulator populate --fileName tabular/gisaid_metadata.txt
   module covSeqStatsTextFilePopulator populate -f tabular/gisaidSeqCharacterStats.txt
   console unset cmd-result-format
@@ -37,11 +37,6 @@ project cov
   run script glue/covSetCollectionDate.js
   run script glue/covSetAuthorsShort.js
 
-  # deals with case where FASTA is ahead of either GISAID metadata (submission_year = null) or 
-  # GISAID acknowledgements (isolate = null).
-  # in this case we just remove these sequences.
-  # the reverse case is dealt with by skipMissing flags in the TextFilePopulators above.
-  delete sequence -w "source.name = 'cov-gisaid' and (submission_year = null or isolate = null)"
 
   # populate the constrained alignment (GISAID only)
   create alignment AL_GISAID_CONSTRAINED -r REF_MASTER_WUHAN_HU_1 

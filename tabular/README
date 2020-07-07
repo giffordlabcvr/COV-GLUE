@@ -81,9 +81,6 @@ gisaid_patient_status
 gisaid_lineage
 # the clade assignment, according to GISAID's own clade nomenclature
 gisaid_clade
-gisaid_originating_lab
-gisaid_submitting_lab
-gisaid_authors
 # true if various QC and metadata criteria are met
 # if true, CoV-GLUE includes sequence in its analysis of SNPs, AA replacements, indels etc.
 analyse_variation 

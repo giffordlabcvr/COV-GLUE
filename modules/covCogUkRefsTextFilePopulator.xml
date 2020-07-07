@@ -7,6 +7,18 @@
         <property>sequenceID</property>
     </textFileColumn>
     <textFileColumn>
+        <header>pang_lineage</header>
+        <property>pang_lineage</property>
+    </textFileColumn>
+    <textFileColumn>
+        <header>pang_representative</header>
+        <property>pang_representative</property>
+    </textFileColumn>
+    <textFileColumn>
+        <header>pang_masked_snps</header>
+        <property>pang_masked_snps</property>
+    </textFileColumn>
+    <textFileColumn>
         <header>isolate</header>
         <property>isolate</property>
     </textFileColumn>

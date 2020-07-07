@@ -7,16 +7,13 @@
   delete source cov-coguk-refs
   import source sources/cov-coguk-refs
   console set cmd-result-format tab
-  module covCogUkRefsTextFilePopulator populate -w "source.name = 'cov-coguk-refs'" -f tabular/cogukRefsMetadata.txt
+  module covCogUkRefsTextFilePopulator populate -w "source.name = 'cov-coguk-refs'" -f tabular/cogukLineageRepresentatives.tsv
   console unset cmd-result-format
-
-  # PANGOLIN lineage assignments and representative flag.
-  run script glue/covLoadPangLineages.js
-
+ 
   # all sequences excluded from the reference tree by default
   multi-set field sequence -w "include_in_ref_tree = true" include_in_ref_tree false
 
-  # currently, include in ref tree iff sequence is flagged as a PANGOLIN representative
+  # currently, include in ref tree iff sequence is flagged as a representative
   multi-set field sequence -w "pang_representative = true" include_in_ref_tree true
 
   # compute the unconstrained alignment
@@ -32,7 +29,7 @@
   # reroot phylogeny and export display tree, this has the side effect of loading the final ref tree
   run file glue/covRerootPhylogeny.glue
   
-  # set the pangolin lineage as internal node properties in the reference tree.
+  # set the reference lineage as internal node properties in the reference tree.
   # this allows assignment of lineages to work.
   module covAssignLineages invoke-function setLineagesInTree
   

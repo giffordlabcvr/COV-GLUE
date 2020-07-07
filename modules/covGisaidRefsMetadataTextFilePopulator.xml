@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<textFilePopulator>
+    <columnDelimiterRegex>\t</columnDelimiterRegex>
+    <textFileColumn>
+        <identifier>true</identifier>
+        <header>sequenceID</header>
+        <property>sequenceID</property>
+    </textFileColumn>
+    <textFileColumn>
+        <header>pang_lineage</header>
+        <property>pang_lineage</property>
+    </textFileColumn>
+    <textFileColumn>
+        <header>pang_representative</header>
+        <property>pang_representative</property>
+    </textFileColumn>
+    <textFileColumn>
+        <header>pang_masked_snps</header>
+        <property>pang_masked_snps</property>
+    </textFileColumn>
+    <textFileColumn>
+        <header>gisaid_originating_lab</header>
+        <property>gisaid_originating_lab</property>
+    </textFileColumn>
+    <textFileColumn>
+        <header>gisaid_submitting_lab</header>
+        <property>gisaid_submitting_lab</property>
+    </textFileColumn>
+    <textFileColumn>
+        <header>gisaid_authors</header>
+        <property>gisaid_authors</property>
+    </textFileColumn>
+</textFilePopulator>

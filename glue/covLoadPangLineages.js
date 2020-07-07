@@ -1,3 +1,7 @@
+
+// NOTE, currently unused. May resurrect this if we need to compare
+// CoV-GLUE lineage assignments with reference assignments again.
+
 glue.command(["multi-unset", "field", "sequence", "-w", "pang_lineage != null", "pang_lineage"]);
 glue.command(["multi-unset", "field", "sequence", "-w", "pang_representative != null", "pang_representative"]);
 glue.command(["multi-unset", "field", "sequence", "-w", "pang_masked_snps != null", "pang_masked_snps"]);
