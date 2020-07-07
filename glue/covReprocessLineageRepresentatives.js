@@ -237,9 +237,9 @@ _.each(lineageMetadataObjs, function(lineageMetadataObj) {
 			authorship = JSON.parse(glue.command(["get", urlPath]).httpRunnerResult.entityAsString);
 		});
 		
-		var gisaid_authors = authorship["covv_authors"];
-		var gisaid_originating_lab = authorship["covv_orig_lab"];
-		var gisaid_submitting_lab = authorship["covv_subm_lab"];
+		var gisaid_authors = authorship["covv_authors"].replace(/\r?\n|\r|\t/g, "").trim();
+		var gisaid_originating_lab = authorship["covv_orig_lab"].replace(/\r?\n|\r|\t/g, "").trim();
+		var gisaid_submitting_lab = authorship["covv_subm_lab"].replace(/\r?\n|\r|\t/g, "").trim();
 		
 		gisaidRefsMetadata.listResult.row.push({ "value": [
 			seqID, 
