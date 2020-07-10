@@ -142,7 +142,7 @@ schema-project cov
     create field num_seqs INTEGER
     create field parent_feature VARCHAR
     create field inserted_nts_length INTEGER
-    create field inserted_nts VARCHAR
+    create field inserted_nts VARCHAR 100
     exit
 
   table cov_insertion
