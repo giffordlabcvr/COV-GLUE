@@ -34,6 +34,7 @@ function previewDeletions(whereClause, sortProperties) {
 	
 	tableResult = glue.command(["list", "custom-table-row", "cov_nt_deletion", 
 		"-w", whereClause, "-s", sortProperties, 
+		"id",
 		"variation.featureLoc.feature.displayName",
 		"variation.featureLoc.feature.description",
 		"display_name",
@@ -50,6 +51,7 @@ function previewDeletions(whereClause, sortProperties) {
 	
 	// rename columns
 	tableResult.listResult.column = [
+		"deletionID",
 		"genomeRegion",
 		"genomeRegionDesc",
 		"deletion",
@@ -65,4 +67,12 @@ function previewDeletions(whereClause, sortProperties) {
 	];
 	
 	return tableResult;
+}
+
+function allDeletionsAsObjects() {
+	return {
+		allDeletionsAsObjects: {
+			deletions: glue.tableToObjects(previewDeletions(true, null))
+		}
+	};
 }

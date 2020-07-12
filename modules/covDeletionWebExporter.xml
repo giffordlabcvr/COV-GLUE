@@ -29,5 +29,9 @@
         </parameter>
 		<tableFromDocumentResultType/>
     </function>
+    <function>
+        <name>allDeletionsAsObjects</name>
+		<documentResultType/>
+    </function>
 </ecmaFunctionInvoker>
 

@@ -29,5 +29,9 @@
         </parameter>
 		<tableFromDocumentResultType/>
     </function>
+    <function>
+        <name>allInsertionsAsObjects</name>
+		<documentResultType/>
+    </function>
 </ecmaFunctionInvoker>
 

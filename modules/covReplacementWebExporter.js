@@ -34,6 +34,7 @@ function previewReplacements(whereClause, sortProperties) {
 	
 	tableResult = glue.command(["list", "custom-table-row", "cov_replacement", 
 		"-w", whereClause, "-s", sortProperties, 
+		"id",
 		"variation.featureLoc.feature.displayName",
 		"variation.featureLoc.feature.description",
 		"display_name",
@@ -50,6 +51,7 @@ function previewReplacements(whereClause, sortProperties) {
 	
 	// rename columns
 	tableResult.listResult.column = [
+		"replacementID",
 		"genomeRegion",
 		"genomeRegionDesc",
 		"replacement",
@@ -65,4 +67,13 @@ function previewReplacements(whereClause, sortProperties) {
 	];
 	
 	return tableResult;
+}
+
+
+function allReplacementsAsObjects() {
+	return {
+		allReplacementsAsObjects: {
+			replacements: glue.tableToObjects(previewReplacements(true, null))
+		}
+	};
 }

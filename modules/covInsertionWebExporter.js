@@ -34,6 +34,7 @@ function previewInsertions(whereClause, sortProperties) {
 	
 	tableResult = glue.command(["list", "custom-table-row", "cov_nt_insertion", 
 		"-w", whereClause, "-s", sortProperties, 
+		"id",
 		"variation.featureLoc.feature.displayName",
 		"variation.featureLoc.feature.description",
 		"display_name",
@@ -54,6 +55,7 @@ function previewInsertions(whereClause, sortProperties) {
 	
 	// rename columns
 	tableResult.listResult.column = [
+		"insertionID",
 		"genomeRegion",
 		"genomeRegionDesc",
 		"insertion",
@@ -73,4 +75,12 @@ function previewInsertions(whereClause, sortProperties) {
 	];
 	
 	return tableResult;
+}
+
+function allInsertionsAsObjects() {
+	return {
+		allInsertionsAsObjects: {
+			insertions: glue.tableToObjects(previewInsertions(true, null))
+		} 
+	};
 }
