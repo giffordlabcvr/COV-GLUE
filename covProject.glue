@@ -78,6 +78,9 @@ project cov
   # generate insertions
   run script glue/covGenerateGisaidInsertions.js
 
+  # cache derived results to build_cache directory
+  run script glue/covCacheDerivedResults.js
+
   run file glue/covSanitisedExports.glue
 
   # Validate
