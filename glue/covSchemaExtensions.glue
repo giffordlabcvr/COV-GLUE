@@ -74,6 +74,8 @@ schema-project cov
     create field cov_glue_lineage VARCHAR
     create field cov_glue_lw_ratio DOUBLE
     create field cov_glue_lineage_sortable VARCHAR
+    # true if the cov-glue lineage was loaded from the cache
+    create field cg_lineage_from_cache BOOLEAN
     # set to non null if the 3 constituent parts are present (which they normally are)
     # suitable for sorting / filtering
     create field collection_date DATE

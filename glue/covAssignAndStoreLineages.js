@@ -1,8 +1,8 @@
 glue.command(["commit"]);
 glue.command(["new-context"]);
 
-// Full set.
-var whereClause = "analyse_variation = true";
+// Full set which has not been populated from the cache.
+var whereClause = "analyse_variation = true and cg_lineage_from_cache = false";
 
 // test with ~125 sequences
 // var whereClause = "sequenceID > 'EPI_ISL_410000' and sequenceID <= 'EPI_ISL_412999'";
