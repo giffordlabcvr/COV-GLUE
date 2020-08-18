@@ -3,6 +3,7 @@ run file glue/covInitProject.glue
 project cov
 
   run script glue/covLoadTimeStamp.js
+  run script glue/covSetLineageVersion.js
  
   # Clean up sequences from non-version-controlled single fastas which were produced
   # by splitGisaidFasta.sh into and save in single fastas in sources/cov-gisaid, also 
