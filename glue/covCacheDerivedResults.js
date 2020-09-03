@@ -39,7 +39,6 @@ var variantTypes = [
 	  
 ]
 
-/*
 
 _.each(variantTypes, function(variantType) {
 	var command = ["list", "custom-table-row", variantType.custom_table, "id"];
@@ -65,7 +64,6 @@ _.each(variantTypes, function(variantType) {
 	
 });
 
-*/
 
 var lineageVersion;
 
