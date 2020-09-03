@@ -60,8 +60,8 @@ project cov
   # count and store the number of sequences retrieved and which pass exclusion criteria
   run script glue/covCountGisaidRetrievedAndIncluded.js
 
-  # populate CoV-GLUE lineage from cache where possible
-  run script glue/covPopulateCovGlueLineageFromCache.js
+  # populate from cache where possible
+  run script glue/covPopulateFromCache.js
 
   # assign and store lineages for all sequences where analyse_variation is true
   # and lineage has not been retrieved from cache.
@@ -74,13 +74,13 @@ project cov
   run script glue/covLoadPrimerProbes.js
   
   # generate deletions
-  run script glue/covGenerateGisaidDeletions.js
+  run script glue/covGenerateDeletions.js
 
   # generate replacements
-  run script glue/covGenerateGisaidReplacements.js
+  run script glue/covGenerateReplacements.js
 
   # generate insertions
-  run script glue/covGenerateGisaidInsertions.js
+  run script glue/covGenerateInsertions.js
 
   # cache derived results to build_cache directory
   run script glue/covCacheDerivedResults.js

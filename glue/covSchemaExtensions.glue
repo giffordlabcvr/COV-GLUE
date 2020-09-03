@@ -76,6 +76,14 @@ schema-project cov
     create field cov_glue_lineage_sortable VARCHAR
     # true if the cov-glue lineage was loaded from the cache
     create field cg_lineage_from_cache BOOLEAN
+
+    # true if replacements were loaded from the cache
+    create field cg_reps_from_cache BOOLEAN
+    # true if deletions were loaded from the cache
+    create field cg_deletions_from_cache BOOLEAN
+    # true if insertions were loaded from the cache
+    create field cg_insertions_from_cache BOOLEAN
+
     # set to non null if the 3 constituent parts are present (which they normally are)
     # suitable for sorting / filtering
     create field collection_date DATE
