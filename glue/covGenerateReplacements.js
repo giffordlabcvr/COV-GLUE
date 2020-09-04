@@ -9,6 +9,12 @@ var orf1aReplacements = {};
 var orf1abReplacements = {}; 
 
 
+// variant cache test 
+// var whereClause = "sequence.sequenceID in ('EPI_ISL_500981', 'EPI_ISL_465549')";
+// production
+var whereClause = "cg_reps_from_cache and sequence.analyse_variation = true";
+
+
 _.each(featuresList, function(featureObj) {
 	var refAaObjsMap = {};
 	glue.inMode("reference/"+comparisonRefName+"/feature-location/"+featureObj.name, function() {
@@ -18,7 +24,7 @@ _.each(featuresList, function(featureObj) {
 		});
 	});
 	glue.inMode("alignment/AL_GISAID_CONSTRAINED", function() {
-		var almtMemberObjs = glue.tableToObjects(glue.command(["list", "member", "-w", "cg_reps_from_cache and sequence.analyse_variation = true"]));
+		var almtMemberObjs = glue.tableToObjects(glue.command(["list", "member", "-w", whereClause]));
 		var processed = 0;
 		_.each(almtMemberObjs, function(almtMemberObj) {
 			glue.inMode("member/"+almtMemberObj["sequence.source.name"]+"/"+almtMemberObj["sequence.sequenceID"], function() {
@@ -190,27 +196,6 @@ _.each(_.values(replacementsSet), function(replacementObj) {
 });
 
 glue.logInfo("Ensured creation / associated "+processed+" replacements. ");
-glue.command(["commit"]);
-glue.command(["new-context"]);
-
-processed = 0;
-var repIDs = glue.getTableColumn(glue.command(["list", "custom-table-row", "cov_replacement", "id"]));
-
-_.each(repIDs, function(repID) {
-	var numSeqs = glue.tableToObjects(
-			glue.command(["list", "custom-table-row", "cov_replacement_sequence", "-w", 
-				"cov_replacement.id = '"+repID+"'"])).length;
-	glue.inMode("custom-table-row/cov_replacement/"+repID, function() {
-		glue.command(["set", "field", "num_seqs", numSeqs]);
-	});
-	processed++;
-	if(processed % 500 == 0) {
-		glue.logInfo("Set num_seqs for "+processed+" replacements. ");
-		glue.command(["commit"]);
-		glue.command(["new-context"]);
-	}
-});
-glue.logInfo("Set num_seqs for "+processed+" replacements. ");
 glue.command(["commit"]);
 glue.command(["new-context"]);
 

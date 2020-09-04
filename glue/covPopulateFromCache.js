@@ -249,7 +249,14 @@ glue.inMode("custom-table-row/cov_project_properties/lineageVersion", function()
 	lineageVersion = glue.command(["show", "property", "value"]).propertyValueResult.value;
 });
 
-var seqObjs = glue.tableToObjects(glue.command(["list", "sequence", "-w", "analyse_variation = true", "source.name", "sequenceID"]));
+// variant cache test 
+// var whereClause = "sequenceID in ('EPI_ISL_500981', 'EPI_ISL_465549')";
+
+// production
+var whereClause = "analyse_variation = true";
+
+
+var seqObjs = glue.tableToObjects(glue.command(["list", "sequence", "-w", whereClause, "source.name", "sequenceID"]));
 
 var processed = 0;
 
