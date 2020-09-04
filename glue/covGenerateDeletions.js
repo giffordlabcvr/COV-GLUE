@@ -1,21 +1,3 @@
-glue.command(["multi-unset", "link-target", "variation", "cov_deletion", "-a"]);
-glue.command(["multi-unset", "link-target", "cov_deletion_sequence", "cov_deletion", "-a"]);
-glue.command(["multi-unset", "link-target", "cov_deletion_sequence", "sequence", "-a"]);
-
-glue.command(["multi-unset", "link-target", "cov_deletion", "cov_nt_deletion", "-a"]);
-glue.command(["multi-unset", "link-target", "variation", "cov_nt_deletion", "-a"]);
-glue.command(["multi-unset", "link-target", "cov_nt_deletion_sequence", "cov_nt_deletion", "-a"]);
-glue.command(["multi-unset", "link-target", "cov_nt_deletion_sequence", "sequence", "-a"]);
-
-glue.command(["multi-delete", "cov_deletion", "-a"]);
-glue.command(["multi-delete", "cov_deletion_sequence", "-a"]);
-
-glue.command(["multi-delete", "cov_nt_deletion", "-a"]);
-glue.command(["multi-delete", "cov_nt_deletion_sequence", "-a"]);
-
-glue.command(["multi-delete", "variation", "-w", "name like 'cov_aa_del%'"]);
-glue.command(["multi-delete", "variation", "-w", "name like 'cov_nt_del%'"]);
-glue.command(["multi-delete", "variation", "-w", "name like 'cov_aa_del_detect%'"]);
 
 var featuresList = glue.tableToObjects(
 		glue.command(["list", "feature", "-w", "featureMetatags.name = 'CODES_AMINO_ACIDS' and featureMetatags.value = true", "name", "displayName", "parent.name"]));
@@ -43,7 +25,7 @@ var orf1abDeletions = {};
 var processed = 0;
 
 // all non-excluded seqs
-var whereClause = "sequence.analyse_variation = true";
+var whereClause = "sequence.analyse_variation = true and cg_deletions_from_cache = false";
 
 //just delete everything
 //var whereClause = "false";
@@ -184,50 +166,59 @@ _.each(_.values(orf1abDeletions), function(deletionObj) {
 function createNtDeletion(ntDeletionObj) {
 	glue.log("FINEST", "Creating NT deletion object", ntDeletionObj);
 	var variationName = "cov_nt_del:"+ntDeletionObj.id;
+	var variationExists = false;
+	
 	glue.inMode("reference/REF_MASTER_WUHAN_HU_1/feature-location/"+ntDeletionObj.feature, function() {
-		glue.command(["create", "variation", variationName, 
+		var existing = glue.tableToObjects(glue.command(["list", "variation", "-w", "name = '"+variationName+"'"]));
+		if(existing.length > 0) {
+			variationExists = true;
+		}
+		if(!variationExists) {
+			glue.command(["create", "variation", variationName, 
 			"-t", "nucleotideDeletion", 
 			"--nucleotide", ntDeletionObj.refNtStart, ntDeletionObj.refNtEnd]);
+		}
 	});
 	
-	glue.command(["create", "custom-table-row", "cov_nt_deletion", ntDeletionObj.id]);
-	glue.inMode("custom-table-row/cov_nt_deletion/"+ntDeletionObj.id, function() {
-		var displayName;
-		if(ntDeletionObj.refNtStart == ntDeletionObj.refNtEnd) {
-			displayName = ntDeletionObj.refNtStart;	
-		} else {
-			displayName = ntDeletionObj.refNtStart+"-"+ntDeletionObj.refNtEnd;	
-		}
-		glue.command(["set", "field", "display_name", displayName]);
-		glue.command(["set", "field", "reference_nt_start", ntDeletionObj.refNtStart]);		
-		glue.command(["set", "field", "reference_nt_end", ntDeletionObj.refNtEnd]);		
-		glue.command(["set", "field", "num_seqs", ntDeletionObj.memberSeqs.length]);
-		// ORF 1a / 1ab corresponding ntDeletion may not exist
-		// if the sequence doesn't cover the whole of ORF1a / ORF1ab
-		// (ntDeletion variations will currently report insufficient coverage in these scenarios, 
-		// which is probably too strict)
-		if(ntDeletionObj.parentFeature == "ORF_1a") {
-			var parent1aDelObj = orf1aNtDeletions[ntDeletionObj.refNtStart+":"+ntDeletionObj.refNtEnd];
-			if(parent1aDelObj != null) {
-				parent1aDelObj.skipCreation = true;
-				glue.command(["set", "field", "parent_feature", "ORF_1a"]);
+	if(!variationExists) {
+		glue.command(["create", "custom-table-row", "cov_nt_deletion", ntDeletionObj.id]);
+		glue.inMode("custom-table-row/cov_nt_deletion/"+ntDeletionObj.id, function() {
+			var displayName;
+			if(ntDeletionObj.refNtStart == ntDeletionObj.refNtEnd) {
+				displayName = ntDeletionObj.refNtStart;	
+			} else {
+				displayName = ntDeletionObj.refNtStart+"-"+ntDeletionObj.refNtEnd;	
 			}
-			var parent1abDelObj = orf1abNtDeletions[ntDeletionObj.refNtStart+":"+ntDeletionObj.refNtEnd];
-			if(parent1aDelObj != null) {
-				parent1abDelObj.skipCreation = true;
+			glue.command(["set", "field", "display_name", displayName]);
+			glue.command(["set", "field", "reference_nt_start", ntDeletionObj.refNtStart]);		
+			glue.command(["set", "field", "reference_nt_end", ntDeletionObj.refNtEnd]);		
+			// ORF 1a / 1ab corresponding ntDeletion may not exist
+			// if the sequence doesn't cover the whole of ORF1a / ORF1ab
+			// (ntDeletion variations will currently report insufficient coverage in these scenarios, 
+			// which is probably too strict)
+			if(ntDeletionObj.parentFeature == "ORF_1a") {
+				var parent1aDelObj = orf1aNtDeletions[ntDeletionObj.refNtStart+":"+ntDeletionObj.refNtEnd];
+				if(parent1aDelObj != null) {
+					parent1aDelObj.skipCreation = true;
+					glue.command(["set", "field", "parent_feature", "ORF_1a"]);
+				}
+				var parent1abDelObj = orf1abNtDeletions[ntDeletionObj.refNtStart+":"+ntDeletionObj.refNtEnd];
+				if(parent1aDelObj != null) {
+					parent1abDelObj.skipCreation = true;
+				}
 			}
-		}
-		if(ntDeletionObj.parentFeature == "ORF_1ab") {
-			var parentDelObj = orf1abNtDeletions[ntDeletionObj.refNtStart+":"+ntDeletionObj.refNtEnd];
-			if(parentDelObj != null) {
-				glue.command(["set", "field", "parent_feature", "ORF_1ab"]);
-				parentDelObj.skipCreation = true;
+			if(ntDeletionObj.parentFeature == "ORF_1ab") {
+				var parentDelObj = orf1abNtDeletions[ntDeletionObj.refNtStart+":"+ntDeletionObj.refNtEnd];
+				if(parentDelObj != null) {
+					glue.command(["set", "field", "parent_feature", "ORF_1ab"]);
+					parentDelObj.skipCreation = true;
+				}
 			}
-		}
-		glue.command(["set", "link-target", "variation", 
-			"reference/REF_MASTER_WUHAN_HU_1/feature-location/"+ntDeletionObj.feature+
-			"/variation/"+variationName]);
-	});
+			glue.command(["set", "link-target", "variation", 
+				"reference/REF_MASTER_WUHAN_HU_1/feature-location/"+ntDeletionObj.feature+
+				"/variation/"+variationName]);
+		});
+	}
 	
 	_.each(ntDeletionObj.memberSeqs, function(memberObj) {
 		var sourceName = memberObj["sequence.source.name"];
@@ -246,60 +237,69 @@ function createNtDeletion(ntDeletionObj) {
 function createDeletion(deletionObj) {
 	glue.log("FINEST", "Creating AA deletion object", deletionObj);
 	var variationName = "cov_aa_del:"+deletionObj.id;
+	var variationExists = false;
+	
 	glue.inMode("reference/REF_MASTER_WUHAN_HU_1/feature-location/"+deletionObj.feature, function() {
-		glue.command(["create", "variation", variationName, 
-			"-t", "aminoAcidDeletion", 
-			"--labeledCodon", deletionObj.startCodon, deletionObj.endCodon]);
+		var existing = glue.tableToObjects(glue.command(["list", "variation", "-w", "name = '"+variationName+"'"]));
+		if(existing.length > 0) {
+			variationExists = true;
+		}
+		if(!variationExists) {
+			glue.command(["create", "variation", variationName, 
+				"-t", "aminoAcidDeletion", 
+				"--labeledCodon", deletionObj.startCodon, deletionObj.endCodon]);
+		}
 	});
 	
-	glue.command(["create", "custom-table-row", "cov_deletion", deletionObj.id]);
-	glue.inMode("custom-table-row/cov_deletion/"+deletionObj.id, function() {
-		var displayName;
-		if(deletionObj.startCodon == deletionObj.endCodon) {
-			displayName = deletionObj.startCodon;	
-		} else {
-			displayName = deletionObj.startCodon+"-"+deletionObj.endCodon;	
-		}
-		glue.command(["set", "field", "display_name", displayName]);
-		glue.command(["set", "field", "start_codon", deletionObj.startCodon]);		
-		glue.command(["set", "field", "start_codon_int", parseInt(deletionObj.startCodon)]);		
-		glue.command(["set", "field", "end_codon", deletionObj.endCodon]);		
-		glue.command(["set", "field", "end_codon_int", parseInt(deletionObj.endCodon)]);		
-		glue.command(["set", "field", "reference_nt_start", deletionObj.refNtStart]);		
-		glue.command(["set", "field", "reference_nt_end", deletionObj.refNtEnd]);		
-		glue.command(["set", "field", "num_seqs", deletionObj.memberSeqs.length]);
-		// ORF 1a / 1ab corresponding deletion may not exist
-		// if the sequence doesn't cover the whole of ORF1a / ORF1ab
-		// (deletion variations will currently report insufficient coverage in these scenarios, 
-		// which is probably too strict)
-		if(deletionObj.parentFeature == "ORF_1a") {
-			var parent1aDelObj = orf1aDeletions[deletionObj.refNtStart+":"+deletionObj.refNtEnd];
-			if(parent1aDelObj != null) {
-				parent1aDelObj.skipCreation = true;
-				glue.command(["set", "field", "parent_feature", "ORF_1a"]);
-				glue.command(["set", "field", "parent_start_codon", parent1aDelObj.startCodon]);
-				glue.command(["set", "field", "parent_end_codon", parent1aDelObj.endCodon]);
+	if(!variationExists) {
+		glue.command(["create", "custom-table-row", "cov_deletion", deletionObj.id]);
+		glue.inMode("custom-table-row/cov_deletion/"+deletionObj.id, function() {
+			var displayName;
+			if(deletionObj.startCodon == deletionObj.endCodon) {
+				displayName = deletionObj.startCodon;	
+			} else {
+				displayName = deletionObj.startCodon+"-"+deletionObj.endCodon;	
 			}
-			var parent1abDelObj = orf1abDeletions[deletionObj.refNtStart+":"+deletionObj.refNtEnd];
-			if(parent1aDelObj != null) {
-				parent1abDelObj.skipCreation = true;
+			glue.command(["set", "field", "display_name", displayName]);
+			glue.command(["set", "field", "start_codon", deletionObj.startCodon]);		
+			glue.command(["set", "field", "start_codon_int", parseInt(deletionObj.startCodon)]);		
+			glue.command(["set", "field", "end_codon", deletionObj.endCodon]);		
+			glue.command(["set", "field", "end_codon_int", parseInt(deletionObj.endCodon)]);		
+			glue.command(["set", "field", "reference_nt_start", deletionObj.refNtStart]);		
+			glue.command(["set", "field", "reference_nt_end", deletionObj.refNtEnd]);		
+			// ORF 1a / 1ab corresponding deletion may not exist
+			// if the sequence doesn't cover the whole of ORF1a / ORF1ab
+			// (deletion variations will currently report insufficient coverage in these scenarios, 
+			// which is probably too strict)
+			if(deletionObj.parentFeature == "ORF_1a") {
+				var parent1aDelObj = orf1aDeletions[deletionObj.refNtStart+":"+deletionObj.refNtEnd];
+				if(parent1aDelObj != null) {
+					parent1aDelObj.skipCreation = true;
+					glue.command(["set", "field", "parent_feature", "ORF_1a"]);
+					glue.command(["set", "field", "parent_start_codon", parent1aDelObj.startCodon]);
+					glue.command(["set", "field", "parent_end_codon", parent1aDelObj.endCodon]);
+				}
+				var parent1abDelObj = orf1abDeletions[deletionObj.refNtStart+":"+deletionObj.refNtEnd];
+				if(parent1aDelObj != null) {
+					parent1abDelObj.skipCreation = true;
+				}
 			}
-		}
-		if(deletionObj.parentFeature == "ORF_1ab") {
-			var parentDelObj = orf1abDeletions[deletionObj.refNtStart+":"+deletionObj.refNtEnd];
-			if(parentDelObj != null) {
-				glue.command(["set", "field", "parent_feature", "ORF_1ab"]);
-				parentDelObj.skipCreation = true;
-				glue.command(["set", "field", "parent_start_codon", parentDelObj.startCodon]);
-				glue.command(["set", "field", "parent_end_codon", parentDelObj.endCodon]);
+			if(deletionObj.parentFeature == "ORF_1ab") {
+				var parentDelObj = orf1abDeletions[deletionObj.refNtStart+":"+deletionObj.refNtEnd];
+				if(parentDelObj != null) {
+					glue.command(["set", "field", "parent_feature", "ORF_1ab"]);
+					parentDelObj.skipCreation = true;
+					glue.command(["set", "field", "parent_start_codon", parentDelObj.startCodon]);
+					glue.command(["set", "field", "parent_end_codon", parentDelObj.endCodon]);
+				}
 			}
-		}
-		glue.command(["set", "link-target", "variation", 
-			"reference/REF_MASTER_WUHAN_HU_1/feature-location/"+deletionObj.feature+
-			"/variation/"+variationName]);
-		glue.command(["set", "link-target", "cov_nt_deletion", 
-			"custom-table-row/cov_nt_deletion/"+deletionObj.ntDeletionID]);
-	});
+			glue.command(["set", "link-target", "variation", 
+				"reference/REF_MASTER_WUHAN_HU_1/feature-location/"+deletionObj.feature+
+				"/variation/"+variationName]);
+			glue.command(["set", "link-target", "cov_nt_deletion", 
+				"custom-table-row/cov_nt_deletion/"+deletionObj.ntDeletionID]);
+		});
+	}
 	
 	_.each(deletionObj.memberSeqs, function(memberObj) {
 		var sourceName = memberObj["sequence.source.name"];
@@ -312,3 +312,49 @@ function createDeletion(deletionObj) {
 		});
 	});
 }
+
+
+processed = 0;
+var delIDs = glue.getTableColumn(glue.command(["list", "custom-table-row", "cov_deletion", "id"]));
+
+_.each(delIDs, function(delID) {
+	var numSeqs = glue.tableToObjects(
+			glue.command(["list", "custom-table-row", "cov_deletion_sequence", "-w", 
+				"cov_deletion.id = '"+delID+"'"])).length;
+	glue.inMode("custom-table-row/cov_deletion/"+delID, function() {
+		glue.command(["set", "field", "num_seqs", numSeqs]);
+	});
+	processed++;
+	if(processed % 500 == 0) {
+		glue.logInfo("Set num_seqs for "+processed+" deletions. ");
+		glue.command(["commit"]);
+		glue.command(["new-context"]);
+	}
+});
+glue.logInfo("Set num_seqs for "+processed+" deletions. ");
+glue.command(["commit"]);
+glue.command(["new-context"]);
+
+processed = 0;
+var ntDelIDs = glue.getTableColumn(glue.command(["list", "custom-table-row", "cov_nt_deletion", "id"]));
+
+_.each(ntDelIDs, function(ntDelID) {
+	var numSeqs = glue.tableToObjects(
+			glue.command(["list", "custom-table-row", "cov_nt_deletion_sequence", "-w", 
+				"cov_nt_deletion.id = '"+ntDelID+"'"])).length;
+	glue.inMode("custom-table-row/cov_nt_deletion/"+ntDelID, function() {
+		glue.command(["set", "field", "num_seqs", numSeqs]);
+	});
+	processed++;
+	if(processed % 500 == 0) {
+		glue.logInfo("Set num_seqs for "+processed+" nt_deletions. ");
+		glue.command(["commit"]);
+		glue.command(["new-context"]);
+	}
+});
+glue.logInfo("Set num_seqs for "+processed+" nt_deletions. ");
+glue.command(["commit"]);
+glue.command(["new-context"]);
+
+
+

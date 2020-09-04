@@ -18,7 +18,7 @@ _.each(featuresList, function(featureObj) {
 		});
 	});
 	glue.inMode("alignment/AL_GISAID_CONSTRAINED", function() {
-		var almtMemberObjs = glue.tableToObjects(glue.command(["list", "member", "-w", "cg_reps_from_cache = false and sequence.analyse_variation = true"]));
+		var almtMemberObjs = glue.tableToObjects(glue.command(["list", "member", "-w", "cg_reps_from_cache and sequence.analyse_variation = true"]));
 		var processed = 0;
 		_.each(almtMemberObjs, function(almtMemberObj) {
 			glue.inMode("member/"+almtMemberObj["sequence.source.name"]+"/"+almtMemberObj["sequence.sequenceID"], function() {

@@ -1,22 +1,3 @@
-glue.command(["multi-unset", "link-target", "variation", "cov_insertion", "-a"]);
-glue.command(["multi-unset", "link-target", "cov_insertion_sequence", "cov_insertion", "-a"]);
-glue.command(["multi-unset", "link-target", "cov_insertion_sequence", "sequence", "-a"]);
-
-glue.command(["multi-unset", "link-target", "cov_insertion", "cov_nt_insertion", "-a"]);
-glue.command(["multi-unset", "link-target", "variation", "cov_nt_insertion", "-a"]);
-glue.command(["multi-unset", "link-target", "cov_nt_insertion_sequence", "cov_nt_insertion", "-a"]);
-glue.command(["multi-unset", "link-target", "cov_nt_insertion_sequence", "sequence", "-a"]);
-
-glue.command(["multi-delete", "cov_insertion", "-a"]);
-glue.command(["multi-delete", "cov_insertion_sequence", "-a"]);
-
-glue.command(["multi-delete", "cov_nt_insertion", "-a"]);
-glue.command(["multi-delete", "cov_nt_insertion_sequence", "-a"]);
-
-
-glue.command(["multi-delete", "variation", "-w", "name like 'cov_aa_ins%'"]);
-glue.command(["multi-delete", "variation", "-w", "name like 'cov_nt_ins%'"]);
-glue.command(["multi-delete", "variation", "-w", "name like 'cov_aa_ins_detect%'"]);
 
 var featuresList = glue.tableToObjects(
 		glue.command(["list", "feature", "-w", "featureMetatags.name = 'CODES_AMINO_ACIDS' and featureMetatags.value = true", "name", "displayName", "parent.name"]));
@@ -44,7 +25,7 @@ var orf1abInsertions = {};
 var processed = 0;
 
 //all non-excluded seqs
-var whereClause = "sequence.analyse_variation = true";
+var whereClause = "sequence.analyse_variation = true and cg_insertions_from_cache = false";
 
 //just delete everything
 //var whereClause = "false";
@@ -200,49 +181,58 @@ function createNtInsertion(ntInsertionObj) {
 	var ntHash = stringHash(ntInsertionObj.insertedNts);
 
 	var variationName = "cov_nt_ins:"+ntInsertionObj.id;
+	var variationExists = false;
+
 	glue.inMode("reference/REF_MASTER_WUHAN_HU_1/feature-location/"+ntInsertionObj.feature, function() {
-		glue.command(["create", "variation", variationName, 
-			"-t", "nucleotideInsertion", 
-			"--nucleotide", ntInsertionObj.lastRefNtBefore, ntInsertionObj.firstRefNtAfter]);
-		glue.inMode("variation/"+variationName, function() {
-			glue.command(["set", "metatag", "MIN_INSERTION_LENGTH_NTS", ntInsertionObj.insertedNts.length]);
-			glue.command(["set", "metatag", "MAX_INSERTION_LENGTH_NTS", ntInsertionObj.insertedNts.length]);
-		});
+		var existing = glue.tableToObjects(glue.command(["list", "variation", "-w", "name = '"+variationName+"'"]));
+		if(existing.length > 0) {
+			variationExists = true;
+		}
+		if(!variationExists) {
+			glue.command(["create", "variation", variationName, 
+				"-t", "nucleotideInsertion", 
+				"--nucleotide", ntInsertionObj.lastRefNtBefore, ntInsertionObj.firstRefNtAfter]);
+			glue.inMode("variation/"+variationName, function() {
+				glue.command(["set", "metatag", "MIN_INSERTION_LENGTH_NTS", ntInsertionObj.insertedNts.length]);
+				glue.command(["set", "metatag", "MAX_INSERTION_LENGTH_NTS", ntInsertionObj.insertedNts.length]);
+			});
+		}
 	});
 	
-	glue.command(["create", "custom-table-row", "cov_nt_insertion", ntInsertionObj.id]);
-	glue.inMode("custom-table-row/cov_nt_insertion/"+ntInsertionObj.id, function() {
-		var displayName;
-		displayName = ntInsertionObj.lastRefNtBefore+"-"+ntInsertionObj.insertedNts+"-"+ntInsertionObj.firstRefNtAfter;	
-		glue.command(["set", "field", "display_name", displayName]);
-		glue.command(["set", "field", "last_ref_nt_before", ntInsertionObj.lastRefNtBefore]);		
-		glue.command(["set", "field", "first_ref_nt_after", ntInsertionObj.firstRefNtAfter]);		
-		glue.command(["set", "field", "num_seqs", ntInsertionObj.memberSeqs.length]);
-		glue.command(["set", "field", "inserted_nts_length", ntInsertionObj.insertedNts.length]);
-		glue.command(["set", "field", "inserted_nts", ntInsertionObj.insertedNts]);
-		
-		if(ntInsertionObj.parentFeature == "ORF_1a") {
-			glue.command(["set", "field", "parent_feature", "ORF_1a"]);
-			var parent1aInsObj = orf1aNtInsertions[ntInsertionObj.lastRefNtBefore+":"+ntHash+":"+ntInsertionObj.firstRefNtAfter];
-			if(parent1aInsObj != null) {
-				parent1aInsObj.skipCreation = true;
+	if(!variationExists) {
+		glue.command(["create", "custom-table-row", "cov_nt_insertion", ntInsertionObj.id]);
+		glue.inMode("custom-table-row/cov_nt_insertion/"+ntInsertionObj.id, function() {
+			var displayName;
+			displayName = ntInsertionObj.lastRefNtBefore+"-"+ntInsertionObj.insertedNts+"-"+ntInsertionObj.firstRefNtAfter;	
+			glue.command(["set", "field", "display_name", displayName]);
+			glue.command(["set", "field", "last_ref_nt_before", ntInsertionObj.lastRefNtBefore]);		
+			glue.command(["set", "field", "first_ref_nt_after", ntInsertionObj.firstRefNtAfter]);		
+			glue.command(["set", "field", "inserted_nts_length", ntInsertionObj.insertedNts.length]);
+			glue.command(["set", "field", "inserted_nts", ntInsertionObj.insertedNts]);
+			
+			if(ntInsertionObj.parentFeature == "ORF_1a") {
+				glue.command(["set", "field", "parent_feature", "ORF_1a"]);
+				var parent1aInsObj = orf1aNtInsertions[ntInsertionObj.lastRefNtBefore+":"+ntHash+":"+ntInsertionObj.firstRefNtAfter];
+				if(parent1aInsObj != null) {
+					parent1aInsObj.skipCreation = true;
+				}
+				var parent1abInsObj = orf1abNtInsertions[ntInsertionObj.lastRefNtBefore+":"+ntHash+":"+ntInsertionObj.firstRefNtAfter];
+				if(parent1abInsObj != null) {
+					parent1abInsObj.skipCreation = true;
+				}
 			}
-			var parent1abInsObj = orf1abNtInsertions[ntInsertionObj.lastRefNtBefore+":"+ntHash+":"+ntInsertionObj.firstRefNtAfter];
-			if(parent1abInsObj != null) {
-				parent1abInsObj.skipCreation = true;
+			if(ntInsertionObj.parentFeature == "ORF_1ab") {
+				glue.command(["set", "field", "parent_feature", "ORF_1ab"]);
+				var parentInsObj = orf1abNtInsertions[ntInsertionObj.lastRefNtBefore+":"+ntHash+":"+ntInsertionObj.firstRefNtAfter];
+				if(parentInsObj != null) {
+					parentInsObj.skipCreation = true;
+				}
 			}
-		}
-		if(ntInsertionObj.parentFeature == "ORF_1ab") {
-			glue.command(["set", "field", "parent_feature", "ORF_1ab"]);
-			var parentInsObj = orf1abNtInsertions[ntInsertionObj.lastRefNtBefore+":"+ntHash+":"+ntInsertionObj.firstRefNtAfter];
-			if(parentInsObj != null) {
-				parentInsObj.skipCreation = true;
-			}
-		}
-		glue.command(["set", "link-target", "variation", 
-			"reference/REF_MASTER_WUHAN_HU_1/feature-location/"+ntInsertionObj.feature+
-			"/variation/"+variationName]);
-	});
+			glue.command(["set", "link-target", "variation", 
+				"reference/REF_MASTER_WUHAN_HU_1/feature-location/"+ntInsertionObj.feature+
+				"/variation/"+variationName]);
+		});
+	}
 	
 	_.each(ntInsertionObj.memberSeqs, function(memberObj) {
 		var sourceName = memberObj["sequence.source.name"];
@@ -262,61 +252,69 @@ function createInsertion(insertionObj) {
 	var aaHash = stringHash(insertionObj.insertedAas);
 
 	var variationName = "cov_aa_ins:"+insertionObj.id;
+	var variationExists = false;
+
 	glue.inMode("reference/REF_MASTER_WUHAN_HU_1/feature-location/"+insertionObj.feature, function() {
-		glue.command(["create", "variation", variationName, 
+		var existing = glue.tableToObjects(glue.command(["list", "variation", "-w", "name = '"+variationName+"'"]));
+		if(existing.length > 0) {
+			variationExists = true;
+		}
+		if(!variationExists) {
+			glue.command(["create", "variation", variationName, 
 			"-t", "aminoAcidInsertion", 
 			"--labeledCodon", insertionObj.lastCodonBefore, insertionObj.firstCodonAfter]);
-		glue.inMode("variation/"+variationName, function() {
-			glue.command(["set", "metatag", "MIN_INSERTION_LENGTH_AAS", insertionObj.insertedAas.length]);
-			glue.command(["set", "metatag", "MAX_INSERTION_LENGTH_AAS", insertionObj.insertedAas.length]);
+			glue.inMode("variation/"+variationName, function() {
+				glue.command(["set", "metatag", "MIN_INSERTION_LENGTH_AAS", insertionObj.insertedAas.length]);
+				glue.command(["set", "metatag", "MAX_INSERTION_LENGTH_AAS", insertionObj.insertedAas.length]);
+			});
+		}
+	});
+	
+	if(!variationExists) {
+		glue.command(["create", "custom-table-row", "cov_insertion", insertionObj.id]);
+		glue.inMode("custom-table-row/cov_insertion/"+insertionObj.id, function() {
+			var displayName;
+			displayName = insertionObj.lastCodonBefore+"-"+insertionObj.insertedAas+"-"+insertionObj.firstCodonAfter;	
+			glue.command(["set", "field", "display_name", displayName]);
+			glue.command(["set", "field", "last_codon_before", insertionObj.lastCodonBefore]);		
+			glue.command(["set", "field", "last_codon_before_int", parseInt(insertionObj.lastCodonBefore)]);		
+			glue.command(["set", "field", "first_codon_after", insertionObj.firstCodonAfter]);		
+			glue.command(["set", "field", "first_codon_after_int", parseInt(insertionObj.firstCodonAfter)]);		
+			glue.command(["set", "field", "last_ref_nt_before", insertionObj.lastRefNtBefore]);		
+			glue.command(["set", "field", "first_ref_nt_after", insertionObj.firstRefNtAfter]);		
+			glue.command(["set", "field", "inserted_aas_length", insertionObj.insertedAas.length]);
+			glue.command(["set", "field", "inserted_aas", insertionObj.insertedAas]);
+			
+			if(insertionObj.parentFeature == "ORF_1a") {
+				glue.command(["set", "field", "parent_feature", "ORF_1a"]);
+				var parent1aInsObj = orf1aInsertions[insertionObj.lastRefNtBefore+":"+aaHash+":"+insertionObj.firstRefNtAfter];
+				if(parent1aInsObj != null) {
+					parent1aInsObj.skipCreation = true;
+					glue.command(["set", "field", "parent_last_codon_before", parent1aInsObj.lastCodonBefore]);
+					glue.command(["set", "field", "parent_first_codon_after", parent1aInsObj.firstCodonAfter]);
+				}
+				var parent1abInsObj = orf1abInsertions[insertionObj.lastRefNtBefore+":"+aaHash+":"+insertionObj.firstRefNtAfter];
+				if(parent1abInsObj != null) {
+					parent1abInsObj.skipCreation = true;
+				}
+			}
+			if(insertionObj.parentFeature == "ORF_1ab") {
+				glue.command(["set", "field", "parent_feature", "ORF_1ab"]);
+				var parentInsObj = orf1abInsertions[insertionObj.lastRefNtBefore+":"+aaHash+":"+insertionObj.firstRefNtAfter];
+				if(parentInsObj != null) {
+					parentInsObj.skipCreation = true;
+					glue.command(["set", "field", "parent_last_codon_before", parentInsObj.lastCodonBefore]);
+					glue.command(["set", "field", "parent_first_codon_after", parentInsObj.firstCodonAfter]);
+				}
+			}
+			glue.command(["set", "link-target", "variation", 
+				"reference/REF_MASTER_WUHAN_HU_1/feature-location/"+insertionObj.feature+
+				"/variation/"+variationName]);
+			glue.command(["set", "link-target", "cov_nt_insertion", 
+				"custom-table-row/cov_nt_insertion/"+insertionObj.ntInsertionID]);
+	
 		});
-	});
-	
-	glue.command(["create", "custom-table-row", "cov_insertion", insertionObj.id]);
-	glue.inMode("custom-table-row/cov_insertion/"+insertionObj.id, function() {
-		var displayName;
-		displayName = insertionObj.lastCodonBefore+"-"+insertionObj.insertedAas+"-"+insertionObj.firstCodonAfter;	
-		glue.command(["set", "field", "display_name", displayName]);
-		glue.command(["set", "field", "last_codon_before", insertionObj.lastCodonBefore]);		
-		glue.command(["set", "field", "last_codon_before_int", parseInt(insertionObj.lastCodonBefore)]);		
-		glue.command(["set", "field", "first_codon_after", insertionObj.firstCodonAfter]);		
-		glue.command(["set", "field", "first_codon_after_int", parseInt(insertionObj.firstCodonAfter)]);		
-		glue.command(["set", "field", "last_ref_nt_before", insertionObj.lastRefNtBefore]);		
-		glue.command(["set", "field", "first_ref_nt_after", insertionObj.firstRefNtAfter]);		
-		glue.command(["set", "field", "num_seqs", insertionObj.memberSeqs.length]);
-		glue.command(["set", "field", "inserted_aas_length", insertionObj.insertedAas.length]);
-		glue.command(["set", "field", "inserted_aas", insertionObj.insertedAas]);
-		
-		if(insertionObj.parentFeature == "ORF_1a") {
-			glue.command(["set", "field", "parent_feature", "ORF_1a"]);
-			var parent1aInsObj = orf1aInsertions[insertionObj.lastRefNtBefore+":"+aaHash+":"+insertionObj.firstRefNtAfter];
-			if(parent1aInsObj != null) {
-				parent1aInsObj.skipCreation = true;
-				glue.command(["set", "field", "parent_last_codon_before", parent1aInsObj.lastCodonBefore]);
-				glue.command(["set", "field", "parent_first_codon_after", parent1aInsObj.firstCodonAfter]);
-			}
-			var parent1abInsObj = orf1abInsertions[insertionObj.lastRefNtBefore+":"+aaHash+":"+insertionObj.firstRefNtAfter];
-			if(parent1abInsObj != null) {
-				parent1abInsObj.skipCreation = true;
-			}
-		}
-		if(insertionObj.parentFeature == "ORF_1ab") {
-			glue.command(["set", "field", "parent_feature", "ORF_1ab"]);
-			var parentInsObj = orf1abInsertions[insertionObj.lastRefNtBefore+":"+aaHash+":"+insertionObj.firstRefNtAfter];
-			if(parentInsObj != null) {
-				parentInsObj.skipCreation = true;
-				glue.command(["set", "field", "parent_last_codon_before", parentInsObj.lastCodonBefore]);
-				glue.command(["set", "field", "parent_first_codon_after", parentInsObj.firstCodonAfter]);
-			}
-		}
-		glue.command(["set", "link-target", "variation", 
-			"reference/REF_MASTER_WUHAN_HU_1/feature-location/"+insertionObj.feature+
-			"/variation/"+variationName]);
-		glue.command(["set", "link-target", "cov_nt_insertion", 
-			"custom-table-row/cov_nt_insertion/"+insertionObj.ntInsertionID]);
-
-	});
-	
+	}	
 	_.each(insertionObj.memberSeqs, function(memberObj) {
 		var sourceName = memberObj["sequence.source.name"];
 		var sequenceID = memberObj["sequence.sequenceID"];
@@ -328,6 +326,55 @@ function createInsertion(insertionObj) {
 		});
 	});
 }
+
+processed = 0;
+var insIDs = glue.getTableColumn(glue.command(["list", "custom-table-row", "cov_insertion", "id"]));
+
+_.each(insIDs, function(insID) {
+	var numSeqs = glue.tableToObjects(
+			glue.command(["list", "custom-table-row", "cov_insertion_sequence", "-w", 
+				"cov_insertion.id = '"+insID+"'"])).length;
+	glue.inMode("custom-table-row/cov_insertion/"+insID, function() {
+		glue.command(["set", "field", "num_seqs", numSeqs]);
+	});
+	processed++;
+	if(processed % 500 == 0) {
+		glue.logInfo("Set num_seqs for "+processed+" insertions. ");
+		glue.command(["commit"]);
+		glue.command(["new-context"]);
+	}
+});
+glue.logInfo("Set num_seqs for "+processed+" insertions. ");
+glue.command(["commit"]);
+glue.command(["new-context"]);
+
+processed = 0;
+var ntInsIDs = glue.getTableColumn(glue.command(["list", "custom-table-row", "cov_nt_insertion", "id"]));
+
+_.each(ntInsIDs, function(ntInsID) {
+	var numSeqs = glue.tableToObjects(
+			glue.command(["list", "custom-table-row", "cov_nt_insertion_sequence", "-w", 
+				"cov_nt_insertion.id = '"+ntInsID+"'"])).length;
+	glue.inMode("custom-table-row/cov_nt_insertion/"+ntInsID, function() {
+		glue.command(["set", "field", "num_seqs", numSeqs]);
+	});
+	processed++;
+	if(processed % 500 == 0) {
+		glue.logInfo("Set num_seqs for "+processed+" nt_insertions. ");
+		glue.command(["commit"]);
+		glue.command(["new-context"]);
+	}
+});
+glue.logInfo("Set num_seqs for "+processed+" nt_insertions. ");
+glue.command(["commit"]);
+glue.command(["new-context"]);
+
+
+
+
+
+
+
 
 function stringHash(string) {
 	var hash = 0, i, chr;
