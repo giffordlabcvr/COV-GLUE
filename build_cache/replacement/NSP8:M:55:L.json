@@ -1,0 +1,18 @@
+{
+  "id": "NSP8:M:55:L",
+  "display_name": "M55L",
+  "variation.featureLoc.feature.name": "NSP8",
+  "codon_label": "55",
+  "codon_label_int": 55,
+  "reference_aa": "M",
+  "reference_nt": 12254,
+  "replacement_aa": "L",
+  "radical_hanada_category_i": false,
+  "radical_hanada_category_ii": false,
+  "radical_hanada_category_iii": false,
+  "grantham_distance_double": 14.30316650672724,
+  "grantham_distance_int": 14,
+  "miyata_distance": 0.4097737313122809,
+  "parent_feature": "ORF_1a",
+  "parent_codon_label": "3997"
+}

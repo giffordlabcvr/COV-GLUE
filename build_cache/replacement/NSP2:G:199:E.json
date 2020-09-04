@@ -1,0 +1,18 @@
+{
+  "id": "NSP2:G:199:E",
+  "display_name": "G199E",
+  "variation.featureLoc.feature.name": "NSP2",
+  "codon_label": "199",
+  "codon_label_int": 199,
+  "reference_aa": "G",
+  "reference_nt": 1400,
+  "replacement_aa": "E",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": true,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 97.85190047927728,
+  "grantham_distance_int": 98,
+  "miyata_distance": 2.7831228164426745,
+  "parent_feature": "ORF_1a",
+  "parent_codon_label": "379"
+}

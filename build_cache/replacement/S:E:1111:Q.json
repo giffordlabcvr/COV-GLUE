@@ -1,0 +1,18 @@
+{
+  "id": "S:E:1111:Q",
+  "display_name": "E1111Q",
+  "variation.featureLoc.feature.name": "S",
+  "codon_label": "1111",
+  "codon_label_int": 1111,
+  "reference_aa": "E",
+  "reference_nt": 24893,
+  "replacement_aa": "Q",
+  "radical_hanada_category_i": false,
+  "radical_hanada_category_ii": true,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 29.273706240977482,
+  "grantham_distance_int": 29,
+  "miyata_distance": 0.8363616795657459,
+  "parent_feature": null,
+  "parent_codon_label": null
+}

@@ -1,0 +1,18 @@
+{
+  "id": "NSP13:A:85:D",
+  "display_name": "A85D",
+  "variation.featureLoc.feature.name": "NSP13",
+  "codon_label": "85",
+  "codon_label_int": 85,
+  "reference_aa": "A",
+  "reference_nt": 16489,
+  "replacement_aa": "D",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": true,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 125.74859020850259,
+  "grantham_distance_int": 126,
+  "miyata_distance": 2.3675832690225778,
+  "parent_feature": "ORF_1ab",
+  "parent_codon_label": "5409"
+}

@@ -1,0 +1,18 @@
+{
+  "id": "S:A:27:S",
+  "display_name": "A27S",
+  "variation.featureLoc.feature.name": "S",
+  "codon_label": "27",
+  "codon_label_int": 27,
+  "reference_aa": "A",
+  "reference_nt": 21641,
+  "replacement_aa": "S",
+  "radical_hanada_category_i": false,
+  "radical_hanada_category_ii": false,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 99.13249708101095,
+  "grantham_distance_int": 99,
+  "miyata_distance": 0.5107016875310603,
+  "parent_feature": null,
+  "parent_codon_label": null
+}

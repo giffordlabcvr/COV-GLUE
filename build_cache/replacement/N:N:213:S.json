@@ -1,0 +1,18 @@
+{
+  "id": "N:N:213:S",
+  "display_name": "N213S",
+  "variation.featureLoc.feature.name": "N",
+  "codon_label": "213",
+  "codon_label_int": 213,
+  "reference_aa": "N",
+  "reference_nt": 28910,
+  "replacement_aa": "S",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": false,
+  "radical_hanada_category_iii": false,
+  "grantham_distance_double": 46.23977508306296,
+  "grantham_distance_int": 46,
+  "miyata_distance": 1.3130472141012726,
+  "parent_feature": null,
+  "parent_codon_label": null
+}

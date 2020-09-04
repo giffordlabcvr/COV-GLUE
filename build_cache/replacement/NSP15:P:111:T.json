@@ -1,0 +1,18 @@
+{
+  "id": "NSP15:P:111:T",
+  "display_name": "P111T",
+  "variation.featureLoc.feature.name": "NSP15",
+  "codon_label": "111",
+  "codon_label_int": 111,
+  "reference_aa": "P",
+  "reference_nt": 19951,
+  "replacement_aa": "T",
+  "radical_hanada_category_i": false,
+  "radical_hanada_category_ii": false,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 37.56362475504698,
+  "grantham_distance_int": 38,
+  "miyata_distance": 0.873755109177339,
+  "parent_feature": "ORF_1ab",
+  "parent_codon_label": "6563"
+}

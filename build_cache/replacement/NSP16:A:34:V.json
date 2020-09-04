@@ -1,0 +1,18 @@
+{
+  "id": "NSP16:A:34:V",
+  "display_name": "A34V",
+  "variation.featureLoc.feature.name": "NSP16",
+  "codon_label": "34",
+  "codon_label_int": 34,
+  "reference_aa": "A",
+  "reference_nt": 20758,
+  "replacement_aa": "V",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": false,
+  "radical_hanada_category_iii": false,
+  "grantham_distance_double": 64.43025059480746,
+  "grantham_distance_int": 64,
+  "miyata_distance": 1.847329414521172,
+  "parent_feature": "ORF_1ab",
+  "parent_codon_label": "6832"
+}

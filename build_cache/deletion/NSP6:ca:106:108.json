@@ -1,0 +1,15 @@
+{
+  "id": "NSP6:ca:106:108",
+  "variation.featureLoc.feature.name": "NSP6",
+  "cov_nt_deletion.id": "NSP6:nca:11288:11296",
+  "display_name": "106-108",
+  "end_codon": "108",
+  "end_codon_int": 108,
+  "parent_end_codon": "3677",
+  "parent_feature": "ORF_1a",
+  "parent_start_codon": "3675",
+  "reference_nt_end": 11296,
+  "reference_nt_start": 11288,
+  "start_codon": "106",
+  "start_codon_int": 106
+}

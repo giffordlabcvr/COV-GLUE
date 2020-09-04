@@ -1,0 +1,18 @@
+{
+  "id": "NSP13:A:407:T",
+  "display_name": "A407T",
+  "variation.featureLoc.feature.name": "NSP13",
+  "codon_label": "407",
+  "codon_label_int": 407,
+  "reference_aa": "A",
+  "reference_nt": 17455,
+  "replacement_aa": "T",
+  "radical_hanada_category_i": false,
+  "radical_hanada_category_ii": false,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 58.02332760382417,
+  "grantham_distance_int": 58,
+  "miyata_distance": 0.9021839838528766,
+  "parent_feature": "ORF_1ab",
+  "parent_codon_label": "5731"
+}

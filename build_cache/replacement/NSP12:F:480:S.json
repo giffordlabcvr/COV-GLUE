@@ -1,0 +1,18 @@
+{
+  "id": "NSP12:F:480:S",
+  "display_name": "F480S",
+  "variation.featureLoc.feature.name": "NSP12",
+  "codon_label": "480",
+  "codon_label_int": 480,
+  "reference_aa": "F",
+  "reference_nt": 14878,
+  "replacement_aa": "S",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": true,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 154.8079022945541,
+  "grantham_distance_int": 155,
+  "miyata_distance": 3.447399039542067,
+  "parent_feature": "ORF_1ab",
+  "parent_codon_label": "4872"
+}

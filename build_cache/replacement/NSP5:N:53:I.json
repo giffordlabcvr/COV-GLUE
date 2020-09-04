@@ -1,0 +1,18 @@
+{
+  "id": "NSP5:N:53:I",
+  "display_name": "N53I",
+  "variation.featureLoc.feature.name": "NSP5",
+  "codon_label": "53",
+  "codon_label_int": 53,
+  "reference_aa": "N",
+  "reference_nt": 10211,
+  "replacement_aa": "I",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": false,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 148.9140956834137,
+  "grantham_distance_int": 149,
+  "miyata_distance": 3.369799940806828,
+  "parent_feature": "ORF_1a",
+  "parent_codon_label": "3316"
+}

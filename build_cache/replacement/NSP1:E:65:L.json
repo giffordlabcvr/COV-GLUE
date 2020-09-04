@@ -1,0 +1,18 @@
+{
+  "id": "NSP1:E:65:L",
+  "display_name": "E65L",
+  "variation.featureLoc.feature.name": "NSP1",
+  "codon_label": "65",
+  "codon_label_int": 65,
+  "reference_aa": "E",
+  "reference_nt": 458,
+  "replacement_aa": "L",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": true,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 138.34306733568278,
+  "grantham_distance_int": 138,
+  "miyata_distance": 3.5252746403273196,
+  "parent_feature": "ORF_1a",
+  "parent_codon_label": "65"
+}

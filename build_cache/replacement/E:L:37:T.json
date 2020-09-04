@@ -1,0 +1,18 @@
+{
+  "id": "E:L:37:T",
+  "display_name": "L37T",
+  "variation.featureLoc.feature.name": "E",
+  "codon_label": "37",
+  "codon_label_int": 37,
+  "reference_aa": "L",
+  "reference_nt": 26353,
+  "replacement_aa": "T",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": false,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 92.3542746798992,
+  "grantham_distance_int": 92,
+  "miyata_distance": 2.2479014063035954,
+  "parent_feature": null,
+  "parent_codon_label": null
+}

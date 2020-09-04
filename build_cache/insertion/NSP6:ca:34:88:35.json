@@ -1,0 +1,17 @@
+{
+  "id": "NSP6:ca:34:88:35",
+  "variation.featureLoc.feature.name": "NSP6",
+  "cov_nt_insertion.id": "NSP6:nca:11074:83406:11075",
+  "display_name": "34-X-35",
+  "last_codon_before": "34",
+  "last_codon_before_int": 34,
+  "first_codon_after": "35",
+  "first_codon_after_int": 35,
+  "last_ref_nt_before": 11074,
+  "first_ref_nt_after": 11075,
+  "parent_feature": "ORF_1a",
+  "parent_last_codon_before": "3603",
+  "parent_first_codon_after": "3604",
+  "inserted_aas_length": 1,
+  "inserted_aas": "X"
+}

@@ -1,0 +1,18 @@
+{
+  "id": "NSP3:I:1514:N",
+  "display_name": "I1514N",
+  "variation.featureLoc.feature.name": "NSP3",
+  "codon_label": "1514",
+  "codon_label_int": 1514,
+  "reference_aa": "I",
+  "reference_nt": 7259,
+  "replacement_aa": "N",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": false,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 148.9140956834137,
+  "grantham_distance_int": 149,
+  "miyata_distance": 3.369799940806828,
+  "parent_feature": "ORF_1a",
+  "parent_codon_label": "2332"
+}

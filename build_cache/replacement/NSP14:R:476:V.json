@@ -1,0 +1,18 @@
+{
+  "id": "NSP14:R:476:V",
+  "display_name": "R476V",
+  "variation.featureLoc.feature.name": "NSP14",
+  "codon_label": "476",
+  "codon_label_int": 476,
+  "reference_aa": "R",
+  "reference_nt": 19465,
+  "replacement_aa": "V",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": true,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 95.7970764854718,
+  "grantham_distance_int": 96,
+  "miyata_distance": 2.428535787307328,
+  "parent_feature": "ORF_1ab",
+  "parent_codon_label": "6401"
+}

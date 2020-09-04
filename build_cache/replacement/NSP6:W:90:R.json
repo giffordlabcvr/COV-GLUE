@@ -1,0 +1,18 @@
+{
+  "id": "NSP6:W:90:R",
+  "display_name": "W90R",
+  "variation.featureLoc.feature.name": "NSP6",
+  "codon_label": "90",
+  "codon_label_int": 90,
+  "reference_aa": "W",
+  "reference_nt": 11240,
+  "replacement_aa": "R",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": true,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 101.2904807374348,
+  "grantham_distance_int": 101,
+  "miyata_distance": 2.715820642666301,
+  "parent_feature": "ORF_1a",
+  "parent_codon_label": "3659"
+}

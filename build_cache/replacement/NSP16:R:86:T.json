@@ -1,0 +1,18 @@
+{
+  "id": "NSP16:R:86:T",
+  "display_name": "R86T",
+  "variation.featureLoc.feature.name": "NSP16",
+  "codon_label": "86",
+  "codon_label_int": 86,
+  "reference_aa": "R",
+  "reference_nt": 20914,
+  "replacement_aa": "T",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": true,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 70.97102634903321,
+  "grantham_distance_int": 71,
+  "miyata_distance": 2.0317972672838045,
+  "parent_feature": "ORF_1ab",
+  "parent_codon_label": "6884"
+}

@@ -1,0 +1,18 @@
+{
+  "id": "N:R:41:Q",
+  "display_name": "R41Q",
+  "variation.featureLoc.feature.name": "N",
+  "codon_label": "41",
+  "codon_label_int": 41,
+  "reference_aa": "R",
+  "reference_nt": 28394,
+  "replacement_aa": "Q",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": true,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 42.81393192570374,
+  "grantham_distance_int": 43,
+  "miyata_distance": 1.1334798453192791,
+  "parent_feature": null,
+  "parent_codon_label": null
+}

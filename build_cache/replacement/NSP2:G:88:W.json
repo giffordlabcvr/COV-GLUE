@@ -1,0 +1,18 @@
+{
+  "id": "NSP2:G:88:W",
+  "display_name": "G88W",
+  "variation.featureLoc.feature.name": "NSP2",
+  "codon_label": "88",
+  "codon_label_int": 88,
+  "reference_aa": "G",
+  "reference_nt": 1067,
+  "replacement_aa": "W",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": true,
+  "radical_hanada_category_iii": false,
+  "grantham_distance_double": 183.7902133344299,
+  "grantham_distance_int": 184,
+  "miyata_distance": 5.132455948239974,
+  "parent_feature": "ORF_1a",
+  "parent_codon_label": "268"
+}

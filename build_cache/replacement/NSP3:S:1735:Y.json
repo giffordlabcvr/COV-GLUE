@@ -1,0 +1,18 @@
+{
+  "id": "NSP3:S:1735:Y",
+  "display_name": "S1735Y",
+  "variation.featureLoc.feature.name": "NSP3",
+  "codon_label": "1735",
+  "codon_label_int": 1735,
+  "reference_aa": "S",
+  "reference_nt": 7922,
+  "replacement_aa": "Y",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": true,
+  "radical_hanada_category_iii": false,
+  "grantham_distance_double": 143.10738438907285,
+  "grantham_distance_int": 143,
+  "miyata_distance": 3.327140114906959,
+  "parent_feature": "ORF_1a",
+  "parent_codon_label": "2553"
+}

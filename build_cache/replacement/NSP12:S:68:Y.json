@@ -1,0 +1,18 @@
+{
+  "id": "NSP12:S:68:Y",
+  "display_name": "S68Y",
+  "variation.featureLoc.feature.name": "NSP12",
+  "codon_label": "68",
+  "codon_label_int": 68,
+  "reference_aa": "S",
+  "reference_nt": 13642,
+  "replacement_aa": "Y",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": true,
+  "radical_hanada_category_iii": false,
+  "grantham_distance_double": 143.10738438907285,
+  "grantham_distance_int": 143,
+  "miyata_distance": 3.327140114906959,
+  "parent_feature": "ORF_1ab",
+  "parent_codon_label": "4460"
+}

@@ -1,0 +1,8 @@
+{
+  "id": "NSP2:nca:1583:1588",
+  "variation.featureLoc.feature.name": "NSP2",
+  "display_name": "1583-1588",
+  "reference_nt_start": 1583,
+  "reference_nt_end": 1588,
+  "parent_feature": "ORF_1a"
+}

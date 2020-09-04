@@ -1,0 +1,18 @@
+{
+  "id": "NSP12:T:20:I",
+  "display_name": "T20I",
+  "variation.featureLoc.feature.name": "NSP12",
+  "codon_label": "20",
+  "codon_label_int": 20,
+  "reference_aa": "T",
+  "reference_nt": 13498,
+  "replacement_aa": "I",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": false,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 89.28290210353987,
+  "grantham_distance_int": 89,
+  "miyata_distance": 2.143694221057671,
+  "parent_feature": "ORF_1ab",
+  "parent_codon_label": "4412"
+}

@@ -1,0 +1,18 @@
+{
+  "id": "S:H:49:C",
+  "display_name": "H49C",
+  "variation.featureLoc.feature.name": "S",
+  "codon_label": "49",
+  "codon_label_int": 49,
+  "reference_aa": "H",
+  "reference_nt": 21707,
+  "replacement_aa": "C",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": true,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 173.84268193905964,
+  "grantham_distance_int": 174,
+  "miyata_distance": 2.564865637956424,
+  "parent_feature": null,
+  "parent_codon_label": null
+}

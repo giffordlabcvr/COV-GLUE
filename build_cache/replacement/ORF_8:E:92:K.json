@@ -1,0 +1,18 @@
+{
+  "id": "ORF_8:E:92:K",
+  "display_name": "E92K",
+  "variation.featureLoc.feature.name": "ORF_8",
+  "codon_label": "92",
+  "codon_label_int": 92,
+  "reference_aa": "E",
+  "reference_nt": 28167,
+  "replacement_aa": "K",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": true,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 56.86795521504775,
+  "grantham_distance_int": 57,
+  "miyata_distance": 1.1443659173772327,
+  "parent_feature": null,
+  "parent_codon_label": null
+}

@@ -1,0 +1,18 @@
+{
+  "id": "NSP3:V:1806:E",
+  "display_name": "V1806E",
+  "variation.featureLoc.feature.name": "NSP3",
+  "codon_label": "1806",
+  "codon_label_int": 1806,
+  "reference_aa": "V",
+  "reference_nt": 8135,
+  "replacement_aa": "E",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": true,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 121.32850629061132,
+  "grantham_distance_int": 121,
+  "miyata_distance": 2.966682149792932,
+  "parent_feature": "ORF_1a",
+  "parent_codon_label": "2624"
+}

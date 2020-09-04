@@ -1,0 +1,18 @@
+{
+  "id": "ORF_7b:*:44:Y",
+  "display_name": "*44Y",
+  "variation.featureLoc.feature.name": "ORF_7b",
+  "codon_label": "44",
+  "codon_label_int": 44,
+  "reference_aa": "*",
+  "reference_nt": 27885,
+  "replacement_aa": "Y",
+  "radical_hanada_category_i": null,
+  "radical_hanada_category_ii": null,
+  "radical_hanada_category_iii": null,
+  "grantham_distance_double": null,
+  "grantham_distance_int": null,
+  "miyata_distance": null,
+  "parent_feature": null,
+  "parent_codon_label": null
+}

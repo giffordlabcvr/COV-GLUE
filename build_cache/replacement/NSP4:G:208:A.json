@@ -1,0 +1,18 @@
+{
+  "id": "NSP4:G:208:A",
+  "display_name": "G208A",
+  "variation.featureLoc.feature.name": "NSP4",
+  "codon_label": "208",
+  "codon_label_int": 208,
+  "reference_aa": "G",
+  "reference_nt": 9176,
+  "replacement_aa": "A",
+  "radical_hanada_category_i": false,
+  "radical_hanada_category_ii": false,
+  "radical_hanada_category_iii": false,
+  "grantham_distance_double": 59.99535651927305,
+  "grantham_distance_int": 60,
+  "miyata_distance": 0.9144774819777941,
+  "parent_feature": "ORF_1a",
+  "parent_codon_label": "2971"
+}

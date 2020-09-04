@@ -1,0 +1,18 @@
+{
+  "id": "S:D:1139:H",
+  "display_name": "D1139H",
+  "variation.featureLoc.feature.name": "S",
+  "codon_label": "1139",
+  "codon_label_int": 1139,
+  "reference_aa": "D",
+  "reference_nt": 24977,
+  "replacement_aa": "H",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": true,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 81.23797960254424,
+  "grantham_distance_int": 81,
+  "miyata_distance": 1.7153540746282345,
+  "parent_feature": null,
+  "parent_codon_label": null
+}

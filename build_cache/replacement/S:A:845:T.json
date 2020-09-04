@@ -1,0 +1,18 @@
+{
+  "id": "S:A:845:T",
+  "display_name": "A845T",
+  "variation.featureLoc.feature.name": "S",
+  "codon_label": "845",
+  "codon_label_int": 845,
+  "reference_aa": "A",
+  "reference_nt": 24095,
+  "replacement_aa": "T",
+  "radical_hanada_category_i": false,
+  "radical_hanada_category_ii": false,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 58.02332760382417,
+  "grantham_distance_int": 58,
+  "miyata_distance": 0.9021839838528766,
+  "parent_feature": null,
+  "parent_codon_label": null
+}

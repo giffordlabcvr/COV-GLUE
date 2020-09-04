@@ -1,0 +1,18 @@
+{
+  "id": "N:G:137:R",
+  "display_name": "G137R",
+  "variation.featureLoc.feature.name": "N",
+  "codon_label": "137",
+  "codon_label_int": 137,
+  "reference_aa": "G",
+  "reference_nt": 28682,
+  "replacement_aa": "R",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": true,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 125.12919263514027,
+  "grantham_distance_int": 125,
+  "miyata_distance": 3.584766932145264,
+  "parent_feature": null,
+  "parent_codon_label": null
+}

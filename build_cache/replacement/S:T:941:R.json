@@ -1,0 +1,18 @@
+{
+  "id": "S:T:941:R",
+  "display_name": "T941R",
+  "variation.featureLoc.feature.name": "S",
+  "codon_label": "941",
+  "codon_label_int": 941,
+  "reference_aa": "T",
+  "reference_nt": 24383,
+  "replacement_aa": "R",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": true,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 70.97102634903321,
+  "grantham_distance_int": 71,
+  "miyata_distance": 2.0317972672838045,
+  "parent_feature": null,
+  "parent_codon_label": null
+}

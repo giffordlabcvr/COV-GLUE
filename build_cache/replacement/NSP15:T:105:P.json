@@ -1,0 +1,18 @@
+{
+  "id": "NSP15:T:105:P",
+  "display_name": "T105P",
+  "variation.featureLoc.feature.name": "NSP15",
+  "codon_label": "105",
+  "codon_label_int": 105,
+  "reference_aa": "T",
+  "reference_nt": 19933,
+  "replacement_aa": "P",
+  "radical_hanada_category_i": false,
+  "radical_hanada_category_ii": false,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 37.56362475504698,
+  "grantham_distance_int": 38,
+  "miyata_distance": 0.873755109177339,
+  "parent_feature": "ORF_1ab",
+  "parent_codon_label": "6557"
+}

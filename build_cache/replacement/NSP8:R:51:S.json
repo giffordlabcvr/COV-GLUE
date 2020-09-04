@@ -1,0 +1,18 @@
+{
+  "id": "NSP8:R:51:S",
+  "display_name": "R51S",
+  "variation.featureLoc.feature.name": "NSP8",
+  "codon_label": "51",
+  "codon_label_int": 51,
+  "reference_aa": "R",
+  "reference_nt": 12242,
+  "replacement_aa": "S",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": true,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 109.21315295411507,
+  "grantham_distance_int": 109,
+  "miyata_distance": 2.7409075071380777,
+  "parent_feature": "ORF_1a",
+  "parent_codon_label": "3993"
+}

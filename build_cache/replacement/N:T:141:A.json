@@ -1,0 +1,18 @@
+{
+  "id": "N:T:141:A",
+  "display_name": "T141A",
+  "variation.featureLoc.feature.name": "N",
+  "codon_label": "141",
+  "codon_label_int": 141,
+  "reference_aa": "T",
+  "reference_nt": 28694,
+  "replacement_aa": "A",
+  "radical_hanada_category_i": false,
+  "radical_hanada_category_ii": false,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 58.02332760382417,
+  "grantham_distance_int": 58,
+  "miyata_distance": 0.9021839838528766,
+  "parent_feature": null,
+  "parent_codon_label": null
+}

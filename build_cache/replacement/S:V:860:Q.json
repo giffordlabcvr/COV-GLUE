@@ -1,0 +1,18 @@
+{
+  "id": "S:V:860:Q",
+  "display_name": "V860Q",
+  "variation.featureLoc.feature.name": "S",
+  "codon_label": "860",
+  "codon_label_int": 860,
+  "reference_aa": "V",
+  "reference_nt": 24140,
+  "replacement_aa": "Q",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": false,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 96.32571878085723,
+  "grantham_distance_int": 96,
+  "miyata_distance": 2.1323985399227285,
+  "parent_feature": null,
+  "parent_codon_label": null
+}

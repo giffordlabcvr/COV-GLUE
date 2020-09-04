@@ -1,0 +1,18 @@
+{
+  "id": "NSP8:V:195:I",
+  "display_name": "V195I",
+  "variation.featureLoc.feature.name": "NSP8",
+  "codon_label": "195",
+  "codon_label_int": 195,
+  "reference_aa": "V",
+  "reference_nt": 12674,
+  "replacement_aa": "I",
+  "radical_hanada_category_i": false,
+  "radical_hanada_category_ii": false,
+  "radical_hanada_category_iii": false,
+  "grantham_distance_double": 29.609070626666707,
+  "grantham_distance_int": 30,
+  "miyata_distance": 0.8491514617150016,
+  "parent_feature": "ORF_1a",
+  "parent_codon_label": "4137"
+}

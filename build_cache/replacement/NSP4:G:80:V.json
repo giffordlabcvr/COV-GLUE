@@ -1,0 +1,18 @@
+{
+  "id": "NSP4:G:80:V",
+  "display_name": "G80V",
+  "variation.featureLoc.feature.name": "NSP4",
+  "codon_label": "80",
+  "codon_label_int": 80,
+  "reference_aa": "G",
+  "reference_nt": 8792,
+  "replacement_aa": "V",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": false,
+  "radical_hanada_category_iii": false,
+  "grantham_distance_double": 108.78738843583756,
+  "grantham_distance_int": 109,
+  "miyata_distance": 2.7580349580646812,
+  "parent_feature": "ORF_1a",
+  "parent_codon_label": "2843"
+}

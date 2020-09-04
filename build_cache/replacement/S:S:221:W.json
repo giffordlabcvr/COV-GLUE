@@ -1,0 +1,18 @@
+{
+  "id": "S:S:221:W",
+  "display_name": "S221W",
+  "variation.featureLoc.feature.name": "S",
+  "codon_label": "221",
+  "codon_label_int": 221,
+  "reference_aa": "S",
+  "reference_nt": 22223,
+  "replacement_aa": "W",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": true,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 176.57756225361524,
+  "grantham_distance_int": 177,
+  "miyata_distance": 4.380500525642724,
+  "parent_feature": null,
+  "parent_codon_label": null
+}

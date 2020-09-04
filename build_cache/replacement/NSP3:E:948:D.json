@@ -1,0 +1,18 @@
+{
+  "id": "NSP3:E:948:D",
+  "display_name": "E948D",
+  "variation.featureLoc.feature.name": "NSP3",
+  "codon_label": "948",
+  "codon_label_int": 948,
+  "reference_aa": "E",
+  "reference_nt": 5561,
+  "replacement_aa": "D",
+  "radical_hanada_category_i": false,
+  "radical_hanada_category_ii": false,
+  "radical_hanada_category_iii": false,
+  "grantham_distance_double": 44.60463645252665,
+  "grantham_distance_int": 45,
+  "miyata_distance": 0.9031410249655084,
+  "parent_feature": "ORF_1a",
+  "parent_codon_label": "1766"
+}

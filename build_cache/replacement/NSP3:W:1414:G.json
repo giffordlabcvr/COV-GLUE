@@ -1,0 +1,18 @@
+{
+  "id": "NSP3:W:1414:G",
+  "display_name": "W1414G",
+  "variation.featureLoc.feature.name": "NSP3",
+  "codon_label": "1414",
+  "codon_label_int": 1414,
+  "reference_aa": "W",
+  "reference_nt": 6959,
+  "replacement_aa": "G",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": true,
+  "radical_hanada_category_iii": false,
+  "grantham_distance_double": 183.7902133344299,
+  "grantham_distance_int": 184,
+  "miyata_distance": 5.132455948239974,
+  "parent_feature": "ORF_1a",
+  "parent_codon_label": "2232"
+}

@@ -1,0 +1,18 @@
+{
+  "id": "S:V:1068:H",
+  "display_name": "V1068H",
+  "variation.featureLoc.feature.name": "S",
+  "codon_label": "1068",
+  "codon_label_int": 1068,
+  "reference_aa": "V",
+  "reference_nt": 24764,
+  "replacement_aa": "H",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": true,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 83.89294699769302,
+  "grantham_distance_int": 84,
+  "miyata_distance": 2.114804652729995,
+  "parent_feature": null,
+  "parent_codon_label": null
+}

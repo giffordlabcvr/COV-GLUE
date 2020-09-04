@@ -1,0 +1,18 @@
+{
+  "id": "NSP12:A:526:E",
+  "display_name": "A526E",
+  "variation.featureLoc.feature.name": "NSP12",
+  "codon_label": "526",
+  "codon_label_int": 526,
+  "reference_aa": "A",
+  "reference_nt": 15016,
+  "replacement_aa": "E",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": true,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 106.7125513825282,
+  "grantham_distance_int": 107,
+  "miyata_distance": 2.464557824068621,
+  "parent_feature": "ORF_1ab",
+  "parent_codon_label": "4918"
+}

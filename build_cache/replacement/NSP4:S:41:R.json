@@ -1,0 +1,18 @@
+{
+  "id": "NSP4:S:41:R",
+  "display_name": "S41R",
+  "variation.featureLoc.feature.name": "NSP4",
+  "codon_label": "41",
+  "codon_label_int": 41,
+  "reference_aa": "S",
+  "reference_nt": 8675,
+  "replacement_aa": "R",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": true,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 109.21315295411507,
+  "grantham_distance_int": 109,
+  "miyata_distance": 2.7409075071380777,
+  "parent_feature": "ORF_1a",
+  "parent_codon_label": "2804"
+}

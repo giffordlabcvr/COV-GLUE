@@ -1,0 +1,18 @@
+{
+  "id": "NSP13:I:327:L",
+  "display_name": "I327L",
+  "variation.featureLoc.feature.name": "NSP13",
+  "codon_label": "327",
+  "codon_label_int": 327,
+  "reference_aa": "I",
+  "reference_nt": 17215,
+  "replacement_aa": "L",
+  "radical_hanada_category_i": false,
+  "radical_hanada_category_ii": false,
+  "radical_hanada_category_iii": false,
+  "grantham_distance_double": 4.855121197570456,
+  "grantham_distance_int": 5,
+  "miyata_distance": 0.13905655234203065,
+  "parent_feature": "ORF_1ab",
+  "parent_codon_label": "5651"
+}

@@ -1,0 +1,15 @@
+{
+  "id": "ORF_1ab:ca:2738:2767",
+  "variation.featureLoc.feature.name": "ORF_1ab",
+  "cov_nt_deletion.id": "ORF_1ab:nca:8477:8566",
+  "display_name": "2738-2767",
+  "end_codon": "2767",
+  "end_codon_int": 2767,
+  "parent_end_codon": null,
+  "parent_feature": null,
+  "parent_start_codon": null,
+  "reference_nt_end": 8566,
+  "reference_nt_start": 8477,
+  "start_codon": "2738",
+  "start_codon_int": 2738
+}

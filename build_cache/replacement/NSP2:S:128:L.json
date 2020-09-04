@@ -1,0 +1,18 @@
+{
+  "id": "NSP2:S:128:L",
+  "display_name": "S128L",
+  "variation.featureLoc.feature.name": "NSP2",
+  "codon_label": "128",
+  "codon_label_int": 128,
+  "reference_aa": "S",
+  "reference_nt": 1187,
+  "replacement_aa": "L",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": false,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 144.07923462160153,
+  "grantham_distance_int": 144,
+  "miyata_distance": 3.0404515387240023,
+  "parent_feature": "ORF_1a",
+  "parent_codon_label": "308"
+}

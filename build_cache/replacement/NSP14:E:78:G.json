@@ -1,0 +1,18 @@
+{
+  "id": "NSP14:E:78:G",
+  "display_name": "E78G",
+  "variation.featureLoc.feature.name": "NSP14",
+  "codon_label": "78",
+  "codon_label_int": 78,
+  "reference_aa": "E",
+  "reference_nt": 18271,
+  "replacement_aa": "G",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": true,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 97.85190047927728,
+  "grantham_distance_int": 98,
+  "miyata_distance": 2.7831228164426745,
+  "parent_feature": "ORF_1ab",
+  "parent_codon_label": "6003"
+}

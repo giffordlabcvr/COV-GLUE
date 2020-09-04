@@ -1,0 +1,18 @@
+{
+  "id": "S:R:273:W",
+  "display_name": "R273W",
+  "variation.featureLoc.feature.name": "S",
+  "codon_label": "273",
+  "codon_label_int": 273,
+  "reference_aa": "R",
+  "reference_nt": 22379,
+  "replacement_aa": "W",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": true,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 101.2904807374348,
+  "grantham_distance_int": 101,
+  "miyata_distance": 2.715820642666301,
+  "parent_feature": null,
+  "parent_codon_label": null
+}

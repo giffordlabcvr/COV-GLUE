@@ -1,0 +1,18 @@
+{
+  "id": "NSP8:T:187:R",
+  "display_name": "T187R",
+  "variation.featureLoc.feature.name": "NSP8",
+  "codon_label": "187",
+  "codon_label_int": 187,
+  "reference_aa": "T",
+  "reference_nt": 12650,
+  "replacement_aa": "R",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": true,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 70.97102634903321,
+  "grantham_distance_int": 71,
+  "miyata_distance": 2.0317972672838045,
+  "parent_feature": "ORF_1a",
+  "parent_codon_label": "4129"
+}

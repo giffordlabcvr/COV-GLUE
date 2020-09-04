@@ -1,0 +1,18 @@
+{
+  "id": "NSP3:S:957:P",
+  "display_name": "S957P",
+  "variation.featureLoc.feature.name": "NSP3",
+  "codon_label": "957",
+  "codon_label_int": 957,
+  "reference_aa": "S",
+  "reference_nt": 5588,
+  "replacement_aa": "P",
+  "radical_hanada_category_i": false,
+  "radical_hanada_category_ii": false,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 73.35256887257073,
+  "grantham_distance_int": 73,
+  "miyata_distance": 0.5564160035374529,
+  "parent_feature": "ORF_1a",
+  "parent_codon_label": "1775"
+}

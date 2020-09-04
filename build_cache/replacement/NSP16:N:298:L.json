@@ -1,0 +1,18 @@
+{
+  "id": "NSP16:N:298:L",
+  "display_name": "N298L",
+  "variation.featureLoc.feature.name": "NSP16",
+  "codon_label": "298",
+  "codon_label_int": 298,
+  "reference_aa": "N",
+  "reference_nt": 21550,
+  "replacement_aa": "L",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": false,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 152.330979691233,
+  "grantham_distance_int": 152,
+  "miyata_distance": 3.492838667203564,
+  "parent_feature": "ORF_1ab",
+  "parent_codon_label": "7096"
+}

@@ -1,0 +1,18 @@
+{
+  "id": "NSP15:F:232:S",
+  "display_name": "F232S",
+  "variation.featureLoc.feature.name": "NSP15",
+  "codon_label": "232",
+  "codon_label_int": 232,
+  "reference_aa": "F",
+  "reference_nt": 20314,
+  "replacement_aa": "S",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": true,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 154.8079022945541,
+  "grantham_distance_int": 155,
+  "miyata_distance": 3.447399039542067,
+  "parent_feature": "ORF_1ab",
+  "parent_codon_label": "6684"
+}

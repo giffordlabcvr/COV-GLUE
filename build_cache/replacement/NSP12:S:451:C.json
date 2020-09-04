@@ -1,0 +1,18 @@
+{
+  "id": "NSP12:S:451:C",
+  "display_name": "S451C",
+  "variation.featureLoc.feature.name": "NSP12",
+  "codon_label": "451",
+  "codon_label_int": 451,
+  "reference_aa": "S",
+  "reference_nt": 14791,
+  "replacement_aa": "C",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": false,
+  "radical_hanada_category_iii": false,
+  "grantham_distance_double": 111.6724956632034,
+  "grantham_distance_int": 112,
+  "miyata_distance": 1.8406989880227782,
+  "parent_feature": "ORF_1ab",
+  "parent_codon_label": "4843"
+}

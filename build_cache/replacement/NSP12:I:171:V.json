@@ -1,0 +1,18 @@
+{
+  "id": "NSP12:I:171:V",
+  "display_name": "I171V",
+  "variation.featureLoc.feature.name": "NSP12",
+  "codon_label": "171",
+  "codon_label_int": 171,
+  "reference_aa": "I",
+  "reference_nt": 13951,
+  "replacement_aa": "V",
+  "radical_hanada_category_i": false,
+  "radical_hanada_category_ii": false,
+  "radical_hanada_category_iii": false,
+  "grantham_distance_double": 29.609070626666707,
+  "grantham_distance_int": 30,
+  "miyata_distance": 0.8491514617150016,
+  "parent_feature": "ORF_1ab",
+  "parent_codon_label": "4563"
+}

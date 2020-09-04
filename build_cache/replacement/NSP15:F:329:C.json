@@ -1,0 +1,18 @@
+{
+  "id": "NSP15:F:329:C",
+  "display_name": "F329C",
+  "variation.featureLoc.feature.name": "NSP15",
+  "codon_label": "329",
+  "codon_label_int": 329,
+  "reference_aa": "F",
+  "reference_nt": 20605,
+  "replacement_aa": "C",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": true,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 204.38848742235413,
+  "grantham_distance_int": 204,
+  "miyata_distance": 2.2422122336883987,
+  "parent_feature": "ORF_1ab",
+  "parent_codon_label": "6781"
+}

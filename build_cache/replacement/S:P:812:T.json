@@ -1,0 +1,18 @@
+{
+  "id": "S:P:812:T",
+  "display_name": "P812T",
+  "variation.featureLoc.feature.name": "S",
+  "codon_label": "812",
+  "codon_label_int": 812,
+  "reference_aa": "P",
+  "reference_nt": 23996,
+  "replacement_aa": "T",
+  "radical_hanada_category_i": false,
+  "radical_hanada_category_ii": false,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 37.56362475504698,
+  "grantham_distance_int": 38,
+  "miyata_distance": 0.873755109177339,
+  "parent_feature": null,
+  "parent_codon_label": null
+}

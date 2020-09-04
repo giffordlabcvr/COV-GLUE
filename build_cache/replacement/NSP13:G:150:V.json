@@ -1,0 +1,18 @@
+{
+  "id": "NSP13:G:150:V",
+  "display_name": "G150V",
+  "variation.featureLoc.feature.name": "NSP13",
+  "codon_label": "150",
+  "codon_label_int": 150,
+  "reference_aa": "G",
+  "reference_nt": 16684,
+  "replacement_aa": "V",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": false,
+  "radical_hanada_category_iii": false,
+  "grantham_distance_double": 108.78738843583756,
+  "grantham_distance_int": 109,
+  "miyata_distance": 2.7580349580646812,
+  "parent_feature": "ORF_1ab",
+  "parent_codon_label": "5474"
+}

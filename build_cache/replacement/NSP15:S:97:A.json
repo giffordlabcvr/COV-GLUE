@@ -1,0 +1,18 @@
+{
+  "id": "NSP15:S:97:A",
+  "display_name": "S97A",
+  "variation.featureLoc.feature.name": "NSP15",
+  "codon_label": "97",
+  "codon_label_int": 97,
+  "reference_aa": "S",
+  "reference_nt": 19909,
+  "replacement_aa": "A",
+  "radical_hanada_category_i": false,
+  "radical_hanada_category_ii": false,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 99.13249708101095,
+  "grantham_distance_int": 99,
+  "miyata_distance": 0.5107016875310603,
+  "parent_feature": "ORF_1ab",
+  "parent_codon_label": "6549"
+}

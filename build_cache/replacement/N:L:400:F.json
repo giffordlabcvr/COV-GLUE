@@ -1,0 +1,18 @@
+{
+  "id": "N:L:400:F",
+  "display_name": "L400F",
+  "variation.featureLoc.feature.name": "N",
+  "codon_label": "400",
+  "codon_label_int": 400,
+  "reference_aa": "L",
+  "reference_nt": 29471,
+  "replacement_aa": "F",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": true,
+  "radical_hanada_category_iii": false,
+  "grantham_distance_double": 21.823920738840876,
+  "grantham_distance_int": 22,
+  "miyata_distance": 0.6259759618337314,
+  "parent_feature": null,
+  "parent_codon_label": null
+}

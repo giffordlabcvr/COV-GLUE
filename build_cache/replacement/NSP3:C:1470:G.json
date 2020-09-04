@@ -1,0 +1,18 @@
+{
+  "id": "NSP3:C:1470:G",
+  "display_name": "C1470G",
+  "variation.featureLoc.feature.name": "NSP3",
+  "codon_label": "1470",
+  "codon_label_int": 1470,
+  "reference_aa": "C",
+  "reference_nt": 7127,
+  "replacement_aa": "G",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": false,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 158.2317728686345,
+  "grantham_distance_int": 158,
+  "miyata_distance": 2.2172032627151887,
+  "parent_feature": "ORF_1a",
+  "parent_codon_label": "2288"
+}

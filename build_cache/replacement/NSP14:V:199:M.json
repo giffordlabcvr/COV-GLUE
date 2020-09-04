@@ -1,0 +1,18 @@
+{
+  "id": "NSP14:V:199:M",
+  "display_name": "V199M",
+  "variation.featureLoc.feature.name": "NSP14",
+  "codon_label": "199",
+  "codon_label_int": 199,
+  "reference_aa": "V",
+  "reference_nt": 18634,
+  "replacement_aa": "M",
+  "radical_hanada_category_i": false,
+  "radical_hanada_category_ii": false,
+  "radical_hanada_category_iii": false,
+  "grantham_distance_double": 21.521799383987368,
+  "grantham_distance_int": 22,
+  "miyata_distance": 0.6173356298910421,
+  "parent_feature": "ORF_1ab",
+  "parent_codon_label": "6124"
+}

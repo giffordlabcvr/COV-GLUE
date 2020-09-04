@@ -1,0 +1,18 @@
+{
+  "id": "NSP3:V:1388:G",
+  "display_name": "V1388G",
+  "variation.featureLoc.feature.name": "NSP3",
+  "codon_label": "1388",
+  "codon_label_int": 1388,
+  "reference_aa": "V",
+  "reference_nt": 6881,
+  "replacement_aa": "G",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": false,
+  "radical_hanada_category_iii": false,
+  "grantham_distance_double": 108.78738843583756,
+  "grantham_distance_int": 109,
+  "miyata_distance": 2.7580349580646812,
+  "parent_feature": "ORF_1a",
+  "parent_codon_label": "2206"
+}

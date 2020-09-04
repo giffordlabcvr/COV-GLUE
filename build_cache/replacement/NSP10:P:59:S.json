@@ -1,0 +1,18 @@
+{
+  "id": "NSP10:P:59:S",
+  "display_name": "P59S",
+  "variation.featureLoc.feature.name": "NSP10",
+  "codon_label": "59",
+  "codon_label_int": 59,
+  "reference_aa": "P",
+  "reference_nt": 13199,
+  "replacement_aa": "S",
+  "radical_hanada_category_i": false,
+  "radical_hanada_category_ii": false,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 73.35256887257073,
+  "grantham_distance_int": 73,
+  "miyata_distance": 0.5564160035374529,
+  "parent_feature": "ORF_1a",
+  "parent_codon_label": "4312"
+}

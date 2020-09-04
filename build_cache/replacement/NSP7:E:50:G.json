@@ -1,0 +1,18 @@
+{
+  "id": "NSP7:E:50:G",
+  "display_name": "E50G",
+  "variation.featureLoc.feature.name": "NSP7",
+  "codon_label": "50",
+  "codon_label_int": 50,
+  "reference_aa": "E",
+  "reference_nt": 11990,
+  "replacement_aa": "G",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": true,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 97.85190047927728,
+  "grantham_distance_int": 98,
+  "miyata_distance": 2.7831228164426745,
+  "parent_feature": "ORF_1a",
+  "parent_codon_label": "3909"
+}

@@ -1,0 +1,18 @@
+{
+  "id": "NSP16:M:247:T",
+  "display_name": "M247T",
+  "variation.featureLoc.feature.name": "NSP16",
+  "codon_label": "247",
+  "codon_label_int": 247,
+  "reference_aa": "M",
+  "reference_nt": 21397,
+  "replacement_aa": "T",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": false,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 81.0396927923509,
+  "grantham_distance_int": 81,
+  "miyata_distance": 1.8553256449702145,
+  "parent_feature": "ORF_1ab",
+  "parent_codon_label": "7045"
+}

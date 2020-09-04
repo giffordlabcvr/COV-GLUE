@@ -1,0 +1,18 @@
+{
+  "id": "N:A:419:P",
+  "display_name": "A419P",
+  "variation.featureLoc.feature.name": "N",
+  "codon_label": "419",
+  "codon_label_int": 419,
+  "reference_aa": "A",
+  "reference_nt": 29528,
+  "replacement_aa": "P",
+  "radical_hanada_category_i": false,
+  "radical_hanada_category_ii": false,
+  "radical_hanada_category_iii": false,
+  "grantham_distance_double": 26.874338336271116,
+  "grantham_distance_int": 27,
+  "miyata_distance": 0.06363239751244655,
+  "parent_feature": null,
+  "parent_codon_label": null
+}

@@ -1,0 +1,18 @@
+{
+  "id": "NSP7:W:29:G",
+  "display_name": "W29G",
+  "variation.featureLoc.feature.name": "NSP7",
+  "codon_label": "29",
+  "codon_label_int": 29,
+  "reference_aa": "W",
+  "reference_nt": 11927,
+  "replacement_aa": "G",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": true,
+  "radical_hanada_category_iii": false,
+  "grantham_distance_double": 183.7902133344299,
+  "grantham_distance_int": 184,
+  "miyata_distance": 5.132455948239974,
+  "parent_feature": "ORF_1a",
+  "parent_codon_label": "3888"
+}

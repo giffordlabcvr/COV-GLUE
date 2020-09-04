@@ -1,0 +1,15 @@
+{
+  "id": "ORF_6:ca:57:61",
+  "variation.featureLoc.feature.name": "ORF_6",
+  "cov_nt_deletion.id": "ORF_6:nca:27370:27384",
+  "display_name": "57-61",
+  "end_codon": "61",
+  "end_codon_int": 61,
+  "parent_end_codon": null,
+  "parent_feature": null,
+  "parent_start_codon": null,
+  "reference_nt_end": 27384,
+  "reference_nt_start": 27370,
+  "start_codon": "57",
+  "start_codon_int": 57
+}

@@ -1,0 +1,18 @@
+{
+  "id": "NSP4:L:438:P",
+  "display_name": "L438P",
+  "variation.featureLoc.feature.name": "NSP4",
+  "codon_label": "438",
+  "codon_label_int": 438,
+  "reference_aa": "L",
+  "reference_nt": 9866,
+  "replacement_aa": "P",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": false,
+  "radical_hanada_category_iii": false,
+  "grantham_distance_double": 97.77619789015552,
+  "grantham_distance_int": 98,
+  "miyata_distance": 2.6962818635359933,
+  "parent_feature": "ORF_1a",
+  "parent_codon_label": "3201"
+}

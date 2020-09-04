@@ -1,0 +1,18 @@
+{
+  "id": "N:N:196:Y",
+  "display_name": "N196Y",
+  "variation.featureLoc.feature.name": "N",
+  "codon_label": "196",
+  "codon_label_int": 196,
+  "reference_aa": "N",
+  "reference_nt": 28859,
+  "replacement_aa": "Y",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": true,
+  "radical_hanada_category_iii": false,
+  "grantham_distance_double": 142.22936956562143,
+  "grantham_distance_int": 142,
+  "miyata_distance": 3.416303226515753,
+  "parent_feature": null,
+  "parent_codon_label": null
+}

@@ -1,0 +1,18 @@
+{
+  "id": "NSP5:G:278:V",
+  "display_name": "G278V",
+  "variation.featureLoc.feature.name": "NSP5",
+  "codon_label": "278",
+  "codon_label_int": 278,
+  "reference_aa": "G",
+  "reference_nt": 10886,
+  "replacement_aa": "V",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": false,
+  "radical_hanada_category_iii": false,
+  "grantham_distance_double": 108.78738843583756,
+  "grantham_distance_int": 109,
+  "miyata_distance": 2.7580349580646812,
+  "parent_feature": "ORF_1a",
+  "parent_codon_label": "3541"
+}

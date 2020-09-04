@@ -1,0 +1,18 @@
+{
+  "id": "NSP12:F:407:K",
+  "display_name": "F407K",
+  "variation.featureLoc.feature.name": "NSP12",
+  "codon_label": "407",
+  "codon_label_int": 407,
+  "reference_aa": "F",
+  "reference_nt": 14659,
+  "replacement_aa": "K",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": true,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 102.14134603171699,
+  "grantham_distance_int": 102,
+  "miyata_distance": 2.85261535654781,
+  "parent_feature": "ORF_1ab",
+  "parent_codon_label": "4799"
+}

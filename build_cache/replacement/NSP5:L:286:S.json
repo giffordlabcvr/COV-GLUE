@@ -1,0 +1,18 @@
+{
+  "id": "NSP5:L:286:S",
+  "display_name": "L286S",
+  "variation.featureLoc.feature.name": "NSP5",
+  "codon_label": "286",
+  "codon_label_int": 286,
+  "reference_aa": "L",
+  "reference_nt": 10910,
+  "replacement_aa": "S",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": false,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 144.07923462160153,
+  "grantham_distance_int": 144,
+  "miyata_distance": 3.0404515387240023,
+  "parent_feature": "ORF_1a",
+  "parent_codon_label": "3549"
+}

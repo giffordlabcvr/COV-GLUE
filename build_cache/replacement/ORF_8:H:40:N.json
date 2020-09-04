@@ -1,0 +1,18 @@
+{
+  "id": "ORF_8:H:40:N",
+  "display_name": "H40N",
+  "variation.featureLoc.feature.name": "ORF_8",
+  "codon_label": "40",
+  "codon_label_int": 40,
+  "reference_aa": "H",
+  "reference_nt": 28011,
+  "replacement_aa": "N",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": true,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 68.35485567757956,
+  "grantham_distance_int": 68,
+  "miyata_distance": 1.288757085402098,
+  "parent_feature": null,
+  "parent_codon_label": null
+}

@@ -1,0 +1,15 @@
+{
+  "id": "ORF_3a:ca:257:259",
+  "variation.featureLoc.feature.name": "ORF_3a",
+  "cov_nt_deletion.id": "ORF_3a:nca:26161:26169",
+  "display_name": "257-259",
+  "end_codon": "259",
+  "end_codon_int": 259,
+  "parent_end_codon": null,
+  "parent_feature": null,
+  "parent_start_codon": null,
+  "reference_nt_end": 26169,
+  "reference_nt_start": 26161,
+  "start_codon": "257",
+  "start_codon_int": 257
+}

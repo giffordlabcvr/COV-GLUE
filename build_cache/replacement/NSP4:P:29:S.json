@@ -1,0 +1,18 @@
+{
+  "id": "NSP4:P:29:S",
+  "display_name": "P29S",
+  "variation.featureLoc.feature.name": "NSP4",
+  "codon_label": "29",
+  "codon_label_int": 29,
+  "reference_aa": "P",
+  "reference_nt": 8639,
+  "replacement_aa": "S",
+  "radical_hanada_category_i": false,
+  "radical_hanada_category_ii": false,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 73.35256887257073,
+  "grantham_distance_int": 73,
+  "miyata_distance": 0.5564160035374529,
+  "parent_feature": "ORF_1a",
+  "parent_codon_label": "2792"
+}

@@ -1,0 +1,18 @@
+{
+  "id": "S:Y:505:W",
+  "display_name": "Y505W",
+  "variation.featureLoc.feature.name": "S",
+  "codon_label": "505",
+  "codon_label_int": 505,
+  "reference_aa": "Y",
+  "reference_nt": 23075,
+  "replacement_aa": "W",
+  "radical_hanada_category_i": false,
+  "radical_hanada_category_ii": false,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 37.11376988611832,
+  "grantham_distance_int": 37,
+  "miyata_distance": 1.05544756918752,
+  "parent_feature": null,
+  "parent_codon_label": null
+}

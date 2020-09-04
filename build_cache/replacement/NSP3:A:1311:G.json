@@ -1,0 +1,18 @@
+{
+  "id": "NSP3:A:1311:G",
+  "display_name": "A1311G",
+  "variation.featureLoc.feature.name": "NSP3",
+  "codon_label": "1311",
+  "codon_label_int": 1311,
+  "reference_aa": "A",
+  "reference_nt": 6650,
+  "replacement_aa": "G",
+  "radical_hanada_category_i": false,
+  "radical_hanada_category_ii": false,
+  "radical_hanada_category_iii": false,
+  "grantham_distance_double": 59.99535651927305,
+  "grantham_distance_int": 60,
+  "miyata_distance": 0.9144774819777941,
+  "parent_feature": "ORF_1a",
+  "parent_codon_label": "2129"
+}

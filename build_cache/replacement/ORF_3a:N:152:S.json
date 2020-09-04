@@ -1,0 +1,18 @@
+{
+  "id": "ORF_3a:N:152:S",
+  "display_name": "N152S",
+  "variation.featureLoc.feature.name": "ORF_3a",
+  "codon_label": "152",
+  "codon_label_int": 152,
+  "reference_aa": "N",
+  "reference_nt": 25846,
+  "replacement_aa": "S",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": false,
+  "radical_hanada_category_iii": false,
+  "grantham_distance_double": 46.23977508306296,
+  "grantham_distance_int": 46,
+  "miyata_distance": 1.3130472141012726,
+  "parent_feature": null,
+  "parent_codon_label": null
+}

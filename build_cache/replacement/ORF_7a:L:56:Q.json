@@ -1,0 +1,18 @@
+{
+  "id": "ORF_7a:L:56:Q",
+  "display_name": "L56Q",
+  "variation.featureLoc.feature.name": "ORF_7a",
+  "codon_label": "56",
+  "codon_label_int": 56,
+  "reference_aa": "L",
+  "reference_nt": 27559,
+  "replacement_aa": "Q",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": false,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 112.44147717377763,
+  "grantham_distance_int": 112,
+  "miyata_distance": 2.703476672168515,
+  "parent_feature": null,
+  "parent_codon_label": null
+}

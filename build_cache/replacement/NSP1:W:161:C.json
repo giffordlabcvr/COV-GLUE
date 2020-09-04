@@ -1,0 +1,18 @@
+{
+  "id": "NSP1:W:161:C",
+  "display_name": "W161C",
+  "variation.featureLoc.feature.name": "NSP1",
+  "codon_label": "161",
+  "codon_label_int": 161,
+  "reference_aa": "W",
+  "reference_nt": 746,
+  "replacement_aa": "C",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": true,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 214.36237259909691,
+  "grantham_distance_int": 214,
+  "miyata_distance": 3.3426337619029294,
+  "parent_feature": "ORF_1a",
+  "parent_codon_label": "161"
+}

@@ -1,0 +1,15 @@
+{
+  "id": "S:ca:819:821",
+  "variation.featureLoc.feature.name": "S",
+  "cov_nt_deletion.id": "S:nca:24017:24025",
+  "display_name": "819-821",
+  "end_codon": "821",
+  "end_codon_int": 821,
+  "parent_end_codon": null,
+  "parent_feature": null,
+  "parent_start_codon": null,
+  "reference_nt_end": 24025,
+  "reference_nt_start": 24017,
+  "start_codon": "819",
+  "start_codon_int": 819
+}

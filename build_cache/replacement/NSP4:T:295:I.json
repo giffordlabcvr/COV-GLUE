@@ -1,0 +1,18 @@
+{
+  "id": "NSP4:T:295:I",
+  "display_name": "T295I",
+  "variation.featureLoc.feature.name": "NSP4",
+  "codon_label": "295",
+  "codon_label_int": 295,
+  "reference_aa": "T",
+  "reference_nt": 9437,
+  "replacement_aa": "I",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": false,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 89.28290210353987,
+  "grantham_distance_int": 89,
+  "miyata_distance": 2.143694221057671,
+  "parent_feature": "ORF_1a",
+  "parent_codon_label": "3058"
+}

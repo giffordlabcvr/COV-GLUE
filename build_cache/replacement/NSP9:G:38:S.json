@@ -1,0 +1,18 @@
+{
+  "id": "NSP9:G:38:S",
+  "display_name": "G38S",
+  "variation.featureLoc.feature.name": "NSP9",
+  "codon_label": "38",
+  "codon_label_int": 38,
+  "reference_aa": "G",
+  "reference_nt": 12797,
+  "replacement_aa": "S",
+  "radical_hanada_category_i": false,
+  "radical_hanada_category_ii": false,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 55.267362761946906,
+  "grantham_distance_int": 55,
+  "miyata_distance": 0.8479269350772444,
+  "parent_feature": "ORF_1a",
+  "parent_codon_label": "4178"
+}

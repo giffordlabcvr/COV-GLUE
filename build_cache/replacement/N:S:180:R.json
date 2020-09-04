@@ -1,0 +1,18 @@
+{
+  "id": "N:S:180:R",
+  "display_name": "S180R",
+  "variation.featureLoc.feature.name": "N",
+  "codon_label": "180",
+  "codon_label_int": 180,
+  "reference_aa": "S",
+  "reference_nt": 28811,
+  "replacement_aa": "R",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": true,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 109.21315295411507,
+  "grantham_distance_int": 109,
+  "miyata_distance": 2.7409075071380777,
+  "parent_feature": null,
+  "parent_codon_label": null
+}

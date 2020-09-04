@@ -1,0 +1,18 @@
+{
+  "id": "NSP3:T:799:Q",
+  "display_name": "T799Q",
+  "variation.featureLoc.feature.name": "NSP3",
+  "codon_label": "799",
+  "codon_label_int": 799,
+  "reference_aa": "T",
+  "reference_nt": 5114,
+  "replacement_aa": "Q",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": false,
+  "radical_hanada_category_iii": false,
+  "grantham_distance_double": 41.10476251906663,
+  "grantham_distance_int": 41,
+  "miyata_distance": 1.1234589967814603,
+  "parent_feature": "ORF_1a",
+  "parent_codon_label": "1617"
+}

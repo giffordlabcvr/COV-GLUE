@@ -1,0 +1,18 @@
+{
+  "id": "NSP6:L:185:M",
+  "display_name": "L185M",
+  "variation.featureLoc.feature.name": "NSP6",
+  "codon_label": "185",
+  "codon_label_int": 185,
+  "reference_aa": "L",
+  "reference_nt": 11525,
+  "replacement_aa": "M",
+  "radical_hanada_category_i": false,
+  "radical_hanada_category_ii": false,
+  "radical_hanada_category_iii": false,
+  "grantham_distance_double": 14.30316650672724,
+  "grantham_distance_int": 14,
+  "miyata_distance": 0.4097737313122809,
+  "parent_feature": "ORF_1a",
+  "parent_codon_label": "3754"
+}

@@ -1,0 +1,18 @@
+{
+  "id": "NSP16:R:216:N",
+  "display_name": "R216N",
+  "variation.featureLoc.feature.name": "NSP16",
+  "codon_label": "216",
+  "codon_label_int": 216,
+  "reference_aa": "R",
+  "reference_nt": 21304,
+  "replacement_aa": "N",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": true,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 85.11393761165031,
+  "grantham_distance_int": 85,
+  "miyata_distance": 2.0410358678809644,
+  "parent_feature": "ORF_1ab",
+  "parent_codon_label": "7014"
+}

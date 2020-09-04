@@ -1,0 +1,18 @@
+{
+  "id": "NSP13:S:80:N",
+  "display_name": "S80N",
+  "variation.featureLoc.feature.name": "NSP13",
+  "codon_label": "80",
+  "codon_label_int": 80,
+  "reference_aa": "S",
+  "reference_nt": 16474,
+  "replacement_aa": "N",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": false,
+  "radical_hanada_category_iii": false,
+  "grantham_distance_double": 46.23977508306296,
+  "grantham_distance_int": 46,
+  "miyata_distance": 1.3130472141012726,
+  "parent_feature": "ORF_1ab",
+  "parent_codon_label": "5404"
+}

@@ -1,0 +1,18 @@
+{
+  "id": "NSP3:A:465:V",
+  "display_name": "A465V",
+  "variation.featureLoc.feature.name": "NSP3",
+  "codon_label": "465",
+  "codon_label_int": 465,
+  "reference_aa": "A",
+  "reference_nt": 4112,
+  "replacement_aa": "V",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": false,
+  "radical_hanada_category_iii": false,
+  "grantham_distance_double": 64.43025059480746,
+  "grantham_distance_int": 64,
+  "miyata_distance": 1.847329414521172,
+  "parent_feature": "ORF_1a",
+  "parent_codon_label": "1283"
+}

@@ -1,0 +1,18 @@
+{
+  "id": "NSP1:R:77:Q",
+  "display_name": "R77Q",
+  "variation.featureLoc.feature.name": "NSP1",
+  "codon_label": "77",
+  "codon_label_int": 77,
+  "reference_aa": "R",
+  "reference_nt": 494,
+  "replacement_aa": "Q",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": true,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 42.81393192570374,
+  "grantham_distance_int": 43,
+  "miyata_distance": 1.1334798453192791,
+  "parent_feature": "ORF_1a",
+  "parent_codon_label": "77"
+}

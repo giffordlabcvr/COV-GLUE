@@ -1,0 +1,18 @@
+{
+  "id": "NSP13:R:332:K",
+  "display_name": "R332K",
+  "variation.featureLoc.feature.name": "NSP13",
+  "codon_label": "332",
+  "codon_label_int": 332,
+  "reference_aa": "R",
+  "reference_nt": 17230,
+  "replacement_aa": "K",
+  "radical_hanada_category_i": false,
+  "radical_hanada_category_ii": false,
+  "radical_hanada_category_iii": false,
+  "grantham_distance_double": 26.003946260840873,
+  "grantham_distance_int": 26,
+  "miyata_distance": 0.3982749033932912,
+  "parent_feature": "ORF_1ab",
+  "parent_codon_label": "5656"
+}

@@ -1,0 +1,18 @@
+{
+  "id": "NSP3:C:1586:H",
+  "display_name": "C1586H",
+  "variation.featureLoc.feature.name": "NSP3",
+  "codon_label": "1586",
+  "codon_label_int": 1586,
+  "reference_aa": "C",
+  "reference_nt": 7475,
+  "replacement_aa": "H",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": true,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 173.84268193905964,
+  "grantham_distance_int": 174,
+  "miyata_distance": 2.564865637956424,
+  "parent_feature": "ORF_1a",
+  "parent_codon_label": "2404"
+}

@@ -1,0 +1,18 @@
+{
+  "id": "NSP4:W:6:R",
+  "display_name": "W6R",
+  "variation.featureLoc.feature.name": "NSP4",
+  "codon_label": "6",
+  "codon_label_int": 6,
+  "reference_aa": "W",
+  "reference_nt": 8570,
+  "replacement_aa": "R",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": true,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 101.2904807374348,
+  "grantham_distance_int": 101,
+  "miyata_distance": 2.715820642666301,
+  "parent_feature": "ORF_1a",
+  "parent_codon_label": "2769"
+}

@@ -1,0 +1,18 @@
+{
+  "id": "ORF_7a:Y:18:C",
+  "display_name": "Y18C",
+  "variation.featureLoc.feature.name": "ORF_7a",
+  "codon_label": "18",
+  "codon_label_int": 18,
+  "reference_aa": "Y",
+  "reference_nt": 27445,
+  "replacement_aa": "C",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": true,
+  "radical_hanada_category_iii": false,
+  "grantham_distance_double": 193.72470051146485,
+  "grantham_distance_int": 194,
+  "miyata_distance": 2.376405280106065,
+  "parent_feature": null,
+  "parent_codon_label": null
+}

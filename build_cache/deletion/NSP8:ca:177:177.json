@@ -1,0 +1,15 @@
+{
+  "id": "NSP8:ca:177:177",
+  "variation.featureLoc.feature.name": "NSP8",
+  "cov_nt_deletion.id": "NSP8:nca:12620:12622",
+  "display_name": "177",
+  "end_codon": "177",
+  "end_codon_int": 177,
+  "parent_end_codon": "4119",
+  "parent_feature": "ORF_1a",
+  "parent_start_codon": "4119",
+  "reference_nt_end": 12622,
+  "reference_nt_start": 12620,
+  "start_codon": "177",
+  "start_codon_int": 177
+}

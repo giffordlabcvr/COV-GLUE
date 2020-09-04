@@ -1,0 +1,18 @@
+{
+  "id": "NSP12:K:545:M",
+  "display_name": "K545M",
+  "variation.featureLoc.feature.name": "NSP12",
+  "codon_label": "545",
+  "codon_label_int": 545,
+  "reference_aa": "K",
+  "reference_nt": 15073,
+  "replacement_aa": "M",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": true,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 94.49009719874934,
+  "grantham_distance_int": 94,
+  "miyata_distance": 2.6274196368687526,
+  "parent_feature": "ORF_1ab",
+  "parent_codon_label": "4937"
+}

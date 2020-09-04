@@ -1,0 +1,18 @@
+{
+  "id": "NSP15:M:209:T",
+  "display_name": "M209T",
+  "variation.featureLoc.feature.name": "NSP15",
+  "codon_label": "209",
+  "codon_label_int": 209,
+  "reference_aa": "M",
+  "reference_nt": 20245,
+  "replacement_aa": "T",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": false,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 81.0396927923509,
+  "grantham_distance_int": 81,
+  "miyata_distance": 1.8553256449702145,
+  "parent_feature": "ORF_1ab",
+  "parent_codon_label": "6661"
+}

@@ -1,0 +1,18 @@
+{
+  "id": "NSP9:V:76:F",
+  "display_name": "V76F",
+  "variation.featureLoc.feature.name": "NSP9",
+  "codon_label": "76",
+  "codon_label_int": 76,
+  "reference_aa": "V",
+  "reference_nt": 12911,
+  "replacement_aa": "F",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": true,
+  "radical_hanada_category_iii": false,
+  "grantham_distance_double": 49.935189864931544,
+  "grantham_distance_int": 50,
+  "miyata_distance": 1.4322877272611014,
+  "parent_feature": "ORF_1a",
+  "parent_codon_label": "4216"
+}

@@ -1,0 +1,18 @@
+{
+  "id": "NSP1:G:137:C",
+  "display_name": "G137C",
+  "variation.featureLoc.feature.name": "NSP1",
+  "codon_label": "137",
+  "codon_label_int": 137,
+  "reference_aa": "G",
+  "reference_nt": 674,
+  "replacement_aa": "C",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": false,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 158.2317728686345,
+  "grantham_distance_int": 158,
+  "miyata_distance": 2.2172032627151887,
+  "parent_feature": "ORF_1a",
+  "parent_codon_label": "137"
+}

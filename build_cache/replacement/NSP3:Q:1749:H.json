@@ -1,0 +1,18 @@
+{
+  "id": "NSP3:Q:1749:H",
+  "display_name": "Q1749H",
+  "variation.featureLoc.feature.name": "NSP3",
+  "codon_label": "1749",
+  "codon_label_int": 1749,
+  "reference_aa": "Q",
+  "reference_nt": 7964,
+  "replacement_aa": "H",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": true,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 24.08398867410485,
+  "grantham_distance_int": 24,
+  "miyata_distance": 0.32304219411608814,
+  "parent_feature": "ORF_1a",
+  "parent_codon_label": "2567"
+}

@@ -1,0 +1,18 @@
+{
+  "id": "NSP13:L:83:W",
+  "display_name": "L83W",
+  "variation.featureLoc.feature.name": "NSP13",
+  "codon_label": "83",
+  "codon_label_int": 83,
+  "reference_aa": "L",
+  "reference_nt": 16483,
+  "replacement_aa": "W",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": true,
+  "radical_hanada_category_iii": false,
+  "grantham_distance_double": 60.980495578874596,
+  "grantham_distance_int": 61,
+  "miyata_distance": 1.730342752116309,
+  "parent_feature": "ORF_1ab",
+  "parent_codon_label": "5407"
+}

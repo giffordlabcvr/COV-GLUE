@@ -1,0 +1,18 @@
+{
+  "id": "NSP13:R:161:I",
+  "display_name": "R161I",
+  "variation.featureLoc.feature.name": "NSP13",
+  "codon_label": "161",
+  "codon_label_int": 161,
+  "reference_aa": "R",
+  "reference_nt": 16717,
+  "replacement_aa": "I",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": true,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 97.58656354400169,
+  "grantham_distance_int": 98,
+  "miyata_distance": 2.485550159989036,
+  "parent_feature": "ORF_1ab",
+  "parent_codon_label": "5485"
+}

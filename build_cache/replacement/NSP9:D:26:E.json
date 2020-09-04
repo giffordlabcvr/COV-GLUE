@@ -1,0 +1,18 @@
+{
+  "id": "NSP9:D:26:E",
+  "display_name": "D26E",
+  "variation.featureLoc.feature.name": "NSP9",
+  "codon_label": "26",
+  "codon_label_int": 26,
+  "reference_aa": "D",
+  "reference_nt": 12761,
+  "replacement_aa": "E",
+  "radical_hanada_category_i": false,
+  "radical_hanada_category_ii": false,
+  "radical_hanada_category_iii": false,
+  "grantham_distance_double": 44.60463645252665,
+  "grantham_distance_int": 45,
+  "miyata_distance": 0.9031410249655084,
+  "parent_feature": "ORF_1a",
+  "parent_codon_label": "4166"
+}

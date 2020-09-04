@@ -1,0 +1,18 @@
+{
+  "id": "NSP3:M:1218:T",
+  "display_name": "M1218T",
+  "variation.featureLoc.feature.name": "NSP3",
+  "codon_label": "1218",
+  "codon_label_int": 1218,
+  "reference_aa": "M",
+  "reference_nt": 6371,
+  "replacement_aa": "T",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": false,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 81.0396927923509,
+  "grantham_distance_int": 81,
+  "miyata_distance": 1.8553256449702145,
+  "parent_feature": "ORF_1a",
+  "parent_codon_label": "2036"
+}

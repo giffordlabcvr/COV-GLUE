@@ -1,0 +1,15 @@
+{
+  "id": "S:ca:140:140",
+  "variation.featureLoc.feature.name": "S",
+  "cov_nt_deletion.id": "S:nca:21980:21982",
+  "display_name": "140",
+  "end_codon": "140",
+  "end_codon_int": 140,
+  "parent_end_codon": null,
+  "parent_feature": null,
+  "parent_start_codon": null,
+  "reference_nt_end": 21982,
+  "reference_nt_start": 21980,
+  "start_codon": "140",
+  "start_codon_int": 140
+}

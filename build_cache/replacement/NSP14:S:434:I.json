@@ -1,0 +1,18 @@
+{
+  "id": "NSP14:S:434:I",
+  "display_name": "S434I",
+  "variation.featureLoc.feature.name": "NSP14",
+  "codon_label": "434",
+  "codon_label_int": 434,
+  "reference_aa": "S",
+  "reference_nt": 19339,
+  "replacement_aa": "I",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": false,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 141.79796048658147,
+  "grantham_distance_int": 142,
+  "miyata_distance": 2.951162964200133,
+  "parent_feature": "ORF_1ab",
+  "parent_codon_label": "6359"
+}

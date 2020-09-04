@@ -1,0 +1,18 @@
+{
+  "id": "S:S:691:P",
+  "display_name": "S691P",
+  "variation.featureLoc.feature.name": "S",
+  "codon_label": "691",
+  "codon_label_int": 691,
+  "reference_aa": "S",
+  "reference_nt": 23633,
+  "replacement_aa": "P",
+  "radical_hanada_category_i": false,
+  "radical_hanada_category_ii": false,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 73.35256887257073,
+  "grantham_distance_int": 73,
+  "miyata_distance": 0.5564160035374529,
+  "parent_feature": null,
+  "parent_codon_label": null
+}

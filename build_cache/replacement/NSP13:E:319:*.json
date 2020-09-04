@@ -1,0 +1,18 @@
+{
+  "id": "NSP13:E:319:*",
+  "display_name": "E319*",
+  "variation.featureLoc.feature.name": "NSP13",
+  "codon_label": "319",
+  "codon_label_int": 319,
+  "reference_aa": "E",
+  "reference_nt": 17191,
+  "replacement_aa": "*",
+  "radical_hanada_category_i": null,
+  "radical_hanada_category_ii": null,
+  "radical_hanada_category_iii": null,
+  "grantham_distance_double": null,
+  "grantham_distance_int": null,
+  "miyata_distance": null,
+  "parent_feature": "ORF_1ab",
+  "parent_codon_label": "5643"
+}

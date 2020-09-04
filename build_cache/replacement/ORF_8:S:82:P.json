@@ -1,0 +1,18 @@
+{
+  "id": "ORF_8:S:82:P",
+  "display_name": "S82P",
+  "variation.featureLoc.feature.name": "ORF_8",
+  "codon_label": "82",
+  "codon_label_int": 82,
+  "reference_aa": "S",
+  "reference_nt": 28137,
+  "replacement_aa": "P",
+  "radical_hanada_category_i": false,
+  "radical_hanada_category_ii": false,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 73.35256887257073,
+  "grantham_distance_int": 73,
+  "miyata_distance": 0.5564160035374529,
+  "parent_feature": null,
+  "parent_codon_label": null
+}

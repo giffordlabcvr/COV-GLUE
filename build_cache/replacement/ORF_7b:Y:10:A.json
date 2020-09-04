@@ -1,0 +1,18 @@
+{
+  "id": "ORF_7b:Y:10:A",
+  "display_name": "Y10A",
+  "variation.featureLoc.feature.name": "ORF_7b",
+  "codon_label": "10",
+  "codon_label_int": 10,
+  "reference_aa": "Y",
+  "reference_nt": 27783,
+  "replacement_aa": "A",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": true,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 111.58821368789403,
+  "grantham_distance_int": 112,
+  "miyata_distance": 3.176215832724934,
+  "parent_feature": null,
+  "parent_codon_label": null
+}

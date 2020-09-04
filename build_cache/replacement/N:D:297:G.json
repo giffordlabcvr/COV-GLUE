@@ -1,0 +1,18 @@
+{
+  "id": "N:D:297:G",
+  "display_name": "D297G",
+  "variation.featureLoc.feature.name": "N",
+  "codon_label": "297",
+  "codon_label_int": 297,
+  "reference_aa": "D",
+  "reference_nt": 29162,
+  "replacement_aa": "G",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": true,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 93.76755082772044,
+  "grantham_distance_int": 94,
+  "miyata_distance": 2.373748911504371,
+  "parent_feature": null,
+  "parent_codon_label": null
+}

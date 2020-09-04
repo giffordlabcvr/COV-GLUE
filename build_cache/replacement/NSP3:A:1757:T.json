@@ -1,0 +1,18 @@
+{
+  "id": "NSP3:A:1757:T",
+  "display_name": "A1757T",
+  "variation.featureLoc.feature.name": "NSP3",
+  "codon_label": "1757",
+  "codon_label_int": 1757,
+  "reference_aa": "A",
+  "reference_nt": 7988,
+  "replacement_aa": "T",
+  "radical_hanada_category_i": false,
+  "radical_hanada_category_ii": false,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 58.02332760382417,
+  "grantham_distance_int": 58,
+  "miyata_distance": 0.9021839838528766,
+  "parent_feature": "ORF_1a",
+  "parent_codon_label": "2575"
+}

@@ -1,0 +1,18 @@
+{
+  "id": "NSP15:E:202:G",
+  "display_name": "E202G",
+  "variation.featureLoc.feature.name": "NSP15",
+  "codon_label": "202",
+  "codon_label_int": 202,
+  "reference_aa": "E",
+  "reference_nt": 20224,
+  "replacement_aa": "G",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": true,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 97.85190047927728,
+  "grantham_distance_int": 98,
+  "miyata_distance": 2.7831228164426745,
+  "parent_feature": "ORF_1ab",
+  "parent_codon_label": "6654"
+}

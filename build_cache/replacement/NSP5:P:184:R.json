@@ -1,0 +1,18 @@
+{
+  "id": "NSP5:P:184:R",
+  "display_name": "P184R",
+  "variation.featureLoc.feature.name": "NSP5",
+  "codon_label": "184",
+  "codon_label_int": 184,
+  "reference_aa": "P",
+  "reference_nt": 10604,
+  "replacement_aa": "R",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": true,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 102.71487090966941,
+  "grantham_distance_int": 103,
+  "miyata_distance": 2.9008276159240594,
+  "parent_feature": "ORF_1a",
+  "parent_codon_label": "3447"
+}

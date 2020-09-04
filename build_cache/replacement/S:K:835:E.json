@@ -1,0 +1,18 @@
+{
+  "id": "S:K:835:E",
+  "display_name": "K835E",
+  "variation.featureLoc.feature.name": "S",
+  "codon_label": "835",
+  "codon_label_int": 835,
+  "reference_aa": "K",
+  "reference_nt": 24065,
+  "replacement_aa": "E",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": true,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 56.86795521504775,
+  "grantham_distance_int": 57,
+  "miyata_distance": 1.1443659173772327,
+  "parent_feature": null,
+  "parent_codon_label": null
+}

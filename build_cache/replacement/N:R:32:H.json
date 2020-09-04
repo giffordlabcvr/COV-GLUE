@@ -1,0 +1,18 @@
+{
+  "id": "N:R:32:H",
+  "display_name": "R32H",
+  "variation.featureLoc.feature.name": "N",
+  "codon_label": "32",
+  "codon_label_int": 32,
+  "reference_aa": "R",
+  "reference_nt": 28367,
+  "replacement_aa": "H",
+  "radical_hanada_category_i": false,
+  "radical_hanada_category_ii": false,
+  "radical_hanada_category_iii": false,
+  "grantham_distance_double": 28.81922223513406,
+  "grantham_distance_int": 29,
+  "miyata_distance": 0.8150994217108231,
+  "parent_feature": null,
+  "parent_codon_label": null
+}

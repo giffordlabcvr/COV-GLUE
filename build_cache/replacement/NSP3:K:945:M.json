@@ -1,0 +1,18 @@
+{
+  "id": "NSP3:K:945:M",
+  "display_name": "K945M",
+  "variation.featureLoc.feature.name": "NSP3",
+  "codon_label": "945",
+  "codon_label_int": 945,
+  "reference_aa": "K",
+  "reference_nt": 5552,
+  "replacement_aa": "M",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": true,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 94.49009719874934,
+  "grantham_distance_int": 94,
+  "miyata_distance": 2.6274196368687526,
+  "parent_feature": "ORF_1a",
+  "parent_codon_label": "1763"
+}

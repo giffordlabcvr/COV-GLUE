@@ -1,0 +1,18 @@
+{
+  "id": "N:Q:7:H",
+  "display_name": "Q7H",
+  "variation.featureLoc.feature.name": "N",
+  "codon_label": "7",
+  "codon_label_int": 7,
+  "reference_aa": "Q",
+  "reference_nt": 28292,
+  "replacement_aa": "H",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": true,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 24.08398867410485,
+  "grantham_distance_int": 24,
+  "miyata_distance": 0.32304219411608814,
+  "parent_feature": null,
+  "parent_codon_label": null
+}

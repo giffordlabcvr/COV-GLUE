@@ -1,0 +1,18 @@
+{
+  "id": "S:E:773:G",
+  "display_name": "E773G",
+  "variation.featureLoc.feature.name": "S",
+  "codon_label": "773",
+  "codon_label_int": 773,
+  "reference_aa": "E",
+  "reference_nt": 23879,
+  "replacement_aa": "G",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": true,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 97.85190047927728,
+  "grantham_distance_int": 98,
+  "miyata_distance": 2.7831228164426745,
+  "parent_feature": null,
+  "parent_codon_label": null
+}

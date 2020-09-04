@@ -1,0 +1,18 @@
+{
+  "id": "NSP4:F:121:L",
+  "display_name": "F121L",
+  "variation.featureLoc.feature.name": "NSP4",
+  "codon_label": "121",
+  "codon_label_int": 121,
+  "reference_aa": "F",
+  "reference_nt": 8915,
+  "replacement_aa": "L",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": true,
+  "radical_hanada_category_iii": false,
+  "grantham_distance_double": 21.823920738840876,
+  "grantham_distance_int": 22,
+  "miyata_distance": 0.6259759618337314,
+  "parent_feature": "ORF_1a",
+  "parent_codon_label": "2884"
+}

@@ -1,0 +1,18 @@
+{
+  "id": "M:L:57:S",
+  "display_name": "L57S",
+  "variation.featureLoc.feature.name": "M",
+  "codon_label": "57",
+  "codon_label_int": 57,
+  "reference_aa": "L",
+  "reference_nt": 26691,
+  "replacement_aa": "S",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": false,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 144.07923462160153,
+  "grantham_distance_int": 144,
+  "miyata_distance": 3.0404515387240023,
+  "parent_feature": null,
+  "parent_codon_label": null
+}

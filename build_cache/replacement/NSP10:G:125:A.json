@@ -1,0 +1,18 @@
+{
+  "id": "NSP10:G:125:A",
+  "display_name": "G125A",
+  "variation.featureLoc.feature.name": "NSP10",
+  "codon_label": "125",
+  "codon_label_int": 125,
+  "reference_aa": "G",
+  "reference_nt": 13397,
+  "replacement_aa": "A",
+  "radical_hanada_category_i": false,
+  "radical_hanada_category_ii": false,
+  "radical_hanada_category_iii": false,
+  "grantham_distance_double": 59.99535651927305,
+  "grantham_distance_int": 60,
+  "miyata_distance": 0.9144774819777941,
+  "parent_feature": "ORF_1a",
+  "parent_codon_label": "4378"
+}

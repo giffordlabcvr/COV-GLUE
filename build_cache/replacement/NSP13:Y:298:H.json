@@ -1,0 +1,18 @@
+{
+  "id": "NSP13:Y:298:H",
+  "display_name": "Y298H",
+  "variation.featureLoc.feature.name": "NSP13",
+  "codon_label": "298",
+  "codon_label_int": 298,
+  "reference_aa": "Y",
+  "reference_nt": 17128,
+  "replacement_aa": "H",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": true,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 83.32844466345641,
+  "grantham_distance_int": 83,
+  "miyata_distance": 2.2674887607305707,
+  "parent_feature": "ORF_1ab",
+  "parent_codon_label": "5622"
+}

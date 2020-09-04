@@ -1,0 +1,18 @@
+{
+  "id": "NSP12:L:247:M",
+  "display_name": "L247M",
+  "variation.featureLoc.feature.name": "NSP12",
+  "codon_label": "247",
+  "codon_label_int": 247,
+  "reference_aa": "L",
+  "reference_nt": 14179,
+  "replacement_aa": "M",
+  "radical_hanada_category_i": false,
+  "radical_hanada_category_ii": false,
+  "radical_hanada_category_iii": false,
+  "grantham_distance_double": 14.30316650672724,
+  "grantham_distance_int": 14,
+  "miyata_distance": 0.4097737313122809,
+  "parent_feature": "ORF_1ab",
+  "parent_codon_label": "4639"
+}

@@ -1,0 +1,15 @@
+{
+  "id": "S:ca:556:556",
+  "variation.featureLoc.feature.name": "S",
+  "cov_nt_deletion.id": "S:nca:23228:23230",
+  "display_name": "556",
+  "end_codon": "556",
+  "end_codon_int": 556,
+  "parent_end_codon": null,
+  "parent_feature": null,
+  "parent_start_codon": null,
+  "reference_nt_end": 23230,
+  "reference_nt_start": 23228,
+  "start_codon": "556",
+  "start_codon_int": 556
+}

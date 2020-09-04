@@ -1,0 +1,18 @@
+{
+  "id": "S:Q:409:E",
+  "display_name": "Q409E",
+  "variation.featureLoc.feature.name": "S",
+  "codon_label": "409",
+  "codon_label_int": 409,
+  "reference_aa": "Q",
+  "reference_nt": 22787,
+  "replacement_aa": "E",
+  "radical_hanada_category_i": false,
+  "radical_hanada_category_ii": true,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 29.273706240977482,
+  "grantham_distance_int": 29,
+  "miyata_distance": 0.8363616795657459,
+  "parent_feature": null,
+  "parent_codon_label": null
+}

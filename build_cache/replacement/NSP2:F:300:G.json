@@ -1,0 +1,18 @@
+{
+  "id": "NSP2:F:300:G",
+  "display_name": "F300G",
+  "variation.featureLoc.feature.name": "NSP2",
+  "codon_label": "300",
+  "codon_label_int": 300,
+  "reference_aa": "F",
+  "reference_nt": 1703,
+  "replacement_aa": "G",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": true,
+  "radical_hanada_category_iii": false,
+  "grantham_distance_double": 153.12551900915278,
+  "grantham_distance_int": 153,
+  "miyata_distance": 4.142341117692064,
+  "parent_feature": "ORF_1a",
+  "parent_codon_label": "480"
+}

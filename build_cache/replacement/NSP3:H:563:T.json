@@ -1,0 +1,18 @@
+{
+  "id": "NSP3:H:563:T",
+  "display_name": "H563T",
+  "variation.featureLoc.feature.name": "NSP3",
+  "codon_label": "563",
+  "codon_label_int": 563,
+  "reference_aa": "H",
+  "reference_nt": 4406,
+  "replacement_aa": "T",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": true,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 46.752869712678034,
+  "grantham_distance_int": 47,
+  "miyata_distance": 1.315625255655524,
+  "parent_feature": "ORF_1a",
+  "parent_codon_label": "1381"
+}

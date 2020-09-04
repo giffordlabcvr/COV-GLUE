@@ -1,0 +1,15 @@
+{
+  "id": "NSP1:ca:86:86",
+  "variation.featureLoc.feature.name": "NSP1",
+  "cov_nt_deletion.id": "NSP1:nca:521:523",
+  "display_name": "86",
+  "end_codon": "86",
+  "end_codon_int": 86,
+  "parent_end_codon": "86",
+  "parent_feature": "ORF_1a",
+  "parent_start_codon": "86",
+  "reference_nt_end": 523,
+  "reference_nt_start": 521,
+  "start_codon": "86",
+  "start_codon_int": 86
+}

@@ -1,0 +1,18 @@
+{
+  "id": "N:G:34:W",
+  "display_name": "G34W",
+  "variation.featureLoc.feature.name": "N",
+  "codon_label": "34",
+  "codon_label_int": 34,
+  "reference_aa": "G",
+  "reference_nt": 28373,
+  "replacement_aa": "W",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": true,
+  "radical_hanada_category_iii": false,
+  "grantham_distance_double": 183.7902133344299,
+  "grantham_distance_int": 184,
+  "miyata_distance": 5.132455948239974,
+  "parent_feature": null,
+  "parent_codon_label": null
+}

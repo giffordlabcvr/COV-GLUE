@@ -1,0 +1,18 @@
+{
+  "id": "NSP15:P:343:Q",
+  "display_name": "P343Q",
+  "variation.featureLoc.feature.name": "NSP15",
+  "codon_label": "343",
+  "codon_label_int": 343,
+  "reference_aa": "P",
+  "reference_nt": 20647,
+  "replacement_aa": "Q",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": false,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 75.13587820053876,
+  "grantham_distance_int": 75,
+  "miyata_distance": 1.9159881217963026,
+  "parent_feature": "ORF_1ab",
+  "parent_codon_label": "6795"
+}

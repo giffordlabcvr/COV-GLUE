@@ -1,0 +1,18 @@
+{
+  "id": "NSP8:K:40:T",
+  "display_name": "K40T",
+  "variation.featureLoc.feature.name": "NSP8",
+  "codon_label": "40",
+  "codon_label_int": 40,
+  "reference_aa": "K",
+  "reference_nt": 12209,
+  "replacement_aa": "T",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": true,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 77.74105566792166,
+  "grantham_distance_int": 78,
+  "miyata_distance": 2.0994805676769532,
+  "parent_feature": "ORF_1a",
+  "parent_codon_label": "3982"
+}

@@ -1,0 +1,18 @@
+{
+  "id": "NSP15:L:142:F",
+  "display_name": "L142F",
+  "variation.featureLoc.feature.name": "NSP15",
+  "codon_label": "142",
+  "codon_label_int": 142,
+  "reference_aa": "L",
+  "reference_nt": 20044,
+  "replacement_aa": "F",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": true,
+  "radical_hanada_category_iii": false,
+  "grantham_distance_double": 21.823920738840876,
+  "grantham_distance_int": 22,
+  "miyata_distance": 0.6259759618337314,
+  "parent_feature": "ORF_1ab",
+  "parent_codon_label": "6594"
+}

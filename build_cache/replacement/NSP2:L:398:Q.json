@@ -1,0 +1,18 @@
+{
+  "id": "NSP2:L:398:Q",
+  "display_name": "L398Q",
+  "variation.featureLoc.feature.name": "NSP2",
+  "codon_label": "398",
+  "codon_label_int": 398,
+  "reference_aa": "L",
+  "reference_nt": 1997,
+  "replacement_aa": "Q",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": false,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 112.44147717377763,
+  "grantham_distance_int": 112,
+  "miyata_distance": 2.703476672168515,
+  "parent_feature": "ORF_1a",
+  "parent_codon_label": "578"
+}

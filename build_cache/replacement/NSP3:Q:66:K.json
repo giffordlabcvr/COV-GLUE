@@ -1,0 +1,18 @@
+{
+  "id": "NSP3:Q:66:K",
+  "display_name": "Q66K",
+  "variation.featureLoc.feature.name": "NSP3",
+  "codon_label": "66",
+  "codon_label_int": 66,
+  "reference_aa": "Q",
+  "reference_nt": 2915,
+  "replacement_aa": "K",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": true,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 53.228340150510796,
+  "grantham_distance_int": 53,
+  "miyata_distance": 1.0554475691875203,
+  "parent_feature": "ORF_1a",
+  "parent_codon_label": "884"
+}

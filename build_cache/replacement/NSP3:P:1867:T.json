@@ -1,0 +1,18 @@
+{
+  "id": "NSP3:P:1867:T",
+  "display_name": "P1867T",
+  "variation.featureLoc.feature.name": "NSP3",
+  "codon_label": "1867",
+  "codon_label_int": 1867,
+  "reference_aa": "P",
+  "reference_nt": 8318,
+  "replacement_aa": "T",
+  "radical_hanada_category_i": false,
+  "radical_hanada_category_ii": false,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 37.56362475504698,
+  "grantham_distance_int": 38,
+  "miyata_distance": 0.873755109177339,
+  "parent_feature": "ORF_1a",
+  "parent_codon_label": "2685"
+}

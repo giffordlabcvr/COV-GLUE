@@ -1,0 +1,18 @@
+{
+  "id": "S:E:748:K",
+  "display_name": "E748K",
+  "variation.featureLoc.feature.name": "S",
+  "codon_label": "748",
+  "codon_label_int": 748,
+  "reference_aa": "E",
+  "reference_nt": 23804,
+  "replacement_aa": "K",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": true,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 56.86795521504775,
+  "grantham_distance_int": 57,
+  "miyata_distance": 1.1443659173772327,
+  "parent_feature": null,
+  "parent_codon_label": null
+}

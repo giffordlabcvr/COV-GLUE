@@ -1,0 +1,18 @@
+{
+  "id": "NSP15:P:153:L",
+  "display_name": "P153L",
+  "variation.featureLoc.feature.name": "NSP15",
+  "codon_label": "153",
+  "codon_label_int": 153,
+  "reference_aa": "P",
+  "reference_nt": 20077,
+  "replacement_aa": "L",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": false,
+  "radical_hanada_category_iii": false,
+  "grantham_distance_double": 97.77619789015552,
+  "grantham_distance_int": 98,
+  "miyata_distance": 2.6962818635359933,
+  "parent_feature": "ORF_1ab",
+  "parent_codon_label": "6605"
+}

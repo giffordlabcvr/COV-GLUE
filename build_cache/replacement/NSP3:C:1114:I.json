@@ -1,0 +1,18 @@
+{
+  "id": "NSP3:C:1114:I",
+  "display_name": "C1114I",
+  "variation.featureLoc.feature.name": "NSP3",
+  "codon_label": "1114",
+  "codon_label_int": 1114,
+  "reference_aa": "C",
+  "reference_nt": 6059,
+  "replacement_aa": "I",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": false,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 197.24979627832602,
+  "grantham_distance_int": 197,
+  "miyata_distance": 1.6334904021615702,
+  "parent_feature": "ORF_1a",
+  "parent_codon_label": "1932"
+}

@@ -1,0 +1,15 @@
+{
+  "id": "NSP15:ca:263:264",
+  "variation.featureLoc.feature.name": "NSP15",
+  "cov_nt_deletion.id": "NSP15:nca:20407:20412",
+  "display_name": "263-264",
+  "end_codon": "264",
+  "end_codon_int": 264,
+  "parent_end_codon": "6716",
+  "parent_feature": "ORF_1ab",
+  "parent_start_codon": "6715",
+  "reference_nt_end": 20412,
+  "reference_nt_start": 20407,
+  "start_codon": "263",
+  "start_codon_int": 263
+}

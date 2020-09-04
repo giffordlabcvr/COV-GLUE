@@ -1,0 +1,18 @@
+{
+  "id": "NSP13:I:334:V",
+  "display_name": "I334V",
+  "variation.featureLoc.feature.name": "NSP13",
+  "codon_label": "334",
+  "codon_label_int": 334,
+  "reference_aa": "I",
+  "reference_nt": 17236,
+  "replacement_aa": "V",
+  "radical_hanada_category_i": false,
+  "radical_hanada_category_ii": false,
+  "radical_hanada_category_iii": false,
+  "grantham_distance_double": 29.609070626666707,
+  "grantham_distance_int": 30,
+  "miyata_distance": 0.8491514617150016,
+  "parent_feature": "ORF_1ab",
+  "parent_codon_label": "5658"
+}

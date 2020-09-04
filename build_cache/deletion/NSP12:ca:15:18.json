@@ -1,0 +1,15 @@
+{
+  "id": "NSP12:ca:15:18",
+  "variation.featureLoc.feature.name": "NSP12",
+  "cov_nt_deletion.id": "NSP12:nca:13483:13494",
+  "display_name": "15-18",
+  "end_codon": "18",
+  "end_codon_int": 18,
+  "parent_end_codon": "4410",
+  "parent_feature": "ORF_1ab",
+  "parent_start_codon": "4407",
+  "reference_nt_end": 13494,
+  "reference_nt_start": 13483,
+  "start_codon": "15",
+  "start_codon_int": 15
+}

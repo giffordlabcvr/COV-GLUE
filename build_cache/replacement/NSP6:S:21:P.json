@@ -1,0 +1,18 @@
+{
+  "id": "NSP6:S:21:P",
+  "display_name": "S21P",
+  "variation.featureLoc.feature.name": "NSP6",
+  "codon_label": "21",
+  "codon_label_int": 21,
+  "reference_aa": "S",
+  "reference_nt": 11033,
+  "replacement_aa": "P",
+  "radical_hanada_category_i": false,
+  "radical_hanada_category_ii": false,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 73.35256887257073,
+  "grantham_distance_int": 73,
+  "miyata_distance": 0.5564160035374529,
+  "parent_feature": "ORF_1a",
+  "parent_codon_label": "3590"
+}

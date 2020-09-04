@@ -1,0 +1,18 @@
+{
+  "id": "NSP8:M:90:S",
+  "display_name": "M90S",
+  "variation.featureLoc.feature.name": "NSP8",
+  "codon_label": "90",
+  "codon_label_int": 90,
+  "reference_aa": "M",
+  "reference_nt": 12359,
+  "replacement_aa": "S",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": false,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 134.86388398733004,
+  "grantham_distance_int": 135,
+  "miyata_distance": 2.670825126450305,
+  "parent_feature": "ORF_1a",
+  "parent_codon_label": "4032"
+}

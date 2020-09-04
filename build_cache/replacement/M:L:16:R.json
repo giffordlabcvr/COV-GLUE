@@ -1,0 +1,18 @@
+{
+  "id": "M:L:16:R",
+  "display_name": "L16R",
+  "variation.featureLoc.feature.name": "M",
+  "codon_label": "16",
+  "codon_label_int": 16,
+  "reference_aa": "L",
+  "reference_nt": 26568,
+  "replacement_aa": "R",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": true,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 101.88029275229519,
+  "grantham_distance_int": 102,
+  "miyata_distance": 2.6230759164978448,
+  "parent_feature": null,
+  "parent_codon_label": null
+}

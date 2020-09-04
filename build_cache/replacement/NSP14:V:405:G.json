@@ -1,0 +1,18 @@
+{
+  "id": "NSP14:V:405:G",
+  "display_name": "V405G",
+  "variation.featureLoc.feature.name": "NSP14",
+  "codon_label": "405",
+  "codon_label_int": 405,
+  "reference_aa": "V",
+  "reference_nt": 19252,
+  "replacement_aa": "G",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": false,
+  "radical_hanada_category_iii": false,
+  "grantham_distance_double": 108.78738843583756,
+  "grantham_distance_int": 109,
+  "miyata_distance": 2.7580349580646812,
+  "parent_feature": "ORF_1ab",
+  "parent_codon_label": "6330"
+}

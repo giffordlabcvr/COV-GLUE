@@ -1,0 +1,18 @@
+{
+  "id": "NSP16:W:190:S",
+  "display_name": "W190S",
+  "variation.featureLoc.feature.name": "NSP16",
+  "codon_label": "190",
+  "codon_label_int": 190,
+  "reference_aa": "W",
+  "reference_nt": 21226,
+  "replacement_aa": "S",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": true,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 176.57756225361524,
+  "grantham_distance_int": 177,
+  "miyata_distance": 4.380500525642724,
+  "parent_feature": "ORF_1ab",
+  "parent_codon_label": "6988"
+}

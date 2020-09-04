@@ -1,0 +1,18 @@
+{
+  "id": "ORF_3a:D:210:G",
+  "display_name": "D210G",
+  "variation.featureLoc.feature.name": "ORF_3a",
+  "codon_label": "210",
+  "codon_label_int": 210,
+  "reference_aa": "D",
+  "reference_nt": 26020,
+  "replacement_aa": "G",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": true,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 93.76755082772044,
+  "grantham_distance_int": 94,
+  "miyata_distance": 2.373748911504371,
+  "parent_feature": null,
+  "parent_codon_label": null
+}

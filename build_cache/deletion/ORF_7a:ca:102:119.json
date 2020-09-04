@@ -1,0 +1,15 @@
+{
+  "id": "ORF_7a:ca:102:119",
+  "variation.featureLoc.feature.name": "ORF_7a",
+  "cov_nt_deletion.id": "ORF_7a:nca:27697:27750",
+  "display_name": "102-119",
+  "end_codon": "119",
+  "end_codon_int": 119,
+  "parent_end_codon": null,
+  "parent_feature": null,
+  "parent_start_codon": null,
+  "reference_nt_end": 27750,
+  "reference_nt_start": 27697,
+  "start_codon": "102",
+  "start_codon_int": 102
+}

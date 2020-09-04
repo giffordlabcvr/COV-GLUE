@@ -1,0 +1,18 @@
+{
+  "id": "S:Y:365:S",
+  "display_name": "Y365S",
+  "variation.featureLoc.feature.name": "S",
+  "codon_label": "365",
+  "codon_label_int": 365,
+  "reference_aa": "Y",
+  "reference_nt": 22655,
+  "replacement_aa": "S",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": true,
+  "radical_hanada_category_iii": false,
+  "grantham_distance_double": 143.10738438907285,
+  "grantham_distance_int": 143,
+  "miyata_distance": 3.327140114906959,
+  "parent_feature": null,
+  "parent_codon_label": null
+}

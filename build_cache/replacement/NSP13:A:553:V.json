@@ -1,0 +1,18 @@
+{
+  "id": "NSP13:A:553:V",
+  "display_name": "A553V",
+  "variation.featureLoc.feature.name": "NSP13",
+  "codon_label": "553",
+  "codon_label_int": 553,
+  "reference_aa": "A",
+  "reference_nt": 17893,
+  "replacement_aa": "V",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": false,
+  "radical_hanada_category_iii": false,
+  "grantham_distance_double": 64.43025059480746,
+  "grantham_distance_int": 64,
+  "miyata_distance": 1.847329414521172,
+  "parent_feature": "ORF_1ab",
+  "parent_codon_label": "5877"
+}

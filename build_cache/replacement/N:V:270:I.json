@@ -1,0 +1,18 @@
+{
+  "id": "N:V:270:I",
+  "display_name": "V270I",
+  "variation.featureLoc.feature.name": "N",
+  "codon_label": "270",
+  "codon_label_int": 270,
+  "reference_aa": "V",
+  "reference_nt": 29081,
+  "replacement_aa": "I",
+  "radical_hanada_category_i": false,
+  "radical_hanada_category_ii": false,
+  "radical_hanada_category_iii": false,
+  "grantham_distance_double": 29.609070626666707,
+  "grantham_distance_int": 30,
+  "miyata_distance": 0.8491514617150016,
+  "parent_feature": null,
+  "parent_codon_label": null
+}

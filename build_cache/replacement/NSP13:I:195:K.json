@@ -1,0 +1,18 @@
+{
+  "id": "NSP13:I:195:K",
+  "display_name": "I195K",
+  "variation.featureLoc.feature.name": "NSP13",
+  "codon_label": "195",
+  "codon_label_int": 195,
+  "reference_aa": "I",
+  "reference_nt": 16819,
+  "replacement_aa": "K",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": true,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 101.6123327206865,
+  "grantham_distance_int": 102,
+  "miyata_distance": 2.837026913953594,
+  "parent_feature": "ORF_1ab",
+  "parent_codon_label": "5519"
+}

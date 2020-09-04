@@ -1,0 +1,15 @@
+{
+  "id": "NSP3:ca:1903:1922",
+  "variation.featureLoc.feature.name": "NSP3",
+  "cov_nt_deletion.id": "NSP3:nca:8426:8485",
+  "display_name": "1903-1922",
+  "end_codon": "1922",
+  "end_codon_int": 1922,
+  "parent_end_codon": "2740",
+  "parent_feature": "ORF_1a",
+  "parent_start_codon": "2721",
+  "reference_nt_end": 8485,
+  "reference_nt_start": 8426,
+  "start_codon": "1903",
+  "start_codon_int": 1903
+}

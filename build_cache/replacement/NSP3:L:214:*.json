@@ -1,0 +1,18 @@
+{
+  "id": "NSP3:L:214:*",
+  "display_name": "L214*",
+  "variation.featureLoc.feature.name": "NSP3",
+  "codon_label": "214",
+  "codon_label_int": 214,
+  "reference_aa": "L",
+  "reference_nt": 3359,
+  "replacement_aa": "*",
+  "radical_hanada_category_i": null,
+  "radical_hanada_category_ii": null,
+  "radical_hanada_category_iii": null,
+  "grantham_distance_double": null,
+  "grantham_distance_int": null,
+  "miyata_distance": null,
+  "parent_feature": "ORF_1a",
+  "parent_codon_label": "1032"
+}

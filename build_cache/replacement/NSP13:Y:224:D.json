@@ -1,0 +1,18 @@
+{
+  "id": "NSP13:Y:224:D",
+  "display_name": "Y224D",
+  "variation.featureLoc.feature.name": "NSP13",
+  "codon_label": "224",
+  "codon_label_int": 224,
+  "reference_aa": "Y",
+  "reference_nt": 16906,
+  "replacement_aa": "D",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": true,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 159.93740663288054,
+  "grantham_distance_int": 160,
+  "miyata_distance": 3.951517253135271,
+  "parent_feature": "ORF_1ab",
+  "parent_codon_label": "5548"
+}

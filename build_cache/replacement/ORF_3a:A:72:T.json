@@ -1,0 +1,18 @@
+{
+  "id": "ORF_3a:A:72:T",
+  "display_name": "A72T",
+  "variation.featureLoc.feature.name": "ORF_3a",
+  "codon_label": "72",
+  "codon_label_int": 72,
+  "reference_aa": "A",
+  "reference_nt": 25606,
+  "replacement_aa": "T",
+  "radical_hanada_category_i": false,
+  "radical_hanada_category_ii": false,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 58.02332760382417,
+  "grantham_distance_int": 58,
+  "miyata_distance": 0.9021839838528766,
+  "parent_feature": null,
+  "parent_codon_label": null
+}

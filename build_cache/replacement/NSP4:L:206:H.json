@@ -1,0 +1,18 @@
+{
+  "id": "NSP4:L:206:H",
+  "display_name": "L206H",
+  "variation.featureLoc.feature.name": "NSP4",
+  "codon_label": "206",
+  "codon_label_int": 206,
+  "reference_aa": "L",
+  "reference_nt": 9170,
+  "replacement_aa": "H",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": true,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 98.69301470650433,
+  "grantham_distance_int": 99,
+  "miyata_distance": 2.5863765667097054,
+  "parent_feature": "ORF_1a",
+  "parent_codon_label": "2969"
+}

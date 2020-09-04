@@ -1,0 +1,18 @@
+{
+  "id": "NSP13:E:498:Q",
+  "display_name": "E498Q",
+  "variation.featureLoc.feature.name": "NSP13",
+  "codon_label": "498",
+  "codon_label_int": 498,
+  "reference_aa": "E",
+  "reference_nt": 17728,
+  "replacement_aa": "Q",
+  "radical_hanada_category_i": false,
+  "radical_hanada_category_ii": true,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 29.273706240977482,
+  "grantham_distance_int": 29,
+  "miyata_distance": 0.8363616795657459,
+  "parent_feature": "ORF_1ab",
+  "parent_codon_label": "5822"
+}

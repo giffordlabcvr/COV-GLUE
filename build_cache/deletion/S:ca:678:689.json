@@ -1,0 +1,15 @@
+{
+  "id": "S:ca:678:689",
+  "variation.featureLoc.feature.name": "S",
+  "cov_nt_deletion.id": "S:nca:23594:23629",
+  "display_name": "678-689",
+  "end_codon": "689",
+  "end_codon_int": 689,
+  "parent_end_codon": null,
+  "parent_feature": null,
+  "parent_start_codon": null,
+  "reference_nt_end": 23629,
+  "reference_nt_start": 23594,
+  "start_codon": "678",
+  "start_codon_int": 678
+}

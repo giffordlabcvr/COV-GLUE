@@ -1,0 +1,18 @@
+{
+  "id": "NSP14:I:80:K",
+  "display_name": "I80K",
+  "variation.featureLoc.feature.name": "NSP14",
+  "codon_label": "80",
+  "codon_label_int": 80,
+  "reference_aa": "I",
+  "reference_nt": 18277,
+  "replacement_aa": "K",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": true,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 101.6123327206865,
+  "grantham_distance_int": 102,
+  "miyata_distance": 2.837026913953594,
+  "parent_feature": "ORF_1ab",
+  "parent_codon_label": "6005"
+}

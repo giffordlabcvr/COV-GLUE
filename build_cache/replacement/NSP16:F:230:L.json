@@ -1,0 +1,18 @@
+{
+  "id": "NSP16:F:230:L",
+  "display_name": "F230L",
+  "variation.featureLoc.feature.name": "NSP16",
+  "codon_label": "230",
+  "codon_label_int": 230,
+  "reference_aa": "F",
+  "reference_nt": 21346,
+  "replacement_aa": "L",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": true,
+  "radical_hanada_category_iii": false,
+  "grantham_distance_double": 21.823920738840876,
+  "grantham_distance_int": 22,
+  "miyata_distance": 0.6259759618337314,
+  "parent_feature": "ORF_1ab",
+  "parent_codon_label": "7028"
+}

@@ -1,0 +1,18 @@
+{
+  "id": "NSP8:Q:158:H",
+  "display_name": "Q158H",
+  "variation.featureLoc.feature.name": "NSP8",
+  "codon_label": "158",
+  "codon_label_int": 158,
+  "reference_aa": "Q",
+  "reference_nt": 12563,
+  "replacement_aa": "H",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": true,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 24.08398867410485,
+  "grantham_distance_int": 24,
+  "miyata_distance": 0.32304219411608814,
+  "parent_feature": "ORF_1a",
+  "parent_codon_label": "4100"
+}

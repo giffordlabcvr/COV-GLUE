@@ -1,0 +1,18 @@
+{
+  "id": "NSP3:V:44:D",
+  "display_name": "V44D",
+  "variation.featureLoc.feature.name": "NSP3",
+  "codon_label": "44",
+  "codon_label_int": 44,
+  "reference_aa": "V",
+  "reference_nt": 2849,
+  "replacement_aa": "D",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": true,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 152.01339696164652,
+  "grantham_distance_int": 152,
+  "miyata_distance": 3.4045465485098587,
+  "parent_feature": "ORF_1a",
+  "parent_codon_label": "862"
+}

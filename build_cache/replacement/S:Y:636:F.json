@@ -1,0 +1,18 @@
+{
+  "id": "S:Y:636:F",
+  "display_name": "Y636F",
+  "variation.featureLoc.feature.name": "S",
+  "codon_label": "636",
+  "codon_label_int": 636,
+  "reference_aa": "Y",
+  "reference_nt": 23468,
+  "replacement_aa": "F",
+  "radical_hanada_category_i": false,
+  "radical_hanada_category_ii": false,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 21.6096648887579,
+  "grantham_distance_int": 22,
+  "miyata_distance": 0.4778781952608543,
+  "parent_feature": null,
+  "parent_codon_label": null
+}

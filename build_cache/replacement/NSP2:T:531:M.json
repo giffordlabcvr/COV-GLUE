@@ -1,0 +1,18 @@
+{
+  "id": "NSP2:T:531:M",
+  "display_name": "T531M",
+  "variation.featureLoc.feature.name": "NSP2",
+  "codon_label": "531",
+  "codon_label_int": 531,
+  "reference_aa": "T",
+  "reference_nt": 2396,
+  "replacement_aa": "M",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": false,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 81.0396927923509,
+  "grantham_distance_int": 81,
+  "miyata_distance": 1.8553256449702145,
+  "parent_feature": "ORF_1a",
+  "parent_codon_label": "711"
+}

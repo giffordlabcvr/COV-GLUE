@@ -1,0 +1,18 @@
+{
+  "id": "NSP3:G:1681:D",
+  "display_name": "G1681D",
+  "variation.featureLoc.feature.name": "NSP3",
+  "codon_label": "1681",
+  "codon_label_int": 1681,
+  "reference_aa": "G",
+  "reference_nt": 7760,
+  "replacement_aa": "D",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": true,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 93.76755082772044,
+  "grantham_distance_int": 94,
+  "miyata_distance": 2.373748911504371,
+  "parent_feature": "ORF_1a",
+  "parent_codon_label": "2499"
+}

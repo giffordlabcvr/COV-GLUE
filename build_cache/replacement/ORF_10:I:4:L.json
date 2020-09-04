@@ -1,0 +1,18 @@
+{
+  "id": "ORF_10:I:4:L",
+  "display_name": "I4L",
+  "variation.featureLoc.feature.name": "ORF_10",
+  "codon_label": "4",
+  "codon_label_int": 4,
+  "reference_aa": "I",
+  "reference_nt": 29567,
+  "replacement_aa": "L",
+  "radical_hanada_category_i": false,
+  "radical_hanada_category_ii": false,
+  "radical_hanada_category_iii": false,
+  "grantham_distance_double": 4.855121197570456,
+  "grantham_distance_int": 5,
+  "miyata_distance": 0.13905655234203065,
+  "parent_feature": null,
+  "parent_codon_label": null
+}

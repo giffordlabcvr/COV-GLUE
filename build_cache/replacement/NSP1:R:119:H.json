@@ -1,0 +1,18 @@
+{
+  "id": "NSP1:R:119:H",
+  "display_name": "R119H",
+  "variation.featureLoc.feature.name": "NSP1",
+  "codon_label": "119",
+  "codon_label_int": 119,
+  "reference_aa": "R",
+  "reference_nt": 620,
+  "replacement_aa": "H",
+  "radical_hanada_category_i": false,
+  "radical_hanada_category_ii": false,
+  "radical_hanada_category_iii": false,
+  "grantham_distance_double": 28.81922223513406,
+  "grantham_distance_int": 29,
+  "miyata_distance": 0.8150994217108231,
+  "parent_feature": "ORF_1a",
+  "parent_codon_label": "119"
+}

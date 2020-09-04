@@ -1,0 +1,18 @@
+{
+  "id": "NSP5:G:149:C",
+  "display_name": "G149C",
+  "variation.featureLoc.feature.name": "NSP5",
+  "codon_label": "149",
+  "codon_label_int": 149,
+  "reference_aa": "G",
+  "reference_nt": 10499,
+  "replacement_aa": "C",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": false,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 158.2317728686345,
+  "grantham_distance_int": 158,
+  "miyata_distance": 2.2172032627151887,
+  "parent_feature": "ORF_1a",
+  "parent_codon_label": "3412"
+}

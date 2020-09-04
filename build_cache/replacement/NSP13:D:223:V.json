@@ -1,0 +1,18 @@
+{
+  "id": "NSP13:D:223:V",
+  "display_name": "D223V",
+  "variation.featureLoc.feature.name": "NSP13",
+  "codon_label": "223",
+  "codon_label_int": 223,
+  "reference_aa": "D",
+  "reference_nt": 16903,
+  "replacement_aa": "V",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": true,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 152.01339696164652,
+  "grantham_distance_int": 152,
+  "miyata_distance": 3.4045465485098587,
+  "parent_feature": "ORF_1ab",
+  "parent_codon_label": "5547"
+}

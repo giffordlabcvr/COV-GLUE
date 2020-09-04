@@ -1,0 +1,18 @@
+{
+  "id": "NSP5:G:124:R",
+  "display_name": "G124R",
+  "variation.featureLoc.feature.name": "NSP5",
+  "codon_label": "124",
+  "codon_label_int": 124,
+  "reference_aa": "G",
+  "reference_nt": 10424,
+  "replacement_aa": "R",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": true,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 125.12919263514027,
+  "grantham_distance_int": 125,
+  "miyata_distance": 3.584766932145264,
+  "parent_feature": "ORF_1a",
+  "parent_codon_label": "3387"
+}

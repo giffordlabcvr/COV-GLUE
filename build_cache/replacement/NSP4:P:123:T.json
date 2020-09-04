@@ -1,0 +1,18 @@
+{
+  "id": "NSP4:P:123:T",
+  "display_name": "P123T",
+  "variation.featureLoc.feature.name": "NSP4",
+  "codon_label": "123",
+  "codon_label_int": 123,
+  "reference_aa": "P",
+  "reference_nt": 8921,
+  "replacement_aa": "T",
+  "radical_hanada_category_i": false,
+  "radical_hanada_category_ii": false,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 37.56362475504698,
+  "grantham_distance_int": 38,
+  "miyata_distance": 0.873755109177339,
+  "parent_feature": "ORF_1a",
+  "parent_codon_label": "2886"
+}

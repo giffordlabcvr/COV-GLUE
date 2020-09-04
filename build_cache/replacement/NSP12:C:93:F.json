@@ -1,0 +1,18 @@
+{
+  "id": "NSP12:C:93:F",
+  "display_name": "C93F",
+  "variation.featureLoc.feature.name": "NSP12",
+  "codon_label": "93",
+  "codon_label_int": 93,
+  "reference_aa": "C",
+  "reference_nt": 13717,
+  "replacement_aa": "F",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": true,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 204.38848742235413,
+  "grantham_distance_int": 204,
+  "miyata_distance": 2.2422122336883987,
+  "parent_feature": "ORF_1ab",
+  "parent_codon_label": "4485"
+}

@@ -1,0 +1,18 @@
+{
+  "id": "NSP12:T:912:N",
+  "display_name": "T912N",
+  "variation.featureLoc.feature.name": "NSP12",
+  "codon_label": "912",
+  "codon_label_int": 912,
+  "reference_aa": "T",
+  "reference_nt": 16174,
+  "replacement_aa": "N",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": false,
+  "radical_hanada_category_iii": false,
+  "grantham_distance_double": 64.77428783524499,
+  "grantham_distance_int": 65,
+  "miyata_distance": 1.3981379672196967,
+  "parent_feature": "ORF_1ab",
+  "parent_codon_label": "5304"
+}

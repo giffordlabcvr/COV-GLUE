@@ -1,0 +1,18 @@
+{
+  "id": "N:A:125:S",
+  "display_name": "A125S",
+  "variation.featureLoc.feature.name": "N",
+  "codon_label": "125",
+  "codon_label_int": 125,
+  "reference_aa": "A",
+  "reference_nt": 28646,
+  "replacement_aa": "S",
+  "radical_hanada_category_i": false,
+  "radical_hanada_category_ii": false,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 99.13249708101095,
+  "grantham_distance_int": 99,
+  "miyata_distance": 0.5107016875310603,
+  "parent_feature": null,
+  "parent_codon_label": null
+}

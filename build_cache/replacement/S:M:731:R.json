@@ -1,0 +1,18 @@
+{
+  "id": "S:M:731:R",
+  "display_name": "M731R",
+  "variation.featureLoc.feature.name": "S",
+  "codon_label": "731",
+  "codon_label_int": 731,
+  "reference_aa": "M",
+  "reference_nt": 23753,
+  "replacement_aa": "R",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": true,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 91.63827667082735,
+  "grantham_distance_int": 92,
+  "miyata_distance": 2.2924081997745525,
+  "parent_feature": null,
+  "parent_codon_label": null
+}

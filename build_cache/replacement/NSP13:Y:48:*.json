@@ -1,0 +1,18 @@
+{
+  "id": "NSP13:Y:48:*",
+  "display_name": "Y48*",
+  "variation.featureLoc.feature.name": "NSP13",
+  "codon_label": "48",
+  "codon_label_int": 48,
+  "reference_aa": "Y",
+  "reference_nt": 16378,
+  "replacement_aa": "*",
+  "radical_hanada_category_i": null,
+  "radical_hanada_category_ii": null,
+  "radical_hanada_category_iii": null,
+  "grantham_distance_double": null,
+  "grantham_distance_int": null,
+  "miyata_distance": null,
+  "parent_feature": "ORF_1ab",
+  "parent_codon_label": "5372"
+}

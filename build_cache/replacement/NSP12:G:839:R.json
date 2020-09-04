@@ -1,0 +1,18 @@
+{
+  "id": "NSP12:G:839:R",
+  "display_name": "G839R",
+  "variation.featureLoc.feature.name": "NSP12",
+  "codon_label": "839",
+  "codon_label_int": 839,
+  "reference_aa": "G",
+  "reference_nt": 15955,
+  "replacement_aa": "R",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": true,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 125.12919263514027,
+  "grantham_distance_int": 125,
+  "miyata_distance": 3.584766932145264,
+  "parent_feature": "ORF_1ab",
+  "parent_codon_label": "5231"
+}

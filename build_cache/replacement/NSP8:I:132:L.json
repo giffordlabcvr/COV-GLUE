@@ -1,0 +1,18 @@
+{
+  "id": "NSP8:I:132:L",
+  "display_name": "I132L",
+  "variation.featureLoc.feature.name": "NSP8",
+  "codon_label": "132",
+  "codon_label_int": 132,
+  "reference_aa": "I",
+  "reference_nt": 12485,
+  "replacement_aa": "L",
+  "radical_hanada_category_i": false,
+  "radical_hanada_category_ii": false,
+  "radical_hanada_category_iii": false,
+  "grantham_distance_double": 4.855121197570456,
+  "grantham_distance_int": 5,
+  "miyata_distance": 0.13905655234203065,
+  "parent_feature": "ORF_1a",
+  "parent_codon_label": "4074"
+}

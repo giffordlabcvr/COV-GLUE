@@ -1,0 +1,18 @@
+{
+  "id": "NSP3:H:1841:R",
+  "display_name": "H1841R",
+  "variation.featureLoc.feature.name": "NSP3",
+  "codon_label": "1841",
+  "codon_label_int": 1841,
+  "reference_aa": "H",
+  "reference_nt": 8240,
+  "replacement_aa": "R",
+  "radical_hanada_category_i": false,
+  "radical_hanada_category_ii": false,
+  "radical_hanada_category_iii": false,
+  "grantham_distance_double": 28.81922223513406,
+  "grantham_distance_int": 29,
+  "miyata_distance": 0.8150994217108231,
+  "parent_feature": "ORF_1a",
+  "parent_codon_label": "2659"
+}

@@ -1,0 +1,18 @@
+{
+  "id": "NSP13:L:581:I",
+  "display_name": "L581I",
+  "variation.featureLoc.feature.name": "NSP13",
+  "codon_label": "581",
+  "codon_label_int": 581,
+  "reference_aa": "L",
+  "reference_nt": 17977,
+  "replacement_aa": "I",
+  "radical_hanada_category_i": false,
+  "radical_hanada_category_ii": false,
+  "radical_hanada_category_iii": false,
+  "grantham_distance_double": 4.855121197570456,
+  "grantham_distance_int": 5,
+  "miyata_distance": 0.13905655234203065,
+  "parent_feature": "ORF_1ab",
+  "parent_codon_label": "5905"
+}

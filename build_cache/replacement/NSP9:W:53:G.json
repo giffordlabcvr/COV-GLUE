@@ -1,0 +1,18 @@
+{
+  "id": "NSP9:W:53:G",
+  "display_name": "W53G",
+  "variation.featureLoc.feature.name": "NSP9",
+  "codon_label": "53",
+  "codon_label_int": 53,
+  "reference_aa": "W",
+  "reference_nt": 12842,
+  "replacement_aa": "G",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": true,
+  "radical_hanada_category_iii": false,
+  "grantham_distance_double": 183.7902133344299,
+  "grantham_distance_int": 184,
+  "miyata_distance": 5.132455948239974,
+  "parent_feature": "ORF_1a",
+  "parent_codon_label": "4193"
+}

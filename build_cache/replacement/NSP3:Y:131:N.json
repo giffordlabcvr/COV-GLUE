@@ -1,0 +1,18 @@
+{
+  "id": "NSP3:Y:131:N",
+  "display_name": "Y131N",
+  "variation.featureLoc.feature.name": "NSP3",
+  "codon_label": "131",
+  "codon_label_int": 131,
+  "reference_aa": "Y",
+  "reference_nt": 3110,
+  "replacement_aa": "N",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": true,
+  "radical_hanada_category_iii": false,
+  "grantham_distance_double": 142.22936956562143,
+  "grantham_distance_int": 142,
+  "miyata_distance": 3.416303226515753,
+  "parent_feature": "ORF_1a",
+  "parent_codon_label": "949"
+}

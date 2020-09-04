@@ -1,0 +1,15 @@
+{
+  "id": "ORF_3a:ca:18:20",
+  "variation.featureLoc.feature.name": "ORF_3a",
+  "cov_nt_deletion.id": "ORF_3a:nca:25444:25452",
+  "display_name": "18-20",
+  "end_codon": "20",
+  "end_codon_int": 20,
+  "parent_end_codon": null,
+  "parent_feature": null,
+  "parent_start_codon": null,
+  "reference_nt_end": 25452,
+  "reference_nt_start": 25444,
+  "start_codon": "18",
+  "start_codon_int": 18
+}

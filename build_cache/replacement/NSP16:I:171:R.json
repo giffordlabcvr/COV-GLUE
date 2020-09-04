@@ -1,0 +1,18 @@
+{
+  "id": "NSP16:I:171:R",
+  "display_name": "I171R",
+  "variation.featureLoc.feature.name": "NSP16",
+  "codon_label": "171",
+  "codon_label_int": 171,
+  "reference_aa": "I",
+  "reference_nt": 21169,
+  "replacement_aa": "R",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": true,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 97.58656354400169,
+  "grantham_distance_int": 98,
+  "miyata_distance": 2.485550159989036,
+  "parent_feature": "ORF_1ab",
+  "parent_codon_label": "6969"
+}

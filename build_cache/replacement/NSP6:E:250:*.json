@@ -1,0 +1,18 @@
+{
+  "id": "NSP6:E:250:*",
+  "display_name": "E250*",
+  "variation.featureLoc.feature.name": "NSP6",
+  "codon_label": "250",
+  "codon_label_int": 250,
+  "reference_aa": "E",
+  "reference_nt": 11720,
+  "replacement_aa": "*",
+  "radical_hanada_category_i": null,
+  "radical_hanada_category_ii": null,
+  "radical_hanada_category_iii": null,
+  "grantham_distance_double": null,
+  "grantham_distance_int": null,
+  "miyata_distance": null,
+  "parent_feature": "ORF_1a",
+  "parent_codon_label": "3819"
+}

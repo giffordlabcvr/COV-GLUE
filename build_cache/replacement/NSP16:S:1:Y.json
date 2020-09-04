@@ -1,0 +1,18 @@
+{
+  "id": "NSP16:S:1:Y",
+  "display_name": "S1Y",
+  "variation.featureLoc.feature.name": "NSP16",
+  "codon_label": "1",
+  "codon_label_int": 1,
+  "reference_aa": "S",
+  "reference_nt": 20659,
+  "replacement_aa": "Y",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": true,
+  "radical_hanada_category_iii": false,
+  "grantham_distance_double": 143.10738438907285,
+  "grantham_distance_int": 143,
+  "miyata_distance": 3.327140114906959,
+  "parent_feature": "ORF_1ab",
+  "parent_codon_label": "6799"
+}

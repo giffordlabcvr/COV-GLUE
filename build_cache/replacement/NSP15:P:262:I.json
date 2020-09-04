@@ -1,0 +1,18 @@
+{
+  "id": "NSP15:P:262:I",
+  "display_name": "P262I",
+  "variation.featureLoc.feature.name": "NSP15",
+  "codon_label": "262",
+  "codon_label_int": 262,
+  "reference_aa": "P",
+  "reference_nt": 20404,
+  "replacement_aa": "I",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": false,
+  "radical_hanada_category_iii": false,
+  "grantham_distance_double": 95.37608839540053,
+  "grantham_distance_int": 95,
+  "miyata_distance": 2.6248137014966426,
+  "parent_feature": "ORF_1ab",
+  "parent_codon_label": "6714"
+}

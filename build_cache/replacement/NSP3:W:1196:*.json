@@ -1,0 +1,18 @@
+{
+  "id": "NSP3:W:1196:*",
+  "display_name": "W1196*",
+  "variation.featureLoc.feature.name": "NSP3",
+  "codon_label": "1196",
+  "codon_label_int": 1196,
+  "reference_aa": "W",
+  "reference_nt": 6305,
+  "replacement_aa": "*",
+  "radical_hanada_category_i": null,
+  "radical_hanada_category_ii": null,
+  "radical_hanada_category_iii": null,
+  "grantham_distance_double": null,
+  "grantham_distance_int": null,
+  "miyata_distance": null,
+  "parent_feature": "ORF_1a",
+  "parent_codon_label": "2014"
+}

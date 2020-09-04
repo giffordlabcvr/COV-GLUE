@@ -1,0 +1,18 @@
+{
+  "id": "ORF_3a:D:199:N",
+  "display_name": "D199N",
+  "variation.featureLoc.feature.name": "ORF_3a",
+  "codon_label": "199",
+  "codon_label_int": 199,
+  "reference_aa": "D",
+  "reference_nt": 25987,
+  "replacement_aa": "N",
+  "radical_hanada_category_i": false,
+  "radical_hanada_category_ii": true,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 23.00535500058712,
+  "grantham_distance_int": 23,
+  "miyata_distance": 0.6515287120397918,
+  "parent_feature": null,
+  "parent_codon_label": null
+}

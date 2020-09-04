@@ -1,0 +1,18 @@
+{
+  "id": "NSP2:G:392:E",
+  "display_name": "G392E",
+  "variation.featureLoc.feature.name": "NSP2",
+  "codon_label": "392",
+  "codon_label_int": 392,
+  "reference_aa": "G",
+  "reference_nt": 1979,
+  "replacement_aa": "E",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": true,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 97.85190047927728,
+  "grantham_distance_int": 98,
+  "miyata_distance": 2.7831228164426745,
+  "parent_feature": "ORF_1a",
+  "parent_codon_label": "572"
+}

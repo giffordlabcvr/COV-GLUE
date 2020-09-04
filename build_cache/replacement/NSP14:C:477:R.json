@@ -1,0 +1,18 @@
+{
+  "id": "NSP14:C:477:R",
+  "display_name": "C477R",
+  "variation.featureLoc.feature.name": "NSP14",
+  "codon_label": "477",
+  "codon_label_int": 477,
+  "reference_aa": "C",
+  "reference_nt": 19468,
+  "replacement_aa": "R",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": true,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 179.53483772224598,
+  "grantham_distance_int": 180,
+  "miyata_distance": 3.0647823950803734,
+  "parent_feature": "ORF_1ab",
+  "parent_codon_label": "6402"
+}

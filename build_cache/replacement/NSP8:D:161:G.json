@@ -1,0 +1,18 @@
+{
+  "id": "NSP8:D:161:G",
+  "display_name": "D161G",
+  "variation.featureLoc.feature.name": "NSP8",
+  "codon_label": "161",
+  "codon_label_int": 161,
+  "reference_aa": "D",
+  "reference_nt": 12572,
+  "replacement_aa": "G",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": true,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 93.76755082772044,
+  "grantham_distance_int": 94,
+  "miyata_distance": 2.373748911504371,
+  "parent_feature": "ORF_1a",
+  "parent_codon_label": "4103"
+}

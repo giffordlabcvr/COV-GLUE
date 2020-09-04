@@ -1,0 +1,18 @@
+{
+  "id": "NSP7:C:32:F",
+  "display_name": "C32F",
+  "variation.featureLoc.feature.name": "NSP7",
+  "codon_label": "32",
+  "codon_label_int": 32,
+  "reference_aa": "C",
+  "reference_nt": 11936,
+  "replacement_aa": "F",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": true,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 204.38848742235413,
+  "grantham_distance_int": 204,
+  "miyata_distance": 2.2422122336883987,
+  "parent_feature": "ORF_1a",
+  "parent_codon_label": "3891"
+}

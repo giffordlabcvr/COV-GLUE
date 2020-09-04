@@ -1,0 +1,18 @@
+{
+  "id": "NSP3:R:1135:I",
+  "display_name": "R1135I",
+  "variation.featureLoc.feature.name": "NSP3",
+  "codon_label": "1135",
+  "codon_label_int": 1135,
+  "reference_aa": "R",
+  "reference_nt": 6122,
+  "replacement_aa": "I",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": true,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 97.58656354400169,
+  "grantham_distance_int": 98,
+  "miyata_distance": 2.485550159989036,
+  "parent_feature": "ORF_1a",
+  "parent_codon_label": "1953"
+}

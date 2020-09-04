@@ -1,0 +1,18 @@
+{
+  "id": "NSP6:L:275:M",
+  "display_name": "L275M",
+  "variation.featureLoc.feature.name": "NSP6",
+  "codon_label": "275",
+  "codon_label_int": 275,
+  "reference_aa": "L",
+  "reference_nt": 11795,
+  "replacement_aa": "M",
+  "radical_hanada_category_i": false,
+  "radical_hanada_category_ii": false,
+  "radical_hanada_category_iii": false,
+  "grantham_distance_double": 14.30316650672724,
+  "grantham_distance_int": 14,
+  "miyata_distance": 0.4097737313122809,
+  "parent_feature": "ORF_1a",
+  "parent_codon_label": "3844"
+}

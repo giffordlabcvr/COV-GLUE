@@ -1,0 +1,18 @@
+{
+  "id": "NSP2:I:491:V",
+  "display_name": "I491V",
+  "variation.featureLoc.feature.name": "NSP2",
+  "codon_label": "491",
+  "codon_label_int": 491,
+  "reference_aa": "I",
+  "reference_nt": 2276,
+  "replacement_aa": "V",
+  "radical_hanada_category_i": false,
+  "radical_hanada_category_ii": false,
+  "radical_hanada_category_iii": false,
+  "grantham_distance_double": 29.609070626666707,
+  "grantham_distance_int": 30,
+  "miyata_distance": 0.8491514617150016,
+  "parent_feature": "ORF_1a",
+  "parent_codon_label": "671"
+}

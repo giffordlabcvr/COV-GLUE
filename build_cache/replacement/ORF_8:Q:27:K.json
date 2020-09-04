@@ -1,0 +1,18 @@
+{
+  "id": "ORF_8:Q:27:K",
+  "display_name": "Q27K",
+  "variation.featureLoc.feature.name": "ORF_8",
+  "codon_label": "27",
+  "codon_label_int": 27,
+  "reference_aa": "Q",
+  "reference_nt": 27972,
+  "replacement_aa": "K",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": true,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 53.228340150510796,
+  "grantham_distance_int": 53,
+  "miyata_distance": 1.0554475691875203,
+  "parent_feature": null,
+  "parent_codon_label": null
+}

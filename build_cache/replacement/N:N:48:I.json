@@ -1,0 +1,18 @@
+{
+  "id": "N:N:48:I",
+  "display_name": "N48I",
+  "variation.featureLoc.feature.name": "N",
+  "codon_label": "48",
+  "codon_label_int": 48,
+  "reference_aa": "N",
+  "reference_nt": 28415,
+  "replacement_aa": "I",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": false,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 148.9140956834137,
+  "grantham_distance_int": 149,
+  "miyata_distance": 3.369799940806828,
+  "parent_feature": null,
+  "parent_codon_label": null
+}

@@ -1,0 +1,18 @@
+{
+  "id": "NSP13:G:494:C",
+  "display_name": "G494C",
+  "variation.featureLoc.feature.name": "NSP13",
+  "codon_label": "494",
+  "codon_label_int": 494,
+  "reference_aa": "G",
+  "reference_nt": 17716,
+  "replacement_aa": "C",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": false,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 158.2317728686345,
+  "grantham_distance_int": 158,
+  "miyata_distance": 2.2172032627151887,
+  "parent_feature": "ORF_1ab",
+  "parent_codon_label": "5818"
+}

@@ -1,0 +1,18 @@
+{
+  "id": "NSP4:A:457:E",
+  "display_name": "A457E",
+  "variation.featureLoc.feature.name": "NSP4",
+  "codon_label": "457",
+  "codon_label_int": 457,
+  "reference_aa": "A",
+  "reference_nt": 9923,
+  "replacement_aa": "E",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": true,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 106.7125513825282,
+  "grantham_distance_int": 107,
+  "miyata_distance": 2.464557824068621,
+  "parent_feature": "ORF_1a",
+  "parent_codon_label": "3220"
+}

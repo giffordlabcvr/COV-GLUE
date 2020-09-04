@@ -1,0 +1,18 @@
+{
+  "id": "S:P:631:F",
+  "display_name": "P631F",
+  "variation.featureLoc.feature.name": "S",
+  "codon_label": "631",
+  "codon_label_int": 631,
+  "reference_aa": "P",
+  "reference_nt": 23453,
+  "replacement_aa": "F",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": true,
+  "radical_hanada_category_iii": false,
+  "grantham_distance_double": 113.72715406026416,
+  "grantham_distance_int": 114,
+  "miyata_distance": 3.169716979755525,
+  "parent_feature": null,
+  "parent_codon_label": null
+}

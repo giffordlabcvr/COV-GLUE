@@ -1,0 +1,18 @@
+{
+  "id": "NSP3:R:810:L",
+  "display_name": "R810L",
+  "variation.featureLoc.feature.name": "NSP3",
+  "codon_label": "810",
+  "codon_label_int": 810,
+  "reference_aa": "R",
+  "reference_nt": 5147,
+  "replacement_aa": "L",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": true,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 101.88029275229519,
+  "grantham_distance_int": 102,
+  "miyata_distance": 2.6230759164978448,
+  "parent_feature": "ORF_1a",
+  "parent_codon_label": "1628"
+}

@@ -1,0 +1,18 @@
+{
+  "id": "NSP16:K:277:E",
+  "display_name": "K277E",
+  "variation.featureLoc.feature.name": "NSP16",
+  "codon_label": "277",
+  "codon_label_int": 277,
+  "reference_aa": "K",
+  "reference_nt": 21487,
+  "replacement_aa": "E",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": true,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 56.86795521504775,
+  "grantham_distance_int": 57,
+  "miyata_distance": 1.1443659173772327,
+  "parent_feature": "ORF_1ab",
+  "parent_codon_label": "7075"
+}

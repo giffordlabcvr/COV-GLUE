@@ -1,0 +1,18 @@
+{
+  "id": "NSP4:Q:200:*",
+  "display_name": "Q200*",
+  "variation.featureLoc.feature.name": "NSP4",
+  "codon_label": "200",
+  "codon_label_int": 200,
+  "reference_aa": "Q",
+  "reference_nt": 9152,
+  "replacement_aa": "*",
+  "radical_hanada_category_i": null,
+  "radical_hanada_category_ii": null,
+  "radical_hanada_category_iii": null,
+  "grantham_distance_double": null,
+  "grantham_distance_int": null,
+  "miyata_distance": null,
+  "parent_feature": "ORF_1a",
+  "parent_codon_label": "2963"
+}

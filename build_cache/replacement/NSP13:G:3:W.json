@@ -1,0 +1,18 @@
+{
+  "id": "NSP13:G:3:W",
+  "display_name": "G3W",
+  "variation.featureLoc.feature.name": "NSP13",
+  "codon_label": "3",
+  "codon_label_int": 3,
+  "reference_aa": "G",
+  "reference_nt": 16243,
+  "replacement_aa": "W",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": true,
+  "radical_hanada_category_iii": false,
+  "grantham_distance_double": 183.7902133344299,
+  "grantham_distance_int": 184,
+  "miyata_distance": 5.132455948239974,
+  "parent_feature": "ORF_1ab",
+  "parent_codon_label": "5327"
+}

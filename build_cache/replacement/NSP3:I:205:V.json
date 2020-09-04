@@ -1,0 +1,18 @@
+{
+  "id": "NSP3:I:205:V",
+  "display_name": "I205V",
+  "variation.featureLoc.feature.name": "NSP3",
+  "codon_label": "205",
+  "codon_label_int": 205,
+  "reference_aa": "I",
+  "reference_nt": 3332,
+  "replacement_aa": "V",
+  "radical_hanada_category_i": false,
+  "radical_hanada_category_ii": false,
+  "radical_hanada_category_iii": false,
+  "grantham_distance_double": 29.609070626666707,
+  "grantham_distance_int": 30,
+  "miyata_distance": 0.8491514617150016,
+  "parent_feature": "ORF_1a",
+  "parent_codon_label": "1023"
+}

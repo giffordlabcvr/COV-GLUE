@@ -1,0 +1,18 @@
+{
+  "id": "NSP14:L:409:F",
+  "display_name": "L409F",
+  "variation.featureLoc.feature.name": "NSP14",
+  "codon_label": "409",
+  "codon_label_int": 409,
+  "reference_aa": "L",
+  "reference_nt": 19264,
+  "replacement_aa": "F",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": true,
+  "radical_hanada_category_iii": false,
+  "grantham_distance_double": 21.823920738840876,
+  "grantham_distance_int": 22,
+  "miyata_distance": 0.6259759618337314,
+  "parent_feature": "ORF_1ab",
+  "parent_codon_label": "6334"
+}

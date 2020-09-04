@@ -1,0 +1,18 @@
+{
+  "id": "ORF_8:P:85:H",
+  "display_name": "P85H",
+  "variation.featureLoc.feature.name": "ORF_8",
+  "codon_label": "85",
+  "codon_label_int": 85,
+  "reference_aa": "P",
+  "reference_nt": 28146,
+  "replacement_aa": "H",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": true,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 76.27712276797571,
+  "grantham_distance_int": 76,
+  "miyata_distance": 2.154892056346583,
+  "parent_feature": null,
+  "parent_codon_label": null
+}

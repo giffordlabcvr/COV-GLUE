@@ -1,0 +1,18 @@
+{
+  "id": "NSP4:H:362:D",
+  "display_name": "H362D",
+  "variation.featureLoc.feature.name": "NSP4",
+  "codon_label": "362",
+  "codon_label_int": 362,
+  "reference_aa": "H",
+  "reference_nt": 9638,
+  "replacement_aa": "D",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": true,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 81.23797960254424,
+  "grantham_distance_int": 81,
+  "miyata_distance": 1.7153540746282345,
+  "parent_feature": "ORF_1a",
+  "parent_codon_label": "3125"
+}

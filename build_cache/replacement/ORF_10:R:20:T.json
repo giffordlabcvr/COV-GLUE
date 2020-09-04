@@ -1,0 +1,18 @@
+{
+  "id": "ORF_10:R:20:T",
+  "display_name": "R20T",
+  "variation.featureLoc.feature.name": "ORF_10",
+  "codon_label": "20",
+  "codon_label_int": 20,
+  "reference_aa": "R",
+  "reference_nt": 29615,
+  "replacement_aa": "T",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": true,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 70.97102634903321,
+  "grantham_distance_int": 71,
+  "miyata_distance": 2.0317972672838045,
+  "parent_feature": null,
+  "parent_codon_label": null
+}

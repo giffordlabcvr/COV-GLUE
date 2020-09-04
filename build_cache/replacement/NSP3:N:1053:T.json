@@ -1,0 +1,18 @@
+{
+  "id": "NSP3:N:1053:T",
+  "display_name": "N1053T",
+  "variation.featureLoc.feature.name": "NSP3",
+  "codon_label": "1053",
+  "codon_label_int": 1053,
+  "reference_aa": "N",
+  "reference_nt": 5876,
+  "replacement_aa": "T",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": false,
+  "radical_hanada_category_iii": false,
+  "grantham_distance_double": 64.77428783524499,
+  "grantham_distance_int": 65,
+  "miyata_distance": 1.3981379672196967,
+  "parent_feature": "ORF_1a",
+  "parent_codon_label": "1871"
+}

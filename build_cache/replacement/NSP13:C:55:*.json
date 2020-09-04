@@ -1,0 +1,18 @@
+{
+  "id": "NSP13:C:55:*",
+  "display_name": "C55*",
+  "variation.featureLoc.feature.name": "NSP13",
+  "codon_label": "55",
+  "codon_label_int": 55,
+  "reference_aa": "C",
+  "reference_nt": 16399,
+  "replacement_aa": "*",
+  "radical_hanada_category_i": null,
+  "radical_hanada_category_ii": null,
+  "radical_hanada_category_iii": null,
+  "grantham_distance_double": null,
+  "grantham_distance_int": null,
+  "miyata_distance": null,
+  "parent_feature": "ORF_1ab",
+  "parent_codon_label": "5379"
+}

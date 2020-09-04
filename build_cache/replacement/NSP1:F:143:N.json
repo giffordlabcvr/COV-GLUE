@@ -1,0 +1,18 @@
+{
+  "id": "NSP1:F:143:N",
+  "display_name": "F143N",
+  "variation.featureLoc.feature.name": "NSP1",
+  "codon_label": "143",
+  "codon_label_int": 143,
+  "reference_aa": "F",
+  "reference_nt": 692,
+  "replacement_aa": "N",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": true,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 158.11218861578323,
+  "grantham_distance_int": 158,
+  "miyata_distance": 3.698553688030433,
+  "parent_feature": "ORF_1a",
+  "parent_codon_label": "143"
+}

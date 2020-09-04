@@ -1,0 +1,18 @@
+{
+  "id": "NSP13:L:500:F",
+  "display_name": "L500F",
+  "variation.featureLoc.feature.name": "NSP13",
+  "codon_label": "500",
+  "codon_label_int": 500,
+  "reference_aa": "L",
+  "reference_nt": 17734,
+  "replacement_aa": "F",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": true,
+  "radical_hanada_category_iii": false,
+  "grantham_distance_double": 21.823920738840876,
+  "grantham_distance_int": 22,
+  "miyata_distance": 0.6259759618337314,
+  "parent_feature": "ORF_1ab",
+  "parent_codon_label": "5824"
+}

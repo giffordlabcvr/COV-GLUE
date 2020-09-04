@@ -1,0 +1,18 @@
+{
+  "id": "NSP1:E:36:A",
+  "display_name": "E36A",
+  "variation.featureLoc.feature.name": "NSP1",
+  "codon_label": "36",
+  "codon_label_int": 36,
+  "reference_aa": "E",
+  "reference_nt": 371,
+  "replacement_aa": "A",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": true,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 106.7125513825282,
+  "grantham_distance_int": 107,
+  "miyata_distance": 2.464557824068621,
+  "parent_feature": "ORF_1a",
+  "parent_codon_label": "36"
+}

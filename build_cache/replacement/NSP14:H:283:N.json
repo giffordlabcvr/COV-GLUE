@@ -1,0 +1,18 @@
+{
+  "id": "NSP14:H:283:N",
+  "display_name": "H283N",
+  "variation.featureLoc.feature.name": "NSP14",
+  "codon_label": "283",
+  "codon_label_int": 283,
+  "reference_aa": "H",
+  "reference_nt": 18886,
+  "replacement_aa": "N",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": true,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 68.35485567757956,
+  "grantham_distance_int": 68,
+  "miyata_distance": 1.288757085402098,
+  "parent_feature": "ORF_1ab",
+  "parent_codon_label": "6208"
+}

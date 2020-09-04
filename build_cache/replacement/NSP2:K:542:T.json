@@ -1,0 +1,18 @@
+{
+  "id": "NSP2:K:542:T",
+  "display_name": "K542T",
+  "variation.featureLoc.feature.name": "NSP2",
+  "codon_label": "542",
+  "codon_label_int": 542,
+  "reference_aa": "K",
+  "reference_nt": 2429,
+  "replacement_aa": "T",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": true,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 77.74105566792166,
+  "grantham_distance_int": 78,
+  "miyata_distance": 2.0994805676769532,
+  "parent_feature": "ORF_1a",
+  "parent_codon_label": "722"
+}

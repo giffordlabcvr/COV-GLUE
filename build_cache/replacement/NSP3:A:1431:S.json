@@ -1,0 +1,18 @@
+{
+  "id": "NSP3:A:1431:S",
+  "display_name": "A1431S",
+  "variation.featureLoc.feature.name": "NSP3",
+  "codon_label": "1431",
+  "codon_label_int": 1431,
+  "reference_aa": "A",
+  "reference_nt": 7010,
+  "replacement_aa": "S",
+  "radical_hanada_category_i": false,
+  "radical_hanada_category_ii": false,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 99.13249708101095,
+  "grantham_distance_int": 99,
+  "miyata_distance": 0.5107016875310603,
+  "parent_feature": "ORF_1a",
+  "parent_codon_label": "2249"
+}

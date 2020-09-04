@@ -1,0 +1,18 @@
+{
+  "id": "S:Q:779:L",
+  "display_name": "Q779L",
+  "variation.featureLoc.feature.name": "S",
+  "codon_label": "779",
+  "codon_label_int": 779,
+  "reference_aa": "Q",
+  "reference_nt": 23897,
+  "replacement_aa": "L",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": false,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 112.44147717377763,
+  "grantham_distance_int": 112,
+  "miyata_distance": 2.703476672168515,
+  "parent_feature": null,
+  "parent_codon_label": null
+}

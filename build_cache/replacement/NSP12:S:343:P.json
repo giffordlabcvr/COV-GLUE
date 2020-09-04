@@ -1,0 +1,18 @@
+{
+  "id": "NSP12:S:343:P",
+  "display_name": "S343P",
+  "variation.featureLoc.feature.name": "NSP12",
+  "codon_label": "343",
+  "codon_label_int": 343,
+  "reference_aa": "S",
+  "reference_nt": 14467,
+  "replacement_aa": "P",
+  "radical_hanada_category_i": false,
+  "radical_hanada_category_ii": false,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 73.35256887257073,
+  "grantham_distance_int": 73,
+  "miyata_distance": 0.5564160035374529,
+  "parent_feature": "ORF_1ab",
+  "parent_codon_label": "4735"
+}

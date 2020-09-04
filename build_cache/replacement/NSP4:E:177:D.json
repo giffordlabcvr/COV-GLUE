@@ -1,0 +1,18 @@
+{
+  "id": "NSP4:E:177:D",
+  "display_name": "E177D",
+  "variation.featureLoc.feature.name": "NSP4",
+  "codon_label": "177",
+  "codon_label_int": 177,
+  "reference_aa": "E",
+  "reference_nt": 9083,
+  "replacement_aa": "D",
+  "radical_hanada_category_i": false,
+  "radical_hanada_category_ii": false,
+  "radical_hanada_category_iii": false,
+  "grantham_distance_double": 44.60463645252665,
+  "grantham_distance_int": 45,
+  "miyata_distance": 0.9031410249655084,
+  "parent_feature": "ORF_1a",
+  "parent_codon_label": "2940"
+}

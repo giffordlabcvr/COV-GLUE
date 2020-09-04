@@ -1,0 +1,18 @@
+{
+  "id": "NSP12:M:794:V",
+  "display_name": "M794V",
+  "variation.featureLoc.feature.name": "NSP12",
+  "codon_label": "794",
+  "codon_label_int": 794,
+  "reference_aa": "M",
+  "reference_nt": 15820,
+  "replacement_aa": "V",
+  "radical_hanada_category_i": false,
+  "radical_hanada_category_ii": false,
+  "radical_hanada_category_iii": false,
+  "grantham_distance_double": 21.521799383987368,
+  "grantham_distance_int": 22,
+  "miyata_distance": 0.6173356298910421,
+  "parent_feature": "ORF_1ab",
+  "parent_codon_label": "5186"
+}

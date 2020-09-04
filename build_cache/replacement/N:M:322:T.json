@@ -1,0 +1,18 @@
+{
+  "id": "N:M:322:T",
+  "display_name": "M322T",
+  "variation.featureLoc.feature.name": "N",
+  "codon_label": "322",
+  "codon_label_int": 322,
+  "reference_aa": "M",
+  "reference_nt": 29237,
+  "replacement_aa": "T",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": false,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 81.0396927923509,
+  "grantham_distance_int": 81,
+  "miyata_distance": 1.8553256449702145,
+  "parent_feature": null,
+  "parent_codon_label": null
+}

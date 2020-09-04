@@ -1,0 +1,18 @@
+{
+  "id": "NSP3:T:1694:I",
+  "display_name": "T1694I",
+  "variation.featureLoc.feature.name": "NSP3",
+  "codon_label": "1694",
+  "codon_label_int": 1694,
+  "reference_aa": "T",
+  "reference_nt": 7799,
+  "replacement_aa": "I",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": false,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 89.28290210353987,
+  "grantham_distance_int": 89,
+  "miyata_distance": 2.143694221057671,
+  "parent_feature": "ORF_1a",
+  "parent_codon_label": "2512"
+}

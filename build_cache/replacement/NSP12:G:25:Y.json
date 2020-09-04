@@ -1,0 +1,18 @@
+{
+  "id": "NSP12:G:25:Y",
+  "display_name": "G25Y",
+  "variation.featureLoc.feature.name": "NSP12",
+  "codon_label": "25",
+  "codon_label_int": 25,
+  "reference_aa": "G",
+  "reference_nt": 13513,
+  "replacement_aa": "Y",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": true,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 146.92629269977823,
+  "grantham_distance_int": 147,
+  "miyata_distance": 4.077523842827582,
+  "parent_feature": "ORF_1ab",
+  "parent_codon_label": "4417"
+}

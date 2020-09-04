@@ -1,0 +1,18 @@
+{
+  "id": "NSP14:G:59:V",
+  "display_name": "G59V",
+  "variation.featureLoc.feature.name": "NSP14",
+  "codon_label": "59",
+  "codon_label_int": 59,
+  "reference_aa": "G",
+  "reference_nt": 18214,
+  "replacement_aa": "V",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": false,
+  "radical_hanada_category_iii": false,
+  "grantham_distance_double": 108.78738843583756,
+  "grantham_distance_int": 109,
+  "miyata_distance": 2.7580349580646812,
+  "parent_feature": "ORF_1ab",
+  "parent_codon_label": "5984"
+}

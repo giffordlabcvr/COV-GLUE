@@ -1,0 +1,18 @@
+{
+  "id": "NSP14:S:454:T",
+  "display_name": "S454T",
+  "variation.featureLoc.feature.name": "NSP14",
+  "codon_label": "454",
+  "codon_label_int": 454,
+  "reference_aa": "S",
+  "reference_nt": 19399,
+  "replacement_aa": "T",
+  "radical_hanada_category_i": false,
+  "radical_hanada_category_ii": false,
+  "radical_hanada_category_iii": false,
+  "grantham_distance_double": 57.74902765654723,
+  "grantham_distance_int": 58,
+  "miyata_distance": 0.8875431743515021,
+  "parent_feature": "ORF_1ab",
+  "parent_codon_label": "6379"
+}

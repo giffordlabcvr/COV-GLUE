@@ -1,0 +1,18 @@
+{
+  "id": "M:F:28:C",
+  "display_name": "F28C",
+  "variation.featureLoc.feature.name": "M",
+  "codon_label": "28",
+  "codon_label_int": 28,
+  "reference_aa": "F",
+  "reference_nt": 26604,
+  "replacement_aa": "C",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": true,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 204.38848742235413,
+  "grantham_distance_int": 204,
+  "miyata_distance": 2.2422122336883987,
+  "parent_feature": null,
+  "parent_codon_label": null
+}

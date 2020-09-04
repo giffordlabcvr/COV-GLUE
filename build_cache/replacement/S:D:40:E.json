@@ -1,0 +1,18 @@
+{
+  "id": "S:D:40:E",
+  "display_name": "D40E",
+  "variation.featureLoc.feature.name": "S",
+  "codon_label": "40",
+  "codon_label_int": 40,
+  "reference_aa": "D",
+  "reference_nt": 21680,
+  "replacement_aa": "E",
+  "radical_hanada_category_i": false,
+  "radical_hanada_category_ii": false,
+  "radical_hanada_category_iii": false,
+  "grantham_distance_double": 44.60463645252665,
+  "grantham_distance_int": 45,
+  "miyata_distance": 0.9031410249655084,
+  "parent_feature": null,
+  "parent_codon_label": null
+}

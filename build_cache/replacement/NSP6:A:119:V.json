@@ -1,0 +1,18 @@
+{
+  "id": "NSP6:A:119:V",
+  "display_name": "A119V",
+  "variation.featureLoc.feature.name": "NSP6",
+  "codon_label": "119",
+  "codon_label_int": 119,
+  "reference_aa": "A",
+  "reference_nt": 11327,
+  "replacement_aa": "V",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": false,
+  "radical_hanada_category_iii": false,
+  "grantham_distance_double": 64.43025059480746,
+  "grantham_distance_int": 64,
+  "miyata_distance": 1.847329414521172,
+  "parent_feature": "ORF_1a",
+  "parent_codon_label": "3688"
+}

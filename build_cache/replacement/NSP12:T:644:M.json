@@ -1,0 +1,18 @@
+{
+  "id": "NSP12:T:644:M",
+  "display_name": "T644M",
+  "variation.featureLoc.feature.name": "NSP12",
+  "codon_label": "644",
+  "codon_label_int": 644,
+  "reference_aa": "T",
+  "reference_nt": 15370,
+  "replacement_aa": "M",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": false,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 81.0396927923509,
+  "grantham_distance_int": 81,
+  "miyata_distance": 1.8553256449702145,
+  "parent_feature": "ORF_1ab",
+  "parent_codon_label": "5036"
+}

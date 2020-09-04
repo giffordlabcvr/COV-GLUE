@@ -1,0 +1,18 @@
+{
+  "id": "NSP12:R:553:S",
+  "display_name": "R553S",
+  "variation.featureLoc.feature.name": "NSP12",
+  "codon_label": "553",
+  "codon_label_int": 553,
+  "reference_aa": "R",
+  "reference_nt": 15097,
+  "replacement_aa": "S",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": true,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 109.21315295411507,
+  "grantham_distance_int": 109,
+  "miyata_distance": 2.7409075071380777,
+  "parent_feature": "ORF_1ab",
+  "parent_codon_label": "4945"
+}

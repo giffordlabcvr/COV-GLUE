@@ -1,0 +1,18 @@
+{
+  "id": "NSP15:W:332:*",
+  "display_name": "W332*",
+  "variation.featureLoc.feature.name": "NSP15",
+  "codon_label": "332",
+  "codon_label_int": 332,
+  "reference_aa": "W",
+  "reference_nt": 20614,
+  "replacement_aa": "*",
+  "radical_hanada_category_i": null,
+  "radical_hanada_category_ii": null,
+  "radical_hanada_category_iii": null,
+  "grantham_distance_double": null,
+  "grantham_distance_int": null,
+  "miyata_distance": null,
+  "parent_feature": "ORF_1ab",
+  "parent_codon_label": "6784"
+}

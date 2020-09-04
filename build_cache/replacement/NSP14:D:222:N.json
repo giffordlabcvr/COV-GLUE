@@ -1,0 +1,18 @@
+{
+  "id": "NSP14:D:222:N",
+  "display_name": "D222N",
+  "variation.featureLoc.feature.name": "NSP14",
+  "codon_label": "222",
+  "codon_label_int": 222,
+  "reference_aa": "D",
+  "reference_nt": 18703,
+  "replacement_aa": "N",
+  "radical_hanada_category_i": false,
+  "radical_hanada_category_ii": true,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 23.00535500058712,
+  "grantham_distance_int": 23,
+  "miyata_distance": 0.6515287120397918,
+  "parent_feature": "ORF_1ab",
+  "parent_codon_label": "6147"
+}

@@ -1,0 +1,15 @@
+{
+  "id": "ORF_8:ca:119:120",
+  "variation.featureLoc.feature.name": "ORF_8",
+  "cov_nt_deletion.id": "ORF_8:nca:28248:28253",
+  "display_name": "119-120",
+  "end_codon": "120",
+  "end_codon_int": 120,
+  "parent_end_codon": null,
+  "parent_feature": null,
+  "parent_start_codon": null,
+  "reference_nt_end": 28253,
+  "reference_nt_start": 28248,
+  "start_codon": "119",
+  "start_codon_int": 119
+}

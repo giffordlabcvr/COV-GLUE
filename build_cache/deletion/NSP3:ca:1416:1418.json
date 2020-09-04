@@ -1,0 +1,15 @@
+{
+  "id": "NSP3:ca:1416:1418",
+  "variation.featureLoc.feature.name": "NSP3",
+  "cov_nt_deletion.id": "NSP3:nca:6965:6973",
+  "display_name": "1416-1418",
+  "end_codon": "1418",
+  "end_codon_int": 1418,
+  "parent_end_codon": null,
+  "parent_feature": null,
+  "parent_start_codon": null,
+  "reference_nt_end": 6973,
+  "reference_nt_start": 6965,
+  "start_codon": "1416",
+  "start_codon_int": 1416
+}

@@ -1,0 +1,18 @@
+{
+  "id": "NSP14:F:444:C",
+  "display_name": "F444C",
+  "variation.featureLoc.feature.name": "NSP14",
+  "codon_label": "444",
+  "codon_label_int": 444,
+  "reference_aa": "F",
+  "reference_nt": 19369,
+  "replacement_aa": "C",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": true,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 204.38848742235413,
+  "grantham_distance_int": 204,
+  "miyata_distance": 2.2422122336883987,
+  "parent_feature": "ORF_1ab",
+  "parent_codon_label": "6369"
+}

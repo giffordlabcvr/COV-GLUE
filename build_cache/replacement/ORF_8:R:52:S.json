@@ -1,0 +1,18 @@
+{
+  "id": "ORF_8:R:52:S",
+  "display_name": "R52S",
+  "variation.featureLoc.feature.name": "ORF_8",
+  "codon_label": "52",
+  "codon_label_int": 52,
+  "reference_aa": "R",
+  "reference_nt": 28047,
+  "replacement_aa": "S",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": true,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 109.21315295411507,
+  "grantham_distance_int": 109,
+  "miyata_distance": 2.7409075071380777,
+  "parent_feature": null,
+  "parent_codon_label": null
+}

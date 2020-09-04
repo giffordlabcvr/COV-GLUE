@@ -1,0 +1,18 @@
+{
+  "id": "NSP2:E:595:T",
+  "display_name": "E595T",
+  "variation.featureLoc.feature.name": "NSP2",
+  "codon_label": "595",
+  "codon_label_int": 595,
+  "reference_aa": "E",
+  "reference_nt": 2588,
+  "replacement_aa": "T",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": true,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 65.50131254385761,
+  "grantham_distance_int": 66,
+  "miyata_distance": 1.8303446734665099,
+  "parent_feature": "ORF_1a",
+  "parent_codon_label": "775"
+}

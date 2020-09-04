@@ -1,0 +1,18 @@
+{
+  "id": "NSP14:H:487:P",
+  "display_name": "H487P",
+  "variation.featureLoc.feature.name": "NSP14",
+  "codon_label": "487",
+  "codon_label_int": 487,
+  "reference_aa": "H",
+  "reference_nt": 19498,
+  "replacement_aa": "P",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": true,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 76.27712276797571,
+  "grantham_distance_int": 76,
+  "miyata_distance": 2.154892056346583,
+  "parent_feature": "ORF_1ab",
+  "parent_codon_label": "6412"
+}

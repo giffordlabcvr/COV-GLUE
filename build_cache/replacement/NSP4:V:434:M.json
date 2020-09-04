@@ -1,0 +1,18 @@
+{
+  "id": "NSP4:V:434:M",
+  "display_name": "V434M",
+  "variation.featureLoc.feature.name": "NSP4",
+  "codon_label": "434",
+  "codon_label_int": 434,
+  "reference_aa": "V",
+  "reference_nt": 9854,
+  "replacement_aa": "M",
+  "radical_hanada_category_i": false,
+  "radical_hanada_category_ii": false,
+  "radical_hanada_category_iii": false,
+  "grantham_distance_double": 21.521799383987368,
+  "grantham_distance_int": 22,
+  "miyata_distance": 0.6173356298910421,
+  "parent_feature": "ORF_1a",
+  "parent_codon_label": "3197"
+}

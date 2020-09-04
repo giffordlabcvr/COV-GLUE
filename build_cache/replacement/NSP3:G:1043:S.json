@@ -1,0 +1,18 @@
+{
+  "id": "NSP3:G:1043:S",
+  "display_name": "G1043S",
+  "variation.featureLoc.feature.name": "NSP3",
+  "codon_label": "1043",
+  "codon_label_int": 1043,
+  "reference_aa": "G",
+  "reference_nt": 5846,
+  "replacement_aa": "S",
+  "radical_hanada_category_i": false,
+  "radical_hanada_category_ii": false,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 55.267362761946906,
+  "grantham_distance_int": 55,
+  "miyata_distance": 0.8479269350772444,
+  "parent_feature": "ORF_1a",
+  "parent_codon_label": "1861"
+}

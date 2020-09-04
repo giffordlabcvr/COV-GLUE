@@ -1,0 +1,18 @@
+{
+  "id": "NSP14:S:374:F",
+  "display_name": "S374F",
+  "variation.featureLoc.feature.name": "NSP14",
+  "codon_label": "374",
+  "codon_label_int": 374,
+  "reference_aa": "S",
+  "reference_nt": 19159,
+  "replacement_aa": "F",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": true,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 154.8079022945541,
+  "grantham_distance_int": 155,
+  "miyata_distance": 3.447399039542067,
+  "parent_feature": "ORF_1ab",
+  "parent_codon_label": "6299"
+}

@@ -1,0 +1,15 @@
+{
+  "id": "NSP3:ca:1031:1035",
+  "variation.featureLoc.feature.name": "NSP3",
+  "cov_nt_deletion.id": "NSP3:nca:5810:5824",
+  "display_name": "1031-1035",
+  "end_codon": "1035",
+  "end_codon_int": 1035,
+  "parent_end_codon": "1853",
+  "parent_feature": "ORF_1a",
+  "parent_start_codon": "1849",
+  "reference_nt_end": 5824,
+  "reference_nt_start": 5810,
+  "start_codon": "1031",
+  "start_codon_int": 1031
+}

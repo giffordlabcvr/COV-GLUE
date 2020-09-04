@@ -1,0 +1,18 @@
+{
+  "id": "NSP13:L:526:W",
+  "display_name": "L526W",
+  "variation.featureLoc.feature.name": "NSP13",
+  "codon_label": "526",
+  "codon_label_int": 526,
+  "reference_aa": "L",
+  "reference_nt": 17812,
+  "replacement_aa": "W",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": true,
+  "radical_hanada_category_iii": false,
+  "grantham_distance_double": 60.980495578874596,
+  "grantham_distance_int": 61,
+  "miyata_distance": 1.730342752116309,
+  "parent_feature": "ORF_1ab",
+  "parent_codon_label": "5850"
+}

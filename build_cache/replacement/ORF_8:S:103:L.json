@@ -1,0 +1,18 @@
+{
+  "id": "ORF_8:S:103:L",
+  "display_name": "S103L",
+  "variation.featureLoc.feature.name": "ORF_8",
+  "codon_label": "103",
+  "codon_label_int": 103,
+  "reference_aa": "S",
+  "reference_nt": 28200,
+  "replacement_aa": "L",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": false,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 144.07923462160153,
+  "grantham_distance_int": 144,
+  "miyata_distance": 3.0404515387240023,
+  "parent_feature": null,
+  "parent_codon_label": null
+}

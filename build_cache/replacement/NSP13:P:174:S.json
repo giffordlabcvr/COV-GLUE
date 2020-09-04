@@ -1,0 +1,18 @@
+{
+  "id": "NSP13:P:174:S",
+  "display_name": "P174S",
+  "variation.featureLoc.feature.name": "NSP13",
+  "codon_label": "174",
+  "codon_label_int": 174,
+  "reference_aa": "P",
+  "reference_nt": 16756,
+  "replacement_aa": "S",
+  "radical_hanada_category_i": false,
+  "radical_hanada_category_ii": false,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 73.35256887257073,
+  "grantham_distance_int": 73,
+  "miyata_distance": 0.5564160035374529,
+  "parent_feature": "ORF_1ab",
+  "parent_codon_label": "5498"
+}

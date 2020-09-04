@@ -1,0 +1,18 @@
+{
+  "id": "NSP4:G:239:R",
+  "display_name": "G239R",
+  "variation.featureLoc.feature.name": "NSP4",
+  "codon_label": "239",
+  "codon_label_int": 239,
+  "reference_aa": "G",
+  "reference_nt": 9269,
+  "replacement_aa": "R",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": true,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 125.12919263514027,
+  "grantham_distance_int": 125,
+  "miyata_distance": 3.584766932145264,
+  "parent_feature": "ORF_1a",
+  "parent_codon_label": "3002"
+}

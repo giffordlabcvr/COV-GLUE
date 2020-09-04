@@ -1,0 +1,18 @@
+{
+  "id": "NSP7:C:72:S",
+  "display_name": "C72S",
+  "variation.featureLoc.feature.name": "NSP7",
+  "codon_label": "72",
+  "codon_label_int": 72,
+  "reference_aa": "C",
+  "reference_nt": 12056,
+  "replacement_aa": "S",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": false,
+  "radical_hanada_category_iii": false,
+  "grantham_distance_double": 111.6724956632034,
+  "grantham_distance_int": 112,
+  "miyata_distance": 1.8406989880227782,
+  "parent_feature": "ORF_1a",
+  "parent_codon_label": "3931"
+}

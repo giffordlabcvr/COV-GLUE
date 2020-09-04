@@ -1,0 +1,18 @@
+{
+  "id": "NSP14:A:319:V",
+  "display_name": "A319V",
+  "variation.featureLoc.feature.name": "NSP14",
+  "codon_label": "319",
+  "codon_label_int": 319,
+  "reference_aa": "A",
+  "reference_nt": 18994,
+  "replacement_aa": "V",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": false,
+  "radical_hanada_category_iii": false,
+  "grantham_distance_double": 64.43025059480746,
+  "grantham_distance_int": 64,
+  "miyata_distance": 1.847329414521172,
+  "parent_feature": "ORF_1ab",
+  "parent_codon_label": "6244"
+}

@@ -1,0 +1,18 @@
+{
+  "id": "NSP14:K:288:T",
+  "display_name": "K288T",
+  "variation.featureLoc.feature.name": "NSP14",
+  "codon_label": "288",
+  "codon_label_int": 288,
+  "reference_aa": "K",
+  "reference_nt": 18901,
+  "replacement_aa": "T",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": true,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 77.74105566792166,
+  "grantham_distance_int": 78,
+  "miyata_distance": 2.0994805676769532,
+  "parent_feature": "ORF_1ab",
+  "parent_codon_label": "6213"
+}

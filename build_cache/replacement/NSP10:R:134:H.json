@@ -1,0 +1,18 @@
+{
+  "id": "NSP10:R:134:H",
+  "display_name": "R134H",
+  "variation.featureLoc.feature.name": "NSP10",
+  "codon_label": "134",
+  "codon_label_int": 134,
+  "reference_aa": "R",
+  "reference_nt": 13424,
+  "replacement_aa": "H",
+  "radical_hanada_category_i": false,
+  "radical_hanada_category_ii": false,
+  "radical_hanada_category_iii": false,
+  "grantham_distance_double": 28.81922223513406,
+  "grantham_distance_int": 29,
+  "miyata_distance": 0.8150994217108231,
+  "parent_feature": "ORF_1a",
+  "parent_codon_label": "4387"
+}

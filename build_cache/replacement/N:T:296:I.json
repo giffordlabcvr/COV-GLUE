@@ -1,0 +1,18 @@
+{
+  "id": "N:T:296:I",
+  "display_name": "T296I",
+  "variation.featureLoc.feature.name": "N",
+  "codon_label": "296",
+  "codon_label_int": 296,
+  "reference_aa": "T",
+  "reference_nt": 29159,
+  "replacement_aa": "I",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": false,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 89.28290210353987,
+  "grantham_distance_int": 89,
+  "miyata_distance": 2.143694221057671,
+  "parent_feature": null,
+  "parent_codon_label": null
+}

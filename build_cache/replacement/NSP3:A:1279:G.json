@@ -1,0 +1,18 @@
+{
+  "id": "NSP3:A:1279:G",
+  "display_name": "A1279G",
+  "variation.featureLoc.feature.name": "NSP3",
+  "codon_label": "1279",
+  "codon_label_int": 1279,
+  "reference_aa": "A",
+  "reference_nt": 6554,
+  "replacement_aa": "G",
+  "radical_hanada_category_i": false,
+  "radical_hanada_category_ii": false,
+  "radical_hanada_category_iii": false,
+  "grantham_distance_double": 59.99535651927305,
+  "grantham_distance_int": 60,
+  "miyata_distance": 0.9144774819777941,
+  "parent_feature": "ORF_1a",
+  "parent_codon_label": "2097"
+}

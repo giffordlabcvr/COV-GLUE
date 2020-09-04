@@ -1,0 +1,18 @@
+{
+  "id": "NSP12:E:811:K",
+  "display_name": "E811K",
+  "variation.featureLoc.feature.name": "NSP12",
+  "codon_label": "811",
+  "codon_label_int": 811,
+  "reference_aa": "E",
+  "reference_nt": 15871,
+  "replacement_aa": "K",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": true,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 56.86795521504775,
+  "grantham_distance_int": 57,
+  "miyata_distance": 1.1443659173772327,
+  "parent_feature": "ORF_1ab",
+  "parent_codon_label": "5203"
+}

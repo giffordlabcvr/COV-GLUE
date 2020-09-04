@@ -1,0 +1,18 @@
+{
+  "id": "NSP12:R:33:W",
+  "display_name": "R33W",
+  "variation.featureLoc.feature.name": "NSP12",
+  "codon_label": "33",
+  "codon_label_int": 33,
+  "reference_aa": "R",
+  "reference_nt": 13537,
+  "replacement_aa": "W",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": true,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 101.2904807374348,
+  "grantham_distance_int": 101,
+  "miyata_distance": 2.715820642666301,
+  "parent_feature": "ORF_1ab",
+  "parent_codon_label": "4425"
+}

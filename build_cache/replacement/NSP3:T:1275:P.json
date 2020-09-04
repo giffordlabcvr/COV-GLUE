@@ -1,0 +1,18 @@
+{
+  "id": "NSP3:T:1275:P",
+  "display_name": "T1275P",
+  "variation.featureLoc.feature.name": "NSP3",
+  "codon_label": "1275",
+  "codon_label_int": 1275,
+  "reference_aa": "T",
+  "reference_nt": 6542,
+  "replacement_aa": "P",
+  "radical_hanada_category_i": false,
+  "radical_hanada_category_ii": false,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 37.56362475504698,
+  "grantham_distance_int": 38,
+  "miyata_distance": 0.873755109177339,
+  "parent_feature": "ORF_1a",
+  "parent_codon_label": "2093"
+}

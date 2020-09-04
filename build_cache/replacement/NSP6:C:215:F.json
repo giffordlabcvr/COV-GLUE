@@ -1,0 +1,18 @@
+{
+  "id": "NSP6:C:215:F",
+  "display_name": "C215F",
+  "variation.featureLoc.feature.name": "NSP6",
+  "codon_label": "215",
+  "codon_label_int": 215,
+  "reference_aa": "C",
+  "reference_nt": 11615,
+  "replacement_aa": "F",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": true,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 204.38848742235413,
+  "grantham_distance_int": 204,
+  "miyata_distance": 2.2422122336883987,
+  "parent_feature": "ORF_1a",
+  "parent_codon_label": "3784"
+}

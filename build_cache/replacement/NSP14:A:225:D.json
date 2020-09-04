@@ -1,0 +1,18 @@
+{
+  "id": "NSP14:A:225:D",
+  "display_name": "A225D",
+  "variation.featureLoc.feature.name": "NSP14",
+  "codon_label": "225",
+  "codon_label_int": 225,
+  "reference_aa": "A",
+  "reference_nt": 18712,
+  "replacement_aa": "D",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": true,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 125.74859020850259,
+  "grantham_distance_int": 126,
+  "miyata_distance": 2.3675832690225778,
+  "parent_feature": "ORF_1ab",
+  "parent_codon_label": "6150"
+}

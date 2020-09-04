@@ -1,0 +1,18 @@
+{
+  "id": "NSP3:F:1540:D",
+  "display_name": "F1540D",
+  "variation.featureLoc.feature.name": "NSP3",
+  "codon_label": "1540",
+  "codon_label_int": 1540,
+  "reference_aa": "F",
+  "reference_nt": 7337,
+  "replacement_aa": "D",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": true,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 176.52619305334733,
+  "grantham_distance_int": 177,
+  "miyata_distance": 4.267403445829135,
+  "parent_feature": "ORF_1a",
+  "parent_codon_label": "2358"
+}

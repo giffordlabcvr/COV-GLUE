@@ -1,0 +1,18 @@
+{
+  "id": "NSP1:M:85:T",
+  "display_name": "M85T",
+  "variation.featureLoc.feature.name": "NSP1",
+  "codon_label": "85",
+  "codon_label_int": 85,
+  "reference_aa": "M",
+  "reference_nt": 518,
+  "replacement_aa": "T",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": false,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 81.0396927923509,
+  "grantham_distance_int": 81,
+  "miyata_distance": 1.8553256449702145,
+  "parent_feature": "ORF_1a",
+  "parent_codon_label": "85"
+}

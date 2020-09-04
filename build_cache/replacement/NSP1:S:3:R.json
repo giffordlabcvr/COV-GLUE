@@ -1,0 +1,18 @@
+{
+  "id": "NSP1:S:3:R",
+  "display_name": "S3R",
+  "variation.featureLoc.feature.name": "NSP1",
+  "codon_label": "3",
+  "codon_label_int": 3,
+  "reference_aa": "S",
+  "reference_nt": 272,
+  "replacement_aa": "R",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": true,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 109.21315295411507,
+  "grantham_distance_int": 109,
+  "miyata_distance": 2.7409075071380777,
+  "parent_feature": "ORF_1a",
+  "parent_codon_label": "3"
+}

@@ -1,0 +1,18 @@
+{
+  "id": "NSP12:A:580:V",
+  "display_name": "A580V",
+  "variation.featureLoc.feature.name": "NSP12",
+  "codon_label": "580",
+  "codon_label_int": 580,
+  "reference_aa": "A",
+  "reference_nt": 15178,
+  "replacement_aa": "V",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": false,
+  "radical_hanada_category_iii": false,
+  "grantham_distance_double": 64.43025059480746,
+  "grantham_distance_int": 64,
+  "miyata_distance": 1.847329414521172,
+  "parent_feature": "ORF_1ab",
+  "parent_codon_label": "4972"
+}

@@ -1,0 +1,18 @@
+{
+  "id": "NSP3:W:851:L",
+  "display_name": "W851L",
+  "variation.featureLoc.feature.name": "NSP3",
+  "codon_label": "851",
+  "codon_label_int": 851,
+  "reference_aa": "W",
+  "reference_nt": 5270,
+  "replacement_aa": "L",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": true,
+  "radical_hanada_category_iii": false,
+  "grantham_distance_double": 60.980495578874596,
+  "grantham_distance_int": 61,
+  "miyata_distance": 1.730342752116309,
+  "parent_feature": "ORF_1a",
+  "parent_codon_label": "1669"
+}

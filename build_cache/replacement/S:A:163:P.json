@@ -1,0 +1,18 @@
+{
+  "id": "S:A:163:P",
+  "display_name": "A163P",
+  "variation.featureLoc.feature.name": "S",
+  "codon_label": "163",
+  "codon_label_int": 163,
+  "reference_aa": "A",
+  "reference_nt": 22049,
+  "replacement_aa": "P",
+  "radical_hanada_category_i": false,
+  "radical_hanada_category_ii": false,
+  "radical_hanada_category_iii": false,
+  "grantham_distance_double": 26.874338336271116,
+  "grantham_distance_int": 27,
+  "miyata_distance": 0.06363239751244655,
+  "parent_feature": null,
+  "parent_codon_label": null
+}

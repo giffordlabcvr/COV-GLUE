@@ -1,0 +1,18 @@
+{
+  "id": "NSP14:R:310:G",
+  "display_name": "R310G",
+  "variation.featureLoc.feature.name": "NSP14",
+  "codon_label": "310",
+  "codon_label_int": 310,
+  "reference_aa": "R",
+  "reference_nt": 18967,
+  "replacement_aa": "G",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": true,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 125.12919263514027,
+  "grantham_distance_int": 125,
+  "miyata_distance": 3.584766932145264,
+  "parent_feature": "ORF_1ab",
+  "parent_codon_label": "6235"
+}

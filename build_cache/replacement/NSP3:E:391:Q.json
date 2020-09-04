@@ -1,0 +1,18 @@
+{
+  "id": "NSP3:E:391:Q",
+  "display_name": "E391Q",
+  "variation.featureLoc.feature.name": "NSP3",
+  "codon_label": "391",
+  "codon_label_int": 391,
+  "reference_aa": "E",
+  "reference_nt": 3890,
+  "replacement_aa": "Q",
+  "radical_hanada_category_i": false,
+  "radical_hanada_category_ii": true,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 29.273706240977482,
+  "grantham_distance_int": 29,
+  "miyata_distance": 0.8363616795657459,
+  "parent_feature": "ORF_1a",
+  "parent_codon_label": "1209"
+}

@@ -1,0 +1,18 @@
+{
+  "id": "NSP13:P:172:R",
+  "display_name": "P172R",
+  "variation.featureLoc.feature.name": "NSP13",
+  "codon_label": "172",
+  "codon_label_int": 172,
+  "reference_aa": "P",
+  "reference_nt": 16750,
+  "replacement_aa": "R",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": true,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 102.71487090966941,
+  "grantham_distance_int": 103,
+  "miyata_distance": 2.9008276159240594,
+  "parent_feature": "ORF_1ab",
+  "parent_codon_label": "5496"
+}

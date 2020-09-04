@@ -1,0 +1,18 @@
+{
+  "id": "NSP15:I:305:M",
+  "display_name": "I305M",
+  "variation.featureLoc.feature.name": "NSP15",
+  "codon_label": "305",
+  "codon_label_int": 305,
+  "reference_aa": "I",
+  "reference_nt": 20533,
+  "replacement_aa": "M",
+  "radical_hanada_category_i": false,
+  "radical_hanada_category_ii": false,
+  "radical_hanada_category_iii": false,
+  "grantham_distance_double": 10.120986322113374,
+  "grantham_distance_int": 10,
+  "miyata_distance": 0.2900379922702617,
+  "parent_feature": "ORF_1ab",
+  "parent_codon_label": "6757"
+}

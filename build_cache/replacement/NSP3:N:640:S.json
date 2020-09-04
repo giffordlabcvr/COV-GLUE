@@ -1,0 +1,18 @@
+{
+  "id": "NSP3:N:640:S",
+  "display_name": "N640S",
+  "variation.featureLoc.feature.name": "NSP3",
+  "codon_label": "640",
+  "codon_label_int": 640,
+  "reference_aa": "N",
+  "reference_nt": 4637,
+  "replacement_aa": "S",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": false,
+  "radical_hanada_category_iii": false,
+  "grantham_distance_double": 46.23977508306296,
+  "grantham_distance_int": 46,
+  "miyata_distance": 1.3130472141012726,
+  "parent_feature": "ORF_1a",
+  "parent_codon_label": "1458"
+}

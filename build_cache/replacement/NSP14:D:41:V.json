@@ -1,0 +1,18 @@
+{
+  "id": "NSP14:D:41:V",
+  "display_name": "D41V",
+  "variation.featureLoc.feature.name": "NSP14",
+  "codon_label": "41",
+  "codon_label_int": 41,
+  "reference_aa": "D",
+  "reference_nt": 18160,
+  "replacement_aa": "V",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": true,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 152.01339696164652,
+  "grantham_distance_int": 152,
+  "miyata_distance": 3.4045465485098587,
+  "parent_feature": "ORF_1ab",
+  "parent_codon_label": "5966"
+}

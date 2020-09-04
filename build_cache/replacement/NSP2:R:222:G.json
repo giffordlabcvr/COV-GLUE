@@ -1,0 +1,18 @@
+{
+  "id": "NSP2:R:222:G",
+  "display_name": "R222G",
+  "variation.featureLoc.feature.name": "NSP2",
+  "codon_label": "222",
+  "codon_label_int": 222,
+  "reference_aa": "R",
+  "reference_nt": 1469,
+  "replacement_aa": "G",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": true,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 125.12919263514027,
+  "grantham_distance_int": 125,
+  "miyata_distance": 3.584766932145264,
+  "parent_feature": "ORF_1a",
+  "parent_codon_label": "402"
+}

@@ -1,0 +1,18 @@
+{
+  "id": "NSP13:P:491:T",
+  "display_name": "P491T",
+  "variation.featureLoc.feature.name": "NSP13",
+  "codon_label": "491",
+  "codon_label_int": 491,
+  "reference_aa": "P",
+  "reference_nt": 17707,
+  "replacement_aa": "T",
+  "radical_hanada_category_i": false,
+  "radical_hanada_category_ii": false,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 37.56362475504698,
+  "grantham_distance_int": 38,
+  "miyata_distance": 0.873755109177339,
+  "parent_feature": "ORF_1ab",
+  "parent_codon_label": "5815"
+}

@@ -1,0 +1,18 @@
+{
+  "id": "NSP12:K:593:R",
+  "display_name": "K593R",
+  "variation.featureLoc.feature.name": "NSP12",
+  "codon_label": "593",
+  "codon_label_int": 593,
+  "reference_aa": "K",
+  "reference_nt": 15217,
+  "replacement_aa": "R",
+  "radical_hanada_category_i": false,
+  "radical_hanada_category_ii": false,
+  "radical_hanada_category_iii": false,
+  "grantham_distance_double": 26.003946260840873,
+  "grantham_distance_int": 26,
+  "miyata_distance": 0.3982749033932912,
+  "parent_feature": "ORF_1ab",
+  "parent_codon_label": "4985"
+}

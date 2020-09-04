@@ -1,0 +1,18 @@
+{
+  "id": "NSP13:A:568:T",
+  "display_name": "A568T",
+  "variation.featureLoc.feature.name": "NSP13",
+  "codon_label": "568",
+  "codon_label_int": 568,
+  "reference_aa": "A",
+  "reference_nt": 17938,
+  "replacement_aa": "T",
+  "radical_hanada_category_i": false,
+  "radical_hanada_category_ii": false,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 58.02332760382417,
+  "grantham_distance_int": 58,
+  "miyata_distance": 0.9021839838528766,
+  "parent_feature": "ORF_1ab",
+  "parent_codon_label": "5892"
+}

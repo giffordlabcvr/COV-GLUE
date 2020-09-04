@@ -1,0 +1,18 @@
+{
+  "id": "N:I:320:V",
+  "display_name": "I320V",
+  "variation.featureLoc.feature.name": "N",
+  "codon_label": "320",
+  "codon_label_int": 320,
+  "reference_aa": "I",
+  "reference_nt": 29231,
+  "replacement_aa": "V",
+  "radical_hanada_category_i": false,
+  "radical_hanada_category_ii": false,
+  "radical_hanada_category_iii": false,
+  "grantham_distance_double": 29.609070626666707,
+  "grantham_distance_int": 30,
+  "miyata_distance": 0.8491514617150016,
+  "parent_feature": null,
+  "parent_codon_label": null
+}

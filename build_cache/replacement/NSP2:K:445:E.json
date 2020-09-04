@@ -1,0 +1,18 @@
+{
+  "id": "NSP2:K:445:E",
+  "display_name": "K445E",
+  "variation.featureLoc.feature.name": "NSP2",
+  "codon_label": "445",
+  "codon_label_int": 445,
+  "reference_aa": "K",
+  "reference_nt": 2138,
+  "replacement_aa": "E",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": true,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 56.86795521504775,
+  "grantham_distance_int": 57,
+  "miyata_distance": 1.1443659173772327,
+  "parent_feature": "ORF_1a",
+  "parent_codon_label": "625"
+}

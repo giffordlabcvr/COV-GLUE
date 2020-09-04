@@ -1,0 +1,18 @@
+{
+  "id": "E:T:35:F",
+  "display_name": "T35F",
+  "variation.featureLoc.feature.name": "E",
+  "codon_label": "35",
+  "codon_label_int": 35,
+  "reference_aa": "T",
+  "reference_nt": 26347,
+  "replacement_aa": "F",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": true,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 102.8587190627586,
+  "grantham_distance_int": 103,
+  "miyata_distance": 2.5964952015644465,
+  "parent_feature": null,
+  "parent_codon_label": null
+}

@@ -1,0 +1,18 @@
+{
+  "id": "NSP4:C:468:R",
+  "display_name": "C468R",
+  "variation.featureLoc.feature.name": "NSP4",
+  "codon_label": "468",
+  "codon_label_int": 468,
+  "reference_aa": "C",
+  "reference_nt": 9956,
+  "replacement_aa": "R",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": true,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 179.53483772224598,
+  "grantham_distance_int": 180,
+  "miyata_distance": 3.0647823950803734,
+  "parent_feature": "ORF_1a",
+  "parent_codon_label": "3231"
+}

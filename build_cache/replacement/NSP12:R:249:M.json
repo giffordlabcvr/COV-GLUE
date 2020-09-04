@@ -1,0 +1,18 @@
+{
+  "id": "NSP12:R:249:M",
+  "display_name": "R249M",
+  "variation.featureLoc.feature.name": "NSP12",
+  "codon_label": "249",
+  "codon_label_int": 249,
+  "reference_aa": "R",
+  "reference_nt": 14185,
+  "replacement_aa": "M",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": true,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 91.63827667082735,
+  "grantham_distance_int": 92,
+  "miyata_distance": 2.2924081997745525,
+  "parent_feature": "ORF_1ab",
+  "parent_codon_label": "4641"
+}

@@ -1,0 +1,18 @@
+{
+  "id": "S:D:290:G",
+  "display_name": "D290G",
+  "variation.featureLoc.feature.name": "S",
+  "codon_label": "290",
+  "codon_label_int": 290,
+  "reference_aa": "D",
+  "reference_nt": 22430,
+  "replacement_aa": "G",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": true,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 93.76755082772044,
+  "grantham_distance_int": 94,
+  "miyata_distance": 2.373748911504371,
+  "parent_feature": null,
+  "parent_codon_label": null
+}

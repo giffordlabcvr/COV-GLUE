@@ -1,0 +1,18 @@
+{
+  "id": "NSP5:G:283:S",
+  "display_name": "G283S",
+  "variation.featureLoc.feature.name": "NSP5",
+  "codon_label": "283",
+  "codon_label_int": 283,
+  "reference_aa": "G",
+  "reference_nt": 10901,
+  "replacement_aa": "S",
+  "radical_hanada_category_i": false,
+  "radical_hanada_category_ii": false,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 55.267362761946906,
+  "grantham_distance_int": 55,
+  "miyata_distance": 0.8479269350772444,
+  "parent_feature": "ORF_1a",
+  "parent_codon_label": "3546"
+}

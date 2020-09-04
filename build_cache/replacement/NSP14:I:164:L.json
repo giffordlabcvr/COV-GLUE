@@ -1,0 +1,18 @@
+{
+  "id": "NSP14:I:164:L",
+  "display_name": "I164L",
+  "variation.featureLoc.feature.name": "NSP14",
+  "codon_label": "164",
+  "codon_label_int": 164,
+  "reference_aa": "I",
+  "reference_nt": 18529,
+  "replacement_aa": "L",
+  "radical_hanada_category_i": false,
+  "radical_hanada_category_ii": false,
+  "radical_hanada_category_iii": false,
+  "grantham_distance_double": 4.855121197570456,
+  "grantham_distance_int": 5,
+  "miyata_distance": 0.13905655234203065,
+  "parent_feature": "ORF_1ab",
+  "parent_codon_label": "6089"
+}

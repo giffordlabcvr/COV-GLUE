@@ -1,0 +1,15 @@
+{
+  "id": "NSP4:ca:11:11",
+  "variation.featureLoc.feature.name": "NSP4",
+  "cov_nt_deletion.id": "NSP4:nca:8585:8587",
+  "display_name": "11",
+  "end_codon": "11",
+  "end_codon_int": 11,
+  "parent_end_codon": "2774",
+  "parent_feature": "ORF_1a",
+  "parent_start_codon": "2774",
+  "reference_nt_end": 8587,
+  "reference_nt_start": 8585,
+  "start_codon": "11",
+  "start_codon_int": 11
+}

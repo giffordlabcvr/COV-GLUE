@@ -1,0 +1,18 @@
+{
+  "id": "NSP13:K:146:*",
+  "display_name": "K146*",
+  "variation.featureLoc.feature.name": "NSP13",
+  "codon_label": "146",
+  "codon_label_int": 146,
+  "reference_aa": "K",
+  "reference_nt": 16672,
+  "replacement_aa": "*",
+  "radical_hanada_category_i": null,
+  "radical_hanada_category_ii": null,
+  "radical_hanada_category_iii": null,
+  "grantham_distance_double": null,
+  "grantham_distance_int": null,
+  "miyata_distance": null,
+  "parent_feature": "ORF_1ab",
+  "parent_codon_label": "5470"
+}

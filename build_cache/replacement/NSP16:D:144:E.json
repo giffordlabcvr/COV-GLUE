@@ -1,0 +1,18 @@
+{
+  "id": "NSP16:D:144:E",
+  "display_name": "D144E",
+  "variation.featureLoc.feature.name": "NSP16",
+  "codon_label": "144",
+  "codon_label_int": 144,
+  "reference_aa": "D",
+  "reference_nt": 21088,
+  "replacement_aa": "E",
+  "radical_hanada_category_i": false,
+  "radical_hanada_category_ii": false,
+  "radical_hanada_category_iii": false,
+  "grantham_distance_double": 44.60463645252665,
+  "grantham_distance_int": 45,
+  "miyata_distance": 0.9031410249655084,
+  "parent_feature": "ORF_1ab",
+  "parent_codon_label": "6942"
+}

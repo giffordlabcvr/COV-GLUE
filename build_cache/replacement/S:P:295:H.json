@@ -1,0 +1,18 @@
+{
+  "id": "S:P:295:H",
+  "display_name": "P295H",
+  "variation.featureLoc.feature.name": "S",
+  "codon_label": "295",
+  "codon_label_int": 295,
+  "reference_aa": "P",
+  "reference_nt": 22445,
+  "replacement_aa": "H",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": true,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 76.27712276797571,
+  "grantham_distance_int": 76,
+  "miyata_distance": 2.154892056346583,
+  "parent_feature": null,
+  "parent_codon_label": null
+}

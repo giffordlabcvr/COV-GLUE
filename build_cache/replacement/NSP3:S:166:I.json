@@ -1,0 +1,18 @@
+{
+  "id": "NSP3:S:166:I",
+  "display_name": "S166I",
+  "variation.featureLoc.feature.name": "NSP3",
+  "codon_label": "166",
+  "codon_label_int": 166,
+  "reference_aa": "S",
+  "reference_nt": 3215,
+  "replacement_aa": "I",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": false,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 141.79796048658147,
+  "grantham_distance_int": 142,
+  "miyata_distance": 2.951162964200133,
+  "parent_feature": "ORF_1a",
+  "parent_codon_label": "984"
+}

@@ -1,0 +1,18 @@
+{
+  "id": "NSP12:P:227:S",
+  "display_name": "P227S",
+  "variation.featureLoc.feature.name": "NSP12",
+  "codon_label": "227",
+  "codon_label_int": 227,
+  "reference_aa": "P",
+  "reference_nt": 14119,
+  "replacement_aa": "S",
+  "radical_hanada_category_i": false,
+  "radical_hanada_category_ii": false,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 73.35256887257073,
+  "grantham_distance_int": 73,
+  "miyata_distance": 0.5564160035374529,
+  "parent_feature": "ORF_1ab",
+  "parent_codon_label": "4619"
+}

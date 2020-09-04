@@ -1,0 +1,18 @@
+{
+  "id": "ORF_3a:W:149:L",
+  "display_name": "W149L",
+  "variation.featureLoc.feature.name": "ORF_3a",
+  "codon_label": "149",
+  "codon_label_int": 149,
+  "reference_aa": "W",
+  "reference_nt": 25837,
+  "replacement_aa": "L",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": true,
+  "radical_hanada_category_iii": false,
+  "grantham_distance_double": 60.980495578874596,
+  "grantham_distance_int": 61,
+  "miyata_distance": 1.730342752116309,
+  "parent_feature": null,
+  "parent_codon_label": null
+}

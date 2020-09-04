@@ -1,0 +1,18 @@
+{
+  "id": "NSP12:R:74:K",
+  "display_name": "R74K",
+  "variation.featureLoc.feature.name": "NSP12",
+  "codon_label": "74",
+  "codon_label_int": 74,
+  "reference_aa": "R",
+  "reference_nt": 13660,
+  "replacement_aa": "K",
+  "radical_hanada_category_i": false,
+  "radical_hanada_category_ii": false,
+  "radical_hanada_category_iii": false,
+  "grantham_distance_double": 26.003946260840873,
+  "grantham_distance_int": 26,
+  "miyata_distance": 0.3982749033932912,
+  "parent_feature": "ORF_1ab",
+  "parent_codon_label": "4466"
+}

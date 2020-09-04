@@ -1,0 +1,18 @@
+{
+  "id": "S:H:146:N",
+  "display_name": "H146N",
+  "variation.featureLoc.feature.name": "S",
+  "codon_label": "146",
+  "codon_label_int": 146,
+  "reference_aa": "H",
+  "reference_nt": 21998,
+  "replacement_aa": "N",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": true,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 68.35485567757956,
+  "grantham_distance_int": 68,
+  "miyata_distance": 1.288757085402098,
+  "parent_feature": null,
+  "parent_codon_label": null
+}

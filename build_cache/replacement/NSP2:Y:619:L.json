@@ -1,0 +1,18 @@
+{
+  "id": "NSP2:Y:619:L",
+  "display_name": "Y619L",
+  "variation.featureLoc.feature.name": "NSP2",
+  "codon_label": "619",
+  "codon_label_int": 619,
+  "reference_aa": "Y",
+  "reference_nt": 2660,
+  "replacement_aa": "L",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": true,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 35.67731209714758,
+  "grantham_distance_int": 36,
+  "miyata_distance": 0.9439455660642306,
+  "parent_feature": "ORF_1a",
+  "parent_codon_label": "799"
+}

@@ -1,0 +1,18 @@
+{
+  "id": "NSP3:I:1663:K",
+  "display_name": "I1663K",
+  "variation.featureLoc.feature.name": "NSP3",
+  "codon_label": "1663",
+  "codon_label_int": 1663,
+  "reference_aa": "I",
+  "reference_nt": 7706,
+  "replacement_aa": "K",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": true,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 101.6123327206865,
+  "grantham_distance_int": 102,
+  "miyata_distance": 2.837026913953594,
+  "parent_feature": "ORF_1a",
+  "parent_codon_label": "2481"
+}

@@ -1,0 +1,18 @@
+{
+  "id": "NSP16:C:154:F",
+  "display_name": "C154F",
+  "variation.featureLoc.feature.name": "NSP16",
+  "codon_label": "154",
+  "codon_label_int": 154,
+  "reference_aa": "C",
+  "reference_nt": 21118,
+  "replacement_aa": "F",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": true,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 204.38848742235413,
+  "grantham_distance_int": 204,
+  "miyata_distance": 2.2422122336883987,
+  "parent_feature": "ORF_1ab",
+  "parent_codon_label": "6952"
+}

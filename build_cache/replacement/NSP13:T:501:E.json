@@ -1,0 +1,18 @@
+{
+  "id": "NSP13:T:501:E",
+  "display_name": "T501E",
+  "variation.featureLoc.feature.name": "NSP13",
+  "codon_label": "501",
+  "codon_label_int": 501,
+  "reference_aa": "T",
+  "reference_nt": 17737,
+  "replacement_aa": "E",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": true,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 65.50131254385761,
+  "grantham_distance_int": 66,
+  "miyata_distance": 1.8303446734665099,
+  "parent_feature": "ORF_1ab",
+  "parent_codon_label": "5825"
+}

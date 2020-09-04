@@ -1,0 +1,18 @@
+{
+  "id": "S:N:188:K",
+  "display_name": "N188K",
+  "variation.featureLoc.feature.name": "S",
+  "codon_label": "188",
+  "codon_label_int": 188,
+  "reference_aa": "N",
+  "reference_nt": 22124,
+  "replacement_aa": "K",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": true,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 93.88268261638616,
+  "grantham_distance_int": 94,
+  "miyata_distance": 1.8362786676180092,
+  "parent_feature": null,
+  "parent_codon_label": null
+}

@@ -1,0 +1,18 @@
+{
+  "id": "NSP16:V:96:I",
+  "display_name": "V96I",
+  "variation.featureLoc.feature.name": "NSP16",
+  "codon_label": "96",
+  "codon_label_int": 96,
+  "reference_aa": "V",
+  "reference_nt": 20944,
+  "replacement_aa": "I",
+  "radical_hanada_category_i": false,
+  "radical_hanada_category_ii": false,
+  "radical_hanada_category_iii": false,
+  "grantham_distance_double": 29.609070626666707,
+  "grantham_distance_int": 30,
+  "miyata_distance": 0.8491514617150016,
+  "parent_feature": "ORF_1ab",
+  "parent_codon_label": "6894"
+}

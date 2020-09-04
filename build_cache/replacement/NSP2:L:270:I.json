@@ -1,0 +1,18 @@
+{
+  "id": "NSP2:L:270:I",
+  "display_name": "L270I",
+  "variation.featureLoc.feature.name": "NSP2",
+  "codon_label": "270",
+  "codon_label_int": 270,
+  "reference_aa": "L",
+  "reference_nt": 1613,
+  "replacement_aa": "I",
+  "radical_hanada_category_i": false,
+  "radical_hanada_category_ii": false,
+  "radical_hanada_category_iii": false,
+  "grantham_distance_double": 4.855121197570456,
+  "grantham_distance_int": 5,
+  "miyata_distance": 0.13905655234203065,
+  "parent_feature": "ORF_1a",
+  "parent_codon_label": "450"
+}

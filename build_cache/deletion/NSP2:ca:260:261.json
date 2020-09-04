@@ -1,0 +1,15 @@
+{
+  "id": "NSP2:ca:260:261",
+  "variation.featureLoc.feature.name": "NSP2",
+  "cov_nt_deletion.id": "NSP2:nca:1583:1588",
+  "display_name": "260-261",
+  "end_codon": "261",
+  "end_codon_int": 261,
+  "parent_end_codon": "441",
+  "parent_feature": "ORF_1a",
+  "parent_start_codon": "440",
+  "reference_nt_end": 1588,
+  "reference_nt_start": 1583,
+  "start_codon": "260",
+  "start_codon_int": 260
+}

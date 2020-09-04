@@ -1,0 +1,18 @@
+{
+  "id": "NSP10:Y:96:S",
+  "display_name": "Y96S",
+  "variation.featureLoc.feature.name": "NSP10",
+  "codon_label": "96",
+  "codon_label_int": 96,
+  "reference_aa": "Y",
+  "reference_nt": 13310,
+  "replacement_aa": "S",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": true,
+  "radical_hanada_category_iii": false,
+  "grantham_distance_double": 143.10738438907285,
+  "grantham_distance_int": 143,
+  "miyata_distance": 3.327140114906959,
+  "parent_feature": "ORF_1a",
+  "parent_codon_label": "4349"
+}

@@ -1,0 +1,18 @@
+{
+  "id": "NSP8:A:3:P",
+  "display_name": "A3P",
+  "variation.featureLoc.feature.name": "NSP8",
+  "codon_label": "3",
+  "codon_label_int": 3,
+  "reference_aa": "A",
+  "reference_nt": 12098,
+  "replacement_aa": "P",
+  "radical_hanada_category_i": false,
+  "radical_hanada_category_ii": false,
+  "radical_hanada_category_iii": false,
+  "grantham_distance_double": 26.874338336271116,
+  "grantham_distance_int": 27,
+  "miyata_distance": 0.06363239751244655,
+  "parent_feature": "ORF_1a",
+  "parent_codon_label": "3945"
+}

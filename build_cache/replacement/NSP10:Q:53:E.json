@@ -1,0 +1,18 @@
+{
+  "id": "NSP10:Q:53:E",
+  "display_name": "Q53E",
+  "variation.featureLoc.feature.name": "NSP10",
+  "codon_label": "53",
+  "codon_label_int": 53,
+  "reference_aa": "Q",
+  "reference_nt": 13181,
+  "replacement_aa": "E",
+  "radical_hanada_category_i": false,
+  "radical_hanada_category_ii": true,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 29.273706240977482,
+  "grantham_distance_int": 29,
+  "miyata_distance": 0.8363616795657459,
+  "parent_feature": "ORF_1a",
+  "parent_codon_label": "4306"
+}

@@ -1,0 +1,18 @@
+{
+  "id": "ORF_3a:E:194:G",
+  "display_name": "E194G",
+  "variation.featureLoc.feature.name": "ORF_3a",
+  "codon_label": "194",
+  "codon_label_int": 194,
+  "reference_aa": "E",
+  "reference_nt": 25972,
+  "replacement_aa": "G",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": true,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 97.85190047927728,
+  "grantham_distance_int": 98,
+  "miyata_distance": 2.7831228164426745,
+  "parent_feature": null,
+  "parent_codon_label": null
+}

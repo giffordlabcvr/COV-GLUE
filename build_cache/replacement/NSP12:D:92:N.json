@@ -1,0 +1,18 @@
+{
+  "id": "NSP12:D:92:N",
+  "display_name": "D92N",
+  "variation.featureLoc.feature.name": "NSP12",
+  "codon_label": "92",
+  "codon_label_int": 92,
+  "reference_aa": "D",
+  "reference_nt": 13714,
+  "replacement_aa": "N",
+  "radical_hanada_category_i": false,
+  "radical_hanada_category_ii": true,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 23.00535500058712,
+  "grantham_distance_int": 23,
+  "miyata_distance": 0.6515287120397918,
+  "parent_feature": "ORF_1ab",
+  "parent_codon_label": "4484"
+}

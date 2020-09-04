@@ -1,0 +1,15 @@
+{
+  "id": "NSP4:ca:71:74",
+  "variation.featureLoc.feature.name": "NSP4",
+  "cov_nt_deletion.id": "NSP4:nca:8765:8776",
+  "display_name": "71-74",
+  "end_codon": "74",
+  "end_codon_int": 74,
+  "parent_end_codon": "2837",
+  "parent_feature": "ORF_1a",
+  "parent_start_codon": "2834",
+  "reference_nt_end": 8776,
+  "reference_nt_start": 8765,
+  "start_codon": "71",
+  "start_codon_int": 71
+}

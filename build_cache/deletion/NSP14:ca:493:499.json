@@ -1,0 +1,15 @@
+{
+  "id": "NSP14:ca:493:499",
+  "variation.featureLoc.feature.name": "NSP14",
+  "cov_nt_deletion.id": "NSP14:nca:19516:19536",
+  "display_name": "493-499",
+  "end_codon": "499",
+  "end_codon_int": 499,
+  "parent_end_codon": "6424",
+  "parent_feature": "ORF_1ab",
+  "parent_start_codon": "6418",
+  "reference_nt_end": 19536,
+  "reference_nt_start": 19516,
+  "start_codon": "493",
+  "start_codon_int": 493
+}

@@ -1,0 +1,18 @@
+{
+  "id": "NSP16:I:290:L",
+  "display_name": "I290L",
+  "variation.featureLoc.feature.name": "NSP16",
+  "codon_label": "290",
+  "codon_label_int": 290,
+  "reference_aa": "I",
+  "reference_nt": 21526,
+  "replacement_aa": "L",
+  "radical_hanada_category_i": false,
+  "radical_hanada_category_ii": false,
+  "radical_hanada_category_iii": false,
+  "grantham_distance_double": 4.855121197570456,
+  "grantham_distance_int": 5,
+  "miyata_distance": 0.13905655234203065,
+  "parent_feature": "ORF_1ab",
+  "parent_codon_label": "7088"
+}

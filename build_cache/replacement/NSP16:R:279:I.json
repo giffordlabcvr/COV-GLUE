@@ -1,0 +1,18 @@
+{
+  "id": "NSP16:R:279:I",
+  "display_name": "R279I",
+  "variation.featureLoc.feature.name": "NSP16",
+  "codon_label": "279",
+  "codon_label_int": 279,
+  "reference_aa": "R",
+  "reference_nt": 21493,
+  "replacement_aa": "I",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": true,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 97.58656354400169,
+  "grantham_distance_int": 98,
+  "miyata_distance": 2.485550159989036,
+  "parent_feature": "ORF_1ab",
+  "parent_codon_label": "7077"
+}

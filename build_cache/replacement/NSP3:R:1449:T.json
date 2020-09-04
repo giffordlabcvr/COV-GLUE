@@ -1,0 +1,18 @@
+{
+  "id": "NSP3:R:1449:T",
+  "display_name": "R1449T",
+  "variation.featureLoc.feature.name": "NSP3",
+  "codon_label": "1449",
+  "codon_label_int": 1449,
+  "reference_aa": "R",
+  "reference_nt": 7064,
+  "replacement_aa": "T",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": true,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 70.97102634903321,
+  "grantham_distance_int": 71,
+  "miyata_distance": 2.0317972672838045,
+  "parent_feature": "ORF_1a",
+  "parent_codon_label": "2267"
+}

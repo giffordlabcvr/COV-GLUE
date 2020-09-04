@@ -1,0 +1,18 @@
+{
+  "id": "NSP1:R:24:C",
+  "display_name": "R24C",
+  "variation.featureLoc.feature.name": "NSP1",
+  "codon_label": "24",
+  "codon_label_int": 24,
+  "reference_aa": "R",
+  "reference_nt": 335,
+  "replacement_aa": "C",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": true,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 179.53483772224598,
+  "grantham_distance_int": 180,
+  "miyata_distance": 3.0647823950803734,
+  "parent_feature": "ORF_1a",
+  "parent_codon_label": "24"
+}

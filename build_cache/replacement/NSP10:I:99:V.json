@@ -1,0 +1,18 @@
+{
+  "id": "NSP10:I:99:V",
+  "display_name": "I99V",
+  "variation.featureLoc.feature.name": "NSP10",
+  "codon_label": "99",
+  "codon_label_int": 99,
+  "reference_aa": "I",
+  "reference_nt": 13319,
+  "replacement_aa": "V",
+  "radical_hanada_category_i": false,
+  "radical_hanada_category_ii": false,
+  "radical_hanada_category_iii": false,
+  "grantham_distance_double": 29.609070626666707,
+  "grantham_distance_int": 30,
+  "miyata_distance": 0.8491514617150016,
+  "parent_feature": "ORF_1a",
+  "parent_codon_label": "4352"
+}

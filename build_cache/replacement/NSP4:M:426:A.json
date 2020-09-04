@@ -1,0 +1,18 @@
+{
+  "id": "NSP4:M:426:A",
+  "display_name": "M426A",
+  "variation.featureLoc.feature.name": "NSP4",
+  "codon_label": "426",
+  "codon_label_int": 426,
+  "reference_aa": "M",
+  "reference_nt": 9830,
+  "replacement_aa": "A",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": false,
+  "radical_hanada_category_iii": false,
+  "grantham_distance_double": 84.43958222478287,
+  "grantham_distance_int": 84,
+  "miyata_distance": 2.421380572285464,
+  "parent_feature": "ORF_1a",
+  "parent_codon_label": "3189"
+}

@@ -1,0 +1,18 @@
+{
+  "id": "NSP10:M:122:V",
+  "display_name": "M122V",
+  "variation.featureLoc.feature.name": "NSP10",
+  "codon_label": "122",
+  "codon_label_int": 122,
+  "reference_aa": "M",
+  "reference_nt": 13388,
+  "replacement_aa": "V",
+  "radical_hanada_category_i": false,
+  "radical_hanada_category_ii": false,
+  "radical_hanada_category_iii": false,
+  "grantham_distance_double": 21.521799383987368,
+  "grantham_distance_int": 22,
+  "miyata_distance": 0.6173356298910421,
+  "parent_feature": "ORF_1a",
+  "parent_codon_label": "4375"
+}

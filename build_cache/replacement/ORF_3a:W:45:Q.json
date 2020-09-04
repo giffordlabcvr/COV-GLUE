@@ -1,0 +1,18 @@
+{
+  "id": "ORF_3a:W:45:Q",
+  "display_name": "W45Q",
+  "variation.featureLoc.feature.name": "ORF_3a",
+  "codon_label": "45",
+  "codon_label_int": 45,
+  "reference_aa": "W",
+  "reference_nt": 25525,
+  "replacement_aa": "Q",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": true,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 130.20440764278274,
+  "grantham_distance_int": 130,
+  "miyata_distance": 3.4192416241510633,
+  "parent_feature": null,
+  "parent_codon_label": null
+}

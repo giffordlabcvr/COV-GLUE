@@ -1,0 +1,18 @@
+{
+  "id": "NSP3:F:800:T",
+  "display_name": "F800T",
+  "variation.featureLoc.feature.name": "NSP3",
+  "codon_label": "800",
+  "codon_label_int": 800,
+  "reference_aa": "F",
+  "reference_nt": 5117,
+  "replacement_aa": "T",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": true,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 102.8587190627586,
+  "grantham_distance_int": 103,
+  "miyata_distance": 2.5964952015644465,
+  "parent_feature": "ORF_1a",
+  "parent_codon_label": "1618"
+}

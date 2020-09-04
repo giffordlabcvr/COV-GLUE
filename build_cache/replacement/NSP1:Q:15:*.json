@@ -1,0 +1,18 @@
+{
+  "id": "NSP1:Q:15:*",
+  "display_name": "Q15*",
+  "variation.featureLoc.feature.name": "NSP1",
+  "codon_label": "15",
+  "codon_label_int": 15,
+  "reference_aa": "Q",
+  "reference_nt": 308,
+  "replacement_aa": "*",
+  "radical_hanada_category_i": null,
+  "radical_hanada_category_ii": null,
+  "radical_hanada_category_iii": null,
+  "grantham_distance_double": null,
+  "grantham_distance_int": null,
+  "miyata_distance": null,
+  "parent_feature": "ORF_1a",
+  "parent_codon_label": "15"
+}

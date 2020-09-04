@@ -1,0 +1,18 @@
+{
+  "id": "NSP13:V:371:G",
+  "display_name": "V371G",
+  "variation.featureLoc.feature.name": "NSP13",
+  "codon_label": "371",
+  "codon_label_int": 371,
+  "reference_aa": "V",
+  "reference_nt": 17347,
+  "replacement_aa": "G",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": false,
+  "radical_hanada_category_iii": false,
+  "grantham_distance_double": 108.78738843583756,
+  "grantham_distance_int": 109,
+  "miyata_distance": 2.7580349580646812,
+  "parent_feature": "ORF_1ab",
+  "parent_codon_label": "5695"
+}

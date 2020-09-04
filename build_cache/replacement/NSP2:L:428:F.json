@@ -1,0 +1,18 @@
+{
+  "id": "NSP2:L:428:F",
+  "display_name": "L428F",
+  "variation.featureLoc.feature.name": "NSP2",
+  "codon_label": "428",
+  "codon_label_int": 428,
+  "reference_aa": "L",
+  "reference_nt": 2087,
+  "replacement_aa": "F",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": true,
+  "radical_hanada_category_iii": false,
+  "grantham_distance_double": 21.823920738840876,
+  "grantham_distance_int": 22,
+  "miyata_distance": 0.6259759618337314,
+  "parent_feature": "ORF_1a",
+  "parent_codon_label": "608"
+}

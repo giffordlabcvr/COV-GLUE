@@ -1,0 +1,18 @@
+{
+  "id": "NSP15:D:272:G",
+  "display_name": "D272G",
+  "variation.featureLoc.feature.name": "NSP15",
+  "codon_label": "272",
+  "codon_label_int": 272,
+  "reference_aa": "D",
+  "reference_nt": 20434,
+  "replacement_aa": "G",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": true,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 93.76755082772044,
+  "grantham_distance_int": 94,
+  "miyata_distance": 2.373748911504371,
+  "parent_feature": "ORF_1ab",
+  "parent_codon_label": "6724"
+}

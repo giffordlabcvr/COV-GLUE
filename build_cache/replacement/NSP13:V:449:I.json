@@ -1,0 +1,18 @@
+{
+  "id": "NSP13:V:449:I",
+  "display_name": "V449I",
+  "variation.featureLoc.feature.name": "NSP13",
+  "codon_label": "449",
+  "codon_label_int": 449,
+  "reference_aa": "V",
+  "reference_nt": 17581,
+  "replacement_aa": "I",
+  "radical_hanada_category_i": false,
+  "radical_hanada_category_ii": false,
+  "radical_hanada_category_iii": false,
+  "grantham_distance_double": 29.609070626666707,
+  "grantham_distance_int": 30,
+  "miyata_distance": 0.8491514617150016,
+  "parent_feature": "ORF_1ab",
+  "parent_codon_label": "5773"
+}

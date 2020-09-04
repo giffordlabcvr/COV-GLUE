@@ -1,0 +1,18 @@
+{
+  "id": "NSP12:A:690:D",
+  "display_name": "A690D",
+  "variation.featureLoc.feature.name": "NSP12",
+  "codon_label": "690",
+  "codon_label_int": 690,
+  "reference_aa": "A",
+  "reference_nt": 15508,
+  "replacement_aa": "D",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": true,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 125.74859020850259,
+  "grantham_distance_int": 126,
+  "miyata_distance": 2.3675832690225778,
+  "parent_feature": "ORF_1ab",
+  "parent_codon_label": "5082"
+}

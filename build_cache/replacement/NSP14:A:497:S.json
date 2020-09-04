@@ -1,0 +1,18 @@
+{
+  "id": "NSP14:A:497:S",
+  "display_name": "A497S",
+  "variation.featureLoc.feature.name": "NSP14",
+  "codon_label": "497",
+  "codon_label_int": 497,
+  "reference_aa": "A",
+  "reference_nt": 19528,
+  "replacement_aa": "S",
+  "radical_hanada_category_i": false,
+  "radical_hanada_category_ii": false,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 99.13249708101095,
+  "grantham_distance_int": 99,
+  "miyata_distance": 0.5107016875310603,
+  "parent_feature": "ORF_1ab",
+  "parent_codon_label": "6422"
+}

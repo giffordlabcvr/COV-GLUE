@@ -1,0 +1,18 @@
+{
+  "id": "NSP13:I:512:F",
+  "display_name": "I512F",
+  "variation.featureLoc.feature.name": "NSP13",
+  "codon_label": "512",
+  "codon_label_int": 512,
+  "reference_aa": "I",
+  "reference_nt": 17770,
+  "replacement_aa": "F",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": true,
+  "radical_hanada_category_iii": false,
+  "grantham_distance_double": 21.277013760678706,
+  "grantham_distance_int": 21,
+  "miyata_distance": 0.6103353013257657,
+  "parent_feature": "ORF_1ab",
+  "parent_codon_label": "5836"
+}

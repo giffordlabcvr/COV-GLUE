@@ -1,0 +1,18 @@
+{
+  "id": "NSP3:C:104:*",
+  "display_name": "C104*",
+  "variation.featureLoc.feature.name": "NSP3",
+  "codon_label": "104",
+  "codon_label_int": 104,
+  "reference_aa": "C",
+  "reference_nt": 3029,
+  "replacement_aa": "*",
+  "radical_hanada_category_i": null,
+  "radical_hanada_category_ii": null,
+  "radical_hanada_category_iii": null,
+  "grantham_distance_double": null,
+  "grantham_distance_int": null,
+  "miyata_distance": null,
+  "parent_feature": "ORF_1a",
+  "parent_codon_label": "922"
+}

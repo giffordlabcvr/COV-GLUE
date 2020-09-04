@@ -1,0 +1,18 @@
+{
+  "id": "NSP14:M:315:L",
+  "display_name": "M315L",
+  "variation.featureLoc.feature.name": "NSP14",
+  "codon_label": "315",
+  "codon_label_int": 315,
+  "reference_aa": "M",
+  "reference_nt": 18982,
+  "replacement_aa": "L",
+  "radical_hanada_category_i": false,
+  "radical_hanada_category_ii": false,
+  "radical_hanada_category_iii": false,
+  "grantham_distance_double": 14.30316650672724,
+  "grantham_distance_int": 14,
+  "miyata_distance": 0.4097737313122809,
+  "parent_feature": "ORF_1ab",
+  "parent_codon_label": "6240"
+}

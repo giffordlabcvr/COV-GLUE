@@ -1,0 +1,18 @@
+{
+  "id": "NSP15:A:92:P",
+  "display_name": "A92P",
+  "variation.featureLoc.feature.name": "NSP15",
+  "codon_label": "92",
+  "codon_label_int": 92,
+  "reference_aa": "A",
+  "reference_nt": 19894,
+  "replacement_aa": "P",
+  "radical_hanada_category_i": false,
+  "radical_hanada_category_ii": false,
+  "radical_hanada_category_iii": false,
+  "grantham_distance_double": 26.874338336271116,
+  "grantham_distance_int": 27,
+  "miyata_distance": 0.06363239751244655,
+  "parent_feature": "ORF_1ab",
+  "parent_codon_label": "6544"
+}

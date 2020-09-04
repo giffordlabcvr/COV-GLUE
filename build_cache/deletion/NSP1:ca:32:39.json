@@ -1,0 +1,15 @@
+{
+  "id": "NSP1:ca:32:39",
+  "variation.featureLoc.feature.name": "NSP1",
+  "cov_nt_deletion.id": "NSP1:nca:359:382",
+  "display_name": "32-39",
+  "end_codon": "39",
+  "end_codon_int": 39,
+  "parent_end_codon": "39",
+  "parent_feature": "ORF_1a",
+  "parent_start_codon": "32",
+  "reference_nt_end": 382,
+  "reference_nt_start": 359,
+  "start_codon": "32",
+  "start_codon_int": 32
+}

@@ -1,0 +1,18 @@
+{
+  "id": "NSP14:C:477:Q",
+  "display_name": "C477Q",
+  "variation.featureLoc.feature.name": "NSP14",
+  "codon_label": "477",
+  "codon_label_int": 477,
+  "reference_aa": "C",
+  "reference_nt": 19468,
+  "replacement_aa": "Q",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": false,
+  "radical_hanada_category_iii": false,
+  "grantham_distance_double": 154.2308430537589,
+  "grantham_distance_int": 154,
+  "miyata_distance": 2.4761937013822104,
+  "parent_feature": "ORF_1ab",
+  "parent_codon_label": "6402"
+}

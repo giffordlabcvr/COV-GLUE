@@ -1,0 +1,18 @@
+{
+  "id": "S:Y:38:G",
+  "display_name": "Y38G",
+  "variation.featureLoc.feature.name": "S",
+  "codon_label": "38",
+  "codon_label_int": 38,
+  "reference_aa": "Y",
+  "reference_nt": 21674,
+  "replacement_aa": "G",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": true,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 146.92629269977823,
+  "grantham_distance_int": 147,
+  "miyata_distance": 4.077523842827582,
+  "parent_feature": null,
+  "parent_codon_label": null
+}

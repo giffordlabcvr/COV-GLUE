@@ -1,0 +1,18 @@
+{
+  "id": "NSP14:L:479:*",
+  "display_name": "L479*",
+  "variation.featureLoc.feature.name": "NSP14",
+  "codon_label": "479",
+  "codon_label_int": 479,
+  "reference_aa": "L",
+  "reference_nt": 19474,
+  "replacement_aa": "*",
+  "radical_hanada_category_i": null,
+  "radical_hanada_category_ii": null,
+  "radical_hanada_category_iii": null,
+  "grantham_distance_double": null,
+  "grantham_distance_int": null,
+  "miyata_distance": null,
+  "parent_feature": "ORF_1ab",
+  "parent_codon_label": "6404"
+}

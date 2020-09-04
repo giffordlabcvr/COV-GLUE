@@ -1,0 +1,18 @@
+{
+  "id": "NSP13:V:57:D",
+  "display_name": "V57D",
+  "variation.featureLoc.feature.name": "NSP13",
+  "codon_label": "57",
+  "codon_label_int": 57,
+  "reference_aa": "V",
+  "reference_nt": 16405,
+  "replacement_aa": "D",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": true,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 152.01339696164652,
+  "grantham_distance_int": 152,
+  "miyata_distance": 3.4045465485098587,
+  "parent_feature": "ORF_1ab",
+  "parent_codon_label": "5381"
+}

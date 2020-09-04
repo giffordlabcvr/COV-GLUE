@@ -1,0 +1,18 @@
+{
+  "id": "NSP12:F:396:Y",
+  "display_name": "F396Y",
+  "variation.featureLoc.feature.name": "NSP12",
+  "codon_label": "396",
+  "codon_label_int": 396,
+  "reference_aa": "F",
+  "reference_nt": 14626,
+  "replacement_aa": "Y",
+  "radical_hanada_category_i": false,
+  "radical_hanada_category_ii": false,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 21.6096648887579,
+  "grantham_distance_int": 22,
+  "miyata_distance": 0.4778781952608543,
+  "parent_feature": "ORF_1ab",
+  "parent_codon_label": "4788"
+}

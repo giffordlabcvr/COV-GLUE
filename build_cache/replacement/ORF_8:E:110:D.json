@@ -1,0 +1,18 @@
+{
+  "id": "ORF_8:E:110:D",
+  "display_name": "E110D",
+  "variation.featureLoc.feature.name": "ORF_8",
+  "codon_label": "110",
+  "codon_label_int": 110,
+  "reference_aa": "E",
+  "reference_nt": 28221,
+  "replacement_aa": "D",
+  "radical_hanada_category_i": false,
+  "radical_hanada_category_ii": false,
+  "radical_hanada_category_iii": false,
+  "grantham_distance_double": 44.60463645252665,
+  "grantham_distance_int": 45,
+  "miyata_distance": 0.9031410249655084,
+  "parent_feature": null,
+  "parent_codon_label": null
+}

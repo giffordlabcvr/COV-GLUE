@@ -1,0 +1,18 @@
+{
+  "id": "NSP2:A:403:V",
+  "display_name": "A403V",
+  "variation.featureLoc.feature.name": "NSP2",
+  "codon_label": "403",
+  "codon_label_int": 403,
+  "reference_aa": "A",
+  "reference_nt": 2012,
+  "replacement_aa": "V",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": false,
+  "radical_hanada_category_iii": false,
+  "grantham_distance_double": 64.43025059480746,
+  "grantham_distance_int": 64,
+  "miyata_distance": 1.847329414521172,
+  "parent_feature": "ORF_1a",
+  "parent_codon_label": "583"
+}

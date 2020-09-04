@@ -1,0 +1,18 @@
+{
+  "id": "ORF_3a:M:1:V",
+  "display_name": "M1V",
+  "variation.featureLoc.feature.name": "ORF_3a",
+  "codon_label": "1",
+  "codon_label_int": 1,
+  "reference_aa": "M",
+  "reference_nt": 25393,
+  "replacement_aa": "V",
+  "radical_hanada_category_i": false,
+  "radical_hanada_category_ii": false,
+  "radical_hanada_category_iii": false,
+  "grantham_distance_double": 21.521799383987368,
+  "grantham_distance_int": 22,
+  "miyata_distance": 0.6173356298910421,
+  "parent_feature": null,
+  "parent_codon_label": null
+}

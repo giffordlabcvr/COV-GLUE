@@ -1,0 +1,18 @@
+{
+  "id": "NSP4:A:277:V",
+  "display_name": "A277V",
+  "variation.featureLoc.feature.name": "NSP4",
+  "codon_label": "277",
+  "codon_label_int": 277,
+  "reference_aa": "A",
+  "reference_nt": 9383,
+  "replacement_aa": "V",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": false,
+  "radical_hanada_category_iii": false,
+  "grantham_distance_double": 64.43025059480746,
+  "grantham_distance_int": 64,
+  "miyata_distance": 1.847329414521172,
+  "parent_feature": "ORF_1a",
+  "parent_codon_label": "3040"
+}

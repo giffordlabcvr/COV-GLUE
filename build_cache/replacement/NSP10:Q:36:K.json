@@ -1,0 +1,18 @@
+{
+  "id": "NSP10:Q:36:K",
+  "display_name": "Q36K",
+  "variation.featureLoc.feature.name": "NSP10",
+  "codon_label": "36",
+  "codon_label_int": 36,
+  "reference_aa": "Q",
+  "reference_nt": 13130,
+  "replacement_aa": "K",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": true,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 53.228340150510796,
+  "grantham_distance_int": 53,
+  "miyata_distance": 1.0554475691875203,
+  "parent_feature": "ORF_1a",
+  "parent_codon_label": "4289"
+}

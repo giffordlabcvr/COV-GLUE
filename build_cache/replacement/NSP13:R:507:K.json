@@ -1,0 +1,18 @@
+{
+  "id": "NSP13:R:507:K",
+  "display_name": "R507K",
+  "variation.featureLoc.feature.name": "NSP13",
+  "codon_label": "507",
+  "codon_label_int": 507,
+  "reference_aa": "R",
+  "reference_nt": 17755,
+  "replacement_aa": "K",
+  "radical_hanada_category_i": false,
+  "radical_hanada_category_ii": false,
+  "radical_hanada_category_iii": false,
+  "grantham_distance_double": 26.003946260840873,
+  "grantham_distance_int": 26,
+  "miyata_distance": 0.3982749033932912,
+  "parent_feature": "ORF_1ab",
+  "parent_codon_label": "5831"
+}

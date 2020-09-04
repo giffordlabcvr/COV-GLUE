@@ -1,0 +1,18 @@
+{
+  "id": "NSP15:Q:208:L",
+  "display_name": "Q208L",
+  "variation.featureLoc.feature.name": "NSP15",
+  "codon_label": "208",
+  "codon_label_int": 208,
+  "reference_aa": "Q",
+  "reference_nt": 20242,
+  "replacement_aa": "L",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": false,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 112.44147717377763,
+  "grantham_distance_int": 112,
+  "miyata_distance": 2.703476672168515,
+  "parent_feature": "ORF_1ab",
+  "parent_codon_label": "6660"
+}

@@ -1,0 +1,17 @@
+{
+  "id": "NSP4:ca:312:1947308415:313",
+  "variation.featureLoc.feature.name": "NSP4",
+  "cov_nt_insertion.id": "NSP4:nca:9490:492817078:9491",
+  "display_name": "312-HVVAFNTLXXXXXXXXXXXXXXXXXXXXXXXXX-313",
+  "last_codon_before": "312",
+  "last_codon_before_int": 312,
+  "first_codon_after": "313",
+  "first_codon_after_int": 313,
+  "last_ref_nt_before": 9490,
+  "first_ref_nt_after": 9491,
+  "parent_feature": "ORF_1a",
+  "parent_last_codon_before": "3075",
+  "parent_first_codon_after": "3076",
+  "inserted_aas_length": 33,
+  "inserted_aas": "HVVAFNTLXXXXXXXXXXXXXXXXXXXXXXXXX"
+}

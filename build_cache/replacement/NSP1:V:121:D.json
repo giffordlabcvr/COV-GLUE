@@ -1,0 +1,18 @@
+{
+  "id": "NSP1:V:121:D",
+  "display_name": "V121D",
+  "variation.featureLoc.feature.name": "NSP1",
+  "codon_label": "121",
+  "codon_label_int": 121,
+  "reference_aa": "V",
+  "reference_nt": 626,
+  "replacement_aa": "D",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": true,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 152.01339696164652,
+  "grantham_distance_int": 152,
+  "miyata_distance": 3.4045465485098587,
+  "parent_feature": "ORF_1a",
+  "parent_codon_label": "121"
+}

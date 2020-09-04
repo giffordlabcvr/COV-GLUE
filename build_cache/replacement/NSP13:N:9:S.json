@@ -1,0 +1,18 @@
+{
+  "id": "NSP13:N:9:S",
+  "display_name": "N9S",
+  "variation.featureLoc.feature.name": "NSP13",
+  "codon_label": "9",
+  "codon_label_int": 9,
+  "reference_aa": "N",
+  "reference_nt": 16261,
+  "replacement_aa": "S",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": false,
+  "radical_hanada_category_iii": false,
+  "grantham_distance_double": 46.23977508306296,
+  "grantham_distance_int": 46,
+  "miyata_distance": 1.3130472141012726,
+  "parent_feature": "ORF_1ab",
+  "parent_codon_label": "5333"
+}

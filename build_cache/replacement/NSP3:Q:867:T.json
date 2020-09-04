@@ -1,0 +1,18 @@
+{
+  "id": "NSP3:Q:867:T",
+  "display_name": "Q867T",
+  "variation.featureLoc.feature.name": "NSP3",
+  "codon_label": "867",
+  "codon_label_int": 867,
+  "reference_aa": "Q",
+  "reference_nt": 5318,
+  "replacement_aa": "T",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": false,
+  "radical_hanada_category_iii": false,
+  "grantham_distance_double": 41.10476251906663,
+  "grantham_distance_int": 41,
+  "miyata_distance": 1.1234589967814603,
+  "parent_feature": "ORF_1a",
+  "parent_codon_label": "1685"
+}

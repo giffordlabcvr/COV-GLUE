@@ -1,0 +1,18 @@
+{
+  "id": "NSP12:A:863:V",
+  "display_name": "A863V",
+  "variation.featureLoc.feature.name": "NSP12",
+  "codon_label": "863",
+  "codon_label_int": 863,
+  "reference_aa": "A",
+  "reference_nt": 16027,
+  "replacement_aa": "V",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": false,
+  "radical_hanada_category_iii": false,
+  "grantham_distance_double": 64.43025059480746,
+  "grantham_distance_int": 64,
+  "miyata_distance": 1.847329414521172,
+  "parent_feature": "ORF_1ab",
+  "parent_codon_label": "5255"
+}

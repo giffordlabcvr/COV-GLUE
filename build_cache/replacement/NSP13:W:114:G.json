@@ -1,0 +1,18 @@
+{
+  "id": "NSP13:W:114:G",
+  "display_name": "W114G",
+  "variation.featureLoc.feature.name": "NSP13",
+  "codon_label": "114",
+  "codon_label_int": 114,
+  "reference_aa": "W",
+  "reference_nt": 16576,
+  "replacement_aa": "G",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": true,
+  "radical_hanada_category_iii": false,
+  "grantham_distance_double": 183.7902133344299,
+  "grantham_distance_int": 184,
+  "miyata_distance": 5.132455948239974,
+  "parent_feature": "ORF_1ab",
+  "parent_codon_label": "5438"
+}

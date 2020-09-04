@@ -1,0 +1,18 @@
+{
+  "id": "N:G:236:C",
+  "display_name": "G236C",
+  "variation.featureLoc.feature.name": "N",
+  "codon_label": "236",
+  "codon_label_int": 236,
+  "reference_aa": "G",
+  "reference_nt": 28979,
+  "replacement_aa": "C",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": false,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 158.2317728686345,
+  "grantham_distance_int": 158,
+  "miyata_distance": 2.2172032627151887,
+  "parent_feature": null,
+  "parent_codon_label": null
+}

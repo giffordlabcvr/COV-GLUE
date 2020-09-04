@@ -1,0 +1,18 @@
+{
+  "id": "NSP4:D:188:H",
+  "display_name": "D188H",
+  "variation.featureLoc.feature.name": "NSP4",
+  "codon_label": "188",
+  "codon_label_int": 188,
+  "reference_aa": "D",
+  "reference_nt": 9116,
+  "replacement_aa": "H",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": true,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 81.23797960254424,
+  "grantham_distance_int": 81,
+  "miyata_distance": 1.7153540746282345,
+  "parent_feature": "ORF_1a",
+  "parent_codon_label": "2951"
+}

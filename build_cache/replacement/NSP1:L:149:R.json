@@ -1,0 +1,18 @@
+{
+  "id": "NSP1:L:149:R",
+  "display_name": "L149R",
+  "variation.featureLoc.feature.name": "NSP1",
+  "codon_label": "149",
+  "codon_label_int": 149,
+  "reference_aa": "L",
+  "reference_nt": 710,
+  "replacement_aa": "R",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": true,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 101.88029275229519,
+  "grantham_distance_int": 102,
+  "miyata_distance": 2.6230759164978448,
+  "parent_feature": "ORF_1a",
+  "parent_codon_label": "149"
+}

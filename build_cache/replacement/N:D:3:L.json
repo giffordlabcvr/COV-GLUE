@@ -1,0 +1,18 @@
+{
+  "id": "N:D:3:L",
+  "display_name": "D3L",
+  "variation.featureLoc.feature.name": "N",
+  "codon_label": "3",
+  "codon_label_int": 3,
+  "reference_aa": "D",
+  "reference_nt": 28280,
+  "replacement_aa": "L",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": true,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 171.75720220515512,
+  "grantham_distance_int": 172,
+  "miyata_distance": 4.103763724859247,
+  "parent_feature": null,
+  "parent_codon_label": null
+}

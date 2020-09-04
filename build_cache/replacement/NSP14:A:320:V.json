@@ -1,0 +1,18 @@
+{
+  "id": "NSP14:A:320:V",
+  "display_name": "A320V",
+  "variation.featureLoc.feature.name": "NSP14",
+  "codon_label": "320",
+  "codon_label_int": 320,
+  "reference_aa": "A",
+  "reference_nt": 18997,
+  "replacement_aa": "V",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": false,
+  "radical_hanada_category_iii": false,
+  "grantham_distance_double": 64.43025059480746,
+  "grantham_distance_int": 64,
+  "miyata_distance": 1.847329414521172,
+  "parent_feature": "ORF_1ab",
+  "parent_codon_label": "6245"
+}

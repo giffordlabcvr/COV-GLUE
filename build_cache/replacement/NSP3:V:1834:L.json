@@ -1,0 +1,18 @@
+{
+  "id": "NSP3:V:1834:L",
+  "display_name": "V1834L",
+  "variation.featureLoc.feature.name": "NSP3",
+  "codon_label": "1834",
+  "codon_label_int": 1834,
+  "reference_aa": "V",
+  "reference_nt": 8219,
+  "replacement_aa": "L",
+  "radical_hanada_category_i": false,
+  "radical_hanada_category_ii": false,
+  "radical_hanada_category_iii": false,
+  "grantham_distance_double": 31.784789976011467,
+  "grantham_distance_int": 32,
+  "miyata_distance": 0.9113906837969203,
+  "parent_feature": "ORF_1a",
+  "parent_codon_label": "2652"
+}

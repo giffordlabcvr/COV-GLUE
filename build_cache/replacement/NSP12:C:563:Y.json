@@ -1,0 +1,18 @@
+{
+  "id": "NSP12:C:563:Y",
+  "display_name": "C563Y",
+  "variation.featureLoc.feature.name": "NSP12",
+  "codon_label": "563",
+  "codon_label_int": 563,
+  "reference_aa": "C",
+  "reference_nt": 15127,
+  "replacement_aa": "Y",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": true,
+  "radical_hanada_category_iii": false,
+  "grantham_distance_double": 193.72470051146485,
+  "grantham_distance_int": 194,
+  "miyata_distance": 2.376405280106065,
+  "parent_feature": "ORF_1ab",
+  "parent_codon_label": "4955"
+}

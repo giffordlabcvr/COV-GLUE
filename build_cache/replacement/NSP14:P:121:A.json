@@ -1,0 +1,18 @@
+{
+  "id": "NSP14:P:121:A",
+  "display_name": "P121A",
+  "variation.featureLoc.feature.name": "NSP14",
+  "codon_label": "121",
+  "codon_label_int": 121,
+  "reference_aa": "P",
+  "reference_nt": 18400,
+  "replacement_aa": "A",
+  "radical_hanada_category_i": false,
+  "radical_hanada_category_ii": false,
+  "radical_hanada_category_iii": false,
+  "grantham_distance_double": 26.874338336271116,
+  "grantham_distance_int": 27,
+  "miyata_distance": 0.06363239751244655,
+  "parent_feature": "ORF_1ab",
+  "parent_codon_label": "6046"
+}

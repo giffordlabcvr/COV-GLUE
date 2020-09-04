@@ -1,0 +1,18 @@
+{
+  "id": "NSP8:L:103:H",
+  "display_name": "L103H",
+  "variation.featureLoc.feature.name": "NSP8",
+  "codon_label": "103",
+  "codon_label_int": 103,
+  "reference_aa": "L",
+  "reference_nt": 12398,
+  "replacement_aa": "H",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": true,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 98.69301470650433,
+  "grantham_distance_int": 99,
+  "miyata_distance": 2.5863765667097054,
+  "parent_feature": "ORF_1a",
+  "parent_codon_label": "4045"
+}

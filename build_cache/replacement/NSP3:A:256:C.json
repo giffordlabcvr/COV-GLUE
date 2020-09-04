@@ -1,0 +1,18 @@
+{
+  "id": "NSP3:A:256:C",
+  "display_name": "A256C",
+  "variation.featureLoc.feature.name": "NSP3",
+  "codon_label": "256",
+  "codon_label_int": 256,
+  "reference_aa": "A",
+  "reference_nt": 3485,
+  "replacement_aa": "C",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": false,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 195.00374394728613,
+  "grantham_distance_int": 195,
+  "miyata_distance": 1.392460226962703,
+  "parent_feature": "ORF_1a",
+  "parent_codon_label": "1074"
+}

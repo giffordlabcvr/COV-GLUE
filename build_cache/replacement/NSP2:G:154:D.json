@@ -1,0 +1,18 @@
+{
+  "id": "NSP2:G:154:D",
+  "display_name": "G154D",
+  "variation.featureLoc.feature.name": "NSP2",
+  "codon_label": "154",
+  "codon_label_int": 154,
+  "reference_aa": "G",
+  "reference_nt": 1265,
+  "replacement_aa": "D",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": true,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 93.76755082772044,
+  "grantham_distance_int": 94,
+  "miyata_distance": 2.373748911504371,
+  "parent_feature": "ORF_1a",
+  "parent_codon_label": "334"
+}

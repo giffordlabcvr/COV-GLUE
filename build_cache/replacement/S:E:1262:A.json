@@ -1,0 +1,18 @@
+{
+  "id": "S:E:1262:A",
+  "display_name": "E1262A",
+  "variation.featureLoc.feature.name": "S",
+  "codon_label": "1262",
+  "codon_label_int": 1262,
+  "reference_aa": "E",
+  "reference_nt": 25346,
+  "replacement_aa": "A",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": true,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 106.7125513825282,
+  "grantham_distance_int": 107,
+  "miyata_distance": 2.464557824068621,
+  "parent_feature": null,
+  "parent_codon_label": null
+}

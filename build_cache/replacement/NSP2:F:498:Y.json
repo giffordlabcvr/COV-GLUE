@@ -1,0 +1,18 @@
+{
+  "id": "NSP2:F:498:Y",
+  "display_name": "F498Y",
+  "variation.featureLoc.feature.name": "NSP2",
+  "codon_label": "498",
+  "codon_label_int": 498,
+  "reference_aa": "F",
+  "reference_nt": 2297,
+  "replacement_aa": "Y",
+  "radical_hanada_category_i": false,
+  "radical_hanada_category_ii": false,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 21.6096648887579,
+  "grantham_distance_int": 22,
+  "miyata_distance": 0.4778781952608543,
+  "parent_feature": "ORF_1a",
+  "parent_codon_label": "678"
+}

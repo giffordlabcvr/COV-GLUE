@@ -1,0 +1,18 @@
+{
+  "id": "NSP12:H:309:L",
+  "display_name": "H309L",
+  "variation.featureLoc.feature.name": "NSP12",
+  "codon_label": "309",
+  "codon_label_int": 309,
+  "reference_aa": "H",
+  "reference_nt": 14365,
+  "replacement_aa": "L",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": true,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 98.69301470650433,
+  "grantham_distance_int": 99,
+  "miyata_distance": 2.5863765667097054,
+  "parent_feature": "ORF_1ab",
+  "parent_codon_label": "4701"
+}

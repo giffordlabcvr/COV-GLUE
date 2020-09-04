@@ -1,0 +1,18 @@
+{
+  "id": "NSP1:Y:68:Q",
+  "display_name": "Y68Q",
+  "variation.featureLoc.feature.name": "NSP1",
+  "codon_label": "68",
+  "codon_label_int": 68,
+  "reference_aa": "Y",
+  "reference_nt": 467,
+  "replacement_aa": "Q",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": true,
+  "radical_hanada_category_iii": false,
+  "grantham_distance_double": 98.78325151239761,
+  "grantham_distance_int": 99,
+  "miyata_distance": 2.4838813604781578,
+  "parent_feature": "ORF_1a",
+  "parent_codon_label": "68"
+}

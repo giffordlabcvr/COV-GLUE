@@ -1,0 +1,18 @@
+{
+  "id": "NSP12:Q:224:K",
+  "display_name": "Q224K",
+  "variation.featureLoc.feature.name": "NSP12",
+  "codon_label": "224",
+  "codon_label_int": 224,
+  "reference_aa": "Q",
+  "reference_nt": 14110,
+  "replacement_aa": "K",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": true,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 53.228340150510796,
+  "grantham_distance_int": 53,
+  "miyata_distance": 1.0554475691875203,
+  "parent_feature": "ORF_1ab",
+  "parent_codon_label": "4616"
+}

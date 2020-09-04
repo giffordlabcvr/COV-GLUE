@@ -1,0 +1,18 @@
+{
+  "id": "NSP4:S:312:G",
+  "display_name": "S312G",
+  "variation.featureLoc.feature.name": "NSP4",
+  "codon_label": "312",
+  "codon_label_int": 312,
+  "reference_aa": "S",
+  "reference_nt": 9488,
+  "replacement_aa": "G",
+  "radical_hanada_category_i": false,
+  "radical_hanada_category_ii": false,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 55.267362761946906,
+  "grantham_distance_int": 55,
+  "miyata_distance": 0.8479269350772444,
+  "parent_feature": "ORF_1a",
+  "parent_codon_label": "3075"
+}

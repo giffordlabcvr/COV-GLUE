@@ -1,0 +1,18 @@
+{
+  "id": "NSP12:R:197:Q",
+  "display_name": "R197Q",
+  "variation.featureLoc.feature.name": "NSP12",
+  "codon_label": "197",
+  "codon_label_int": 197,
+  "reference_aa": "R",
+  "reference_nt": 14029,
+  "replacement_aa": "Q",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": true,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 42.81393192570374,
+  "grantham_distance_int": 43,
+  "miyata_distance": 1.1334798453192791,
+  "parent_feature": "ORF_1ab",
+  "parent_codon_label": "4589"
+}

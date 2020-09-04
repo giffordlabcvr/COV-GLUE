@@ -1,0 +1,18 @@
+{
+  "id": "NSP3:F:336:C",
+  "display_name": "F336C",
+  "variation.featureLoc.feature.name": "NSP3",
+  "codon_label": "336",
+  "codon_label_int": 336,
+  "reference_aa": "F",
+  "reference_nt": 3725,
+  "replacement_aa": "C",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": true,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 204.38848742235413,
+  "grantham_distance_int": 204,
+  "miyata_distance": 2.2422122336883987,
+  "parent_feature": "ORF_1a",
+  "parent_codon_label": "1154"
+}

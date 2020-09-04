@@ -1,0 +1,18 @@
+{
+  "id": "ORF_3a:W:131:G",
+  "display_name": "W131G",
+  "variation.featureLoc.feature.name": "ORF_3a",
+  "codon_label": "131",
+  "codon_label_int": 131,
+  "reference_aa": "W",
+  "reference_nt": 25783,
+  "replacement_aa": "G",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": true,
+  "radical_hanada_category_iii": false,
+  "grantham_distance_double": 183.7902133344299,
+  "grantham_distance_int": 184,
+  "miyata_distance": 5.132455948239974,
+  "parent_feature": null,
+  "parent_codon_label": null
+}

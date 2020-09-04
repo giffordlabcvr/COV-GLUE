@@ -1,0 +1,18 @@
+{
+  "id": "S:I:1179:N",
+  "display_name": "I1179N",
+  "variation.featureLoc.feature.name": "S",
+  "codon_label": "1179",
+  "codon_label_int": 1179,
+  "reference_aa": "I",
+  "reference_nt": 25097,
+  "replacement_aa": "N",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": false,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 148.9140956834137,
+  "grantham_distance_int": 149,
+  "miyata_distance": 3.369799940806828,
+  "parent_feature": null,
+  "parent_codon_label": null
+}

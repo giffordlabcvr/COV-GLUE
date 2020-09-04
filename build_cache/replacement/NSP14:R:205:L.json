@@ -1,0 +1,18 @@
+{
+  "id": "NSP14:R:205:L",
+  "display_name": "R205L",
+  "variation.featureLoc.feature.name": "NSP14",
+  "codon_label": "205",
+  "codon_label_int": 205,
+  "reference_aa": "R",
+  "reference_nt": 18652,
+  "replacement_aa": "L",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": true,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 101.88029275229519,
+  "grantham_distance_int": 102,
+  "miyata_distance": 2.6230759164978448,
+  "parent_feature": "ORF_1ab",
+  "parent_codon_label": "6130"
+}

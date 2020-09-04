@@ -1,0 +1,18 @@
+{
+  "id": "ORF_8:L:118:*",
+  "display_name": "L118*",
+  "variation.featureLoc.feature.name": "ORF_8",
+  "codon_label": "118",
+  "codon_label_int": 118,
+  "reference_aa": "L",
+  "reference_nt": 28245,
+  "replacement_aa": "*",
+  "radical_hanada_category_i": null,
+  "radical_hanada_category_ii": null,
+  "radical_hanada_category_iii": null,
+  "grantham_distance_double": null,
+  "grantham_distance_int": null,
+  "miyata_distance": null,
+  "parent_feature": null,
+  "parent_codon_label": null
+}

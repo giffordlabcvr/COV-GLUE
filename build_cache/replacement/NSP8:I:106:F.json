@@ -1,0 +1,18 @@
+{
+  "id": "NSP8:I:106:F",
+  "display_name": "I106F",
+  "variation.featureLoc.feature.name": "NSP8",
+  "codon_label": "106",
+  "codon_label_int": 106,
+  "reference_aa": "I",
+  "reference_nt": 12407,
+  "replacement_aa": "F",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": true,
+  "radical_hanada_category_iii": false,
+  "grantham_distance_double": 21.277013760678706,
+  "grantham_distance_int": 21,
+  "miyata_distance": 0.6103353013257657,
+  "parent_feature": "ORF_1a",
+  "parent_codon_label": "4048"
+}

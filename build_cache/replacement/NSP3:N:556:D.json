@@ -1,0 +1,18 @@
+{
+  "id": "NSP3:N:556:D",
+  "display_name": "N556D",
+  "variation.featureLoc.feature.name": "NSP3",
+  "codon_label": "556",
+  "codon_label_int": 556,
+  "reference_aa": "N",
+  "reference_nt": 4385,
+  "replacement_aa": "D",
+  "radical_hanada_category_i": false,
+  "radical_hanada_category_ii": true,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 23.00535500058712,
+  "grantham_distance_int": 23,
+  "miyata_distance": 0.6515287120397918,
+  "parent_feature": "ORF_1a",
+  "parent_codon_label": "1374"
+}

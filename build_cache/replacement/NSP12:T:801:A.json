@@ -1,0 +1,18 @@
+{
+  "id": "NSP12:T:801:A",
+  "display_name": "T801A",
+  "variation.featureLoc.feature.name": "NSP12",
+  "codon_label": "801",
+  "codon_label_int": 801,
+  "reference_aa": "T",
+  "reference_nt": 15841,
+  "replacement_aa": "A",
+  "radical_hanada_category_i": false,
+  "radical_hanada_category_ii": false,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 58.02332760382417,
+  "grantham_distance_int": 58,
+  "miyata_distance": 0.9021839838528766,
+  "parent_feature": "ORF_1ab",
+  "parent_codon_label": "5193"
+}

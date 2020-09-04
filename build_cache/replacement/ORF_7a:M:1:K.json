@@ -1,0 +1,18 @@
+{
+  "id": "ORF_7a:M:1:K",
+  "display_name": "M1K",
+  "variation.featureLoc.feature.name": "ORF_7a",
+  "codon_label": "1",
+  "codon_label_int": 1,
+  "reference_aa": "M",
+  "reference_nt": 27394,
+  "replacement_aa": "K",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": true,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 94.49009719874934,
+  "grantham_distance_int": 94,
+  "miyata_distance": 2.6274196368687526,
+  "parent_feature": null,
+  "parent_codon_label": null
+}

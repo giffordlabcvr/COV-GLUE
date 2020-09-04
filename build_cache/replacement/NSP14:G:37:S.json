@@ -1,0 +1,18 @@
+{
+  "id": "NSP14:G:37:S",
+  "display_name": "G37S",
+  "variation.featureLoc.feature.name": "NSP14",
+  "codon_label": "37",
+  "codon_label_int": 37,
+  "reference_aa": "G",
+  "reference_nt": 18148,
+  "replacement_aa": "S",
+  "radical_hanada_category_i": false,
+  "radical_hanada_category_ii": false,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 55.267362761946906,
+  "grantham_distance_int": 55,
+  "miyata_distance": 0.8479269350772444,
+  "parent_feature": "ORF_1ab",
+  "parent_codon_label": "5962"
+}

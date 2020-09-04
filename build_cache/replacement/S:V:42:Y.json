@@ -1,0 +1,18 @@
+{
+  "id": "S:V:42:Y",
+  "display_name": "V42Y",
+  "variation.featureLoc.feature.name": "S",
+  "codon_label": "42",
+  "codon_label_int": 42,
+  "reference_aa": "V",
+  "reference_nt": 21686,
+  "replacement_aa": "Y",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": true,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 54.662781811398524,
+  "grantham_distance_int": 55,
+  "miyata_distance": 1.5176903314160393,
+  "parent_feature": null,
+  "parent_codon_label": null
+}
