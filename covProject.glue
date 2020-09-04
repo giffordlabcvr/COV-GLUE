@@ -82,6 +82,9 @@ project cov
   # generate insertions
   run script glue/covGenerateInsertions.js
 
+  # set number of sequences for replacements/indels
+  run script glue/covSetVariantNumSeqs.js
+
   # cache derived results to build_cache directory
   run script glue/covCacheDerivedResults.js
 
