@@ -7,13 +7,13 @@ multi-unset link-target cov_deletion cov_nt_deletion -w "id = 'NSP1:ca:86:86'"
 multi-unset link-target variation cov_nt_deletion -w "name = 'cov_nt_del:NSP1:nca:521:523'"
 multi-delete cov_deletion -w "id = 'NSP1:ca:86:86'"
 multi-delete cov_nt_deletion -w "id = 'NSP1:nca:521:523'"
-multi-delete variation -w name = 'cov_aa_del:NSP1:ca:86:86'
-multi-delete variation -w name = 'cov_nt_del:NSP1:nca:521:523'
+multi-delete variation -w "name = 'cov_aa_del:NSP1:ca:86:86'"
+multi-delete variation -w "name = 'cov_nt_del:NSP1:nca:521:523'"
 
 multi-unset link-target variation cov_insertion -w "name = 'cov_aa_ins:NSP6:ca:34:70:35'"
 multi-unset link-target cov_insertion cov_nt_insertion -w "id = 'NSP6:ca:34:70:35'"
 multi-unset link-target variation cov_nt_insertion -w "name = 'cov_nt_ins:NSP6:nca:11074:83412:11075'"
 multi-delete cov_insertion -w "id = 'NSP6:ca:34:70:35'"
 multi-delete cov_nt_insertion -w "id = 'NSP6:nca:11074:83412:11075'"
-multi-delete variation -w name = 'cov_aa_ins:NSP6:ca:34:70:35'
-multi-delete variation -w name = 'cov_nt_ins:NSP6:nca:11074:83412:11075'
+multi-delete variation -w "name = 'cov_aa_ins:NSP6:ca:34:70:35'"
+multi-delete variation -w "name = 'cov_nt_ins:NSP6:nca:11074:83412:11075'"
