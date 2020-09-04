@@ -1,6 +1,4 @@
-multi-unset link-target variation cov_replacement -w "name = 'cov_aa_rpl:NSP1:H:83:R'"
-multi-delete cov_replacement -w "id = 'NSP1:H:83:R'"
-multi-delete variation -w "name = 'cov_aa_rpl:NSP1:H:83:R'"
+run script glue/covVariantCacheTest/clearReplacementVariants.js
 
 multi-unset link-target variation cov_deletion -w "name = 'cov_aa_del:NSP1:ca:86:86'"
 multi-unset link-target cov_deletion cov_nt_deletion -w "id = 'NSP1:ca:86:86'"

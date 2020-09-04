@@ -1,6 +1,5 @@
-multi-unset link-target cov_replacement_sequence cov_replacement -w "id like 'NSP1:H:83:R:%'"
-multi-unset link-target cov_replacement_sequence sequence -w "id like 'NSP1:H:83:R:%'"
-multi-delete cov_replacement_sequence -w "id like 'NSP1:H:83:R:%'"
+
+run script glue/covVariantCacheTest/clearReplacementAssociations.js
 
 multi-unset link-target cov_deletion_sequence cov_deletion -w "id like 'NSP1:ca:86:86:%'"
 multi-unset link-target cov_deletion_sequence sequence -w "id like 'NSP1:ca:86:86:%'"
