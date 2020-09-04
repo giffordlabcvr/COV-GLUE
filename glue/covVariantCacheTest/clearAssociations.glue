@@ -1,0 +1,19 @@
+multi-unset link-target cov_replacement_sequence cov_replacement -w "id like 'NSP1:H:83:R:%'"
+multi-unset link-target cov_replacement_sequence sequence -w "id like 'NSP1:H:83:R:%'"
+multi-delete cov_replacement_sequence -w "id like 'NSP1:H:83:R:%'"
+
+multi-unset link-target cov_deletion_sequence cov_deletion -w "id like 'NSP1:ca:86:86:%'"
+multi-unset link-target cov_deletion_sequence sequence -w "id like 'NSP1:ca:86:86:%'"
+multi-unset link-target cov_nt_deletion_sequence cov_nt_deletion -w "id like 'NSP1:nca:521:523:%'"
+multi-unset link-target cov_nt_deletion_sequence sequence -w "id like 'NSP1:nca:521:523:%'"
+multi-delete cov_deletion_sequence -w "id like 'NSP1:ca:86:86:%'"
+multi-delete cov_nt_deletion_sequence -w "id like 'NSP1:nca:521:523:%'"
+
+multi-unset link-target cov_insertion_sequence cov_insertion -w "id like 'NSP6:ca:34:70:35:%'"
+multi-unset link-target cov_insertion_sequence sequence -w "id like 'NSP6:ca:34:70:35:%'"
+multi-unset link-target cov_nt_insertion_sequence cov_nt_insertion -w "id like 'NSP6:nca:11074:83412:11075:%'"
+multi-unset link-target cov_nt_insertion_sequence sequence -w "id like 'NSP6:nca:11074:83412:11075:%'"
+multi-delete cov_insertion_sequence -w "id like 'NSP6:ca:34:70:35:%'"
+multi-delete cov_nt_insertion_sequence -w "id like 'NSP6:nca:11074:83412:11075:%'"
+
+

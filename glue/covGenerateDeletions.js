@@ -2,6 +2,8 @@
 var featuresList = glue.tableToObjects(
 		glue.command(["list", "feature", "-w", "featureMetatags.name = 'CODES_AMINO_ACIDS' and featureMetatags.value = true", "name", "displayName", "parent.name"]));
 
+glue.command(["multi-delete", "variation", "-w", "name like 'cov_aa_del_detect%'"]);
+
 // create "detection" variation objects to detect deletions in each of the features respectively.
 var comparisonRefName = "REF_MASTER_WUHAN_HU_1";
 _.each(featuresList, function(featureObj) {

@@ -15,4 +15,3 @@ glue.command(["multi-delete", "cov_nt_deletion_sequence", "-a"]);
 
 glue.command(["multi-delete", "variation", "-w", "name like 'cov_aa_del%'"]);
 glue.command(["multi-delete", "variation", "-w", "name like 'cov_nt_del%'"]);
-glue.command(["multi-delete", "variation", "-w", "name like 'cov_aa_del_detect%'"]);
