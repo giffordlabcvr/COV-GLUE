@@ -36,7 +36,7 @@ var processed = 0;
 //var whereClause = "sequence.analyse_variation = true and sequence.sequenceID in ('EPI_ISL_410486', 'EPI_ISL_420775', 'EPI_ISL_402125')"
 
 // production
-var whereClause = "sequence.analyse_variation = true and cg_deletions_from_cache = false";
+var whereClause = "sequence.analyse_variation = true and sequence.cg_deletions_from_cache = false";
 
 
 glue.inMode("alignment/AL_GISAID_CONSTRAINED", function() {

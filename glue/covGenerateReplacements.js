@@ -12,7 +12,7 @@ var orf1abReplacements = {};
 // variant cache test 
 // var whereClause = "sequence.sequenceID in ('EPI_ISL_500981', 'EPI_ISL_465549')";
 // production
-var whereClause = "cg_reps_from_cache and sequence.analyse_variation = true";
+var whereClause = "sequence.analyse_variation = true and sequence.cg_reps_from_cache = false";
 
 
 _.each(featuresList, function(featureObj) {
