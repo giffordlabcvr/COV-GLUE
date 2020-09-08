@@ -358,10 +358,10 @@ _.each(seqObjs, function(seqObj) {
 	if(processed % 500 == 0) {
 		glue.command(["commit"]);
 		glue.command(["new-context"]);
-		glue.logInfo("Populated CoV-GLUE lineage from JSON build cache files for "+processed+" / "+seqObjs.length+" sequences");
+		glue.logInfo("Populated sequence-associated data from JSON build cache files for "+processed+" / "+seqObjs.length+" sequences");
 	}
 });
 
 glue.command(["commit"]);
 glue.command(["new-context"]);
-glue.logInfo("Populated CoV-GLUE lineage from JSON build cache files for "+processed+" / "+seqObjs.length+" sequences");
+glue.logInfo("Populated sequence-associated data from JSON build cache files for "+processed+" / "+seqObjs.length+" sequences");
