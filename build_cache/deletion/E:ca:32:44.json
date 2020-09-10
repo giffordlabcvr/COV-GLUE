@@ -1,0 +1,15 @@
+{
+  "id": "E:ca:32:44",
+  "variation.featureLoc.feature.name": "E",
+  "cov_nt_deletion.id": "E:nca:26338:26376",
+  "display_name": "32-44",
+  "end_codon": "44",
+  "end_codon_int": 44,
+  "parent_end_codon": null,
+  "parent_feature": null,
+  "parent_start_codon": null,
+  "reference_nt_end": 26376,
+  "reference_nt_start": 26338,
+  "start_codon": "32",
+  "start_codon_int": 32
+}

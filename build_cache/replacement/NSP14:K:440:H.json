@@ -1,0 +1,18 @@
+{
+  "id": "NSP14:K:440:H",
+  "display_name": "K440H",
+  "variation.featureLoc.feature.name": "NSP14",
+  "codon_label": "440",
+  "codon_label_int": 440,
+  "reference_aa": "K",
+  "reference_nt": 19357,
+  "replacement_aa": "H",
+  "radical_hanada_category_i": false,
+  "radical_hanada_category_ii": false,
+  "radical_hanada_category_iii": false,
+  "grantham_distance_double": 32.40288701198866,
+  "grantham_distance_int": 32,
+  "miyata_distance": 0.7879546943783731,
+  "parent_feature": "ORF_1ab",
+  "parent_codon_label": "6365"
+}

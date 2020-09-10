@@ -1,0 +1,15 @@
+{
+  "id": "ORF_8:ca:58:58",
+  "variation.featureLoc.feature.name": "ORF_8",
+  "cov_nt_deletion.id": "ORF_8:nca:28065:28067",
+  "display_name": "58",
+  "end_codon": "58",
+  "end_codon_int": 58,
+  "parent_end_codon": null,
+  "parent_feature": null,
+  "parent_start_codon": null,
+  "reference_nt_end": 28067,
+  "reference_nt_start": 28065,
+  "start_codon": "58",
+  "start_codon_int": 58
+}

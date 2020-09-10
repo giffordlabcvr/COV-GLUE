@@ -1,0 +1,18 @@
+{
+  "id": "S:C:1082:S",
+  "display_name": "C1082S",
+  "variation.featureLoc.feature.name": "S",
+  "codon_label": "1082",
+  "codon_label_int": 1082,
+  "reference_aa": "C",
+  "reference_nt": 24806,
+  "replacement_aa": "S",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": false,
+  "radical_hanada_category_iii": false,
+  "grantham_distance_double": 111.6724956632034,
+  "grantham_distance_int": 112,
+  "miyata_distance": 1.8406989880227782,
+  "parent_feature": null,
+  "parent_codon_label": null
+}

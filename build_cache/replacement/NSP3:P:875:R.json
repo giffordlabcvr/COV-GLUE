@@ -1,0 +1,18 @@
+{
+  "id": "NSP3:P:875:R",
+  "display_name": "P875R",
+  "variation.featureLoc.feature.name": "NSP3",
+  "codon_label": "875",
+  "codon_label_int": 875,
+  "reference_aa": "P",
+  "reference_nt": 5342,
+  "replacement_aa": "R",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": true,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 102.71487090966941,
+  "grantham_distance_int": 103,
+  "miyata_distance": 2.9008276159240594,
+  "parent_feature": "ORF_1a",
+  "parent_codon_label": "1693"
+}

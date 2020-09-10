@@ -1,0 +1,18 @@
+{
+  "id": "ORF_3a:Y:156:H",
+  "display_name": "Y156H",
+  "variation.featureLoc.feature.name": "ORF_3a",
+  "codon_label": "156",
+  "codon_label_int": 156,
+  "reference_aa": "Y",
+  "reference_nt": 25858,
+  "replacement_aa": "H",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": true,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 83.32844466345641,
+  "grantham_distance_int": 83,
+  "miyata_distance": 2.2674887607305707,
+  "parent_feature": null,
+  "parent_codon_label": null
+}

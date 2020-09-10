@@ -1,0 +1,18 @@
+{
+  "id": "NSP3:R:603:G",
+  "display_name": "R603G",
+  "variation.featureLoc.feature.name": "NSP3",
+  "codon_label": "603",
+  "codon_label_int": 603,
+  "reference_aa": "R",
+  "reference_nt": 4526,
+  "replacement_aa": "G",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": true,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 125.12919263514027,
+  "grantham_distance_int": 125,
+  "miyata_distance": 3.584766932145264,
+  "parent_feature": "ORF_1a",
+  "parent_codon_label": "1421"
+}

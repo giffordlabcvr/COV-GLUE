@@ -1,0 +1,18 @@
+{
+  "id": "N:A:156:G",
+  "display_name": "A156G",
+  "variation.featureLoc.feature.name": "N",
+  "codon_label": "156",
+  "codon_label_int": 156,
+  "reference_aa": "A",
+  "reference_nt": 28739,
+  "replacement_aa": "G",
+  "radical_hanada_category_i": false,
+  "radical_hanada_category_ii": false,
+  "radical_hanada_category_iii": false,
+  "grantham_distance_double": 59.99535651927305,
+  "grantham_distance_int": 60,
+  "miyata_distance": 0.9144774819777941,
+  "parent_feature": null,
+  "parent_codon_label": null
+}

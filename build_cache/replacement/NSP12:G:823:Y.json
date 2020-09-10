@@ -1,0 +1,18 @@
+{
+  "id": "NSP12:G:823:Y",
+  "display_name": "G823Y",
+  "variation.featureLoc.feature.name": "NSP12",
+  "codon_label": "823",
+  "codon_label_int": 823,
+  "reference_aa": "G",
+  "reference_nt": 15907,
+  "replacement_aa": "Y",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": true,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 146.92629269977823,
+  "grantham_distance_int": 147,
+  "miyata_distance": 4.077523842827582,
+  "parent_feature": "ORF_1ab",
+  "parent_codon_label": "5215"
+}

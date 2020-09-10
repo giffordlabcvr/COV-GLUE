@@ -1,0 +1,18 @@
+{
+  "id": "NSP12:A:376:V",
+  "display_name": "A376V",
+  "variation.featureLoc.feature.name": "NSP12",
+  "codon_label": "376",
+  "codon_label_int": 376,
+  "reference_aa": "A",
+  "reference_nt": 14566,
+  "replacement_aa": "V",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": false,
+  "radical_hanada_category_iii": false,
+  "grantham_distance_double": 64.43025059480746,
+  "grantham_distance_int": 64,
+  "miyata_distance": 1.847329414521172,
+  "parent_feature": "ORF_1ab",
+  "parent_codon_label": "4768"
+}

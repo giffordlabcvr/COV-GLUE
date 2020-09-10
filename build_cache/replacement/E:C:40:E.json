@@ -1,0 +1,18 @@
+{
+  "id": "E:C:40:E",
+  "display_name": "C40E",
+  "variation.featureLoc.feature.name": "E",
+  "codon_label": "40",
+  "codon_label_int": 40,
+  "reference_aa": "C",
+  "reference_nt": 26362,
+  "replacement_aa": "E",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": true,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 169.4374593210234,
+  "grantham_distance_int": 169,
+  "miyata_distance": 3.255306132066906,
+  "parent_feature": null,
+  "parent_codon_label": null
+}

@@ -1,0 +1,18 @@
+{
+  "id": "ORF_7a:V:29:A",
+  "display_name": "V29A",
+  "variation.featureLoc.feature.name": "ORF_7a",
+  "codon_label": "29",
+  "codon_label_int": 29,
+  "reference_aa": "V",
+  "reference_nt": 27478,
+  "replacement_aa": "A",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": false,
+  "radical_hanada_category_iii": false,
+  "grantham_distance_double": 64.43025059480746,
+  "grantham_distance_int": 64,
+  "miyata_distance": 1.847329414521172,
+  "parent_feature": null,
+  "parent_codon_label": null
+}

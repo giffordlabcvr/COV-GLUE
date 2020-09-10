@@ -1,0 +1,18 @@
+{
+  "id": "S:V:1230:M",
+  "display_name": "V1230M",
+  "variation.featureLoc.feature.name": "S",
+  "codon_label": "1230",
+  "codon_label_int": 1230,
+  "reference_aa": "V",
+  "reference_nt": 25250,
+  "replacement_aa": "M",
+  "radical_hanada_category_i": false,
+  "radical_hanada_category_ii": false,
+  "radical_hanada_category_iii": false,
+  "grantham_distance_double": 21.521799383987368,
+  "grantham_distance_int": 22,
+  "miyata_distance": 0.6173356298910421,
+  "parent_feature": null,
+  "parent_codon_label": null
+}

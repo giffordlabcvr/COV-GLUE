@@ -1,0 +1,18 @@
+{
+  "id": "NSP16:Q:18:L",
+  "display_name": "Q18L",
+  "variation.featureLoc.feature.name": "NSP16",
+  "codon_label": "18",
+  "codon_label_int": 18,
+  "reference_aa": "Q",
+  "reference_nt": 20710,
+  "replacement_aa": "L",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": false,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 112.44147717377763,
+  "grantham_distance_int": 112,
+  "miyata_distance": 2.703476672168515,
+  "parent_feature": "ORF_1ab",
+  "parent_codon_label": "6816"
+}

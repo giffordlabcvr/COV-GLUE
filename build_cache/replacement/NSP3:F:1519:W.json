@@ -1,0 +1,18 @@
+{
+  "id": "NSP3:F:1519:W",
+  "display_name": "F1519W",
+  "variation.featureLoc.feature.name": "NSP3",
+  "codon_label": "1519",
+  "codon_label_int": 1519,
+  "reference_aa": "F",
+  "reference_nt": 7274,
+  "replacement_aa": "W",
+  "radical_hanada_category_i": false,
+  "radical_hanada_category_ii": false,
+  "radical_hanada_category_iii": false,
+  "grantham_distance_double": 39.65506168264469,
+  "grantham_distance_int": 40,
+  "miyata_distance": 1.1083002184557187,
+  "parent_feature": "ORF_1a",
+  "parent_codon_label": "2337"
+}

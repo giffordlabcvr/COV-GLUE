@@ -1,0 +1,15 @@
+{
+  "id": "NSP2:ca:223:223",
+  "variation.featureLoc.feature.name": "NSP2",
+  "cov_nt_deletion.id": "NSP2:nca:1472:1474",
+  "display_name": "223",
+  "end_codon": "223",
+  "end_codon_int": 223,
+  "parent_end_codon": "403",
+  "parent_feature": "ORF_1a",
+  "parent_start_codon": "403",
+  "reference_nt_end": 1474,
+  "reference_nt_start": 1472,
+  "start_codon": "223",
+  "start_codon_int": 223
+}

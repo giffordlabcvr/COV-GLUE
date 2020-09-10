@@ -1,0 +1,18 @@
+{
+  "id": "NSP8:S:193:Y",
+  "display_name": "S193Y",
+  "variation.featureLoc.feature.name": "NSP8",
+  "codon_label": "193",
+  "codon_label_int": 193,
+  "reference_aa": "S",
+  "reference_nt": 12668,
+  "replacement_aa": "Y",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": true,
+  "radical_hanada_category_iii": false,
+  "grantham_distance_double": 143.10738438907285,
+  "grantham_distance_int": 143,
+  "miyata_distance": 3.327140114906959,
+  "parent_feature": "ORF_1a",
+  "parent_codon_label": "4135"
+}

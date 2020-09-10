@@ -1,0 +1,18 @@
+{
+  "id": "NSP16:N:101:S",
+  "display_name": "N101S",
+  "variation.featureLoc.feature.name": "NSP16",
+  "codon_label": "101",
+  "codon_label_int": 101,
+  "reference_aa": "N",
+  "reference_nt": 20959,
+  "replacement_aa": "S",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": false,
+  "radical_hanada_category_iii": false,
+  "grantham_distance_double": 46.23977508306296,
+  "grantham_distance_int": 46,
+  "miyata_distance": 1.3130472141012726,
+  "parent_feature": "ORF_1ab",
+  "parent_codon_label": "6899"
+}

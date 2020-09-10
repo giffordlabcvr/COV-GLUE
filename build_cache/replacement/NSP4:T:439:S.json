@@ -1,0 +1,18 @@
+{
+  "id": "NSP4:T:439:S",
+  "display_name": "T439S",
+  "variation.featureLoc.feature.name": "NSP4",
+  "codon_label": "439",
+  "codon_label_int": 439,
+  "reference_aa": "T",
+  "reference_nt": 9869,
+  "replacement_aa": "S",
+  "radical_hanada_category_i": false,
+  "radical_hanada_category_ii": false,
+  "radical_hanada_category_iii": false,
+  "grantham_distance_double": 57.74902765654723,
+  "grantham_distance_int": 58,
+  "miyata_distance": 0.8875431743515021,
+  "parent_feature": "ORF_1a",
+  "parent_codon_label": "3202"
+}

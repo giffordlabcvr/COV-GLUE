@@ -1,0 +1,18 @@
+{
+  "id": "NSP15:D:335:F",
+  "display_name": "D335F",
+  "variation.featureLoc.feature.name": "NSP15",
+  "codon_label": "335",
+  "codon_label_int": 335,
+  "reference_aa": "D",
+  "reference_nt": 20623,
+  "replacement_aa": "F",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": true,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 176.52619305334733,
+  "grantham_distance_int": 177,
+  "miyata_distance": 4.267403445829135,
+  "parent_feature": "ORF_1ab",
+  "parent_codon_label": "6787"
+}

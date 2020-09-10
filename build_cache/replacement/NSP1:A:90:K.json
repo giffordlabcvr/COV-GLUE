@@ -1,0 +1,18 @@
+{
+  "id": "NSP1:A:90:K",
+  "display_name": "A90K",
+  "variation.featureLoc.feature.name": "NSP1",
+  "codon_label": "90",
+  "codon_label_int": 90,
+  "reference_aa": "A",
+  "reference_nt": 533,
+  "replacement_aa": "K",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": true,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 105.5709010738932,
+  "grantham_distance_int": 106,
+  "miyata_distance": 2.9565832578723485,
+  "parent_feature": "ORF_1a",
+  "parent_codon_label": "90"
+}

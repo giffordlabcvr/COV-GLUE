@@ -1,0 +1,18 @@
+{
+  "id": "NSP3:C:1836:R",
+  "display_name": "C1836R",
+  "variation.featureLoc.feature.name": "NSP3",
+  "codon_label": "1836",
+  "codon_label_int": 1836,
+  "reference_aa": "C",
+  "reference_nt": 8225,
+  "replacement_aa": "R",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": true,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 179.53483772224598,
+  "grantham_distance_int": 180,
+  "miyata_distance": 3.0647823950803734,
+  "parent_feature": "ORF_1a",
+  "parent_codon_label": "2654"
+}

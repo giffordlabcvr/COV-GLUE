@@ -1,0 +1,18 @@
+{
+  "id": "NSP8:V:159:D",
+  "display_name": "V159D",
+  "variation.featureLoc.feature.name": "NSP8",
+  "codon_label": "159",
+  "codon_label_int": 159,
+  "reference_aa": "V",
+  "reference_nt": 12566,
+  "replacement_aa": "D",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": true,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 152.01339696164652,
+  "grantham_distance_int": 152,
+  "miyata_distance": 3.4045465485098587,
+  "parent_feature": "ORF_1a",
+  "parent_codon_label": "4101"
+}

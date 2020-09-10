@@ -1,0 +1,18 @@
+{
+  "id": "NSP9:D:60:V",
+  "display_name": "D60V",
+  "variation.featureLoc.feature.name": "NSP9",
+  "codon_label": "60",
+  "codon_label_int": 60,
+  "reference_aa": "D",
+  "reference_nt": 12863,
+  "replacement_aa": "V",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": true,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 152.01339696164652,
+  "grantham_distance_int": 152,
+  "miyata_distance": 3.4045465485098587,
+  "parent_feature": "ORF_1a",
+  "parent_codon_label": "4200"
+}

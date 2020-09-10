@@ -1,0 +1,18 @@
+{
+  "id": "NSP10:I:38:M",
+  "display_name": "I38M",
+  "variation.featureLoc.feature.name": "NSP10",
+  "codon_label": "38",
+  "codon_label_int": 38,
+  "reference_aa": "I",
+  "reference_nt": 13136,
+  "replacement_aa": "M",
+  "radical_hanada_category_i": false,
+  "radical_hanada_category_ii": false,
+  "radical_hanada_category_iii": false,
+  "grantham_distance_double": 10.120986322113374,
+  "grantham_distance_int": 10,
+  "miyata_distance": 0.2900379922702617,
+  "parent_feature": "ORF_1a",
+  "parent_codon_label": "4291"
+}

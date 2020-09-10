@@ -1,0 +1,18 @@
+{
+  "id": "NSP9:G:61:H",
+  "display_name": "G61H",
+  "variation.featureLoc.feature.name": "NSP9",
+  "codon_label": "61",
+  "codon_label_int": 61,
+  "reference_aa": "G",
+  "reference_nt": 12866,
+  "replacement_aa": "H",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": true,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 97.53340214988386,
+  "grantham_distance_int": 98,
+  "miyata_distance": 2.7797215976259686,
+  "parent_feature": "ORF_1a",
+  "parent_codon_label": "4201"
+}

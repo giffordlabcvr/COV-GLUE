@@ -1,0 +1,18 @@
+{
+  "id": "ORF_6:N:47:Q",
+  "display_name": "N47Q",
+  "variation.featureLoc.feature.name": "ORF_6",
+  "codon_label": "47",
+  "codon_label_int": 47,
+  "reference_aa": "N",
+  "reference_nt": 27340,
+  "replacement_aa": "Q",
+  "radical_hanada_category_i": false,
+  "radical_hanada_category_ii": false,
+  "radical_hanada_category_iii": false,
+  "grantham_distance_double": 45.75219661050415,
+  "grantham_distance_int": 46,
+  "miyata_distance": 0.9850672611399511,
+  "parent_feature": null,
+  "parent_codon_label": null
+}

@@ -1,0 +1,18 @@
+{
+  "id": "NSP1:R:73:P",
+  "display_name": "R73P",
+  "variation.featureLoc.feature.name": "NSP1",
+  "codon_label": "73",
+  "codon_label_int": 73,
+  "reference_aa": "R",
+  "reference_nt": 482,
+  "replacement_aa": "P",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": true,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 102.71487090966941,
+  "grantham_distance_int": 103,
+  "miyata_distance": 2.9008276159240594,
+  "parent_feature": "ORF_1a",
+  "parent_codon_label": "73"
+}

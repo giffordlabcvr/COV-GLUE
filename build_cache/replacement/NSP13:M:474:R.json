@@ -1,0 +1,18 @@
+{
+  "id": "NSP13:M:474:R",
+  "display_name": "M474R",
+  "variation.featureLoc.feature.name": "NSP13",
+  "codon_label": "474",
+  "codon_label_int": 474,
+  "reference_aa": "M",
+  "reference_nt": 17656,
+  "replacement_aa": "R",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": true,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 91.63827667082735,
+  "grantham_distance_int": 92,
+  "miyata_distance": 2.2924081997745525,
+  "parent_feature": "ORF_1ab",
+  "parent_codon_label": "5798"
+}

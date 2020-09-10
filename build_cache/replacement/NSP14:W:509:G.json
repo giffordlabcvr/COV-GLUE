@@ -1,0 +1,18 @@
+{
+  "id": "NSP14:W:509:G",
+  "display_name": "W509G",
+  "variation.featureLoc.feature.name": "NSP14",
+  "codon_label": "509",
+  "codon_label_int": 509,
+  "reference_aa": "W",
+  "reference_nt": 19564,
+  "replacement_aa": "G",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": true,
+  "radical_hanada_category_iii": false,
+  "grantham_distance_double": 183.7902133344299,
+  "grantham_distance_int": 184,
+  "miyata_distance": 5.132455948239974,
+  "parent_feature": "ORF_1ab",
+  "parent_codon_label": "6434"
+}

@@ -1,0 +1,18 @@
+{
+  "id": "E:L:39:K",
+  "display_name": "L39K",
+  "variation.featureLoc.feature.name": "E",
+  "codon_label": "39",
+  "codon_label_int": 39,
+  "reference_aa": "L",
+  "reference_nt": 26359,
+  "replacement_aa": "K",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": true,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 106.33551258979873,
+  "grantham_distance_int": 106,
+  "miyata_distance": 2.9756375073333805,
+  "parent_feature": null,
+  "parent_codon_label": null
+}

@@ -1,0 +1,18 @@
+{
+  "id": "NSP6:S:118:L",
+  "display_name": "S118L",
+  "variation.featureLoc.feature.name": "NSP6",
+  "codon_label": "118",
+  "codon_label_int": 118,
+  "reference_aa": "S",
+  "reference_nt": 11324,
+  "replacement_aa": "L",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": false,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 144.07923462160153,
+  "grantham_distance_int": 144,
+  "miyata_distance": 3.0404515387240023,
+  "parent_feature": "ORF_1a",
+  "parent_codon_label": "3687"
+}

@@ -1,0 +1,18 @@
+{
+  "id": "NSP3:E:134:V",
+  "display_name": "E134V",
+  "variation.featureLoc.feature.name": "NSP3",
+  "codon_label": "134",
+  "codon_label_int": 134,
+  "reference_aa": "E",
+  "reference_nt": 3119,
+  "replacement_aa": "V",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": true,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 121.32850629061132,
+  "grantham_distance_int": 121,
+  "miyata_distance": 2.966682149792932,
+  "parent_feature": "ORF_1a",
+  "parent_codon_label": "952"
+}
