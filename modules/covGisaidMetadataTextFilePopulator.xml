@@ -133,6 +133,10 @@
             <outputTemplate>CHN</outputTemplate>
         </valueConverter>
         <valueConverter>
+            <matchPattern>Asia / Hunan</matchPattern>
+            <outputTemplate>CHN</outputTemplate>
+        </valueConverter>
+        <valueConverter>
             <matchPattern>England</matchPattern>
             <outputTemplate>GBR</outputTemplate>
         </valueConverter>
