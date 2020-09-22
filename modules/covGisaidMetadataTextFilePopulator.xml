@@ -152,6 +152,10 @@
             <matchPattern>Asia / Brunei</matchPattern>
             <outputTemplate>BRN</outputTemplate>
         </valueConverter>
+        <valueConverter>
+            <matchPattern>Europe / Crimea</matchPattern>
+            <outputTemplate>UKR</outputTemplate>
+        </valueConverter>
     </isoCountryTextFileColumn>
     <textFileColumn>
         <header>covv_location</header>
