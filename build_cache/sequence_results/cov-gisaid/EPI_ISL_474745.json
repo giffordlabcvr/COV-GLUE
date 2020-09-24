@@ -15,11 +15,5 @@
     "S:P:809:L"
   ],
   "nt_deletion": [],
-  "deletion": [],
-  "nt_insertion": [
-    "NSP6:nca:11074:83412:11075"
-  ],
-  "insertion": [
-    "NSP6:ca:34:70:35"
-  ]
+  "deletion": []
 }

@@ -12,9 +12,5 @@
     "S:D:614:G"
   ],
   "nt_deletion": [],
-  "deletion": [],
-  "nt_insertion": [
-    "ORF_3a:nca:26078:67075:26079"
-  ],
-  "insertion": []
+  "deletion": []
 }

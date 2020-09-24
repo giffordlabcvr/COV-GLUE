@@ -14,11 +14,5 @@
   "nt_deletion": [
     "M:nca:26533:26544"
   ],
-  "deletion": [],
-  "nt_insertion": [
-    "NSP6:nca:11074:83412:11075"
-  ],
-  "insertion": [
-    "NSP6:ca:34:70:35"
-  ]
+  "deletion": []
 }

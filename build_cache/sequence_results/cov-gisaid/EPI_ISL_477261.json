@@ -12,11 +12,5 @@
     "S:P:1162:S"
   ],
   "nt_deletion": [],
-  "deletion": [],
-  "nt_insertion": [
-    "NSP9:nca:12877:1997731955:12878"
-  ],
-  "insertion": [
-    "NSP9:ca:64:2438:65"
-  ]
+  "deletion": []
 }

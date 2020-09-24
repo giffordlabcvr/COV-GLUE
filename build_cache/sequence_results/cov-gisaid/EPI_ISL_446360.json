@@ -17,9 +17,5 @@
   "nt_deletion": [
     "NSP1:nca:508:522"
   ],
-  "deletion": [],
-  "nt_insertion": [
-    "ORF_7a:nca:27403:83406:27404"
-  ],
-  "insertion": []
+  "deletion": []
 }

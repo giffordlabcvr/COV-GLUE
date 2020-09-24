@@ -18,9 +18,5 @@
     "S:V:622:A"
   ],
   "nt_deletion": [],
-  "deletion": [],
-  "nt_insertion": [
-    "ORF_3a:nca:25699:66531:25700"
-  ],
-  "insertion": []
+  "deletion": []
 }

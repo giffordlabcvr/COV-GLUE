@@ -10,11 +10,5 @@
     "S:D:614:G"
   ],
   "nt_deletion": [],
-  "deletion": [],
-  "nt_insertion": [
-    "NSP4:nca:9490:492817078:9491"
-  ],
-  "insertion": [
-    "NSP4:ca:312:1947308415:313"
-  ]
+  "deletion": []
 }
