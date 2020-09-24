@@ -35,6 +35,9 @@ var processed = 0;
 //sequences containing (a) codon-aligned insertion in NSP16, (b) no insertions
 //var whereClause = "sequence.analyse_variation = true and sequence.sequenceID in ('EPI_ISL_414588', 'EPI_ISL_402125')"
 
+// test of new hash in id for aa insertions
+//var whereClause = "sequence.sequenceID in ('EPI_ISL_473148', 'EPI_ISL_476020')";
+
 // production
 var whereClause = "sequence.analyse_variation = true and sequence.cg_insertions_from_cache = false";
 
