@@ -93,9 +93,8 @@ glue.inMode("alignment/AL_GISAID_CONSTRAINED", function() {
 				ntInsertionObj.memberSeqs.push(almtMemberObj);
 				
 				if(memberInsObj.insertionIsCodonAligned) {
-					var aaHash = stringHash(memberInsObj.insertedQryAas);
-
-					var insertionID =  memberInsObj.featureName+":ca:"+memberInsObj.refLastCodonBeforeIns+":"+aaHash+":"+memberInsObj.refFirstCodonAfterIns;
+					
+					var insertionID =  memberInsObj.featureName+":ca:"+memberInsObj.refLastCodonBeforeIns+":"+ntHash+":"+memberInsObj.refFirstCodonAfterIns;
 					var insertionObj = insertionsSet[insertionID];
 					if(insertionObj == null) {
 						insertionObj = {
@@ -107,15 +106,16 @@ glue.inMode("alignment/AL_GISAID_CONSTRAINED", function() {
 							lastRefNtBefore: memberInsObj.refLastNtBeforeIns,
 							firstRefNtAfter: memberInsObj.refFirstNtAfterIns,
 							insertedAas: memberInsObj.insertedQryAas,
+							insertedNts: memberInsObj.insertedQryNts,
 							ntInsertionID: ntInsertionID,
 							memberSeqs: []
 						};
 						insertionsSet[insertionID] = insertionObj;
 						if(memberInsObj.featureName == "ORF_1a") {
-							orf1aInsertions[memberInsObj.refLastNtBeforeIns+":"+aaHash+":"+memberInsObj.refFirstNtAfterIns] = insertionObj; 
+							orf1aInsertions[memberInsObj.refLastNtBeforeIns+":"+ntHash+":"+memberInsObj.refFirstNtAfterIns] = insertionObj; 
 						}
 						if(memberInsObj.featureName == "ORF_1ab") {
-							orf1abInsertions[memberInsObj.refLastNtBeforeIns+":"+aaHash+":"+memberInsObj.refFirstNtAfterIns] = insertionObj; 
+							orf1abInsertions[memberInsObj.refLastNtBeforeIns+":"+ntHash+":"+memberInsObj.refFirstNtAfterIns] = insertionObj; 
 						}
 	
 					}
@@ -259,7 +259,7 @@ function createNtInsertion(ntInsertionObj) {
 
 function createInsertion(insertionObj) {
 	glue.log("FINEST", "Creating insertion object", insertionObj);
-	var aaHash = stringHash(insertionObj.insertedAas);
+	var ntHash = stringHash(insertionObj.insertedNts);
 
 	var variationName = "cov_aa_ins:"+insertionObj.id;
 	var variationExists = false;
@@ -281,17 +281,17 @@ function createInsertion(insertionObj) {
 	});
 	
 	if(insertionObj.parentFeature == "ORF_1a") {
-		var parent1aInsObj = orf1aInsertions[insertionObj.lastRefNtBefore+":"+aaHash+":"+insertionObj.firstRefNtAfter];
+		var parent1aInsObj = orf1aInsertions[insertionObj.lastRefNtBefore+":"+ntHash+":"+insertionObj.firstRefNtAfter];
 		if(parent1aInsObj != null) {
 			parent1aInsObj.skipCreation = true;
 		}
-		var parent1abInsObj = orf1abInsertions[insertionObj.lastRefNtBefore+":"+aaHash+":"+insertionObj.firstRefNtAfter];
+		var parent1abInsObj = orf1abInsertions[insertionObj.lastRefNtBefore+":"+ntHash+":"+insertionObj.firstRefNtAfter];
 		if(parent1abInsObj != null) {
 			parent1abInsObj.skipCreation = true;
 		}
 	}
 	if(insertionObj.parentFeature == "ORF_1ab") {
-		var parentInsObj = orf1abInsertions[insertionObj.lastRefNtBefore+":"+aaHash+":"+insertionObj.firstRefNtAfter];
+		var parentInsObj = orf1abInsertions[insertionObj.lastRefNtBefore+":"+ntHash+":"+insertionObj.firstRefNtAfter];
 		if(parentInsObj != null) {
 			parentInsObj.skipCreation = true;
 		}
@@ -314,7 +314,7 @@ function createInsertion(insertionObj) {
 			
 			if(insertionObj.parentFeature == "ORF_1a") {
 				glue.command(["set", "field", "parent_feature", "ORF_1a"]);
-				var parent1aInsObj = orf1aInsertions[insertionObj.lastRefNtBefore+":"+aaHash+":"+insertionObj.firstRefNtAfter];
+				var parent1aInsObj = orf1aInsertions[insertionObj.lastRefNtBefore+":"+ntHash+":"+insertionObj.firstRefNtAfter];
 				if(parent1aInsObj != null) {
 					glue.command(["set", "field", "parent_last_codon_before", parent1aInsObj.lastCodonBefore]);
 					glue.command(["set", "field", "parent_first_codon_after", parent1aInsObj.firstCodonAfter]);
@@ -322,7 +322,7 @@ function createInsertion(insertionObj) {
 			}
 			if(insertionObj.parentFeature == "ORF_1ab") {
 				glue.command(["set", "field", "parent_feature", "ORF_1ab"]);
-				var parentInsObj = orf1abInsertions[insertionObj.lastRefNtBefore+":"+aaHash+":"+insertionObj.firstRefNtAfter];
+				var parentInsObj = orf1abInsertions[insertionObj.lastRefNtBefore+":"+ntHash+":"+insertionObj.firstRefNtAfter];
 				if(parentInsObj != null) {
 					glue.command(["set", "field", "parent_last_codon_before", parentInsObj.lastCodonBefore]);
 					glue.command(["set", "field", "parent_first_codon_after", parentInsObj.firstCodonAfter]);
