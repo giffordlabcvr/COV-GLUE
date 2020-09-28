@@ -88,7 +88,8 @@ project cov
   # cache derived results to build_cache directory
   run script glue/covCacheDerivedResults.js
 
-  run file glue/covSanitisedExports.glue
+  # skipping this as it takes too much memory and time at present, could restore it if anyone is using it.
+  # run file glue/covSanitisedExports.glue
 
   # Validate
   validate
