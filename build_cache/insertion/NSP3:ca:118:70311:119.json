@@ -1,0 +1,17 @@
+{
+  "id": "NSP3:ca:118:70311:119",
+  "variation.featureLoc.feature.name": "NSP3",
+  "cov_nt_insertion.id": "NSP3:nca:3073:70311:3074",
+  "display_name": "118-E-119",
+  "last_codon_before": "118",
+  "last_codon_before_int": 118,
+  "first_codon_after": "119",
+  "first_codon_after_int": 119,
+  "last_ref_nt_before": 3073,
+  "first_ref_nt_after": 3074,
+  "parent_feature": "ORF_1a",
+  "parent_last_codon_before": "936",
+  "parent_first_codon_after": "937",
+  "inserted_aas_length": 1,
+  "inserted_aas": "E"
+}

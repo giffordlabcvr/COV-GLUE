@@ -15,5 +15,7 @@
   "nt_deletion": [
     "NSP6:nca:11280:11285"
   ],
-  "deletion": []
+  "deletion": [],
+  "nt_insertion": [],
+  "insertion": []
 }

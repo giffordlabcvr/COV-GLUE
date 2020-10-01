@@ -8,5 +8,9 @@
     "NSP12:P:323:L"
   ],
   "nt_deletion": [],
-  "deletion": []
+  "deletion": [],
+  "nt_insertion": [
+    "NSP3:nca:7626:-1521583662:7627"
+  ],
+  "insertion": []
 }

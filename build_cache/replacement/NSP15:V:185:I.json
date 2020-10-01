@@ -1,0 +1,18 @@
+{
+  "id": "NSP15:V:185:I",
+  "display_name": "V185I",
+  "variation.featureLoc.feature.name": "NSP15",
+  "codon_label": "185",
+  "codon_label_int": 185,
+  "reference_aa": "V",
+  "reference_nt": 20173,
+  "replacement_aa": "I",
+  "radical_hanada_category_i": false,
+  "radical_hanada_category_ii": false,
+  "radical_hanada_category_iii": false,
+  "grantham_distance_double": 29.609070626666707,
+  "grantham_distance_int": 30,
+  "miyata_distance": 0.8491514617150016,
+  "parent_feature": "ORF_1ab",
+  "parent_codon_label": "6637"
+}

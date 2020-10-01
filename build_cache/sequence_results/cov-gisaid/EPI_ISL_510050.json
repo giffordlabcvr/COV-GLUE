@@ -23,5 +23,7 @@
   "deletion": [
     "NSP1:ca:84:85",
     "ORF_7b:ca:13:13"
-  ]
+  ],
+  "nt_insertion": [],
+  "insertion": []
 }

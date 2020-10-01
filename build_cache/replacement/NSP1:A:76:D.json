@@ -1,0 +1,18 @@
+{
+  "id": "NSP1:A:76:D",
+  "display_name": "A76D",
+  "variation.featureLoc.feature.name": "NSP1",
+  "codon_label": "76",
+  "codon_label_int": 76,
+  "reference_aa": "A",
+  "reference_nt": 491,
+  "replacement_aa": "D",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": true,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 125.74859020850259,
+  "grantham_distance_int": 126,
+  "miyata_distance": 2.3675832690225778,
+  "parent_feature": "ORF_1a",
+  "parent_codon_label": "76"
+}

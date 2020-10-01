@@ -1,0 +1,10 @@
+{
+  "id": "NSP16:nca:21384:83395:21385",
+  "variation.featureLoc.feature.name": "NSP16",
+  "display_name": "21384-TTC-21385",
+  "last_ref_nt_before": 21384,
+  "first_ref_nt_after": 21385,
+  "parent_feature": "ORF_1ab",
+  "inserted_nts_length": 3,
+  "inserted_nts": "TTC"
+}

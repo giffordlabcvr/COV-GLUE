@@ -1,0 +1,18 @@
+{
+  "id": "ORF_8:Q:91:R",
+  "display_name": "Q91R",
+  "variation.featureLoc.feature.name": "ORF_8",
+  "codon_label": "91",
+  "codon_label_int": 91,
+  "reference_aa": "Q",
+  "reference_nt": 28164,
+  "replacement_aa": "R",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": true,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 42.81393192570374,
+  "grantham_distance_int": 43,
+  "miyata_distance": 1.1334798453192791,
+  "parent_feature": null,
+  "parent_codon_label": null
+}

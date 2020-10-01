@@ -16,5 +16,11 @@
     "S:E:281:Q"
   ],
   "nt_deletion": [],
-  "deletion": []
+  "deletion": [],
+  "nt_insertion": [
+    "NSP6:nca:11074:83406:11075"
+  ],
+  "insertion": [
+    "NSP6:ca:34:83406:35"
+  ]
 }

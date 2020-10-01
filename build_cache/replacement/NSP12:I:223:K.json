@@ -1,0 +1,18 @@
+{
+  "id": "NSP12:I:223:K",
+  "display_name": "I223K",
+  "variation.featureLoc.feature.name": "NSP12",
+  "codon_label": "223",
+  "codon_label_int": 223,
+  "reference_aa": "I",
+  "reference_nt": 14107,
+  "replacement_aa": "K",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": true,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 101.6123327206865,
+  "grantham_distance_int": 102,
+  "miyata_distance": 2.837026913953594,
+  "parent_feature": "ORF_1ab",
+  "parent_codon_label": "4615"
+}

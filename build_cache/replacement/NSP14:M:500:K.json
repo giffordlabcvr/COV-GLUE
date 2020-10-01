@@ -1,0 +1,18 @@
+{
+  "id": "NSP14:M:500:K",
+  "display_name": "M500K",
+  "variation.featureLoc.feature.name": "NSP14",
+  "codon_label": "500",
+  "codon_label_int": 500,
+  "reference_aa": "M",
+  "reference_nt": 19537,
+  "replacement_aa": "K",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": true,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 94.49009719874934,
+  "grantham_distance_int": 94,
+  "miyata_distance": 2.6274196368687526,
+  "parent_feature": "ORF_1ab",
+  "parent_codon_label": "6425"
+}

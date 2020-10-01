@@ -1,0 +1,18 @@
+{
+  "id": "S:A:352:T",
+  "display_name": "A352T",
+  "variation.featureLoc.feature.name": "S",
+  "codon_label": "352",
+  "codon_label_int": 352,
+  "reference_aa": "A",
+  "reference_nt": 22616,
+  "replacement_aa": "T",
+  "radical_hanada_category_i": false,
+  "radical_hanada_category_ii": false,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 58.02332760382417,
+  "grantham_distance_int": 58,
+  "miyata_distance": 0.9021839838528766,
+  "parent_feature": null,
+  "parent_codon_label": null
+}

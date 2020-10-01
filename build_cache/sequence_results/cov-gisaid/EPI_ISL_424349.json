@@ -9,5 +9,9 @@
     "NSP6:L:37:F"
   ],
   "nt_deletion": [],
-  "deletion": []
+  "deletion": [],
+  "nt_insertion": [
+    "NSP12:nca:14605:-1826163315:14606"
+  ],
+  "insertion": []
 }

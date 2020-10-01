@@ -15,5 +15,7 @@
   "nt_deletion": [
     "S:nca:22803:22805"
   ],
-  "deletion": []
+  "deletion": [],
+  "nt_insertion": [],
+  "insertion": []
 }

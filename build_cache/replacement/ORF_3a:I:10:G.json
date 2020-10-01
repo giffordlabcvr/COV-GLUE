@@ -1,0 +1,18 @@
+{
+  "id": "ORF_3a:I:10:G",
+  "display_name": "I10G",
+  "variation.featureLoc.feature.name": "ORF_3a",
+  "codon_label": "10",
+  "codon_label_int": 10,
+  "reference_aa": "I",
+  "reference_nt": 25420,
+  "replacement_aa": "G",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": false,
+  "radical_hanada_category_iii": false,
+  "grantham_distance_double": 135.41880970401212,
+  "grantham_distance_int": 135,
+  "miyata_distance": 3.5992996208339463,
+  "parent_feature": null,
+  "parent_codon_label": null
+}

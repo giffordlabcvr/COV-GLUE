@@ -21,5 +21,7 @@
   ],
   "deletion": [
     "ORF_3a:ca:255:255"
-  ]
+  ],
+  "nt_insertion": [],
+  "insertion": []
 }

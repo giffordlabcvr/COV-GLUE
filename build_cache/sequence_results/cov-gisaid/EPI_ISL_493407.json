@@ -19,5 +19,7 @@
     "ORF_3a:Q:38:*"
   ],
   "nt_deletion": [],
-  "deletion": []
+  "deletion": [],
+  "nt_insertion": [],
+  "insertion": []
 }

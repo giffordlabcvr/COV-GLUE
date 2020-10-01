@@ -16,5 +16,9 @@
     "S:F:175:C"
   ],
   "nt_deletion": [],
-  "deletion": []
+  "deletion": [],
+  "nt_insertion": [
+    "ORF_8:nca:28239:-1809956992:28240"
+  ],
+  "insertion": []
 }

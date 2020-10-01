@@ -9,5 +9,11 @@
     "S:S:939:F"
   ],
   "nt_deletion": [],
-  "deletion": []
+  "deletion": [],
+  "nt_insertion": [
+    "NSP6:nca:11074:83412:11075"
+  ],
+  "insertion": [
+    "NSP6:ca:34:83412:35"
+  ]
 }

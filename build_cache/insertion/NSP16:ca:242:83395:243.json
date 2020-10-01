@@ -1,0 +1,17 @@
+{
+  "id": "NSP16:ca:242:83395:243",
+  "variation.featureLoc.feature.name": "NSP16",
+  "cov_nt_insertion.id": "NSP16:nca:21384:83395:21385",
+  "display_name": "242-F-243",
+  "last_codon_before": "242",
+  "last_codon_before_int": 242,
+  "first_codon_after": "243",
+  "first_codon_after_int": 243,
+  "last_ref_nt_before": 21384,
+  "first_ref_nt_after": 21385,
+  "parent_feature": "ORF_1ab",
+  "parent_last_codon_before": "7040",
+  "parent_first_codon_after": "7041",
+  "inserted_aas_length": 1,
+  "inserted_aas": "F"
+}

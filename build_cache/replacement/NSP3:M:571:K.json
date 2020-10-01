@@ -1,0 +1,18 @@
+{
+  "id": "NSP3:M:571:K",
+  "display_name": "M571K",
+  "variation.featureLoc.feature.name": "NSP3",
+  "codon_label": "571",
+  "codon_label_int": 571,
+  "reference_aa": "M",
+  "reference_nt": 4430,
+  "replacement_aa": "K",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": true,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 94.49009719874934,
+  "grantham_distance_int": 94,
+  "miyata_distance": 2.6274196368687526,
+  "parent_feature": "ORF_1a",
+  "parent_codon_label": "1389"
+}

@@ -1,0 +1,18 @@
+{
+  "id": "NSP4:Y:451:F",
+  "display_name": "Y451F",
+  "variation.featureLoc.feature.name": "NSP4",
+  "codon_label": "451",
+  "codon_label_int": 451,
+  "reference_aa": "Y",
+  "reference_nt": 9905,
+  "replacement_aa": "F",
+  "radical_hanada_category_i": false,
+  "radical_hanada_category_ii": false,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 21.6096648887579,
+  "grantham_distance_int": 22,
+  "miyata_distance": 0.4778781952608543,
+  "parent_feature": "ORF_1a",
+  "parent_codon_label": "3214"
+}

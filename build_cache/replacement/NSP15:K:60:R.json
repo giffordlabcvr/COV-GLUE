@@ -1,0 +1,18 @@
+{
+  "id": "NSP15:K:60:R",
+  "display_name": "K60R",
+  "variation.featureLoc.feature.name": "NSP15",
+  "codon_label": "60",
+  "codon_label_int": 60,
+  "reference_aa": "K",
+  "reference_nt": 19798,
+  "replacement_aa": "R",
+  "radical_hanada_category_i": false,
+  "radical_hanada_category_ii": false,
+  "radical_hanada_category_iii": false,
+  "grantham_distance_double": 26.003946260840873,
+  "grantham_distance_int": 26,
+  "miyata_distance": 0.3982749033932912,
+  "parent_feature": "ORF_1ab",
+  "parent_codon_label": "6512"
+}

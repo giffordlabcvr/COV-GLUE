@@ -5,5 +5,7 @@
   "cov_glue_lw_ratio": 0.9501810000000005,
   "replacement": [],
   "nt_deletion": [],
-  "deletion": []
+  "deletion": [],
+  "nt_insertion": [],
+  "insertion": []
 }

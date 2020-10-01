@@ -1,0 +1,18 @@
+{
+  "id": "NSP12:P:677:Q",
+  "display_name": "P677Q",
+  "variation.featureLoc.feature.name": "NSP12",
+  "codon_label": "677",
+  "codon_label_int": 677,
+  "reference_aa": "P",
+  "reference_nt": 15469,
+  "replacement_aa": "Q",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": false,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 75.13587820053876,
+  "grantham_distance_int": 75,
+  "miyata_distance": 1.9159881217963026,
+  "parent_feature": "ORF_1ab",
+  "parent_codon_label": "5069"
+}

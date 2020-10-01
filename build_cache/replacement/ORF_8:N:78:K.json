@@ -1,0 +1,18 @@
+{
+  "id": "ORF_8:N:78:K",
+  "display_name": "N78K",
+  "variation.featureLoc.feature.name": "ORF_8",
+  "codon_label": "78",
+  "codon_label_int": 78,
+  "reference_aa": "N",
+  "reference_nt": 28125,
+  "replacement_aa": "K",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": true,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 93.88268261638616,
+  "grantham_distance_int": 94,
+  "miyata_distance": 1.8362786676180092,
+  "parent_feature": null,
+  "parent_codon_label": null
+}

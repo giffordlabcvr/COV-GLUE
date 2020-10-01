@@ -12,5 +12,7 @@
     "ORF_3a:T:24:I"
   ],
   "nt_deletion": [],
-  "deletion": []
+  "deletion": [],
+  "nt_insertion": [],
+  "insertion": []
 }

@@ -10,5 +10,7 @@
     "ORF_8:T:12:A"
   ],
   "nt_deletion": [],
-  "deletion": []
+  "deletion": [],
+  "nt_insertion": [],
+  "insertion": []
 }

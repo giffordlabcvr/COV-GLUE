@@ -1,0 +1,18 @@
+{
+  "id": "ORF_3a:L:52:H",
+  "display_name": "L52H",
+  "variation.featureLoc.feature.name": "ORF_3a",
+  "codon_label": "52",
+  "codon_label_int": 52,
+  "reference_aa": "L",
+  "reference_nt": 25546,
+  "replacement_aa": "H",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": true,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 98.69301470650433,
+  "grantham_distance_int": 99,
+  "miyata_distance": 2.5863765667097054,
+  "parent_feature": null,
+  "parent_codon_label": null
+}

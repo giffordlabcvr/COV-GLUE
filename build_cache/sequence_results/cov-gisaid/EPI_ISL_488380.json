@@ -12,5 +12,7 @@
     "ORF_8:Q:18:*"
   ],
   "nt_deletion": [],
-  "deletion": []
+  "deletion": [],
+  "nt_insertion": [],
+  "insertion": []
 }

@@ -1,0 +1,18 @@
+{
+  "id": "NSP13:F:422:I",
+  "display_name": "F422I",
+  "variation.featureLoc.feature.name": "NSP13",
+  "codon_label": "422",
+  "codon_label_int": 422,
+  "reference_aa": "F",
+  "reference_nt": 17500,
+  "replacement_aa": "I",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": true,
+  "radical_hanada_category_iii": false,
+  "grantham_distance_double": 21.277013760678706,
+  "grantham_distance_int": 21,
+  "miyata_distance": 0.6103353013257657,
+  "parent_feature": "ORF_1ab",
+  "parent_codon_label": "5746"
+}
