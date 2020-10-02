@@ -13,5 +13,7 @@
   "nt_deletion": [
     "NSP1:nca:423:425"
   ],
-  "deletion": []
+  "deletion": [],
+  "nt_insertion": [],
+  "insertion": []
 }

@@ -12,5 +12,7 @@
     "ORF_7a:E:95:*"
   ],
   "nt_deletion": [],
-  "deletion": []
+  "deletion": [],
+  "nt_insertion": [],
+  "insertion": []
 }

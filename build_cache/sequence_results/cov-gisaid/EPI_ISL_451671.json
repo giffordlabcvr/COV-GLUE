@@ -65,5 +65,7 @@
     "S:W:1217:*"
   ],
   "nt_deletion": [],
-  "deletion": []
+  "deletion": [],
+  "nt_insertion": [],
+  "insertion": []
 }

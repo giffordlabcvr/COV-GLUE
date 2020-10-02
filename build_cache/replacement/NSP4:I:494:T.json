@@ -1,0 +1,18 @@
+{
+  "id": "NSP4:I:494:T",
+  "display_name": "I494T",
+  "variation.featureLoc.feature.name": "NSP4",
+  "codon_label": "494",
+  "codon_label_int": 494,
+  "reference_aa": "I",
+  "reference_nt": 10034,
+  "replacement_aa": "T",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": false,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 89.28290210353987,
+  "grantham_distance_int": 89,
+  "miyata_distance": 2.143694221057671,
+  "parent_feature": "ORF_1a",
+  "parent_codon_label": "3257"
+}

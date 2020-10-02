@@ -12,5 +12,11 @@
     "ORF_7a:A:105:V"
   ],
   "nt_deletion": [],
-  "deletion": []
+  "deletion": [],
+  "nt_insertion": [
+    "NSP6:nca:11074:83412:11075"
+  ],
+  "insertion": [
+    "NSP6:ca:34:83412:35"
+  ]
 }

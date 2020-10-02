@@ -1,0 +1,18 @@
+{
+  "id": "NSP4:Y:342:D",
+  "display_name": "Y342D",
+  "variation.featureLoc.feature.name": "NSP4",
+  "codon_label": "342",
+  "codon_label_int": 342,
+  "reference_aa": "Y",
+  "reference_nt": 9578,
+  "replacement_aa": "D",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": true,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 159.93740663288054,
+  "grantham_distance_int": 160,
+  "miyata_distance": 3.951517253135271,
+  "parent_feature": "ORF_1a",
+  "parent_codon_label": "3105"
+}

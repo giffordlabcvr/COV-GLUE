@@ -1,0 +1,18 @@
+{
+  "id": "NSP4:E:230:C",
+  "display_name": "E230C",
+  "variation.featureLoc.feature.name": "NSP4",
+  "codon_label": "230",
+  "codon_label_int": 230,
+  "reference_aa": "E",
+  "reference_nt": 9242,
+  "replacement_aa": "C",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": true,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 169.4374593210234,
+  "grantham_distance_int": 169,
+  "miyata_distance": 3.255306132066906,
+  "parent_feature": "ORF_1a",
+  "parent_codon_label": "2993"
+}

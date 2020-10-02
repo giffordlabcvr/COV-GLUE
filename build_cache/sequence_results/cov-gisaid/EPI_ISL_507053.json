@@ -11,5 +11,7 @@
     "ORF_6:H:3:Y"
   ],
   "nt_deletion": [],
-  "deletion": []
+  "deletion": [],
+  "nt_insertion": [],
+  "insertion": []
 }

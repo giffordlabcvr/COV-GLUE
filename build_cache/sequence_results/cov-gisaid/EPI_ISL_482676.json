@@ -12,5 +12,7 @@
     "ORF_10:Q:29:*"
   ],
   "nt_deletion": [],
-  "deletion": []
+  "deletion": [],
+  "nt_insertion": [],
+  "insertion": []
 }

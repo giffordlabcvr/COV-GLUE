@@ -1,0 +1,8 @@
+{
+  "id": "NSP2:nca:1966:1968",
+  "variation.featureLoc.feature.name": "NSP2",
+  "display_name": "1966-1968",
+  "reference_nt_start": 1966,
+  "reference_nt_end": 1968,
+  "parent_feature": "ORF_1a"
+}

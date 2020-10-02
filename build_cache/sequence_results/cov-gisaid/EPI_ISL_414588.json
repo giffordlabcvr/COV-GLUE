@@ -11,5 +11,11 @@
     "ORF_8:L:84:S"
   ],
   "nt_deletion": [],
-  "deletion": []
+  "deletion": [],
+  "nt_insertion": [
+    "NSP16:nca:21384:83395:21385"
+  ],
+  "insertion": [
+    "NSP16:ca:242:83395:243"
+  ]
 }

@@ -1,0 +1,18 @@
+{
+  "id": "NSP10:Y:126:S",
+  "display_name": "Y126S",
+  "variation.featureLoc.feature.name": "NSP10",
+  "codon_label": "126",
+  "codon_label_int": 126,
+  "reference_aa": "Y",
+  "reference_nt": 13400,
+  "replacement_aa": "S",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": true,
+  "radical_hanada_category_iii": false,
+  "grantham_distance_double": 143.10738438907285,
+  "grantham_distance_int": 143,
+  "miyata_distance": 3.327140114906959,
+  "parent_feature": "ORF_1a",
+  "parent_codon_label": "4379"
+}

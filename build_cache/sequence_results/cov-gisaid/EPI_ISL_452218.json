@@ -12,5 +12,7 @@
     "ORF_6:V:24:A"
   ],
   "nt_deletion": [],
-  "deletion": []
+  "deletion": [],
+  "nt_insertion": [],
+  "insertion": []
 }

@@ -24,5 +24,7 @@
     "ORF_7b:Y:10:F"
   ],
   "nt_deletion": [],
-  "deletion": []
+  "deletion": [],
+  "nt_insertion": [],
+  "insertion": []
 }

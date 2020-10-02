@@ -1,0 +1,15 @@
+{
+  "id": "NSP3:ca:491:491",
+  "variation.featureLoc.feature.name": "NSP3",
+  "cov_nt_deletion.id": "NSP3:nca:4190:4192",
+  "display_name": "491",
+  "end_codon": "491",
+  "end_codon_int": 491,
+  "parent_end_codon": "1309",
+  "parent_feature": "ORF_1a",
+  "parent_start_codon": "1309",
+  "reference_nt_end": 4192,
+  "reference_nt_start": 4190,
+  "start_codon": "491",
+  "start_codon_int": 491
+}

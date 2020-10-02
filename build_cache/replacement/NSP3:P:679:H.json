@@ -1,0 +1,18 @@
+{
+  "id": "NSP3:P:679:H",
+  "display_name": "P679H",
+  "variation.featureLoc.feature.name": "NSP3",
+  "codon_label": "679",
+  "codon_label_int": 679,
+  "reference_aa": "P",
+  "reference_nt": 4754,
+  "replacement_aa": "H",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": true,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 76.27712276797571,
+  "grantham_distance_int": 76,
+  "miyata_distance": 2.154892056346583,
+  "parent_feature": "ORF_1a",
+  "parent_codon_label": "1497"
+}

@@ -1,0 +1,10 @@
+{
+  "id": "NSP3:nca:7626:-1521583662:7627",
+  "variation.featureLoc.feature.name": "NSP3",
+  "display_name": "7626-TTGTGATACATTCTGTGCTGGTAG-7627",
+  "last_ref_nt_before": 7626,
+  "first_ref_nt_after": 7627,
+  "parent_feature": "ORF_1a",
+  "inserted_nts_length": 24,
+  "inserted_nts": "TTGTGATACATTCTGTGCTGGTAG"
+}

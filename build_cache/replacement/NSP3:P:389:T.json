@@ -1,0 +1,18 @@
+{
+  "id": "NSP3:P:389:T",
+  "display_name": "P389T",
+  "variation.featureLoc.feature.name": "NSP3",
+  "codon_label": "389",
+  "codon_label_int": 389,
+  "reference_aa": "P",
+  "reference_nt": 3884,
+  "replacement_aa": "T",
+  "radical_hanada_category_i": false,
+  "radical_hanada_category_ii": false,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 37.56362475504698,
+  "grantham_distance_int": 38,
+  "miyata_distance": 0.873755109177339,
+  "parent_feature": "ORF_1a",
+  "parent_codon_label": "1207"
+}

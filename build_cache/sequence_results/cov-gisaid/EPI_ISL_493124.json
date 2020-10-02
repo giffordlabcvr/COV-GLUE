@@ -10,5 +10,7 @@
   "nt_deletion": [
     "ORF_8:nca:28004:28030"
   ],
-  "deletion": []
+  "deletion": [],
+  "nt_insertion": [],
+  "insertion": []
 }

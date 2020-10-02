@@ -14,5 +14,9 @@
     "S:D:614:G"
   ],
   "nt_deletion": [],
-  "deletion": []
+  "deletion": [],
+  "nt_insertion": [
+    "ORF_8:nca:27921:747263115:27922"
+  ],
+  "insertion": []
 }

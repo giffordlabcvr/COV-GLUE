@@ -12,5 +12,7 @@
   "nt_deletion": [
     "ORF_3a:nca:25416:25424"
   ],
-  "deletion": []
+  "deletion": [],
+  "nt_insertion": [],
+  "insertion": []
 }

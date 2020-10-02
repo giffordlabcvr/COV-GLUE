@@ -1,0 +1,10 @@
+{
+  "id": "ORF_3a:nca:26078:67075:26079",
+  "variation.featureLoc.feature.name": "ORF_3a",
+  "display_name": "26078-CTT-26079",
+  "last_ref_nt_before": 26078,
+  "first_ref_nt_after": 26079,
+  "parent_feature": null,
+  "inserted_nts_length": 3,
+  "inserted_nts": "CTT"
+}

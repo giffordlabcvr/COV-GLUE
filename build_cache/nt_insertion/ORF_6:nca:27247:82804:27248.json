@@ -1,0 +1,10 @@
+{
+  "id": "ORF_6:nca:27247:82804:27248",
+  "variation.featureLoc.feature.name": "ORF_6",
+  "display_name": "27247-TAA-27248",
+  "last_ref_nt_before": 27247,
+  "first_ref_nt_after": 27248,
+  "parent_feature": null,
+  "inserted_nts_length": 3,
+  "inserted_nts": "TAA"
+}

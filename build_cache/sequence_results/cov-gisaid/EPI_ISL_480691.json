@@ -8,5 +8,7 @@
     "ORF_8:M:1:I"
   ],
   "nt_deletion": [],
-  "deletion": []
+  "deletion": [],
+  "nt_insertion": [],
+  "insertion": []
 }

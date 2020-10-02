@@ -1,0 +1,18 @@
+{
+  "id": "NSP8:D:134:E",
+  "display_name": "D134E",
+  "variation.featureLoc.feature.name": "NSP8",
+  "codon_label": "134",
+  "codon_label_int": 134,
+  "reference_aa": "D",
+  "reference_nt": 12491,
+  "replacement_aa": "E",
+  "radical_hanada_category_i": false,
+  "radical_hanada_category_ii": false,
+  "radical_hanada_category_iii": false,
+  "grantham_distance_double": 44.60463645252665,
+  "grantham_distance_int": 45,
+  "miyata_distance": 0.9031410249655084,
+  "parent_feature": "ORF_1a",
+  "parent_codon_label": "4076"
+}

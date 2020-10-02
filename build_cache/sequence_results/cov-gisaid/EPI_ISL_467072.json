@@ -11,5 +11,7 @@
     "ORF_3a:V:50:I"
   ],
   "nt_deletion": [],
-  "deletion": []
+  "deletion": [],
+  "nt_insertion": [],
+  "insertion": []
 }

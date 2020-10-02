@@ -1,0 +1,18 @@
+{
+  "id": "NSP12:K:780:M",
+  "display_name": "K780M",
+  "variation.featureLoc.feature.name": "NSP12",
+  "codon_label": "780",
+  "codon_label_int": 780,
+  "reference_aa": "K",
+  "reference_nt": 15778,
+  "replacement_aa": "M",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": true,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 94.49009719874934,
+  "grantham_distance_int": 94,
+  "miyata_distance": 2.6274196368687526,
+  "parent_feature": "ORF_1ab",
+  "parent_codon_label": "5172"
+}

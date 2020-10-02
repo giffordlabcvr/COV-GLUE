@@ -9,5 +9,7 @@
   "nt_deletion": [
     "NSP1:nca:510:518"
   ],
-  "deletion": []
+  "deletion": [],
+  "nt_insertion": [],
+  "insertion": []
 }

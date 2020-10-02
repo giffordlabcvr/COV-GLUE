@@ -1,0 +1,18 @@
+{
+  "id": "NSP12:H:355:R",
+  "display_name": "H355R",
+  "variation.featureLoc.feature.name": "NSP12",
+  "codon_label": "355",
+  "codon_label_int": 355,
+  "reference_aa": "H",
+  "reference_nt": 14503,
+  "replacement_aa": "R",
+  "radical_hanada_category_i": false,
+  "radical_hanada_category_ii": false,
+  "radical_hanada_category_iii": false,
+  "grantham_distance_double": 28.81922223513406,
+  "grantham_distance_int": 29,
+  "miyata_distance": 0.8150994217108231,
+  "parent_feature": "ORF_1ab",
+  "parent_codon_label": "4747"
+}

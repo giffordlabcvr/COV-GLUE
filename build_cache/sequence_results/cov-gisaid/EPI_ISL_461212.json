@@ -11,5 +11,7 @@
   "nt_deletion": [
     "NSP4:nca:9850:9852"
   ],
-  "deletion": []
+  "deletion": [],
+  "nt_insertion": [],
+  "insertion": []
 }
