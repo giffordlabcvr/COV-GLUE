@@ -160,6 +160,10 @@
             <matchPattern>Europe / Crimea</matchPattern>
             <outputTemplate>UKR</outputTemplate>
         </valueConverter>
+        <valueConverter>
+            <matchPattern>South America / Curacao</matchPattern>
+            <outputTemplate>CUW</outputTemplate>
+        </valueConverter>
     </isoCountryTextFileColumn>
     <textFileColumn>
         <header>covv_location</header>
