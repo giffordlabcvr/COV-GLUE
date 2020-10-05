@@ -1,0 +1,18 @@
+{
+  "id": "NSP8:W:154:G",
+  "display_name": "W154G",
+  "variation.featureLoc.feature.name": "NSP8",
+  "codon_label": "154",
+  "codon_label_int": 154,
+  "reference_aa": "W",
+  "reference_nt": 12551,
+  "replacement_aa": "G",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": true,
+  "radical_hanada_category_iii": false,
+  "grantham_distance_double": 183.7902133344299,
+  "grantham_distance_int": 184,
+  "miyata_distance": 5.132455948239974,
+  "parent_feature": "ORF_1a",
+  "parent_codon_label": "4096"
+}

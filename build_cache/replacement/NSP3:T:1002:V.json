@@ -1,0 +1,18 @@
+{
+  "id": "NSP3:T:1002:V",
+  "display_name": "T1002V",
+  "variation.featureLoc.feature.name": "NSP3",
+  "codon_label": "1002",
+  "codon_label_int": 1002,
+  "reference_aa": "T",
+  "reference_nt": 5723,
+  "replacement_aa": "V",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": false,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 69.49621702875237,
+  "grantham_distance_int": 69,
+  "miyata_distance": 1.4188434664680434,
+  "parent_feature": "ORF_1a",
+  "parent_codon_label": "1820"
+}

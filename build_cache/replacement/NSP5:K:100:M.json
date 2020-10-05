@@ -1,0 +1,18 @@
+{
+  "id": "NSP5:K:100:M",
+  "display_name": "K100M",
+  "variation.featureLoc.feature.name": "NSP5",
+  "codon_label": "100",
+  "codon_label_int": 100,
+  "reference_aa": "K",
+  "reference_nt": 10352,
+  "replacement_aa": "M",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": true,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 94.49009719874934,
+  "grantham_distance_int": 94,
+  "miyata_distance": 2.6274196368687526,
+  "parent_feature": "ORF_1a",
+  "parent_codon_label": "3363"
+}

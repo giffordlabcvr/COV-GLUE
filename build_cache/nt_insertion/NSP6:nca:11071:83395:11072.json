@@ -1,0 +1,10 @@
+{
+  "id": "NSP6:nca:11071:83395:11072",
+  "variation.featureLoc.feature.name": "NSP6",
+  "display_name": "11071-TTC-11072",
+  "last_ref_nt_before": 11071,
+  "first_ref_nt_after": 11072,
+  "parent_feature": "ORF_1a",
+  "inserted_nts_length": 3,
+  "inserted_nts": "TTC"
+}

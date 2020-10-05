@@ -1,0 +1,18 @@
+{
+  "id": "NSP15:D:323:Y",
+  "display_name": "D323Y",
+  "variation.featureLoc.feature.name": "NSP15",
+  "codon_label": "323",
+  "codon_label_int": 323,
+  "reference_aa": "D",
+  "reference_nt": 20587,
+  "replacement_aa": "Y",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": true,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 159.93740663288054,
+  "grantham_distance_int": 160,
+  "miyata_distance": 3.951517253135271,
+  "parent_feature": "ORF_1ab",
+  "parent_codon_label": "6775"
+}

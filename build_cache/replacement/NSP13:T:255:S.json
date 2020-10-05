@@ -1,0 +1,18 @@
+{
+  "id": "NSP13:T:255:S",
+  "display_name": "T255S",
+  "variation.featureLoc.feature.name": "NSP13",
+  "codon_label": "255",
+  "codon_label_int": 255,
+  "reference_aa": "T",
+  "reference_nt": 16999,
+  "replacement_aa": "S",
+  "radical_hanada_category_i": false,
+  "radical_hanada_category_ii": false,
+  "radical_hanada_category_iii": false,
+  "grantham_distance_double": 57.74902765654723,
+  "grantham_distance_int": 58,
+  "miyata_distance": 0.8875431743515021,
+  "parent_feature": "ORF_1ab",
+  "parent_codon_label": "5579"
+}

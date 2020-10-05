@@ -1,0 +1,18 @@
+{
+  "id": "NSP15:K:181:*",
+  "display_name": "K181*",
+  "variation.featureLoc.feature.name": "NSP15",
+  "codon_label": "181",
+  "codon_label_int": 181,
+  "reference_aa": "K",
+  "reference_nt": 20161,
+  "replacement_aa": "*",
+  "radical_hanada_category_i": null,
+  "radical_hanada_category_ii": null,
+  "radical_hanada_category_iii": null,
+  "grantham_distance_double": null,
+  "grantham_distance_int": null,
+  "miyata_distance": null,
+  "parent_feature": "ORF_1ab",
+  "parent_codon_label": "6633"
+}

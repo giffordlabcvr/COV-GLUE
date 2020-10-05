@@ -1,0 +1,18 @@
+{
+  "id": "NSP8:E:77:A",
+  "display_name": "E77A",
+  "variation.featureLoc.feature.name": "NSP8",
+  "codon_label": "77",
+  "codon_label_int": 77,
+  "reference_aa": "E",
+  "reference_nt": 12320,
+  "replacement_aa": "A",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": true,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 106.7125513825282,
+  "grantham_distance_int": 107,
+  "miyata_distance": 2.464557824068621,
+  "parent_feature": "ORF_1a",
+  "parent_codon_label": "4019"
+}

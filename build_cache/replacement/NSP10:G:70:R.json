@@ -1,0 +1,18 @@
+{
+  "id": "NSP10:G:70:R",
+  "display_name": "G70R",
+  "variation.featureLoc.feature.name": "NSP10",
+  "codon_label": "70",
+  "codon_label_int": 70,
+  "reference_aa": "G",
+  "reference_nt": 13232,
+  "replacement_aa": "R",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": true,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 125.12919263514027,
+  "grantham_distance_int": 125,
+  "miyata_distance": 3.584766932145264,
+  "parent_feature": "ORF_1a",
+  "parent_codon_label": "4323"
+}

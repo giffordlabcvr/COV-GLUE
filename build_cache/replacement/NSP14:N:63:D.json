@@ -1,0 +1,18 @@
+{
+  "id": "NSP14:N:63:D",
+  "display_name": "N63D",
+  "variation.featureLoc.feature.name": "NSP14",
+  "codon_label": "63",
+  "codon_label_int": 63,
+  "reference_aa": "N",
+  "reference_nt": 18226,
+  "replacement_aa": "D",
+  "radical_hanada_category_i": false,
+  "radical_hanada_category_ii": true,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 23.00535500058712,
+  "grantham_distance_int": 23,
+  "miyata_distance": 0.6515287120397918,
+  "parent_feature": "ORF_1ab",
+  "parent_codon_label": "5988"
+}

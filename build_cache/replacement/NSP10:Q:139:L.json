@@ -1,0 +1,18 @@
+{
+  "id": "NSP10:Q:139:L",
+  "display_name": "Q139L",
+  "variation.featureLoc.feature.name": "NSP10",
+  "codon_label": "139",
+  "codon_label_int": 139,
+  "reference_aa": "Q",
+  "reference_nt": 13439,
+  "replacement_aa": "L",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": false,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 112.44147717377763,
+  "grantham_distance_int": 112,
+  "miyata_distance": 2.703476672168515,
+  "parent_feature": "ORF_1a",
+  "parent_codon_label": "4392"
+}

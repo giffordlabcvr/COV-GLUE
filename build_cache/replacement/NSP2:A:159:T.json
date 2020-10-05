@@ -1,0 +1,18 @@
+{
+  "id": "NSP2:A:159:T",
+  "display_name": "A159T",
+  "variation.featureLoc.feature.name": "NSP2",
+  "codon_label": "159",
+  "codon_label_int": 159,
+  "reference_aa": "A",
+  "reference_nt": 1280,
+  "replacement_aa": "T",
+  "radical_hanada_category_i": false,
+  "radical_hanada_category_ii": false,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 58.02332760382417,
+  "grantham_distance_int": 58,
+  "miyata_distance": 0.9021839838528766,
+  "parent_feature": "ORF_1a",
+  "parent_codon_label": "339"
+}

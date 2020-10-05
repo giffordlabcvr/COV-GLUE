@@ -1,0 +1,18 @@
+{
+  "id": "NSP4:Y:391:*",
+  "display_name": "Y391*",
+  "variation.featureLoc.feature.name": "NSP4",
+  "codon_label": "391",
+  "codon_label_int": 391,
+  "reference_aa": "Y",
+  "reference_nt": 9725,
+  "replacement_aa": "*",
+  "radical_hanada_category_i": null,
+  "radical_hanada_category_ii": null,
+  "radical_hanada_category_iii": null,
+  "grantham_distance_double": null,
+  "grantham_distance_int": null,
+  "miyata_distance": null,
+  "parent_feature": "ORF_1a",
+  "parent_codon_label": "3154"
+}

@@ -1,0 +1,18 @@
+{
+  "id": "NSP4:W:74:G",
+  "display_name": "W74G",
+  "variation.featureLoc.feature.name": "NSP4",
+  "codon_label": "74",
+  "codon_label_int": 74,
+  "reference_aa": "W",
+  "reference_nt": 8774,
+  "replacement_aa": "G",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": true,
+  "radical_hanada_category_iii": false,
+  "grantham_distance_double": 183.7902133344299,
+  "grantham_distance_int": 184,
+  "miyata_distance": 5.132455948239974,
+  "parent_feature": "ORF_1a",
+  "parent_codon_label": "2837"
+}

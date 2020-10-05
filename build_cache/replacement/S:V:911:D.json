@@ -1,0 +1,18 @@
+{
+  "id": "S:V:911:D",
+  "display_name": "V911D",
+  "variation.featureLoc.feature.name": "S",
+  "codon_label": "911",
+  "codon_label_int": 911,
+  "reference_aa": "V",
+  "reference_nt": 24293,
+  "replacement_aa": "D",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": true,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 152.01339696164652,
+  "grantham_distance_int": 152,
+  "miyata_distance": 3.4045465485098587,
+  "parent_feature": null,
+  "parent_codon_label": null
+}

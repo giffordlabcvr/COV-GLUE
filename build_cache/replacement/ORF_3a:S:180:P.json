@@ -1,0 +1,18 @@
+{
+  "id": "ORF_3a:S:180:P",
+  "display_name": "S180P",
+  "variation.featureLoc.feature.name": "ORF_3a",
+  "codon_label": "180",
+  "codon_label_int": 180,
+  "reference_aa": "S",
+  "reference_nt": 25930,
+  "replacement_aa": "P",
+  "radical_hanada_category_i": false,
+  "radical_hanada_category_ii": false,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 73.35256887257073,
+  "grantham_distance_int": 73,
+  "miyata_distance": 0.5564160035374529,
+  "parent_feature": null,
+  "parent_codon_label": null
+}

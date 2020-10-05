@@ -1,0 +1,18 @@
+{
+  "id": "NSP12:M:818:V",
+  "display_name": "M818V",
+  "variation.featureLoc.feature.name": "NSP12",
+  "codon_label": "818",
+  "codon_label_int": 818,
+  "reference_aa": "M",
+  "reference_nt": 15892,
+  "replacement_aa": "V",
+  "radical_hanada_category_i": false,
+  "radical_hanada_category_ii": false,
+  "radical_hanada_category_iii": false,
+  "grantham_distance_double": 21.521799383987368,
+  "grantham_distance_int": 22,
+  "miyata_distance": 0.6173356298910421,
+  "parent_feature": "ORF_1ab",
+  "parent_codon_label": "5210"
+}

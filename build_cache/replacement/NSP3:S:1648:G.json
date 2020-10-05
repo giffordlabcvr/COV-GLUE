@@ -1,0 +1,18 @@
+{
+  "id": "NSP3:S:1648:G",
+  "display_name": "S1648G",
+  "variation.featureLoc.feature.name": "NSP3",
+  "codon_label": "1648",
+  "codon_label_int": 1648,
+  "reference_aa": "S",
+  "reference_nt": 7661,
+  "replacement_aa": "G",
+  "radical_hanada_category_i": false,
+  "radical_hanada_category_ii": false,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 55.267362761946906,
+  "grantham_distance_int": 55,
+  "miyata_distance": 0.8479269350772444,
+  "parent_feature": "ORF_1a",
+  "parent_codon_label": "2466"
+}

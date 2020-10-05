@@ -1,0 +1,18 @@
+{
+  "id": "ORF_3a:Y:206:*",
+  "display_name": "Y206*",
+  "variation.featureLoc.feature.name": "ORF_3a",
+  "codon_label": "206",
+  "codon_label_int": 206,
+  "reference_aa": "Y",
+  "reference_nt": 26008,
+  "replacement_aa": "*",
+  "radical_hanada_category_i": null,
+  "radical_hanada_category_ii": null,
+  "radical_hanada_category_iii": null,
+  "grantham_distance_double": null,
+  "grantham_distance_int": null,
+  "miyata_distance": null,
+  "parent_feature": null,
+  "parent_codon_label": null
+}

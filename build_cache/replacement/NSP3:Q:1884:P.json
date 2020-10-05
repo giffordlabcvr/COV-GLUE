@@ -1,0 +1,18 @@
+{
+  "id": "NSP3:Q:1884:P",
+  "display_name": "Q1884P",
+  "variation.featureLoc.feature.name": "NSP3",
+  "codon_label": "1884",
+  "codon_label_int": 1884,
+  "reference_aa": "Q",
+  "reference_nt": 8369,
+  "replacement_aa": "P",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": false,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 75.13587820053876,
+  "grantham_distance_int": 75,
+  "miyata_distance": 1.9159881217963026,
+  "parent_feature": "ORF_1a",
+  "parent_codon_label": "2702"
+}

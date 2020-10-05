@@ -1,0 +1,15 @@
+{
+  "id": "ORF_7a:ca:55:71",
+  "variation.featureLoc.feature.name": "ORF_7a",
+  "cov_nt_deletion.id": "ORF_7a:nca:27556:27606",
+  "display_name": "55-71",
+  "end_codon": "71",
+  "end_codon_int": 71,
+  "parent_end_codon": null,
+  "parent_feature": null,
+  "parent_start_codon": null,
+  "reference_nt_end": 27606,
+  "reference_nt_start": 27556,
+  "start_codon": "55",
+  "start_codon_int": 55
+}

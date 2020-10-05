@@ -1,0 +1,18 @@
+{
+  "id": "NSP14:K:175:Q",
+  "display_name": "K175Q",
+  "variation.featureLoc.feature.name": "NSP14",
+  "codon_label": "175",
+  "codon_label_int": 175,
+  "reference_aa": "K",
+  "reference_nt": 18562,
+  "replacement_aa": "Q",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": true,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 53.228340150510796,
+  "grantham_distance_int": 53,
+  "miyata_distance": 1.0554475691875203,
+  "parent_feature": "ORF_1ab",
+  "parent_codon_label": "6100"
+}

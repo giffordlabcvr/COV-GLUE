@@ -1,0 +1,10 @@
+{
+  "id": "N:nca:29451:82885:29452",
+  "variation.featureLoc.feature.name": "N",
+  "display_name": "29451-TCT-29452",
+  "last_ref_nt_before": 29451,
+  "first_ref_nt_after": 29452,
+  "parent_feature": null,
+  "inserted_nts_length": 3,
+  "inserted_nts": "TCT"
+}

@@ -1,0 +1,18 @@
+{
+  "id": "ORF_8:Q:29:H",
+  "display_name": "Q29H",
+  "variation.featureLoc.feature.name": "ORF_8",
+  "codon_label": "29",
+  "codon_label_int": 29,
+  "reference_aa": "Q",
+  "reference_nt": 27978,
+  "replacement_aa": "H",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": true,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 24.08398867410485,
+  "grantham_distance_int": 24,
+  "miyata_distance": 0.32304219411608814,
+  "parent_feature": null,
+  "parent_codon_label": null
+}

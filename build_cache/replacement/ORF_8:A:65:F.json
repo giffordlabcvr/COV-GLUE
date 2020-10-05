@@ -1,0 +1,18 @@
+{
+  "id": "ORF_8:A:65:F",
+  "display_name": "A65F",
+  "variation.featureLoc.feature.name": "ORF_8",
+  "codon_label": "65",
+  "codon_label_int": 65,
+  "reference_aa": "A",
+  "reference_nt": 28086,
+  "replacement_aa": "F",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": true,
+  "radical_hanada_category_iii": false,
+  "grantham_distance_double": 112.58148961669352,
+  "grantham_distance_int": 113,
+  "miyata_distance": 3.2285620297043214,
+  "parent_feature": null,
+  "parent_codon_label": null
+}

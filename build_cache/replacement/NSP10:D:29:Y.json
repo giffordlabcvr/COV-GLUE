@@ -1,0 +1,18 @@
+{
+  "id": "NSP10:D:29:Y",
+  "display_name": "D29Y",
+  "variation.featureLoc.feature.name": "NSP10",
+  "codon_label": "29",
+  "codon_label_int": 29,
+  "reference_aa": "D",
+  "reference_nt": 13109,
+  "replacement_aa": "Y",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": true,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 159.93740663288054,
+  "grantham_distance_int": 160,
+  "miyata_distance": 3.951517253135271,
+  "parent_feature": "ORF_1a",
+  "parent_codon_label": "4282"
+}

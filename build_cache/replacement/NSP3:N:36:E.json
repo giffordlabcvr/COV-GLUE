@@ -1,0 +1,18 @@
+{
+  "id": "NSP3:N:36:E",
+  "display_name": "N36E",
+  "variation.featureLoc.feature.name": "NSP3",
+  "codon_label": "36",
+  "codon_label_int": 36,
+  "reference_aa": "N",
+  "reference_nt": 2825,
+  "replacement_aa": "E",
+  "radical_hanada_category_i": false,
+  "radical_hanada_category_ii": true,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 40.85895231452147,
+  "grantham_distance_int": 41,
+  "miyata_distance": 0.8491514617150018,
+  "parent_feature": "ORF_1a",
+  "parent_codon_label": "854"
+}

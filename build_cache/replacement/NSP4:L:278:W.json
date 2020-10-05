@@ -1,0 +1,18 @@
+{
+  "id": "NSP4:L:278:W",
+  "display_name": "L278W",
+  "variation.featureLoc.feature.name": "NSP4",
+  "codon_label": "278",
+  "codon_label_int": 278,
+  "reference_aa": "L",
+  "reference_nt": 9386,
+  "replacement_aa": "W",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": true,
+  "radical_hanada_category_iii": false,
+  "grantham_distance_double": 60.980495578874596,
+  "grantham_distance_int": 61,
+  "miyata_distance": 1.730342752116309,
+  "parent_feature": "ORF_1a",
+  "parent_codon_label": "3041"
+}

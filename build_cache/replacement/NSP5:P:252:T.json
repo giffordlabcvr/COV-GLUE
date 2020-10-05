@@ -1,0 +1,18 @@
+{
+  "id": "NSP5:P:252:T",
+  "display_name": "P252T",
+  "variation.featureLoc.feature.name": "NSP5",
+  "codon_label": "252",
+  "codon_label_int": 252,
+  "reference_aa": "P",
+  "reference_nt": 10808,
+  "replacement_aa": "T",
+  "radical_hanada_category_i": false,
+  "radical_hanada_category_ii": false,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 37.56362475504698,
+  "grantham_distance_int": 38,
+  "miyata_distance": 0.873755109177339,
+  "parent_feature": "ORF_1a",
+  "parent_codon_label": "3515"
+}

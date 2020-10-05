@@ -1,0 +1,18 @@
+{
+  "id": "NSP13:T:532:P",
+  "display_name": "T532P",
+  "variation.featureLoc.feature.name": "NSP13",
+  "codon_label": "532",
+  "codon_label_int": 532,
+  "reference_aa": "T",
+  "reference_nt": 17830,
+  "replacement_aa": "P",
+  "radical_hanada_category_i": false,
+  "radical_hanada_category_ii": false,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 37.56362475504698,
+  "grantham_distance_int": 38,
+  "miyata_distance": 0.873755109177339,
+  "parent_feature": "ORF_1ab",
+  "parent_codon_label": "5856"
+}

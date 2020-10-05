@@ -1,0 +1,18 @@
+{
+  "id": "NSP3:K:836:I",
+  "display_name": "K836I",
+  "variation.featureLoc.feature.name": "NSP3",
+  "codon_label": "836",
+  "codon_label_int": 836,
+  "reference_aa": "K",
+  "reference_nt": 5225,
+  "replacement_aa": "I",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": true,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 101.6123327206865,
+  "grantham_distance_int": 102,
+  "miyata_distance": 2.837026913953594,
+  "parent_feature": "ORF_1a",
+  "parent_codon_label": "1654"
+}

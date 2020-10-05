@@ -1,0 +1,18 @@
+{
+  "id": "S:K:1073:Q",
+  "display_name": "K1073Q",
+  "variation.featureLoc.feature.name": "S",
+  "codon_label": "1073",
+  "codon_label_int": 1073,
+  "reference_aa": "K",
+  "reference_nt": 24779,
+  "replacement_aa": "Q",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": true,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 53.228340150510796,
+  "grantham_distance_int": 53,
+  "miyata_distance": 1.0554475691875203,
+  "parent_feature": null,
+  "parent_codon_label": null
+}

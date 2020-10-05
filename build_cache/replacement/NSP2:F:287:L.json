@@ -1,0 +1,18 @@
+{
+  "id": "NSP2:F:287:L",
+  "display_name": "F287L",
+  "variation.featureLoc.feature.name": "NSP2",
+  "codon_label": "287",
+  "codon_label_int": 287,
+  "reference_aa": "F",
+  "reference_nt": 1664,
+  "replacement_aa": "L",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": true,
+  "radical_hanada_category_iii": false,
+  "grantham_distance_double": 21.823920738840876,
+  "grantham_distance_int": 22,
+  "miyata_distance": 0.6259759618337314,
+  "parent_feature": "ORF_1a",
+  "parent_codon_label": "467"
+}

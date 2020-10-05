@@ -1,0 +1,18 @@
+{
+  "id": "N:Q:239:P",
+  "display_name": "Q239P",
+  "variation.featureLoc.feature.name": "N",
+  "codon_label": "239",
+  "codon_label_int": 239,
+  "reference_aa": "Q",
+  "reference_nt": 28988,
+  "replacement_aa": "P",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": false,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 75.13587820053876,
+  "grantham_distance_int": 75,
+  "miyata_distance": 1.9159881217963026,
+  "parent_feature": null,
+  "parent_codon_label": null
+}

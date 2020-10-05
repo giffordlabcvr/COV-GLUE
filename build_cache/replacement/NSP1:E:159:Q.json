@@ -1,0 +1,18 @@
+{
+  "id": "NSP1:E:159:Q",
+  "display_name": "E159Q",
+  "variation.featureLoc.feature.name": "NSP1",
+  "codon_label": "159",
+  "codon_label_int": 159,
+  "reference_aa": "E",
+  "reference_nt": 740,
+  "replacement_aa": "Q",
+  "radical_hanada_category_i": false,
+  "radical_hanada_category_ii": true,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 29.273706240977482,
+  "grantham_distance_int": 29,
+  "miyata_distance": 0.8363616795657459,
+  "parent_feature": "ORF_1a",
+  "parent_codon_label": "159"
+}

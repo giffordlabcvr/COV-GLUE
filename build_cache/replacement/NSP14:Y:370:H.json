@@ -1,0 +1,18 @@
+{
+  "id": "NSP14:Y:370:H",
+  "display_name": "Y370H",
+  "variation.featureLoc.feature.name": "NSP14",
+  "codon_label": "370",
+  "codon_label_int": 370,
+  "reference_aa": "Y",
+  "reference_nt": 19147,
+  "replacement_aa": "H",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": true,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 83.32844466345641,
+  "grantham_distance_int": 83,
+  "miyata_distance": 2.2674887607305707,
+  "parent_feature": "ORF_1ab",
+  "parent_codon_label": "6295"
+}

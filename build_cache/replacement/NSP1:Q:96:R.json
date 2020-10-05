@@ -1,0 +1,18 @@
+{
+  "id": "NSP1:Q:96:R",
+  "display_name": "Q96R",
+  "variation.featureLoc.feature.name": "NSP1",
+  "codon_label": "96",
+  "codon_label_int": 96,
+  "reference_aa": "Q",
+  "reference_nt": 551,
+  "replacement_aa": "R",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": true,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 42.81393192570374,
+  "grantham_distance_int": 43,
+  "miyata_distance": 1.1334798453192791,
+  "parent_feature": "ORF_1a",
+  "parent_codon_label": "96"
+}

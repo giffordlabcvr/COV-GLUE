@@ -1,0 +1,18 @@
+{
+  "id": "NSP12:W:598:R",
+  "display_name": "W598R",
+  "variation.featureLoc.feature.name": "NSP12",
+  "codon_label": "598",
+  "codon_label_int": 598,
+  "reference_aa": "W",
+  "reference_nt": 15232,
+  "replacement_aa": "R",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": true,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 101.2904807374348,
+  "grantham_distance_int": 101,
+  "miyata_distance": 2.715820642666301,
+  "parent_feature": "ORF_1ab",
+  "parent_codon_label": "4990"
+}

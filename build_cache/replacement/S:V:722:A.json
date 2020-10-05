@@ -1,0 +1,18 @@
+{
+  "id": "S:V:722:A",
+  "display_name": "V722A",
+  "variation.featureLoc.feature.name": "S",
+  "codon_label": "722",
+  "codon_label_int": 722,
+  "reference_aa": "V",
+  "reference_nt": 23726,
+  "replacement_aa": "A",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": false,
+  "radical_hanada_category_iii": false,
+  "grantham_distance_double": 64.43025059480746,
+  "grantham_distance_int": 64,
+  "miyata_distance": 1.847329414521172,
+  "parent_feature": null,
+  "parent_codon_label": null
+}

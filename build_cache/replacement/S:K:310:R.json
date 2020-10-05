@@ -1,0 +1,18 @@
+{
+  "id": "S:K:310:R",
+  "display_name": "K310R",
+  "variation.featureLoc.feature.name": "S",
+  "codon_label": "310",
+  "codon_label_int": 310,
+  "reference_aa": "K",
+  "reference_nt": 22490,
+  "replacement_aa": "R",
+  "radical_hanada_category_i": false,
+  "radical_hanada_category_ii": false,
+  "radical_hanada_category_iii": false,
+  "grantham_distance_double": 26.003946260840873,
+  "grantham_distance_int": 26,
+  "miyata_distance": 0.3982749033932912,
+  "parent_feature": null,
+  "parent_codon_label": null
+}

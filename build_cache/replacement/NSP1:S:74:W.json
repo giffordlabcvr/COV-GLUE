@@ -1,0 +1,18 @@
+{
+  "id": "NSP1:S:74:W",
+  "display_name": "S74W",
+  "variation.featureLoc.feature.name": "NSP1",
+  "codon_label": "74",
+  "codon_label_int": 74,
+  "reference_aa": "S",
+  "reference_nt": 485,
+  "replacement_aa": "W",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": true,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 176.57756225361524,
+  "grantham_distance_int": 177,
+  "miyata_distance": 4.380500525642724,
+  "parent_feature": "ORF_1a",
+  "parent_codon_label": "74"
+}

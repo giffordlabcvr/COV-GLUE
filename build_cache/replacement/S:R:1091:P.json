@@ -1,0 +1,18 @@
+{
+  "id": "S:R:1091:P",
+  "display_name": "R1091P",
+  "variation.featureLoc.feature.name": "S",
+  "codon_label": "1091",
+  "codon_label_int": 1091,
+  "reference_aa": "R",
+  "reference_nt": 24833,
+  "replacement_aa": "P",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": true,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 102.71487090966941,
+  "grantham_distance_int": 103,
+  "miyata_distance": 2.9008276159240594,
+  "parent_feature": null,
+  "parent_codon_label": null
+}

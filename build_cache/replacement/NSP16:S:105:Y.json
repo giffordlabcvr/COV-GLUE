@@ -1,0 +1,18 @@
+{
+  "id": "NSP16:S:105:Y",
+  "display_name": "S105Y",
+  "variation.featureLoc.feature.name": "NSP16",
+  "codon_label": "105",
+  "codon_label_int": 105,
+  "reference_aa": "S",
+  "reference_nt": 20971,
+  "replacement_aa": "Y",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": true,
+  "radical_hanada_category_iii": false,
+  "grantham_distance_double": 143.10738438907285,
+  "grantham_distance_int": 143,
+  "miyata_distance": 3.327140114906959,
+  "parent_feature": "ORF_1ab",
+  "parent_codon_label": "6903"
+}

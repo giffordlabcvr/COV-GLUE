@@ -1,0 +1,18 @@
+{
+  "id": "NSP6:I:202:L",
+  "display_name": "I202L",
+  "variation.featureLoc.feature.name": "NSP6",
+  "codon_label": "202",
+  "codon_label_int": 202,
+  "reference_aa": "I",
+  "reference_nt": 11576,
+  "replacement_aa": "L",
+  "radical_hanada_category_i": false,
+  "radical_hanada_category_ii": false,
+  "radical_hanada_category_iii": false,
+  "grantham_distance_double": 4.855121197570456,
+  "grantham_distance_int": 5,
+  "miyata_distance": 0.13905655234203065,
+  "parent_feature": "ORF_1a",
+  "parent_codon_label": "3771"
+}

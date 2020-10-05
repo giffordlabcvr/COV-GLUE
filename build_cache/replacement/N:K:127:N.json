@@ -1,0 +1,18 @@
+{
+  "id": "N:K:127:N",
+  "display_name": "K127N",
+  "variation.featureLoc.feature.name": "N",
+  "codon_label": "127",
+  "codon_label_int": 127,
+  "reference_aa": "K",
+  "reference_nt": 28652,
+  "replacement_aa": "N",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": true,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 93.88268261638616,
+  "grantham_distance_int": 94,
+  "miyata_distance": 1.8362786676180092,
+  "parent_feature": null,
+  "parent_codon_label": null
+}

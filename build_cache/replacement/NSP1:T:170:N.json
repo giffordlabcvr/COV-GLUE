@@ -1,0 +1,18 @@
+{
+  "id": "NSP1:T:170:N",
+  "display_name": "T170N",
+  "variation.featureLoc.feature.name": "NSP1",
+  "codon_label": "170",
+  "codon_label_int": 170,
+  "reference_aa": "T",
+  "reference_nt": 773,
+  "replacement_aa": "N",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": false,
+  "radical_hanada_category_iii": false,
+  "grantham_distance_double": 64.77428783524499,
+  "grantham_distance_int": 65,
+  "miyata_distance": 1.3981379672196967,
+  "parent_feature": "ORF_1a",
+  "parent_codon_label": "170"
+}

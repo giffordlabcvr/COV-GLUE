@@ -1,0 +1,18 @@
+{
+  "id": "NSP16:D:32:K",
+  "display_name": "D32K",
+  "variation.featureLoc.feature.name": "NSP16",
+  "codon_label": "32",
+  "codon_label_int": 32,
+  "reference_aa": "D",
+  "reference_nt": 20752,
+  "replacement_aa": "K",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": true,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 101.4568985192016,
+  "grantham_distance_int": 101,
+  "miyata_distance": 2.046887269494266,
+  "parent_feature": "ORF_1ab",
+  "parent_codon_label": "6830"
+}

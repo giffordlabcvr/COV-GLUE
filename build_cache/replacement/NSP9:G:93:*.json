@@ -1,0 +1,18 @@
+{
+  "id": "NSP9:G:93:*",
+  "display_name": "G93*",
+  "variation.featureLoc.feature.name": "NSP9",
+  "codon_label": "93",
+  "codon_label_int": 93,
+  "reference_aa": "G",
+  "reference_nt": 12962,
+  "replacement_aa": "*",
+  "radical_hanada_category_i": null,
+  "radical_hanada_category_ii": null,
+  "radical_hanada_category_iii": null,
+  "grantham_distance_double": null,
+  "grantham_distance_int": null,
+  "miyata_distance": null,
+  "parent_feature": "ORF_1a",
+  "parent_codon_label": "4233"
+}

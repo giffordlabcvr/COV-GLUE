@@ -1,0 +1,18 @@
+{
+  "id": "NSP5:D:295:Y",
+  "display_name": "D295Y",
+  "variation.featureLoc.feature.name": "NSP5",
+  "codon_label": "295",
+  "codon_label_int": 295,
+  "reference_aa": "D",
+  "reference_nt": 10937,
+  "replacement_aa": "Y",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": true,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 159.93740663288054,
+  "grantham_distance_int": 160,
+  "miyata_distance": 3.951517253135271,
+  "parent_feature": "ORF_1a",
+  "parent_codon_label": "3558"
+}

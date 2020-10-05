@@ -1,0 +1,18 @@
+{
+  "id": "NSP10:N:114:H",
+  "display_name": "N114H",
+  "variation.featureLoc.feature.name": "NSP10",
+  "codon_label": "114",
+  "codon_label_int": 114,
+  "reference_aa": "N",
+  "reference_nt": 13364,
+  "replacement_aa": "H",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": true,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 68.35485567757956,
+  "grantham_distance_int": 68,
+  "miyata_distance": 1.288757085402098,
+  "parent_feature": "ORF_1a",
+  "parent_codon_label": "4367"
+}

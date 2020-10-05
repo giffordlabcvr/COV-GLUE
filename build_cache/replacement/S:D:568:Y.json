@@ -1,0 +1,18 @@
+{
+  "id": "S:D:568:Y",
+  "display_name": "D568Y",
+  "variation.featureLoc.feature.name": "S",
+  "codon_label": "568",
+  "codon_label_int": 568,
+  "reference_aa": "D",
+  "reference_nt": 23264,
+  "replacement_aa": "Y",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": true,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 159.93740663288054,
+  "grantham_distance_int": 160,
+  "miyata_distance": 3.951517253135271,
+  "parent_feature": null,
+  "parent_codon_label": null
+}

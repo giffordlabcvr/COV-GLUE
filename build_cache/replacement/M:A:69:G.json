@@ -1,0 +1,18 @@
+{
+  "id": "M:A:69:G",
+  "display_name": "A69G",
+  "variation.featureLoc.feature.name": "M",
+  "codon_label": "69",
+  "codon_label_int": 69,
+  "reference_aa": "A",
+  "reference_nt": 26727,
+  "replacement_aa": "G",
+  "radical_hanada_category_i": false,
+  "radical_hanada_category_ii": false,
+  "radical_hanada_category_iii": false,
+  "grantham_distance_double": 59.99535651927305,
+  "grantham_distance_int": 60,
+  "miyata_distance": 0.9144774819777941,
+  "parent_feature": null,
+  "parent_codon_label": null
+}

@@ -1,0 +1,18 @@
+{
+  "id": "NSP12:Y:289:H",
+  "display_name": "Y289H",
+  "variation.featureLoc.feature.name": "NSP12",
+  "codon_label": "289",
+  "codon_label_int": 289,
+  "reference_aa": "Y",
+  "reference_nt": 14305,
+  "replacement_aa": "H",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": true,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 83.32844466345641,
+  "grantham_distance_int": 83,
+  "miyata_distance": 2.2674887607305707,
+  "parent_feature": "ORF_1ab",
+  "parent_codon_label": "4681"
+}

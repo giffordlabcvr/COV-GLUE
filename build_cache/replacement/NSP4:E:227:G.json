@@ -1,0 +1,18 @@
+{
+  "id": "NSP4:E:227:G",
+  "display_name": "E227G",
+  "variation.featureLoc.feature.name": "NSP4",
+  "codon_label": "227",
+  "codon_label_int": 227,
+  "reference_aa": "E",
+  "reference_nt": 9233,
+  "replacement_aa": "G",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": true,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 97.85190047927728,
+  "grantham_distance_int": 98,
+  "miyata_distance": 2.7831228164426745,
+  "parent_feature": "ORF_1a",
+  "parent_codon_label": "2990"
+}

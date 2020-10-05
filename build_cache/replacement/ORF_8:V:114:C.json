@@ -1,0 +1,18 @@
+{
+  "id": "ORF_8:V:114:C",
+  "display_name": "V114C",
+  "variation.featureLoc.feature.name": "ORF_8",
+  "codon_label": "114",
+  "codon_label_int": 114,
+  "reference_aa": "V",
+  "reference_nt": 28233,
+  "replacement_aa": "C",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": false,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 191.23250097603446,
+  "grantham_distance_int": 191,
+  "miyata_distance": 0.8629961685286667,
+  "parent_feature": null,
+  "parent_codon_label": null
+}

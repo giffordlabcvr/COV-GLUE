@@ -1,0 +1,18 @@
+{
+  "id": "NSP10:W:123:L",
+  "display_name": "W123L",
+  "variation.featureLoc.feature.name": "NSP10",
+  "codon_label": "123",
+  "codon_label_int": 123,
+  "reference_aa": "W",
+  "reference_nt": 13391,
+  "replacement_aa": "L",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": true,
+  "radical_hanada_category_iii": false,
+  "grantham_distance_double": 60.980495578874596,
+  "grantham_distance_int": 61,
+  "miyata_distance": 1.730342752116309,
+  "parent_feature": "ORF_1a",
+  "parent_codon_label": "4376"
+}

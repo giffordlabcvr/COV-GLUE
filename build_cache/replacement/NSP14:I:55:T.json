@@ -1,0 +1,18 @@
+{
+  "id": "NSP14:I:55:T",
+  "display_name": "I55T",
+  "variation.featureLoc.feature.name": "NSP14",
+  "codon_label": "55",
+  "codon_label_int": 55,
+  "reference_aa": "I",
+  "reference_nt": 18202,
+  "replacement_aa": "T",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": false,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 89.28290210353987,
+  "grantham_distance_int": 89,
+  "miyata_distance": 2.143694221057671,
+  "parent_feature": "ORF_1ab",
+  "parent_codon_label": "5980"
+}

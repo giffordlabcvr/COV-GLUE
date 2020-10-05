@@ -1,0 +1,18 @@
+{
+  "id": "ORF_8:A:14:D",
+  "display_name": "A14D",
+  "variation.featureLoc.feature.name": "ORF_8",
+  "codon_label": "14",
+  "codon_label_int": 14,
+  "reference_aa": "A",
+  "reference_nt": 27933,
+  "replacement_aa": "D",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": true,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 125.74859020850259,
+  "grantham_distance_int": 126,
+  "miyata_distance": 2.3675832690225778,
+  "parent_feature": null,
+  "parent_codon_label": null
+}

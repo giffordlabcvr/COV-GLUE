@@ -1,0 +1,18 @@
+{
+  "id": "NSP5:H:246:D",
+  "display_name": "H246D",
+  "variation.featureLoc.feature.name": "NSP5",
+  "codon_label": "246",
+  "codon_label_int": 246,
+  "reference_aa": "H",
+  "reference_nt": 10790,
+  "replacement_aa": "D",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": true,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 81.23797960254424,
+  "grantham_distance_int": 81,
+  "miyata_distance": 1.7153540746282345,
+  "parent_feature": "ORF_1a",
+  "parent_codon_label": "3509"
+}

@@ -1,0 +1,18 @@
+{
+  "id": "NSP14:D:496:C",
+  "display_name": "D496C",
+  "variation.featureLoc.feature.name": "NSP14",
+  "codon_label": "496",
+  "codon_label_int": 496,
+  "reference_aa": "D",
+  "reference_nt": 19525,
+  "replacement_aa": "C",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": true,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 153.57435721713207,
+  "grantham_distance_int": 154,
+  "miyata_distance": 3.476535295419953,
+  "parent_feature": "ORF_1ab",
+  "parent_codon_label": "6421"
+}

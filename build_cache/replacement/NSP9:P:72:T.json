@@ -1,0 +1,18 @@
+{
+  "id": "NSP9:P:72:T",
+  "display_name": "P72T",
+  "variation.featureLoc.feature.name": "NSP9",
+  "codon_label": "72",
+  "codon_label_int": 72,
+  "reference_aa": "P",
+  "reference_nt": 12899,
+  "replacement_aa": "T",
+  "radical_hanada_category_i": false,
+  "radical_hanada_category_ii": false,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 37.56362475504698,
+  "grantham_distance_int": 38,
+  "miyata_distance": 0.873755109177339,
+  "parent_feature": "ORF_1a",
+  "parent_codon_label": "4212"
+}

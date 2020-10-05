@@ -1,0 +1,18 @@
+{
+  "id": "NSP6:C:197:G",
+  "display_name": "C197G",
+  "variation.featureLoc.feature.name": "NSP6",
+  "codon_label": "197",
+  "codon_label_int": 197,
+  "reference_aa": "C",
+  "reference_nt": 11561,
+  "replacement_aa": "G",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": false,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 158.2317728686345,
+  "grantham_distance_int": 158,
+  "miyata_distance": 2.2172032627151887,
+  "parent_feature": "ORF_1a",
+  "parent_codon_label": "3766"
+}

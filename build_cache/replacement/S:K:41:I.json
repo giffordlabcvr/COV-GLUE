@@ -1,0 +1,18 @@
+{
+  "id": "S:K:41:I",
+  "display_name": "K41I",
+  "variation.featureLoc.feature.name": "S",
+  "codon_label": "41",
+  "codon_label_int": 41,
+  "reference_aa": "K",
+  "reference_nt": 21683,
+  "replacement_aa": "I",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": true,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 101.6123327206865,
+  "grantham_distance_int": 102,
+  "miyata_distance": 2.837026913953594,
+  "parent_feature": null,
+  "parent_codon_label": null
+}

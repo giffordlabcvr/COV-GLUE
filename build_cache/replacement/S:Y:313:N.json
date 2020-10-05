@@ -1,0 +1,18 @@
+{
+  "id": "S:Y:313:N",
+  "display_name": "Y313N",
+  "variation.featureLoc.feature.name": "S",
+  "codon_label": "313",
+  "codon_label_int": 313,
+  "reference_aa": "Y",
+  "reference_nt": 22499,
+  "replacement_aa": "N",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": true,
+  "radical_hanada_category_iii": false,
+  "grantham_distance_double": 142.22936956562143,
+  "grantham_distance_int": 142,
+  "miyata_distance": 3.416303226515753,
+  "parent_feature": null,
+  "parent_codon_label": null
+}

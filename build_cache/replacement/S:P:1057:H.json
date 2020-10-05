@@ -1,0 +1,18 @@
+{
+  "id": "S:P:1057:H",
+  "display_name": "P1057H",
+  "variation.featureLoc.feature.name": "S",
+  "codon_label": "1057",
+  "codon_label_int": 1057,
+  "reference_aa": "P",
+  "reference_nt": 24731,
+  "replacement_aa": "H",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": true,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 76.27712276797571,
+  "grantham_distance_int": 76,
+  "miyata_distance": 2.154892056346583,
+  "parent_feature": null,
+  "parent_codon_label": null
+}

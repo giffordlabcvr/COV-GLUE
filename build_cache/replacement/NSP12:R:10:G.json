@@ -1,0 +1,18 @@
+{
+  "id": "NSP12:R:10:G",
+  "display_name": "R10G",
+  "variation.featureLoc.feature.name": "NSP12",
+  "codon_label": "10",
+  "codon_label_int": 10,
+  "reference_aa": "R",
+  "reference_nt": 13468,
+  "replacement_aa": "G",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": true,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 125.12919263514027,
+  "grantham_distance_int": 125,
+  "miyata_distance": 3.584766932145264,
+  "parent_feature": "ORF_1ab",
+  "parent_codon_label": "4402"
+}

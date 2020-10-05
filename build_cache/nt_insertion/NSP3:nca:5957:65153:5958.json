@@ -1,0 +1,10 @@
+{
+  "id": "NSP3:nca:5957:65153:5958",
+  "variation.featureLoc.feature.name": "NSP3",
+  "display_name": "5957-ATT-5958",
+  "last_ref_nt_before": 5957,
+  "first_ref_nt_after": 5958,
+  "parent_feature": "ORF_1a",
+  "inserted_nts_length": 3,
+  "inserted_nts": "ATT"
+}

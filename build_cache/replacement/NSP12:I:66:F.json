@@ -1,0 +1,18 @@
+{
+  "id": "NSP12:I:66:F",
+  "display_name": "I66F",
+  "variation.featureLoc.feature.name": "NSP12",
+  "codon_label": "66",
+  "codon_label_int": 66,
+  "reference_aa": "I",
+  "reference_nt": 13636,
+  "replacement_aa": "F",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": true,
+  "radical_hanada_category_iii": false,
+  "grantham_distance_double": 21.277013760678706,
+  "grantham_distance_int": 21,
+  "miyata_distance": 0.6103353013257657,
+  "parent_feature": "ORF_1ab",
+  "parent_codon_label": "4458"
+}
