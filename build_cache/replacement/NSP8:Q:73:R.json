@@ -1,0 +1,18 @@
+{
+  "id": "NSP8:Q:73:R",
+  "display_name": "Q73R",
+  "variation.featureLoc.feature.name": "NSP8",
+  "codon_label": "73",
+  "codon_label_int": 73,
+  "reference_aa": "Q",
+  "reference_nt": 12308,
+  "replacement_aa": "R",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": true,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 42.81393192570374,
+  "grantham_distance_int": 43,
+  "miyata_distance": 1.1334798453192791,
+  "parent_feature": "ORF_1a",
+  "parent_codon_label": "4015"
+}

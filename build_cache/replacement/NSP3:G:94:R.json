@@ -1,0 +1,18 @@
+{
+  "id": "NSP3:G:94:R",
+  "display_name": "G94R",
+  "variation.featureLoc.feature.name": "NSP3",
+  "codon_label": "94",
+  "codon_label_int": 94,
+  "reference_aa": "G",
+  "reference_nt": 2999,
+  "replacement_aa": "R",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": true,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 125.12919263514027,
+  "grantham_distance_int": 125,
+  "miyata_distance": 3.584766932145264,
+  "parent_feature": "ORF_1a",
+  "parent_codon_label": "912"
+}

@@ -1,0 +1,18 @@
+{
+  "id": "NSP13:I:488:Y",
+  "display_name": "I488Y",
+  "variation.featureLoc.feature.name": "NSP13",
+  "codon_label": "488",
+  "codon_label_int": 488,
+  "reference_aa": "I",
+  "reference_nt": 17698,
+  "replacement_aa": "Y",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": true,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 33.047698624062384,
+  "grantham_distance_int": 33,
+  "miyata_distance": 0.8618497598855167,
+  "parent_feature": "ORF_1ab",
+  "parent_codon_label": "5812"
+}

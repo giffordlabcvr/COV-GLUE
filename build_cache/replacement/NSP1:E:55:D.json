@@ -1,0 +1,18 @@
+{
+  "id": "NSP1:E:55:D",
+  "display_name": "E55D",
+  "variation.featureLoc.feature.name": "NSP1",
+  "codon_label": "55",
+  "codon_label_int": 55,
+  "reference_aa": "E",
+  "reference_nt": 428,
+  "replacement_aa": "D",
+  "radical_hanada_category_i": false,
+  "radical_hanada_category_ii": false,
+  "radical_hanada_category_iii": false,
+  "grantham_distance_double": 44.60463645252665,
+  "grantham_distance_int": 45,
+  "miyata_distance": 0.9031410249655084,
+  "parent_feature": "ORF_1a",
+  "parent_codon_label": "55"
+}

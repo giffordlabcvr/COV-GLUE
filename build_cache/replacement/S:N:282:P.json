@@ -1,0 +1,18 @@
+{
+  "id": "S:N:282:P",
+  "display_name": "N282P",
+  "variation.featureLoc.feature.name": "S",
+  "codon_label": "282",
+  "codon_label_int": 282,
+  "reference_aa": "N",
+  "reference_nt": 22406,
+  "replacement_aa": "P",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": false,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 90.15739726888974,
+  "grantham_distance_int": 90,
+  "miyata_distance": 1.8030445171892002,
+  "parent_feature": null,
+  "parent_codon_label": null
+}

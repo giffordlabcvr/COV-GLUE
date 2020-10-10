@@ -1,0 +1,18 @@
+{
+  "id": "NSP3:Q:406:M",
+  "display_name": "Q406M",
+  "variation.featureLoc.feature.name": "NSP3",
+  "codon_label": "406",
+  "codon_label_int": 406,
+  "reference_aa": "Q",
+  "reference_nt": 3935,
+  "replacement_aa": "M",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": false,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 100.8991434804838,
+  "grantham_distance_int": 101,
+  "miyata_distance": 2.2995822105558688,
+  "parent_feature": "ORF_1a",
+  "parent_codon_label": "1224"
+}

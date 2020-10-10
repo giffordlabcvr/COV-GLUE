@@ -1,0 +1,18 @@
+{
+  "id": "NSP2:E:565:L",
+  "display_name": "E565L",
+  "variation.featureLoc.feature.name": "NSP2",
+  "codon_label": "565",
+  "codon_label_int": 565,
+  "reference_aa": "E",
+  "reference_nt": 2498,
+  "replacement_aa": "L",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": true,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 138.34306733568278,
+  "grantham_distance_int": 138,
+  "miyata_distance": 3.5252746403273196,
+  "parent_feature": "ORF_1a",
+  "parent_codon_label": "745"
+}

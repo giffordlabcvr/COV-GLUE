@@ -1,0 +1,18 @@
+{
+  "id": "NSP16:L:163:C",
+  "display_name": "L163C",
+  "variation.featureLoc.feature.name": "NSP16",
+  "codon_label": "163",
+  "codon_label_int": 163,
+  "reference_aa": "L",
+  "reference_nt": 21145,
+  "replacement_aa": "C",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": false,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 197.4289713729229,
+  "grantham_distance_int": 197,
+  "miyata_distance": 1.651151437089198,
+  "parent_feature": "ORF_1ab",
+  "parent_codon_label": "6961"
+}

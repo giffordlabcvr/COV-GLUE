@@ -1,0 +1,18 @@
+{
+  "id": "NSP3:E:382:R",
+  "display_name": "E382R",
+  "variation.featureLoc.feature.name": "NSP3",
+  "codon_label": "382",
+  "codon_label_int": 382,
+  "reference_aa": "E",
+  "reference_nt": 3863,
+  "replacement_aa": "R",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": true,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 54.01884479014907,
+  "grantham_distance_int": 54,
+  "miyata_distance": 1.4546646945728405,
+  "parent_feature": "ORF_1a",
+  "parent_codon_label": "1200"
+}

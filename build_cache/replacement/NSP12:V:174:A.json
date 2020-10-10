@@ -1,0 +1,18 @@
+{
+  "id": "NSP12:V:174:A",
+  "display_name": "V174A",
+  "variation.featureLoc.feature.name": "NSP12",
+  "codon_label": "174",
+  "codon_label_int": 174,
+  "reference_aa": "V",
+  "reference_nt": 13960,
+  "replacement_aa": "A",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": false,
+  "radical_hanada_category_iii": false,
+  "grantham_distance_double": 64.43025059480746,
+  "grantham_distance_int": 64,
+  "miyata_distance": 1.847329414521172,
+  "parent_feature": "ORF_1ab",
+  "parent_codon_label": "4566"
+}

@@ -1,0 +1,18 @@
+{
+  "id": "NSP2:C:487:W",
+  "display_name": "C487W",
+  "variation.featureLoc.feature.name": "NSP2",
+  "codon_label": "487",
+  "codon_label_int": 487,
+  "reference_aa": "C",
+  "reference_nt": 2264,
+  "replacement_aa": "W",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": true,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 214.36237259909691,
+  "grantham_distance_int": 214,
+  "miyata_distance": 3.3426337619029294,
+  "parent_feature": "ORF_1a",
+  "parent_codon_label": "667"
+}

@@ -1,0 +1,18 @@
+{
+  "id": "NSP12:Q:81:T",
+  "display_name": "Q81T",
+  "variation.featureLoc.feature.name": "NSP12",
+  "codon_label": "81",
+  "codon_label_int": 81,
+  "reference_aa": "Q",
+  "reference_nt": 13681,
+  "replacement_aa": "T",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": false,
+  "radical_hanada_category_iii": false,
+  "grantham_distance_double": 41.10476251906663,
+  "grantham_distance_int": 41,
+  "miyata_distance": 1.1234589967814603,
+  "parent_feature": "ORF_1ab",
+  "parent_codon_label": "4473"
+}

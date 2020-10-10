@@ -1,0 +1,18 @@
+{
+  "id": "NSP2:Q:134:W",
+  "display_name": "Q134W",
+  "variation.featureLoc.feature.name": "NSP2",
+  "codon_label": "134",
+  "codon_label_int": 134,
+  "reference_aa": "Q",
+  "reference_nt": 1205,
+  "replacement_aa": "W",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": true,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 130.20440764278274,
+  "grantham_distance_int": 130,
+  "miyata_distance": 3.4192416241510633,
+  "parent_feature": "ORF_1a",
+  "parent_codon_label": "314"
+}

@@ -1,0 +1,18 @@
+{
+  "id": "NSP12:C:730:R",
+  "display_name": "C730R",
+  "variation.featureLoc.feature.name": "NSP12",
+  "codon_label": "730",
+  "codon_label_int": 730,
+  "reference_aa": "C",
+  "reference_nt": 15628,
+  "replacement_aa": "R",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": true,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 179.53483772224598,
+  "grantham_distance_int": 180,
+  "miyata_distance": 3.0647823950803734,
+  "parent_feature": "ORF_1ab",
+  "parent_codon_label": "5122"
+}

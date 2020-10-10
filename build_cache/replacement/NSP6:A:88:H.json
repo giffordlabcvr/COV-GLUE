@@ -1,0 +1,18 @@
+{
+  "id": "NSP6:A:88:H",
+  "display_name": "A88H",
+  "variation.featureLoc.feature.name": "NSP6",
+  "codon_label": "88",
+  "codon_label_int": 88,
+  "reference_aa": "A",
+  "reference_nt": 11234,
+  "replacement_aa": "H",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": true,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 85.49373612253572,
+  "grantham_distance_int": 85,
+  "miyata_distance": 2.1691918973044038,
+  "parent_feature": "ORF_1a",
+  "parent_codon_label": "3657"
+}

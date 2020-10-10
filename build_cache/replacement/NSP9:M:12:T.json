@@ -1,0 +1,18 @@
+{
+  "id": "NSP9:M:12:T",
+  "display_name": "M12T",
+  "variation.featureLoc.feature.name": "NSP9",
+  "codon_label": "12",
+  "codon_label_int": 12,
+  "reference_aa": "M",
+  "reference_nt": 12719,
+  "replacement_aa": "T",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": false,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 81.0396927923509,
+  "grantham_distance_int": 81,
+  "miyata_distance": 1.8553256449702145,
+  "parent_feature": "ORF_1a",
+  "parent_codon_label": "4152"
+}

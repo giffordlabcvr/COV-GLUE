@@ -1,0 +1,18 @@
+{
+  "id": "NSP12:P:537:Y",
+  "display_name": "P537Y",
+  "variation.featureLoc.feature.name": "NSP12",
+  "codon_label": "537",
+  "codon_label_int": 537,
+  "reference_aa": "P",
+  "reference_nt": 15049,
+  "replacement_aa": "Y",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": true,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 109.6155722614829,
+  "grantham_distance_int": 110,
+  "miyata_distance": 3.12164606632117,
+  "parent_feature": "ORF_1ab",
+  "parent_codon_label": "4929"
+}

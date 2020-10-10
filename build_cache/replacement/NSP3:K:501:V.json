@@ -1,0 +1,18 @@
+{
+  "id": "NSP3:K:501:V",
+  "display_name": "K501V",
+  "variation.featureLoc.feature.name": "NSP3",
+  "codon_label": "501",
+  "codon_label_int": 501,
+  "reference_aa": "K",
+  "reference_nt": 4220,
+  "replacement_aa": "V",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": true,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 96.99739940282169,
+  "grantham_distance_int": 97,
+  "miyata_distance": 2.70182281822906,
+  "parent_feature": "ORF_1a",
+  "parent_codon_label": "1319"
+}

@@ -1,0 +1,18 @@
+{
+  "id": "NSP2:F:95:V",
+  "display_name": "F95V",
+  "variation.featureLoc.feature.name": "NSP2",
+  "codon_label": "95",
+  "codon_label_int": 95,
+  "reference_aa": "F",
+  "reference_nt": 1088,
+  "replacement_aa": "V",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": true,
+  "radical_hanada_category_iii": false,
+  "grantham_distance_double": 49.935189864931544,
+  "grantham_distance_int": 50,
+  "miyata_distance": 1.4322877272611014,
+  "parent_feature": "ORF_1a",
+  "parent_codon_label": "275"
+}

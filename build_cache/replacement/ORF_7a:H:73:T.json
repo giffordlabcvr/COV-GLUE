@@ -1,0 +1,18 @@
+{
+  "id": "ORF_7a:H:73:T",
+  "display_name": "H73T",
+  "variation.featureLoc.feature.name": "ORF_7a",
+  "codon_label": "73",
+  "codon_label_int": 73,
+  "reference_aa": "H",
+  "reference_nt": 27610,
+  "replacement_aa": "T",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": true,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 46.752869712678034,
+  "grantham_distance_int": 47,
+  "miyata_distance": 1.315625255655524,
+  "parent_feature": null,
+  "parent_codon_label": null
+}

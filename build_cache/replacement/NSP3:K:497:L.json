@@ -1,0 +1,18 @@
+{
+  "id": "NSP3:K:497:L",
+  "display_name": "K497L",
+  "variation.featureLoc.feature.name": "NSP3",
+  "codon_label": "497",
+  "codon_label_int": 497,
+  "reference_aa": "K",
+  "reference_nt": 4208,
+  "replacement_aa": "L",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": true,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 106.33551258979873,
+  "grantham_distance_int": 106,
+  "miyata_distance": 2.9756375073333805,
+  "parent_feature": "ORF_1a",
+  "parent_codon_label": "1315"
+}

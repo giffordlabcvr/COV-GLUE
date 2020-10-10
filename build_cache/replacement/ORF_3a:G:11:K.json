@@ -1,0 +1,18 @@
+{
+  "id": "ORF_3a:G:11:K",
+  "display_name": "G11K",
+  "variation.featureLoc.feature.name": "ORF_3a",
+  "codon_label": "11",
+  "codon_label_int": 11,
+  "reference_aa": "G",
+  "reference_nt": 25423,
+  "replacement_aa": "K",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": true,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 126.45797608873913,
+  "grantham_distance_int": 126,
+  "miyata_distance": 3.535922158039755,
+  "parent_feature": null,
+  "parent_codon_label": null
+}

@@ -1,0 +1,15 @@
+{
+  "id": "NSP1:ca:21:27",
+  "variation.featureLoc.feature.name": "NSP1",
+  "cov_nt_deletion.id": "NSP1:nca:326:346",
+  "display_name": "21-27",
+  "end_codon": "27",
+  "end_codon_int": 27,
+  "parent_end_codon": "27",
+  "parent_feature": "ORF_1a",
+  "parent_start_codon": "21",
+  "reference_nt_end": 346,
+  "reference_nt_start": 326,
+  "start_codon": "21",
+  "start_codon_int": 21
+}

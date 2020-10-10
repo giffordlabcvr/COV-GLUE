@@ -1,0 +1,18 @@
+{
+  "id": "NSP2:Y:420:A",
+  "display_name": "Y420A",
+  "variation.featureLoc.feature.name": "NSP2",
+  "codon_label": "420",
+  "codon_label_int": 420,
+  "reference_aa": "Y",
+  "reference_nt": 2063,
+  "replacement_aa": "A",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": true,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 111.58821368789403,
+  "grantham_distance_int": 112,
+  "miyata_distance": 3.176215832724934,
+  "parent_feature": "ORF_1a",
+  "parent_codon_label": "600"
+}
