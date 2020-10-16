@@ -1,0 +1,18 @@
+{
+  "id": "NSP4:N:5:Y",
+  "display_name": "N5Y",
+  "variation.featureLoc.feature.name": "NSP4",
+  "codon_label": "5",
+  "codon_label_int": 5,
+  "reference_aa": "N",
+  "reference_nt": 8567,
+  "replacement_aa": "Y",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": true,
+  "radical_hanada_category_iii": false,
+  "grantham_distance_double": 142.22936956562143,
+  "grantham_distance_int": 142,
+  "miyata_distance": 3.416303226515753,
+  "parent_feature": "ORF_1a",
+  "parent_codon_label": "2768"
+}

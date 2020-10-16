@@ -1,0 +1,18 @@
+{
+  "id": "NSP6:H:62:K",
+  "display_name": "H62K",
+  "variation.featureLoc.feature.name": "NSP6",
+  "codon_label": "62",
+  "codon_label_int": 62,
+  "reference_aa": "H",
+  "reference_nt": 11156,
+  "replacement_aa": "K",
+  "radical_hanada_category_i": false,
+  "radical_hanada_category_ii": false,
+  "radical_hanada_category_iii": false,
+  "grantham_distance_double": 32.40288701198866,
+  "grantham_distance_int": 32,
+  "miyata_distance": 0.7879546943783731,
+  "parent_feature": "ORF_1a",
+  "parent_codon_label": "3631"
+}

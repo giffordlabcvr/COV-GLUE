@@ -1,0 +1,18 @@
+{
+  "id": "N:L:224:H",
+  "display_name": "L224H",
+  "variation.featureLoc.feature.name": "N",
+  "codon_label": "224",
+  "codon_label_int": 224,
+  "reference_aa": "L",
+  "reference_nt": 28943,
+  "replacement_aa": "H",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": true,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 98.69301470650433,
+  "grantham_distance_int": 99,
+  "miyata_distance": 2.5863765667097054,
+  "parent_feature": null,
+  "parent_codon_label": null
+}

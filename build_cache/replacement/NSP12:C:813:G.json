@@ -1,0 +1,18 @@
+{
+  "id": "NSP12:C:813:G",
+  "display_name": "C813G",
+  "variation.featureLoc.feature.name": "NSP12",
+  "codon_label": "813",
+  "codon_label_int": 813,
+  "reference_aa": "C",
+  "reference_nt": 15877,
+  "replacement_aa": "G",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": false,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 158.2317728686345,
+  "grantham_distance_int": 158,
+  "miyata_distance": 2.2172032627151887,
+  "parent_feature": "ORF_1ab",
+  "parent_codon_label": "5205"
+}

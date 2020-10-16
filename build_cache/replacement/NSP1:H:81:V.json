@@ -1,0 +1,18 @@
+{
+  "id": "NSP1:H:81:V",
+  "display_name": "H81V",
+  "variation.featureLoc.feature.name": "NSP1",
+  "codon_label": "81",
+  "codon_label_int": 81,
+  "reference_aa": "H",
+  "reference_nt": 506,
+  "replacement_aa": "V",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": true,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 83.89294699769302,
+  "grantham_distance_int": 84,
+  "miyata_distance": 2.114804652729995,
+  "parent_feature": "ORF_1a",
+  "parent_codon_label": "81"
+}

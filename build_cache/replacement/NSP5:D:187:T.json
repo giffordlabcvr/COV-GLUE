@@ -1,0 +1,18 @@
+{
+  "id": "NSP5:D:187:T",
+  "display_name": "D187T",
+  "variation.featureLoc.feature.name": "NSP5",
+  "codon_label": "187",
+  "codon_label_int": 187,
+  "reference_aa": "D",
+  "reference_nt": 10613,
+  "replacement_aa": "T",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": true,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 85.07613668077576,
+  "grantham_distance_int": 85,
+  "miyata_distance": 2.0496180753874924,
+  "parent_feature": "ORF_1a",
+  "parent_codon_label": "3450"
+}

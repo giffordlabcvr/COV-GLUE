@@ -1,0 +1,18 @@
+{
+  "id": "S:C:1250:N",
+  "display_name": "C1250N",
+  "variation.featureLoc.feature.name": "S",
+  "codon_label": "1250",
+  "codon_label_int": 1250,
+  "reference_aa": "C",
+  "reference_nt": 25310,
+  "replacement_aa": "N",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": false,
+  "radical_hanada_category_iii": false,
+  "grantham_distance_double": 138.7664682650526,
+  "grantham_distance_int": 139,
+  "miyata_distance": 2.827632598720677,
+  "parent_feature": null,
+  "parent_codon_label": null
+}

@@ -1,0 +1,18 @@
+{
+  "id": "NSP13:T:239:L",
+  "display_name": "T239L",
+  "variation.featureLoc.feature.name": "NSP13",
+  "codon_label": "239",
+  "codon_label_int": 239,
+  "reference_aa": "T",
+  "reference_nt": 16951,
+  "replacement_aa": "L",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": false,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 92.3542746798992,
+  "grantham_distance_int": 92,
+  "miyata_distance": 2.2479014063035954,
+  "parent_feature": "ORF_1ab",
+  "parent_codon_label": "5563"
+}

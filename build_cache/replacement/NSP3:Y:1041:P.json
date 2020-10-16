@@ -1,0 +1,18 @@
+{
+  "id": "NSP3:Y:1041:P",
+  "display_name": "Y1041P",
+  "variation.featureLoc.feature.name": "NSP3",
+  "codon_label": "1041",
+  "codon_label_int": 1041,
+  "reference_aa": "Y",
+  "reference_nt": 5840,
+  "replacement_aa": "P",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": true,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 109.6155722614829,
+  "grantham_distance_int": 110,
+  "miyata_distance": 3.12164606632117,
+  "parent_feature": "ORF_1a",
+  "parent_codon_label": "1859"
+}

@@ -1,0 +1,18 @@
+{
+  "id": "NSP3:E:1040:C",
+  "display_name": "E1040C",
+  "variation.featureLoc.feature.name": "NSP3",
+  "codon_label": "1040",
+  "codon_label_int": 1040,
+  "reference_aa": "E",
+  "reference_nt": 5837,
+  "replacement_aa": "C",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": true,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 169.4374593210234,
+  "grantham_distance_int": 169,
+  "miyata_distance": 3.255306132066906,
+  "parent_feature": "ORF_1a",
+  "parent_codon_label": "1858"
+}
