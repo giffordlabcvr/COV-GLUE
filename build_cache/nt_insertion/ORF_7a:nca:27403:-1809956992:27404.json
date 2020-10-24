@@ -1,0 +1,10 @@
+{
+  "id": "ORF_7a:nca:27403:-1809956992:27404",
+  "variation.featureLoc.feature.name": "ORF_7a",
+  "display_name": "27403-TTTTTT-27404",
+  "last_ref_nt_before": 27403,
+  "first_ref_nt_after": 27404,
+  "parent_feature": null,
+  "inserted_nts_length": 6,
+  "inserted_nts": "TTTTTT"
+}

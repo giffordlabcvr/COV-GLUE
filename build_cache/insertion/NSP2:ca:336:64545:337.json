@@ -1,0 +1,17 @@
+{
+  "id": "NSP2:ca:336:64545:337",
+  "variation.featureLoc.feature.name": "NSP2",
+  "cov_nt_insertion.id": "NSP2:nca:1813:64545:1814",
+  "display_name": "336-K-337",
+  "last_codon_before": "336",
+  "last_codon_before_int": 336,
+  "first_codon_after": "337",
+  "first_codon_after_int": 337,
+  "last_ref_nt_before": 1813,
+  "first_ref_nt_after": 1814,
+  "parent_feature": "ORF_1a",
+  "parent_last_codon_before": "516",
+  "parent_first_codon_after": "517",
+  "inserted_aas_length": 1,
+  "inserted_aas": "K"
+}

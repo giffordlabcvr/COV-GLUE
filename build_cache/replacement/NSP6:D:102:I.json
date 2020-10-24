@@ -1,0 +1,18 @@
+{
+  "id": "NSP6:D:102:I",
+  "display_name": "D102I",
+  "variation.featureLoc.feature.name": "NSP6",
+  "codon_label": "102",
+  "codon_label_int": 102,
+  "reference_aa": "D",
+  "reference_nt": 11276,
+  "replacement_aa": "I",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": true,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 168.08096207381237,
+  "grantham_distance_int": 168,
+  "miyata_distance": 3.9769373012106053,
+  "parent_feature": "ORF_1a",
+  "parent_codon_label": "3671"
+}

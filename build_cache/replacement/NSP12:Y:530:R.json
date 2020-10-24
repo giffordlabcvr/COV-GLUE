@@ -1,0 +1,18 @@
+{
+  "id": "NSP12:Y:530:R",
+  "display_name": "Y530R",
+  "variation.featureLoc.feature.name": "NSP12",
+  "codon_label": "530",
+  "codon_label_int": 530,
+  "reference_aa": "Y",
+  "reference_nt": 15028,
+  "replacement_aa": "R",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": true,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 77.10764415615384,
+  "grantham_distance_int": 77,
+  "miyata_distance": 2.023427370604626,
+  "parent_feature": "ORF_1ab",
+  "parent_codon_label": "4922"
+}

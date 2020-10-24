@@ -1,0 +1,18 @@
+{
+  "id": "NSP1:V:23:I",
+  "display_name": "V23I",
+  "variation.featureLoc.feature.name": "NSP1",
+  "codon_label": "23",
+  "codon_label_int": 23,
+  "reference_aa": "V",
+  "reference_nt": 332,
+  "replacement_aa": "I",
+  "radical_hanada_category_i": false,
+  "radical_hanada_category_ii": false,
+  "radical_hanada_category_iii": false,
+  "grantham_distance_double": 29.609070626666707,
+  "grantham_distance_int": 30,
+  "miyata_distance": 0.8491514617150016,
+  "parent_feature": "ORF_1a",
+  "parent_codon_label": "23"
+}

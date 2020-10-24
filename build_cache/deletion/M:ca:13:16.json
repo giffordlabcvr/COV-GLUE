@@ -1,0 +1,15 @@
+{
+  "id": "M:ca:13:16",
+  "variation.featureLoc.feature.name": "M",
+  "cov_nt_deletion.id": "M:nca:26559:26570",
+  "display_name": "13-16",
+  "end_codon": "16",
+  "end_codon_int": 16,
+  "parent_end_codon": null,
+  "parent_feature": null,
+  "parent_start_codon": null,
+  "reference_nt_end": 26570,
+  "reference_nt_start": 26559,
+  "start_codon": "13",
+  "start_codon_int": 13
+}

@@ -1,0 +1,18 @@
+{
+  "id": "ORF_3a:Y:264:N",
+  "display_name": "Y264N",
+  "variation.featureLoc.feature.name": "ORF_3a",
+  "codon_label": "264",
+  "codon_label_int": 264,
+  "reference_aa": "Y",
+  "reference_nt": 26182,
+  "replacement_aa": "N",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": true,
+  "radical_hanada_category_iii": false,
+  "grantham_distance_double": 142.22936956562143,
+  "grantham_distance_int": 142,
+  "miyata_distance": 3.416303226515753,
+  "parent_feature": null,
+  "parent_codon_label": null
+}

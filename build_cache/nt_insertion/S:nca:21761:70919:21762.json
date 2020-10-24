@@ -1,0 +1,10 @@
+{
+  "id": "S:nca:21761:70919:21762",
+  "variation.featureLoc.feature.name": "S",
+  "display_name": "21761-GTT-21762",
+  "last_ref_nt_before": 21761,
+  "first_ref_nt_after": 21762,
+  "parent_feature": null,
+  "inserted_nts_length": 3,
+  "inserted_nts": "GTT"
+}

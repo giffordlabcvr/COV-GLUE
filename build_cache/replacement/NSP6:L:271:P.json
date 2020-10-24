@@ -1,0 +1,18 @@
+{
+  "id": "NSP6:L:271:P",
+  "display_name": "L271P",
+  "variation.featureLoc.feature.name": "NSP6",
+  "codon_label": "271",
+  "codon_label_int": 271,
+  "reference_aa": "L",
+  "reference_nt": 11783,
+  "replacement_aa": "P",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": false,
+  "radical_hanada_category_iii": false,
+  "grantham_distance_double": 97.77619789015552,
+  "grantham_distance_int": 98,
+  "miyata_distance": 2.6962818635359933,
+  "parent_feature": "ORF_1a",
+  "parent_codon_label": "3840"
+}

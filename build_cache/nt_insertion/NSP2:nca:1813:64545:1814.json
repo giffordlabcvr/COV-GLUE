@@ -1,0 +1,10 @@
+{
+  "id": "NSP2:nca:1813:64545:1814",
+  "variation.featureLoc.feature.name": "NSP2",
+  "display_name": "1813-AAA-1814",
+  "last_ref_nt_before": 1813,
+  "first_ref_nt_after": 1814,
+  "parent_feature": "ORF_1a",
+  "inserted_nts_length": 3,
+  "inserted_nts": "AAA"
+}

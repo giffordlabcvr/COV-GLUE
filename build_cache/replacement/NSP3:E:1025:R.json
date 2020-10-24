@@ -1,0 +1,18 @@
+{
+  "id": "NSP3:E:1025:R",
+  "display_name": "E1025R",
+  "variation.featureLoc.feature.name": "NSP3",
+  "codon_label": "1025",
+  "codon_label_int": 1025,
+  "reference_aa": "E",
+  "reference_nt": 5792,
+  "replacement_aa": "R",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": true,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 54.01884479014907,
+  "grantham_distance_int": 54,
+  "miyata_distance": 1.4546646945728405,
+  "parent_feature": "ORF_1a",
+  "parent_codon_label": "1843"
+}

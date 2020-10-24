@@ -1,0 +1,18 @@
+{
+  "id": "ORF_3a:C:200:R",
+  "display_name": "C200R",
+  "variation.featureLoc.feature.name": "ORF_3a",
+  "codon_label": "200",
+  "codon_label_int": 200,
+  "reference_aa": "C",
+  "reference_nt": 25990,
+  "replacement_aa": "R",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": true,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 179.53483772224598,
+  "grantham_distance_int": 180,
+  "miyata_distance": 3.0647823950803734,
+  "parent_feature": null,
+  "parent_codon_label": null
+}

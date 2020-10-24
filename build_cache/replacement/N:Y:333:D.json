@@ -1,0 +1,18 @@
+{
+  "id": "N:Y:333:D",
+  "display_name": "Y333D",
+  "variation.featureLoc.feature.name": "N",
+  "codon_label": "333",
+  "codon_label_int": 333,
+  "reference_aa": "Y",
+  "reference_nt": 29270,
+  "replacement_aa": "D",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": true,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 159.93740663288054,
+  "grantham_distance_int": 160,
+  "miyata_distance": 3.951517253135271,
+  "parent_feature": null,
+  "parent_codon_label": null
+}

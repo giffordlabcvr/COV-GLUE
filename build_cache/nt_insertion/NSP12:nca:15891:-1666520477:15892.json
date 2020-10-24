@@ -1,0 +1,10 @@
+{
+  "id": "NSP12:nca:15891:-1666520477:15892",
+  "variation.featureLoc.feature.name": "NSP12",
+  "display_name": "15891-ATAAGCACT-15892",
+  "last_ref_nt_before": 15891,
+  "first_ref_nt_after": 15892,
+  "parent_feature": "ORF_1ab",
+  "inserted_nts_length": 9,
+  "inserted_nts": "ATAAGCACT"
+}

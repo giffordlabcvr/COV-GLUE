@@ -1,0 +1,15 @@
+{
+  "id": "NSP3:ca:390:412",
+  "variation.featureLoc.feature.name": "NSP3",
+  "cov_nt_deletion.id": "NSP3:nca:3887:3955",
+  "display_name": "390-412",
+  "end_codon": "412",
+  "end_codon_int": 412,
+  "parent_end_codon": "1230",
+  "parent_feature": "ORF_1a",
+  "parent_start_codon": "1208",
+  "reference_nt_end": 3955,
+  "reference_nt_start": 3887,
+  "start_codon": "390",
+  "start_codon_int": 390
+}

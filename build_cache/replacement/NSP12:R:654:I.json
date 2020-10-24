@@ -1,0 +1,18 @@
+{
+  "id": "NSP12:R:654:I",
+  "display_name": "R654I",
+  "variation.featureLoc.feature.name": "NSP12",
+  "codon_label": "654",
+  "codon_label_int": 654,
+  "reference_aa": "R",
+  "reference_nt": 15400,
+  "replacement_aa": "I",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": true,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 97.58656354400169,
+  "grantham_distance_int": 98,
+  "miyata_distance": 2.485550159989036,
+  "parent_feature": "ORF_1ab",
+  "parent_codon_label": "5046"
+}

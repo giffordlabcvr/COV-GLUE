@@ -1,0 +1,15 @@
+{
+  "id": "NSP1:ca:142:144",
+  "variation.featureLoc.feature.name": "NSP1",
+  "cov_nt_deletion.id": "NSP1:nca:689:697",
+  "display_name": "142-144",
+  "end_codon": "144",
+  "end_codon_int": 144,
+  "parent_end_codon": "144",
+  "parent_feature": "ORF_1a",
+  "parent_start_codon": "142",
+  "reference_nt_end": 697,
+  "reference_nt_start": 689,
+  "start_codon": "142",
+  "start_codon_int": 142
+}

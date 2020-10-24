@@ -1,0 +1,18 @@
+{
+  "id": "NSP3:K:215:N",
+  "display_name": "K215N",
+  "variation.featureLoc.feature.name": "NSP3",
+  "codon_label": "215",
+  "codon_label_int": 215,
+  "reference_aa": "K",
+  "reference_nt": 3362,
+  "replacement_aa": "N",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": true,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 93.88268261638616,
+  "grantham_distance_int": 94,
+  "miyata_distance": 1.8362786676180092,
+  "parent_feature": "ORF_1a",
+  "parent_codon_label": "1033"
+}

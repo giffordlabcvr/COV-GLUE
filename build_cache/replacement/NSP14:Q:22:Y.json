@@ -1,0 +1,18 @@
+{
+  "id": "NSP14:Q:22:Y",
+  "display_name": "Q22Y",
+  "variation.featureLoc.feature.name": "NSP14",
+  "codon_label": "22",
+  "codon_label_int": 22,
+  "reference_aa": "Q",
+  "reference_nt": 18103,
+  "replacement_aa": "Y",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": true,
+  "radical_hanada_category_iii": false,
+  "grantham_distance_double": 98.78325151239761,
+  "grantham_distance_int": 99,
+  "miyata_distance": 2.4838813604781578,
+  "parent_feature": "ORF_1ab",
+  "parent_codon_label": "5947"
+}
