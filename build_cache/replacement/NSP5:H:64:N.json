@@ -1,0 +1,18 @@
+{
+  "id": "NSP5:H:64:N",
+  "display_name": "H64N",
+  "variation.featureLoc.feature.name": "NSP5",
+  "codon_label": "64",
+  "codon_label_int": 64,
+  "reference_aa": "H",
+  "reference_nt": 10244,
+  "replacement_aa": "N",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": true,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 68.35485567757956,
+  "grantham_distance_int": 68,
+  "miyata_distance": 1.288757085402098,
+  "parent_feature": "ORF_1a",
+  "parent_codon_label": "3327"
+}

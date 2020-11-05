@@ -1,0 +1,18 @@
+{
+  "id": "NSP12:Q:875:E",
+  "display_name": "Q875E",
+  "variation.featureLoc.feature.name": "NSP12",
+  "codon_label": "875",
+  "codon_label_int": 875,
+  "reference_aa": "Q",
+  "reference_nt": 16063,
+  "replacement_aa": "E",
+  "radical_hanada_category_i": false,
+  "radical_hanada_category_ii": true,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 29.273706240977482,
+  "grantham_distance_int": 29,
+  "miyata_distance": 0.8363616795657459,
+  "parent_feature": "ORF_1ab",
+  "parent_codon_label": "5267"
+}

@@ -1,0 +1,18 @@
+{
+  "id": "NSP3:V:1580:H",
+  "display_name": "V1580H",
+  "variation.featureLoc.feature.name": "NSP3",
+  "codon_label": "1580",
+  "codon_label_int": 1580,
+  "reference_aa": "V",
+  "reference_nt": 7457,
+  "replacement_aa": "H",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": true,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 83.89294699769302,
+  "grantham_distance_int": 84,
+  "miyata_distance": 2.114804652729995,
+  "parent_feature": "ORF_1a",
+  "parent_codon_label": "2398"
+}

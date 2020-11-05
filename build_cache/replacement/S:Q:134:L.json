@@ -1,0 +1,18 @@
+{
+  "id": "S:Q:134:L",
+  "display_name": "Q134L",
+  "variation.featureLoc.feature.name": "S",
+  "codon_label": "134",
+  "codon_label_int": 134,
+  "reference_aa": "Q",
+  "reference_nt": 21962,
+  "replacement_aa": "L",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": false,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 112.44147717377763,
+  "grantham_distance_int": 112,
+  "miyata_distance": 2.703476672168515,
+  "parent_feature": null,
+  "parent_codon_label": null
+}

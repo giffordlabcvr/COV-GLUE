@@ -1,0 +1,18 @@
+{
+  "id": "NSP2:N:524:P",
+  "display_name": "N524P",
+  "variation.featureLoc.feature.name": "NSP2",
+  "codon_label": "524",
+  "codon_label_int": 524,
+  "reference_aa": "N",
+  "reference_nt": 2375,
+  "replacement_aa": "P",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": false,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 90.15739726888974,
+  "grantham_distance_int": 90,
+  "miyata_distance": 1.8030445171892002,
+  "parent_feature": "ORF_1a",
+  "parent_codon_label": "704"
+}

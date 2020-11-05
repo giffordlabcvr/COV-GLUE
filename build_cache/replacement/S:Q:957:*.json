@@ -1,0 +1,18 @@
+{
+  "id": "S:Q:957:*",
+  "display_name": "Q957*",
+  "variation.featureLoc.feature.name": "S",
+  "codon_label": "957",
+  "codon_label_int": 957,
+  "reference_aa": "Q",
+  "reference_nt": 24431,
+  "replacement_aa": "*",
+  "radical_hanada_category_i": null,
+  "radical_hanada_category_ii": null,
+  "radical_hanada_category_iii": null,
+  "grantham_distance_double": null,
+  "grantham_distance_int": null,
+  "miyata_distance": null,
+  "parent_feature": null,
+  "parent_codon_label": null
+}

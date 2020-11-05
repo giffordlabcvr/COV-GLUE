@@ -1,0 +1,18 @@
+{
+  "id": "NSP15:G:156:P",
+  "display_name": "G156P",
+  "variation.featureLoc.feature.name": "NSP15",
+  "codon_label": "156",
+  "codon_label_int": 156,
+  "reference_aa": "G",
+  "reference_nt": 20086,
+  "replacement_aa": "P",
+  "radical_hanada_category_i": false,
+  "radical_hanada_category_ii": false,
+  "radical_hanada_category_iii": false,
+  "grantham_distance_double": 41.62910033166307,
+  "grantham_distance_int": 42,
+  "miyata_distance": 0.9746515921540382,
+  "parent_feature": "ORF_1ab",
+  "parent_codon_label": "6608"
+}

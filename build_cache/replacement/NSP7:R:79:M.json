@@ -1,0 +1,18 @@
+{
+  "id": "NSP7:R:79:M",
+  "display_name": "R79M",
+  "variation.featureLoc.feature.name": "NSP7",
+  "codon_label": "79",
+  "codon_label_int": 79,
+  "reference_aa": "R",
+  "reference_nt": 12077,
+  "replacement_aa": "M",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": true,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 91.63827667082735,
+  "grantham_distance_int": 92,
+  "miyata_distance": 2.2924081997745525,
+  "parent_feature": "ORF_1a",
+  "parent_codon_label": "3938"
+}

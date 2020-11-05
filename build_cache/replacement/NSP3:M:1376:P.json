@@ -1,0 +1,18 @@
+{
+  "id": "NSP3:M:1376:P",
+  "display_name": "M1376P",
+  "variation.featureLoc.feature.name": "NSP3",
+  "codon_label": "1376",
+  "codon_label_int": 1376,
+  "reference_aa": "M",
+  "reference_nt": 6845,
+  "replacement_aa": "P",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": false,
+  "radical_hanada_category_iii": false,
+  "grantham_distance_double": 86.59479895345345,
+  "grantham_distance_int": 87,
+  "miyata_distance": 2.3614576284876296,
+  "parent_feature": "ORF_1a",
+  "parent_codon_label": "2194"
+}

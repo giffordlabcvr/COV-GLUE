@@ -1,0 +1,18 @@
+{
+  "id": "NSP4:F:317:M",
+  "display_name": "F317M",
+  "variation.featureLoc.feature.name": "NSP4",
+  "codon_label": "317",
+  "codon_label_int": 317,
+  "reference_aa": "F",
+  "reference_nt": 9503,
+  "replacement_aa": "M",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": true,
+  "radical_hanada_category_iii": false,
+  "grantham_distance_double": 28.527843564840456,
+  "grantham_distance_int": 29,
+  "miyata_distance": 0.8182258891048274,
+  "parent_feature": "ORF_1a",
+  "parent_codon_label": "3080"
+}

@@ -1,0 +1,18 @@
+{
+  "id": "NSP4:T:60:A",
+  "display_name": "T60A",
+  "variation.featureLoc.feature.name": "NSP4",
+  "codon_label": "60",
+  "codon_label_int": 60,
+  "reference_aa": "T",
+  "reference_nt": 8732,
+  "replacement_aa": "A",
+  "radical_hanada_category_i": false,
+  "radical_hanada_category_ii": false,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 58.02332760382417,
+  "grantham_distance_int": 58,
+  "miyata_distance": 0.9021839838528766,
+  "parent_feature": "ORF_1a",
+  "parent_codon_label": "2823"
+}

@@ -1,0 +1,18 @@
+{
+  "id": "S:S:349:P",
+  "display_name": "S349P",
+  "variation.featureLoc.feature.name": "S",
+  "codon_label": "349",
+  "codon_label_int": 349,
+  "reference_aa": "S",
+  "reference_nt": 22607,
+  "replacement_aa": "P",
+  "radical_hanada_category_i": false,
+  "radical_hanada_category_ii": false,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 73.35256887257073,
+  "grantham_distance_int": 73,
+  "miyata_distance": 0.5564160035374529,
+  "parent_feature": null,
+  "parent_codon_label": null
+}

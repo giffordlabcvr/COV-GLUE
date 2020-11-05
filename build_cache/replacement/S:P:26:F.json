@@ -1,0 +1,18 @@
+{
+  "id": "S:P:26:F",
+  "display_name": "P26F",
+  "variation.featureLoc.feature.name": "S",
+  "codon_label": "26",
+  "codon_label_int": 26,
+  "reference_aa": "P",
+  "reference_nt": 21638,
+  "replacement_aa": "F",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": true,
+  "radical_hanada_category_iii": false,
+  "grantham_distance_double": 113.72715406026416,
+  "grantham_distance_int": 114,
+  "miyata_distance": 3.169716979755525,
+  "parent_feature": null,
+  "parent_codon_label": null
+}

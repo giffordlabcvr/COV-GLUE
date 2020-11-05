@@ -1,0 +1,18 @@
+{
+  "id": "NSP3:D:1214:H",
+  "display_name": "D1214H",
+  "variation.featureLoc.feature.name": "NSP3",
+  "codon_label": "1214",
+  "codon_label_int": 1214,
+  "reference_aa": "D",
+  "reference_nt": 6359,
+  "replacement_aa": "H",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": true,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 81.23797960254424,
+  "grantham_distance_int": 81,
+  "miyata_distance": 1.7153540746282345,
+  "parent_feature": "ORF_1a",
+  "parent_codon_label": "2032"
+}

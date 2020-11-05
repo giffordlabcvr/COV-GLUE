@@ -1,0 +1,15 @@
+{
+  "id": "NSP3:ca:171:177",
+  "variation.featureLoc.feature.name": "NSP3",
+  "cov_nt_deletion.id": "NSP3:nca:3230:3250",
+  "display_name": "171-177",
+  "end_codon": "177",
+  "end_codon_int": 177,
+  "parent_end_codon": "995",
+  "parent_feature": "ORF_1a",
+  "parent_start_codon": "989",
+  "reference_nt_end": 3250,
+  "reference_nt_start": 3230,
+  "start_codon": "171",
+  "start_codon_int": 171
+}

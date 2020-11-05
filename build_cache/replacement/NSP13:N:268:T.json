@@ -1,0 +1,18 @@
+{
+  "id": "NSP13:N:268:T",
+  "display_name": "N268T",
+  "variation.featureLoc.feature.name": "NSP13",
+  "codon_label": "268",
+  "codon_label_int": 268,
+  "reference_aa": "N",
+  "reference_nt": 17038,
+  "replacement_aa": "T",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": false,
+  "radical_hanada_category_iii": false,
+  "grantham_distance_double": 64.77428783524499,
+  "grantham_distance_int": 65,
+  "miyata_distance": 1.3981379672196967,
+  "parent_feature": "ORF_1ab",
+  "parent_codon_label": "5592"
+}

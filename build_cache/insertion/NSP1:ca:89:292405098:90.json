@@ -1,0 +1,17 @@
+{
+  "id": "NSP1:ca:89:292405098:90",
+  "variation.featureLoc.feature.name": "NSP1",
+  "cov_nt_insertion.id": "NSP1:nca:532:292405098:533",
+  "display_name": "89-IVW-90",
+  "last_codon_before": "89",
+  "last_codon_before_int": 89,
+  "first_codon_after": "90",
+  "first_codon_after_int": 90,
+  "last_ref_nt_before": 532,
+  "first_ref_nt_after": 533,
+  "parent_feature": "ORF_1a",
+  "parent_last_codon_before": "89",
+  "parent_first_codon_after": "90",
+  "inserted_aas_length": 3,
+  "inserted_aas": "IVW"
+}

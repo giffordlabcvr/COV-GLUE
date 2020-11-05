@@ -1,0 +1,18 @@
+{
+  "id": "ORF_8:K:2:I",
+  "display_name": "K2I",
+  "variation.featureLoc.feature.name": "ORF_8",
+  "codon_label": "2",
+  "codon_label_int": 2,
+  "reference_aa": "K",
+  "reference_nt": 27897,
+  "replacement_aa": "I",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": true,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 101.6123327206865,
+  "grantham_distance_int": 102,
+  "miyata_distance": 2.837026913953594,
+  "parent_feature": null,
+  "parent_codon_label": null
+}

@@ -1,0 +1,18 @@
+{
+  "id": "M:*:223:Y",
+  "display_name": "*223Y",
+  "variation.featureLoc.feature.name": "M",
+  "codon_label": "223",
+  "codon_label_int": 223,
+  "reference_aa": "*",
+  "reference_nt": 27189,
+  "replacement_aa": "Y",
+  "radical_hanada_category_i": null,
+  "radical_hanada_category_ii": null,
+  "radical_hanada_category_iii": null,
+  "grantham_distance_double": null,
+  "grantham_distance_int": null,
+  "miyata_distance": null,
+  "parent_feature": null,
+  "parent_codon_label": null
+}

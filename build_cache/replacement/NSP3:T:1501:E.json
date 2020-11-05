@@ -1,0 +1,18 @@
+{
+  "id": "NSP3:T:1501:E",
+  "display_name": "T1501E",
+  "variation.featureLoc.feature.name": "NSP3",
+  "codon_label": "1501",
+  "codon_label_int": 1501,
+  "reference_aa": "T",
+  "reference_nt": 7220,
+  "replacement_aa": "E",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": true,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 65.50131254385761,
+  "grantham_distance_int": 66,
+  "miyata_distance": 1.8303446734665099,
+  "parent_feature": "ORF_1a",
+  "parent_codon_label": "2319"
+}

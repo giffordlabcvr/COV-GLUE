@@ -1,0 +1,18 @@
+{
+  "id": "S:T:470:S",
+  "display_name": "T470S",
+  "variation.featureLoc.feature.name": "S",
+  "codon_label": "470",
+  "codon_label_int": 470,
+  "reference_aa": "T",
+  "reference_nt": 22970,
+  "replacement_aa": "S",
+  "radical_hanada_category_i": false,
+  "radical_hanada_category_ii": false,
+  "radical_hanada_category_iii": false,
+  "grantham_distance_double": 57.74902765654723,
+  "grantham_distance_int": 58,
+  "miyata_distance": 0.8875431743515021,
+  "parent_feature": null,
+  "parent_codon_label": null
+}

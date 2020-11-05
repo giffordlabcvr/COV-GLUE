@@ -1,0 +1,18 @@
+{
+  "id": "NSP2:K:521:D",
+  "display_name": "K521D",
+  "variation.featureLoc.feature.name": "NSP2",
+  "codon_label": "521",
+  "codon_label_int": 521,
+  "reference_aa": "K",
+  "reference_nt": 2366,
+  "replacement_aa": "D",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": true,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 101.4568985192016,
+  "grantham_distance_int": 101,
+  "miyata_distance": 2.046887269494266,
+  "parent_feature": "ORF_1a",
+  "parent_codon_label": "701"
+}

@@ -1,0 +1,10 @@
+{
+  "id": "ORF_8:nca:28250:67062:28251",
+  "variation.featureLoc.feature.name": "ORF_8",
+  "display_name": "28250-CTG-28251",
+  "last_ref_nt_before": 28250,
+  "first_ref_nt_after": 28251,
+  "parent_feature": null,
+  "inserted_nts_length": 3,
+  "inserted_nts": "CTG"
+}

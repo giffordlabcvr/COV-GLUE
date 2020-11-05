@@ -1,0 +1,18 @@
+{
+  "id": "N:F:403:D",
+  "display_name": "F403D",
+  "variation.featureLoc.feature.name": "N",
+  "codon_label": "403",
+  "codon_label_int": 403,
+  "reference_aa": "F",
+  "reference_nt": 29480,
+  "replacement_aa": "D",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": true,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 176.52619305334733,
+  "grantham_distance_int": 177,
+  "miyata_distance": 4.267403445829135,
+  "parent_feature": null,
+  "parent_codon_label": null
+}

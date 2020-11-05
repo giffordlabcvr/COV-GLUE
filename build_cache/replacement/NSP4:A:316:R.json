@@ -1,0 +1,18 @@
+{
+  "id": "NSP4:A:316:R",
+  "display_name": "A316R",
+  "variation.featureLoc.feature.name": "NSP4",
+  "codon_label": "316",
+  "codon_label_int": 316,
+  "reference_aa": "A",
+  "reference_nt": 9500,
+  "replacement_aa": "R",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": true,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 111.26459164409464,
+  "grantham_distance_int": 111,
+  "miyata_distance": 2.922890974655252,
+  "parent_feature": "ORF_1a",
+  "parent_codon_label": "3079"
+}

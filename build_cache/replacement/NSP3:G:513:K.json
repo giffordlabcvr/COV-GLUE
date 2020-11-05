@@ -1,0 +1,18 @@
+{
+  "id": "NSP3:G:513:K",
+  "display_name": "G513K",
+  "variation.featureLoc.feature.name": "NSP3",
+  "codon_label": "513",
+  "codon_label_int": 513,
+  "reference_aa": "G",
+  "reference_nt": 4256,
+  "replacement_aa": "K",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": true,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 126.45797608873913,
+  "grantham_distance_int": 126,
+  "miyata_distance": 3.535922158039755,
+  "parent_feature": "ORF_1a",
+  "parent_codon_label": "1331"
+}

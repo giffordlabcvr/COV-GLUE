@@ -1,0 +1,18 @@
+{
+  "id": "NSP12:C:301:N",
+  "display_name": "C301N",
+  "variation.featureLoc.feature.name": "NSP12",
+  "codon_label": "301",
+  "codon_label_int": 301,
+  "reference_aa": "C",
+  "reference_nt": 14341,
+  "replacement_aa": "N",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": false,
+  "radical_hanada_category_iii": false,
+  "grantham_distance_double": 138.7664682650526,
+  "grantham_distance_int": 139,
+  "miyata_distance": 2.827632598720677,
+  "parent_feature": "ORF_1ab",
+  "parent_codon_label": "4693"
+}

@@ -1,0 +1,10 @@
+{
+  "id": "NSP2:nca:1426:1980248495:1427",
+  "variation.featureLoc.feature.name": "NSP2",
+  "display_name": "1426-CACGGT-1427",
+  "last_ref_nt_before": 1426,
+  "first_ref_nt_after": 1427,
+  "parent_feature": "ORF_1a",
+  "inserted_nts_length": 6,
+  "inserted_nts": "CACGGT"
+}

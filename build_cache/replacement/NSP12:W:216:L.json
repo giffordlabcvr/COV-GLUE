@@ -1,0 +1,18 @@
+{
+  "id": "NSP12:W:216:L",
+  "display_name": "W216L",
+  "variation.featureLoc.feature.name": "NSP12",
+  "codon_label": "216",
+  "codon_label_int": 216,
+  "reference_aa": "W",
+  "reference_nt": 14086,
+  "replacement_aa": "L",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": true,
+  "radical_hanada_category_iii": false,
+  "grantham_distance_double": 60.980495578874596,
+  "grantham_distance_int": 61,
+  "miyata_distance": 1.730342752116309,
+  "parent_feature": "ORF_1ab",
+  "parent_codon_label": "4608"
+}

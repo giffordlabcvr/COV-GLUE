@@ -1,0 +1,18 @@
+{
+  "id": "S:Q:926:E",
+  "display_name": "Q926E",
+  "variation.featureLoc.feature.name": "S",
+  "codon_label": "926",
+  "codon_label_int": 926,
+  "reference_aa": "Q",
+  "reference_nt": 24338,
+  "replacement_aa": "E",
+  "radical_hanada_category_i": false,
+  "radical_hanada_category_ii": true,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 29.273706240977482,
+  "grantham_distance_int": 29,
+  "miyata_distance": 0.8363616795657459,
+  "parent_feature": null,
+  "parent_codon_label": null
+}

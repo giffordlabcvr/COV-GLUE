@@ -1,0 +1,18 @@
+{
+  "id": "NSP8:E:155:H",
+  "display_name": "E155H",
+  "variation.featureLoc.feature.name": "NSP8",
+  "codon_label": "155",
+  "codon_label_int": 155,
+  "reference_aa": "E",
+  "reference_nt": 12554,
+  "replacement_aa": "H",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": true,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 40.79415367792486,
+  "grantham_distance_int": 41,
+  "miyata_distance": 0.9583164748792522,
+  "parent_feature": "ORF_1a",
+  "parent_codon_label": "4097"
+}

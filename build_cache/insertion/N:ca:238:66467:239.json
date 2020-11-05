@@ -1,0 +1,17 @@
+{
+  "id": "N:ca:238:66467:239",
+  "variation.featureLoc.feature.name": "N",
+  "cov_nt_insertion.id": "N:nca:28987:66467:28988",
+  "display_name": "238-Q-239",
+  "last_codon_before": "238",
+  "last_codon_before_int": 238,
+  "first_codon_after": "239",
+  "first_codon_after_int": 239,
+  "last_ref_nt_before": 28987,
+  "first_ref_nt_after": 28988,
+  "parent_feature": null,
+  "parent_last_codon_before": null,
+  "parent_first_codon_after": null,
+  "inserted_aas_length": 1,
+  "inserted_aas": "Q"
+}

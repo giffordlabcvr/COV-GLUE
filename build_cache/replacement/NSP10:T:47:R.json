@@ -1,0 +1,18 @@
+{
+  "id": "NSP10:T:47:R",
+  "display_name": "T47R",
+  "variation.featureLoc.feature.name": "NSP10",
+  "codon_label": "47",
+  "codon_label_int": 47,
+  "reference_aa": "T",
+  "reference_nt": 13163,
+  "replacement_aa": "R",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": true,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 70.97102634903321,
+  "grantham_distance_int": 71,
+  "miyata_distance": 2.0317972672838045,
+  "parent_feature": "ORF_1a",
+  "parent_codon_label": "4300"
+}

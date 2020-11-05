@@ -1,0 +1,18 @@
+{
+  "id": "NSP2:K:519:L",
+  "display_name": "K519L",
+  "variation.featureLoc.feature.name": "NSP2",
+  "codon_label": "519",
+  "codon_label_int": 519,
+  "reference_aa": "K",
+  "reference_nt": 2360,
+  "replacement_aa": "L",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": true,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 106.33551258979873,
+  "grantham_distance_int": 106,
+  "miyata_distance": 2.9756375073333805,
+  "parent_feature": "ORF_1a",
+  "parent_codon_label": "699"
+}

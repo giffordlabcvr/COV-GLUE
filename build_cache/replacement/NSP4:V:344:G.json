@@ -1,0 +1,18 @@
+{
+  "id": "NSP4:V:344:G",
+  "display_name": "V344G",
+  "variation.featureLoc.feature.name": "NSP4",
+  "codon_label": "344",
+  "codon_label_int": 344,
+  "reference_aa": "V",
+  "reference_nt": 9584,
+  "replacement_aa": "G",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": false,
+  "radical_hanada_category_iii": false,
+  "grantham_distance_double": 108.78738843583756,
+  "grantham_distance_int": 109,
+  "miyata_distance": 2.7580349580646812,
+  "parent_feature": "ORF_1a",
+  "parent_codon_label": "3107"
+}

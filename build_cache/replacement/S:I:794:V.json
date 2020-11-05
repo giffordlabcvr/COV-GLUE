@@ -1,0 +1,18 @@
+{
+  "id": "S:I:794:V",
+  "display_name": "I794V",
+  "variation.featureLoc.feature.name": "S",
+  "codon_label": "794",
+  "codon_label_int": 794,
+  "reference_aa": "I",
+  "reference_nt": 23942,
+  "replacement_aa": "V",
+  "radical_hanada_category_i": false,
+  "radical_hanada_category_ii": false,
+  "radical_hanada_category_iii": false,
+  "grantham_distance_double": 29.609070626666707,
+  "grantham_distance_int": 30,
+  "miyata_distance": 0.8491514617150016,
+  "parent_feature": null,
+  "parent_codon_label": null
+}

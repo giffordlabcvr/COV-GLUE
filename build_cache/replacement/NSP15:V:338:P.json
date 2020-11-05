@@ -1,0 +1,18 @@
+{
+  "id": "NSP15:V:338:P",
+  "display_name": "V338P",
+  "variation.featureLoc.feature.name": "NSP15",
+  "codon_label": "338",
+  "codon_label_int": 338,
+  "reference_aa": "V",
+  "reference_nt": 20632,
+  "replacement_aa": "P",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": false,
+  "radical_hanada_category_iii": false,
+  "grantham_distance_double": 67.7865984564368,
+  "grantham_distance_int": 68,
+  "miyata_distance": 1.7854506204579927,
+  "parent_feature": "ORF_1ab",
+  "parent_codon_label": "6790"
+}

@@ -1,0 +1,18 @@
+{
+  "id": "NSP12:Y:915:L",
+  "display_name": "Y915L",
+  "variation.featureLoc.feature.name": "NSP12",
+  "codon_label": "915",
+  "codon_label_int": 915,
+  "reference_aa": "Y",
+  "reference_nt": 16183,
+  "replacement_aa": "L",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": true,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 35.67731209714758,
+  "grantham_distance_int": 36,
+  "miyata_distance": 0.9439455660642306,
+  "parent_feature": "ORF_1ab",
+  "parent_codon_label": "5307"
+}
