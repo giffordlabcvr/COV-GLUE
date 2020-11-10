@@ -153,6 +153,10 @@
             <outputTemplate>KOR</outputTemplate>
         </valueConverter>
         <valueConverter>
+            <matchPattern>Saint Barth[.*]lemy</matchPattern>
+            <outputTemplate>BLM</outputTemplate>
+        </valueConverter>
+        <valueConverter>
             <matchPattern>Asia / Brunei</matchPattern>
             <outputTemplate>BRN</outputTemplate>
         </valueConverter>
