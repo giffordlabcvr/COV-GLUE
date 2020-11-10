@@ -153,7 +153,7 @@
             <outputTemplate>KOR</outputTemplate>
         </valueConverter>
         <valueConverter>
-            <matchPattern>Saint Barth[.*]lemy</matchPattern>
+            <matchPattern>Saint Barth</matchPattern>
             <outputTemplate>BLM</outputTemplate>
         </valueConverter>
         <valueConverter>
