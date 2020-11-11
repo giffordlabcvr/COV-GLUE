@@ -157,6 +157,10 @@
             <outputTemplate>BLM</outputTemplate>
         </valueConverter>
         <valueConverter>
+            <matchPattern>Saint Martin</matchPattern>
+            <outputTemplate>MAF</outputTemplate>
+        </valueConverter>
+        <valueConverter>
             <matchPattern>Asia / Brunei</matchPattern>
             <outputTemplate>BRN</outputTemplate>
         </valueConverter>
