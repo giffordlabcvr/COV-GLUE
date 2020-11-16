@@ -1,0 +1,3 @@
+covv_gender	covv_passage	covv_virus_name	covv_specimen	covv_location	covv_patient_age	covv_seq_technology	covv_patient_status	covv_lineage	covv_collection_date	covv_accession_id	covv_add_host_info	covv_add_location	covv_clade	covv_host	covv_subm_date	covv_assembly_method
+Female	Original	hCoV-19/Saint Barthelemy/IPG-7329/2020	Nasopharyngeal swab	North America / Saint Barthélemy	45	Illumina NextSeq 500	Hospitalized	B.1	2020-03-13	EPI_ISL_613429			G	Human	2020-11-03	CLC Genomics Suite
+unknown	Original	hCoV-19/Saint Barthelemy/IPG-7358/2020	Nasopharyngeal swab	North America / Saint Barthélemy	44	Illumina NextSeq 500	Hospitalized	B.1	2020-02-28	EPI_ISL_613446			GH	Human	2020-11-03	CLC Genomics Suite
