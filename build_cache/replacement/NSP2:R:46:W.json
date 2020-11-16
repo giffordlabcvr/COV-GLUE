@@ -1,0 +1,18 @@
+{
+  "id": "NSP2:R:46:W",
+  "display_name": "R46W",
+  "variation.featureLoc.feature.name": "NSP2",
+  "codon_label": "46",
+  "codon_label_int": 46,
+  "reference_aa": "R",
+  "reference_nt": 941,
+  "replacement_aa": "W",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": true,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 101.2904807374348,
+  "grantham_distance_int": 101,
+  "miyata_distance": 2.715820642666301,
+  "parent_feature": "ORF_1a",
+  "parent_codon_label": "226"
+}

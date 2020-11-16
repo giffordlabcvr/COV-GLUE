@@ -1,0 +1,17 @@
+{
+  "id": "ORF_6:ca:61:67058:62",
+  "variation.featureLoc.feature.name": "ORF_6",
+  "cov_nt_insertion.id": "ORF_6:nca:27384:67058:27385",
+  "display_name": "61-L-62",
+  "last_codon_before": "61",
+  "last_codon_before_int": 61,
+  "first_codon_after": "62",
+  "first_codon_after_int": 62,
+  "last_ref_nt_before": 27384,
+  "first_ref_nt_after": 27385,
+  "parent_feature": null,
+  "parent_last_codon_before": null,
+  "parent_first_codon_after": null,
+  "inserted_aas_length": 1,
+  "inserted_aas": "L"
+}

@@ -1,0 +1,18 @@
+{
+  "id": "M:H:155:Q",
+  "display_name": "H155Q",
+  "variation.featureLoc.feature.name": "M",
+  "codon_label": "155",
+  "codon_label_int": 155,
+  "reference_aa": "H",
+  "reference_nt": 26985,
+  "replacement_aa": "Q",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": true,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 24.08398867410485,
+  "grantham_distance_int": 24,
+  "miyata_distance": 0.32304219411608814,
+  "parent_feature": null,
+  "parent_codon_label": null
+}

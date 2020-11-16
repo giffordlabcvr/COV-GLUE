@@ -1,0 +1,15 @@
+{
+  "id": "NSP3:ca:374:385",
+  "variation.featureLoc.feature.name": "NSP3",
+  "cov_nt_deletion.id": "NSP3:nca:3839:3874",
+  "display_name": "374-385",
+  "end_codon": "385",
+  "end_codon_int": 385,
+  "parent_end_codon": "1203",
+  "parent_feature": "ORF_1a",
+  "parent_start_codon": "1192",
+  "reference_nt_end": 3874,
+  "reference_nt_start": 3839,
+  "start_codon": "374",
+  "start_codon_int": 374
+}

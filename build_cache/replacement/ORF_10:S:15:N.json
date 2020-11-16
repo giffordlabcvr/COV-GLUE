@@ -1,0 +1,18 @@
+{
+  "id": "ORF_10:S:15:N",
+  "display_name": "S15N",
+  "variation.featureLoc.feature.name": "ORF_10",
+  "codon_label": "15",
+  "codon_label_int": 15,
+  "reference_aa": "S",
+  "reference_nt": 29600,
+  "replacement_aa": "N",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": false,
+  "radical_hanada_category_iii": false,
+  "grantham_distance_double": 46.23977508306296,
+  "grantham_distance_int": 46,
+  "miyata_distance": 1.3130472141012726,
+  "parent_feature": null,
+  "parent_codon_label": null
+}

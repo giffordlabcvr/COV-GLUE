@@ -1,0 +1,10 @@
+{
+  "id": "NSP6:nca:11074:83127:11075",
+  "variation.featureLoc.feature.name": "NSP6",
+  "display_name": "11074-TKN-11075",
+  "last_ref_nt_before": 11074,
+  "first_ref_nt_after": 11075,
+  "parent_feature": "ORF_1a",
+  "inserted_nts_length": 3,
+  "inserted_nts": "TKN"
+}

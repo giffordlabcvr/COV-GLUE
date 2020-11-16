@@ -1,0 +1,15 @@
+{
+  "id": "NSP3:ca:1530:1532",
+  "variation.featureLoc.feature.name": "NSP3",
+  "cov_nt_deletion.id": "NSP3:nca:7307:7315",
+  "display_name": "1530-1532",
+  "end_codon": "1532",
+  "end_codon_int": 1532,
+  "parent_end_codon": "2350",
+  "parent_feature": "ORF_1a",
+  "parent_start_codon": "2348",
+  "reference_nt_end": 7315,
+  "reference_nt_start": 7307,
+  "start_codon": "1530",
+  "start_codon_int": 1530
+}

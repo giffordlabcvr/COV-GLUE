@@ -1,0 +1,18 @@
+{
+  "id": "NSP12:V:535:I",
+  "display_name": "V535I",
+  "variation.featureLoc.feature.name": "NSP12",
+  "codon_label": "535",
+  "codon_label_int": 535,
+  "reference_aa": "V",
+  "reference_nt": 15043,
+  "replacement_aa": "I",
+  "radical_hanada_category_i": false,
+  "radical_hanada_category_ii": false,
+  "radical_hanada_category_iii": false,
+  "grantham_distance_double": 29.609070626666707,
+  "grantham_distance_int": 30,
+  "miyata_distance": 0.8491514617150016,
+  "parent_feature": "ORF_1ab",
+  "parent_codon_label": "4927"
+}

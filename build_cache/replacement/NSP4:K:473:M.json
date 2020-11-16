@@ -1,0 +1,18 @@
+{
+  "id": "NSP4:K:473:M",
+  "display_name": "K473M",
+  "variation.featureLoc.feature.name": "NSP4",
+  "codon_label": "473",
+  "codon_label_int": 473,
+  "reference_aa": "K",
+  "reference_nt": 9971,
+  "replacement_aa": "M",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": true,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 94.49009719874934,
+  "grantham_distance_int": 94,
+  "miyata_distance": 2.6274196368687526,
+  "parent_feature": "ORF_1a",
+  "parent_codon_label": "3236"
+}

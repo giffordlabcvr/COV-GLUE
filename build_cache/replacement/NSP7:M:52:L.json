@@ -1,0 +1,18 @@
+{
+  "id": "NSP7:M:52:L",
+  "display_name": "M52L",
+  "variation.featureLoc.feature.name": "NSP7",
+  "codon_label": "52",
+  "codon_label_int": 52,
+  "reference_aa": "M",
+  "reference_nt": 11996,
+  "replacement_aa": "L",
+  "radical_hanada_category_i": false,
+  "radical_hanada_category_ii": false,
+  "radical_hanada_category_iii": false,
+  "grantham_distance_double": 14.30316650672724,
+  "grantham_distance_int": 14,
+  "miyata_distance": 0.4097737313122809,
+  "parent_feature": "ORF_1a",
+  "parent_codon_label": "3911"
+}

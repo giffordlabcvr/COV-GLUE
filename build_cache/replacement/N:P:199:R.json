@@ -1,0 +1,18 @@
+{
+  "id": "N:P:199:R",
+  "display_name": "P199R",
+  "variation.featureLoc.feature.name": "N",
+  "codon_label": "199",
+  "codon_label_int": 199,
+  "reference_aa": "P",
+  "reference_nt": 28868,
+  "replacement_aa": "R",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": true,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 102.71487090966941,
+  "grantham_distance_int": 103,
+  "miyata_distance": 2.9008276159240594,
+  "parent_feature": null,
+  "parent_codon_label": null
+}

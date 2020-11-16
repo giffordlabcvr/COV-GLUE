@@ -1,0 +1,15 @@
+{
+  "id": "S:ca:374:376",
+  "variation.featureLoc.feature.name": "S",
+  "cov_nt_deletion.id": "S:nca:22682:22690",
+  "display_name": "374-376",
+  "end_codon": "376",
+  "end_codon_int": 376,
+  "parent_end_codon": null,
+  "parent_feature": null,
+  "parent_start_codon": null,
+  "reference_nt_end": 22690,
+  "reference_nt_start": 22682,
+  "start_codon": "374",
+  "start_codon_int": 374
+}

@@ -1,0 +1,18 @@
+{
+  "id": "NSP3:Y:1859:S",
+  "display_name": "Y1859S",
+  "variation.featureLoc.feature.name": "NSP3",
+  "codon_label": "1859",
+  "codon_label_int": 1859,
+  "reference_aa": "Y",
+  "reference_nt": 8294,
+  "replacement_aa": "S",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": true,
+  "radical_hanada_category_iii": false,
+  "grantham_distance_double": 143.10738438907285,
+  "grantham_distance_int": 143,
+  "miyata_distance": 3.327140114906959,
+  "parent_feature": "ORF_1a",
+  "parent_codon_label": "2677"
+}

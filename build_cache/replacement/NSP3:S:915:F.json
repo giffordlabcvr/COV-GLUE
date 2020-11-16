@@ -1,0 +1,18 @@
+{
+  "id": "NSP3:S:915:F",
+  "display_name": "S915F",
+  "variation.featureLoc.feature.name": "NSP3",
+  "codon_label": "915",
+  "codon_label_int": 915,
+  "reference_aa": "S",
+  "reference_nt": 5462,
+  "replacement_aa": "F",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": true,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 154.8079022945541,
+  "grantham_distance_int": 155,
+  "miyata_distance": 3.447399039542067,
+  "parent_feature": "ORF_1a",
+  "parent_codon_label": "1733"
+}

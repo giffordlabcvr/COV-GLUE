@@ -1,0 +1,18 @@
+{
+  "id": "N:Y:112:L",
+  "display_name": "Y112L",
+  "variation.featureLoc.feature.name": "N",
+  "codon_label": "112",
+  "codon_label_int": 112,
+  "reference_aa": "Y",
+  "reference_nt": 28607,
+  "replacement_aa": "L",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": true,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 35.67731209714758,
+  "grantham_distance_int": 36,
+  "miyata_distance": 0.9439455660642306,
+  "parent_feature": null,
+  "parent_codon_label": null
+}
