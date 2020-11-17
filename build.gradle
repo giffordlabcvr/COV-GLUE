@@ -1,9 +1,6 @@
 apply plugin: 'pl.allegro.tech.build.axion-release'
-apply plugin: 'org.hidetake.ssh'
 
-project.ext.set("glueVersion", "1.1.104")
-
-ssh.settings { knownHosts = allowAnyHosts }
+project.ext.set("glueVersion", "1.1.107")
 
 project.version = scmVersion.version
 
@@ -23,13 +20,10 @@ dependencies {
 
 buildscript {
   repositories {
-    // for ssh-deploy stuff, cargo
-    jcenter()
     // for axion-release
     mavenCentral()
   }
   dependencies {
-    classpath group: 'org.hidetake', name: 'gradle-ssh-plugin', version: '1.1.3'
     classpath group: 'commons-io', name: 'commons-io', version: '1.3.2'
     classpath group: 'pl.allegro.tech.build', name: 'axion-release-plugin', version: '1.9.3'
   }
@@ -42,7 +36,7 @@ task copyGluetoolsJar(type: Copy) {
     rename('gluetools-core-'+project.glueVersion+'.jar', 'gluetools-core.jar')
 }
 
-def glueConfigFile = System.getProperty("user.name").equals('joshsinger') ? 'local-gluetools-config.xml' : 'remote-gluetools-config.xml'
+def glueConfigFile = 'remote-gluetools-config.xml'
 
 task wipeCovGlueDB(type: Exec) {
 	commandLine "bash", "-c", "echo 'drop database COV_GLUE; create database COV_GLUE character set UTF8;' | mysql -u covglue --password=covglue"
@@ -56,7 +50,7 @@ task buildCovGlueDB(type: JavaExec, dependsOn: 'copyGluetoolsJar') {
 }
 
 
-def scmCustomKey = '/Users/joshsinger/.ssh/github_id_rsa'
+def scmCustomKey = '/Users/evdoxiataka/.ssh/github_id_rsa_old_format'
 
 scmVersion {
 	hooks {
