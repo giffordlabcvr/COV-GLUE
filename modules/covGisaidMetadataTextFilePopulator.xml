@@ -180,6 +180,10 @@
             <matchPattern>Europe / Czech Repubic</matchPattern>
             <outputTemplate>CZE</outputTemplate>
         </valueConverter>
+        <valueConverter>
+            <matchPattern>South America / St Eustatius</matchPattern>
+            <outputTemplate>BES</outputTemplate>
+        </valueConverter>
     </isoCountryTextFileColumn>
     <textFileColumn>
         <header>covv_location</header>
