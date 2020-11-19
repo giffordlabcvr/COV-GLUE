@@ -176,6 +176,10 @@
             <matchPattern>Africa / CotedIvoire</matchPattern>
             <outputTemplate>CIV</outputTemplate>
         </valueConverter>
+        <valueConverter>
+            <matchPattern>Europe / Czech Repubic</matchPattern>
+            <outputTemplate>CZE</outputTemplate>
+        </valueConverter>
     </isoCountryTextFileColumn>
     <textFileColumn>
         <header>covv_location</header>
