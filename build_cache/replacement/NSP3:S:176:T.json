@@ -1,0 +1,18 @@
+{
+  "id": "NSP3:S:176:T",
+  "display_name": "S176T",
+  "variation.featureLoc.feature.name": "NSP3",
+  "codon_label": "176",
+  "codon_label_int": 176,
+  "reference_aa": "S",
+  "reference_nt": 3245,
+  "replacement_aa": "T",
+  "radical_hanada_category_i": false,
+  "radical_hanada_category_ii": false,
+  "radical_hanada_category_iii": false,
+  "grantham_distance_double": 57.74902765654723,
+  "grantham_distance_int": 58,
+  "miyata_distance": 0.8875431743515021,
+  "parent_feature": "ORF_1a",
+  "parent_codon_label": "994"
+}

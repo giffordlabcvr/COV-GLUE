@@ -1,0 +1,18 @@
+{
+  "id": "NSP5:D:48:N",
+  "display_name": "D48N",
+  "variation.featureLoc.feature.name": "NSP5",
+  "codon_label": "48",
+  "codon_label_int": 48,
+  "reference_aa": "D",
+  "reference_nt": 10196,
+  "replacement_aa": "N",
+  "radical_hanada_category_i": false,
+  "radical_hanada_category_ii": true,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 23.00535500058712,
+  "grantham_distance_int": 23,
+  "miyata_distance": 0.6515287120397918,
+  "parent_feature": "ORF_1a",
+  "parent_codon_label": "3311"
+}

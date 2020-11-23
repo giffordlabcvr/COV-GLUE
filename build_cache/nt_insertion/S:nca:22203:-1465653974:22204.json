@@ -1,0 +1,10 @@
+{
+  "id": "S:nca:22203:-1465653974:22204",
+  "variation.featureLoc.feature.name": "S",
+  "display_name": "22203-TGCTAAAAAGAA-22204",
+  "last_ref_nt_before": 22203,
+  "first_ref_nt_after": 22204,
+  "parent_feature": null,
+  "inserted_nts_length": 12,
+  "inserted_nts": "TGCTAAAAAGAA"
+}
