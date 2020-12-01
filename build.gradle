@@ -49,6 +49,16 @@ task buildCovGlueDB(type: JavaExec, dependsOn: 'copyGluetoolsJar') {
 	args '-c', 'remote-gluetools-config.xml', '-i', 'run', 'file', 'covProject.glue'
 }
 
+task wipeCovGlueDBMinimal(type: Exec) {
+	commandLine "bash", "-c", "echo 'drop database COV_GLUE_MINIMAL; create database COV_GLUE_MINIMAL character set UTF8;' | mysql -u covglue --password=covglue"
+}
+
+task buildCovGlueDBMinimal(type: JavaExec, dependsOn: 'copyGluetoolsJar') {
+	classpath "build/runtimeJars/gluetools-core.jar"
+	main 'uk.ac.gla.cvr.gluetools.core.console.Console'
+	jvmArgs '-Xmx7000m'
+	args '-c', 'remote-gluetools-config-minimal.xml', '-i', 'run', 'file', 'covMinimalProject.glue'
+}
 
 def scmCustomKey = '/Users/evdoxiataka/.ssh/github_id_rsa_old_format'
 
