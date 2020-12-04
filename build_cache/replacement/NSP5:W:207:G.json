@@ -1,0 +1,18 @@
+{
+  "id": "NSP5:W:207:G",
+  "display_name": "W207G",
+  "variation.featureLoc.feature.name": "NSP5",
+  "codon_label": "207",
+  "codon_label_int": 207,
+  "reference_aa": "W",
+  "reference_nt": 10673,
+  "replacement_aa": "G",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": true,
+  "radical_hanada_category_iii": false,
+  "grantham_distance_double": 183.7902133344299,
+  "grantham_distance_int": 184,
+  "miyata_distance": 5.132455948239974,
+  "parent_feature": "ORF_1a",
+  "parent_codon_label": "3470"
+}

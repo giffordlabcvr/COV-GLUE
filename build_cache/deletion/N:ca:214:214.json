@@ -1,0 +1,15 @@
+{
+  "id": "N:ca:214:214",
+  "variation.featureLoc.feature.name": "N",
+  "cov_nt_deletion.id": "N:nca:28913:28915",
+  "display_name": "214",
+  "end_codon": "214",
+  "end_codon_int": 214,
+  "parent_end_codon": null,
+  "parent_feature": null,
+  "parent_start_codon": null,
+  "reference_nt_end": 28915,
+  "reference_nt_start": 28913,
+  "start_codon": "214",
+  "start_codon_int": 214
+}

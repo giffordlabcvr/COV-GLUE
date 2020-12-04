@@ -1,0 +1,18 @@
+{
+  "id": "NSP3:V:21:W",
+  "display_name": "V21W",
+  "variation.featureLoc.feature.name": "NSP3",
+  "codon_label": "21",
+  "codon_label_int": 21,
+  "reference_aa": "V",
+  "reference_nt": 2780,
+  "replacement_aa": "W",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": true,
+  "radical_hanada_category_iii": false,
+  "grantham_distance_double": 87.96356423926392,
+  "grantham_distance_int": 88,
+  "miyata_distance": 2.5101902898418142,
+  "parent_feature": "ORF_1a",
+  "parent_codon_label": "839"
+}

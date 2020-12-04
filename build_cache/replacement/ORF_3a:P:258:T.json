@@ -1,0 +1,18 @@
+{
+  "id": "ORF_3a:P:258:T",
+  "display_name": "P258T",
+  "variation.featureLoc.feature.name": "ORF_3a",
+  "codon_label": "258",
+  "codon_label_int": 258,
+  "reference_aa": "P",
+  "reference_nt": 26164,
+  "replacement_aa": "T",
+  "radical_hanada_category_i": false,
+  "radical_hanada_category_ii": false,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 37.56362475504698,
+  "grantham_distance_int": 38,
+  "miyata_distance": 0.873755109177339,
+  "parent_feature": null,
+  "parent_codon_label": null
+}

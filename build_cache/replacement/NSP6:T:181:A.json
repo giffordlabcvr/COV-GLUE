@@ -1,0 +1,18 @@
+{
+  "id": "NSP6:T:181:A",
+  "display_name": "T181A",
+  "variation.featureLoc.feature.name": "NSP6",
+  "codon_label": "181",
+  "codon_label_int": 181,
+  "reference_aa": "T",
+  "reference_nt": 11513,
+  "replacement_aa": "A",
+  "radical_hanada_category_i": false,
+  "radical_hanada_category_ii": false,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 58.02332760382417,
+  "grantham_distance_int": 58,
+  "miyata_distance": 0.9021839838528766,
+  "parent_feature": "ORF_1a",
+  "parent_codon_label": "3750"
+}

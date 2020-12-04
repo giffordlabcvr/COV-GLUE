@@ -1,0 +1,18 @@
+{
+  "id": "ORF_7a:K:119:M",
+  "display_name": "K119M",
+  "variation.featureLoc.feature.name": "ORF_7a",
+  "codon_label": "119",
+  "codon_label_int": 119,
+  "reference_aa": "K",
+  "reference_nt": 27748,
+  "replacement_aa": "M",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": true,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 94.49009719874934,
+  "grantham_distance_int": 94,
+  "miyata_distance": 2.6274196368687526,
+  "parent_feature": null,
+  "parent_codon_label": null
+}

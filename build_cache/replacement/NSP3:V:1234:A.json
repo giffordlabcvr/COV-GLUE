@@ -1,0 +1,18 @@
+{
+  "id": "NSP3:V:1234:A",
+  "display_name": "V1234A",
+  "variation.featureLoc.feature.name": "NSP3",
+  "codon_label": "1234",
+  "codon_label_int": 1234,
+  "reference_aa": "V",
+  "reference_nt": 6419,
+  "replacement_aa": "A",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": false,
+  "radical_hanada_category_iii": false,
+  "grantham_distance_double": 64.43025059480746,
+  "grantham_distance_int": 64,
+  "miyata_distance": 1.847329414521172,
+  "parent_feature": "ORF_1a",
+  "parent_codon_label": "2052"
+}

@@ -1,0 +1,15 @@
+{
+  "id": "NSP3:ca:204:208",
+  "variation.featureLoc.feature.name": "NSP3",
+  "cov_nt_deletion.id": "NSP3:nca:3329:3343",
+  "display_name": "204-208",
+  "end_codon": "208",
+  "end_codon_int": 208,
+  "parent_end_codon": "1026",
+  "parent_feature": "ORF_1a",
+  "parent_start_codon": "1022",
+  "reference_nt_end": 3343,
+  "reference_nt_start": 3329,
+  "start_codon": "204",
+  "start_codon_int": 204
+}

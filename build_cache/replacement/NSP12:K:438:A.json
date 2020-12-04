@@ -1,0 +1,18 @@
+{
+  "id": "NSP12:K:438:A",
+  "display_name": "K438A",
+  "variation.featureLoc.feature.name": "NSP12",
+  "codon_label": "438",
+  "codon_label_int": 438,
+  "reference_aa": "K",
+  "reference_nt": 14752,
+  "replacement_aa": "A",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": true,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 105.5709010738932,
+  "grantham_distance_int": 106,
+  "miyata_distance": 2.9565832578723485,
+  "parent_feature": "ORF_1ab",
+  "parent_codon_label": "4830"
+}

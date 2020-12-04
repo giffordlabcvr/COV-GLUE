@@ -1,0 +1,18 @@
+{
+  "id": "NSP4:K:8:Q",
+  "display_name": "K8Q",
+  "variation.featureLoc.feature.name": "NSP4",
+  "codon_label": "8",
+  "codon_label_int": 8,
+  "reference_aa": "K",
+  "reference_nt": 8576,
+  "replacement_aa": "Q",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": true,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 53.228340150510796,
+  "grantham_distance_int": 53,
+  "miyata_distance": 1.0554475691875203,
+  "parent_feature": "ORF_1a",
+  "parent_codon_label": "2771"
+}
