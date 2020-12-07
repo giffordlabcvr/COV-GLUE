@@ -1,0 +1,15 @@
+{
+  "id": "NSP4:ca:301:305",
+  "variation.featureLoc.feature.name": "NSP4",
+  "cov_nt_deletion.id": "NSP4:nca:9455:9469",
+  "display_name": "301-305",
+  "end_codon": "305",
+  "end_codon_int": 305,
+  "parent_end_codon": "3068",
+  "parent_feature": "ORF_1a",
+  "parent_start_codon": "3064",
+  "reference_nt_end": 9469,
+  "reference_nt_start": 9455,
+  "start_codon": "301",
+  "start_codon_int": 301
+}

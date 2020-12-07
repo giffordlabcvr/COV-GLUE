@@ -1,0 +1,18 @@
+{
+  "id": "ORF_8:G:8:F",
+  "display_name": "G8F",
+  "variation.featureLoc.feature.name": "ORF_8",
+  "codon_label": "8",
+  "codon_label_int": 8,
+  "reference_aa": "G",
+  "reference_nt": 27915,
+  "replacement_aa": "F",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": true,
+  "radical_hanada_category_iii": false,
+  "grantham_distance_double": 153.12551900915278,
+  "grantham_distance_int": 153,
+  "miyata_distance": 4.142341117692064,
+  "parent_feature": null,
+  "parent_codon_label": null
+}

@@ -1,0 +1,18 @@
+{
+  "id": "NSP16:P:7:M",
+  "display_name": "P7M",
+  "variation.featureLoc.feature.name": "NSP16",
+  "codon_label": "7",
+  "codon_label_int": 7,
+  "reference_aa": "P",
+  "reference_nt": 20677,
+  "replacement_aa": "M",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": false,
+  "radical_hanada_category_iii": false,
+  "grantham_distance_double": 86.59479895345345,
+  "grantham_distance_int": 87,
+  "miyata_distance": 2.3614576284876296,
+  "parent_feature": "ORF_1ab",
+  "parent_codon_label": "6805"
+}

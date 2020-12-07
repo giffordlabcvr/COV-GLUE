@@ -1,0 +1,18 @@
+{
+  "id": "NSP14:F:436:Y",
+  "display_name": "F436Y",
+  "variation.featureLoc.feature.name": "NSP14",
+  "codon_label": "436",
+  "codon_label_int": 436,
+  "reference_aa": "F",
+  "reference_nt": 19345,
+  "replacement_aa": "Y",
+  "radical_hanada_category_i": false,
+  "radical_hanada_category_ii": false,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 21.6096648887579,
+  "grantham_distance_int": 22,
+  "miyata_distance": 0.4778781952608543,
+  "parent_feature": "ORF_1ab",
+  "parent_codon_label": "6361"
+}

@@ -1,0 +1,18 @@
+{
+  "id": "NSP3:E:387:K",
+  "display_name": "E387K",
+  "variation.featureLoc.feature.name": "NSP3",
+  "codon_label": "387",
+  "codon_label_int": 387,
+  "reference_aa": "E",
+  "reference_nt": 3878,
+  "replacement_aa": "K",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": true,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 56.86795521504775,
+  "grantham_distance_int": 57,
+  "miyata_distance": 1.1443659173772327,
+  "parent_feature": "ORF_1a",
+  "parent_codon_label": "1205"
+}

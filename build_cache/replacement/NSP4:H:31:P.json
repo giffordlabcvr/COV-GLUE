@@ -1,0 +1,18 @@
+{
+  "id": "NSP4:H:31:P",
+  "display_name": "H31P",
+  "variation.featureLoc.feature.name": "NSP4",
+  "codon_label": "31",
+  "codon_label_int": 31,
+  "reference_aa": "H",
+  "reference_nt": 8645,
+  "replacement_aa": "P",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": true,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 76.27712276797571,
+  "grantham_distance_int": 76,
+  "miyata_distance": 2.154892056346583,
+  "parent_feature": "ORF_1a",
+  "parent_codon_label": "2794"
+}

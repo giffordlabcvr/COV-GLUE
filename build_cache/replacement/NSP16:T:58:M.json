@@ -1,0 +1,18 @@
+{
+  "id": "NSP16:T:58:M",
+  "display_name": "T58M",
+  "variation.featureLoc.feature.name": "NSP16",
+  "codon_label": "58",
+  "codon_label_int": 58,
+  "reference_aa": "T",
+  "reference_nt": 20830,
+  "replacement_aa": "M",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": false,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 81.0396927923509,
+  "grantham_distance_int": 81,
+  "miyata_distance": 1.8553256449702145,
+  "parent_feature": "ORF_1ab",
+  "parent_codon_label": "6856"
+}

@@ -1,0 +1,15 @@
+{
+  "id": "NSP2:ca:170:179",
+  "variation.featureLoc.feature.name": "NSP2",
+  "cov_nt_deletion.id": "NSP2:nca:1313:1342",
+  "display_name": "170-179",
+  "end_codon": "179",
+  "end_codon_int": 179,
+  "parent_end_codon": "359",
+  "parent_feature": "ORF_1a",
+  "parent_start_codon": "350",
+  "reference_nt_end": 1342,
+  "reference_nt_start": 1313,
+  "start_codon": "170",
+  "start_codon_int": 170
+}

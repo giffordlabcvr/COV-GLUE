@@ -1,0 +1,18 @@
+{
+  "id": "S:D:398:V",
+  "display_name": "D398V",
+  "variation.featureLoc.feature.name": "S",
+  "codon_label": "398",
+  "codon_label_int": 398,
+  "reference_aa": "D",
+  "reference_nt": 22754,
+  "replacement_aa": "V",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": true,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 152.01339696164652,
+  "grantham_distance_int": 152,
+  "miyata_distance": 3.4045465485098587,
+  "parent_feature": null,
+  "parent_codon_label": null
+}

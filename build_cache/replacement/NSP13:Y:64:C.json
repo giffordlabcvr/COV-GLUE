@@ -1,0 +1,18 @@
+{
+  "id": "NSP13:Y:64:C",
+  "display_name": "Y64C",
+  "variation.featureLoc.feature.name": "NSP13",
+  "codon_label": "64",
+  "codon_label_int": 64,
+  "reference_aa": "Y",
+  "reference_nt": 16426,
+  "replacement_aa": "C",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": true,
+  "radical_hanada_category_iii": false,
+  "grantham_distance_double": 193.72470051146485,
+  "grantham_distance_int": 194,
+  "miyata_distance": 2.376405280106065,
+  "parent_feature": "ORF_1ab",
+  "parent_codon_label": "5388"
+}

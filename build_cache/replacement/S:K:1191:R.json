@@ -1,0 +1,18 @@
+{
+  "id": "S:K:1191:R",
+  "display_name": "K1191R",
+  "variation.featureLoc.feature.name": "S",
+  "codon_label": "1191",
+  "codon_label_int": 1191,
+  "reference_aa": "K",
+  "reference_nt": 25133,
+  "replacement_aa": "R",
+  "radical_hanada_category_i": false,
+  "radical_hanada_category_ii": false,
+  "radical_hanada_category_iii": false,
+  "grantham_distance_double": 26.003946260840873,
+  "grantham_distance_int": 26,
+  "miyata_distance": 0.3982749033932912,
+  "parent_feature": null,
+  "parent_codon_label": null
+}

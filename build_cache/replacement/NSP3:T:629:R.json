@@ -1,0 +1,18 @@
+{
+  "id": "NSP3:T:629:R",
+  "display_name": "T629R",
+  "variation.featureLoc.feature.name": "NSP3",
+  "codon_label": "629",
+  "codon_label_int": 629,
+  "reference_aa": "T",
+  "reference_nt": 4604,
+  "replacement_aa": "R",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": true,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 70.97102634903321,
+  "grantham_distance_int": 71,
+  "miyata_distance": 2.0317972672838045,
+  "parent_feature": "ORF_1a",
+  "parent_codon_label": "1447"
+}

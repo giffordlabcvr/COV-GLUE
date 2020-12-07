@@ -1,0 +1,10 @@
+{
+  "id": "NSP3:nca:6930:83412:6931",
+  "variation.featureLoc.feature.name": "NSP3",
+  "display_name": "6930-TTT-6931",
+  "last_ref_nt_before": 6930,
+  "first_ref_nt_after": 6931,
+  "parent_feature": "ORF_1a",
+  "inserted_nts_length": 3,
+  "inserted_nts": "TTT"
+}

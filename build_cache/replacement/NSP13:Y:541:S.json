@@ -1,0 +1,18 @@
+{
+  "id": "NSP13:Y:541:S",
+  "display_name": "Y541S",
+  "variation.featureLoc.feature.name": "NSP13",
+  "codon_label": "541",
+  "codon_label_int": 541,
+  "reference_aa": "Y",
+  "reference_nt": 17857,
+  "replacement_aa": "S",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": true,
+  "radical_hanada_category_iii": false,
+  "grantham_distance_double": 143.10738438907285,
+  "grantham_distance_int": 143,
+  "miyata_distance": 3.327140114906959,
+  "parent_feature": "ORF_1ab",
+  "parent_codon_label": "5865"
+}

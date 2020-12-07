@@ -1,0 +1,15 @@
+{
+  "id": "NSP12:ca:20:31",
+  "variation.featureLoc.feature.name": "NSP12",
+  "cov_nt_deletion.id": "NSP12:nca:13498:13533",
+  "display_name": "20-31",
+  "end_codon": "31",
+  "end_codon_int": 31,
+  "parent_end_codon": null,
+  "parent_feature": null,
+  "parent_start_codon": null,
+  "reference_nt_end": 13533,
+  "reference_nt_start": 13498,
+  "start_codon": "20",
+  "start_codon_int": 20
+}

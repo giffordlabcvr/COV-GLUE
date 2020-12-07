@@ -1,0 +1,18 @@
+{
+  "id": "NSP14:V:421:E",
+  "display_name": "V421E",
+  "variation.featureLoc.feature.name": "NSP14",
+  "codon_label": "421",
+  "codon_label_int": 421,
+  "reference_aa": "V",
+  "reference_nt": 19300,
+  "replacement_aa": "E",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": true,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 121.32850629061132,
+  "grantham_distance_int": 121,
+  "miyata_distance": 2.966682149792932,
+  "parent_feature": "ORF_1ab",
+  "parent_codon_label": "6346"
+}

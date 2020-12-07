@@ -1,0 +1,18 @@
+{
+  "id": "N:N:285:H",
+  "display_name": "N285H",
+  "variation.featureLoc.feature.name": "N",
+  "codon_label": "285",
+  "codon_label_int": 285,
+  "reference_aa": "N",
+  "reference_nt": 29126,
+  "replacement_aa": "H",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": true,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 68.35485567757956,
+  "grantham_distance_int": 68,
+  "miyata_distance": 1.288757085402098,
+  "parent_feature": null,
+  "parent_codon_label": null
+}
