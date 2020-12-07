@@ -54,9 +54,6 @@ project cov
   # stuff for assigning lineages.
   run file glue/covRebuildGlobalRefs.glue
 
-  # run the rules to exclude some sequences from the variation analysis
-  # run file glue/covSetAnalyseVariationFlag.glue
-
   # Validate
   validate
 
