@@ -4,11 +4,6 @@ project cov
 
   run script glue/covLoadTimeStamp.js
   run script glue/covSetLineageVersion.js
- 
-  # Clean up sequences from non-version-controlled single fastas which were produced
-  # by splitGisaidFasta.sh into and save in single fastas in sources/cov-gisaid, also 
-  # save sequence character stats file in tabular.
-  # run script glue/covGisaidFastaInitialCleanup.js
   
   # import cov-gisaid individual fastas.
   import source sources_minimal/cov-gisaid
@@ -27,17 +22,11 @@ project cov
   alignment AL_UNCONSTRAINED_DUMMY add member cov-gisaid EPI_ISL_402125
   alignment AL_UNCONSTRAINED_DUMMY member cov-gisaid EPI_ISL_402125 add segment 1 29903 1 29903
 
-  # various metadata-related steps.
-  # have to temporarily change result format to avoid bug in table rendering library.
-  # console set cmd-result-format tab
+  # metadata-related step.
    module covGisaidRefsMetadataTextFilePopulator populate --fileName tabular/gisaidLineageRepresentatives.tsv
-  # module covGisaidMetadataTextFilePopulator populate --fileName tabular/gisaid_metadata.txt
-  # module covSeqStatsTextFilePopulator populate -f tabular/gisaidSeqCharacterStats.txt
-  # console unset cmd-result-format
   
   run script glue/covSetCollectionDate.js
   run script glue/covSetAuthorsShort.js
-
 
   # populate the constrained alignment (GISAID only)
   create alignment AL_GISAID_CONSTRAINED -r REF_MASTER_WUHAN_HU_1 
@@ -53,6 +42,13 @@ project cov
   # build the unconstrained alignment, global ref tree, and other 
   # stuff for assigning lineages.
   run file glue/covRebuildGlobalRefs.glue
+
+  # populate from cache where possible
+  run script glue/covPopulateFromCache.js
+
+  # assign and store lineages for all sequences where analyse_variation is true
+  # and lineage has not been retrieved from cache.
+  run script glue/covAssignAndStoreLineages.js
 
   # Validate
   validate
