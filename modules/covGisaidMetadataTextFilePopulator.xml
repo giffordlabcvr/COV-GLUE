@@ -177,6 +177,10 @@
             <outputTemplate>CIV</outputTemplate>
         </valueConverter>
         <valueConverter>
+            <matchPattern>Africa / Côte d’Ivoire</matchPattern>
+            <outputTemplate>CIV</outputTemplate>
+        </valueConverter>
+        <valueConverter>
             <matchPattern>Europe / Czech Repubic</matchPattern>
             <outputTemplate>CZE</outputTemplate>
         </valueConverter>
