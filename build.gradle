@@ -50,7 +50,7 @@ task buildCovGlueDB(type: JavaExec, dependsOn: 'copyGluetoolsJar') {
 }
 
 task wipeCovGlueDBMinimal(type: Exec) {
-	commandLine "bash", "-c", "echo 'drop database COV_GLUE_MINIMAL; create database COV_GLUE_MINIMAL character set UTF8;' | mysql -u covglue --password=covglue"
+	commandLine "bash", "-c", "echo 'drop database COV_MINI; create database COV_MINI character set UTF8;' | mysql -u covmini --password=covmini"
 }
 
 task buildCovGlueDBMinimal(type: JavaExec, dependsOn: 'copyGluetoolsJar') {

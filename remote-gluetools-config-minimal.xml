@@ -1,9 +1,9 @@
 <gluetools>
 	<database>
-		<username>covglue</username>
-		<password>covglue</password>
+		<username>covmini</username>
+		<password>covmini</password>
 		<vendor>MySQL</vendor>
-		<jdbcUrl>jdbc:mysql://localhost:3306/COV_GLUE_MINIMAL?characterEncoding=UTF-8</jdbcUrl>	
+		<jdbcUrl>jdbc:mysql://localhost:3306/COV_MINI?characterEncoding=UTF-8</jdbcUrl>	
 	</database>
 	<properties>
 	
