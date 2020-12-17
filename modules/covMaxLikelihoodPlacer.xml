@@ -4,6 +4,9 @@
     <phyloAlignmentName>AL_GISAID_UNCONSTRAINED</phyloAlignmentName>
     <selectorName>covReferencePhylogenyColumnsSelector</selectorName>
     <phyloFieldName>phylogeny</phyloFieldName>
+    <mafftRunner>
+    	<maxIterate>1000</maxIterate>
+    </mafftRunner>
     <raxmlEpaRunner>
 		<substitutionModel>GTRGAMMA</substitutionModel>
     	<accumulatedThreshold>0.95</accumulatedThreshold>

@@ -1,0 +1,6 @@
+<mafftAligner>
+	<alignmentReimporterModuleName>covStrictFastaAlignmentImporter</alignmentReimporterModuleName>
+	<mafftRunner>
+    	<maxIterate>1000</maxIterate>
+    </mafftRunner>
+</mafftAligner>
