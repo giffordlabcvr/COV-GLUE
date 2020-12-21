@@ -1,0 +1,18 @@
+{
+  "id": "NSP9:A:43:V",
+  "display_name": "A43V",
+  "variation.featureLoc.feature.name": "NSP9",
+  "codon_label": "43",
+  "codon_label_int": 43,
+  "reference_aa": "A",
+  "reference_nt": 12812,
+  "replacement_aa": "V",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": false,
+  "radical_hanada_category_iii": false,
+  "grantham_distance_double": 64.43025059480746,
+  "grantham_distance_int": 64,
+  "miyata_distance": 1.847329414521172,
+  "parent_feature": "ORF_1a",
+  "parent_codon_label": "4183"
+}

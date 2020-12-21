@@ -1,0 +1,18 @@
+{
+  "id": "NSP3:Q:960:K",
+  "display_name": "Q960K",
+  "variation.featureLoc.feature.name": "NSP3",
+  "codon_label": "960",
+  "codon_label_int": 960,
+  "reference_aa": "Q",
+  "reference_nt": 5597,
+  "replacement_aa": "K",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": true,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 53.228340150510796,
+  "grantham_distance_int": 53,
+  "miyata_distance": 1.0554475691875203,
+  "parent_feature": "ORF_1a",
+  "parent_codon_label": "1778"
+}

@@ -1,0 +1,18 @@
+{
+  "id": "NSP3:S:721:C",
+  "display_name": "S721C",
+  "variation.featureLoc.feature.name": "NSP3",
+  "codon_label": "721",
+  "codon_label_int": 721,
+  "reference_aa": "S",
+  "reference_nt": 4880,
+  "replacement_aa": "C",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": false,
+  "radical_hanada_category_iii": false,
+  "grantham_distance_double": 111.6724956632034,
+  "grantham_distance_int": 112,
+  "miyata_distance": 1.8406989880227782,
+  "parent_feature": "ORF_1a",
+  "parent_codon_label": "1539"
+}

@@ -1,0 +1,18 @@
+{
+  "id": "ORF_3a:S:165:Y",
+  "display_name": "S165Y",
+  "variation.featureLoc.feature.name": "ORF_3a",
+  "codon_label": "165",
+  "codon_label_int": 165,
+  "reference_aa": "S",
+  "reference_nt": 25885,
+  "replacement_aa": "Y",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": true,
+  "radical_hanada_category_iii": false,
+  "grantham_distance_double": 143.10738438907285,
+  "grantham_distance_int": 143,
+  "miyata_distance": 3.327140114906959,
+  "parent_feature": null,
+  "parent_codon_label": null
+}

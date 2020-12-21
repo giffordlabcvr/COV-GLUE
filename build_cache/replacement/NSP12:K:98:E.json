@@ -1,0 +1,18 @@
+{
+  "id": "NSP12:K:98:E",
+  "display_name": "K98E",
+  "variation.featureLoc.feature.name": "NSP12",
+  "codon_label": "98",
+  "codon_label_int": 98,
+  "reference_aa": "K",
+  "reference_nt": 13732,
+  "replacement_aa": "E",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": true,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 56.86795521504775,
+  "grantham_distance_int": 57,
+  "miyata_distance": 1.1443659173772327,
+  "parent_feature": "ORF_1ab",
+  "parent_codon_label": "4490"
+}

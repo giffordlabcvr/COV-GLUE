@@ -1,0 +1,18 @@
+{
+  "id": "NSP6:V:26:I",
+  "display_name": "V26I",
+  "variation.featureLoc.feature.name": "NSP6",
+  "codon_label": "26",
+  "codon_label_int": 26,
+  "reference_aa": "V",
+  "reference_nt": 11048,
+  "replacement_aa": "I",
+  "radical_hanada_category_i": false,
+  "radical_hanada_category_ii": false,
+  "radical_hanada_category_iii": false,
+  "grantham_distance_double": 29.609070626666707,
+  "grantham_distance_int": 30,
+  "miyata_distance": 0.8491514617150016,
+  "parent_feature": "ORF_1a",
+  "parent_codon_label": "3595"
+}

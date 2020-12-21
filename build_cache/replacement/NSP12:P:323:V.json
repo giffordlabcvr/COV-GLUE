@@ -1,0 +1,18 @@
+{
+  "id": "NSP12:P:323:V",
+  "display_name": "P323V",
+  "variation.featureLoc.feature.name": "NSP12",
+  "codon_label": "323",
+  "codon_label_int": 323,
+  "reference_aa": "P",
+  "reference_nt": 14407,
+  "replacement_aa": "V",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": false,
+  "radical_hanada_category_iii": false,
+  "grantham_distance_double": 67.7865984564368,
+  "grantham_distance_int": 68,
+  "miyata_distance": 1.7854506204579927,
+  "parent_feature": "ORF_1ab",
+  "parent_codon_label": "4715"
+}

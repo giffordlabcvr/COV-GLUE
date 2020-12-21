@@ -1,0 +1,18 @@
+{
+  "id": "ORF_7a:F:59:K",
+  "display_name": "F59K",
+  "variation.featureLoc.feature.name": "ORF_7a",
+  "codon_label": "59",
+  "codon_label_int": 59,
+  "reference_aa": "F",
+  "reference_nt": 27568,
+  "replacement_aa": "K",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": true,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 102.14134603171699,
+  "grantham_distance_int": 102,
+  "miyata_distance": 2.85261535654781,
+  "parent_feature": null,
+  "parent_codon_label": null
+}

@@ -1,0 +1,18 @@
+{
+  "id": "NSP8:S:177:T",
+  "display_name": "S177T",
+  "variation.featureLoc.feature.name": "NSP8",
+  "codon_label": "177",
+  "codon_label_int": 177,
+  "reference_aa": "S",
+  "reference_nt": 12620,
+  "replacement_aa": "T",
+  "radical_hanada_category_i": false,
+  "radical_hanada_category_ii": false,
+  "radical_hanada_category_iii": false,
+  "grantham_distance_double": 57.74902765654723,
+  "grantham_distance_int": 58,
+  "miyata_distance": 0.8875431743515021,
+  "parent_feature": "ORF_1a",
+  "parent_codon_label": "4119"
+}

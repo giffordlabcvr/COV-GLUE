@@ -1,0 +1,18 @@
+{
+  "id": "NSP6:E:195:K",
+  "display_name": "E195K",
+  "variation.featureLoc.feature.name": "NSP6",
+  "codon_label": "195",
+  "codon_label_int": 195,
+  "reference_aa": "E",
+  "reference_nt": 11555,
+  "replacement_aa": "K",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": true,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 56.86795521504775,
+  "grantham_distance_int": 57,
+  "miyata_distance": 1.1443659173772327,
+  "parent_feature": "ORF_1a",
+  "parent_codon_label": "3764"
+}

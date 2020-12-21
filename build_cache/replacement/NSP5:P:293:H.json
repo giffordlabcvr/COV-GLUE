@@ -1,0 +1,18 @@
+{
+  "id": "NSP5:P:293:H",
+  "display_name": "P293H",
+  "variation.featureLoc.feature.name": "NSP5",
+  "codon_label": "293",
+  "codon_label_int": 293,
+  "reference_aa": "P",
+  "reference_nt": 10931,
+  "replacement_aa": "H",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": true,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 76.27712276797571,
+  "grantham_distance_int": 76,
+  "miyata_distance": 2.154892056346583,
+  "parent_feature": "ORF_1a",
+  "parent_codon_label": "3556"
+}

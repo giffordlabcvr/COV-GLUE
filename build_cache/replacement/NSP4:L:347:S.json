@@ -1,0 +1,18 @@
+{
+  "id": "NSP4:L:347:S",
+  "display_name": "L347S",
+  "variation.featureLoc.feature.name": "NSP4",
+  "codon_label": "347",
+  "codon_label_int": 347,
+  "reference_aa": "L",
+  "reference_nt": 9593,
+  "replacement_aa": "S",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": false,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 144.07923462160153,
+  "grantham_distance_int": 144,
+  "miyata_distance": 3.0404515387240023,
+  "parent_feature": "ORF_1a",
+  "parent_codon_label": "3110"
+}

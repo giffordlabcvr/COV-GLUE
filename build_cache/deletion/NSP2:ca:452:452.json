@@ -1,0 +1,15 @@
+{
+  "id": "NSP2:ca:452:452",
+  "variation.featureLoc.feature.name": "NSP2",
+  "cov_nt_deletion.id": "NSP2:nca:2159:2161",
+  "display_name": "452",
+  "end_codon": "452",
+  "end_codon_int": 452,
+  "parent_end_codon": "632",
+  "parent_feature": "ORF_1a",
+  "parent_start_codon": "632",
+  "reference_nt_end": 2161,
+  "reference_nt_start": 2159,
+  "start_codon": "452",
+  "start_codon_int": 452
+}

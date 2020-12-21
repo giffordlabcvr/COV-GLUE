@@ -1,0 +1,18 @@
+{
+  "id": "NSP2:W:466:G",
+  "display_name": "W466G",
+  "variation.featureLoc.feature.name": "NSP2",
+  "codon_label": "466",
+  "codon_label_int": 466,
+  "reference_aa": "W",
+  "reference_nt": 2201,
+  "replacement_aa": "G",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": true,
+  "radical_hanada_category_iii": false,
+  "grantham_distance_double": 183.7902133344299,
+  "grantham_distance_int": 184,
+  "miyata_distance": 5.132455948239974,
+  "parent_feature": "ORF_1a",
+  "parent_codon_label": "646"
+}

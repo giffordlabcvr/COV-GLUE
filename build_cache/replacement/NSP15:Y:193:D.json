@@ -1,0 +1,18 @@
+{
+  "id": "NSP15:Y:193:D",
+  "display_name": "Y193D",
+  "variation.featureLoc.feature.name": "NSP15",
+  "codon_label": "193",
+  "codon_label_int": 193,
+  "reference_aa": "Y",
+  "reference_nt": 20197,
+  "replacement_aa": "D",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": true,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 159.93740663288054,
+  "grantham_distance_int": 160,
+  "miyata_distance": 3.951517253135271,
+  "parent_feature": "ORF_1ab",
+  "parent_codon_label": "6645"
+}

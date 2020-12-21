@@ -1,0 +1,18 @@
+{
+  "id": "NSP2:H:532:N",
+  "display_name": "H532N",
+  "variation.featureLoc.feature.name": "NSP2",
+  "codon_label": "532",
+  "codon_label_int": 532,
+  "reference_aa": "H",
+  "reference_nt": 2399,
+  "replacement_aa": "N",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": true,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 68.35485567757956,
+  "grantham_distance_int": 68,
+  "miyata_distance": 1.288757085402098,
+  "parent_feature": "ORF_1a",
+  "parent_codon_label": "712"
+}

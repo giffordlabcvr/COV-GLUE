@@ -1,0 +1,18 @@
+{
+  "id": "NSP4:K:86:R",
+  "display_name": "K86R",
+  "variation.featureLoc.feature.name": "NSP4",
+  "codon_label": "86",
+  "codon_label_int": 86,
+  "reference_aa": "K",
+  "reference_nt": 8810,
+  "replacement_aa": "R",
+  "radical_hanada_category_i": false,
+  "radical_hanada_category_ii": false,
+  "radical_hanada_category_iii": false,
+  "grantham_distance_double": 26.003946260840873,
+  "grantham_distance_int": 26,
+  "miyata_distance": 0.3982749033932912,
+  "parent_feature": "ORF_1a",
+  "parent_codon_label": "2849"
+}

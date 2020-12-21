@@ -1,0 +1,18 @@
+{
+  "id": "N:R:14:F",
+  "display_name": "R14F",
+  "variation.featureLoc.feature.name": "N",
+  "codon_label": "14",
+  "codon_label_int": 14,
+  "reference_aa": "R",
+  "reference_nt": 28313,
+  "replacement_aa": "F",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": true,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 97.03272116196693,
+  "grantham_distance_int": 97,
+  "miyata_distance": 2.4676440051000443,
+  "parent_feature": null,
+  "parent_codon_label": null
+}

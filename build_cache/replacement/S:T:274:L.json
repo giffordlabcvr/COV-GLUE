@@ -1,0 +1,18 @@
+{
+  "id": "S:T:274:L",
+  "display_name": "T274L",
+  "variation.featureLoc.feature.name": "S",
+  "codon_label": "274",
+  "codon_label_int": 274,
+  "reference_aa": "T",
+  "reference_nt": 22382,
+  "replacement_aa": "L",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": false,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 92.3542746798992,
+  "grantham_distance_int": 92,
+  "miyata_distance": 2.2479014063035954,
+  "parent_feature": null,
+  "parent_codon_label": null
+}

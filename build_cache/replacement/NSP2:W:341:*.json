@@ -1,0 +1,18 @@
+{
+  "id": "NSP2:W:341:*",
+  "display_name": "W341*",
+  "variation.featureLoc.feature.name": "NSP2",
+  "codon_label": "341",
+  "codon_label_int": 341,
+  "reference_aa": "W",
+  "reference_nt": 1826,
+  "replacement_aa": "*",
+  "radical_hanada_category_i": null,
+  "radical_hanada_category_ii": null,
+  "radical_hanada_category_iii": null,
+  "grantham_distance_double": null,
+  "grantham_distance_int": null,
+  "miyata_distance": null,
+  "parent_feature": "ORF_1a",
+  "parent_codon_label": "521"
+}

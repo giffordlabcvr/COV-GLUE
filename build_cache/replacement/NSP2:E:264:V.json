@@ -1,0 +1,18 @@
+{
+  "id": "NSP2:E:264:V",
+  "display_name": "E264V",
+  "variation.featureLoc.feature.name": "NSP2",
+  "codon_label": "264",
+  "codon_label_int": 264,
+  "reference_aa": "E",
+  "reference_nt": 1595,
+  "replacement_aa": "V",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": true,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 121.32850629061132,
+  "grantham_distance_int": 121,
+  "miyata_distance": 2.966682149792932,
+  "parent_feature": "ORF_1a",
+  "parent_codon_label": "444"
+}

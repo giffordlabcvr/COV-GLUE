@@ -1,0 +1,18 @@
+{
+  "id": "NSP14:A:471:G",
+  "display_name": "A471G",
+  "variation.featureLoc.feature.name": "NSP14",
+  "codon_label": "471",
+  "codon_label_int": 471,
+  "reference_aa": "A",
+  "reference_nt": 19450,
+  "replacement_aa": "G",
+  "radical_hanada_category_i": false,
+  "radical_hanada_category_ii": false,
+  "radical_hanada_category_iii": false,
+  "grantham_distance_double": 59.99535651927305,
+  "grantham_distance_int": 60,
+  "miyata_distance": 0.9144774819777941,
+  "parent_feature": "ORF_1ab",
+  "parent_codon_label": "6396"
+}

@@ -1,0 +1,18 @@
+{
+  "id": "ORF_8:Y:31:S",
+  "display_name": "Y31S",
+  "variation.featureLoc.feature.name": "ORF_8",
+  "codon_label": "31",
+  "codon_label_int": 31,
+  "reference_aa": "Y",
+  "reference_nt": 27984,
+  "replacement_aa": "S",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": true,
+  "radical_hanada_category_iii": false,
+  "grantham_distance_double": 143.10738438907285,
+  "grantham_distance_int": 143,
+  "miyata_distance": 3.327140114906959,
+  "parent_feature": null,
+  "parent_codon_label": null
+}
