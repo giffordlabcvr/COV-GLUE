@@ -1,0 +1,18 @@
+{
+  "id": "ORF_8:E:64:Y",
+  "display_name": "E64Y",
+  "variation.featureLoc.feature.name": "ORF_8",
+  "codon_label": "64",
+  "codon_label_int": 64,
+  "reference_aa": "E",
+  "reference_nt": 28083,
+  "replacement_aa": "Y",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": true,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 122.77686505398576,
+  "grantham_distance_int": 123,
+  "miyata_distance": 3.2198449187141636,
+  "parent_feature": null,
+  "parent_codon_label": null
+}

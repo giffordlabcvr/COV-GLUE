@@ -1,0 +1,18 @@
+{
+  "id": "NSP14:H:19:Y",
+  "display_name": "H19Y",
+  "variation.featureLoc.feature.name": "NSP14",
+  "codon_label": "19",
+  "codon_label_int": 19,
+  "reference_aa": "H",
+  "reference_nt": 18094,
+  "replacement_aa": "Y",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": true,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 83.32844466345641,
+  "grantham_distance_int": 83,
+  "miyata_distance": 2.2674887607305707,
+  "parent_feature": "ORF_1ab",
+  "parent_codon_label": "5944"
+}

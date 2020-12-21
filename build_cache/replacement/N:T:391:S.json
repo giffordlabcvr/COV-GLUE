@@ -1,0 +1,18 @@
+{
+  "id": "N:T:391:S",
+  "display_name": "T391S",
+  "variation.featureLoc.feature.name": "N",
+  "codon_label": "391",
+  "codon_label_int": 391,
+  "reference_aa": "T",
+  "reference_nt": 29444,
+  "replacement_aa": "S",
+  "radical_hanada_category_i": false,
+  "radical_hanada_category_ii": false,
+  "radical_hanada_category_iii": false,
+  "grantham_distance_double": 57.74902765654723,
+  "grantham_distance_int": 58,
+  "miyata_distance": 0.8875431743515021,
+  "parent_feature": null,
+  "parent_codon_label": null
+}

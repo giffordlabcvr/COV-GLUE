@@ -1,0 +1,15 @@
+{
+  "id": "NSP16:ca:137:137",
+  "variation.featureLoc.feature.name": "NSP16",
+  "cov_nt_deletion.id": "NSP16:nca:21067:21069",
+  "display_name": "137",
+  "end_codon": "137",
+  "end_codon_int": 137,
+  "parent_end_codon": "6935",
+  "parent_feature": "ORF_1ab",
+  "parent_start_codon": "6935",
+  "reference_nt_end": 21069,
+  "reference_nt_start": 21067,
+  "start_codon": "137",
+  "start_codon_int": 137
+}

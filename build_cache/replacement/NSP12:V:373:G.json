@@ -1,0 +1,18 @@
+{
+  "id": "NSP12:V:373:G",
+  "display_name": "V373G",
+  "variation.featureLoc.feature.name": "NSP12",
+  "codon_label": "373",
+  "codon_label_int": 373,
+  "reference_aa": "V",
+  "reference_nt": 14557,
+  "replacement_aa": "G",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": false,
+  "radical_hanada_category_iii": false,
+  "grantham_distance_double": 108.78738843583756,
+  "grantham_distance_int": 109,
+  "miyata_distance": 2.7580349580646812,
+  "parent_feature": "ORF_1ab",
+  "parent_codon_label": "4765"
+}

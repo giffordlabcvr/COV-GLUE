@@ -1,0 +1,15 @@
+{
+  "id": "NSP4:ca:433:435",
+  "variation.featureLoc.feature.name": "NSP4",
+  "cov_nt_deletion.id": "NSP4:nca:9851:9859",
+  "display_name": "433-435",
+  "end_codon": "435",
+  "end_codon_int": 435,
+  "parent_end_codon": "3198",
+  "parent_feature": "ORF_1a",
+  "parent_start_codon": "3196",
+  "reference_nt_end": 9859,
+  "reference_nt_start": 9851,
+  "start_codon": "433",
+  "start_codon_int": 433
+}

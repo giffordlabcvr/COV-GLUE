@@ -1,0 +1,18 @@
+{
+  "id": "S:S:477:D",
+  "display_name": "S477D",
+  "variation.featureLoc.feature.name": "S",
+  "codon_label": "477",
+  "codon_label_int": 477,
+  "reference_aa": "S",
+  "reference_nt": 22991,
+  "replacement_aa": "D",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": true,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 65.47081515974384,
+  "grantham_distance_int": 65,
+  "miyata_distance": 1.8738465776572149,
+  "parent_feature": null,
+  "parent_codon_label": null
+}

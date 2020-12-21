@@ -1,0 +1,18 @@
+{
+  "id": "NSP12:E:61:Q",
+  "display_name": "E61Q",
+  "variation.featureLoc.feature.name": "NSP12",
+  "codon_label": "61",
+  "codon_label_int": 61,
+  "reference_aa": "E",
+  "reference_nt": 13621,
+  "replacement_aa": "Q",
+  "radical_hanada_category_i": false,
+  "radical_hanada_category_ii": true,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 29.273706240977482,
+  "grantham_distance_int": 29,
+  "miyata_distance": 0.8363616795657459,
+  "parent_feature": "ORF_1ab",
+  "parent_codon_label": "4453"
+}

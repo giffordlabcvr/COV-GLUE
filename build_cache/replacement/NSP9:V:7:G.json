@@ -1,0 +1,18 @@
+{
+  "id": "NSP9:V:7:G",
+  "display_name": "V7G",
+  "variation.featureLoc.feature.name": "NSP9",
+  "codon_label": "7",
+  "codon_label_int": 7,
+  "reference_aa": "V",
+  "reference_nt": 12704,
+  "replacement_aa": "G",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": false,
+  "radical_hanada_category_iii": false,
+  "grantham_distance_double": 108.78738843583756,
+  "grantham_distance_int": 109,
+  "miyata_distance": 2.7580349580646812,
+  "parent_feature": "ORF_1a",
+  "parent_codon_label": "4147"
+}

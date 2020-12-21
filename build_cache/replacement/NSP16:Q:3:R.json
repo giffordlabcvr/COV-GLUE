@@ -1,0 +1,18 @@
+{
+  "id": "NSP16:Q:3:R",
+  "display_name": "Q3R",
+  "variation.featureLoc.feature.name": "NSP16",
+  "codon_label": "3",
+  "codon_label_int": 3,
+  "reference_aa": "Q",
+  "reference_nt": 20665,
+  "replacement_aa": "R",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": true,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 42.81393192570374,
+  "grantham_distance_int": 43,
+  "miyata_distance": 1.1334798453192791,
+  "parent_feature": "ORF_1ab",
+  "parent_codon_label": "6801"
+}

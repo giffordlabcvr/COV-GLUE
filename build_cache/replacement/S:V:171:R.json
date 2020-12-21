@@ -1,0 +1,18 @@
+{
+  "id": "S:V:171:R",
+  "display_name": "V171R",
+  "variation.featureLoc.feature.name": "S",
+  "codon_label": "171",
+  "codon_label_int": 171,
+  "reference_aa": "V",
+  "reference_nt": 22073,
+  "replacement_aa": "R",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": true,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 95.7970764854718,
+  "grantham_distance_int": 96,
+  "miyata_distance": 2.428535787307328,
+  "parent_feature": null,
+  "parent_codon_label": null
+}

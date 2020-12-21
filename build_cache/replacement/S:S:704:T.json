@@ -1,0 +1,18 @@
+{
+  "id": "S:S:704:T",
+  "display_name": "S704T",
+  "variation.featureLoc.feature.name": "S",
+  "codon_label": "704",
+  "codon_label_int": 704,
+  "reference_aa": "S",
+  "reference_nt": 23672,
+  "replacement_aa": "T",
+  "radical_hanada_category_i": false,
+  "radical_hanada_category_ii": false,
+  "radical_hanada_category_iii": false,
+  "grantham_distance_double": 57.74902765654723,
+  "grantham_distance_int": 58,
+  "miyata_distance": 0.8875431743515021,
+  "parent_feature": null,
+  "parent_codon_label": null
+}

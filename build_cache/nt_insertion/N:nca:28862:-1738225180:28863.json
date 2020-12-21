@@ -1,0 +1,10 @@
+{
+  "id": "N:nca:28862:-1738225180:28863",
+  "variation.featureLoc.feature.name": "N",
+  "display_name": "28862-CAGATCAGATCG-28863",
+  "last_ref_nt_before": 28862,
+  "first_ref_nt_after": 28863,
+  "parent_feature": null,
+  "inserted_nts_length": 12,
+  "inserted_nts": "CAGATCAGATCG"
+}

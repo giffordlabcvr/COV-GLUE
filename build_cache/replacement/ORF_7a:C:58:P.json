@@ -1,0 +1,18 @@
+{
+  "id": "ORF_7a:C:58:P",
+  "display_name": "C58P",
+  "variation.featureLoc.feature.name": "ORF_7a",
+  "codon_label": "58",
+  "codon_label_int": 58,
+  "reference_aa": "C",
+  "reference_nt": 27565,
+  "replacement_aa": "P",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": false,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 168.59062075213075,
+  "grantham_distance_int": 169,
+  "miyata_distance": 1.3305838725242383,
+  "parent_feature": null,
+  "parent_codon_label": null
+}

@@ -1,0 +1,17 @@
+{
+  "id": "ORF_7b:ca:12:83412:13",
+  "variation.featureLoc.feature.name": "ORF_7b",
+  "cov_nt_insertion.id": "ORF_7b:nca:27791:83412:27792",
+  "display_name": "12-F-13",
+  "last_codon_before": "12",
+  "last_codon_before_int": 12,
+  "first_codon_after": "13",
+  "first_codon_after_int": 13,
+  "last_ref_nt_before": 27791,
+  "first_ref_nt_after": 27792,
+  "parent_feature": null,
+  "parent_last_codon_before": null,
+  "parent_first_codon_after": null,
+  "inserted_aas_length": 1,
+  "inserted_aas": "F"
+}

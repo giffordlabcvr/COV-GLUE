@@ -1,0 +1,17 @@
+{
+  "id": "S:ca:214:1058087010:215",
+  "variation.featureLoc.feature.name": "S",
+  "cov_nt_insertion.id": "S:nca:22204:1058087010:22205",
+  "display_name": "214-KLGP-215",
+  "last_codon_before": "214",
+  "last_codon_before_int": 214,
+  "first_codon_after": "215",
+  "first_codon_after_int": 215,
+  "last_ref_nt_before": 22204,
+  "first_ref_nt_after": 22205,
+  "parent_feature": null,
+  "parent_last_codon_before": null,
+  "parent_first_codon_after": null,
+  "inserted_aas_length": 4,
+  "inserted_aas": "KLGP"
+}

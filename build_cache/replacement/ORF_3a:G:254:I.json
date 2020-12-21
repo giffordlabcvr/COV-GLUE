@@ -1,0 +1,18 @@
+{
+  "id": "ORF_3a:G:254:I",
+  "display_name": "G254I",
+  "variation.featureLoc.feature.name": "ORF_3a",
+  "codon_label": "254",
+  "codon_label_int": 254,
+  "reference_aa": "G",
+  "reference_nt": 26152,
+  "replacement_aa": "I",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": false,
+  "radical_hanada_category_iii": false,
+  "grantham_distance_double": 135.41880970401212,
+  "grantham_distance_int": 135,
+  "miyata_distance": 3.5992996208339463,
+  "parent_feature": null,
+  "parent_codon_label": null
+}

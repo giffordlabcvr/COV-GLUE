@@ -1,0 +1,18 @@
+{
+  "id": "ORF_7a:V:74:K",
+  "display_name": "V74K",
+  "variation.featureLoc.feature.name": "ORF_7a",
+  "codon_label": "74",
+  "codon_label_int": 74,
+  "reference_aa": "V",
+  "reference_nt": 27613,
+  "replacement_aa": "K",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": true,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 96.99739940282169,
+  "grantham_distance_int": 97,
+  "miyata_distance": 2.70182281822906,
+  "parent_feature": null,
+  "parent_codon_label": null
+}

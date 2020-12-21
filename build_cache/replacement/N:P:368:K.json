@@ -1,0 +1,18 @@
+{
+  "id": "N:P:368:K",
+  "display_name": "P368K",
+  "variation.featureLoc.feature.name": "N",
+  "codon_label": "368",
+  "codon_label_int": 368,
+  "reference_aa": "P",
+  "reference_nt": 29375,
+  "replacement_aa": "K",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": true,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 102.71399421889416,
+  "grantham_distance_int": 103,
+  "miyata_distance": 2.9427776926138085,
+  "parent_feature": null,
+  "parent_codon_label": null
+}

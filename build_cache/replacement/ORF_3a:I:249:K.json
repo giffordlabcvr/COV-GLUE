@@ -1,0 +1,18 @@
+{
+  "id": "ORF_3a:I:249:K",
+  "display_name": "I249K",
+  "variation.featureLoc.feature.name": "ORF_3a",
+  "codon_label": "249",
+  "codon_label_int": 249,
+  "reference_aa": "I",
+  "reference_nt": 26137,
+  "replacement_aa": "K",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": true,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 101.6123327206865,
+  "grantham_distance_int": 102,
+  "miyata_distance": 2.837026913953594,
+  "parent_feature": null,
+  "parent_codon_label": null
+}

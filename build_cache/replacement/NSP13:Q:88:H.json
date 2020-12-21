@@ -1,0 +1,18 @@
+{
+  "id": "NSP13:Q:88:H",
+  "display_name": "Q88H",
+  "variation.featureLoc.feature.name": "NSP13",
+  "codon_label": "88",
+  "codon_label_int": 88,
+  "reference_aa": "Q",
+  "reference_nt": 16498,
+  "replacement_aa": "H",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": true,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 24.08398867410485,
+  "grantham_distance_int": 24,
+  "miyata_distance": 0.32304219411608814,
+  "parent_feature": "ORF_1ab",
+  "parent_codon_label": "5412"
+}

@@ -1,0 +1,18 @@
+{
+  "id": "ORF_8:S:69:T",
+  "display_name": "S69T",
+  "variation.featureLoc.feature.name": "ORF_8",
+  "codon_label": "69",
+  "codon_label_int": 69,
+  "reference_aa": "S",
+  "reference_nt": 28098,
+  "replacement_aa": "T",
+  "radical_hanada_category_i": false,
+  "radical_hanada_category_ii": false,
+  "radical_hanada_category_iii": false,
+  "grantham_distance_double": 57.74902765654723,
+  "grantham_distance_int": 58,
+  "miyata_distance": 0.8875431743515021,
+  "parent_feature": null,
+  "parent_codon_label": null
+}

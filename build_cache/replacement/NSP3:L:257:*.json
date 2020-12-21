@@ -1,0 +1,18 @@
+{
+  "id": "NSP3:L:257:*",
+  "display_name": "L257*",
+  "variation.featureLoc.feature.name": "NSP3",
+  "codon_label": "257",
+  "codon_label_int": 257,
+  "reference_aa": "L",
+  "reference_nt": 3488,
+  "replacement_aa": "*",
+  "radical_hanada_category_i": null,
+  "radical_hanada_category_ii": null,
+  "radical_hanada_category_iii": null,
+  "grantham_distance_double": null,
+  "grantham_distance_int": null,
+  "miyata_distance": null,
+  "parent_feature": "ORF_1a",
+  "parent_codon_label": "1075"
+}

@@ -1,0 +1,18 @@
+{
+  "id": "NSP2:K:171:I",
+  "display_name": "K171I",
+  "variation.featureLoc.feature.name": "NSP2",
+  "codon_label": "171",
+  "codon_label_int": 171,
+  "reference_aa": "K",
+  "reference_nt": 1316,
+  "replacement_aa": "I",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": true,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 101.6123327206865,
+  "grantham_distance_int": 102,
+  "miyata_distance": 2.837026913953594,
+  "parent_feature": "ORF_1a",
+  "parent_codon_label": "351"
+}

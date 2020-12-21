@@ -1,0 +1,18 @@
+{
+  "id": "NSP3:A:664:T",
+  "display_name": "A664T",
+  "variation.featureLoc.feature.name": "NSP3",
+  "codon_label": "664",
+  "codon_label_int": 664,
+  "reference_aa": "A",
+  "reference_nt": 4709,
+  "replacement_aa": "T",
+  "radical_hanada_category_i": false,
+  "radical_hanada_category_ii": false,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 58.02332760382417,
+  "grantham_distance_int": 58,
+  "miyata_distance": 0.9021839838528766,
+  "parent_feature": "ORF_1a",
+  "parent_codon_label": "1482"
+}

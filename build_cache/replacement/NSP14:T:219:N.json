@@ -1,0 +1,18 @@
+{
+  "id": "NSP14:T:219:N",
+  "display_name": "T219N",
+  "variation.featureLoc.feature.name": "NSP14",
+  "codon_label": "219",
+  "codon_label_int": 219,
+  "reference_aa": "T",
+  "reference_nt": 18694,
+  "replacement_aa": "N",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": false,
+  "radical_hanada_category_iii": false,
+  "grantham_distance_double": 64.77428783524499,
+  "grantham_distance_int": 65,
+  "miyata_distance": 1.3981379672196967,
+  "parent_feature": "ORF_1ab",
+  "parent_codon_label": "6144"
+}

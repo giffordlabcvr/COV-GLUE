@@ -1,0 +1,18 @@
+{
+  "id": "N:G:204:P",
+  "display_name": "G204P",
+  "variation.featureLoc.feature.name": "N",
+  "codon_label": "204",
+  "codon_label_int": 204,
+  "reference_aa": "G",
+  "reference_nt": 28883,
+  "replacement_aa": "P",
+  "radical_hanada_category_i": false,
+  "radical_hanada_category_ii": false,
+  "radical_hanada_category_iii": false,
+  "grantham_distance_double": 41.62910033166307,
+  "grantham_distance_int": 42,
+  "miyata_distance": 0.9746515921540382,
+  "parent_feature": null,
+  "parent_codon_label": null
+}

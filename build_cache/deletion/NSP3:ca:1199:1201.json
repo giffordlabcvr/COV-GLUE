@@ -1,0 +1,15 @@
+{
+  "id": "NSP3:ca:1199:1201",
+  "variation.featureLoc.feature.name": "NSP3",
+  "cov_nt_deletion.id": "NSP3:nca:6314:6322",
+  "display_name": "1199-1201",
+  "end_codon": "1201",
+  "end_codon_int": 1201,
+  "parent_end_codon": "2019",
+  "parent_feature": "ORF_1a",
+  "parent_start_codon": "2017",
+  "reference_nt_end": 6322,
+  "reference_nt_start": 6314,
+  "start_codon": "1199",
+  "start_codon_int": 1199
+}

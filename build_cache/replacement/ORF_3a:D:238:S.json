@@ -1,0 +1,18 @@
+{
+  "id": "ORF_3a:D:238:S",
+  "display_name": "D238S",
+  "variation.featureLoc.feature.name": "ORF_3a",
+  "codon_label": "238",
+  "codon_label_int": 238,
+  "reference_aa": "D",
+  "reference_nt": 26104,
+  "replacement_aa": "S",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": true,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 65.47081515974384,
+  "grantham_distance_int": 65,
+  "miyata_distance": 1.8738465776572149,
+  "parent_feature": null,
+  "parent_codon_label": null
+}

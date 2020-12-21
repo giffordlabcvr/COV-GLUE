@@ -1,0 +1,18 @@
+{
+  "id": "NSP6:I:124:S",
+  "display_name": "I124S",
+  "variation.featureLoc.feature.name": "NSP6",
+  "codon_label": "124",
+  "codon_label_int": 124,
+  "reference_aa": "I",
+  "reference_nt": 11342,
+  "replacement_aa": "S",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": false,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 141.79796048658147,
+  "grantham_distance_int": 142,
+  "miyata_distance": 2.951162964200133,
+  "parent_feature": "ORF_1a",
+  "parent_codon_label": "3693"
+}

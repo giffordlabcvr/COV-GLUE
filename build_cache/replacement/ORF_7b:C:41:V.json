@@ -1,0 +1,18 @@
+{
+  "id": "ORF_7b:C:41:V",
+  "display_name": "C41V",
+  "variation.featureLoc.feature.name": "ORF_7b",
+  "codon_label": "41",
+  "codon_label_int": 41,
+  "reference_aa": "C",
+  "reference_nt": 27876,
+  "replacement_aa": "V",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": false,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 191.23250097603446,
+  "grantham_distance_int": 191,
+  "miyata_distance": 0.8629961685286667,
+  "parent_feature": null,
+  "parent_codon_label": null
+}

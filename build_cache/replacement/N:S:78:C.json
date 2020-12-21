@@ -1,0 +1,18 @@
+{
+  "id": "N:S:78:C",
+  "display_name": "S78C",
+  "variation.featureLoc.feature.name": "N",
+  "codon_label": "78",
+  "codon_label_int": 78,
+  "reference_aa": "S",
+  "reference_nt": 28505,
+  "replacement_aa": "C",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": false,
+  "radical_hanada_category_iii": false,
+  "grantham_distance_double": 111.6724956632034,
+  "grantham_distance_int": 112,
+  "miyata_distance": 1.8406989880227782,
+  "parent_feature": null,
+  "parent_codon_label": null
+}
