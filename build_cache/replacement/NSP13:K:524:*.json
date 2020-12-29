@@ -1,0 +1,18 @@
+{
+  "id": "NSP13:K:524:*",
+  "display_name": "K524*",
+  "variation.featureLoc.feature.name": "NSP13",
+  "codon_label": "524",
+  "codon_label_int": 524,
+  "reference_aa": "K",
+  "reference_nt": 17806,
+  "replacement_aa": "*",
+  "radical_hanada_category_i": null,
+  "radical_hanada_category_ii": null,
+  "radical_hanada_category_iii": null,
+  "grantham_distance_double": null,
+  "grantham_distance_int": null,
+  "miyata_distance": null,
+  "parent_feature": "ORF_1ab",
+  "parent_codon_label": "5848"
+}

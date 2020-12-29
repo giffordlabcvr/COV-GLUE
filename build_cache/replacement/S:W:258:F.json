@@ -1,0 +1,18 @@
+{
+  "id": "S:W:258:F",
+  "display_name": "W258F",
+  "variation.featureLoc.feature.name": "S",
+  "codon_label": "258",
+  "codon_label_int": 258,
+  "reference_aa": "W",
+  "reference_nt": 22334,
+  "replacement_aa": "F",
+  "radical_hanada_category_i": false,
+  "radical_hanada_category_ii": false,
+  "radical_hanada_category_iii": false,
+  "grantham_distance_double": 39.65506168264469,
+  "grantham_distance_int": 40,
+  "miyata_distance": 1.1083002184557187,
+  "parent_feature": null,
+  "parent_codon_label": null
+}

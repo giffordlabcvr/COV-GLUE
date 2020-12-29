@@ -1,0 +1,18 @@
+{
+  "id": "NSP12:G:584:E",
+  "display_name": "G584E",
+  "variation.featureLoc.feature.name": "NSP12",
+  "codon_label": "584",
+  "codon_label_int": 584,
+  "reference_aa": "G",
+  "reference_nt": 15190,
+  "replacement_aa": "E",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": true,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 97.85190047927728,
+  "grantham_distance_int": 98,
+  "miyata_distance": 2.7831228164426745,
+  "parent_feature": "ORF_1ab",
+  "parent_codon_label": "4976"
+}

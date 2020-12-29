@@ -1,0 +1,15 @@
+{
+  "id": "S:ca:942:945",
+  "variation.featureLoc.feature.name": "S",
+  "cov_nt_deletion.id": "S:nca:24386:24397",
+  "display_name": "942-945",
+  "end_codon": "945",
+  "end_codon_int": 945,
+  "parent_end_codon": null,
+  "parent_feature": null,
+  "parent_start_codon": null,
+  "reference_nt_end": 24397,
+  "reference_nt_start": 24386,
+  "start_codon": "942",
+  "start_codon_int": 942
+}

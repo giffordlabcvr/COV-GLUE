@@ -1,0 +1,18 @@
+{
+  "id": "NSP9:L:29:V",
+  "display_name": "L29V",
+  "variation.featureLoc.feature.name": "NSP9",
+  "codon_label": "29",
+  "codon_label_int": 29,
+  "reference_aa": "L",
+  "reference_nt": 12770,
+  "replacement_aa": "V",
+  "radical_hanada_category_i": false,
+  "radical_hanada_category_ii": false,
+  "radical_hanada_category_iii": false,
+  "grantham_distance_double": 31.784789976011467,
+  "grantham_distance_int": 32,
+  "miyata_distance": 0.9113906837969203,
+  "parent_feature": "ORF_1a",
+  "parent_codon_label": "4169"
+}

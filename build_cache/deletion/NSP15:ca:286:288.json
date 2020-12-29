@@ -1,0 +1,15 @@
+{
+  "id": "NSP15:ca:286:288",
+  "variation.featureLoc.feature.name": "NSP15",
+  "cov_nt_deletion.id": "NSP15:nca:20476:20484",
+  "display_name": "286-288",
+  "end_codon": "288",
+  "end_codon_int": 288,
+  "parent_end_codon": "6740",
+  "parent_feature": "ORF_1ab",
+  "parent_start_codon": "6738",
+  "reference_nt_end": 20484,
+  "reference_nt_start": 20476,
+  "start_codon": "286",
+  "start_codon_int": 286
+}

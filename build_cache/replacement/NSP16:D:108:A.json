@@ -1,0 +1,18 @@
+{
+  "id": "NSP16:D:108:A",
+  "display_name": "D108A",
+  "variation.featureLoc.feature.name": "NSP16",
+  "codon_label": "108",
+  "codon_label_int": 108,
+  "reference_aa": "D",
+  "reference_nt": 20980,
+  "replacement_aa": "A",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": true,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 125.74859020850259,
+  "grantham_distance_int": 126,
+  "miyata_distance": 2.3675832690225778,
+  "parent_feature": "ORF_1ab",
+  "parent_codon_label": "6906"
+}

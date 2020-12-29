@@ -1,0 +1,18 @@
+{
+  "id": "NSP2:T:569:V",
+  "display_name": "T569V",
+  "variation.featureLoc.feature.name": "NSP2",
+  "codon_label": "569",
+  "codon_label_int": 569,
+  "reference_aa": "T",
+  "reference_nt": 2510,
+  "replacement_aa": "V",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": false,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 69.49621702875237,
+  "grantham_distance_int": 69,
+  "miyata_distance": 1.4188434664680434,
+  "parent_feature": "ORF_1a",
+  "parent_codon_label": "749"
+}

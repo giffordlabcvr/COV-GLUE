@@ -1,0 +1,18 @@
+{
+  "id": "NSP3:L:297:A",
+  "display_name": "L297A",
+  "variation.featureLoc.feature.name": "NSP3",
+  "codon_label": "297",
+  "codon_label_int": 297,
+  "reference_aa": "L",
+  "reference_nt": 3608,
+  "replacement_aa": "A",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": false,
+  "radical_hanada_category_iii": false,
+  "grantham_distance_double": 96.18707222808752,
+  "grantham_distance_int": 96,
+  "miyata_distance": 2.7579192316336534,
+  "parent_feature": "ORF_1a",
+  "parent_codon_label": "1115"
+}

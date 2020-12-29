@@ -1,0 +1,15 @@
+{
+  "id": "NSP5:ca:151:151",
+  "variation.featureLoc.feature.name": "NSP5",
+  "cov_nt_deletion.id": "NSP5:nca:10505:10507",
+  "display_name": "151",
+  "end_codon": "151",
+  "end_codon_int": 151,
+  "parent_end_codon": "3414",
+  "parent_feature": "ORF_1a",
+  "parent_start_codon": "3414",
+  "reference_nt_end": 10507,
+  "reference_nt_start": 10505,
+  "start_codon": "151",
+  "start_codon_int": 151
+}

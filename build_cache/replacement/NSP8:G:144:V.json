@@ -1,0 +1,18 @@
+{
+  "id": "NSP8:G:144:V",
+  "display_name": "G144V",
+  "variation.featureLoc.feature.name": "NSP8",
+  "codon_label": "144",
+  "codon_label_int": 144,
+  "reference_aa": "G",
+  "reference_nt": 12521,
+  "replacement_aa": "V",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": false,
+  "radical_hanada_category_iii": false,
+  "grantham_distance_double": 108.78738843583756,
+  "grantham_distance_int": 109,
+  "miyata_distance": 2.7580349580646812,
+  "parent_feature": "ORF_1a",
+  "parent_codon_label": "4086"
+}
