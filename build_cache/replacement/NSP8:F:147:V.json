@@ -1,0 +1,18 @@
+{
+  "id": "NSP8:F:147:V",
+  "display_name": "F147V",
+  "variation.featureLoc.feature.name": "NSP8",
+  "codon_label": "147",
+  "codon_label_int": 147,
+  "reference_aa": "F",
+  "reference_nt": 12530,
+  "replacement_aa": "V",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": true,
+  "radical_hanada_category_iii": false,
+  "grantham_distance_double": 49.935189864931544,
+  "grantham_distance_int": 50,
+  "miyata_distance": 1.4322877272611014,
+  "parent_feature": "ORF_1a",
+  "parent_codon_label": "4089"
+}

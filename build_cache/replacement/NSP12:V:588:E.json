@@ -1,0 +1,18 @@
+{
+  "id": "NSP12:V:588:E",
+  "display_name": "V588E",
+  "variation.featureLoc.feature.name": "NSP12",
+  "codon_label": "588",
+  "codon_label_int": 588,
+  "reference_aa": "V",
+  "reference_nt": 15202,
+  "replacement_aa": "E",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": true,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 121.32850629061132,
+  "grantham_distance_int": 121,
+  "miyata_distance": 2.966682149792932,
+  "parent_feature": "ORF_1ab",
+  "parent_codon_label": "4980"
+}

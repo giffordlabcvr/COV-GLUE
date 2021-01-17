@@ -1,0 +1,17 @@
+{
+  "id": "NSP3:ca:1455:1923496627:1456",
+  "variation.featureLoc.feature.name": "NSP3",
+  "cov_nt_insertion.id": "NSP3:nca:7084:1923496627:7085",
+  "display_name": "1455-NG-1456",
+  "last_codon_before": "1455",
+  "last_codon_before_int": 1455,
+  "first_codon_after": "1456",
+  "first_codon_after_int": 1456,
+  "last_ref_nt_before": 7084,
+  "first_ref_nt_after": 7085,
+  "parent_feature": "ORF_1a",
+  "parent_last_codon_before": "2273",
+  "parent_first_codon_after": "2274",
+  "inserted_aas_length": 2,
+  "inserted_aas": "NG"
+}

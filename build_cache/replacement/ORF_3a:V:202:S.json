@@ -1,0 +1,18 @@
+{
+  "id": "ORF_3a:V:202:S",
+  "display_name": "V202S",
+  "variation.featureLoc.feature.name": "ORF_3a",
+  "codon_label": "202",
+  "codon_label_int": 202,
+  "reference_aa": "V",
+  "reference_nt": 25996,
+  "replacement_aa": "S",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": false,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 123.03395806514986,
+  "grantham_distance_int": 123,
+  "miyata_distance": 2.150300191132382,
+  "parent_feature": null,
+  "parent_codon_label": null
+}

@@ -1,0 +1,18 @@
+{
+  "id": "NSP12:T:248:V",
+  "display_name": "T248V",
+  "variation.featureLoc.feature.name": "NSP12",
+  "codon_label": "248",
+  "codon_label_int": 248,
+  "reference_aa": "T",
+  "reference_nt": 14182,
+  "replacement_aa": "V",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": false,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 69.49621702875237,
+  "grantham_distance_int": 69,
+  "miyata_distance": 1.4188434664680434,
+  "parent_feature": "ORF_1ab",
+  "parent_codon_label": "4640"
+}

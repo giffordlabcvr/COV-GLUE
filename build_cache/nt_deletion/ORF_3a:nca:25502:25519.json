@@ -1,0 +1,8 @@
+{
+  "id": "ORF_3a:nca:25502:25519",
+  "variation.featureLoc.feature.name": "ORF_3a",
+  "display_name": "25502-25519",
+  "reference_nt_start": 25502,
+  "reference_nt_end": 25519,
+  "parent_feature": null
+}

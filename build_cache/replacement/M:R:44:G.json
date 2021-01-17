@@ -1,0 +1,18 @@
+{
+  "id": "M:R:44:G",
+  "display_name": "R44G",
+  "variation.featureLoc.feature.name": "M",
+  "codon_label": "44",
+  "codon_label_int": 44,
+  "reference_aa": "R",
+  "reference_nt": 26652,
+  "replacement_aa": "G",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": true,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 125.12919263514027,
+  "grantham_distance_int": 125,
+  "miyata_distance": 3.584766932145264,
+  "parent_feature": null,
+  "parent_codon_label": null
+}

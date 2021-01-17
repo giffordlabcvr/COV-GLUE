@@ -1,0 +1,18 @@
+{
+  "id": "NSP8:Y:71:C",
+  "display_name": "Y71C",
+  "variation.featureLoc.feature.name": "NSP8",
+  "codon_label": "71",
+  "codon_label_int": 71,
+  "reference_aa": "Y",
+  "reference_nt": 12302,
+  "replacement_aa": "C",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": true,
+  "radical_hanada_category_iii": false,
+  "grantham_distance_double": 193.72470051146485,
+  "grantham_distance_int": 194,
+  "miyata_distance": 2.376405280106065,
+  "parent_feature": "ORF_1a",
+  "parent_codon_label": "4013"
+}

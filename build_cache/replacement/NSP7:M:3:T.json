@@ -1,0 +1,18 @@
+{
+  "id": "NSP7:M:3:T",
+  "display_name": "M3T",
+  "variation.featureLoc.feature.name": "NSP7",
+  "codon_label": "3",
+  "codon_label_int": 3,
+  "reference_aa": "M",
+  "reference_nt": 11849,
+  "replacement_aa": "T",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": false,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 81.0396927923509,
+  "grantham_distance_int": 81,
+  "miyata_distance": 1.8553256449702145,
+  "parent_feature": "ORF_1a",
+  "parent_codon_label": "3862"
+}

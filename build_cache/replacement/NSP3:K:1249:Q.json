@@ -1,0 +1,18 @@
+{
+  "id": "NSP3:K:1249:Q",
+  "display_name": "K1249Q",
+  "variation.featureLoc.feature.name": "NSP3",
+  "codon_label": "1249",
+  "codon_label_int": 1249,
+  "reference_aa": "K",
+  "reference_nt": 6464,
+  "replacement_aa": "Q",
+  "radical_hanada_category_i": true,
+  "radical_hanada_category_ii": true,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 53.228340150510796,
+  "grantham_distance_int": 53,
+  "miyata_distance": 1.0554475691875203,
+  "parent_feature": "ORF_1a",
+  "parent_codon_label": "2067"
+}

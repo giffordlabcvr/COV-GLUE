@@ -1,0 +1,15 @@
+{
+  "id": "ORF_7b:ca:7:7",
+  "variation.featureLoc.feature.name": "ORF_7b",
+  "cov_nt_deletion.id": "ORF_7b:nca:27774:27776",
+  "display_name": "7",
+  "end_codon": "7",
+  "end_codon_int": 7,
+  "parent_end_codon": null,
+  "parent_feature": null,
+  "parent_start_codon": null,
+  "reference_nt_end": 27776,
+  "reference_nt_start": 27774,
+  "start_codon": "7",
+  "start_codon_int": 7
+}

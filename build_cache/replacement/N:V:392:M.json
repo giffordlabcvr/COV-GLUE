@@ -1,0 +1,18 @@
+{
+  "id": "N:V:392:M",
+  "display_name": "V392M",
+  "variation.featureLoc.feature.name": "N",
+  "codon_label": "392",
+  "codon_label_int": 392,
+  "reference_aa": "V",
+  "reference_nt": 29447,
+  "replacement_aa": "M",
+  "radical_hanada_category_i": false,
+  "radical_hanada_category_ii": false,
+  "radical_hanada_category_iii": false,
+  "grantham_distance_double": 21.521799383987368,
+  "grantham_distance_int": 22,
+  "miyata_distance": 0.6173356298910421,
+  "parent_feature": null,
+  "parent_codon_label": null
+}

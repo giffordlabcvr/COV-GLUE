@@ -1,0 +1,18 @@
+{
+  "id": "S:N:99:D",
+  "display_name": "N99D",
+  "variation.featureLoc.feature.name": "S",
+  "codon_label": "99",
+  "codon_label_int": 99,
+  "reference_aa": "N",
+  "reference_nt": 21857,
+  "replacement_aa": "D",
+  "radical_hanada_category_i": false,
+  "radical_hanada_category_ii": true,
+  "radical_hanada_category_iii": true,
+  "grantham_distance_double": 23.00535500058712,
+  "grantham_distance_int": 23,
+  "miyata_distance": 0.6515287120397918,
+  "parent_feature": null,
+  "parent_codon_label": null
+}
