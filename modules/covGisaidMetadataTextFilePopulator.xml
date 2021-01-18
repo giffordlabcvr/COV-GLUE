@@ -200,6 +200,10 @@
             <matchPattern>Africa / Cote dIvoire</matchPattern>
             <outputTemplate>CIV</outputTemplate>
         </valueConverter>
+        <valueConverter>
+            <matchPattern>Africa / Mosambik</matchPattern>
+            <outputTemplate>MOZ</outputTemplate>
+        </valueConverter>
     </isoCountryTextFileColumn>
     <textFileColumn>
         <header>covv_location</header>
