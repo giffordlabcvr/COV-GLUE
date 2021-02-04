@@ -177,6 +177,10 @@
             <outputTemplate>VCT</outputTemplate>
         </valueConverter>
         <valueConverter>
+            <matchPattern>North America / St. Lucia</matchPattern>
+            <outputTemplate>LCA</outputTemplate>
+        </valueConverter>
+        <valueConverter>
             <matchPattern>South America / Curacao</matchPattern>
             <outputTemplate>CUW</outputTemplate>
         </valueConverter>
