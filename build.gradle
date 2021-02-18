@@ -60,7 +60,7 @@ task buildCovGlueDBMinimal(type: JavaExec, dependsOn: 'copyGluetoolsJar') {
 	args '-c', 'remote-gluetools-config-minimal.xml', '-i', 'run', 'file', 'covMinimalProject.glue'
 }
 
-def scmCustomKey = '/Users/evdoxiataka/.ssh/github_id_rsa_old_format'
+def scmCustomKey = '/Users/imacadmin/.ssh/github_id_rsa'
 
 scmVersion {
 	hooks {
