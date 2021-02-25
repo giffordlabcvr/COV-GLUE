@@ -205,10 +205,6 @@
             <outputTemplate>CIV</outputTemplate>
         </valueConverter>
         <valueConverter>
-            <matchPattern>Africa / Côte dIvoire</matchPattern>
-            <outputTemplate>CIV</outputTemplate>
-        </valueConverter>
-        <valueConverter>
             <matchPattern>Africa / Cote dIvoire</matchPattern>
             <outputTemplate>CIV</outputTemplate>
         </valueConverter>
