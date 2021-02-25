@@ -189,6 +189,10 @@
             <outputTemplate>BES</outputTemplate>
         </valueConverter>
         <valueConverter>
+            <matchPattern>South America / Sint Eustatius</matchPattern>
+            <outputTemplate>BES</outputTemplate>
+        </valueConverter>
+        <valueConverter>
             <matchPattern>South America / Trinidad</matchPattern>
             <outputTemplate>TTO</outputTemplate>
         </valueConverter>
