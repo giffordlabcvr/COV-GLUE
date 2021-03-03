@@ -193,6 +193,10 @@
             <outputTemplate>BES</outputTemplate>
         </valueConverter>
         <valueConverter>
+            <matchPattern>South America / Sint Maarten / Sint Maarten</matchPattern>
+            <outputTemplate>SXM</outputTemplate>
+        </valueConverter>
+        <valueConverter>
             <matchPattern>South America / Trinidad</matchPattern>
             <outputTemplate>TTO</outputTemplate>
         </valueConverter>
