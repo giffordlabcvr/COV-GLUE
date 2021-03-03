@@ -41,7 +41,7 @@ schema-project cov
     create field submission_month VARCHAR
     create field submission_month_day INTEGER
     create field host_species VARCHAR 100
-    create field place_sampled VARCHAR 100
+    create field place_sampled VARCHAR 500
     create field gisaid_virus_name VARCHAR 200
     create field gisaid_specimen CLOB
     create field gisaid_patient_sex VARCHAR 50
