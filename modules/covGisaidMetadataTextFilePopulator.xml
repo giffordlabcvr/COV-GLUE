@@ -173,6 +173,10 @@
             <outputTemplate>CZE</outputTemplate>
         </valueConverter>
         <valueConverter>
+            <matchPattern>Europe / Blegium / Schaarbeek</matchPattern>
+            <outputTemplate>BEL</outputTemplate>
+        </valueConverter>
+        <valueConverter>
             <matchPattern>North America / Saint Vincent and the Grenadines</matchPattern>
             <outputTemplate>VCT</outputTemplate>
         </valueConverter>
