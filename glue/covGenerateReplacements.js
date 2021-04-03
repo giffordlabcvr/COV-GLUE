@@ -176,10 +176,14 @@ _.each(_.values(replacementsSet), function(replacementObj) {
 		var sourceName = memberObj["sequence.source.name"];
 		var sequenceID = memberObj["sequence.sequenceID"];
 		var linkObjId = replacementObj.id+":"+sourceName+":"+sequenceID;
+		var variation_present = true;
 		glue.command(["create", "custom-table-row", "cov_replacement_sequence", linkObjId]);
 		glue.inMode("custom-table-row/cov_replacement_sequence/"+linkObjId, function() {
 			glue.command(["set", "link-target", "cov_replacement", "custom-table-row/cov_replacement/"+replacementObj.id]);
 			glue.command(["set", "link-target", "sequence", "sequence/"+sourceName+"/"+sequenceID]);
+		});
+		glue.inMode("sequence/"+sourceName+"/"+sequenceID, function() {
+			glue.command(["set", "field", "variation_present", variation_present]);
 		});
 	});
 	

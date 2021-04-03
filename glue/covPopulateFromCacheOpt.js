@@ -242,17 +242,6 @@ function ensure_insertions(idList) {
 	
 }
 
-
-var lineageVersion;
-
-glue.inMode("custom-table-row/cov_project_properties/lineageVersion", function() {
-	lineageVersion = glue.command(["show", "property", "value"]).propertyValueResult.value;
-});
-
-// variant cache test 
-// var whereClause = "sequenceID in ('EPI_ISL_500981', 'EPI_ISL_465549')";
-
-// production
 var whereClause = "analyse_variation = true";
 
 
@@ -268,8 +257,6 @@ _.each(seqObjs, function(seqObj) {
 
 	var jsonCachePath = "build_cache/sequence_results/"+sourceName+"/"+sequenceID+".json";
 	var jsonCacheExists = glue.command(["file-util", "file-exists", jsonCachePath]).fileUtilFileExistsResult.exists;
-
-	var cg_lineage_from_cache = false;
 	var cg_reps_from_cache = false;
 	var cg_deletions_from_cache = false;
 	var cg_insertions_from_cache = false;
@@ -282,20 +269,8 @@ _.each(seqObjs, function(seqObj) {
 			nucleotides = glue.command(["show", "nucleotides"]).nucleotidesResult.nucleotides;
 		});
 		if(nucleotides == cacheObj.nucleotides) {
-			if(cacheObj.lineageVersion == lineageVersion && 
-				cacheObj.cov_glue_lineage != null && 
-				cacheObj.cov_glue_lw_ratio != null) {
-
-				cg_lineage_from_cache = true;
-
-				glue.inMode("sequence/"+sourceName+"/"+sequenceID, function() {
-						glue.command(["set", "field", "cov_glue_lineage", cacheObj.cov_glue_lineage]);
-						glue.command(["set", "field", "cov_glue_lw_ratio", cacheObj.cov_glue_lw_ratio]);
-				});
-			}
 			if(cacheObj.replacement != null) {
 				cg_reps_from_cache = true;
-				variation_present = true;
 				ensure_reps(cacheObj.replacement);
 				_.each(cacheObj.replacement, function(repID) {
 					var linkObjId = repID+":"+sourceName+":"+sequenceID;
@@ -308,7 +283,6 @@ _.each(seqObjs, function(seqObj) {
 			}
 			if(cacheObj.nt_deletion != null && cacheObj.deletion != null) {
 				cg_deletions_from_cache = true;
-				variation_present = true;
 				ensure_nt_deletions(cacheObj.nt_deletion);
 				_.each(cacheObj.nt_deletion, function(ntDelID) {
 					var linkObjId = ntDelID+":"+sourceName+":"+sequenceID;
@@ -330,7 +304,6 @@ _.each(seqObjs, function(seqObj) {
 			}
 			if(cacheObj.nt_insertion != null && cacheObj.insertion != null	) {
 				cg_insertions_from_cache = true;
-				variation_present = true;
 				ensure_nt_insertions(cacheObj.nt_insertion);
 				_.each(cacheObj.nt_insertion, function(ntInsID) {
 					var linkObjId = ntInsID+":"+sourceName+":"+sequenceID;
@@ -353,7 +326,6 @@ _.each(seqObjs, function(seqObj) {
 		}
 	}
 	glue.inMode("sequence/"+sourceName+"/"+sequenceID, function() {
-		glue.command(["set", "field", "cg_lineage_from_cache", cg_lineage_from_cache]);
 		glue.command(["set", "field", "cg_reps_from_cache", cg_reps_from_cache]);
 		glue.command(["set", "field", "cg_deletions_from_cache", cg_deletions_from_cache]);
 		glue.command(["set", "field", "cg_insertions_from_cache", cg_insertions_from_cache]);
@@ -366,7 +338,6 @@ _.each(seqObjs, function(seqObj) {
 		glue.logInfo("Populated sequence-associated data from JSON build cache files for "+processed+" / "+seqObjs.length+" sequences");
 	}
 });
-
 glue.command(["commit"]);
 glue.command(["new-context"]);
 glue.logInfo("Populated sequence-associated data from JSON build cache files for "+processed+" / "+seqObjs.length+" sequences");

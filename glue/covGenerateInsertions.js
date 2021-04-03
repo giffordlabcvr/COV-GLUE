@@ -250,11 +250,16 @@ function createNtInsertion(ntInsertionObj) {
 	_.each(ntInsertionObj.memberSeqs, function(memberObj) {
 		var sourceName = memberObj["sequence.source.name"];
 		var sequenceID = memberObj["sequence.sequenceID"];
+		//variation_present flag added
+		var variation_present = true;
 		var linkObjId = ntInsertionObj.id+":"+sourceName+":"+sequenceID;
 		glue.command(["create", "custom-table-row", "cov_nt_insertion_sequence", linkObjId]);
 		glue.inMode("custom-table-row/cov_nt_insertion_sequence/"+linkObjId, function() {
 			glue.command(["set", "link-target", "cov_nt_insertion", "custom-table-row/cov_nt_insertion/"+ntInsertionObj.id]);
 			glue.command(["set", "link-target", "sequence", "sequence/"+sourceName+"/"+sequenceID]);
+		});
+		glue.inMode("sequence/"+sourceName+"/"+sequenceID, function() {
+			glue.command(["set", "field", "variation_present", variation_present]);
 		});
 	});
 }
@@ -343,10 +348,14 @@ function createInsertion(insertionObj) {
 		var sourceName = memberObj["sequence.source.name"];
 		var sequenceID = memberObj["sequence.sequenceID"];
 		var linkObjId = insertionObj.id+":"+sourceName+":"+sequenceID;
+		var variation_present = true;
 		glue.command(["create", "custom-table-row", "cov_insertion_sequence", linkObjId]);
 		glue.inMode("custom-table-row/cov_insertion_sequence/"+linkObjId, function() {
 			glue.command(["set", "link-target", "cov_insertion", "custom-table-row/cov_insertion/"+insertionObj.id]);
 			glue.command(["set", "link-target", "sequence", "sequence/"+sourceName+"/"+sequenceID]);
+		});
+		glue.inMode("sequence/"+sourceName+"/"+sequenceID, function() {
+			glue.command(["set", "field", "variation_present", variation_present]);
 		});
 	});
 }

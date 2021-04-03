@@ -241,10 +241,14 @@ function createNtDeletion(ntDeletionObj) {
 		var sourceName = memberObj["sequence.source.name"];
 		var sequenceID = memberObj["sequence.sequenceID"];
 		var linkObjId = ntDeletionObj.id+":"+sourceName+":"+sequenceID;
+		var variation_present = true;
 		glue.command(["create", "custom-table-row", "cov_nt_deletion_sequence", linkObjId]);
 		glue.inMode("custom-table-row/cov_nt_deletion_sequence/"+linkObjId, function() {
 			glue.command(["set", "link-target", "cov_nt_deletion", "custom-table-row/cov_nt_deletion/"+ntDeletionObj.id]);
 			glue.command(["set", "link-target", "sequence", "sequence/"+sourceName+"/"+sequenceID]);
+		});
+		glue.inMode("sequence/"+sourceName+"/"+sequenceID, function() {
+			glue.command(["set", "field", "variation_present", variation_present]);
 		});
 	});
 }
@@ -334,10 +338,14 @@ function createDeletion(deletionObj) {
 		var sourceName = memberObj["sequence.source.name"];
 		var sequenceID = memberObj["sequence.sequenceID"];
 		var linkObjId = deletionObj.id+":"+sourceName+":"+sequenceID;
+		var variation_present = true;
 		glue.command(["create", "custom-table-row", "cov_deletion_sequence", linkObjId]);
 		glue.inMode("custom-table-row/cov_deletion_sequence/"+linkObjId, function() {
 			glue.command(["set", "link-target", "cov_deletion", "custom-table-row/cov_deletion/"+deletionObj.id]);
 			glue.command(["set", "link-target", "sequence", "sequence/"+sourceName+"/"+sequenceID]);
+		});
+		glue.inMode("sequence/"+sourceName+"/"+sequenceID, function() {
+			glue.command(["set", "field", "variation_present", variation_present]);
 		});
 	});
 }

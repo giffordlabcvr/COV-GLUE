@@ -49,6 +49,13 @@ task buildCovGlueDB(type: JavaExec, dependsOn: 'copyGluetoolsJar') {
 	args '-c', 'remote-gluetools-config.xml', '-i', 'run', 'file', 'covProject.glue'
 }
 
+task buildCovGlueOptDB(type: JavaExec, dependsOn: 'copyGluetoolsJar') {
+	classpath "build/runtimeJars/gluetools-core.jar"
+	main 'uk.ac.gla.cvr.gluetools.core.console.Console'
+	jvmArgs '-Xmx16g'
+	args '-c', 'remote-gluetools-config.xml', '-i', 'run', 'file', 'covProjectOpt.glue'
+}
+
 task wipeCovGlueDBMinimal(type: Exec) {
 	commandLine "bash", "-c", "echo 'drop database COV_MINI; create database COV_MINI character set UTF8;' | mysql -u covmini --password=covmini"
 }

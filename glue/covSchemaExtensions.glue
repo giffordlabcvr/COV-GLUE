@@ -83,6 +83,8 @@ schema-project cov
     create field cg_deletions_from_cache BOOLEAN
     # true if insertions were loaded from the cache
     create field cg_insertions_from_cache BOOLEAN
+    # true if variations are present in the sequence
+    create field variation_present BOOLEAN
 
     # set to non null if the 3 constituent parts are present (which they normally are)
     # suitable for sorting / filtering
