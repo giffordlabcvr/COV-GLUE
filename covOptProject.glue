@@ -75,7 +75,7 @@ project cov
   run script glue/covSetVariantNumSeqs.js
   
   # cache derived results to build_cache directory
-  run script glue/covCacheDerivedResults.js
+  run script glue/covCacheDerivedResultsOpt.js
   
   # Validate
   validate
