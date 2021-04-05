@@ -53,7 +53,7 @@ task buildCovGlueOptDB(type: JavaExec, dependsOn: 'copyGluetoolsJar') {
 	classpath "build/runtimeJars/gluetools-core.jar"
 	main 'uk.ac.gla.cvr.gluetools.core.console.Console'
 	jvmArgs '-Xmx16g'
-	args '-c', 'remote-gluetools-config.xml', '-i', 'run', 'file', 'covProjectOpt.glue'
+	args '-c', 'remote-gluetools-config.xml', '-i', 'run', 'file', 'covOptProject.glue'
 }
 
 task wipeCovGlueDBMinimal(type: Exec) {
