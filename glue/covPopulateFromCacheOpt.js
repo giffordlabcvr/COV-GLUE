@@ -271,6 +271,7 @@ _.each(seqObjs, function(seqObj) {
 		if(nucleotides == cacheObj.nucleotides) {
 			if(cacheObj.replacement != null) {
 				cg_reps_from_cache = true;
+				variation_present = true;
 				ensure_reps(cacheObj.replacement);
 				_.each(cacheObj.replacement, function(repID) {
 					var linkObjId = repID+":"+sourceName+":"+sequenceID;
@@ -283,6 +284,7 @@ _.each(seqObjs, function(seqObj) {
 			}
 			if(cacheObj.nt_deletion != null && cacheObj.deletion != null) {
 				cg_deletions_from_cache = true;
+				variation_present = true;
 				ensure_nt_deletions(cacheObj.nt_deletion);
 				_.each(cacheObj.nt_deletion, function(ntDelID) {
 					var linkObjId = ntDelID+":"+sourceName+":"+sequenceID;
@@ -304,6 +306,7 @@ _.each(seqObjs, function(seqObj) {
 			}
 			if(cacheObj.nt_insertion != null && cacheObj.insertion != null	) {
 				cg_insertions_from_cache = true;
+				variation_present = true;
 				ensure_nt_insertions(cacheObj.nt_insertion);
 				_.each(cacheObj.nt_insertion, function(ntInsID) {
 					var linkObjId = ntInsID+":"+sourceName+":"+sequenceID;
