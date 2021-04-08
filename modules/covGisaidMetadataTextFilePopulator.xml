@@ -199,6 +199,10 @@
         <valueConverter>
             <matchPattern>South America / St Eustatius</matchPattern>
             <outputTemplate>BES</outputTemplate>
+        </valueConverter>
+        <valueConverter>
+            <matchPattern>South America / Sint Eustatius</matchPattern>
+            <outputTemplate>BES</outputTemplate>
         </valueConverter>  
         <valueConverter>
             <matchPattern>South America / Sint Maarten / Sint Maarten</matchPattern>
