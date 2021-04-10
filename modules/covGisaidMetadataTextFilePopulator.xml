@@ -205,6 +205,10 @@
             <outputTemplate>BES</outputTemplate>
         </valueConverter>  
         <valueConverter>
+            <matchPattern>South America / Bonaire / Bonaire</matchPattern>
+            <outputTemplate>BES</outputTemplate>
+        </valueConverter>
+        <valueConverter>
             <matchPattern>South America / Sint Maarten / Sint Maarten</matchPattern>
             <outputTemplate>SXM</outputTemplate>
         </valueConverter>
