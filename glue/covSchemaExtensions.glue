@@ -32,7 +32,7 @@ schema-project cov
 
   table sequence
     create field length INTEGER
-    create field isolate VARCHAR
+    create field isolate VARCHAR 100
     create field gisaid_passage_details VARCHAR
     create field collection_year INTEGER 
     create field collection_month VARCHAR
