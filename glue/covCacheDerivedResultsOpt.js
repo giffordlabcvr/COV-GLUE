@@ -65,11 +65,11 @@ _.each(variantTypes, function(variantType) {
 });
 
 
-//var lineageVersion;
+var lineageVersion;
 
-/*glue.inMode("custom-table-row/cov_project_properties/lineageVersion", function() {
+glue.inMode("custom-table-row/cov_project_properties/lineageVersion", function() {
 	lineageVersion = glue.command(["show", "property", "value"]).propertyValueResult.value;
-});*/
+});
 
 var seqObjs = glue.tableToObjects(glue.command(["list", "sequence", "-w", "analyse_variation = true and variation_present = true", "source.name", "sequenceID"]));
 //var seqObjs = glue.tableToObjects(glue.command(["list", "sequence", "-w", "analyse_variation = true", "source.name", "sequenceID"]));
@@ -81,10 +81,9 @@ glue.logInfo("Generating JSON build cache files for "+seqObjs.length+" sequences
 _.each(seqObjs, function(seqObj) {
 	var sourceName = seqObj["source.name"];
 	var sequenceID = seqObj["sequenceID"];
-	/*var cacheObj = {
+	var cacheObj = {
 		lineageVersion: lineageVersion	
-	}*/
-	var cacheObj;
+	}
 	glue.inMode("sequence/"+sourceName+"/"+sequenceID, function() {
 		cacheObj.nucleotides = glue.command(["show", "nucleotides"]).nucleotidesResult.nucleotides;
 		//cacheObj.cov_glue_lineage = glue.command(["show", "property", "cov_glue_lineage"]).propertyValueResult.value;
