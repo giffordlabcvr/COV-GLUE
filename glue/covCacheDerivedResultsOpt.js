@@ -65,10 +65,10 @@ _.each(variantTypes, function(variantType) {
 });
 
 
-var lineageVersion;
+var lineageVersions;
 
 glue.inMode("custom-table-row/cov_project_properties/lineageVersion", function() {
-	lineageVersion = glue.command(["show", "property", "value"]).propertyValueResult.value;
+	lineageVersions = glue.command(["show", "property", "value"]).propertyValueResult.value;
 });
 
 var seqObjs = glue.tableToObjects(glue.command(["list", "sequence", "-w", "analyse_variation = true and variation_present = true", "source.name", "sequenceID"]));
@@ -82,7 +82,7 @@ _.each(seqObjs, function(seqObj) {
 	var sourceName = seqObj["source.name"];
 	var sequenceID = seqObj["sequenceID"];
 	var cacheObj = {
-		lineageVersion: lineageVersion	
+		lineageVersions: lineageVersions	
 	}
 	glue.inMode("sequence/"+sourceName+"/"+sequenceID, function() {
 		cacheObj.nucleotides = glue.command(["show", "nucleotides"]).nucleotidesResult.nucleotides;
