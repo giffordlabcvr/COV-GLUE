@@ -61,7 +61,8 @@ function reportDocument(document) {
 	var resultMap = {};
 	var placerResultContainer = {};
 	// apply blast recogniser / genotyping together on set, as this is more efficient.
-	initResultMap(fastaDocument, fastaMap, resultMap, placerResultContainer);
+	//initResultMap(fastaDocument, fastaMap, resultMap, placerResultContainer);
+	initResultMap(fastaDocument, fastaMap, resultMap);
 	var numSeqs = fastaDocument.nucleotideFasta.sequences.length;
 	var processed = 1;
 	// apply report generation to each sequence in the set.
@@ -73,7 +74,7 @@ function reportDocument(document) {
 	var result = {
 		covWebReport:  { 
 			results: covReports, 
-			placerResult: placerResultContainer.placerResult
+			//placerResult: placerResultContainer.placerResult
 		}
 	};
 
@@ -102,13 +103,15 @@ function reportFasta(fastaFilePath) {
 	var fastaMap = {};
 	var resultMap = {};
 	var placerResultContainer = {};
-	initResultMap(fastaDocument, fastaMap, resultMap, placerResultContainer);
+	//initResultMap(fastaDocument, fastaMap, resultMap, placerResultContainer);
+	initResultMap(fastaDocument, fastaMap, resultMap);
 	var singleFastaReport = generateSingleFastaReport(fastaMap, resultMap, fastaFilePath);
-	singleFastaReport.covReport["placerResult"] = placerResultContainer.placerResult;
+	//singleFastaReport.covReport["placerResult"] = placerResultContainer.placerResult;
 	return singleFastaReport;
 }
 
-function initResultMap(fastaDocument, fastaMap, resultMap, placerResultContainer) {
+//function initResultMap(fastaDocument, fastaMap, resultMap, placerResultContainer) {
+function initResultMap(fastaDocument, fastaMap, resultMap) {	
 	glue.log("FINE", "covReportingController.initResultMap fastaDocument:", fastaDocument);
 	_.each(fastaDocument.nucleotideFasta.sequences, function(sequenceObj) {
 		fastaMap[sequenceObj.id] = sequenceObj;
@@ -125,10 +128,10 @@ function initResultMap(fastaDocument, fastaMap, resultMap, placerResultContainer
 	glue.log("FINE", "covReportingController.initResultMap, result map after recogniser", resultMap);
 
 	// apply phylogenetic placement
-	placeFasta(fastaMap, resultMap, placerResultContainer);
+	//placeFasta(fastaMap, resultMap, placerResultContainer);
 
 	
-	glue.log("FINE", "covReportingController.initResultMap, result map after placement / lineage assignment", resultMap);
+	//glue.log("FINE", "covReportingController.initResultMap, result map after placement / lineage assignment", resultMap);
 }
 
 function generateQueryToTargetRefSegs(targetRefName, nucleotides) {
@@ -597,7 +600,7 @@ function visualisationHints(queryNucleotides, targetRefName, queryToTargetRefSeg
  * This function takes a fastaMap of id -> { id, nucleotideFasta }, and a result map of id -> ? 
  * and runs max likelihood placement on the subset of sequences that have been identified as forward nCoV.
  */
-function placeFasta(fastaMap, resultMap, placerResultContainer) {
+/*function placeFasta(fastaMap, resultMap, placerResultContainer) {
 	var placementFastaMap = {};
 	_.each(_.values(resultMap), function(resultObj) {
 		if(resultObj.isForwardCov && !resultObj.isReverseCov) {
@@ -688,7 +691,7 @@ function placeFasta(fastaMap, resultMap, placerResultContainer) {
 			}
 		});
 	}
-}
+}*/
 
 /*
  * Use the fastaUtility module to reverse complement a FASTA string

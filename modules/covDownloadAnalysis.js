@@ -44,7 +44,7 @@ function addResultRowsForCovReport(covReport, rows) {
 	addCovReportRow(covReport, rows, "isHCoV19", [isHCoV19]);
 	var lineage;
 	var lwRatio;
-	if(sequenceResult.isForwardCov) {
+	/*if(sequenceResult.isForwardCov) {
 		if(sequenceResult.lineageAssignmentResult != null &&
 				sequenceResult.lineageAssignmentResult.bestLineage != null) {
 			lineage = sequenceResult.lineageAssignmentResult.bestLineage;
@@ -58,7 +58,7 @@ function addResultRowsForCovReport(covReport, rows) {
 		lwRatio = "N/A";
 	}
 	addCovReportRow(covReport, rows, "lineage", [lineage]);
-	addCovReportRow(covReport, rows, "totalLikelihoodWeightRatio", [lwRatio]);
+	addCovReportRow(covReport, rows, "totalLikelihoodWeightRatio", [lwRatio]);*/
 	if(sequenceResult.primerProbeMismatchReport != null) {
 		_.each(sequenceResult.primerProbeMismatchReport.covPPReport.assays, function(assay) {
 			if(assay.primersWithIssues > 0) {
@@ -148,8 +148,8 @@ function generateTableResult(detailLevel, covWebReport) {
 			            "detail6",
 			            "detail7",
 			            "detail8",
-			            "detail9",
-			            "detail10",
+			            //"detail9",
+			            //"detail10",
 			        ],
 			        "row":rows
 		} };
@@ -163,8 +163,8 @@ function generateTableResult(detailLevel, covWebReport) {
 	            "fastaFileName",
 	            "sequenceID",
 	            "isHCoV19",
-	            "lineage",
-	            "totalLikelihoodWeightRatio",
+	            //"lineage",
+	           // "totalLikelihoodWeightRatio",
 	            "numDiagnosticsIssues",
 	            "numSequencingIssues",
 	            "numSnps",
@@ -183,7 +183,7 @@ function summaryRowForCovReport(covReport) {
 	var isHCoV19 = sequenceResult.isForwardCov ? "Yes" : "No";
 	var lineage;
 	var lwRatio;
-	if(sequenceResult.isForwardCov) {
+	/*if(sequenceResult.isForwardCov) {
 		if(sequenceResult.lineageAssignmentResult != null &&
 				sequenceResult.lineageAssignmentResult.bestLineage != null) {
 			lineage = sequenceResult.lineageAssignmentResult.bestLineage;
@@ -195,7 +195,7 @@ function summaryRowForCovReport(covReport) {
 	} else {
 		lineage = "N/A";
 		lwRatio = "N/A";
-	}
+	}*/
 	var numDiagnosticsIssues = "N/A";
 	var numSequencingIssues = "N/A";
 	if(sequenceResult.primerProbeMismatchReport != null) {
@@ -231,8 +231,8 @@ function summaryRowForCovReport(covReport) {
 		covReport.filePath, 
 		covReport.sequenceResult.id,
 		isHCoV19,
-        lineage,
-        lwRatio,
+        //lineage,
+        //lwRatio,
         numDiagnosticsIssues,
         numSequencingIssues,
         numSnps,
