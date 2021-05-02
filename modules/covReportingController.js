@@ -61,8 +61,8 @@ function reportDocument(document) {
 	var resultMap = {};
 	var placerResultContainer = {};
 	// apply blast recogniser / genotyping together on set, as this is more efficient.
-	//initResultMap(fastaDocument, fastaMap, resultMap, placerResultContainer);
-	initResultMap(fastaDocument, fastaMap, resultMap);
+	initResultMap(fastaDocument, fastaMap, resultMap, placerResultContainer);
+	//initResultMap(fastaDocument, fastaMap, resultMap);
 	var numSeqs = fastaDocument.nucleotideFasta.sequences.length;
 	var processed = 1;
 	// apply report generation to each sequence in the set.
@@ -73,7 +73,7 @@ function reportDocument(document) {
 	});
 	var result = {
 		covWebReport:  { 
-			results: covReports, 
+			results: covReports
 			//placerResult: placerResultContainer.placerResult
 		}
 	};
@@ -103,15 +103,14 @@ function reportFasta(fastaFilePath) {
 	var fastaMap = {};
 	var resultMap = {};
 	var placerResultContainer = {};
-	//initResultMap(fastaDocument, fastaMap, resultMap, placerResultContainer);
-	initResultMap(fastaDocument, fastaMap, resultMap);
+	initResultMap(fastaDocument, fastaMap, resultMap, placerResultContainer);
+	//initResultMap(fastaDocument, fastaMap, resultMap);
 	var singleFastaReport = generateSingleFastaReport(fastaMap, resultMap, fastaFilePath);
 	//singleFastaReport.covReport["placerResult"] = placerResultContainer.placerResult;
 	return singleFastaReport;
 }
 
-//function initResultMap(fastaDocument, fastaMap, resultMap, placerResultContainer) {
-function initResultMap(fastaDocument, fastaMap, resultMap) {	
+function initResultMap(fastaDocument, fastaMap, resultMap, placerResultContainer) {
 	glue.log("FINE", "covReportingController.initResultMap fastaDocument:", fastaDocument);
 	_.each(fastaDocument.nucleotideFasta.sequences, function(sequenceObj) {
 		fastaMap[sequenceObj.id] = sequenceObj;
