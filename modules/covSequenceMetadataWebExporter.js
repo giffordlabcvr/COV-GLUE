@@ -36,7 +36,7 @@ function previewSequenceMetadata(whereClause, sortProperties) {
 		"-w", whereClause, "-s", sortProperties, 
 		"gisaid_virus_name",
 		"sequenceID",
-		"cov_glue_lineage",
+		//"cov_glue_lineage",
 		"gisaid_lineage",
 		"gisaid_clade",
 		"place_sampled",
@@ -49,7 +49,7 @@ function previewSequenceMetadata(whereClause, sortProperties) {
 	tableResult.listResult.column = [
 		"virusName",
 		"gisaidID",
-		"covGlueLineage",
+		//"covGlueLineage",
 		"pangolinLineage",
 		"gisaidClade",
 		"location",
