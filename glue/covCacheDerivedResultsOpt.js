@@ -71,7 +71,7 @@ glue.inMode("custom-table-row/cov_project_properties/lineageVersion", function()
 	lineageVersions = glue.command(["show", "property", "value"]).propertyValueResult.value;
 });
 
-var seqObjs = glue.tableToObjects(glue.command(["list", "sequence", "-w", "analyse_variation = true and variation_present = true", "source.name", "sequenceID"]));
+var seqObjs = glue.tableToObjects(glue.command(["list", "sequence", "-w", "analyse_variation = true and variation_present = true and cg_deletions_from_cache != true or cg_insertions_from_cache != true or cg_reps_from_cache != true", "source.name", "sequenceID"]));
 //var seqObjs = glue.tableToObjects(glue.command(["list", "sequence", "-w", "analyse_variation = true", "source.name", "sequenceID"]));
 
 var processed = 0;
