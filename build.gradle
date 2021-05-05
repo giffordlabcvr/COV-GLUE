@@ -30,17 +30,17 @@ buildscript {
 }
 
 
-/*task copyGluetoolsJar(type: Copy) {
+task copyGluetoolsJar(type: Copy) {
     from configurations.gluetoolsCore
     into "$buildDir/runtimeJars"
     rename('gluetools-core-'+project.glueVersion+'.jar', 'gluetools-core.jar')
 }
-*/
+
 def glueConfigFile = 'remote-gluetools-config.xml'
 
-/*task wipeCovGlueDB(type: Exec) {
+task wipeCovGlueDB(type: Exec) {
 	commandLine "bash", "-c", "echo 'drop database COV_GLUE; create database COV_GLUE character set UTF8;' | mysql -u covglue --password=covglue"
-}*/
+}
 
 task buildCovGlueDB(type: JavaExec, dependsOn: 'copyGluetoolsJar') {
 	classpath "build/runtimeJars/gluetools-core.jar"
