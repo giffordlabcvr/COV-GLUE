@@ -165,6 +165,14 @@
             <outputTemplate>BRN</outputTemplate>
         </valueConverter>
         <valueConverter>
+            <matchPattern>Europe / Slovaia / Bratislava</matchPattern>
+            <outputTemplate>SVK</outputTemplate>
+        </valueConverter>
+        <valueConverter>
+            <matchPattern>Europe / Slovaia</matchPattern>
+            <outputTemplate>SVK</outputTemplate>
+        </valueConverter>
+        <valueConverter>
             <matchPattern>Europe / Crimea</matchPattern>
             <outputTemplate>UKR</outputTemplate>
         </valueConverter>
