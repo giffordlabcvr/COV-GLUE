@@ -35,7 +35,6 @@ project cov
    alignment AL_UNCONSTRAINED_DUMMY add member cov-gisaid EPI_ISL_402125
    alignment AL_UNCONSTRAINED_DUMMY member cov-gisaid EPI_ISL_402125 add segment 1 29903 1 29903
   
-  
    
    run script glue/covSetCollectionDate.js
    run script glue/covSetAuthorsShort.js
@@ -79,7 +78,7 @@ project cov
    run script glue/covSetVariantNumSeqs.js
   
   # cache derived results to build_cache directory
-   run script glue/covCacheDerivedResultsOpt.js
+  # run script glue/covCacheDerivedResultsOpt.js
   
   # Validate
   validate

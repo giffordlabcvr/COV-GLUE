@@ -189,6 +189,14 @@
             <outputTemplate>MAF</outputTemplate>
         </valueConverter>
         <valueConverter>
+            <matchPattern>North America / St Eustatius</matchPattern>
+            <outputTemplate>BES</outputTemplate>
+        </valueConverter>
+        <valueConverter>
+            <matchPattern>North America / Sint Eustatius</matchPattern>
+            <outputTemplate>BES</outputTemplate>
+        </valueConverter>
+        <valueConverter>
             <matchPattern>South America / Sint Maarten / Sint Maarten</matchPattern>
             <outputTemplate>SXM</outputTemplate>
         </valueConverter>
