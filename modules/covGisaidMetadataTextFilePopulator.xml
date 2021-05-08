@@ -181,6 +181,10 @@
             <outputTemplate>CZE</outputTemplate>
         </valueConverter>
         <valueConverter>
+            <matchPattern>Europe / Swizterland</matchPattern>
+            <outputTemplate>CHE</outputTemplate>
+        </valueConverter>
+        <valueConverter>
             <matchPattern>Europe / Blegium / Schaarbeek</matchPattern>
             <outputTemplate>BEL</outputTemplate>
         </valueConverter>
