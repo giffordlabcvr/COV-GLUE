@@ -13,14 +13,6 @@ project cov
   # import cov-gisaid individual fastas.
    import source sources/cov-gisaid
   
-  # various metadata-related steps.
-  # have to temporarily change result format to avoid bug in table rendering library.
-   console set cmd-result-format tab
-   module covGisaidRefsMetadataTextFilePopulator populate --fileName tabular/gisaidLineageRepresentatives.tsv
-   module covGisaidMetadataTextFilePopulator populate --fileName tabular/gisaid_metadata.txt
-   module covSeqStatsTextFilePopulator populate -f tabular/gisaidSeqCharacterStats.txt
-   console unset cmd-result-format
-  
   # features, master reference, feature locations.
    run file glue/covFeatures.glue
    run file glue/covMasterReference.glue
@@ -35,6 +27,13 @@ project cov
    alignment AL_UNCONSTRAINED_DUMMY add member cov-gisaid EPI_ISL_402125
    alignment AL_UNCONSTRAINED_DUMMY member cov-gisaid EPI_ISL_402125 add segment 1 29903 1 29903
   
+  # various metadata-related steps.
+  # have to temporarily change result format to avoid bug in table rendering library.
+   console set cmd-result-format tab
+   module covGisaidRefsMetadataTextFilePopulator populate --fileName tabular/gisaidLineageRepresentatives.tsv
+   module covGisaidMetadataTextFilePopulator populate --fileName tabular/gisaid_metadata.txt
+   module covSeqStatsTextFilePopulator populate -f tabular/gisaidSeqCharacterStats.txt
+   console unset cmd-result-format
    
    run script glue/covSetCollectionDate.js
    run script glue/covSetAuthorsShort.js
